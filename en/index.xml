@@ -17,6 +17,24 @@
 1 git clone https://github.com/{YOUR_USER_NAME}/hugo-site.git Let&amp;rsquo;s Do the Thing!</description>
     </item>
     
+    <item>
+      <title>Design Patterns Explained - CH8</title>
+      <link>https://blog.cmwang.net/en/posts/2017/01/21/</link>
+      <pubDate>Sat, 21 Jan 2017 20:12:53 +0000</pubDate>
+      
+      <guid>https://blog.cmwang.net/en/posts/2017/01/21/</guid>
+      <description>&lt;h1 id=&#34;expanding-our-horizons&#34;&gt;Expanding Our Horizons&lt;/h1&gt;
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Object&lt;/li&gt;
+&lt;li&gt;Encapsulation&lt;/li&gt;
+&lt;li&gt;Inheritance&lt;/li&gt;
+&lt;li&gt;Handling variation&lt;/li&gt;
+&lt;li&gt;Commonality and variability analysis&lt;/li&gt;
+&lt;li&gt;Abstract class and its derived classes&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
     
     
   </channel>
