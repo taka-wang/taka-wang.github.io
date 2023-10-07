@@ -2,35 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://blog.cmwang.net/zh-tw/posts/2023/10/07/</loc>
-    <lastmod>2023-10-07T17:50:06+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.cmwang.net/zh-tw/</loc>
-    <lastmod>2023-10-07T17:50:06+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://blog.cmwang.net/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-tw"
-                href="https://blog.cmwang.net/zh-tw/"
-                />
-  </url><url>
-    <loc>https://blog.cmwang.net/zh-tw/posts/</loc>
-    <lastmod>2023-10-07T17:50:06+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://blog.cmwang.net/en/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-tw"
-                href="https://blog.cmwang.net/zh-tw/posts/"
-                />
-  </url><url>
     <loc>https://blog.cmwang.net/zh-tw/posts/2023/10/06/</loc>
     <lastmod>2023-10-06T17:34:04+08:00</lastmod>
     <xhtml:link
@@ -57,6 +28,32 @@
                 href="https://blog.cmwang.net/zh-tw/tags/hugo/"
                 />
   </url><url>
+    <loc>https://blog.cmwang.net/zh-tw/</loc>
+    <lastmod>2023-10-06T17:34:04+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.cmwang.net/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://blog.cmwang.net/zh-tw/"
+                />
+  </url><url>
+    <loc>https://blog.cmwang.net/zh-tw/posts/</loc>
+    <lastmod>2023-10-06T17:34:04+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.cmwang.net/en/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://blog.cmwang.net/zh-tw/posts/"
+                />
+  </url><url>
     <loc>https://blog.cmwang.net/zh-tw/tags/</loc>
     <lastmod>2023-10-06T17:34:04+08:00</lastmod>
     <xhtml:link
@@ -69,6 +66,9 @@
                 hreflang="zh-tw"
                 href="https://blog.cmwang.net/zh-tw/tags/"
                 />
+  </url><url>
+    <loc>https://blog.cmwang.net/zh-tw/posts/2023/10/05/</loc>
+    <lastmod>2023-10-05T17:50:06+08:00</lastmod>
   </url><url>
     <loc>https://blog.cmwang.net/zh-tw/tags/design-patterns/</loc>
     <lastmod>2017-01-21T20:12:53+00:00</lastmod>

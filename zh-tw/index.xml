@@ -6,13 +6,81 @@
     <description>Recent content on Liberation Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Sat, 07 Oct 2023 17:50:06 +0800</lastBuildDate><atom:link href="https://blog.cmwang.net/zh-tw/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 Oct 2023 17:34:04 +0800</lastBuildDate><atom:link href="https://blog.cmwang.net/zh-tw/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blog Reboot</title>
+      <link>https://blog.cmwang.net/zh-tw/posts/2023/10/06/</link>
+      <pubDate>Fri, 06 Oct 2023 17:34:04 +0800</pubDate>
+      
+      <guid>https://blog.cmwang.net/zh-tw/posts/2023/10/06/</guid>
+      <description>重新開始 # 用這樣夾 youtube {{ &amp;lt; youtube d9IxdwEFk1c &amp;gt; }} 我們開始吧！ import sys from PyQt5.QtWidgets import QApplication, QLabel, QMainWindow, QVBoxLayout, QWidget class HelloWorldApp(QMainWindow): pass if __name__ == &amp;#39;__main__&amp;#39;: app = QApplication(sys.argv) window = HelloWorldApp() window.show() sys.exit(app.exec_()) 另一個測試 Set some variables import sys from PyQt5.QtWidgets import QApplication, QLabel, QMainWindow, QVBoxLayout, QWidget class HelloWorldApp(QMainWindow): pass if __name__</description>
+      <content:encoded><![CDATA[<h2 id="重新開始">重新開始</h2>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube-nocookie.com/embed/d9IxdwEFk1c" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="err">#</span> <span class="nx">用這樣夾</span> <span class="nx">youtube</span>
+</span></span><span class="line"><span class="cl"><span class="p">{{</span> <span class="o">&lt;</span> <span class="nx">youtube</span> <span class="nx">d9IxdwEFk1c</span> <span class="o">&gt;</span> <span class="p">}}</span>
+</span></span></code></pre></div><p><img loading="lazy" src="iu.jpg" alt="iu"  />
+</p>
+<blockquote>
+<p>我們開始吧！</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sys</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">PyQt5.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span><span class="p">,</span> <span class="n">QLabel</span><span class="p">,</span> <span class="n">QMainWindow</span><span class="p">,</span> <span class="n">QVBoxLayout</span><span class="p">,</span> <span class="n">QWidget</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">HelloWorldApp</span><span class="p">(</span><span class="n">QMainWindow</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">pass</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">window</span> <span class="o">=</span> <span class="n">HelloWorldApp</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">exec_</span><span class="p">())</span>
+</span></span></code></pre></div><hr>
+<p>另一個測試</p>
+ 
+
+<div class="terminal space shadow">
+    <div class="top">
+        <div class="btns">
+            <span class="circle red"></span>
+            <span class="circle yellow"></span>
+            <span class="circle green"></span>
+        </div>
+        <div class="title">
+            Set some variables
+        </div>
+    </div>
+    <div class="terminalbody"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sys</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">PyQt5.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span><span class="p">,</span> <span class="n">QLabel</span><span class="p">,</span> <span class="n">QMainWindow</span><span class="p">,</span> <span class="n">QVBoxLayout</span><span class="p">,</span> <span class="n">QWidget</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">HelloWorldApp</span><span class="p">(</span><span class="n">QMainWindow</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">pass</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">window</span> <span class="o">=</span> <span class="n">HelloWorldApp</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">exec_</span><span class="p">())</span>
+</span></span></code></pre></div></div>
+</div>
+<br />
+
+<style type="text/css">.notice{--root-color:#444;--root-background:#eff;--title-color:#fff;--title-background:#7bd;--warning-title:#c33;--warning-content:#fee;--info-title:#fb7;--info-content:#fec;--note-title:#6be;--note-content:#e7f2fa;--tip-title:#5a5;--tip-content:#efe}@media (prefers-color-scheme:dark){.notice{--root-color:#ddd;--root-background:#eff;--title-color:#fff;--title-background:#7bd;--warning-title:#800;--warning-content:#400;--info-title:#a50;--info-content:#420;--note-title:#069;--note-content:#023;--tip-title:#363;--tip-content:#121}}body.dark .notice{--root-color:#ddd;--root-background:#eff;--title-color:#fff;--title-background:#7bd;--warning-title:#800;--warning-content:#400;--info-title:#a50;--info-content:#420;--note-title:#069;--note-content:#023;--tip-title:#363;--tip-content:#121}.notice{padding:18px;line-height:24px;margin-bottom:24px;border-radius:4px;color:var(--root-color);background:var(--root-background)}.notice p:last-child{margin-bottom:0}.notice-title{margin:-18px -18px 12px;padding:4px 18px;border-radius:4px 4px 0 0;font-weight:700;color:var(--title-color);background:var(--title-background)}.notice.warning .notice-title{background:var(--warning-title)}.notice.warning{background:var(--warning-content)}.notice.info .notice-title{background:var(--info-title)}.notice.info{background:var(--info-content)}.notice.note .notice-title{background:var(--note-title)}.notice.note{background:var(--note-content)}.notice.tip .notice-title{background:var(--tip-title)}.notice.tip{background:var(--tip-content)}.icon-notice{display:inline-flex;align-self:center;margin-right:8px}.icon-notice img,.icon-notice svg{height:1em;width:1em;fill:currentColor}.icon-notice img,.icon-notice.baseline svg{top:.125em;position:relative}</style>
+<div><svg width="0" height="0" display="none" xmlns="http://www.w3.org/2000/svg"><symbol id="tip-notice" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></symbol><symbol id="note-notice" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet"><path d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zm-248 50c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/></symbol><symbol id="warning-notice" viewBox="0 0 576 512" preserveAspectRatio="xMidYMid meet"><path d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/></symbol><symbol id="info-notice" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet"><path d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"/></symbol></svg></div><div class="notice warning" >
+<p class="first notice-title"><span class="icon-notice baseline"><svg><use href="#warning-notice"></use></svg></span>警告</p><p>This is a warning notice. Be warned!</p></div>
+
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>gallery 測試</title>
-      <link>https://blog.cmwang.net/zh-tw/posts/2023/10/07/</link>
-      <pubDate>Sat, 07 Oct 2023 17:50:06 +0800</pubDate>
+      <link>https://blog.cmwang.net/zh-tw/posts/2023/10/05/</link>
+      <pubDate>Thu, 05 Oct 2023 17:50:06 +0800</pubDate>
       
-      <guid>https://blog.cmwang.net/zh-tw/posts/2023/10/07/</guid>
+      <guid>https://blog.cmwang.net/zh-tw/posts/2023/10/05/</guid>
       <description>警告 這是一個測試 &lt;!DOCTYPE html&gt;</description>
       <content:encoded><![CDATA[<style type="text/css">.notice{--root-color:#444;--root-background:#eff;--title-color:#fff;--title-background:#7bd;--warning-title:#c33;--warning-content:#fee;--info-title:#fb7;--info-content:#fec;--note-title:#6be;--note-content:#e7f2fa;--tip-title:#5a5;--tip-content:#efe}@media (prefers-color-scheme:dark){.notice{--root-color:#ddd;--root-background:#eff;--title-color:#fff;--title-background:#7bd;--warning-title:#800;--warning-content:#400;--info-title:#a50;--info-content:#420;--note-title:#069;--note-content:#023;--tip-title:#363;--tip-content:#121}}body.dark .notice{--root-color:#ddd;--root-background:#eff;--title-color:#fff;--title-background:#7bd;--warning-title:#800;--warning-content:#400;--info-title:#a50;--info-content:#420;--note-title:#069;--note-content:#023;--tip-title:#363;--tip-content:#121}.notice{padding:18px;line-height:24px;margin-bottom:24px;border-radius:4px;color:var(--root-color);background:var(--root-background)}.notice p:last-child{margin-bottom:0}.notice-title{margin:-18px -18px 12px;padding:4px 18px;border-radius:4px 4px 0 0;font-weight:700;color:var(--title-color);background:var(--title-background)}.notice.warning .notice-title{background:var(--warning-title)}.notice.warning{background:var(--warning-content)}.notice.info .notice-title{background:var(--info-title)}.notice.info{background:var(--info-content)}.notice.note .notice-title{background:var(--note-title)}.notice.note{background:var(--note-content)}.notice.tip .notice-title{background:var(--tip-title)}.notice.tip{background:var(--tip-content)}.icon-notice{display:inline-flex;align-self:center;margin-right:8px}.icon-notice img,.icon-notice svg{height:1em;width:1em;fill:currentColor}.icon-notice img,.icon-notice.baseline svg{top:.125em;position:relative}</style>
 <div><svg width="0" height="0" display="none" xmlns="http://www.w3.org/2000/svg"><symbol id="tip-notice" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></symbol><symbol id="note-notice" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet"><path d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zm-248 50c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/></symbol><symbol id="warning-notice" viewBox="0 0 576 512" preserveAspectRatio="xMidYMid meet"><path d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/></symbol><symbol id="info-notice" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet"><path d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"/></symbol></svg></div><div class="notice warning" >
@@ -87,8 +155,8 @@
 
 
 
-<div id="gallery-3661ca6f142a9ab03c7fd227eca0672f-1-wrapper" class="gallery-wrapper">
-<div id="gallery-3661ca6f142a9ab03c7fd227eca0672f-1" class="justified-gallery">
+<div id="gallery-7aa99fc293f18db5d5263e2d5abcaf87-1-wrapper" class="gallery-wrapper">
+<div id="gallery-7aa99fc293f18db5d5263e2d5abcaf87-1" class="justified-gallery">
 	
 		
 		
@@ -118,7 +186,7 @@
 				
 					
 				
-				<a href="/zh-tw/posts/2023/10/07/images/166696108_208995410980363_8070482360869827712_n.jpg" 
+				<a href="/zh-tw/posts/2023/10/05/images/166696108_208995410980363_8070482360869827712_n.jpg" 
 					class="galleryImg"
 					
 					>
@@ -132,7 +200,7 @@
 								src="data:image/jpeg;base64,/9j/2wCEAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4&#43;JS5ESUM8SDc9PjsBCgsLDg0OHBAQHDsoIig7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O//AABEIACAAGgMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5&#43;gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4&#43;Tl5ufo6ery8/T19vf4&#43;fr/2gAMAwEAAhEDEQA/AIPDX/Ej8P8A9q3MXyyybAhON2Op/Q8U&#43;S/hv/tE8Gkn7NCQ7CHJzxwxA79fyroZbW08SaFbwPcEBMAyKBneM5yOfXP4ik0jw6dCS6gEaXcUiKyEEqwOT&#43;h/yKiphm3pszOMrvUq&#43;G9Qt9Viu4dNiW1n8ngJ0kXoQefU1qjxF4kUBRpseBx90f41W8KaRc6Bplyt3BAJHfMboecHkj1wCK1v7RgAw4ct3wh6/lQsPZK7f3hZt6Hnml6oNBuUcX9ncpK6o8MU24tk4z07V6bdTCy8q7Klo4l2SAdQp7/hj8s14/J4V1u9ijDW&#43;l2rI&#43;8PEpVj7EgV6tp51J9NtxfXSGZkG/y1G05&#43;oz0rrjd6E7FHxDrK6dp0U&#43;3fvfCqMsSMZ/HgVhDxrb4H&#43;gf&#43;QDVjVdOt5NVh0q7sGvLKV90Lb8eUxDHGO4&#43;Xj0yBS/8ACvtF/wCgKv8A38/&#43;vUym7j5U1qf/2Q=="
 							
 							class="lazy"
-							data-src="/zh-tw/posts/2023/10/07/images/166696108_208995410980363_8070482360869827712_n_hua48f1fda8f2a97873aa238484c8ba8bb_140859_600x600_fit_q90_lanczos.jpg"
+							data-src="/zh-tw/posts/2023/10/05/images/166696108_208995410980363_8070482360869827712_n_hua48f1fda8f2a97873aa238484c8ba8bb_140859_600x600_fit_q90_lanczos.jpg"
 						
 
 						
@@ -169,7 +237,7 @@
 				
 					
 				
-				<a href="/zh-tw/posts/2023/10/07/images/166558562_280560847037100_3290903699164054133_n.jpg" 
+				<a href="/zh-tw/posts/2023/10/05/images/166558562_280560847037100_3290903699164054133_n.jpg" 
 					class="galleryImg"
 					
 					>
@@ -183,7 +251,7 @@
 								src="data:image/jpeg;base64,/9j/2wCEAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4&#43;JS5ESUM8SDc9PjsBCgsLDg0OHBAQHDsoIig7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O//AABEIACAAGgMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5&#43;gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4&#43;Tl5ufo6ery8/T19vf4&#43;fr/2gAMAwEAAhEDEQA/AJ0mXw/odnPexhnlICQMSAF9f6/54rXurm0s11RdLhktZG24aT7ozjOBzz9a6O4ttN8T20MspcjOFKtgqeMg&#43;vSmT&#43;H7qfw/Lo0UkRTeyiYxfMi5BxjuccZ4&#43;lZywcL7LUzhJa3EtrQ6pplve6Q5tXJ/eRMxAU92GP8APNO/s/XBx/a7/wDftv8AGrqwzabpNpZST&#43;YYVAJUYBA6fy61eGq3BGV0diD0IlHNN4SmugRipdfxsefeG9VtrHXLWzt9SguxdybHjjVwF4ODkgc5wPxr0O/llsme6SHzI3XEybckY6MB3x39vpXli&#43;EtcuLi2uZLuxtpbZtyNbw7SDkHtjPSvToILkW8KXd7JLKFAcglQzd&#43;M12R10J2Ob8U&#43;IzpUdjNDMu6UN8&#43;8KCBjoT9e1YX/CyZhx9qT/v&#43;f8K6K&#43;tha6/FCsdq1ncHlJhyjHIJX0G7Zkf7VaP9lWn93T/&#43;&#43;V/wqJSfMxqKsj//2Q=="
 							
 							class="lazy"
-							data-src="/zh-tw/posts/2023/10/07/images/166558562_280560847037100_3290903699164054133_n_huba104692c6cbc48e49c605638e313c06_145546_600x600_fit_q90_lanczos.jpg"
+							data-src="/zh-tw/posts/2023/10/05/images/166558562_280560847037100_3290903699164054133_n_huba104692c6cbc48e49c605638e313c06_145546_600x600_fit_q90_lanczos.jpg"
 						
 
 						
@@ -220,7 +288,7 @@
 				
 					
 				
-				<a href="/zh-tw/posts/2023/10/07/images/166445553_2952022428420666_5740142444856026676_n.jpg" 
+				<a href="/zh-tw/posts/2023/10/05/images/166445553_2952022428420666_5740142444856026676_n.jpg" 
 					class="galleryImg"
 					
 					>
@@ -234,7 +302,7 @@
 								src="data:image/jpeg;base64,/9j/2wCEAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4&#43;JS5ESUM8SDc9PjsBCgsLDg0OHBAQHDsoIig7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O//AABEIACAAGgMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5&#43;gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4&#43;Tl5ufo6ery8/T19vf4&#43;fr/2gAMAwEAAhEDEQA/AM2fxK74cASlSCfMbkD2q3ZyTahpE15b2lsrRE8SHBf6fn69xWhJ4MttYnik0&#43;QRbYV2Fh8rDH3ieoP1zWxpukXukeH5rGGSOeZ3IO9eEfHb1HT8q444JJ63&#43;8iNubUxdDm1vV7U3lq5toSNokZ2IYDsAPetEjVVODrRyOPuSUnhRbjw3ay6ZqdvLMN2&#43;F0XAYkfNjOP8mt8airDI0u8557f41tHCwWln97K9nfVfmcZ4f12WG4XQblWS5RNsbZHfJ2n3Fdeb06fdCef/VXCCMsDnY/Yn65x&#43;A9a8k8OWusaf4hF5Y6VcrEW/drOQMegOSM817BNC90hhn8l43XDKF6j8a9COqsZPQpa3ePFpn25CJGt3VgWAOedp46dzWH/AMLEwcGRsjr9z/GuivdOt5dGGmSo1xHIgBUuSW75P481z3/CC6P/ANAFPzP&#43;NTN2eg0k1qf/2Q=="
 							
 							class="lazy"
-							data-src="/zh-tw/posts/2023/10/07/images/166445553_2952022428420666_5740142444856026676_n_hu871327a969ac1190cce09440126a4c95_131667_600x600_fit_q90_lanczos.jpg"
+							data-src="/zh-tw/posts/2023/10/05/images/166445553_2952022428420666_5740142444856026676_n_hu871327a969ac1190cce09440126a4c95_131667_600x600_fit_q90_lanczos.jpg"
 						
 
 						
@@ -271,7 +339,7 @@
 				
 					
 				
-				<a href="/zh-tw/posts/2023/10/07/images/166366283_3953398781364937_7155614920124178913_n.jpg" 
+				<a href="/zh-tw/posts/2023/10/05/images/166366283_3953398781364937_7155614920124178913_n.jpg" 
 					class="galleryImg"
 					
 					>
@@ -285,7 +353,7 @@
 								src="data:image/jpeg;base64,/9j/2wCEAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4&#43;JS5ESUM8SDc9PjsBCgsLDg0OHBAQHDsoIig7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O//AABEIACAAGgMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5&#43;gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4&#43;Tl5ufo6ery8/T19vf4&#43;fr/2gAMAwEAAhEDEQA/AGrqFzdaf5sq&#43;VHI/lrJFgZY8Djp1&#43;lS6R4b1G00O/LcXUbYVgQyHAz&#43;Gc9a2dM/su/WSwlt1jhjfLQhdh7FW9jWi2n2ktqbCEGGC6QhSDy2M7lJPXg5Gfeh4eLT0WpCaTPMv7VvLhFmjlaMso3Dd8oPPTHf/CnNrWpbj&#43;/k69m/&#43;vXR6zoeheGoFeZ3NtcTBUVfuwtjB&#43;oOM/Wp1&#43;3BQI4YCmPlK2a4I7Y&#43;auSWBjfZAopve3qN1GW1tPGplfVoLZnePdEwfLLhcg4GMHHrXV3kUX2PyredVmjO&#43;Nm4w4&#43;vY9Poa5a7027vfH9ndWyxizXZ57MqlmZc8AnnGNo/OuruZUSdhJjJyRmvUgrmbdtTnfGsa3nhNGn4Z8PtyAckdOfr&#43;lcpCmrpCieUx2qBk4yePrXX6rAuvzwxpK4gtwARGABJnBxnHTj9avi1vMfdm/I1nJ3d0y1po0f/2Q=="
 							
 							class="lazy"
-							data-src="/zh-tw/posts/2023/10/07/images/166366283_3953398781364937_7155614920124178913_n_hu34c6608222ca107fae199562a8a491a7_133667_600x600_fit_q90_lanczos.jpg"
+							data-src="/zh-tw/posts/2023/10/05/images/166366283_3953398781364937_7155614920124178913_n_hu34c6608222ca107fae199562a8a491a7_133667_600x600_fit_q90_lanczos.jpg"
 						
 
 						
@@ -322,7 +390,7 @@
 				
 					
 				
-				<a href="/zh-tw/posts/2023/10/07/images/166344044_1399662470367268_4160014369012714689_n.jpg" 
+				<a href="/zh-tw/posts/2023/10/05/images/166344044_1399662470367268_4160014369012714689_n.jpg" 
 					class="galleryImg"
 					
 					>
@@ -336,7 +404,7 @@
 								src="data:image/jpeg;base64,/9j/2wCEAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4&#43;JS5ESUM8SDc9PjsBCgsLDg0OHBAQHDsoIig7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O//AABEIACAAGgMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5&#43;gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4&#43;Tl5ufo6ery8/T19vf4&#43;fr/2gAMAwEAAhEDEQA/AMWxvru&#43;aK3B3TTMEUFeOTjJ9BjmrGsWt5pV3bJb3RnE6kJsRlOcdPx56elWbkpda9pzaCIrOW3YyyGVwokGQMY755/Out1Oyk1i6t5dQtf3drgxRB8FnJHIIx05/M1zfVopNW/AuPK47HFaRoet63NhGaJVYrJK5IGPb1rrF8ERhQGvpiwHJGOv5Vu25urc7AyIpP7vcMZ9jxxVj7XqX/Phn3DcH9KuOGSWqM3ypmX4T0/Z4aS3u4QjzM26OReTz3/LrU1/dw6Z5YZZZ4kBBdTuMYPf1x246V5lpPjg6Bcw21tdnULKVt0jTJh0Y8HBz0xjrmvQbS6S5/0mF3uVf7rpwpA4612xsyW2iHU9cs9Pto9Ref8A0YkKWBLZzyOfzrO/4TewPInuSD0wn/1qt6zpmLC4ngtvldCJrVfuyA9SB2Ydc1gx&#43;DrKSNXOp3ybgDtaRgR7GlOUloCSZ//Z"
 							
 							class="lazy"
-							data-src="/zh-tw/posts/2023/10/07/images/166344044_1399662470367268_4160014369012714689_n_hud34cb06a82a3cf2ed4a40dd4d5257734_143806_600x600_fit_q90_lanczos.jpg"
+							data-src="/zh-tw/posts/2023/10/05/images/166344044_1399662470367268_4160014369012714689_n_hud34cb06a82a3cf2ed4a40dd4d5257734_143806_600x600_fit_q90_lanczos.jpg"
 						
 
 						
@@ -373,7 +441,7 @@
 				
 					
 				
-				<a href="/zh-tw/posts/2023/10/07/images/166304570_2331893966942088_2179876612911083713_n.jpg" 
+				<a href="/zh-tw/posts/2023/10/05/images/166304570_2331893966942088_2179876612911083713_n.jpg" 
 					class="galleryImg"
 					
 					>
@@ -387,7 +455,7 @@
 								src="data:image/jpeg;base64,/9j/2wCEAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4&#43;JS5ESUM8SDc9PjsBCgsLDg0OHBAQHDsoIig7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O//AABEIACAAGgMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5&#43;gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4&#43;Tl5ufo6ery8/T19vf4&#43;fr/2gAMAwEAAhEDEQA/AMOTWZyubaVY2Rl3AkncDV/QdQvtWu2toQpLcjdwB689qdq3hH7O1ubGNpPKj/fbRyWPcjP5Yrd8G6adPtJ5b60x58aPFKeAME5989OtecsFTbs4majaVmc1qOs3tlqbWE1uBIMDaR1J6EeuaurFqTIGOmvkjP3ayvEN7b/8JpA9vJLILWRNzuOM7t2Ae&#43;K9gGwgHzBz7Vr9To3uo29CpwjcoWdxHaX0zBAAwCLkY7&#43;n50tsv2qW6tWUGQSeblhwFbpjH0rkvCuuTeJI3kkh8toWBZ1OQ5Oe3b1roLm6fSbiPUSTJGU8qcgfdGcq30Bz&#43;ftXrWTVzNN3E1bwnpeo2pidijbgVMIUYb8qYtvcIgRmJZRg4lHX86vQXEdyS8O1AfmfHfPQ/kKz5rN3nkfa3zMT&#43;tNwJcj/2Q=="
 							
 							class="lazy"
-							data-src="/zh-tw/posts/2023/10/07/images/166304570_2331893966942088_2179876612911083713_n_hu1c6a7fd0ee704870beed68a49b145e63_138314_600x600_fit_q90_lanczos.jpg"
+							data-src="/zh-tw/posts/2023/10/05/images/166304570_2331893966942088_2179876612911083713_n_hu1c6a7fd0ee704870beed68a49b145e63_138314_600x600_fit_q90_lanczos.jpg"
 						
 
 						
@@ -405,7 +473,7 @@
 	}
 
 	$( document ).ready(() => {
-		const gallery = $("#gallery-3661ca6f142a9ab03c7fd227eca0672f-1");
+		const gallery = $("#gallery-7aa99fc293f18db5d5263e2d5abcaf87-1");
 		
 
 		
@@ -488,74 +556,6 @@
     </body>
 </html>
 
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Blog Reboot</title>
-      <link>https://blog.cmwang.net/zh-tw/posts/2023/10/06/</link>
-      <pubDate>Fri, 06 Oct 2023 17:34:04 +0800</pubDate>
-      
-      <guid>https://blog.cmwang.net/zh-tw/posts/2023/10/06/</guid>
-      <description>重新開始 # 用這樣夾 youtube {{ &amp;lt; youtube d9IxdwEFk1c &amp;gt; }} 我們開始吧！ import sys from PyQt5.QtWidgets import QApplication, QLabel, QMainWindow, QVBoxLayout, QWidget class HelloWorldApp(QMainWindow): pass if __name__ == &amp;#39;__main__&amp;#39;: app = QApplication(sys.argv) window = HelloWorldApp() window.show() sys.exit(app.exec_()) 另一個測試 Set some variables import sys from PyQt5.QtWidgets import QApplication, QLabel, QMainWindow, QVBoxLayout, QWidget class HelloWorldApp(QMainWindow): pass if __name__</description>
-      <content:encoded><![CDATA[<h2 id="重新開始">重新開始</h2>
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube-nocookie.com/embed/d9IxdwEFk1c" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="err">#</span> <span class="nx">用這樣夾</span> <span class="nx">youtube</span>
-</span></span><span class="line"><span class="cl"><span class="p">{{</span> <span class="o">&lt;</span> <span class="nx">youtube</span> <span class="nx">d9IxdwEFk1c</span> <span class="o">&gt;</span> <span class="p">}}</span>
-</span></span></code></pre></div><p><img loading="lazy" src="iu.jpg" alt="iu"  />
-</p>
-<blockquote>
-<p>我們開始吧！</p>
-</blockquote>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sys</span>
-</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">PyQt5.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span><span class="p">,</span> <span class="n">QLabel</span><span class="p">,</span> <span class="n">QMainWindow</span><span class="p">,</span> <span class="n">QVBoxLayout</span><span class="p">,</span> <span class="n">QWidget</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">HelloWorldApp</span><span class="p">(</span><span class="n">QMainWindow</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="k">pass</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">window</span> <span class="o">=</span> <span class="n">HelloWorldApp</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">    <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">exec_</span><span class="p">())</span>
-</span></span></code></pre></div><hr>
-<p>另一個測試</p>
- 
-
-<div class="terminal space shadow">
-    <div class="top">
-        <div class="btns">
-            <span class="circle red"></span>
-            <span class="circle yellow"></span>
-            <span class="circle green"></span>
-        </div>
-        <div class="title">
-            Set some variables
-        </div>
-    </div>
-    <div class="terminalbody"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sys</span>
-</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">PyQt5.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span><span class="p">,</span> <span class="n">QLabel</span><span class="p">,</span> <span class="n">QMainWindow</span><span class="p">,</span> <span class="n">QVBoxLayout</span><span class="p">,</span> <span class="n">QWidget</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">HelloWorldApp</span><span class="p">(</span><span class="n">QMainWindow</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="k">pass</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">window</span> <span class="o">=</span> <span class="n">HelloWorldApp</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">    <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">exec_</span><span class="p">())</span>
-</span></span></code></pre></div></div>
-</div>
-<br />
-
-<p>go <style type="text/css">.notice{--root-color:#444;--root-background:#eff;--title-color:#fff;--title-background:#7bd;--warning-title:#c33;--warning-content:#fee;--info-title:#fb7;--info-content:#fec;--note-title:#6be;--note-content:#e7f2fa;--tip-title:#5a5;--tip-content:#efe}@media (prefers-color-scheme:dark){.notice{--root-color:#ddd;--root-background:#eff;--title-color:#fff;--title-background:#7bd;--warning-title:#800;--warning-content:#400;--info-title:#a50;--info-content:#420;--note-title:#069;--note-content:#023;--tip-title:#363;--tip-content:#121}}body.dark .notice{--root-color:#ddd;--root-background:#eff;--title-color:#fff;--title-background:#7bd;--warning-title:#800;--warning-content:#400;--info-title:#a50;--info-content:#420;--note-title:#069;--note-content:#023;--tip-title:#363;--tip-content:#121}.notice{padding:18px;line-height:24px;margin-bottom:24px;border-radius:4px;color:var(--root-color);background:var(--root-background)}.notice p:last-child{margin-bottom:0}.notice-title{margin:-18px -18px 12px;padding:4px 18px;border-radius:4px 4px 0 0;font-weight:700;color:var(--title-color);background:var(--title-background)}.notice.warning .notice-title{background:var(--warning-title)}.notice.warning{background:var(--warning-content)}.notice.info .notice-title{background:var(--info-title)}.notice.info{background:var(--info-content)}.notice.note .notice-title{background:var(--note-title)}.notice.note{background:var(--note-content)}.notice.tip .notice-title{background:var(--tip-title)}.notice.tip{background:var(--tip-content)}.icon-notice{display:inline-flex;align-self:center;margin-right:8px}.icon-notice img,.icon-notice svg{height:1em;width:1em;fill:currentColor}.icon-notice img,.icon-notice.baseline svg{top:.125em;position:relative}</style>
-<div><svg width="0" height="0" display="none" xmlns="http://www.w3.org/2000/svg"><symbol id="tip-notice" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></symbol><symbol id="note-notice" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet"><path d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zm-248 50c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/></symbol><symbol id="warning-notice" viewBox="0 0 576 512" preserveAspectRatio="xMidYMid meet"><path d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/></symbol><symbol id="info-notice" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet"><path d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"/></symbol></svg></div><div class="notice warning" >
-<p class="first notice-title"><span class="icon-notice baseline"><svg><use href="#warning-notice"></use></svg></span>警告</p><p>This is a warning notice. Be warned!</p></div>
-</p>
 ]]></content:encoded>
     </item>
     
