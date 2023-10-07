@@ -13,44 +13,21 @@
       <pubDate>Fri, 06 Oct 2023 17:34:04 +0800</pubDate>
       
       <guid>https://blog.cmwang.net/zh-tw/posts/2023/10/06/</guid>
-      <description>重新開始 1 2 # 用這樣夾 youtube {{ &amp;lt; youtube d9IxdwEFk1c &amp;gt; }} 我們開始吧！ 1 2 3 4 5 6 7 8 9 10 11 import sys from PyQt5.QtWidgets import QApplication, QLabel, QMainWindow, QVBoxLayout, QWidget class HelloWorldApp(QMainWindow): pass if __name__ == &amp;#39;__main__&amp;#39;: app = QApplication(sys.argv) window = HelloWorldApp() window.show() sys.exit(app.exec_())</description>
+      <description>重新開始 # 用這樣夾 youtube {{ &amp;lt; youtube d9IxdwEFk1c &amp;gt; }} 我們開始吧！ import sys from PyQt5.QtWidgets import QApplication, QLabel, QMainWindow, QVBoxLayout, QWidget class HelloWorldApp(QMainWindow): pass if __name__ == &amp;#39;__main__&amp;#39;: app = QApplication(sys.argv) window = HelloWorldApp() window.show() sys.exit(app.exec_()) 另一個測試 Set some variables import sys from PyQt5.QtWidgets import QApplication, QLabel, QMainWindow, QVBoxLayout, QWidget class HelloWorldApp(QMainWindow): pass if __name__</description>
       <content:encoded><![CDATA[<h2 id="重新開始">重新開始</h2>
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube-nocookie.com/embed/d9IxdwEFk1c" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="err">#</span> <span class="nx">用這樣夾</span> <span class="nx">youtube</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="err">#</span> <span class="nx">用這樣夾</span> <span class="nx">youtube</span>
 </span></span><span class="line"><span class="cl"><span class="p">{{</span> <span class="o">&lt;</span> <span class="nx">youtube</span> <span class="nx">d9IxdwEFk1c</span> <span class="o">&gt;</span> <span class="p">}}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p><img loading="lazy" src="iu.jpg" alt="iu"  />
+</span></span></code></pre></div><p><img loading="lazy" src="iu.jpg" alt="iu"  />
 </p>
 <blockquote>
 <p>我們開始吧！</p>
 </blockquote>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sys</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sys</span>
 </span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">PyQt5.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span><span class="p">,</span> <span class="n">QLabel</span><span class="p">,</span> <span class="n">QMainWindow</span><span class="p">,</span> <span class="n">QVBoxLayout</span><span class="p">,</span> <span class="n">QWidget</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">HelloWorldApp</span><span class="p">(</span><span class="n">QMainWindow</span><span class="p">):</span>
@@ -61,9 +38,37 @@
 </span></span><span class="line"><span class="cl">    <span class="n">window</span> <span class="o">=</span> <span class="n">HelloWorldApp</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">    <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">exec_</span><span class="p">())</span>
-</span></span></code></pre></td></tr></table>
+</span></span></code></pre></div><hr>
+<p>另一個測試</p>
+ 
+
+<div class="terminal space shadow">
+    <div class="top">
+        <div class="btns">
+            <span class="circle red"></span>
+            <span class="circle yellow"></span>
+            <span class="circle green"></span>
+        </div>
+        <div class="title">
+            Set some variables
+        </div>
+    </div>
+    <div class="terminalbody"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sys</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">PyQt5.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span><span class="p">,</span> <span class="n">QLabel</span><span class="p">,</span> <span class="n">QMainWindow</span><span class="p">,</span> <span class="n">QVBoxLayout</span><span class="p">,</span> <span class="n">QWidget</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">HelloWorldApp</span><span class="p">(</span><span class="n">QMainWindow</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">pass</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">window</span> <span class="o">=</span> <span class="n">HelloWorldApp</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">exec_</span><span class="p">())</span>
+</span></span></code></pre></div></div>
 </div>
-</div>]]></content:encoded>
+<br />
+
+]]></content:encoded>
     </item>
     
     <item>
@@ -257,25 +262,13 @@ In other words, if variations are the specific concrete cases in the domain, com
 <h2 id="dealing-with-changes-functional-decomposition">Dealing with Changes: Functional Decomposition</h2>
 <p>4c. Call the appropriate function that will display the shape, giving it the shape’s location. (以形狀的位置為參數，呼叫顯示形狀的 Function)。</p>
 <p><strong>Using Modularity to Contain Variation</strong></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="nl">function</span><span class="p">:</span> <span class="n">display</span> <span class="n">shape</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="nl">function</span><span class="p">:</span> <span class="n">display</span> <span class="n">shape</span>
 </span></span><span class="line"><span class="cl"><span class="nl">input</span><span class="p">:</span> <span class="n">type</span> <span class="n">of</span> <span class="n">shape</span><span class="p">,</span> <span class="n">description</span> <span class="n">of</span> <span class="n">shape</span>
 </span></span><span class="line"><span class="cl"><span class="nl">action</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">   <span class="k">switch</span> <span class="p">(</span><span class="n">type</span> <span class="n">of</span> <span class="n">shape</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">      <span class="k">case</span> <span class="nl">square</span><span class="p">:</span> <span class="n">put</span> <span class="n">display</span> <span class="n">function</span> <span class="k">for</span> <span class="n">square</span> <span class="n">here</span>
 </span></span><span class="line"><span class="cl">      <span class="k">case</span> <span class="nl">circle</span><span class="p">:</span> <span class="n">put</span> <span class="n">display</span> <span class="n">function</span> <span class="k">for</span> <span class="n">circle</span> <span class="n">here</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="討論-1">討論</h2>
+</span></span></code></pre></div><h2 id="討論-1">討論</h2>
 <ol>
 <li>如果要顯示一個新的形狀(例如三角形)，我可能只需要改這個模組(希望是)。</li>
 <li>這個模組的輸入是 type of shape, description of shape，如果今天使用不同方式提供輸入(例如 array of points 或其他方式)，該怎麼辦？</li>

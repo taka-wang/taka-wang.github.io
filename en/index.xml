@@ -14,19 +14,12 @@
       
       <guid>https://blog.cmwang.net/en/posts/2023/10/06/</guid>
       <description>Hello World!!
-1 git clone https://github.com/{YOUR_USER_NAME}/hugo-site.git Let&amp;rsquo;s Do the Thing!</description>
+git clone https://github.com/{YOUR_USER_NAME}/hugo-site.git Let&amp;rsquo;s Do the Thing!</description>
       <content:encoded><![CDATA[<blockquote>
 <p>Hello World!!</p>
 </blockquote>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git clone https://github.com/<span class="o">{</span>YOUR_USER_NAME<span class="o">}</span>/hugo-site.git
-</span></span></code></pre></td></tr></table>
-</div>
-</div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git clone https://github.com/<span class="o">{</span>YOUR_USER_NAME<span class="o">}</span>/hugo-site.git
+</span></span></code></pre></div>
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube-nocookie.com/embed/d9IxdwEFk1c" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>

@@ -198,25 +198,13 @@ In other words, if variations are the specific concrete cases in the domain, com
 <h2 id="dealing-with-changes-functional-decomposition">Dealing with Changes: Functional Decomposition</h2>
 <p>4c. Call the appropriate function that will display the shape, giving it the shape’s location. (以形狀的位置為參數，呼叫顯示形狀的 Function)。</p>
 <p><strong>Using Modularity to Contain Variation</strong></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="nl">function</span><span class="p">:</span> <span class="n">display</span> <span class="n">shape</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="nl">function</span><span class="p">:</span> <span class="n">display</span> <span class="n">shape</span>
 </span></span><span class="line"><span class="cl"><span class="nl">input</span><span class="p">:</span> <span class="n">type</span> <span class="n">of</span> <span class="n">shape</span><span class="p">,</span> <span class="n">description</span> <span class="n">of</span> <span class="n">shape</span>
 </span></span><span class="line"><span class="cl"><span class="nl">action</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">   <span class="k">switch</span> <span class="p">(</span><span class="n">type</span> <span class="n">of</span> <span class="n">shape</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">      <span class="k">case</span> <span class="nl">square</span><span class="p">:</span> <span class="n">put</span> <span class="n">display</span> <span class="n">function</span> <span class="k">for</span> <span class="n">square</span> <span class="n">here</span>
 </span></span><span class="line"><span class="cl">      <span class="k">case</span> <span class="nl">circle</span><span class="p">:</span> <span class="n">put</span> <span class="n">display</span> <span class="n">function</span> <span class="k">for</span> <span class="n">circle</span> <span class="n">here</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="討論-1">討論</h2>
+</span></span></code></pre></div><h2 id="討論-1">討論</h2>
 <ol>
 <li>如果要顯示一個新的形狀(例如三角形)，我可能只需要改這個模組(希望是)。</li>
 <li>這個模組的輸入是 type of shape, description of shape，如果今天使用不同方式提供輸入(例如 array of points 或其他方式)，該怎麼辦？</li>
