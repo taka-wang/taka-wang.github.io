@@ -15,6 +15,19 @@
                 href="https://blog.cmwang.net/zh-tw/posts/2023/10/06/"
                 />
   </url><url>
+    <loc>https://blog.cmwang.net/zh-tw/categories/</loc>
+    <lastmod>2023-10-06T17:34:04+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.cmwang.net/en/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://blog.cmwang.net/zh-tw/categories/"
+                />
+  </url><url>
     <loc>https://blog.cmwang.net/zh-tw/tags/hugo/</loc>
     <lastmod>2023-10-06T17:34:04+08:00</lastmod>
     <xhtml:link
@@ -67,7 +80,10 @@
                 href="https://blog.cmwang.net/zh-tw/tags/"
                 />
   </url><url>
-    <loc>https://blog.cmwang.net/zh-tw/posts/2023/10/05/</loc>
+    <loc>https://blog.cmwang.net/zh-tw/categories/youtube/</loc>
+    <lastmod>2023-10-06T17:34:04+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.cmwang.net/zh-tw/posts/2023/10/this-is-a-gallery-test/</loc>
     <lastmod>2023-10-05T17:50:06+08:00</lastmod>
   </url><url>
     <loc>https://blog.cmwang.net/zh-tw/tags/design-patterns/</loc>
@@ -114,18 +130,6 @@
   </url><url>
     <loc>https://blog.cmwang.net/zh-tw/posts/2017/01/12/</loc>
     <lastmod>2017-01-12T17:57:07+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.cmwang.net/zh-tw/categories/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://blog.cmwang.net/en/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-tw"
-                href="https://blog.cmwang.net/zh-tw/categories/"
-                />
   </url><url>
     <loc>https://blog.cmwang.net/zh-tw/series/</loc>
     <xhtml:link
