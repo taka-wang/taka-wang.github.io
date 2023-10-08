@@ -40,7 +40,7 @@
 </span></span><span class="line"><span class="cl">    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">exec_</span><span class="p">())</span>
 </span></span></code></pre></div><hr>
 <p>另一個測試</p>
- 
+
 
 <div class="terminal space shadow">
     <div class="top">
