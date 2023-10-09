@@ -106,7 +106,6 @@ Half the size of the FP32 model.</p>
 <p><img loading="lazy" src="images/8.gif#layoutTextWidth" alt="image"  />
 
 <strong>Yolov7-tiny on iPad Mini 6.</strong> Copyrights of <a href="https://youtu.be/hngml3y2Rq8">BBIBBI Dance Practice</a> belongs Kakao Entertainment.</p>
-<p>Any opinions expressed are solely my own and do not express the views or opinions of my employer.</p>
 <h3 id="references">References</h3>
 <ul>
 <li><a href="https://developer.apple.com/documentation/vision/recognizing_objects_in_live_capture">Recognizing Objects in Live Capture</a></li>
