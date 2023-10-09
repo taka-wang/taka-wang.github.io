@@ -6,13 +6,33 @@
     <description>Recent content in Categories on Liberation Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Sat, 06 Aug 2022 11:04:15 +0000</lastBuildDate><atom:link href="https://blog.cmwang.net/zh-tw/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 23 Apr 2023 10:36:21 +0000</lastBuildDate><atom:link href="https://blog.cmwang.net/zh-tw/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>生活</title>
+      <link>https://blog.cmwang.net/zh-tw/categories/%E7%94%9F%E6%B4%BB/</link>
+      <pubDate>Sun, 23 Apr 2023 10:36:21 +0000</pubDate>
+      
+      <guid>https://blog.cmwang.net/zh-tw/categories/%E7%94%9F%E6%B4%BB/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
     <item>
       <title>Tech</title>
       <link>https://blog.cmwang.net/zh-tw/categories/tech/</link>
-      <pubDate>Sat, 06 Aug 2022 11:04:15 +0000</pubDate>
+      <pubDate>Thu, 29 Dec 2022 13:14:24 +0000</pubDate>
       
       <guid>https://blog.cmwang.net/zh-tw/categories/tech/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Note</title>
+      <link>https://blog.cmwang.net/zh-tw/categories/note/</link>
+      <pubDate>Sat, 21 Jan 2017 20:12:53 +0000</pubDate>
+      
+      <guid>https://blog.cmwang.net/zh-tw/categories/note/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>

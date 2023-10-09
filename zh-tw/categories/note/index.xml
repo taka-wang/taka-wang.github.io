@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Note on Liberation Notes</title>
-    <link>https://blog.cmwang.net/zh-tw/tags/note/</link>
+    <link>https://blog.cmwang.net/zh-tw/categories/note/</link>
     <description>Recent content in Note on Liberation Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Sat, 21 Jan 2017 20:12:53 +0000</lastBuildDate><atom:link href="https://blog.cmwang.net/zh-tw/tags/note/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 21 Jan 2017 20:12:53 +0000</lastBuildDate><atom:link href="https://blog.cmwang.net/zh-tw/categories/note/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Design Patterns Explained - CH8</title>
       <link>https://blog.cmwang.net/zh-tw/posts/2017/01/design-patterns-explained-ch8/</link>
@@ -375,6 +375,32 @@ In other words, if variations are the specific concrete cases in the domain, com
 <li>抽象與責任轉嫁的好處 (placeholder and delegation)。</li>
 <li>三種視角的應用 (在抽象層次上溝通，在實作層次上執行)。</li>
 </ol>]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>設計模式學習資源</title>
+      <link>https://blog.cmwang.net/zh-tw/posts/2017/01/design-patterns-resources/</link>
+      <pubDate>Thu, 12 Jan 2017 17:57:07 +0000</pubDate>
+      
+      <guid>https://blog.cmwang.net/zh-tw/posts/2017/01/design-patterns-resources/</guid>
+      <description>一些設計模式的連結，年代有點久了，不是很值得參考了</description>
+      <content:encoded><![CDATA[<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="http://steventtud.logdown.com/posts/2014/01/02/teddy-flow-design-pattern">[Design Pattern]資源總整理</a></li>
+<li><a href="http://www.uml.org.cn/sjms/sjms.asp#9">UML 軟件工程組織</a></li>
+<li><a href="http://design-patterns.readthedocs.io/zh_CN/latest/index.html#">圖說設計模式</a></li>
+<li><a href="http://www.cnblogs.com/oomusou/archive/2007/03/31/695076.html">真 OO 无双 之 真乱舞书</a></li>
+<li><a href="https://sourcemaking.com/design_patterns">Source Making</a></li>
+<li><a href="http://best-practice-software-engineering.ifs.tuwien.ac.at/patterns.html">Best Practice Software Engineering</a></li>
+<li><a href="http://rockssdlog.blogspot.tw/search?updated-max=2012-04-19T15:35:00%2B08:00&amp;max-results=7&amp;m=1">白話 Rock 的系統開發雜記</a></li>
+<li><a href="https://dotblogs.com.tw/joysdw12/series/1?qq=Design%2520Pattern">.Net 蛤什麼?</a></li>
+<li><a href="http://openhome.cc/Gossip/DesignPattern/">非關語言: 設計模式</a></li>
+<li><a href="http://www.oodesign.com/prototype-pattern.html">OO Design</a></li>
+<li><a href="https://pl.cs.jhu.edu/oose/lectures/design-patterns.shtml">Object-Oriented Software Engineering</a></li>
+<li><a href="http://blog.monochromegane.com/blog/2014/03/23/struct-implementaion-patterns-in-golang/">Go 言語での構造體実裝パターン</a></li>
+<li><a href="https://msdn.microsoft.com/en-us/library/dn568099.aspx">Cloud Design Patterns: Prescriptive Architecture Guidance for Cloud Applications</a></li>
+</ul>
+]]></content:encoded>
     </item>
     
   </channel>
