@@ -121,5 +121,123 @@ Half the size of the FP32 model.</p>
 ]]></content:encoded>
     </item>
     
+    <item>
+      <title>模擬奧運五環無人機燈光秀</title>
+      <link>https://blog.cmwang.net/zh-tw/posts/2022/03/simulated-olympic-rings-drone-light-show/</link>
+      <pubDate>Sat, 19 Mar 2022 12:37:27 +0000</pubDate>
+      
+      <guid>https://blog.cmwang.net/zh-tw/posts/2022/03/simulated-olympic-rings-drone-light-show/</guid>
+      <description>練習 CALayer &amp;amp; Gesture Recognizer</description>
+      <content:encoded><![CDATA[<p><strong>學習目標：</strong></p>
+<ul>
+<li>Gesture Recognizer</li>
+<li>CALayer &amp; UIBezierPath</li>
+<li>Class &amp; Function</li>
+</ul>
+<p><strong>練習成果：</strong></p>
+<p><img loading="lazy" src="images/1.gif" alt="image"  />
+</p>
+<p><strong>原始碼：</strong></p>
+<p><a href="https://github.com/takawang/olympic-drone">GitHub - takawang/olympic-drone</a></p>
+<p><strong>緣起：</strong></p>
+<p>這次的練習，主要是看到下面這篇文章的啟發，不過我簡化了觸模散開與加速度這個部分，主要是練習 swift 實作。</p>
+<p><a href="https://velog.io/@heekang/Vanilla-JS-%ED%8F%89%EC%B0%BD%EC%98%AC%EB%A6%BC%ED%94%BD-%EB%93%9C%EB%A1%A0%EC%87%BC-%EB%A7%8C%EB%93%A4%EA%B8%B0">[Vanilla JS] 평창올림픽 드론쇼 만들기</a></p>
+<p><strong>說明：</strong></p>
+<p>實作的構想還算直覺，除了<strong>長壓連續觸發</strong>需要研究一下。</p>
+<ol>
+<li>使用 javascript 的 <strong>canvas getImageData()</strong> 將 SVG 存成 json 檔 (可參考上文連結中的 <strong>getDotPos</strong> 方法。</li>
+<li>在 swift 中，透過讀取 json 檔，存成座標點的類別陣列，這兩步驟也可以用來畫其他圖案，不用手工一直描點。</li>
+<li>設計 Drone 類別，讓 Drone <strong>初始位置</strong>是隨機的，<strong>目的位置</strong>是剛剛載入的圖形座標。</li>
+<li>將兩座標分成 20 份，持續按壓連續觸發時，一次移動一份。</li>
+<li>當到達目的座標時，改變 Drone 的顏色。</li>
+</ol>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>iPad上的影片播放器</title>
+      <link>https://blog.cmwang.net/zh-tw/posts/2022/03/practice-avplayer-view-controller/</link>
+      <pubDate>Wed, 16 Mar 2022 10:32:00 +0000</pubDate>
+      
+      <guid>https://blog.cmwang.net/zh-tw/posts/2022/03/practice-avplayer-view-controller/</guid>
+      <description>練習使用 AVPlayerViewController 製作動態字幕影片</description>
+      <content:encoded><![CDATA[<p><strong>學習目標：</strong></p>
+<ul>
+<li>AVPlayer</li>
+<li>NotificationCenter</li>
+<li>Timer</li>
+<li>Swift Optional</li>
+<li>Function</li>
+<li>Switch Case</li>
+</ul>
+<p><strong>練習成果：</strong></p>
+<p><strong>原始碼：</strong></p>
+<p><a href="https://github.com/takawang/letter-song">GitHub - takawang/letter-song</a></p>
+<p><strong>歌詞：</strong>
+<code>今晚 我想將那天的螢火 送到你的窗前 含意是&amp;#34;我愛你&amp;#34; 我想起我們的初吻 不管何時 只要閉上雙眼 就能奔向那最遙遠的地方 就像我在被浪濤湧來的沙上寫下的字跡般 你感覺也會像他們那樣從此消失 總是想念 雖然無法將我心裡所有的話語，說給你聽 但那裡頭，全都是&amp;#34;我愛你&amp;#34; 我何德何能 能擁有名為你的這份幸運 若我們現在能望著對方 該有多美好 就像我在被浪濤湧來的沙上寫下的字跡般 你感覺也會像他們那樣從此消失 還是想念 雖然無法將我寫在日記上的一字一句 都告訴你 但字字句句都代表著我愛你 今晚 我想將那天的螢火 送到你的窗前 希望今夜的你有個美好的夢</code></p>
+<p><strong>影片來源：</strong><a href="https://www.youtube.com/watch?v=BzYnNdJhZQw">https://www.youtube.com/watch?v=BzYnNdJhZQw</a></p>
+<p><strong>歌詞來源：</strong><a href="https://tinyurl.com/2p9c5d8a">https://tinyurl.com/2p9c5d8a</a></p>
+<p><strong>Storyboard:</strong></p>
+<p><img loading="lazy" src="images/1.png" alt="image"  />
+
+<strong>過程：</strong></p>
+<p>本次結合幾個項目，練習 SDK 使用與熟悉 Swift 語法，只用 function print 無法滿足自己的期待，所以上網查了一些資料並搭配上課內容製作，將 AVPlayerViewController 加進 UIView 應該是最困難的部分，原本考慮使用 Container View 去做，但還不知道怎麼控制多個 Controller，並且跟 Storyboard 串接起來。</p>
+<p>主要在 <strong>iPad Pro 12.9</strong> 與 <strong>iPad Mini 6</strong> 實機測試過，iPhone 版面會看不到歌詞。</p>
+<ol>
+<li>新增 UIView，取得 IBOutlet -&gt; Line 12</li>
+<li>將 AVPlayerViewController 加進 UIView -&gt; Line 50</li>
+<li>用 IBAction 控制 影片播放並開始計時 -&gt; Line59</li>
+<li>註冊 View 生命週期與影片播放結束的通知 -&gt;Line 20~28</li>
+</ol>
+<p><strong>免責聲明：</strong></p>
+<p>影片使用只為了學習目的，沒有營利行為，版權屬於原創作方 <a href="https://www.youtube.com/channel/UCweOkPb1wVVH0Q0Tlj4a5Pw">1theK</a>.</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>仿製 iPad 上的 Apple Music</title>
+      <link>https://blog.cmwang.net/zh-tw/posts/2022/03/replicate-apple-music-ipad-os-app/</link>
+      <pubDate>Sun, 13 Mar 2022 11:35:11 +0000</pubDate>
+      
+      <guid>https://blog.cmwang.net/zh-tw/posts/2022/03/replicate-apple-music-ipad-os-app/</guid>
+      <description>練習使用 Scroll View &amp;amp; Table View 仿製 iPad 上的 Apple Music App</description>
+      <content:encoded><![CDATA[<p><strong>學習目標：</strong></p>
+<ul>
+<li>練習 Scroll View</li>
+<li>練習 Navigation Controller</li>
+<li>練習 Table View Controller &amp; Static Cells</li>
+<li>練習 Label &amp; Button 樣式</li>
+<li>練習 segue &amp; SF Symbols</li>
+</ul>
+<p><strong>練習成果：</strong></p>
+<p><img loading="lazy" src="images/1.gif" alt="練習成果錄影截圖"  />
+</p>
+<p><a href="https://github.com/takawang/fake-music">GitHub - takawang/fake-music</a></p>
+<p><strong>過程：</strong></p>
+<p>透過直接擷取 iPad Pro 12.9 實機畫面，在 story board 上仿製 Apple Music 上的 IU 專輯頁面，更進一步熟悉了 Navigation Controller 的使用，因為還不會製作符合各種機型的版面，所以就直接 hardcode 只支援 12.9 水平的版面，是有點呆版但也收穫不少。</p>
+<p><img loading="lazy" src="images/2.png" alt="image"  />
+
+限定只支援 iPad 與 Landscape</p>
+<p><img loading="lazy" src="images/3.png" alt="image"  />
+
+修改 Product Name 改變 APP 在桌面的名稱</p>
+<p>需要注意的地方是，在 story board 上的是 point，但螢幕截圖是 pixel，因為沒有 zeplin 之類的設計稿，所以花最多時間還是在抓取與對齊座標，位置不是 pixel perfect，但練習的目的應該是達到了。</p>
+<p><img loading="lazy" src="images/4.png" alt="image"  />
+
+Point 與 pixel 是 2x scale 的關係</p>
+<p><strong>最近播放</strong>的點選，參考下面文章，原本使用 <strong>tap gesture recognizer</strong>，不過大概因為我將 navigation controller 放錯地方，總是看不到 back 選單，最後選擇<strong>透明按鈕疊在上方</strong>的做法。</p>
+<p><a href="https://medium.com/%E5%BD%BC%E5%BE%97%E6%BD%98%E7%9A%84-swift-ios-app-%E9%96%8B%E7%99%BC%E5%95%8F%E9%A1%8C%E8%A7%A3%E7%AD%94%E9%9B%86/%E5%88%A9%E7%94%A8-segue-%E5%AF%A6%E7%8F%BE%E5%9C%96%E7%89%87%E9%BB%9E%E9%81%B8%E7%9A%84%E6%8F%9B%E9%A0%81%E5%8A%9F%E8%83%BD-84f6991d74d4">利用 segue 實現圖片點選的換頁功能</a></p>
+<p><img loading="lazy" src="images/5.png" alt="image"  />
+
+Navigation Controller 需要從第一個畫面長出來，而不是第二頁</p>
+<p>主畫面有兩個 scoll view，參考連結提供的技巧就可以方便製作，記得將<strong>水平與垂直的捲軸指示</strong>關閉，這樣畫面會比較擬真。</p>
+<p><a href="https://medium.com/%E5%BD%BC%E5%BE%97%E6%BD%98%E7%9A%84-swift-ios-app-%E9%96%8B%E7%99%BC%E5%95%8F%E9%A1%8C%E8%A7%A3%E7%AD%94%E9%9B%86/%E5%9C%A8-storyboard-%E8%A8%AD%E5%AE%9A-content-size-%E5%AF%A6%E7%8F%BE%E6%B0%B4%E5%B9%B3%E6%8D%B2%E5%8B%95%E7%9A%84-scroll-view-2710fa247293">設定 content size，實現水平捲動，上下捲動和分頁的 scroll view</a></p>
+<p><img loading="lazy" src="images/6.png" alt="image"  />
+
+取消勾選水平與垂直 indicator，使得 scroll view 捲動時不會顯示卷軸</p>
+<p>Table View 的第一個 Cell 與最後兩個 Cell 為了版面調整，中間的歌曲列表只需要透過修改 row 數就可以複製，再修改封面照與 label 即可。</p>
+]]></content:encoded>
+    </item>
+    
   </channel>
 </rss>
