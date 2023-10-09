@@ -6,40 +6,165 @@
     <description>Recent content on Liberation Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Fri, 06 Oct 2023 17:34:04 +0800</lastBuildDate><atom:link href="https://blog.cmwang.net/zh-tw/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 23 Apr 2023 10:36:21 +0000</lastBuildDate><atom:link href="https://blog.cmwang.net/zh-tw/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Blog Reboot</title>
-      <link>https://blog.cmwang.net/zh-tw/posts/2023/10/06/</link>
-      <pubDate>Fri, 06 Oct 2023 17:34:04 +0800</pubDate>
+      <title>重啟人生 | BRUSH UP LIFE</title>
+      <link>https://blog.cmwang.net/zh-tw/posts/2023/04/brush-up-life/</link>
+      <pubDate>Sun, 23 Apr 2023 10:36:21 +0000</pubDate>
       
-      <guid>https://blog.cmwang.net/zh-tw/posts/2023/10/06/</guid>
-      <description>重新開始 # 用這樣夾 youtube {{ &amp;lt; youtube d9IxdwEFk1c &amp;gt; }} 我們開始吧！ import sys from PyQt5.QtWidgets import QApplication, QLabel, QMainWindow, QVBoxLayout, QWidget class HelloWorldApp(QMainWindow): pass if __name__ == &amp;#39;__main__&amp;#39;: app = QApplication(sys.argv) window = HelloWorldApp() window.show() sys.exit(app.exec_()) 另一個測試 Set some variables import sys from PyQt5.QtWidgets import QApplication, QLabel, QMainWindow, QVBoxLayout, QWidget class HelloWorldApp(QMainWindow): pass if __name__</description>
-      <content:encoded><![CDATA[<h2 id="重新開始">重新開始</h2>
+      <guid>https://blog.cmwang.net/zh-tw/posts/2023/04/brush-up-life/</guid>
+      <description>《重啟人生》（ブラッシュアップライフ）是今年度最熱門的日劇之一，它深深觸動了許多人的心靈。</description>
+      <content:encoded><![CDATA[<p><a href="https://www.instagram.com/p/CpsSwuNv8AH/"><img loading="lazy" src="images/1.png" alt="Image Description"  />
+</a>
+<em>Image Source: <a href="https://www.instagram.com/p/CpsSwuNv8AH/">https://www.instagram.com/p/CpsSwuNv8AH/</a></em></p>
+<p>《重啟人生》（ブラッシュアップライフ）是今年度最熱門的日劇之一，它深深觸動了許多人的心靈。劇中融合了許多平成時代的經典元素，還有不少時代的眼淚，如 BB Call、たまごっち、Game Boy Advance 等等，勾起了人們對於往日時光的美好回憶。此外，這部劇的音樂也十分講究，其中的懷舊日文歌曲更是讓人回想起那些年輕時的種種。故事情節描寫了一生摯友之間的真摯情誼與日常間的閒聊，故事相當令人感動。</p>
+<p><a href="https://www.kkbox.com/hk/tc/playlist/LZFv22FCYzN14uoKXl">重啟人生_歌單</a>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube-nocookie.com/embed/d9IxdwEFk1c" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+<div class="container alert alert-secondary">
+    <div>
+        <a href="" alt="">
+            <strong></strong>
+        </a>
+    </div>
+    <div class="float-left m-2">
+        
+    </div>
+    <p><small></small></p>
+    <div class="clearfix"></div>
+</div>
+</p>
+<p>這部劇的編劇 バカリズム 過往曾經創作出類似主題的作品，例如《素敵な選 TAXI》，個人也是很推薦這個輕鬆小品。我在觀影的過程中，也不免聯想到另外兩部相關題材的作品，分別是年代有點久遠的日劇《Loss:Time:Life》（ロス：タイム：ライフ） 和近期的韓劇《認識的妻子》（아는와이프），都是發人省思也很有意思的影集。這些穿越或者平行宇宙的影集雖然著重的內容不同，但《重啟人生》卻不同於其他類似作品，它並不著重於人生的懊悔與補救，反而像是掉入不同平行宇宙的時空旅者，重新再過一次不同的人生。雖然在世界觀的設定上可能會讓人有點困惑，感覺好像有一些 Bug，但請帶著愉悅的心情，盡情享受這部滿滿懷舊風日劇想傳達的故事即可。</p>
+<p><a href="https://www.amazon.co.jp/%E3%83%AD%E3%82%B9-%E3%82%BF%E3%82%A4%E3%83%A0-%E3%83%A9%E3%82%A4%E3%83%95/dp/B0B8P9K1TS">ロス:タイム:ライフ</a></p>
+<p><a href="https://www.viki.com/tv/35862c-familiar-wife">Familiar Wife | Korea | Drama | Watch with English Subtitles &amp; More ✔️</a></p>
+<!-- 
+<div class="container alert alert-secondary">
+    <div>
+        <a href="" alt="">
+            <strong></strong>
+        </a>
+    </div>
+    <div class="float-left m-2">
+        
+    </div>
+    <p><small></small></p>
+    <div class="clearfix"></div>
 </div>
 
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="err">#</span> <span class="nx">用這樣夾</span> <span class="nx">youtube</span>
-</span></span><span class="line"><span class="cl"><span class="p">{{</span> <span class="o">&lt;</span> <span class="nx">youtube</span> <span class="nx">d9IxdwEFk1c</span> <span class="o">&gt;</span> <span class="p">}}</span>
-</span></span></code></pre></div><p><img loading="lazy" src="iu.jpg" alt="iu"  />
+
+<div class="container alert alert-secondary">
+    <div>
+        <a href="" alt="">
+            <strong></strong>
+        </a>
+    </div>
+    <div class="float-left m-2">
+        
+    </div>
+    <p><small></small></p>
+    <div class="clearfix"></div>
+</div>
+ -->
+<p>當影片中響起 ZARD 的《負けないで》時，我的內心不禁感到激動和感傷。坂井泉水的音樂曾經陪伴我度過青澀孤單的學生時光，懷舊音樂真的為本劇加分不少，每每都將人帶回那個單純的年代。</p>
+<p>主人公在劇中每一次的重生都是為了能夠重新投胎成為人類，因此，他重新努力積福做好事，從一開始的小愛（為自己）轉變成大愛（為別人），這種不斷重生並自我優化的過程，雖然有點荒誕搞笑，卻是笑中帶淚的觸動人心。這也讓我們反思，為什麼重新投胎成為人類就是最好的選擇呢？那是不是因為我們自己帶著人類中心主義的想法，亦或者是因為人類本身的優越感使然？這也影響著我們該如何好好度過此生。</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube-nocookie.com/embed/GYIk6JEWl8E" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p>《重啟人生》給觀眾帶來了很多的思考和感動。它讓人們重新思考自己的生命意義和價值，讓人們意識到生命的珍貴與有限。這部影集讓我們重新回顧過去的歲月，回憶那些美好的時光，同時也讓人們重新思考未來的方向，是值得一看的感人作品。</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube-nocookie.com/embed/B2fPYlGKdXM" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>製作脆梅的時節</title>
+      <link>https://blog.cmwang.net/zh-tw/posts/2023/04/make-crispy-plum/</link>
+      <pubDate>Sun, 16 Apr 2023 15:16:37 +0000</pubDate>
+      
+      <guid>https://blog.cmwang.net/zh-tw/posts/2023/04/make-crispy-plum/</guid>
+      <description>製作脆梅一直是我們家重要的儀式，每年我們都會在年初與信義鄉的小農預訂青梅，並以此製作脆梅。</description>
+      <content:encoded><![CDATA[<p><img loading="lazy" src="1.jpeg" alt="image"  />
+
+青梅</p>
+<p>近年來，清明節前後一直是我們家重要的儀式，我們會在年初與信義鄉的小農預訂 12 公斤青梅，並以此製作脆梅。然而，今年由於雨量不足，果實相較於往年稍嫌不盡人意。</p>
+<p>製作脆梅的方式相當簡單，不需要複雜的器材，只需花費一些時間與耐心。配方非常簡單，以一公斤青梅、100 克粗鹽和 600 克砂糖的比例進行製作。接下來，請依照以下步驟進行：</p>
+<p><img loading="lazy" src="2.jpeg" alt="image"  />
+
+青梅和鹽一起搓揉</p>
+<ul>
+<li>清洗：去掉梅子的蒂頭，一顆顆挑除。</li>
+<li>殺青：使用粗鹽幫助梅子 SPA，搓揉至少 15 分鐘，直到表面濕潤變色。</li>
+<li>敲梅子：用槌子一顆顆敲打至微裂，千萬別敲碎了。</li>
+<li>泡鹽水 8 小時：務必確保鹽水完全覆蓋住梅子。</li>
+<li>換水 8 小時：每二到三小時更換一次水。</li>
+<li>加糖水：每天更換新的糖水，覆蓋住梅子，重複三天。換糖水的過程頗為重要，要小心謹慎，以免影響口感。</li>
+<li>去掉苦澀糖水：將所有的苦澀糖水倒掉，取代為最後一次的糖水，再等待三天，即可完成製作。</li>
+</ul>
+<p>我感激家人為生活帶來的儀式感，這種感覺讓我感受到生命的美好。</p>
+<p><img loading="lazy" src="3.jpeg" alt="image"  />
+
+脆梅成品</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>今天你會有好事發生</title>
+      <link>https://blog.cmwang.net/zh-tw/posts/2023/04/you-will-have-a-good-day/</link>
+      <pubDate>Thu, 06 Apr 2023 12:29:10 +0000</pubDate>
+      
+      <guid>https://blog.cmwang.net/zh-tw/posts/2023/04/you-will-have-a-good-day/</guid>
+      <description>今天你將會有美好的一天。耶穌立刻對他們說：“不要害怕，只管信，我在這裡！”（馬可福音 6:50）</description>
+      <content:encoded><![CDATA[<p><img loading="lazy" src="1.jpeg" alt="image"  />
 </p>
-<blockquote>
-<p>我們開始吧！</p>
-</blockquote>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sys</span>
-</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">PyQt5.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span><span class="p">,</span> <span class="n">QLabel</span><span class="p">,</span> <span class="n">QMainWindow</span><span class="p">,</span> <span class="n">QVBoxLayout</span><span class="p">,</span> <span class="n">QWidget</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">HelloWorldApp</span><span class="p">(</span><span class="n">QMainWindow</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="k">pass</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">window</span> <span class="o">=</span> <span class="n">HelloWorldApp</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">    <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">exec_</span><span class="p">())</span>
-</span></span></code></pre></div><hr>
-<p>另一個測試</p>
+<p>今天你將會有美好的一天。耶穌立刻對他們說：“不要害怕，只管信，我在這裡！”（馬可福音 6:50）</p>
+<p><img loading="lazy" src="2.png" alt="image"  />
+</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Reflections on Five Years in the Company</title>
+      <link>https://blog.cmwang.net/zh-tw/posts/2023/03/reflections-on-five-years-in-the-company/</link>
+      <pubDate>Mon, 27 Mar 2023 14:46:01 +0000</pubDate>
+      
+      <guid>https://blog.cmwang.net/zh-tw/posts/2023/03/reflections-on-five-years-in-the-company/</guid>
+      <description>As I reflect on my five years in this company, I realize how much has happened and how much I have grown</description>
+      <content:encoded><![CDATA[<p><img loading="lazy" src="1.jpeg" alt="image"  />
+</p>
+<p>As I reflect on my five years in this company, I realize how much has happened and how much I have grown. From having a supervisor to being a lone ranger, to forming a small team and eventually founding the Nilvana, time has flown by quickly, and I am left wondering where tomorrow will take me.</p>
+<p>It seems like just yesterday that I started my journey in this company. I remember the excitement of meeting new colleagues, learning new skills, and finding my place in the organization. Over time, I became more confident and began taking on more responsibilities. I was proud of my accomplishments and the impact that I was making.</p>
+<p>However, the road was not always easy. There were times when I faced challenges that made me question my abilities and my decisions. I learned that setbacks and failures are a part of the journey, and they can be a source of growth and resilience.</p>
+<p>One of the most significant moments in my journey was the creation of the Nilvana brand. It was a leap of faith, but I knew that I had a vision that could change the game. With the help of a few dedicated team members, we worked tirelessly to bring the brand to life. Seeing it take off and gain recognition was one of the proudest moments of my career.</p>
+<p>Looking back on my journey, I realize that time truly flies. It seems like just yesterday that I started, but five years have gone by in a blink of an eye. As I prepare to take on new challenges, I am grateful for the experiences and the lessons that I have learned.</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube-nocookie.com/embed/1t8kAbUg4t4" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Configuring USB-FS for USB3 Vision Camera</title>
+      <link>https://blog.cmwang.net/zh-tw/posts/2022/12/configuring-usb-fs-for-usb3-vision-camera/</link>
+      <pubDate>Thu, 29 Dec 2022 13:14:24 +0000</pubDate>
+      
+      <guid>https://blog.cmwang.net/zh-tw/posts/2022/12/configuring-usb-fs-for-usb3-vision-camera/</guid>
+      <description>This post explains how to increase the buffer memory for USB-FS devices on Linux systems.</description>
+      <content:encoded><![CDATA[<p><img loading="lazy" src="images/1.jpeg" alt="image"  />
+</p>
+<p>This post explains how to increase the buffer memory for USB-FS devices on Linux systems in order to make full use of the imaging hardware’s capabilities. By default, USB-FS on Linux systems only allows 16 MB of buffer memory for all USB devices, which may not be sufficient for high-resolution cameras or multiple-camera set ups, resulting in image acquisition issues. To configure USB-FS and increase the buffer memory limit, the following steps should be taken:</p>
+<p>Note that GRUB is for desktop PC architecture. ARM embedded systems use a different bootloader, as GRUB requires a system with a BIOS, and embedded systems do not have one.</p>
+<ol>
+<li>Create the file <code>/etc/rc.local</code> with the command <code>sudo touch /etc/rc.local</code>. This will create the file, allowing it to be edited.</li>
+<li>Change the permissions of the file with the command <code>sudo chmod 744 /etc/rc.local</code>. This will ensure that the file has the correct permissions to be edited.</li>
+<li>Change the buffer memory limit with the command <code>echo 1000 &amp;gt; /sys/module/usbcore/parameters/usbfs_memory_mb</code>. This command will set the memory limit to 1000 MB, which should be enough to prevent image acquisition issues.`</li>
+</ol>
+<h2 id="etcrclocal-file-contents-example">/etc/rc.local file contents example</h2>
 
 
 <div class="terminal space shadow">
@@ -50,521 +175,99 @@
             <span class="circle green"></span>
         </div>
         <div class="title">
-            Set some variables
+            /etc/rc.local
         </div>
     </div>
-    <div class="terminalbody"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sys</span>
-</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">PyQt5.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span><span class="p">,</span> <span class="n">QLabel</span><span class="p">,</span> <span class="n">QMainWindow</span><span class="p">,</span> <span class="n">QVBoxLayout</span><span class="p">,</span> <span class="n">QWidget</span>
+    <div class="terminalbody"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="cp">#!/bin/sh -e
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="m">1000</span> &gt; /sys/module/usbcore/parameters/usbfs_memory_mb
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">HelloWorldApp</span><span class="p">(</span><span class="n">QMainWindow</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="k">pass</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">window</span> <span class="o">=</span> <span class="n">HelloWorldApp</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">    <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">exec_</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"><span class="nb">exit</span>
+</span></span><span class="line"><span class="cl"><span class="m">0</span>
 </span></span></code></pre></div></div>
 </div>
 <br />
 
-<style type="text/css">.notice{--root-color:#444;--root-background:#eff;--title-color:#fff;--title-background:#7bd;--warning-title:#c33;--warning-content:#fee;--info-title:#fb7;--info-content:#fec;--note-title:#6be;--note-content:#e7f2fa;--tip-title:#5a5;--tip-content:#efe}@media (prefers-color-scheme:dark){.notice{--root-color:#ddd;--root-background:#eff;--title-color:#fff;--title-background:#7bd;--warning-title:#800;--warning-content:#400;--info-title:#a50;--info-content:#420;--note-title:#069;--note-content:#023;--tip-title:#363;--tip-content:#121}}body.dark .notice{--root-color:#ddd;--root-background:#eff;--title-color:#fff;--title-background:#7bd;--warning-title:#800;--warning-content:#400;--info-title:#a50;--info-content:#420;--note-title:#069;--note-content:#023;--tip-title:#363;--tip-content:#121}.notice{padding:18px;line-height:24px;margin-bottom:24px;border-radius:4px;color:var(--root-color);background:var(--root-background)}.notice p:last-child{margin-bottom:0}.notice-title{margin:-18px -18px 12px;padding:4px 18px;border-radius:4px 4px 0 0;font-weight:700;color:var(--title-color);background:var(--title-background)}.notice.warning .notice-title{background:var(--warning-title)}.notice.warning{background:var(--warning-content)}.notice.info .notice-title{background:var(--info-title)}.notice.info{background:var(--info-content)}.notice.note .notice-title{background:var(--note-title)}.notice.note{background:var(--note-content)}.notice.tip .notice-title{background:var(--tip-title)}.notice.tip{background:var(--tip-content)}.icon-notice{display:inline-flex;align-self:center;margin-right:8px}.icon-notice img,.icon-notice svg{height:1em;width:1em;fill:currentColor}.icon-notice img,.icon-notice.baseline svg{top:.125em;position:relative}</style>
-<div><svg width="0" height="0" display="none" xmlns="http://www.w3.org/2000/svg"><symbol id="tip-notice" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></symbol><symbol id="note-notice" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet"><path d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zm-248 50c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/></symbol><symbol id="warning-notice" viewBox="0 0 576 512" preserveAspectRatio="xMidYMid meet"><path d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/></symbol><symbol id="info-notice" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet"><path d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"/></symbol></svg></div><div class="notice warning" >
-<p class="first notice-title"><span class="icon-notice baseline"><svg><use href="#warning-notice"></use></svg></span>警告</p><p>This is a warning notice. Be warned!</p></div>
-
+<p>After changing the memory limit, it is important to confirm the changes have been made correctly. This can be done by running the command:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">cat /sys/module/usbcore/parameters/usbfs_memory_mb
+</span></span></code></pre></div><p>which will display the current memory limit. If the limit is still 16 MB, then the changes will need to be made again. Additionally, further information about USB-FS on Linux can be found in the following sources:</p>
+<ul>
+<li><a href="https://www.flir.asia/support-center/iis/machine-vision/application-note/understanding-usbfs-on-linux/">Understanding USBFS on Linux</a></li>
+<li><a href="https://importgeek.wordpress.com/2017/02/26/increase-usbfs-memory-limit-in-ubuntu/">Increase USBFS Memory Limit in Ubuntu</a></li>
+<li><a href="https://forums.developer.nvidia.com/t/change-kernel-cmdline-by-edit-etc-default-grub-failed/159831/2">Change Kernel Cmdline by Edit /etc/default/grub Failed</a></li>
+</ul>
 ]]></content:encoded>
     </item>
     
     <item>
-      <title>gallery 測試</title>
-      <link>https://blog.cmwang.net/zh-tw/posts/2023/10/this-is-a-gallery-test/</link>
-      <pubDate>Thu, 05 Oct 2023 17:50:06 +0800</pubDate>
+      <title>Execute YOLOv7 model on iOS devices</title>
+      <link>https://blog.cmwang.net/zh-tw/posts/2022/08/execute-yolov7-model-on-ios-devices/</link>
+      <pubDate>Sat, 06 Aug 2022 11:04:15 +0000</pubDate>
       
-      <guid>https://blog.cmwang.net/zh-tw/posts/2023/10/this-is-a-gallery-test/</guid>
-      <description>警告 這是一個測試 &lt;!DOCTYPE html&gt;</description>
-      <content:encoded><![CDATA[<style type="text/css">.notice{--root-color:#444;--root-background:#eff;--title-color:#fff;--title-background:#7bd;--warning-title:#c33;--warning-content:#fee;--info-title:#fb7;--info-content:#fec;--note-title:#6be;--note-content:#e7f2fa;--tip-title:#5a5;--tip-content:#efe}@media (prefers-color-scheme:dark){.notice{--root-color:#ddd;--root-background:#eff;--title-color:#fff;--title-background:#7bd;--warning-title:#800;--warning-content:#400;--info-title:#a50;--info-content:#420;--note-title:#069;--note-content:#023;--tip-title:#363;--tip-content:#121}}body.dark .notice{--root-color:#ddd;--root-background:#eff;--title-color:#fff;--title-background:#7bd;--warning-title:#800;--warning-content:#400;--info-title:#a50;--info-content:#420;--note-title:#069;--note-content:#023;--tip-title:#363;--tip-content:#121}.notice{padding:18px;line-height:24px;margin-bottom:24px;border-radius:4px;color:var(--root-color);background:var(--root-background)}.notice p:last-child{margin-bottom:0}.notice-title{margin:-18px -18px 12px;padding:4px 18px;border-radius:4px 4px 0 0;font-weight:700;color:var(--title-color);background:var(--title-background)}.notice.warning .notice-title{background:var(--warning-title)}.notice.warning{background:var(--warning-content)}.notice.info .notice-title{background:var(--info-title)}.notice.info{background:var(--info-content)}.notice.note .notice-title{background:var(--note-title)}.notice.note{background:var(--note-content)}.notice.tip .notice-title{background:var(--tip-title)}.notice.tip{background:var(--tip-content)}.icon-notice{display:inline-flex;align-self:center;margin-right:8px}.icon-notice img,.icon-notice svg{height:1em;width:1em;fill:currentColor}.icon-notice img,.icon-notice.baseline svg{top:.125em;position:relative}</style>
-<div><svg width="0" height="0" display="none" xmlns="http://www.w3.org/2000/svg"><symbol id="tip-notice" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></symbol><symbol id="note-notice" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet"><path d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zm-248 50c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/></symbol><symbol id="warning-notice" viewBox="0 0 576 512" preserveAspectRatio="xMidYMid meet"><path d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/></symbol><symbol id="info-notice" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet"><path d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"/></symbol></svg></div><div class="notice warning" >
-<p class="first notice-title"><span class="icon-notice baseline"><svg><use href="#warning-notice"></use></svg></span>警告</p><p>這是一個測試</p></div>
-
-
-
-
-
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  	
-	
-
-	
-		<script src="/shortcode-gallery/jquery-3.7.0.min.js"></script>
-	
-	
-	
-		<script src="/shortcode-gallery/lazy/jquery.lazy.min.js"></script>
-	
-
-	<script src="/shortcode-gallery/swipebox/js/jquery.swipebox.min.js"></script>
-	<link rel="stylesheet" href="/shortcode-gallery/swipebox/css/swipebox.min.css">
-
-	<script src="/shortcode-gallery/justified_gallery/jquery.justifiedGallery.min.js"></script>
-	<link rel="stylesheet" href="/shortcode-gallery/justified_gallery/justifiedGallery.min.css"/>
-
-
-<style>
-	
-
-	
-</style>
-
-
-
-
-
-<div id="gallery-7aa99fc293f18db5d5263e2d5abcaf87-1-wrapper" class="gallery-wrapper">
-<div id="gallery-7aa99fc293f18db5d5263e2d5abcaf87-1" class="justified-gallery">
-	
-		
-		
-				
-			
-			
-			
-				
-			
-
-			
-			
-				
-			
-
-
-			
-			
-			
-
-			
-			
-
-
-			<div>
-				
-				
-					
-				
-				<a href="/zh-tw/posts/2023/10/this-is-a-gallery-test/images/166696108_208995410980363_8070482360869827712_n.jpg" 
-					class="galleryImg"
-					
-					>
-					<img			
-						width="480" height="600"
-
-						
-							
-							style="filter: blur(25px);"
-							
-								src="data:image/jpeg;base64,/9j/2wCEAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4&#43;JS5ESUM8SDc9PjsBCgsLDg0OHBAQHDsoIig7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O//AABEIACAAGgMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5&#43;gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4&#43;Tl5ufo6ery8/T19vf4&#43;fr/2gAMAwEAAhEDEQA/AIPDX/Ej8P8A9q3MXyyybAhON2Op/Q8U&#43;S/hv/tE8Gkn7NCQ7CHJzxwxA79fyroZbW08SaFbwPcEBMAyKBneM5yOfXP4ik0jw6dCS6gEaXcUiKyEEqwOT&#43;h/yKiphm3pszOMrvUq&#43;G9Qt9Viu4dNiW1n8ngJ0kXoQefU1qjxF4kUBRpseBx90f41W8KaRc6Bplyt3BAJHfMboecHkj1wCK1v7RgAw4ct3wh6/lQsPZK7f3hZt6Hnml6oNBuUcX9ncpK6o8MU24tk4z07V6bdTCy8q7Klo4l2SAdQp7/hj8s14/J4V1u9ijDW&#43;l2rI&#43;8PEpVj7EgV6tp51J9NtxfXSGZkG/y1G05&#43;oz0rrjd6E7FHxDrK6dp0U&#43;3fvfCqMsSMZ/HgVhDxrb4H&#43;gf&#43;QDVjVdOt5NVh0q7sGvLKV90Lb8eUxDHGO4&#43;Xj0yBS/8ACvtF/wCgKv8A38/&#43;vUym7j5U1qf/2Q=="
-							
-							class="lazy"
-							data-src="/zh-tw/posts/2023/10/this-is-a-gallery-test/images/166696108_208995410980363_8070482360869827712_n_hua48f1fda8f2a97873aa238484c8ba8bb_140859_600x600_fit_q90_lanczos.jpg"
-						
-
-						
-					>
-				</a>
-			</div>
-		
-	
-		
-		
-				
-			
-			
-			
-				
-			
-
-			
-			
-				
-			
-
-
-			
-			
-			
-
-			
-			
-
-
-			<div>
-				
-				
-					
-				
-				<a href="/zh-tw/posts/2023/10/this-is-a-gallery-test/images/166558562_280560847037100_3290903699164054133_n.jpg" 
-					class="galleryImg"
-					
-					>
-					<img			
-						width="480" height="600"
-
-						
-							
-							style="filter: blur(25px);"
-							
-								src="data:image/jpeg;base64,/9j/2wCEAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4&#43;JS5ESUM8SDc9PjsBCgsLDg0OHBAQHDsoIig7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O//AABEIACAAGgMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5&#43;gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4&#43;Tl5ufo6ery8/T19vf4&#43;fr/2gAMAwEAAhEDEQA/AJ0mXw/odnPexhnlICQMSAF9f6/54rXurm0s11RdLhktZG24aT7ozjOBzz9a6O4ttN8T20MspcjOFKtgqeMg&#43;vSmT&#43;H7qfw/Lo0UkRTeyiYxfMi5BxjuccZ4&#43;lZywcL7LUzhJa3EtrQ6pplve6Q5tXJ/eRMxAU92GP8APNO/s/XBx/a7/wDftv8AGrqwzabpNpZST&#43;YYVAJUYBA6fy61eGq3BGV0diD0IlHNN4SmugRipdfxsefeG9VtrHXLWzt9SguxdybHjjVwF4ODkgc5wPxr0O/llsme6SHzI3XEybckY6MB3x39vpXli&#43;EtcuLi2uZLuxtpbZtyNbw7SDkHtjPSvToILkW8KXd7JLKFAcglQzd&#43;M12R10J2Ob8U&#43;IzpUdjNDMu6UN8&#43;8KCBjoT9e1YX/CyZhx9qT/v&#43;f8K6K&#43;tha6/FCsdq1ncHlJhyjHIJX0G7Zkf7VaP9lWn93T/&#43;&#43;V/wqJSfMxqKsj//2Q=="
-							
-							class="lazy"
-							data-src="/zh-tw/posts/2023/10/this-is-a-gallery-test/images/166558562_280560847037100_3290903699164054133_n_huba104692c6cbc48e49c605638e313c06_145546_600x600_fit_q90_lanczos.jpg"
-						
-
-						
-					>
-				</a>
-			</div>
-		
-	
-		
-		
-				
-			
-			
-			
-				
-			
-
-			
-			
-				
-			
-
-
-			
-			
-			
-
-			
-			
-
-
-			<div>
-				
-				
-					
-				
-				<a href="/zh-tw/posts/2023/10/this-is-a-gallery-test/images/166445553_2952022428420666_5740142444856026676_n.jpg" 
-					class="galleryImg"
-					
-					>
-					<img			
-						width="480" height="600"
-
-						
-							
-							style="filter: blur(25px);"
-							
-								src="data:image/jpeg;base64,/9j/2wCEAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4&#43;JS5ESUM8SDc9PjsBCgsLDg0OHBAQHDsoIig7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O//AABEIACAAGgMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5&#43;gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4&#43;Tl5ufo6ery8/T19vf4&#43;fr/2gAMAwEAAhEDEQA/AM2fxK74cASlSCfMbkD2q3ZyTahpE15b2lsrRE8SHBf6fn69xWhJ4MttYnik0&#43;QRbYV2Fh8rDH3ieoP1zWxpukXukeH5rGGSOeZ3IO9eEfHb1HT8q444JJ63&#43;8iNubUxdDm1vV7U3lq5toSNokZ2IYDsAPetEjVVODrRyOPuSUnhRbjw3ay6ZqdvLMN2&#43;F0XAYkfNjOP8mt8airDI0u8557f41tHCwWln97K9nfVfmcZ4f12WG4XQblWS5RNsbZHfJ2n3Fdeb06fdCef/VXCCMsDnY/Yn65x&#43;A9a8k8OWusaf4hF5Y6VcrEW/drOQMegOSM817BNC90hhn8l43XDKF6j8a9COqsZPQpa3ePFpn25CJGt3VgWAOedp46dzWH/AMLEwcGRsjr9z/GuivdOt5dGGmSo1xHIgBUuSW75P481z3/CC6P/ANAFPzP&#43;NTN2eg0k1qf/2Q=="
-							
-							class="lazy"
-							data-src="/zh-tw/posts/2023/10/this-is-a-gallery-test/images/166445553_2952022428420666_5740142444856026676_n_hu871327a969ac1190cce09440126a4c95_131667_600x600_fit_q90_lanczos.jpg"
-						
-
-						
-					>
-				</a>
-			</div>
-		
-	
-		
-		
-				
-			
-			
-			
-				
-			
-
-			
-			
-				
-			
-
-
-			
-			
-			
-
-			
-			
-
-
-			<div>
-				
-				
-					
-				
-				<a href="/zh-tw/posts/2023/10/this-is-a-gallery-test/images/166366283_3953398781364937_7155614920124178913_n.jpg" 
-					class="galleryImg"
-					
-					>
-					<img			
-						width="480" height="600"
-
-						
-							
-							style="filter: blur(25px);"
-							
-								src="data:image/jpeg;base64,/9j/2wCEAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4&#43;JS5ESUM8SDc9PjsBCgsLDg0OHBAQHDsoIig7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O//AABEIACAAGgMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5&#43;gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4&#43;Tl5ufo6ery8/T19vf4&#43;fr/2gAMAwEAAhEDEQA/AGrqFzdaf5sq&#43;VHI/lrJFgZY8Djp1&#43;lS6R4b1G00O/LcXUbYVgQyHAz&#43;Gc9a2dM/su/WSwlt1jhjfLQhdh7FW9jWi2n2ktqbCEGGC6QhSDy2M7lJPXg5Gfeh4eLT0WpCaTPMv7VvLhFmjlaMso3Dd8oPPTHf/CnNrWpbj&#43;/k69m/&#43;vXR6zoeheGoFeZ3NtcTBUVfuwtjB&#43;oOM/Wp1&#43;3BQI4YCmPlK2a4I7Y&#43;auSWBjfZAopve3qN1GW1tPGplfVoLZnePdEwfLLhcg4GMHHrXV3kUX2PyredVmjO&#43;Nm4w4&#43;vY9Poa5a7027vfH9ndWyxizXZ57MqlmZc8AnnGNo/OuruZUSdhJjJyRmvUgrmbdtTnfGsa3nhNGn4Z8PtyAckdOfr&#43;lcpCmrpCieUx2qBk4yePrXX6rAuvzwxpK4gtwARGABJnBxnHTj9avi1vMfdm/I1nJ3d0y1po0f/2Q=="
-							
-							class="lazy"
-							data-src="/zh-tw/posts/2023/10/this-is-a-gallery-test/images/166366283_3953398781364937_7155614920124178913_n_hu34c6608222ca107fae199562a8a491a7_133667_600x600_fit_q90_lanczos.jpg"
-						
-
-						
-					>
-				</a>
-			</div>
-		
-	
-		
-		
-				
-			
-			
-			
-				
-			
-
-			
-			
-				
-			
-
-
-			
-			
-			
-
-			
-			
-
-
-			<div>
-				
-				
-					
-				
-				<a href="/zh-tw/posts/2023/10/this-is-a-gallery-test/images/166344044_1399662470367268_4160014369012714689_n.jpg" 
-					class="galleryImg"
-					
-					>
-					<img			
-						width="480" height="600"
-
-						
-							
-							style="filter: blur(25px);"
-							
-								src="data:image/jpeg;base64,/9j/2wCEAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4&#43;JS5ESUM8SDc9PjsBCgsLDg0OHBAQHDsoIig7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O//AABEIACAAGgMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5&#43;gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4&#43;Tl5ufo6ery8/T19vf4&#43;fr/2gAMAwEAAhEDEQA/AMWxvru&#43;aK3B3TTMEUFeOTjJ9BjmrGsWt5pV3bJb3RnE6kJsRlOcdPx56elWbkpda9pzaCIrOW3YyyGVwokGQMY755/Out1Oyk1i6t5dQtf3drgxRB8FnJHIIx05/M1zfVopNW/AuPK47HFaRoet63NhGaJVYrJK5IGPb1rrF8ERhQGvpiwHJGOv5Vu25urc7AyIpP7vcMZ9jxxVj7XqX/Phn3DcH9KuOGSWqM3ypmX4T0/Z4aS3u4QjzM26OReTz3/LrU1/dw6Z5YZZZ4kBBdTuMYPf1x246V5lpPjg6Bcw21tdnULKVt0jTJh0Y8HBz0xjrmvQbS6S5/0mF3uVf7rpwpA4612xsyW2iHU9cs9Pto9Ref8A0YkKWBLZzyOfzrO/4TewPInuSD0wn/1qt6zpmLC4ngtvldCJrVfuyA9SB2Ydc1gx&#43;DrKSNXOp3ybgDtaRgR7GlOUloCSZ//Z"
-							
-							class="lazy"
-							data-src="/zh-tw/posts/2023/10/this-is-a-gallery-test/images/166344044_1399662470367268_4160014369012714689_n_hud34cb06a82a3cf2ed4a40dd4d5257734_143806_600x600_fit_q90_lanczos.jpg"
-						
-
-						
-					>
-				</a>
-			</div>
-		
-	
-		
-		
-				
-			
-			
-			
-				
-			
-
-			
-			
-				
-			
-
-
-			
-			
-			
-
-			
-			
-
-
-			<div>
-				
-				
-					
-				
-				<a href="/zh-tw/posts/2023/10/this-is-a-gallery-test/images/166304570_2331893966942088_2179876612911083713_n.jpg" 
-					class="galleryImg"
-					
-					>
-					<img			
-						width="480" height="600"
-
-						
-							
-							style="filter: blur(25px);"
-							
-								src="data:image/jpeg;base64,/9j/2wCEAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4&#43;JS5ESUM8SDc9PjsBCgsLDg0OHBAQHDsoIig7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O//AABEIACAAGgMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5&#43;gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4&#43;Tl5ufo6ery8/T19vf4&#43;fr/2gAMAwEAAhEDEQA/AMOTWZyubaVY2Rl3AkncDV/QdQvtWu2toQpLcjdwB689qdq3hH7O1ubGNpPKj/fbRyWPcjP5Yrd8G6adPtJ5b60x58aPFKeAME5989OtecsFTbs4majaVmc1qOs3tlqbWE1uBIMDaR1J6EeuaurFqTIGOmvkjP3ayvEN7b/8JpA9vJLILWRNzuOM7t2Ae&#43;K9gGwgHzBz7Vr9To3uo29CpwjcoWdxHaX0zBAAwCLkY7&#43;n50tsv2qW6tWUGQSeblhwFbpjH0rkvCuuTeJI3kkh8toWBZ1OQ5Oe3b1roLm6fSbiPUSTJGU8qcgfdGcq30Bz&#43;ftXrWTVzNN3E1bwnpeo2pidijbgVMIUYb8qYtvcIgRmJZRg4lHX86vQXEdyS8O1AfmfHfPQ/kKz5rN3nkfa3zMT&#43;tNwJcj/2Q=="
-							
-							class="lazy"
-							data-src="/zh-tw/posts/2023/10/this-is-a-gallery-test/images/166304570_2331893966942088_2179876612911083713_n_hu1c6a7fd0ee704870beed68a49b145e63_138314_600x600_fit_q90_lanczos.jpg"
-						
-
-						
-					>
-				</a>
-			</div>
-		
-	
-</div>
-</div>
-
-<script>
-	if (!jQuery) {
-		alert("jquery is not loaded");
-	}
-
-	$( document ).ready(() => {
-		const gallery = $("#gallery-7aa99fc293f18db5d5263e2d5abcaf87-1");
-		
-
-		
-		let swipeboxInstance = null;
-
-		
-		
-		gallery.on('jg.complete', () => {
-			
-				
-				
-				$(() => {
-					$('.lazy').Lazy({
-						visibleOnly: true,
-						afterLoad: element => element.css({filter: "none", transition: "filter 1.0s ease-in-out"})
-					});
-				});
-			
-
-			swipeboxInstance = $('.galleryImg').swipebox(
-				jQuery.extend({},
-					{  }
-				)
-			);
-		});
-
-		
-		gallery.justifiedGallery({
-			rowHeight : "250",
-			margins : "5",
-			border : 0,
-			randomize :  false ,
-			waitThumbnailsLoad : false,
-			lastRow : "justify",
-			captions : false,
-			
-			
-		});
-
-		
-		
-	});
-</script>
-
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <style type="text/css">
-            .bilibili_shortcodes {
-                position: relative;
-                width: 100%;
-                height: 0;
-                padding-bottom: 66%;
-                margin: 10px auto;  
-                overflow: hidden;
-                text-align: center;
-            }
-            .bilibili_shortcodes iframe {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                left: 0;
-                top: 0;
-            }
-        </style>
-        <title></title>
-    </head>
-    <body>
-        <div class="bilibili_shortcodes">
-            <iframe
-                src="https://player.bilibili.com/player.html?bvid=BV1ZR4y1X7w5&page=1&high_quality=1&danmaku=0&as_wide=0"
-                scrolling="no"
-                border="0"
-                frameborder="no"
-                framespacing="0"
-                allowfullscreen="true"
-            >
-            </iframe>
-        </div>
-    </body>
-</html>
-
+      <guid>https://blog.cmwang.net/zh-tw/posts/2022/08/execute-yolov7-model-on-ios-devices/</guid>
+      <description>Real-time object detection with CoreML is trickier than you think.</description>
+      <content:encoded><![CDATA[<p><img loading="lazy" src="images/1.jpeg" alt="image"  />
+
+Real-time object detection with CoreML is trickier than you think.</p>
+<p>Usually, you have two choices to build a machine learning app for your mobile device, <strong>inference</strong> can happen either directly on-device or on cloud-based servers. It all depends on your usage scenario, there is no one-size fit all solution. In this article, we will only focus on on-device inference.</p>
+<p>At WWDC 2017 Apple released first Core ML. Core ML is Apple’s machine learning framework for doing on-device inference. Core ML is not the only way to do on-device inference, there are tens of libraries and frameworks that are compatible with iOS, but that’s beyond the scope of this article. From the <a href="https://github.com/WongKinYiu/yolov7">YOLOv7 official repository</a>, we can get the <a href="https://github.com/WongKinYiu/yolov7/blob/main/export.py">export script</a> to convert trained PyTorch model to Core ML format effortlessly. However, keep one thing in mind, YOLOv7 is a popular open source project, new changes and updates are added very quickly. I’m also very glad to send a <a href="https://github.com/WongKinYiu/yolov7/pull/434/commits">PR</a> to improve the export script last night due to this writing 😃.After you got the exported Core ML models, no kidding, you have tons of things in your todo list. <a href="https://twitter.com/mhollemans">Matthijs Hollemans</a> has already written an insightful <a href="https://machinethink.net/blog/bounding-boxes/">article</a> in his blog, be sure to checkout and <a href="https://leanpub.com/coreml-survival-guide">support his efforts</a>! Here is my short list:</p>
+<ul>
+<li>Configure your Core ML model in a particular way. You can either append NMS to your model or write a lot of additional Swift code. IMHO, this is the most difficult part if you know nothing about the object detection model.</li>
+<li>Specify camera resolution, don’t simply select the highest resolution available if your app doesn’t require it.</li>
+<li>Resize or crop your input image to fit network input dimension, it depends on your application.</li>
+<li>Feed modified images to your model in a correct orientation.</li>
+<li>Fix Vision’s weird orin.</li>
+<li>Convert bounding boxes coordinate system for display. This is also a trickier part, you need some iOS development experiences and a pencil for calculation 😎.</li>
+</ul>
+<p>According to Hollemans’s article, there are at least 5 different coordinate systems you need to take care, not to mention how to handle real-time capturing correctly and efficiently is also non-trivial. You can follow these two articles to learn how to create a custom camera view.</p>
+<p><a href="https://developer.apple.com/documentation/vision/recognizing_objects_in_live_capture">Apple Developer Documentation | Recognizing Objects in Live Capture</a></p>
+<p><a href="https://guides.codepath.com/ios/Creating-a-Custom-Camera-View">Creating a Custom Camera View | CodePath iOS Cliffnotes</a>
+At the latest <a href="https://developer.apple.com/videos/play/wwdc2022/10027/">WWDC 2022</a>, Apple introduced even more performance tools to its CoreML toolchain, now you can check your model’s metadata via <strong>performance reports</strong> and <strong>Core ML Instrument</strong> without writing any code. You can also use <code>computeUnits = .cpuAndNeuralEngine</code> if you don’t want to use the GPU but always force the model to run on the CPU and ANE if available.</p>
+<p><img loading="lazy" src="images/2.png#layoutTextWidth" alt="image"  />
+
+Prefer CPU and ANE instead of GPU.</p>
+<p>You can learn more about ANE from the following repository, thank you again Hollemans.</p>
+<p><a href="https://github.com/hollance/neural-engine">GitHub - hollance/neural-engine: Everything we actually know about the Apple Neural Engine (ANE)</a></p>
+<p>Here are snapshots from my model’s performance reports.</p>
+<p><img loading="lazy" src="images/3.png#layoutTextWidth" alt="image"  />
+
+You can evaluate your model via drag-and-drop image files.</p>
+<p>There is no significant inference speed differences among quantization models, but the model size only about half the size. It’s a good thing for your mobile applications.
+<img loading="lazy" src="images/4.png#layoutTextWidth" alt="image"  />
+</p>
+<p><img loading="lazy" src="images/5.png#layoutTextWidth" alt="image"  />
+
+No inference speed improved. (Left is FP32, right is FP16)</p>
+<p><img loading="lazy" src="images/6.png#layoutTextWidth" alt="image"  />
+</p>
+<p><img loading="lazy" src="images/7.png#layoutTextWidth" alt="image"  />
+
+Half the size of the FP32 model.</p>
+<p>Finally, you have a working YOLOv7 Core ML model on the iOS devices, be careful of the heat🔥. Happy coding!</p>
+<p><img loading="lazy" src="images/8.gif#layoutTextWidth" alt="image"  />
+
+<strong>Yolov7-tiny on iPad Mini 6.</strong> Copyrights of <a href="https://youtu.be/hngml3y2Rq8">BBIBBI Dance Practice</a> belongs Kakao Entertainment.</p>
+<p>Any opinions expressed are solely my own and do not express the views or opinions of my employer.</p>
+<h3 id="references">References</h3>
+<ul>
+<li><a href="https://developer.apple.com/documentation/vision/recognizing_objects_in_live_capture">Recognizing Objects in Live Capture</a></li>
+<li><a href="https://machinethink.net/blog/bounding-boxes/">How to display Vision bounding boxes</a></li>
+<li><a href="https://guides.codepath.com/ios/Creating-a-Custom-Camera-View">Creating a Custom Camera View</a></li>
+<li><a href="https://github.com/hollance/neural-engine">The Neural Engine — what do we know about it?</a></li>
+<li><a href="https://github.com/WongKinYiu/yolov7">WongKinYiu/yolov7</a></li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2022/10027/">WWDC2022 — Optimize your Core ML usage</a></li>
+<li><a href="https://machinethink.net/blog/mobilenet-ssdlite-coreml/">MobileNetV2 + SSDLite with Core ML</a></li>
+<li><a href="https://github.com/dbsystel/yolov5-coreml-tools">yolov5 — CoreML Tools</a></li>
+</ul>
 ]]></content:encoded>
     </item>
     
     <item>
       <title>Design Patterns Explained - CH8</title>
-      <link>https://blog.cmwang.net/zh-tw/posts/2017/01/21/</link>
+      <link>https://blog.cmwang.net/zh-tw/posts/2017/01/design-patterns-explained-ch8/</link>
       <pubDate>Sat, 21 Jan 2017 20:12:53 +0000</pubDate>
       
-      <guid>https://blog.cmwang.net/zh-tw/posts/2017/01/21/</guid>
+      <guid>https://blog.cmwang.net/zh-tw/posts/2017/01/design-patterns-explained-ch8/</guid>
       <description>&lt;h1 id=&#34;expanding-our-horizons&#34;&gt;Expanding Our Horizons&lt;/h1&gt;
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
 &lt;ul&gt;
@@ -714,10 +417,10 @@ In other words, if variations are the specific concrete cases in the domain, com
     
     <item>
       <title>Design Patterns Explained - CH1</title>
-      <link>https://blog.cmwang.net/zh-tw/posts/2017/01/20/</link>
+      <link>https://blog.cmwang.net/zh-tw/posts/2017/01/design-patterns-explained-ch1/</link>
       <pubDate>Fri, 20 Jan 2017 18:12:53 +0000</pubDate>
       
-      <guid>https://blog.cmwang.net/zh-tw/posts/2017/01/20/</guid>
+      <guid>https://blog.cmwang.net/zh-tw/posts/2017/01/design-patterns-explained-ch1/</guid>
       <description>&lt;h1 id=&#34;object-oriented-paradigm&#34;&gt;Object-Oriented Paradigm&lt;/h1&gt;
 &lt;p&gt;Purpose: Explain why object-oriented paradigm over functional decomposition.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<h1 id="object-oriented-paradigm">Object-Oriented Paradigm</h1>
@@ -930,12 +633,12 @@ In other words, if variations are the specific concrete cases in the domain, com
     </item>
     
     <item>
-      <title>Design patterns Resources</title>
-      <link>https://blog.cmwang.net/zh-tw/posts/2017/01/12/</link>
+      <title>設計模式學習資源</title>
+      <link>https://blog.cmwang.net/zh-tw/posts/2017/01/design-patterns-resources/</link>
       <pubDate>Thu, 12 Jan 2017 17:57:07 +0000</pubDate>
       
-      <guid>https://blog.cmwang.net/zh-tw/posts/2017/01/12/</guid>
-      <description>Resources [Design Pattern]資源總整理 UML 軟件工程組織 圖說設計模式 真 OO 无双 之 真乱舞书 Source Making Best Practice Software Engineering 白話 Rock 的系統開發雜記 .Net 蛤什麼? 非關語言: 設計模式 OO Design Object-Oriented</description>
+      <guid>https://blog.cmwang.net/zh-tw/posts/2017/01/design-patterns-resources/</guid>
+      <description>一些設計模式的連結，年代有點久了，不是很值得參考了</description>
       <content:encoded><![CDATA[<h2 id="resources">Resources</h2>
 <ul>
 <li><a href="http://steventtud.logdown.com/posts/2014/01/02/teddy-flow-design-pattern">[Design Pattern]資源總整理</a></li>
