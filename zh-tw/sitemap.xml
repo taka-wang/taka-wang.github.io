@@ -16,7 +16,7 @@
                 />
   </url><url>
     <loc>https://blog.cmwang.net/zh-tw/</loc>
-    <lastmod>2023-10-09T23:21:45+08:00</lastmod>
+    <lastmod>2023-10-09T23:59:41+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -42,7 +42,7 @@
                 />
   </url><url>
     <loc>https://blog.cmwang.net/zh-tw/posts/</loc>
-    <lastmod>2023-10-09T23:21:45+08:00</lastmod>
+    <lastmod>2023-10-09T23:59:41+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -202,6 +202,9 @@
                 hreflang="zh-tw"
                 href="https://blog.cmwang.net/zh-tw/tags/yolov7/"
                 />
+  </url><url>
+    <loc>https://blog.cmwang.net/zh-tw/posts/2022/07/performance-benchmarking-of-yolov7-tensorrt/</loc>
+    <lastmod>2023-10-09T23:59:41+08:00</lastmod>
   </url><url>
     <loc>https://blog.cmwang.net/zh-tw/categories/note/</loc>
     <lastmod>2023-10-09T23:21:45+08:00</lastmod>
