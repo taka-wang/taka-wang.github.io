@@ -4,15 +4,20 @@
     <title>Notes on Liberation Notes</title>
     <link>https://blog.cmwang.net/zh/categories/notes/</link>
     <description>Recent content in Notes on Liberation Notes</description>
+    <image>
+      <title>Liberation Notes</title>
+      <url>https://blog.cmwang.net/47</url>
+      <link>https://blog.cmwang.net/47</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <lastBuildDate>Tue, 10 Oct 2023 20:01:46 +0800</lastBuildDate><atom:link href="https://blog.cmwang.net/zh/categories/notes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo GitHub Pages 部署指南</title>
-      <link>https://blog.cmwang.net/zh/posts/2023/10/hugo-get-started/</link>
+      <link>https://blog.cmwang.net/zh/posts/2023/10/hugo-deployment-guide/</link>
       <pubDate>Tue, 10 Oct 2023 20:01:46 +0800</pubDate>
       
-      <guid>https://blog.cmwang.net/zh/posts/2023/10/hugo-get-started/</guid>
+      <guid>https://blog.cmwang.net/zh/posts/2023/10/hugo-deployment-guide/</guid>
       <description>這個指南將引導你完成在 GitHub 上建立私人網站並部署到 GitHub Pages 的過程</description>
       <content:encoded><![CDATA[<p>歡迎使用 Hugo 快速建立個人網站！這個指南將引導你完成在 GitHub 上建立私人網站並部署到 GitHub Pages 的過程。</p>
 <h2 id="這個指南包括什麼重點">這個指南包括什麼重點</h2>
