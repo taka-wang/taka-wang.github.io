@@ -106,6 +106,45 @@
                 href="https://blog.cmwang.net/zh/posts/2023/10/blog-reboot-2023/"
                 />
   </url><url>
+    <loc>https://blog.cmwang.net/zh/posts/2023/10/hugo-test/</loc>
+    <lastmod>2023-10-06T09:34:04+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.cmwang.net/en/posts/2023/10/hugo-test/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://blog.cmwang.net/zh/posts/2023/10/hugo-test/"
+                />
+  </url><url>
+    <loc>https://blog.cmwang.net/zh/tags/shortcodes/</loc>
+    <lastmod>2023-10-06T09:34:04+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.cmwang.net/en/tags/shortcodes/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://blog.cmwang.net/zh/tags/shortcodes/"
+                />
+  </url><url>
+    <loc>https://blog.cmwang.net/zh/tags/youtube/</loc>
+    <lastmod>2023-10-06T09:34:04+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.cmwang.net/en/tags/youtube/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://blog.cmwang.net/zh/tags/youtube/"
+                />
+  </url><url>
     <loc>https://blog.cmwang.net/zh/tags/drama/</loc>
     <lastmod>2023-10-09T21:23:11+08:00</lastmod>
   </url><url>
