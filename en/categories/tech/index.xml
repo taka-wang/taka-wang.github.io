@@ -40,20 +40,39 @@
 </span></span></code></pre></div></li>
 <li>
 <p>Add an example theme. Here, we&rsquo;ll use PaperMod as an example:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">cd</span> hugo-site
+</li>
+</ol>
+
+
+<div class="terminal space shadow">
+    <div class="top">
+        <div class="btns">
+            <span class="circle red"></span>
+            <span class="circle yellow"></span>
+            <span class="circle green"></span>
+        </div>
+        <div class="title">
+            Add theme
+        </div>
+    </div>
+    <div class="terminalbody"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">cd</span> hugo-site
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">git submodule add --depth<span class="o">=</span><span class="m">1</span> https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;theme = &#39;PaperMod&#39;&#34;</span> &gt;&gt; hugo.toml
-</span></span></code></pre></div></li>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;theme : &#39;PaperMod&#39;&#34;</span> &gt;&gt; hugo.yaml
+</span></span></code></pre></div></div>
+</div>
+<br />
+
+<ol start="6">
 <li>
-<p>Copy the <a href=".gitignore">.gitignore</a> file into <code>hugo-site</code>.</p>
+<p>Copy the <a href="https://raw.githubusercontent.com/taka-wang/example-hugo-site/main/.gitignore">.gitignore</a> file into <code>hugo-site</code>.</p>
 </li>
 <li>
 <p>[Optional] Set up GitHub Action for automatic deployment:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"> mkdir -p .github/workflows/
 </span></span><span class="line"><span class="cl"> touch .github/workflows/hugo.yml
-</span></span></code></pre></div><p>Copy the contents of <a href=".github/workflows/hugo.yml">hugo.yml</a> into the newly created <code>hugo.yml</code> file. Remember to modify these two parts:</p>
+</span></span></code></pre></div><p>Copy the contents of <a href="https://raw.githubusercontent.com/taka-wang/example-hugo-site/main/.github/workflows/hugo.yml">hugo.yml</a> into the newly created <code>hugo.yml</code> file. Remember to modify these two parts:</p>
 <ul>
 <li><strong>token: ${{ secrets.ACCESS_TOKEN }}</strong>: Use a personal access token for this private repository.</li>
 <li><strong>repository-name: YOUR_USER_NAME}}/YOUR_USER_NAME.github.io</strong>: Replace <code>YOUR_USER_NAME</code> with your GitHub username.</li>

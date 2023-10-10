@@ -40,20 +40,39 @@
 </span></span></code></pre></div></li>
 <li>
 <p>新增範例主題，這邊以 PaperMod 為例：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">cd</span> hugo-site
+</li>
+</ol>
+
+
+<div class="terminal space shadow">
+    <div class="top">
+        <div class="btns">
+            <span class="circle red"></span>
+            <span class="circle yellow"></span>
+            <span class="circle green"></span>
+        </div>
+        <div class="title">
+            Add theme
+        </div>
+    </div>
+    <div class="terminalbody"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">cd</span> hugo-site
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">git submodule add --depth<span class="o">=</span><span class="m">1</span> https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;theme = &#39;PaperMod&#39;&#34;</span> &gt;&gt; hugo.toml
-</span></span></code></pre></div></li>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;theme : &#39;PaperMod&#39;&#34;</span> &gt;&gt; hugo.yaml
+</span></span></code></pre></div></div>
+</div>
+<br />
+
+<ol start="6">
 <li>
-<p>將 <a href=".gitignore">.gitignore</a> 檔案複製到 <code>hugo-site</code>。</p>
+<p>將 <a href="https://raw.githubusercontent.com/taka-wang/example-hugo-site/main/.gitignore">.gitignore</a> 檔案複製到 <code>hugo-site</code>。</p>
 </li>
 <li>
 <p>[可選] 新增 GitHub Action 自動部署：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"> mkdir -p .github/workflows/
 </span></span><span class="line"><span class="cl"> touch .github/workflows/hugo.yml
-</span></span></code></pre></div><p>將 <a href=".github/workflows/hugo.yml">hugo.yml</a> 的內容複製到上述新增的空白 <code>hugo.yml</code>。請記得修改以下兩處：</p>
+</span></span></code></pre></div><p>將 <a href="https://raw.githubusercontent.com/taka-wang/example-hugo-site/main/.github/workflows/hugo.yml">hugo.yml</a> 的內容複製到上述新增的空白 <code>hugo.yml</code>。請記得修改以下兩處：</p>
 <ul>
 <li><strong>token: ${{ secrets.ACCESS_TOKEN }}</strong>: 在這裡使用私人儲存庫的存取權杖（Access Token）。</li>
 <li><strong>repository-name: YOUR_USER_NAME/YOUR_USER_NAME.github.io</strong>: 將 <code>YOUR_USER_NAME</code> 改為你的 GitHub 帳號名稱。</li>
