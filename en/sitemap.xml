@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://blog.cmwang.net/en/categories/</loc>
-    <lastmod>2023-10-09T21:23:10+08:00</lastmod>
+    <lastmod>2023-10-10T16:33:39+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -15,8 +15,34 @@
                 href="https://blog.cmwang.net/en/categories/"
                 />
   </url><url>
+    <loc>https://blog.cmwang.net/en/tags/feeling/</loc>
+    <lastmod>2023-10-10T16:33:39+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://blog.cmwang.net/zh/tags/feeling/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.cmwang.net/en/tags/feeling/"
+                />
+  </url><url>
+    <loc>https://blog.cmwang.net/en/tags/hugo/</loc>
+    <lastmod>2023-10-10T16:33:39+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://blog.cmwang.net/zh/tags/hugo/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.cmwang.net/en/tags/hugo/"
+                />
+  </url><url>
     <loc>https://blog.cmwang.net/en/</loc>
-    <lastmod>2023-10-09T21:23:10+08:00</lastmod>
+    <lastmod>2023-10-10T16:33:39+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -26,6 +52,71 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://blog.cmwang.net/en/"
+                />
+  </url><url>
+    <loc>https://blog.cmwang.net/en/posts/2023/10/blog-reboot-2023/</loc>
+    <lastmod>2023-10-10T16:33:39+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://blog.cmwang.net/zh/posts/2023/10/blog-reboot-2023/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.cmwang.net/en/posts/2023/10/blog-reboot-2023/"
+                />
+  </url><url>
+    <loc>https://blog.cmwang.net/en/posts/</loc>
+    <lastmod>2023-10-10T16:33:39+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://blog.cmwang.net/zh/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.cmwang.net/en/posts/"
+                />
+  </url><url>
+    <loc>https://blog.cmwang.net/en/tags/</loc>
+    <lastmod>2023-10-10T16:33:39+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://blog.cmwang.net/zh/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.cmwang.net/en/tags/"
+                />
+  </url><url>
+    <loc>https://blog.cmwang.net/en/categories/tech/</loc>
+    <lastmod>2023-10-10T16:33:39+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://blog.cmwang.net/zh/categories/tech/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.cmwang.net/en/categories/tech/"
+                />
+  </url><url>
+    <loc>https://blog.cmwang.net/en/tags/family/</loc>
+    <lastmod>2023-10-09T21:23:10+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://blog.cmwang.net/zh/tags/family/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.cmwang.net/en/tags/family/"
                 />
   </url><url>
     <loc>https://blog.cmwang.net/en/categories/life/</loc>
@@ -54,17 +145,30 @@
                 href="https://blog.cmwang.net/en/posts/2023/04/make-crispy-plum/"
                 />
   </url><url>
-    <loc>https://blog.cmwang.net/en/posts/</loc>
+    <loc>https://blog.cmwang.net/en/tags/plum/</loc>
     <lastmod>2023-10-09T21:23:10+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://blog.cmwang.net/zh/posts/"
+                href="https://blog.cmwang.net/zh/tags/plum/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://blog.cmwang.net/en/posts/"
+                href="https://blog.cmwang.net/en/tags/plum/"
+                />
+  </url><url>
+    <loc>https://blog.cmwang.net/en/tags/meditation/</loc>
+    <lastmod>2023-10-09T21:23:06+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://blog.cmwang.net/zh/tags/meditation/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.cmwang.net/en/tags/meditation/"
                 />
   </url><url>
     <loc>https://blog.cmwang.net/en/posts/2023/04/you-will-have-a-good-day/</loc>
@@ -106,17 +210,17 @@
                 href="https://blog.cmwang.net/en/posts/2023/03/reflections-on-five-years-in-the-company/"
                 />
   </url><url>
-    <loc>https://blog.cmwang.net/en/tags/</loc>
-    <lastmod>2023-10-09T21:23:04+08:00</lastmod>
+    <loc>https://blog.cmwang.net/en/tags/computer-vision/</loc>
+    <lastmod>2023-10-09T23:59:41+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://blog.cmwang.net/zh/tags/"
+                href="https://blog.cmwang.net/zh/tags/computer-vision/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://blog.cmwang.net/en/tags/"
+                href="https://blog.cmwang.net/en/tags/computer-vision/"
                 />
   </url><url>
     <loc>https://blog.cmwang.net/en/posts/2022/12/configuring-usb-fs-for-usb3-vision-camera/</loc>
@@ -132,17 +236,17 @@
                 href="https://blog.cmwang.net/en/posts/2022/12/configuring-usb-fs-for-usb3-vision-camera/"
                 />
   </url><url>
-    <loc>https://blog.cmwang.net/en/categories/tech/</loc>
+    <loc>https://blog.cmwang.net/en/tags/industrial-camera/</loc>
     <lastmod>2023-10-09T21:23:00+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://blog.cmwang.net/zh/categories/tech/"
+                href="https://blog.cmwang.net/zh/tags/industrial-camera/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://blog.cmwang.net/en/categories/tech/"
+                href="https://blog.cmwang.net/en/tags/industrial-camera/"
                 />
   </url><url>
     <loc>https://blog.cmwang.net/en/tags/coreml/</loc>
@@ -184,17 +288,56 @@
                 href="https://blog.cmwang.net/en/tags/ios/"
                 />
   </url><url>
-    <loc>https://blog.cmwang.net/en/tags/yolov7/</loc>
-    <lastmod>2023-10-09T21:22:40+08:00</lastmod>
+    <loc>https://blog.cmwang.net/en/tags/object-detection/</loc>
+    <lastmod>2023-10-09T23:59:41+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://blog.cmwang.net/zh/tags/yolov7/"
+                href="https://blog.cmwang.net/zh/tags/object-detection/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://blog.cmwang.net/en/tags/yolov7/"
+                href="https://blog.cmwang.net/en/tags/object-detection/"
+                />
+  </url><url>
+    <loc>https://blog.cmwang.net/en/tags/ai/</loc>
+    <lastmod>2023-10-09T23:59:41+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://blog.cmwang.net/zh/tags/ai/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.cmwang.net/en/tags/ai/"
+                />
+  </url><url>
+    <loc>https://blog.cmwang.net/en/tags/evaluation/</loc>
+    <lastmod>2023-10-09T23:59:41+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://blog.cmwang.net/zh/tags/evaluation/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.cmwang.net/en/tags/evaluation/"
+                />
+  </url><url>
+    <loc>https://blog.cmwang.net/en/posts/2022/07/performance-benchmarking-of-yolov7-tensorrt/</loc>
+    <lastmod>2023-10-09T23:59:41+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://blog.cmwang.net/zh/posts/2022/07/performance-benchmarking-of-yolov7-tensorrt/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.cmwang.net/en/posts/2022/07/performance-benchmarking-of-yolov7-tensorrt/"
                 />
   </url><url>
     <loc>https://blog.cmwang.net/en/tags/design-patterns/</loc>

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>coreml on Liberation Notes</title>
+    <title>CoreML on Liberation Notes</title>
     <link>https://blog.cmwang.net/zh/tags/coreml/</link>
-    <description>Recent content in coreml on Liberation Notes</description>
+    <description>Recent content in CoreML on Liberation Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <lastBuildDate>Sat, 06 Aug 2022 11:04:15 +0000</lastBuildDate><atom:link href="https://blog.cmwang.net/zh/tags/coreml/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Execute YOLOv7 model on iOS devices</title>
+      <title>透過 CoreML 在 iOS 上實現即時的物體偵測</title>
       <link>https://blog.cmwang.net/zh/posts/2022/08/execute-yolov7-model-on-ios-devices/</link>
       <pubDate>Sat, 06 Aug 2022 11:04:15 +0000</pubDate>
       
       <guid>https://blog.cmwang.net/zh/posts/2022/08/execute-yolov7-model-on-ios-devices/</guid>
-      <description>Real-time object detection with CoreML is trickier than you think.</description>
+      <description>這篇文章只有英文版的</description>
       <content:encoded><![CDATA[<p><img loading="lazy" src="images/1.jpeg" alt="image"  />
 
 Real-time object detection with CoreML is trickier than you think.</p>

@@ -6,7 +6,57 @@
     <description>Recent content in Tags on Liberation Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 27 Mar 2023 14:46:01 +0000</lastBuildDate><atom:link href="https://blog.cmwang.net/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Oct 2023 16:33:39 +0800</lastBuildDate><atom:link href="https://blog.cmwang.net/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Feeling</title>
+      <link>https://blog.cmwang.net/en/tags/feeling/</link>
+      <pubDate>Tue, 10 Oct 2023 16:33:39 +0800</pubDate>
+      
+      <guid>https://blog.cmwang.net/en/tags/feeling/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://blog.cmwang.net/en/tags/hugo/</link>
+      <pubDate>Tue, 10 Oct 2023 16:33:39 +0800</pubDate>
+      
+      <guid>https://blog.cmwang.net/en/tags/hugo/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Family</title>
+      <link>https://blog.cmwang.net/en/tags/family/</link>
+      <pubDate>Sun, 16 Apr 2023 15:16:37 +0000</pubDate>
+      
+      <guid>https://blog.cmwang.net/en/tags/family/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Plum</title>
+      <link>https://blog.cmwang.net/en/tags/plum/</link>
+      <pubDate>Sun, 16 Apr 2023 15:16:37 +0000</pubDate>
+      
+      <guid>https://blog.cmwang.net/en/tags/plum/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Meditation</title>
+      <link>https://blog.cmwang.net/en/tags/meditation/</link>
+      <pubDate>Thu, 06 Apr 2023 12:29:10 +0000</pubDate>
+      
+      <guid>https://blog.cmwang.net/en/tags/meditation/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
     <item>
       <title>Reflections</title>
       <link>https://blog.cmwang.net/en/tags/reflections/</link>
@@ -18,7 +68,27 @@
     </item>
     
     <item>
-      <title>coreml</title>
+      <title>Computer Vision</title>
+      <link>https://blog.cmwang.net/en/tags/computer-vision/</link>
+      <pubDate>Thu, 29 Dec 2022 13:14:24 +0000</pubDate>
+      
+      <guid>https://blog.cmwang.net/en/tags/computer-vision/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Industrial Camera</title>
+      <link>https://blog.cmwang.net/en/tags/industrial-camera/</link>
+      <pubDate>Thu, 29 Dec 2022 13:14:24 +0000</pubDate>
+      
+      <guid>https://blog.cmwang.net/en/tags/industrial-camera/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>CoreML</title>
       <link>https://blog.cmwang.net/en/tags/coreml/</link>
       <pubDate>Sat, 06 Aug 2022 11:04:15 +0000</pubDate>
       
@@ -28,7 +98,7 @@
     </item>
     
     <item>
-      <title>ios</title>
+      <title>iOS</title>
       <link>https://blog.cmwang.net/en/tags/ios/</link>
       <pubDate>Sat, 06 Aug 2022 11:04:15 +0000</pubDate>
       
@@ -38,11 +108,31 @@
     </item>
     
     <item>
-      <title>yolov7</title>
-      <link>https://blog.cmwang.net/en/tags/yolov7/</link>
+      <title>Object Detection</title>
+      <link>https://blog.cmwang.net/en/tags/object-detection/</link>
       <pubDate>Sat, 06 Aug 2022 11:04:15 +0000</pubDate>
       
-      <guid>https://blog.cmwang.net/en/tags/yolov7/</guid>
+      <guid>https://blog.cmwang.net/en/tags/object-detection/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>AI</title>
+      <link>https://blog.cmwang.net/en/tags/ai/</link>
+      <pubDate>Mon, 25 Jul 2022 10:30:00 +0000</pubDate>
+      
+      <guid>https://blog.cmwang.net/en/tags/ai/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Evaluation</title>
+      <link>https://blog.cmwang.net/en/tags/evaluation/</link>
+      <pubDate>Mon, 25 Jul 2022 10:30:00 +0000</pubDate>
+      
+      <guid>https://blog.cmwang.net/en/tags/evaluation/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>

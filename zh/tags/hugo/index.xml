@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Hugo on Liberation Notes</title>
+    <link>https://blog.cmwang.net/zh/tags/hugo/</link>
+    <description>Recent content in Hugo on Liberation Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Tue, 10 Oct 2023 16:33:39 +0800</lastBuildDate><atom:link href="https://blog.cmwang.net/zh/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>搬回 Github Pages</title>
+      <link>https://blog.cmwang.net/zh/posts/2023/10/blog-reboot-2023/</link>
+      <pubDate>Tue, 10 Oct 2023 16:33:39 +0800</pubDate>
+      
+      <guid>https://blog.cmwang.net/zh/posts/2023/10/blog-reboot-2023/</guid>
+      <description>2023 重新回到靜態網頁的懷抱，Hugo 讓人感覺愉快</description>
+      <content:encoded><![CDATA[<p>經過幾天的實驗，正式將 <a href="https://medium.com/@takawang">Blog</a> 重啟在 <a href="https://pages.github.com/">Github Pages</a>，總是思考要在什麼平台紀錄或者該熟悉怎樣的格式，都比不上持續記錄的實在。</p>
+<p>有個可以掌握在自己手中的筆記本，除了可以抒發心情也可以記錄學習的點滴。<a href="https://gohugo.io/">Hugo</a> 真的是一個很棒的工具，整體體驗比起多年前的 <a href="https://hexo.io/index.html">Hexo</a> 好很多，接下來我會分享幾篇如何自己動手配置的簡單紀錄。</p>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

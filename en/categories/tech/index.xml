@@ -6,7 +6,19 @@
     <description>Recent content in Tech on Liberation Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 29 Dec 2022 13:14:24 +0000</lastBuildDate><atom:link href="https://blog.cmwang.net/en/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Oct 2023 16:33:39 +0800</lastBuildDate><atom:link href="https://blog.cmwang.net/en/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Moving Back to Github Pages</title>
+      <link>https://blog.cmwang.net/en/posts/2023/10/blog-reboot-2023/</link>
+      <pubDate>Tue, 10 Oct 2023 16:33:39 +0800</pubDate>
+      
+      <guid>https://blog.cmwang.net/en/posts/2023/10/blog-reboot-2023/</guid>
+      <description>2023 重新回到靜態網頁的懷抱，Hugo 讓人感覺愉快</description>
+      <content:encoded><![CDATA[<p>After a few days of experimentation, I have officially relaunched my <a href="https://medium.com/@takawang">Blog</a> on <a href="https://pages.github.com/">Github Pages</a>. I often contemplate which platform to use for recording my thoughts, or what format to become familiar with, but nothing beats the authenticity of continuous documentation.</p>
+<p>Having a notebook that I can control not only allows me to express my feelings but also enables me to record the bits and pieces of my learning journey. <a href="https://gohugo.io/">Hugo</a> is truly an amazing tool; the overall experience is much better than it was with <a href="https://hexo.io/index.html">Hexo</a> several years ago. In the upcoming posts, I will share some simple records on how to configure it on your own.</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Configuring USB-FS for USB3 Vision Camera</title>
       <link>https://blog.cmwang.net/en/posts/2022/12/configuring-usb-fs-for-usb3-vision-camera/</link>
@@ -117,6 +129,38 @@ Half the size of the FP32 model.</p>
 <li><a href="https://machinethink.net/blog/mobilenet-ssdlite-coreml/">MobileNetV2 + SSDLite with Core ML</a></li>
 <li><a href="https://github.com/dbsystel/yolov5-coreml-tools">yolov5 — CoreML Tools</a></li>
 </ul>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Performance Benchmarking of YOLOv7 TensorRT</title>
+      <link>https://blog.cmwang.net/en/posts/2022/07/performance-benchmarking-of-yolov7-tensorrt/</link>
+      <pubDate>Mon, 25 Jul 2022 10:30:00 +0000</pubDate>
+      
+      <guid>https://blog.cmwang.net/en/posts/2022/07/performance-benchmarking-of-yolov7-tensorrt/</guid>
+      <description>I will conduct a series performance test of YOLOv7 variants models from cloud GPUs to the latest powerhouse AGX Orin in this post.</description>
+      <content:encoded><![CDATA[<p><img loading="lazy" src="images/1.gif#layoutTextWidth" alt="image"  />
+
+YOLOv7 TensorRT Performance Benchmarking.</p>
+<p>Object detection is one of the fundamental problems of computer vision. Instead of region detection and object classification separately in two stage detectors, object classification and bounding-box regression are done directly without using pre-generated region proposals in one stage detectors. YOLO (You Only Look Once) is one of the representative models of one-stage architecture. The YOLO family has continued to evolve since 2016, this summer we’ve got its latest update to version 7.</p>
+<p><a href="https://github.com/WongKinYiu/yolov7">GitHub - WongKinYiu/yolov7: Implementation of paper - YOLOv7: Trainable bag-of-freebies sets new…</a></p>
+<p>If you are trying to learn how to train your model on a custom dataset from the beginning, there are already many tutorials, notebooks and videos available online. In <a href="https://nilvana.ai/">Nilvana</a>, we really care about its real-world performance on the embedded devices, especially Nvidia Jetson family devices. So we conducted a series performance testing of YOLOv7 variants models on different devices, from cloud GPUs A100 to the latest tiny powerhouse <a href="https://developer.nvidia.com/embedded/jetson-orin">AGX Orin</a>.</p>
+<p><a href="https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Orin-Developer-Kit-p-5314.html">NVIDIA® Jetson AGX Orin™ Developer Kit: smallest and most powerful AI edge computer</a></p>
+<blockquote>
+<p>The main reason YOLOv7 is more accurate, compare to other models with similar AP, YOLOv7 has only about half computational cost. — <a href="https://github.com/WongKinYiu/yolov7/issues/207#issuecomment-1186934294">WongKinYiu</a> &gt; <img loading="lazy" src="images/2.png#layoutTextWidth" alt="image"  />
+
+Input and Output shape of YOLOv7 (80 class)</p>
+</blockquote>
+<p>According to the results table, Xavier NX can run YOLOv7-tiny model pretty well. AGX Orin can even run YOLOv7x model more than 30 FPS, it’s amazing!</p>
+<p><img loading="lazy" src="images/3.png" alt="image"  />
+
+<em>End-to-End Performance on 1080P video, Batch Size=1</em></p>
+<p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube-nocookie.com/embed/OypXod2zaoQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<em>Performance Benchmarking Playlist</em></p>
 ]]></content:encoded>
     </item>
     

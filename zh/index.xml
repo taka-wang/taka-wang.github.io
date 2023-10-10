@@ -6,7 +6,19 @@
     <description>Recent content on Liberation Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 23 Apr 2023 10:36:21 +0000</lastBuildDate><atom:link href="https://blog.cmwang.net/zh/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Oct 2023 16:33:39 +0800</lastBuildDate><atom:link href="https://blog.cmwang.net/zh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>搬回 Github Pages</title>
+      <link>https://blog.cmwang.net/zh/posts/2023/10/blog-reboot-2023/</link>
+      <pubDate>Tue, 10 Oct 2023 16:33:39 +0800</pubDate>
+      
+      <guid>https://blog.cmwang.net/zh/posts/2023/10/blog-reboot-2023/</guid>
+      <description>2023 重新回到靜態網頁的懷抱，Hugo 讓人感覺愉快</description>
+      <content:encoded><![CDATA[<p>經過幾天的實驗，正式將 <a href="https://medium.com/@takawang">Blog</a> 重啟在 <a href="https://pages.github.com/">Github Pages</a>，總是思考要在什麼平台紀錄或者該熟悉怎樣的格式，都比不上持續記錄的實在。</p>
+<p>有個可以掌握在自己手中的筆記本，除了可以抒發心情也可以記錄學習的點滴。<a href="https://gohugo.io/">Hugo</a> 真的是一個很棒的工具，整體體驗比起多年前的 <a href="https://hexo.io/index.html">Hexo</a> 好很多，接下來我會分享幾篇如何自己動手配置的簡單紀錄。</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>重啟人生 | BRUSH UP LIFE</title>
       <link>https://blog.cmwang.net/zh/posts/2023/04/brush-up-life/</link>
@@ -117,10 +129,10 @@
       <pubDate>Thu, 06 Apr 2023 12:29:10 +0000</pubDate>
       
       <guid>https://blog.cmwang.net/zh/posts/2023/04/you-will-have-a-good-day/</guid>
-      <description>今天你將會有美好的一天。耶穌立刻對他們說：“不要害怕，只管信，我在這裡！”（馬可福音 6:50）</description>
+      <description>這篇文章只有英文版的</description>
       <content:encoded><![CDATA[<p><img loading="lazy" src="1.jpeg" alt="image"  />
 </p>
-<p>今天你將會有美好的一天。耶穌立刻對他們說：“不要害怕，只管信，我在這裡！”（馬可福音 6:50）</p>
+<p>Today you will have a good day. Jesus spoke to them at once, “Don’t be afraid,” he said. “Take courage! I am here!” (Mark 6:50)</p>
 <p><img loading="lazy" src="2.png" alt="image"  />
 </p>
 ]]></content:encoded>
@@ -132,14 +144,14 @@
       <pubDate>Mon, 27 Mar 2023 14:46:01 +0000</pubDate>
       
       <guid>https://blog.cmwang.net/zh/posts/2023/03/reflections-on-five-years-in-the-company/</guid>
-      <description>在這家公司度過的五年，我從員工成長為主管，創辦了 Nilvana 品牌。挑戰讓我更自信、更堅韌，回顧往昔，充滿感慨，也充滿期待新的挑戰。</description>
+      <description>這篇文章只有英文版的</description>
       <content:encoded><![CDATA[<p><img loading="lazy" src="1.jpeg" alt="image"  />
 </p>
-<p>當我回顧在這家公司度過的五年時，我意識到發生了多少事情，以及我成長了多少。從有主管到獨自一人，再到組建一個小團隊，最終創立 Nilvana，時間過得非常快，我不禁思考著明天將帶給我的是什麼。</p>
-<p>就像昨天一樣，我似乎剛剛開始在這家公司的旅程。我記得與新同事見面、學習新技能，並找到自己在組織中的位置時的興奮。隨著時間的推移，我變得更加自信，開始承擔更多的責任。我為我的成就和影響感到自豪。</p>
-<p>然而，這條路並不總是平坦的。有時候，我面臨挑戰，這讓我懷疑自己的能力和決定。我學到了挫折和失敗是旅程的一部分，它們可以成為成長和韌性的來源。</p>
-<p>在我的旅程中，最重要的時刻之一就是創立 Nilvana 品牌。這是一個信仰的飛躍，但我知道我有一個可以改變遊戲規則的願景。在一些敬業的團隊成員的幫助下，我們不辭辛勞地將品牌呈現出來。看到它起飛並獲得認可是我職業生涯中最自豪的時刻之一。</p>
-<p>回顧我的旅程，我意識到時間真的飛逝。就像昨天一樣，我似乎剛剛開始，但五年轉眼就過去了。在我準備迎接新挑戰之際，我為我所經歷的經驗和所學到的教訓感到感激。</p>
+<p>As I reflect on my five years in this company, I realize how much has happened and how much I have grown. From having a supervisor to being a lone ranger, to forming a small team and eventually founding the Nilvana, time has flown by quickly, and I am left wondering where tomorrow will take me.</p>
+<p>It seems like just yesterday that I started my journey in this company. I remember the excitement of meeting new colleagues, learning new skills, and finding my place in the organization. Over time, I became more confident and began taking on more responsibilities. I was proud of my accomplishments and the impact that I was making.</p>
+<p>However, the road was not always easy. There were times when I faced challenges that made me question my abilities and my decisions. I learned that setbacks and failures are a part of the journey, and they can be a source of growth and resilience.</p>
+<p>One of the most significant moments in my journey was the creation of the Nilvana brand. It was a leap of faith, but I knew that I had a vision that could change the game. With the help of a few dedicated team members, we worked tirelessly to bring the brand to life. Seeing it take off and gain recognition was one of the proudest moments of my career.</p>
+<p>Looking back on my journey, I realize that time truly flies. It seems like just yesterday that I started, but five years have gone by in a blink of an eye. As I prepare to take on new challenges, I am grateful for the experiences and the lessons that I have learned.</p>
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube-nocookie.com/embed/1t8kAbUg4t4" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
@@ -149,12 +161,12 @@
     </item>
     
     <item>
-      <title>Configuring USB-FS for USB3 Vision Camera</title>
+      <title>配置USB-FS以適用於USB3 Vision相機</title>
       <link>https://blog.cmwang.net/zh/posts/2022/12/configuring-usb-fs-for-usb3-vision-camera/</link>
       <pubDate>Thu, 29 Dec 2022 13:14:24 +0000</pubDate>
       
       <guid>https://blog.cmwang.net/zh/posts/2022/12/configuring-usb-fs-for-usb3-vision-camera/</guid>
-      <description>This post explains how to increase the buffer memory for USB-FS devices on Linux systems.</description>
+      <description>這篇文章只有英文版的</description>
       <content:encoded><![CDATA[<p><img loading="lazy" src="images/1.jpeg" alt="image"  />
 </p>
 <p>This post explains how to increase the buffer memory for USB-FS devices on Linux systems in order to make full use of the imaging hardware’s capabilities. By default, USB-FS on Linux systems only allows 16 MB of buffer memory for all USB devices, which may not be sufficient for high-resolution cameras or multiple-camera set ups, resulting in image acquisition issues. To configure USB-FS and increase the buffer memory limit, the following steps should be taken:</p>
@@ -200,12 +212,12 @@
     </item>
     
     <item>
-      <title>Execute YOLOv7 model on iOS devices</title>
+      <title>透過 CoreML 在 iOS 上實現即時的物體偵測</title>
       <link>https://blog.cmwang.net/zh/posts/2022/08/execute-yolov7-model-on-ios-devices/</link>
       <pubDate>Sat, 06 Aug 2022 11:04:15 +0000</pubDate>
       
       <guid>https://blog.cmwang.net/zh/posts/2022/08/execute-yolov7-model-on-ios-devices/</guid>
-      <description>Real-time object detection with CoreML is trickier than you think.</description>
+      <description>這篇文章只有英文版的</description>
       <content:encoded><![CDATA[<p><img loading="lazy" src="images/1.jpeg" alt="image"  />
 
 Real-time object detection with CoreML is trickier than you think.</p>
@@ -262,12 +274,12 @@ Half the size of the FP32 model.</p>
     </item>
     
     <item>
-      <title>Performance Benchmarking of YOLOv7 TensorRT</title>
+      <title>YOLOv7 TensorRT 的性能測試</title>
       <link>https://blog.cmwang.net/zh/posts/2022/07/performance-benchmarking-of-yolov7-tensorrt/</link>
       <pubDate>Mon, 25 Jul 2022 10:30:00 +0000</pubDate>
       
       <guid>https://blog.cmwang.net/zh/posts/2022/07/performance-benchmarking-of-yolov7-tensorrt/</guid>
-      <description>I will conduct a series performance test of YOLOv7 variants models from cloud GPUs to the latest powerhouse AGX Orin in this post.</description>
+      <description>這篇文章只有英文版的</description>
       <content:encoded><![CDATA[<p><img loading="lazy" src="images/1.gif#layoutTextWidth" alt="image"  />
 
 YOLOv7 TensorRT Performance Benchmarking.</p>
@@ -299,7 +311,7 @@ Input and Output shape of YOLOv7 (80 class)</p>
       <pubDate>Sat, 19 Mar 2022 12:37:27 +0000</pubDate>
       
       <guid>https://blog.cmwang.net/zh/posts/2022/03/simulated-olympic-rings-drone-light-show/</guid>
-      <description>練習 CALayer &amp;amp; Gesture Recognizer</description>
+      <description>練習 CALayer &amp;amp; Gesture Recognizer@</description>
       <content:encoded><![CDATA[<p><strong>學習目標：</strong></p>
 <ul>
 <li>Gesture Recognizer</li>
@@ -412,162 +424,9 @@ Navigation Controller 需要從第一個畫面長出來，而不是第二頁</p>
     </item>
     
     <item>
-      <title>Design Patterns Explained - CH8</title>
-      <link>https://blog.cmwang.net/zh/posts/2017/01/design-patterns-explained-ch8/</link>
-      <pubDate>Sat, 21 Jan 2017 20:12:53 +0000</pubDate>
-      
-      <guid>https://blog.cmwang.net/zh/posts/2017/01/design-patterns-explained-ch8/</guid>
-      <description>&lt;h1 id=&#34;expanding-our-horizons&#34;&gt;Expanding Our Horizons&lt;/h1&gt;
-&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Object&lt;/li&gt;
-&lt;li&gt;Encapsulation&lt;/li&gt;
-&lt;li&gt;Inheritance&lt;/li&gt;
-&lt;li&gt;Handling variation&lt;/li&gt;
-&lt;li&gt;Commonality and variability analysis&lt;/li&gt;
-&lt;li&gt;Abstract class and its derived classes&lt;/li&gt;
-&lt;/ul&gt;</description>
-      <content:encoded><![CDATA[<h1 id="expanding-our-horizons">Expanding Our Horizons</h1>
-<h2 id="overview">Overview</h2>
-<ul>
-<li>Object</li>
-<li>Encapsulation</li>
-<li>Inheritance</li>
-<li>Handling variation</li>
-<li>Commonality and variability analysis</li>
-<li>Abstract class and its derived classes</li>
-</ul>
-<h2 id="objects-traditional-view-and-new-view">Objects: Traditional view and new view</h2>
-<h3 id="traditional-view">Traditional View</h3>
-<ul>
-<li>Data with methods - <strong>smart data</strong></li>
-<li>too narrow from <strong>implementation</strong> perspective</li>
-</ul>
-<h3 id="broad-view">Broad View</h3>
-<ul>
-<li>From <strong>conceptual</strong> perspective</li>
-<li>an object is an <em>entity that has responsibilities</em> (責任), these responsibilities define the behavior of the object. Or an <em>entity that has specific behavior</em> (特定行為).</li>
-</ul>
-<h2 id="focus-on-intentionmotivation-not-implementation">Focus on intention/motivation not implementation</h2>
-<p>This view enables us to build software in two steps:</p>
-<ol>
-<li>Make a preliminary design without worrying about all the details involved.</li>
-<li>Implement the design.</li>
-</ol>
-<p>The reason this works is that we only have to focus on the object’s <strong>public interface</strong> — the communication window through which I ask the object to do something.</p>
-<p>Hiding implementations behind interfaces essentially <strong>decouples</strong> them from the using objects.</p>
-<hr>
-<h2 id="encapsulation-traditional-view-and-new-view">Encapsulation: Traditional view and new view</h2>
-<h3 id="traditional-view-1">Traditional View</h3>
-<ul>
-<li>data hiding</li>
-</ul>
-<h3 id="broad-view-1">Broad View</h3>
-<ul>
-<li><strong>any kind of hiding</strong>
-<ul>
-<li>Implementations (data, methods..)</li>
-<li><strong>Drived</strong> classes (<strong>Encapsulation of type</strong> is achieved when there is an <em>abstract class</em> with derivations (or an interface with implementations) that are used <em>polymorphically</em>)</li>
-<li>Design details</li>
-<li>Instantiation rules (ex. creational patterns)</li>
-</ul>
-</li>
-</ul>
-<h2 id="advantage">Advantage</h2>
-<p>It gives us a better way to split up (decompose) our programs. The <strong>encapsulating layers</strong> become the <strong>interfaces</strong> we design to. (封裝層成為設計需要遵循的介面)</p>
-<p>By encapsulating different kinds of subclasses (<strong>encapsulation of type</strong>), we can add new ones without changing any of the client programs using them. (<em>GoF typically means when they mention encapsulation</em>)</p>
-<hr>
-<h2 id="inheritance">Inheritance</h2>
-<h3 id="traditional-view-2">Traditional View</h3>
-<ul>
-<li><strong>reuse</strong> of classes</li>
-<li>achived by creating classes and then deriving new (<em>spcialized</em>) classes bases on these base (<em>generalized</em>) classes</li>
-</ul>
-<h3 id="broad-view-2">Broad View</h3>
-<ul>
-<li>using inheritance for specialization, however
-<ul>
-<li>can cause weak cohesion</li>
-<li>reduces possibility of reuse</li>
-<li>does not scale well with variation</li>
-</ul>
-</li>
-<li><em>to classify classes as things that behave the same way</em>. (<strong>placeholder</strong>)</li>
-</ul>
-<hr>
-<h2 id="find-what-is-varying-and-encapsulate-it">Find What Is Varying and Encapsulate It</h2>
-<blockquote>
-<p>Consider <strong>what</strong> should be variable in your design. This approach is the opposite of focusing on the <strong>cause</strong> of redesign. Instead of considering what might force a change to a design, consider what you want to be <strong><em>able</em></strong> to change without redesign. The focus here is on <strong><em>encapsulating the concept that varies</em></strong>, a theme of many design patterns.
-&ndash; GoF, Design Patterns</p>
-</blockquote>
-<hr>
-<h2 id="more-about-gofs-encapsulation">More about GoF&rsquo;s Encapsulation</h2>
-<ul>
-<li>Design Patterns use inheritance to classify variations in behaviors.</li>
-<li>Hiding classes with an abstract class or interface — <strong>type encapsulation</strong>.</li>
-<li>Containing a reference of this <em>abstract class</em> or <em>interface</em> type (aggregation) <strong>hides</strong> these <em>derived classes</em> that represent <strong>variations</strong> in behavior.</li>
-<li>In effect, many design patterns <em>use encapsulation to create layers</em> between objects.</li>
-</ul>
-<hr>
-<h2 id="containing-variation-in-data-vs-containing-variation-in-behavior">Containing variation in data vs containing variation in behavior</h2>
-<h3 id="handling-variation-in-data">Handling variation in data</h3>
-<ul>
-<li>Have a data member that tells me what type of movement my object has.</li>
-<li>Have two different types of <strong>Animals</strong> (both derived from the base <strong>Animal</strong> class) — one for walking and one for flying.</li>
-</ul>
-<h3 id="handling-variation-in-behavior-with-objects">Handling variation in behavior with objects</h3>
-<p>Using objects to contain variation in attributes and using objects to contain variation in behavior are very similar. Don&rsquo;t afraid.</p>
-<hr>
-<h2 id="commonality-and-variability">Commonality and Variability</h2>
-<p>Identify <strong>where</strong> things vary (commonality analysis) and then identify <strong>how</strong> they vary (variability analysis).</p>
-<p><strong>Commonality analysis</strong> is the search for common elements that helps us understand how family members are the same.</p>
-<p><strong>Variability analysis</strong> reveals how family members vary. Variability only makes sense within a given commonality.</p>
-<p>Ex. Whiteboard marker, pencil, ballpoint pen</p>
-<ul>
-<li>Commonality: writing instrument</li>
-<li>Variability: material to write, shape..</li>
-</ul>
-<h2 id="commonality-and-variability-and-abstract-class">Commonality and Variability and Abstract class</h2>
-<p><strong>Commonality analysis</strong> seeks structure that is unlikely to change over time, while <strong>variability analysis</strong> captures structure that is likely to change. <strong><em>Variability analysis makes sense only in terms of the context defined by the associated commonality analysis</em></strong>.
-In other words, if variations are the specific concrete cases in the domain, commonality defines the concepts in the domain that tie them together. The <strong><em>common concepts</em></strong> will be represented by <strong>abstract classes</strong>. The <strong><em>variations</em></strong> found by variability analysis will be implemented by the <strong>concrete classes</strong>.</p>
-<h2 id="relationship-between-commonality-and-variability-perspectives-and-abstract-classes">Relationship between Commonality and Variability, perspectives, and abstract classes</h2>
-<p><img loading="lazy" src="relationship.png" alt="relationship"  />
-</p>
-<hr>
-<h2 id="benefits-of-using-abstract-classes-for-specialization">Benefits of using abstract classes for specialization</h2>
-<p><img loading="lazy" src="benefits.png" alt="benefits"  />
-</p>
-<hr>
-<h2 id="two-step-procedure-for-design">Two-Step Procedure for Design</h2>
-<p>Ask yourself:</p>
-<ul>
-<li>When defining an <strong>abstract class</strong> (commonality):
-<ul>
-<li>What <strong>interface</strong> is needed to handle all the responsibilities (core concepts from the conceptual perspective) of this class?</li>
-</ul>
-</li>
-<li>When defining <strong>derived classes</strong>:
-<ul>
-<li>Given this particular implementation (this <strong>variation</strong>), how can I implement it (variation) with the given specification?</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h2 id="take-away">Take away</h2>
-<p>Think object-oriented in a broad way.</p>
-<ul>
-<li>Object: an <em>entity that has responsibilities (specific behavior)</em></li>
-<li>Encapsulation: <strong>any</strong> kind of <strong>hiding</strong> (instantiation rule, type..)</li>
-<li>Inheritance: use for <strong>specialization</strong> and <em>classify classes as things that behave the same way</em>.</li>
-</ul>
-<p><strong>Find what is varying and encapsulate it</strong> (in behavior).</p>
-<p>Commonality, variability and abstract class: use inheritance to classify variations in behaviors.</p>]]></content:encoded>
-    </item>
-    
-    <item>
       <title>Design Patterns Explained - CH1</title>
       <link>https://blog.cmwang.net/zh/posts/2017/01/design-patterns-explained-ch1/</link>
-      <pubDate>Fri, 20 Jan 2017 18:12:53 +0000</pubDate>
+      <pubDate>Thu, 20 Jan 2022 18:12:53 +0000</pubDate>
       
       <guid>https://blog.cmwang.net/zh/posts/2017/01/design-patterns-explained-ch1/</guid>
       <description>&lt;h1 id=&#34;object-oriented-paradigm&#34;&gt;Object-Oriented Paradigm&lt;/h1&gt;
@@ -782,13 +641,167 @@ In other words, if variations are the specific concrete cases in the domain, com
     </item>
     
     <item>
+      <title>Design Patterns Explained - CH8</title>
+      <link>https://blog.cmwang.net/zh/posts/2017/01/design-patterns-explained-ch8/</link>
+      <pubDate>Sat, 21 Jan 2017 20:12:53 +0000</pubDate>
+      
+      <guid>https://blog.cmwang.net/zh/posts/2017/01/design-patterns-explained-ch8/</guid>
+      <description>&lt;h1 id=&#34;expanding-our-horizons&#34;&gt;Expanding Our Horizons&lt;/h1&gt;
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Object&lt;/li&gt;
+&lt;li&gt;Encapsulation&lt;/li&gt;
+&lt;li&gt;Inheritance&lt;/li&gt;
+&lt;li&gt;Handling variation&lt;/li&gt;
+&lt;li&gt;Commonality and variability analysis&lt;/li&gt;
+&lt;li&gt;Abstract class and its derived classes&lt;/li&gt;
+&lt;/ul&gt;</description>
+      <content:encoded><![CDATA[<h1 id="expanding-our-horizons">Expanding Our Horizons</h1>
+<h2 id="overview">Overview</h2>
+<ul>
+<li>Object</li>
+<li>Encapsulation</li>
+<li>Inheritance</li>
+<li>Handling variation</li>
+<li>Commonality and variability analysis</li>
+<li>Abstract class and its derived classes</li>
+</ul>
+<h2 id="objects-traditional-view-and-new-view">Objects: Traditional view and new view</h2>
+<h3 id="traditional-view">Traditional View</h3>
+<ul>
+<li>Data with methods - <strong>smart data</strong></li>
+<li>too narrow from <strong>implementation</strong> perspective</li>
+</ul>
+<h3 id="broad-view">Broad View</h3>
+<ul>
+<li>From <strong>conceptual</strong> perspective</li>
+<li>an object is an <em>entity that has responsibilities</em> (責任), these responsibilities define the behavior of the object. Or an <em>entity that has specific behavior</em> (特定行為).</li>
+</ul>
+<h2 id="focus-on-intentionmotivation-not-implementation">Focus on intention/motivation not implementation</h2>
+<p>This view enables us to build software in two steps:</p>
+<ol>
+<li>Make a preliminary design without worrying about all the details involved.</li>
+<li>Implement the design.</li>
+</ol>
+<p>The reason this works is that we only have to focus on the object’s <strong>public interface</strong> — the communication window through which I ask the object to do something.</p>
+<p>Hiding implementations behind interfaces essentially <strong>decouples</strong> them from the using objects.</p>
+<hr>
+<h2 id="encapsulation-traditional-view-and-new-view">Encapsulation: Traditional view and new view</h2>
+<h3 id="traditional-view-1">Traditional View</h3>
+<ul>
+<li>data hiding</li>
+</ul>
+<h3 id="broad-view-1">Broad View</h3>
+<ul>
+<li><strong>any kind of hiding</strong>
+<ul>
+<li>Implementations (data, methods..)</li>
+<li><strong>Drived</strong> classes (<strong>Encapsulation of type</strong> is achieved when there is an <em>abstract class</em> with derivations (or an interface with implementations) that are used <em>polymorphically</em>)</li>
+<li>Design details</li>
+<li>Instantiation rules (ex. creational patterns)</li>
+</ul>
+</li>
+</ul>
+<h2 id="advantage">Advantage</h2>
+<p>It gives us a better way to split up (decompose) our programs. The <strong>encapsulating layers</strong> become the <strong>interfaces</strong> we design to. (封裝層成為設計需要遵循的介面)</p>
+<p>By encapsulating different kinds of subclasses (<strong>encapsulation of type</strong>), we can add new ones without changing any of the client programs using them. (<em>GoF typically means when they mention encapsulation</em>)</p>
+<hr>
+<h2 id="inheritance">Inheritance</h2>
+<h3 id="traditional-view-2">Traditional View</h3>
+<ul>
+<li><strong>reuse</strong> of classes</li>
+<li>achived by creating classes and then deriving new (<em>spcialized</em>) classes bases on these base (<em>generalized</em>) classes</li>
+</ul>
+<h3 id="broad-view-2">Broad View</h3>
+<ul>
+<li>using inheritance for specialization, however
+<ul>
+<li>can cause weak cohesion</li>
+<li>reduces possibility of reuse</li>
+<li>does not scale well with variation</li>
+</ul>
+</li>
+<li><em>to classify classes as things that behave the same way</em>. (<strong>placeholder</strong>)</li>
+</ul>
+<hr>
+<h2 id="find-what-is-varying-and-encapsulate-it">Find What Is Varying and Encapsulate It</h2>
+<blockquote>
+<p>Consider <strong>what</strong> should be variable in your design. This approach is the opposite of focusing on the <strong>cause</strong> of redesign. Instead of considering what might force a change to a design, consider what you want to be <strong><em>able</em></strong> to change without redesign. The focus here is on <strong><em>encapsulating the concept that varies</em></strong>, a theme of many design patterns.
+&ndash; GoF, Design Patterns</p>
+</blockquote>
+<hr>
+<h2 id="more-about-gofs-encapsulation">More about GoF&rsquo;s Encapsulation</h2>
+<ul>
+<li>Design Patterns use inheritance to classify variations in behaviors.</li>
+<li>Hiding classes with an abstract class or interface — <strong>type encapsulation</strong>.</li>
+<li>Containing a reference of this <em>abstract class</em> or <em>interface</em> type (aggregation) <strong>hides</strong> these <em>derived classes</em> that represent <strong>variations</strong> in behavior.</li>
+<li>In effect, many design patterns <em>use encapsulation to create layers</em> between objects.</li>
+</ul>
+<hr>
+<h2 id="containing-variation-in-data-vs-containing-variation-in-behavior">Containing variation in data vs containing variation in behavior</h2>
+<h3 id="handling-variation-in-data">Handling variation in data</h3>
+<ul>
+<li>Have a data member that tells me what type of movement my object has.</li>
+<li>Have two different types of <strong>Animals</strong> (both derived from the base <strong>Animal</strong> class) — one for walking and one for flying.</li>
+</ul>
+<h3 id="handling-variation-in-behavior-with-objects">Handling variation in behavior with objects</h3>
+<p>Using objects to contain variation in attributes and using objects to contain variation in behavior are very similar. Don&rsquo;t afraid.</p>
+<hr>
+<h2 id="commonality-and-variability">Commonality and Variability</h2>
+<p>Identify <strong>where</strong> things vary (commonality analysis) and then identify <strong>how</strong> they vary (variability analysis).</p>
+<p><strong>Commonality analysis</strong> is the search for common elements that helps us understand how family members are the same.</p>
+<p><strong>Variability analysis</strong> reveals how family members vary. Variability only makes sense within a given commonality.</p>
+<p>Ex. Whiteboard marker, pencil, ballpoint pen</p>
+<ul>
+<li>Commonality: writing instrument</li>
+<li>Variability: material to write, shape..</li>
+</ul>
+<h2 id="commonality-and-variability-and-abstract-class">Commonality and Variability and Abstract class</h2>
+<p><strong>Commonality analysis</strong> seeks structure that is unlikely to change over time, while <strong>variability analysis</strong> captures structure that is likely to change. <strong><em>Variability analysis makes sense only in terms of the context defined by the associated commonality analysis</em></strong>.
+In other words, if variations are the specific concrete cases in the domain, commonality defines the concepts in the domain that tie them together. The <strong><em>common concepts</em></strong> will be represented by <strong>abstract classes</strong>. The <strong><em>variations</em></strong> found by variability analysis will be implemented by the <strong>concrete classes</strong>.</p>
+<h2 id="relationship-between-commonality-and-variability-perspectives-and-abstract-classes">Relationship between Commonality and Variability, perspectives, and abstract classes</h2>
+<p><img loading="lazy" src="relationship.png" alt="relationship"  />
+</p>
+<hr>
+<h2 id="benefits-of-using-abstract-classes-for-specialization">Benefits of using abstract classes for specialization</h2>
+<p><img loading="lazy" src="benefits.png" alt="benefits"  />
+</p>
+<hr>
+<h2 id="two-step-procedure-for-design">Two-Step Procedure for Design</h2>
+<p>Ask yourself:</p>
+<ul>
+<li>When defining an <strong>abstract class</strong> (commonality):
+<ul>
+<li>What <strong>interface</strong> is needed to handle all the responsibilities (core concepts from the conceptual perspective) of this class?</li>
+</ul>
+</li>
+<li>When defining <strong>derived classes</strong>:
+<ul>
+<li>Given this particular implementation (this <strong>variation</strong>), how can I implement it (variation) with the given specification?</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="take-away">Take away</h2>
+<p>Think object-oriented in a broad way.</p>
+<ul>
+<li>Object: an <em>entity that has responsibilities (specific behavior)</em></li>
+<li>Encapsulation: <strong>any</strong> kind of <strong>hiding</strong> (instantiation rule, type..)</li>
+<li>Inheritance: use for <strong>specialization</strong> and <em>classify classes as things that behave the same way</em>.</li>
+</ul>
+<p><strong>Find what is varying and encapsulate it</strong> (in behavior).</p>
+<p>Commonality, variability and abstract class: use inheritance to classify variations in behaviors.</p>]]></content:encoded>
+    </item>
+    
+    <item>
       <title>設計模式學習資源</title>
       <link>https://blog.cmwang.net/zh/posts/2017/01/design-patterns-resources/</link>
       <pubDate>Thu, 12 Jan 2017 17:57:07 +0000</pubDate>
       
       <guid>https://blog.cmwang.net/zh/posts/2017/01/design-patterns-resources/</guid>
       <description>一些設計模式的連結，年代有點久了，不是很值得參考了</description>
-      <content:encoded><![CDATA[<h2 id="resources">Resources</h2>
+      <content:encoded><![CDATA[<p>以前收集的一些學習資源，年代有點久遠，請斟酌參考。</p>
+<h2 id="resources">Resources</h2>
 <ul>
 <li><a href="http://steventtud.logdown.com/posts/2014/01/02/teddy-flow-design-pattern">[Design Pattern]資源總整理</a></li>
 <li><a href="http://www.uml.org.cn/sjms/sjms.asp#9">UML 軟件工程組織</a></li>
