@@ -503,7 +503,7 @@ Navigation Controller 需要從第一個畫面長出來，而不是第二頁</p>
 <hr>
 <h2 id="more-about-gofs-encapsulation">More about GoF&rsquo;s Encapsulation</h2>
 <ul>
-<li>Design patterns use inheritance to classify variations in behaviors.</li>
+<li>Design Patterns use inheritance to classify variations in behaviors.</li>
 <li>Hiding classes with an abstract class or interface — <strong>type encapsulation</strong>.</li>
 <li>Containing a reference of this <em>abstract class</em> or <em>interface</em> type (aggregation) <strong>hides</strong> these <em>derived classes</em> that represent <strong>variations</strong> in behavior.</li>
 <li>In effect, many design patterns <em>use encapsulation to create layers</em> between objects.</li>
