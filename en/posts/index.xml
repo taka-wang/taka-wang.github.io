@@ -6,7 +6,81 @@
     <description>Recent content in Posts on Liberation Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 10 Oct 2023 16:33:39 +0800</lastBuildDate><atom:link href="https://blog.cmwang.net/en/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Oct 2023 20:01:46 +0800</lastBuildDate><atom:link href="https://blog.cmwang.net/en/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo Github Pages Deployment Guide</title>
+      <link>https://blog.cmwang.net/en/posts/2023/10/hugo-get-started/</link>
+      <pubDate>Tue, 10 Oct 2023 20:01:46 +0800</pubDate>
+      
+      <guid>https://blog.cmwang.net/en/posts/2023/10/hugo-get-started/</guid>
+      <description>This guide will walk you through the process of creating a private website on GitHub and deploying it to GitHub Pages</description>
+      <content:encoded><![CDATA[<p>Welcome to the world of Hugo, where you can swiftly create your personal website! This guide will walk you through the process of creating a private website on GitHub and deploying it to GitHub Pages.</p>
+<h2 id="whats-included-in-this-guide">What&rsquo;s included in this guide</h2>
+<ul>
+<li><code>.gitignore</code>: Excludes files from version control.</li>
+<li><code>.github/workflows/hugo.yml</code>: Uses GitHub Actions to deploy your private Hugo repository to a public GitHub Pages repository.</li>
+</ul>
+<h2 id="steps">Steps</h2>
+<ol>
+<li>
+<p>Create a private repository <code>hugo-site</code> on <a href="https://github.com/">GitHub</a> to manage your website source code, ensuring to include the README.md file.</p>
+</li>
+<li>
+<p>Create a public repository <code>{YOUR_USER_NAME}.github.io</code> on <a href="https://github.com/">GitHub</a> to upload your static web pages to <a href="https://pages.github.com/">GitHub Pages</a>.</p>
+</li>
+<li>
+<p>Clone <code>hugo-site</code> to your local machine:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git clone https://github.com/<span class="o">{</span>YOUR_USER_NAME<span class="o">}</span>/hugo-site.git
+</span></span></code></pre></div><p>Alternatively, if you are using Git Submodules:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git clone --recursive https://github.com/<span class="o">{</span>YOUR_USER_NAME<span class="o">}</span>/hugo-site.git
+</span></span></code></pre></div></li>
+<li>
+<p>Create a Hugo project in the same directory as <code>hugo-site</code> (not inside <code>hugo-site</code>):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">hugo new site hugo-site --force
+</span></span></code></pre></div></li>
+<li>
+<p>Add an example theme. Here, we&rsquo;ll use PaperMod as an example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">cd</span> hugo-site
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git submodule add --depth<span class="o">=</span><span class="m">1</span> https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;theme = &#39;PaperMod&#39;&#34;</span> &gt;&gt; hugo.toml
+</span></span></code></pre></div></li>
+<li>
+<p>Copy the <a href=".gitignore">.gitignore</a> file into <code>hugo-site</code>.</p>
+</li>
+<li>
+<p>[Optional] Set up GitHub Action for automatic deployment:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"> mkdir -p .github/workflows/
+</span></span><span class="line"><span class="cl"> touch .github/workflows/hugo.yml
+</span></span></code></pre></div><p>Copy the contents of <a href=".github/workflows/hugo.yml">hugo.yml</a> into the newly created <code>hugo.yml</code> file. Remember to modify these two parts:</p>
+<ul>
+<li><strong>token: ${{ secrets.ACCESS_TOKEN }}</strong>: Use a personal access token for this private repository.</li>
+<li><strong>repository-name: YOUR_USER_NAME}}/YOUR_USER_NAME.github.io</strong>: Replace <code>YOUR_USER_NAME</code> with your GitHub username.</li>
+</ul>
+</li>
+<li>
+<p>Test your Hugo website:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">hugo server -D
+</span></span></code></pre></div></li>
+<li>
+<p>Start writing your own posts:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">hugo new posts/20231006/index.md
+</span></span></code></pre></div><p>Begin writing in <code>index.md</code> inside <code>content/posts/20231006</code>, and place images in the same folder.</p>
+</li>
+<li>
+<p>Congratulations, you&rsquo;ve configured your private repository! Don&rsquo;t forget to commit your changes to the private repository. Best of luck creating your beautiful website!</p>
+</li>
+</ol>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://github.com/JamesIves/github-pages-deploy-action/issues/624#issuecomment-791982883">How to setup ACCESS Token</a></li>
+<li><a href="https://blog.euc-rt.me/post/github-actions-publish-private-hugo-repo-to-public-pages-site/">Using GitHub Actions to Publish Hugo Site From Private to Public Repo</a></li>
+<li><a href="https://gohugo.io/getting-started/quick-start/">Learn to create a Hugo site in minutes.</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Moving Back to Github Pages</title>
       <link>https://blog.cmwang.net/en/posts/2023/10/blog-reboot-2023/</link>

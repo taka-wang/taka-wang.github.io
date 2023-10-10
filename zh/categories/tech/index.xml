@@ -6,7 +6,82 @@
     <description>Recent content in Tech on Liberation Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 10 Oct 2023 16:33:39 +0800</lastBuildDate><atom:link href="https://blog.cmwang.net/zh/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Oct 2023 20:01:46 +0800</lastBuildDate><atom:link href="https://blog.cmwang.net/zh/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo GitHub Pages 部署指南</title>
+      <link>https://blog.cmwang.net/zh/posts/2023/10/hugo-get-started/</link>
+      <pubDate>Tue, 10 Oct 2023 20:01:46 +0800</pubDate>
+      
+      <guid>https://blog.cmwang.net/zh/posts/2023/10/hugo-get-started/</guid>
+      <description>這個指南將引導你完成在 GitHub 上建立私人網站並部署到 GitHub Pages 的過程</description>
+      <content:encoded><![CDATA[<p>歡迎使用 Hugo 快速建立個人網站！這個指南將引導你完成在 GitHub 上建立私人網站並部署到 GitHub Pages 的過程。</p>
+<h2 id="這個指南包括什麼重點">這個指南包括什麼重點</h2>
+<ul>
+<li><code>.gitignore</code>: 排除版本管理的檔案</li>
+<li><code>.github/workflows/hugo.yml</code>: 使用 GitHub Action 將私人 Hugo 存放庫部署到公開的 GitHub Pages 存放庫。</li>
+</ul>
+<h2 id="步驟">步驟</h2>
+<ol>
+<li>
+<p>在 <a href="https://github.com/">GitHub</a> 建立一個私人儲存庫 <code>hugo-site</code> 來管理你的網站原始碼，請記得包含 README.md 檔案。</p>
+</li>
+<li>
+<p>在 <a href="https://github.com/">GitHub</a> 建立一個公開儲存庫 <code>{YOUR_USER_NAME}.github.io</code> 來上傳你的靜態網頁到 <a href="https://pages.github.com/">GitHub Pages</a>。</p>
+</li>
+<li>
+<p>將 <code>hugo-site</code> 複製到本地：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git clone https://github.com/<span class="o">{</span>YOUR_USER_NAME<span class="o">}</span>/hugo-site.git
+</span></span></code></pre></div><p>或者，如果你已經使用了 Git Submodule，可以使用以下方式複製：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git clone --recursive https://github.com/<span class="o">{</span>YOUR_USER_NAME<span class="o">}</span>/hugo-site.git
+</span></span></code></pre></div></li>
+<li>
+<p>在 <code>hugo-site</code> 的同一層目錄創建 Hugo 專案（不要放在 <code>hugo-site</code> 裡面）：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">hugo new site hugo-site --force --format yaml
+</span></span></code></pre></div></li>
+<li>
+<p>新增範例主題，這邊以 PaperMod 為例：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">cd</span> hugo-site
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git submodule add --depth<span class="o">=</span><span class="m">1</span> https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;theme = &#39;PaperMod&#39;&#34;</span> &gt;&gt; hugo.toml
+</span></span></code></pre></div></li>
+<li>
+<p>將 <a href=".gitignore">.gitignore</a> 檔案複製到 <code>hugo-site</code>。</p>
+</li>
+<li>
+<p>[可選] 新增 GitHub Action 自動部署：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"> mkdir -p .github/workflows/
+</span></span><span class="line"><span class="cl"> touch .github/workflows/hugo.yml
+</span></span></code></pre></div><p>將 <a href=".github/workflows/hugo.yml">hugo.yml</a> 的內容複製到上述新增的空白 <code>hugo.yml</code>。請記得修改以下兩處：</p>
+<ul>
+<li><strong>token: ${{ secrets.ACCESS_TOKEN }}</strong>: 在這裡使用私人儲存庫的存取權杖（Access Token）。</li>
+<li><strong>repository-name: YOUR_USER_NAME/YOUR_USER_NAME.github.io</strong>: 將 <code>YOUR_USER_NAME</code> 改為你的 GitHub 帳號名稱。</li>
+</ul>
+</li>
+<li>
+<p>測試 Hugo 網站：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">hugo server -D
+</span></span></code></pre></div></li>
+<li>
+<p>開始創建自己的文章：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">hugo new posts/20231006/index.md
+</span></span></code></pre></div><p>在 <code>content/posts/20231006</code> 裡面的 <code>index.md</code> 開始撰寫，並將圖片放在同一個資料夾。</p>
+</li>
+<li>
+<p>恭喜你，已經完成私人儲存庫的設定，請不要忘記將變更提交到私人儲存庫。</p>
+</li>
+</ol>
+<h2 id="參考資料">參考資料</h2>
+<ul>
+<li><a href="https://github.com/JamesIves/github-pages-deploy-action/issues/624#issuecomment-791982883">如何設定 ACCESS Token</a></li>
+<li><a href="https://blog.euc-rt.me/post/github-actions-publish-private-hugo-repo-to-public-pages-site/">使用 GitHub Actions 將 Hugo 網站從私人儲存庫發佈到公開頁面</a></li>
+<li><a href="https://2ndbrain.cc/posts/2021/04/get-started-hugo/">Hugo 教學 &ndash; 基礎篇</a></li>
+<li><a href="https://gohugo.io/getting-started/quick-start/">學習在幾分鐘內創建 Hugo 網站。</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>搬回 Github Pages</title>
       <link>https://blog.cmwang.net/zh/posts/2023/10/blog-reboot-2023/</link>
