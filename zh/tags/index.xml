@@ -13,11 +13,41 @@
     <language>zh</language>
     <lastBuildDate>Tue, 10 Oct 2023 20:01:46 +0800</lastBuildDate><atom:link href="https://blog.cmwang.net/zh/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>How-To</title>
+      <link>https://blog.cmwang.net/zh/tags/how-to/</link>
+      <pubDate>Tue, 10 Oct 2023 20:01:46 +0800</pubDate>
+      
+      <guid>https://blog.cmwang.net/zh/tags/how-to/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
       <title>Hugo</title>
       <link>https://blog.cmwang.net/zh/tags/hugo/</link>
       <pubDate>Tue, 10 Oct 2023 20:01:46 +0800</pubDate>
       
       <guid>https://blog.cmwang.net/zh/tags/hugo/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>AI</title>
+      <link>https://blog.cmwang.net/zh/tags/ai/</link>
+      <pubDate>Tue, 10 Oct 2023 19:23:34 +0800</pubDate>
+      
+      <guid>https://blog.cmwang.net/zh/tags/ai/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>YouTube</title>
+      <link>https://blog.cmwang.net/zh/tags/youtube/</link>
+      <pubDate>Tue, 10 Oct 2023 19:23:34 +0800</pubDate>
+      
+      <guid>https://blog.cmwang.net/zh/tags/youtube/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -38,16 +68,6 @@
       <pubDate>Fri, 06 Oct 2023 09:34:04 +0000</pubDate>
       
       <guid>https://blog.cmwang.net/zh/tags/shortcodes/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>YouTube</title>
-      <link>https://blog.cmwang.net/zh/tags/youtube/</link>
-      <pubDate>Fri, 06 Oct 2023 09:34:04 +0000</pubDate>
-      
-      <guid>https://blog.cmwang.net/zh/tags/youtube/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -148,16 +168,6 @@
       <pubDate>Sat, 06 Aug 2022 11:04:15 +0000</pubDate>
       
       <guid>https://blog.cmwang.net/zh/tags/object-detection/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>AI</title>
-      <link>https://blog.cmwang.net/zh/tags/ai/</link>
-      <pubDate>Mon, 25 Jul 2022 10:30:00 +0000</pubDate>
-      
-      <guid>https://blog.cmwang.net/zh/tags/ai/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>

@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://blog.cmwang.net/en/categories/</loc>
-    <lastmod>2023-10-10T20:01:46+08:00</lastmod>
+    <lastmod>2023-10-10T22:41:05+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -15,8 +15,34 @@
                 href="https://blog.cmwang.net/en/categories/"
                 />
   </url><url>
+    <loc>https://blog.cmwang.net/en/posts/2023/10/how-to-install-hugo/</loc>
+    <lastmod>2023-10-10T22:41:05+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://blog.cmwang.net/zh/posts/2023/10/how-to-install-hugo/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.cmwang.net/en/posts/2023/10/how-to-install-hugo/"
+                />
+  </url><url>
+    <loc>https://blog.cmwang.net/en/tags/how-to/</loc>
+    <lastmod>2023-10-10T22:41:05+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://blog.cmwang.net/zh/tags/how-to/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.cmwang.net/en/tags/how-to/"
+                />
+  </url><url>
     <loc>https://blog.cmwang.net/en/tags/hugo/</loc>
-    <lastmod>2023-10-10T20:01:46+08:00</lastmod>
+    <lastmod>2023-10-10T22:41:05+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -26,6 +52,71 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://blog.cmwang.net/en/tags/hugo/"
+                />
+  </url><url>
+    <loc>https://blog.cmwang.net/en/</loc>
+    <lastmod>2023-10-10T22:41:05+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://blog.cmwang.net/zh/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.cmwang.net/en/"
+                />
+  </url><url>
+    <loc>https://blog.cmwang.net/en/categories/notes/</loc>
+    <lastmod>2023-10-10T22:41:05+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://blog.cmwang.net/zh/categories/notes/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.cmwang.net/en/categories/notes/"
+                />
+  </url><url>
+    <loc>https://blog.cmwang.net/en/posts/</loc>
+    <lastmod>2023-10-10T22:41:05+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://blog.cmwang.net/zh/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.cmwang.net/en/posts/"
+                />
+  </url><url>
+    <loc>https://blog.cmwang.net/en/tags/</loc>
+    <lastmod>2023-10-10T22:41:05+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://blog.cmwang.net/zh/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.cmwang.net/en/tags/"
+                />
+  </url><url>
+    <loc>https://blog.cmwang.net/en/categories/tech/</loc>
+    <lastmod>2023-10-10T22:41:05+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://blog.cmwang.net/zh/categories/tech/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.cmwang.net/en/categories/tech/"
                 />
   </url><url>
     <loc>https://blog.cmwang.net/en/posts/2023/10/hugo-get-started/</loc>
@@ -39,71 +130,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://blog.cmwang.net/en/posts/2023/10/hugo-get-started/"
-                />
-  </url><url>
-    <loc>https://blog.cmwang.net/en/</loc>
-    <lastmod>2023-10-10T20:01:46+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://blog.cmwang.net/zh/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://blog.cmwang.net/en/"
-                />
-  </url><url>
-    <loc>https://blog.cmwang.net/en/categories/notes/</loc>
-    <lastmod>2023-10-10T20:01:46+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://blog.cmwang.net/zh/categories/notes/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://blog.cmwang.net/en/categories/notes/"
-                />
-  </url><url>
-    <loc>https://blog.cmwang.net/en/posts/</loc>
-    <lastmod>2023-10-10T20:01:46+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://blog.cmwang.net/zh/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://blog.cmwang.net/en/posts/"
-                />
-  </url><url>
-    <loc>https://blog.cmwang.net/en/tags/</loc>
-    <lastmod>2023-10-10T20:01:46+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://blog.cmwang.net/zh/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://blog.cmwang.net/en/tags/"
-                />
-  </url><url>
-    <loc>https://blog.cmwang.net/en/categories/tech/</loc>
-    <lastmod>2023-10-10T20:01:46+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://blog.cmwang.net/zh/categories/tech/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://blog.cmwang.net/en/categories/tech/"
                 />
   </url><url>
     <loc>https://blog.cmwang.net/en/tags/feeling/</loc>
