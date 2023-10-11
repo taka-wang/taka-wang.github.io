@@ -1063,10 +1063,117 @@ Input and Output shape of YOLOv7 (80 class)</p>
 <ol>
 <li>使用 javascript 的 <strong>canvas getImageData()</strong> 將 SVG 存成 json 檔 (可參考上文連結中的 <strong>getDotPos</strong> 方法。</li>
 <li>在 swift 中，透過讀取 json 檔，存成座標點的類別陣列，這兩步驟也可以用來畫其他圖案，不用手工一直描點。</li>
+</ol>
+
+
+<div class="terminal space shadow">
+    <div class="top">
+        <div class="btns">
+            <span class="circle red"></span>
+            <span class="circle yellow"></span>
+            <span class="circle green"></span>
+        </div>
+        <div class="title">
+            load all points from json file
+        </div>
+    </div>
+    <div class="terminalbody"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">import</span> <span class="nc">UIKit</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Point definition for json object</span>
+</span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">Point</span><span class="p">:</span> <span class="n">Decodable</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nv">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">Int</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nv">color</span><span class="p">:</span> <span class="nb">String</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// load all points from json file.</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">//</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// ref: https://stackoverflow.com/a/50042872</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// ref: https://praveenkommuri.medium.com/how-to-read-parse-local-json-file-in-swift-28f6cec747cf</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">static</span> <span class="kd">func</span> <span class="nf">loadFromJson</span><span class="p">(</span><span class="n">fileName</span> <span class="n">name</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="p">[</span><span class="n">Point</span><span class="p">]</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">do</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">guard</span> <span class="kd">let</span> <span class="nv">filePath</span> <span class="p">=</span> <span class="n">Bundle</span><span class="p">.</span><span class="n">main</span><span class="p">.</span><span class="n">path</span><span class="p">(</span><span class="n">forResource</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span> <span class="n">ofType</span><span class="p">:</span> <span class="s">&#34;json&#34;</span><span class="p">)</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="p">[]</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="kd">let</span> <span class="nv">fileUrl</span> <span class="p">=</span> <span class="n">URL</span><span class="p">(</span><span class="n">fileURLWithPath</span><span class="p">:</span> <span class="n">filePath</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="kd">let</span> <span class="nv">data</span> <span class="p">=</span> <span class="k">try</span> <span class="n">Data</span><span class="p">(</span><span class="n">contentsOf</span><span class="p">:</span> <span class="n">fileUrl</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="kd">let</span> <span class="nv">points</span> <span class="p">=</span> <span class="k">try</span> <span class="n">JSONDecoder</span><span class="p">().</span><span class="n">decode</span><span class="p">([</span><span class="n">Point</span><span class="p">].</span><span class="kc">self</span><span class="p">,</span> <span class="n">from</span><span class="p">:</span> <span class="n">data</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="n">points</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">catch</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// should not happen!</span>
+</span></span><span class="line"><span class="cl">      <span class="bp">print</span><span class="p">(</span><span class="s">&#34;Something went wrong: </span><span class="si">\(</span><span class="n">error</span><span class="si">)</span><span class="s">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div></div>
+</div>
+<br />
+
+<ol start="3">
 <li>設計 Drone 類別，讓 Drone <strong>初始位置</strong>是隨機的，<strong>目的位置</strong>是剛剛載入的圖形座標。</li>
 <li>將兩座標分成 20 份，持續按壓連續觸發時，一次移動一份。</li>
 <li>當到達目的座標時，改變 Drone 的顏色。</li>
 </ol>
+
+
+<div class="terminal space shadow">
+    <div class="top">
+        <div class="btns">
+            <span class="circle red"></span>
+            <span class="circle yellow"></span>
+            <span class="circle green"></span>
+        </div>
+        <div class="title">
+            handle long press event
+        </div>
+    </div>
+    <div class="terminalbody"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">import</span> <span class="nc">UIKit</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">ViewController</span><span class="p">:</span> <span class="n">UIViewController</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nv">touchCountTimer</span><span class="p">:</span> <span class="n">Timer</span><span class="p">?</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nv">touchBeginTime</span><span class="p">:</span> <span class="nb">Double</span> <span class="p">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nv">droneCollection</span> <span class="p">=</span> <span class="n">DroneCollectionController</span><span class="p">(</span><span class="n">fromJsonFile</span><span class="p">:</span> <span class="s">&#34;ring&#34;</span><span class="p">)</span> <span class="c1">// composition</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kc">super</span><span class="p">.</span><span class="n">viewDidLoad</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">droneCollection</span><span class="p">.</span><span class="n">attachToLayer</span><span class="p">(</span><span class="n">to</span><span class="p">:</span> <span class="kc">self</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">layer</span><span class="p">)</span> <span class="c1">// attach drone layer</span>
+</span></span><span class="line"><span class="cl">    <span class="n">addLongPressGesture</span><span class="p">()</span> <span class="c1">// handle press</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// register gesture recognizer</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">//</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// ref: [How can i count time on long-pressed button using UILongPressGestureRecognizer](https://stackoverflow.com/a/53146530)</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">func</span> <span class="nf">addLongPressGesture</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">longPress</span> <span class="p">=</span> <span class="n">UILongPressGestureRecognizer</span><span class="p">(</span><span class="n">target</span><span class="p">:</span> <span class="kc">self</span><span class="p">,</span> <span class="n">action</span><span class="p">:</span> <span class="k">#selector</span><span class="p">(</span><span class="n">longPress</span><span class="p">(</span><span class="n">gesture</span><span class="p">:)))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">longPress</span><span class="p">.</span><span class="n">minimumPressDuration</span> <span class="p">=</span> <span class="mf">0.1</span>
+</span></span><span class="line"><span class="cl">    <span class="n">longPress</span><span class="p">.</span><span class="n">numberOfTouchesRequired</span> <span class="p">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="kc">self</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">addGestureRecognizer</span><span class="p">(</span><span class="n">longPress</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// handle long press event</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">//</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// ref: [How can i count time on long-pressed button using UILongPressGestureRecognizer](https://stackoverflow.com/a/53146530)</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">@objc</span> <span class="kd">func</span> <span class="nf">longPress</span><span class="p">(</span><span class="n">gesture</span><span class="p">:</span> <span class="n">UILongPressGestureRecognizer</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">switch</span> <span class="n">gesture</span><span class="p">.</span><span class="n">state</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="n">UIGestureRecognizer</span><span class="p">.</span><span class="n">State</span><span class="p">.</span><span class="n">began</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">      <span class="n">touchCountTimer</span> <span class="p">=</span> <span class="n">Timer</span><span class="p">.</span><span class="n">scheduledTimer</span><span class="p">(</span><span class="n">withTimeInterval</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">repeats</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="n">block</span><span class="p">:</span> <span class="p">{</span> <span class="p">[</span><span class="kc">self</span><span class="p">]</span> <span class="p">(</span><span class="n">timer</span><span class="p">)</span> <span class="k">in</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// </span><span class="cs">MARK:</span><span class="c1"> - do animation</span>
+</span></span><span class="line"><span class="cl">        <span class="n">droneCollection</span><span class="p">.</span><span class="n">animation</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">      <span class="p">})</span>
+</span></span><span class="line"><span class="cl">      <span class="n">touchBeginTime</span> <span class="p">=</span> <span class="n">Date</span><span class="p">().</span><span class="n">timeIntervalSince1970</span>
+</span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="p">.</span><span class="n">ended</span><span class="p">,</span> <span class="p">.</span><span class="n">failed</span><span class="p">,</span> <span class="p">.</span><span class="n">cancelled</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">      <span class="n">touchCountTimer</span><span class="p">?.</span><span class="n">invalidate</span><span class="p">()</span> <span class="c1">// Stops the timer</span>
+</span></span><span class="line"><span class="cl">      <span class="n">DroneCollectionController</span><span class="p">.</span><span class="n">isArrived</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="p">.</span><span class="n">changed</span><span class="p">:</span> <span class="c1">// wipe</span>
+</span></span><span class="line"><span class="cl">      <span class="k">break</span>
+</span></span><span class="line"><span class="cl">    <span class="k">default</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">      <span class="bp">print</span><span class="p">(</span><span class="s">&#34;unknown&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div></div>
+</div>
+<br />
+
 ]]></content:encoded>
     </item>
     
@@ -1123,15 +1230,16 @@ Input and Output shape of YOLOv7 (80 class)</p>
 <p><strong>歌詞來源：</strong><a href="https://tinyurl.com/2p9c5d8a">https://tinyurl.com/2p9c5d8a</a></p>
 <p><strong>Storyboard:</strong></p>
 <p><img loading="lazy" src="images/1.png" alt="image"  />
-
-<strong>過程：</strong></p>
+</p>
+<hr>
+<p><strong>過程：</strong></p>
 <p>本次結合幾個項目，練習 SDK 使用與熟悉 Swift 語法，只用 function print 無法滿足自己的期待，所以上網查了一些資料並搭配上課內容製作，將 AVPlayerViewController 加進 UIView 應該是最困難的部分，原本考慮使用 Container View 去做，但還不知道怎麼控制多個 Controller，並且跟 Storyboard 串接起來。</p>
 <p>主要在 <strong>iPad Pro 12.9</strong> 與 <strong>iPad Mini 6</strong> 實機測試過，iPhone 版面會看不到歌詞。</p>
 <ol>
 <li>新增 UIView，取得 IBOutlet -&gt; Line 12</li>
 <li>將 AVPlayerViewController 加進 UIView -&gt; Line 50</li>
 <li>用 IBAction 控制 影片播放並開始計時 -&gt; Line59</li>
-<li>註冊 View 生命週期與影片播放結束的通知 -&gt;Line 20~28</li>
+<li>註冊 View 生命週期與影片播放結束的通知 -&gt; Line 20~28</li>
 </ol>
 
 
@@ -1143,7 +1251,7 @@ Input and Output shape of YOLOv7 (80 class)</p>
             <span class="circle green"></span>
         </div>
         <div class="title">
-            Install Packages with Chocolatey on Windows
+            Partial script
         </div>
     </div>
     <div class="terminalbody"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">import</span> <span class="nc">AVFoundation</span>
