@@ -173,9 +173,16 @@
   </url><url>
     <loc>https://blog.cmwang.net/zh/categories/entertainment/</loc>
     <lastmod>2023-10-10T19:23:34+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.cmwang.net/zh/posts/2023/10/think-different-ai-ken/</loc>
-    <lastmod>2023-10-10T19:23:34+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.cmwang.net/en/categories/entertainment/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://blog.cmwang.net/zh/categories/entertainment/"
+                />
   </url><url>
     <loc>https://blog.cmwang.net/zh/tags/youtube/</loc>
     <lastmod>2023-10-10T19:23:34+08:00</lastmod>
@@ -188,6 +195,19 @@
                 rel="alternate"
                 hreflang="zh"
                 href="https://blog.cmwang.net/zh/tags/youtube/"
+                />
+  </url><url>
+    <loc>https://blog.cmwang.net/zh/posts/2023/10/think-different-ai-ken/</loc>
+    <lastmod>2023-10-10T19:23:34+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.cmwang.net/en/posts/2023/10/think-different-ai-ken/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://blog.cmwang.net/zh/posts/2023/10/think-different-ai-ken/"
                 />
   </url><url>
     <loc>https://blog.cmwang.net/zh/tags/feeling/</loc>
