@@ -21,7 +21,7 @@
       <description>This article show you how to set up a custom domain for a GitHub Page, using Godaddy as an example.</description>
       <content:encoded><![CDATA[<p>Setting up a CNAME for your GitHub Pages does not require additional payment, but you need to have a private domain first. Here, we assume that we have already purchased a domain from <a href="https://www.godaddy.com/">Godaddy</a>, so let&rsquo;s go to the <a href="https://sg.godaddy.com/help/manage-dns-records-680">Godaddy DNS settings page</a> to configure it.</p>
 <ol>
-<li>First, query GitHub&rsquo;s IP via Terminal:</li>
+<li>First, query GitHub&rsquo;s IP address via Terminal:</li>
 </ol>
 
 
@@ -44,12 +44,12 @@
 <p><img loading="lazy" src="4.png" alt="dig"  />
 </p>
 <ol start="2">
-<li>Go to the Godaddy DNS page and set up 4 A Records and 1 CNAME Record, please refer to the image.</li>
+<li>Go to the Godaddy DNS page and set up 4 <code>A Records</code> and 1 <code>CNAME Record</code>, please refer to the image.</li>
 </ol>
 <p><img loading="lazy" src="3.png" alt="godaddy setting"  />
 </p>
 <ol start="3">
-<li>Add a <code>CNAME</code> file with <code>xxx.{Domain Name}</code> to the private repo.</li>
+<li>Add a <code>CNAME</code> file with <code>xxx.{Domain Name}</code> to the private repo, ex. <code>blog.xxx.com</code>.</li>
 </ol>
 <p><img loading="lazy" src="5.png" alt="CNAME File"  />
 </p>
