@@ -20,14 +20,14 @@
       <guid>https://blog.cmwang.net/zh/posts/2023/10/install-gitlab-runner/</guid>
       <description>如何在本機透過 Docker 安裝 Gitlab runner</description>
       <content:encoded><![CDATA[<ol>
-<li>使用 System Volumn 掛載 Runner Container。</li>
+<li>使用 System Volumn 掛載 Runner Container，執行 Gitlab Runner。</li>
 </ol>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">docker run -d --name gitlab-runner --restart always <span class="se">\
 </span></span></span><span class="line"><span class="cl"><span class="se"></span>  -v /srv/gitlab-runner/config:/etc/gitlab-runner <span class="se">\
 </span></span></span><span class="line"><span class="cl"><span class="se"></span>  -v /var/run/docker.sock:/var/run/docker.sock <span class="se">\
 </span></span></span><span class="line"><span class="cl"><span class="se"></span>  gitlab/gitlab-runner:latest
 </span></span></code></pre></div><ol start="2">
-<li>建立一個 Group runner。</li>
+<li>建立一個新的 Group runner。</li>
 </ol>
 <p><img loading="lazy" src="1.png" alt="group runner"  />
 </p>
@@ -39,9 +39,9 @@
 </p>
 <p>更詳細的步驟可以參考這篇<a href="https://docs.gitlab.com/ee/ci/runners/runners_scope.html#create-a-group-runner-with-a-runner-authentication-token">文章</a>。</p>
 <ol start="3">
-<li>註冊一個 Runner</li>
+<li>註冊 Runner</li>
 </ol>
-<p>別忘了將 TOKEN 換成上一步得到的。</p>
+<p>別忘了將 Token 換成上一步得到的。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nv">RUNNER_TOKEN</span><span class="o">=</span><span class="s2">&#34;glrt-vTJPYBaajfypaShJH2xx&#34;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">docker run --rm -v /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/gitlab-runner register <span class="se">\
