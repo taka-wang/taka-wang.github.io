@@ -11,13 +11,23 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 13 Oct 2023 14:02:18 +0800</lastBuildDate><atom:link href="https://blog.cmwang.net/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 14 Oct 2023 21:13:26 +0800</lastBuildDate><atom:link href="https://blog.cmwang.net/en/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Domain</title>
-      <link>https://blog.cmwang.net/en/tags/domain/</link>
-      <pubDate>Fri, 13 Oct 2023 14:02:18 +0800</pubDate>
+      <title>CI</title>
+      <link>https://blog.cmwang.net/en/tags/ci/</link>
+      <pubDate>Sat, 14 Oct 2023 21:13:26 +0800</pubDate>
       
-      <guid>https://blog.cmwang.net/en/tags/domain/</guid>
+      <guid>https://blog.cmwang.net/en/tags/ci/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Gitlab Runner</title>
+      <link>https://blog.cmwang.net/en/tags/gitlab-runner/</link>
+      <pubDate>Sat, 14 Oct 2023 21:13:26 +0800</pubDate>
+      
+      <guid>https://blog.cmwang.net/en/tags/gitlab-runner/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -25,9 +35,19 @@
     <item>
       <title>How-To</title>
       <link>https://blog.cmwang.net/en/tags/how-to/</link>
-      <pubDate>Fri, 13 Oct 2023 14:02:18 +0800</pubDate>
+      <pubDate>Sat, 14 Oct 2023 21:13:26 +0800</pubDate>
       
       <guid>https://blog.cmwang.net/en/tags/how-to/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Domain</title>
+      <link>https://blog.cmwang.net/en/tags/domain/</link>
+      <pubDate>Fri, 13 Oct 2023 14:02:18 +0800</pubDate>
+      
+      <guid>https://blog.cmwang.net/en/tags/domain/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
