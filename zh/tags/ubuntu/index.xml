@@ -109,7 +109,7 @@
 </span></span><span class="line"><span class="cl">sudo rm -rf /usr/share/keyrings/docker-archive-keyring.gpg
 </span></span><span class="line"><span class="cl">sudo apt update
 </span></span><span class="line"><span class="cl">docker --version
-</span></span></code></pre></div><h2 id="install-docker">Install Docker</h2>
+</span></span></code></pre></div><h2 id="install-docker-ubuntu-2204">Install Docker (Ubuntu 22.04)</h2>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo apt update
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">sudo apt install -y <span class="se">\
@@ -129,11 +129,11 @@
 </span></span><span class="line"><span class="cl"><span class="c1"># post install</span>
 </span></span><span class="line"><span class="cl">sudo systemctl status docker
 </span></span><span class="line"><span class="cl">sudo usermod -aG docker <span class="si">${</span><span class="nv">USER</span><span class="si">}</span>
-</span></span></code></pre></div><h2 id="move-data-volume-to-another-disk">Move Data Volume to another disk</h2>
+</span></span></code></pre></div><h2 id="move-docker-data-to-another-location">Move Docker Data to Another Location</h2>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo systemctl stop docker
 </span></span><span class="line"><span class="cl">sudo systemctl status docker
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># ex: /data/ is another disk, don&#39;t create docker-data in advanced</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># ex: /data/ is another disk, don&#39;t create docker-data folder in advanced</span>
 </span></span><span class="line"><span class="cl">sudo rsync -avxP /var/lib/docker/  /data/docker-data
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># edit daemon.json with `data-root` line</span>
@@ -181,7 +181,7 @@
 </span></span><span class="line"><span class="cl">sudo curl -L <span class="s2">&#34;https://github.com/docker/compose/releases/download/1.29.2/docker-compose-</span><span class="k">$(</span>uname -s<span class="k">)</span><span class="s2">-</span><span class="k">$(</span>uname -m<span class="k">)</span><span class="s2">&#34;</span> -o /usr/local/bin/docker-compose
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">sudo chmod +x /usr/local/bin/docker-compose
-</span></span></code></pre></div><p>&ndash;</p>
+</span></span></code></pre></div><hr>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://developer.nvidia.com/cuda-downloads?target_os=Linux&amp;target_arch=x86_64&amp;Distribution=Ubuntu&amp;target_version=22.04&amp;target_type=deb_local">CUDA Toolkit 12.2 Update 2 Downloads</a></li>
