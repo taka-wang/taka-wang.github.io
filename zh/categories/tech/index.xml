@@ -2393,14 +2393,13 @@ Navigation Controller 需要從第一個畫面長出來，而不是第二頁</p>
 </span></span></code></pre></div><hr>
 <h2 id="references">📔References</h2>
 <ul>
-<li><a href="https://www.geeksforgeeks.org/php-superglobals/">PHP | Superglobals</a></li>
-<li><a href="https://code.tutsplus.com/php-superglobals-explained-with-cheatsheet--cms-36598t">PHP Superglobals Explained—With Cheatsheet</a></li>
-<li><a href="https://dev.to/ericchapman/php-cheat-sheet-updated-to-php-81-3o4p">PHP cheat sheet (updated to PHP 8.1)</a></li>
-<li><a href="https://dev.to/ericchapman/series/16288">ModernPHP Series&rsquo; Articles</a></li>
 <li><a href="https://www.php.net/manual/en/language.operators.php">PHP: Operators</a></li>
 <li><a href="https://www.php.net/manual/en/reserved.keywords.php">PHP Keywords</a></li>
 <li><a href="https://www.php.net/manual/en/indexes.functions.php">PHP Functions &amp; Methods</a></li>
-<li></li>
+<li><a href="https://dev.to/ericchapman/series/16288">ModernPHP Series&rsquo; Articles</a></li>
+<li><a href="https://www.geeksforgeeks.org/php-superglobals/">PHP | Superglobals</a></li>
+<li><a href="https://code.tutsplus.com/php-superglobals-explained-with-cheatsheet--cms-36598t">PHP Superglobals Explained—With Cheatsheet</a></li>
+<li><a href="https://dev.to/ericchapman/php-cheat-sheet-updated-to-php-81-3o4p">PHP cheat sheet (updated to PHP 8.1)</a></li>
 </ul>
 ]]></content:encoded>
     </item>
