@@ -1122,6 +1122,9 @@ Navigation Controller 需要從第一個畫面長出來，而不是第二頁</p>
 </span></span><span class="line"><span class="cl"><span class="c1">//Array declaration
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Mike&#39;</span><span class="p">,</span> <span class="s1">&#39;Peter&#39;</span><span class="p">,</span> <span class="s1">&#39;Shawn&#39;</span><span class="p">,</span> <span class="s1">&#39;John&#39;</span><span class="p">];</span>
 </span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Insert
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$names</span><span class="p">[]</span> <span class="o">=</span> <span class="s2">&#34;Jane&#34;</span><span class="p">;</span> <span class="c1">// 💡 change array length
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
 </span></span><span class="line"><span class="cl"><span class="c1">// Direct access to a specific element
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$name</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c1">//output Peter
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
@@ -1635,6 +1638,7 @@ Navigation Controller 需要從第一個畫面長出來，而不是第二頁</p>
 </span></span><span class="line"><span class="cl"><span class="nv">$object</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Greetings</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$object</span><span class="o">-&gt;</span><span class="na">sayHello</span><span class="p">();</span>
 </span></span></code></pre></div><h2 id="superglobals">Superglobals</h2>
+<p><code>TODO</code></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nv">$GLOBALS</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$_SERVER</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$_REQUEST</span>
@@ -1645,7 +1649,7 @@ Navigation Controller 需要從第一個畫面長出來，而不是第二頁</p>
 </span></span><span class="line"><span class="cl"><span class="nv">$_FILES</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$_ENV</span>
 </span></span></code></pre></div><hr>
-<h2 id="references">📔References</h2>
+<h2 id="references-">References 📔</h2>
 <ul>
 <li><a href="https://www.php.net/manual/en/language.operators.php">PHP: Operators</a></li>
 <li><a href="https://www.php.net/manual/en/reserved.keywords.php">PHP Keywords</a></li>
