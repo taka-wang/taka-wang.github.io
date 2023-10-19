@@ -93,7 +93,8 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># Run the script</span>
 </span></span><span class="line"><span class="cl">CMD <span class="o">[</span><span class="s2">&#34;python3&#34;</span>, <span class="s2">&#34;app.py&#34;</span><span class="o">]</span>
-</span></span></code></pre></div>]]></content:encoded>
+</span></span></code></pre></div><p><strong>Source Code</strong>: <a href="https://github.com/taka-wang/docker-whisper">https://github.com/taka-wang/docker-whisper</a></p>
+]]></content:encoded>
     </item>
     
     <item>
