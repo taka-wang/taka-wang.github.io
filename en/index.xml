@@ -19,7 +19,7 @@
       
       <guid>https://blog.cmwang.net/en/posts/2023/10/faster-whisper-in-python3/</guid>
       <description>How to use faster-whisper and generate a progress bar</description>
-      <content:encoded><![CDATA[<p><a href="https://github.com/guillaumekln/faster-whisper">faster-whisper</a> is a reimplementation of OpenAI&rsquo;s Whisper model using <code>CTranslate2</code>, an engine designed for fast inference of Transformer models. The overall speed is significantly improved, provided that you have a GPU.</p>
+      <content:encoded><![CDATA[<p><a href="https://github.com/guillaumekln/faster-whisper">faster-whisper</a> is a reimplementation of OpenAI&rsquo;s Whisper model using <code>CTranslate2</code>, an engine designed for fast inference of Transformer models. The overall speed is significantly improved.</p>
 <p>Below is a simple example of generating subtitles. First, install <code>faster_whisper</code> and <code>pysubs2</code>:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># pip install faster_whisper pysubs2</span>
 </span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">faster_whisper</span> <span class="kn">import</span> <span class="n">WhisperModel</span>
