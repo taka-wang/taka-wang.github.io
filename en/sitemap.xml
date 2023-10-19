@@ -80,6 +80,19 @@
                 href="https://blog.cmwang.net/en/posts/"
                 />
   </url><url>
+    <loc>https://blog.cmwang.net/en/tags/python/</loc>
+    <lastmod>2023-10-19T19:59:44+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://blog.cmwang.net/zh/tags/python/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.cmwang.net/en/tags/python/"
+                />
+  </url><url>
     <loc>https://blog.cmwang.net/en/tags/</loc>
     <lastmod>2023-10-19T19:59:44+08:00</lastmod>
     <xhtml:link
