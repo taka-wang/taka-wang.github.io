@@ -314,6 +314,19 @@
                 href="https://blog.cmwang.net/en/posts/2023/10/hugo-get-started/"
                 />
   </url><url>
+    <loc>https://blog.cmwang.net/en/tags/chocolatey/</loc>
+    <lastmod>2023-10-10T19:41:05+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://blog.cmwang.net/zh/tags/chocolatey/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.cmwang.net/en/tags/chocolatey/"
+                />
+  </url><url>
     <loc>https://blog.cmwang.net/en/posts/2023/10/how-to-install-hugo/</loc>
     <lastmod>2023-10-10T19:41:05+08:00</lastmod>
     <xhtml:link
