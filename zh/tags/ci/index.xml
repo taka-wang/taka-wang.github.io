@@ -115,7 +115,7 @@
 <ul>
 <li><a href="https://docs.gitlab.com/runner/install/">Install GitLab Runner</a></li>
 <li><a href="https://docs.gitlab.com/runner/install/docker.html">Run GitLab Runner in a container</a></li>
-<li><a href="https://docs.gitlab.com/runner/register/index.html">Registering runners </a></li>
+<li><a href="https://docs.gitlab.com/runner/register/index.html">Registering runners</a></li>
 <li><a href="https://docs.gitlab.com/ee/ci/runners/runners_scope.html#create-a-group-runner-with-a-runner-authentication-token">Create a group runner with a runner authentication token</a></li>
 </ul>
 ]]></content:encoded>

@@ -70,7 +70,7 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">ol</span><span class="p">&gt;&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
-</span></span></code></pre></div><h2 id="emphasis-em-">Emphasis <code>em</code> 🔥</h2>
+</span></span></code></pre></div><h2 id="emphasis-em">Emphasis <code>em</code></h2>
 <ul>
 <li>不要再使用 <code>&lt;i&gt;lorem&lt;/i&gt;</code></li>
 </ul>
@@ -79,12 +79,12 @@
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>lorem<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>
 </span></span></code></pre></div><h2 id="superscript-subscript-sup-sub">Superscript, Subscript <code>sup</code> <code>sub</code></h2>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">sup</span><span class="p">&gt;&lt;/</span><span class="nt">sup</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">sub</span><span class="p">&gt;&lt;/</span><span class="nt">sub</span><span class="p">&gt;</span>
-</span></span></code></pre></div><h2 id="image-image-">Image <code>image</code> 🔥</h2>
+</span></span></code></pre></div><h2 id="image-image">Image <code>image</code></h2>
 <ul>
 <li><code>alt</code> 很重要</li>
 </ul>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;io.png&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;something in the folder&#34;</span> <span class="p">/&gt;</span>
-</span></span></code></pre></div><h2 id="anchor-links-a-">Anchor (links) <code>a</code> 🔥</h2>
+</span></span></code></pre></div><h2 id="anchor-links-a">Anchor (links) <code>a</code></h2>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#examples">The Anchor element - HTML: HyperText Markup Language | MDN</a></p>
 <ul>
 <li>link to other elements，可以用 <code>#</code> link 到某一段落的 <code>id</code></li>
@@ -95,18 +95,18 @@
 </span></span><span class="line"><span class="cl"><span class="c">&lt;!-- link to section --&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;pets&#34;</span><span class="p">&gt;</span>Pets<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
-</span></span></code></pre></div><h3 id="image-anchor-">image anchor 🔥</h3>
+</span></span></code></pre></div><h3 id="image-anchor">image anchor</h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://example.com&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;[https://picsum.photos/400](https://picsum.photos/400)&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;pig&#34;</span> <span class="p">/&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </span></span></code></pre></div><h3 id="target">target</h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;contact.html&#34;</span> <span class="na">target</span><span class="o">=</span><span class="s">&#34;_blank&#34;</span><span class="p">&gt;</span>Contact<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-</span></span></code></pre></div><h2 id="inline-vs-block-elements-">Inline vs block elements 🔥</h2>
+</span></span></code></pre></div><h2 id="inline-vs-block-elements"><code>Inline</code> vs <code>block</code> elements</h2>
 <ul>
 <li>inline 不會換行</li>
 <li>block elements 會佔滿整行，例如 <code>heading elements</code></li>
 </ul>
-<h2 id="forms-">Forms 🔥</h2>
+<h2 id="forms">Forms</h2>
 <ul>
 <li>use form to group controls together</li>
 <li><code>name</code> for input，這樣傳遞參數才能區別是哪個 input</li>
