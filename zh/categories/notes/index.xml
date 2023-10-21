@@ -18,7 +18,7 @@
       <pubDate>Thu, 19 Oct 2023 19:59:44 +0800</pubDate>
       
       <guid>https://blog.cmwang.net/zh/posts/2023/10/faster-whisper-in-python3/</guid>
-      <description>如何使用 faster-whisper 並產生進度條</description>
+      <description>如何使用 faster-whisper 並產生進度條，你可以用它來幫影片自動產生字幕</description>
       <content:encoded><![CDATA[<p><a href="https://github.com/guillaumekln/faster-whisper">faster-whisper</a> 使用<code>CTranslate2</code>重新實現 OpenAI 的 Whisper 模型，<code>CTranslate2</code>是一個用於 Transformer 模型快速推論的引擎。整體速度提升不少，前提還是要有 GPU。</p>
 <p>以下是產生字幕的簡單範例，請先安裝 <code>faster_whisper</code> 與 <code>pysubs2</code></p>
 
