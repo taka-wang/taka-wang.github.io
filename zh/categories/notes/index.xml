@@ -2030,6 +2030,38 @@ Navigation Controller 需要從第一個畫面長出來，而不是第二頁</p>
 </span></span><span class="line"><span class="cl"><span class="nv">$result</span> <span class="o">=</span> <span class="nv">$calculator</span><span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">subtract</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">getResult</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nv">$result</span><span class="p">;</span> <span class="c1">// 輸出：5
 </span></span></span></code></pre></div><p>在這個例子中，<code>add</code> 和 <code>subtract</code> 方法返回了物件本身 <code>$this</code>，這樣它們可以連續呼叫，而不需要每次呼叫都賦值給一個變數。</p>
+<h2 id="建構子引數的推廣-constructor-property-promotion">建構子引數的推廣 (Constructor Property Promotion)</h2>
+<p>在 PHP 8.0 及以上版本中，引入的新特性。</p>
+<p>當使用建構子引數推廣之前，我們需要手動為每個類別的屬性指定建構子引數，然後在建構子中賦值。以下是一個使用前的範例：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">User</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">private</span> <span class="nx">string</span> <span class="nv">$name</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">private</span> <span class="nx">string</span> <span class="nv">$email</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">private</span> <span class="o">?</span><span class="nx">string</span> <span class="nv">$phoneNumber</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span><span class="nx">string</span> <span class="nv">$name</span><span class="p">,</span> <span class="nx">string</span> <span class="nv">$email</span><span class="p">,</span> <span class="o">?</span><span class="nx">string</span> <span class="nv">$phoneNumber</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">name</span> <span class="o">=</span> <span class="nv">$name</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span> <span class="o">=</span> <span class="nv">$email</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">phoneNumber</span> <span class="o">=</span> <span class="nv">$phoneNumber</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 建立使用者物件
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$user</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">User</span><span class="p">(</span><span class="s1">&#39;John Doe&#39;</span><span class="p">,</span> <span class="s1">&#39;john@example.com&#39;</span><span class="p">,</span> <span class="s1">&#39;123-456-7890&#39;</span><span class="p">);</span>
+</span></span></code></pre></div><p>在上面的範例中，我們需要手動宣告建構子的引數，然後再將這些引數賦值給類別的屬性。</p>
+<p>使用建構子引數推廣後的範例：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">User</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="k">private</span> <span class="nx">string</span> <span class="nv">$name</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="k">private</span> <span class="nx">string</span> <span class="nv">$email</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="k">private</span> <span class="o">?</span><span class="nx">string</span> <span class="nv">$phoneNumber</span> <span class="o">=</span> <span class="k">null</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 建構子的內容
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 建立使用者物件
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$user</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">User</span><span class="p">(</span><span class="s1">&#39;John Doe&#39;</span><span class="p">,</span> <span class="s1">&#39;john@example.com&#39;</span><span class="p">,</span> <span class="s1">&#39;123-456-7890&#39;</span><span class="p">);</span>
+</span></span></code></pre></div><p>在這個例子中，建構子的引數列表直接宣告瞭類別的屬性。<code>$name</code> 和 <code>$email</code> 屬性是必須的，而 <code>$phoneNumber</code> 屬性是可選的（使用 <code>?string</code> 表示可以為空）。在建構子中，不需要再手動賦值給這些屬性，PHP 會自動處理。這樣，我們可以簡化建構子的定義，使程式碼更加簡潔和易讀。</p>
 <h2 id="存取修飾符-access-modifiers">存取修飾符 (Access Modifiers)</h2>
 <h3 id="public公共">public（公共)</h3>
 <p><code>public</code> 修飾符表示該成員(屬性或方法)在類別內外部均可被訪問。這意味著無論是在類別內部、子類別、還是外部程式碼中，都可以直接訪問這個成員，<strong>它是預設值</strong>。</p>
