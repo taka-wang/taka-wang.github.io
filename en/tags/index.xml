@@ -282,5 +282,15 @@
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
+    <item>
+      <title>OOP</title>
+      <link>https://blog.cmwang.net/en/tags/oop/</link>
+      <pubDate>Sat, 21 Jan 2017 20:12:53 +0000</pubDate>
+      
+      <guid>https://blog.cmwang.net/en/tags/oop/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
   </channel>
 </rss>
