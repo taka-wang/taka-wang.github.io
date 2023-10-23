@@ -11,7 +11,27 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 19 Oct 2023 19:59:44 +0800</lastBuildDate><atom:link href="https://blog.cmwang.net/zh/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 21 Oct 2023 22:53:02 +0800</lastBuildDate><atom:link href="https://blog.cmwang.net/zh/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Frontend</title>
+      <link>https://blog.cmwang.net/zh/tags/frontend/</link>
+      <pubDate>Sat, 21 Oct 2023 22:53:02 +0800</pubDate>
+      
+      <guid>https://blog.cmwang.net/zh/tags/frontend/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Vue</title>
+      <link>https://blog.cmwang.net/zh/tags/vue/</link>
+      <pubDate>Sat, 21 Oct 2023 22:53:02 +0800</pubDate>
+      
+      <guid>https://blog.cmwang.net/zh/tags/vue/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
     <item>
       <title>AI</title>
       <link>https://blog.cmwang.net/zh/tags/ai/</link>
@@ -308,16 +328,6 @@
       <pubDate>Tue, 20 Oct 2020 17:14:50 +0800</pubDate>
       
       <guid>https://blog.cmwang.net/zh/tags/cheat-sheet/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Frontend</title>
-      <link>https://blog.cmwang.net/zh/tags/frontend/</link>
-      <pubDate>Tue, 20 Oct 2020 17:14:50 +0800</pubDate>
-      
-      <guid>https://blog.cmwang.net/zh/tags/frontend/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
