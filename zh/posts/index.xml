@@ -3359,6 +3359,173 @@ Navigation Controller 需要從第一個畫面長出來，而不是第二頁</p>
 <h3 id="strict-types">Strict Types</h3>
 <p>放在最前面，每個檔案都要各別放。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">declare</span><span class="p">(</span><span class="nx">strict_types</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
+</span></span></code></pre></div><h3 id="constants">Constants</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">define</span><span class="p">(</span><span class="s1">&#39;FOO&#39;</span><span class="p">,</span> <span class="s1">&#39;hello world&#39;</span><span class="p">);</span> <span class="c1">// can not use in the class
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="no">FOO</span> <span class="o">=</span> <span class="s2">&#34;hello world&#34;</span><span class="p">;</span> <span class="c1">// they cannot be conditionally defined within the flow of program execution. They must have an initial value at the time of declaration.
+</span></span></span></code></pre></div><h3 id="unset">Unset</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nv">$name</span> <span class="o">=</span> <span class="s2">&#34;john&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nv">$name</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">unset</span><span class="p">(</span><span class="nv">$name</span><span class="p">);</span> <span class="c1">// delete variable
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">echo</span> <span class="nv">$name</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;john&#34;</span><span class="p">,</span> <span class="s2">&#34;jane&#34;</span><span class="p">,</span> <span class="s2">&#34;bobo&#34;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nv">$names</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">unset</span><span class="p">(</span><span class="nv">$names</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span> <span class="c1">// delete variable
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$names</span> <span class="o">=</span> <span class="nx">array_values</span><span class="p">(</span><span class="nv">$names</span><span class="p">);</span> <span class="c1">// reindex array to fill the gap 🔥
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">echo</span> <span class="nv">$names</span><span class="p">;</span>
+</span></span></code></pre></div><h3 id="alternative-if-statement">Alternative if statement</h3>
+<p>另一種 if else 寫法，夾雜 HTML 時好用。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span> <span class="nv">$permission</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;?php if ($permission === 1) : ?&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">    &lt;h1&gt;Hello Admin&lt;/h1&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;?php elseif ($permission === 2) : ?&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">    &lt;h1&gt;Hello OP&lt;/h1&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;?php else : ?&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">    &lt;h1&gt;Hello Others&lt;/h1&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;?php endif; ?&gt;
+</span></span></span></code></pre></div><h3 id="include-files">Include files</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span> <span class="k">include_once</span> <span class="s1">&#39;nav.php&#39;</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div><ul>
+<li>require 與 include 處理 error 不同</li>
+<li>require 會傳出 <code>fatal</code></li>
+<li>include 只會傳出 warning</li>
+</ul>
+<h3 id="variadic-function">Variadic Function</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">sum</span><span class="p">(</span><span class="nx">int</span><span class="o">|</span><span class="nx">float</span> <span class="o">...</span><span class="nv">$nums</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// syntax
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">var_dump</span><span class="p">(</span><span class="nv">$nums</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">array_sum</span><span class="p">(</span><span class="nv">$nums</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nx">sum</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+</span></span></code></pre></div><h3 id="named-arguments">Named Arguments</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">sum</span><span class="p">(</span><span class="nv">$a</span><span class="p">,</span> <span class="nv">$b</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">var_dump</span><span class="p">(</span><span class="nv">$a</span><span class="p">,</span> <span class="nv">$b</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nv">$a</span><span class="o">+</span><span class="nv">$b</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nx">sum</span><span class="p">(</span><span class="nx">b</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span> <span class="nx">a</span><span class="o">:</span> <span class="mi">2</span><span class="p">);</span>
+</span></span></code></pre></div><p>使用情境，只設定部分，如下例子：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="c1">// setcookie(
+</span></span></span><span class="line"><span class="cl"><span class="c1">//     string $name,
+</span></span></span><span class="line"><span class="cl"><span class="c1">//     string $value = &#34;&#34;,
+</span></span></span><span class="line"><span class="cl"><span class="c1">//     string $expires_or_options = 0,
+</span></span></span><span class="line"><span class="cl"><span class="c1">//     string $path = &#34;&#34;,
+</span></span></span><span class="line"><span class="cl"><span class="c1">//     string $domain = &#34;&#34;,
+</span></span></span><span class="line"><span class="cl"><span class="c1">//     bool $secure = false,
+</span></span></span><span class="line"><span class="cl"><span class="c1">//     bool $httponly = false
+</span></span></span><span class="line"><span class="cl"><span class="c1">// ): bool
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="nx">setcookie</span><span class="p">(</span><span class="s2">&#34;hello&#34;</span><span class="p">,</span> <span class="nx">httponly</span><span class="o">:</span> <span class="k">true</span><span class="p">);</span> <span class="c1">// named arguments
+</span></span></span></code></pre></div><h3 id="arrow-functions">Arrow Functions</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nv">$mul</span> <span class="o">=</span> <span class="k">function</span><span class="p">(</span><span class="nv">$num</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nv">$num</span> <span class="o">*</span><span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nv">$mul</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span> <span class="c1">// dollar sign
+</span></span></span></code></pre></div><p>Arrow Functions example</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nv">$mul</span> <span class="o">=</span> <span class="nx">fn</span> <span class="p">(</span><span class="nv">$num</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nv">$num</span> <span class="o">*</span> <span class="nv">$multiplier</span><span class="p">;</span> <span class="c1">// similar to javascript
+</span></span></span></code></pre></div><h3 id="callable">Callable</h3>
+<p>TODO</p>
+<h3 id="pass-by-reference">Pass by Reference</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nv">$cup</span> <span class="o">=</span> <span class="s1">&#39;empty&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">fillCup</span><span class="p">(</span><span class="o">&amp;</span><span class="nv">$cupParam</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// add &amp; before param! 🔥
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nv">$cupParam</span> <span class="o">=</span> <span class="s1">&#39;filled&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">fillCup</span><span class="p">(</span><span class="nv">$cup</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nv">$cup</span><span class="p">;</span>
+</span></span></code></pre></div><h3 id="files">Files</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nv">$directory</span> <span class="o">=</span> <span class="nx">scandir</span><span class="p">(</span><span class="no">__DIR__</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">mkdir</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">rmdir</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nx">file_exists</span><span class="p">(</span><span class="s1">&#39;example.txt&#39;</span><span class="p">))</span> <span class="p">{</span> <span class="c1">// exists
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">echo</span> <span class="s1">&#39;File found!&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nx">file_exists</span><span class="p">(</span><span class="s1">&#39;example.txt&#39;</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">echo</span> <span class="nx">filesize</span><span class="p">(</span><span class="s1">&#39;example.txt&#39;</span><span class="p">);</span> <span class="c1">// size. cached
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nx">file_put_contents</span><span class="p">(</span><span class="s1">&#39;example.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;hello world!&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">clearstatcache</span><span class="p">();</span> <span class="c1">// clear cache to update filesize
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="nx">file_get_contents</span><span class="p">(</span><span class="s1">&#39;example.txt&#39;</span><span class="p">);</span>
+</span></span></code></pre></div><h3 id="destructuring-arrays">Destructuring Arrays</h3>
+<p><code>[$var1, $var2] = $array;</code> 這樣就把 $array 數組的第一個元素賦值給了 $var1，第二個元素賦值給了 $var2。 🔥</p>
+<p>解構的主要用途之一是在函數返回多個值的時候。比如，如果你的函數需要返回多個數據，你可以將這些數據放在一個 Array 中，然後通過解構將數據分配給不同的變數。這樣可以提高代碼的可讀性和可維護性。</p>
+<p>另外，解構還可以用於遍歷 Array 或對象的元素，以及將函數的多個返回值解構為變數。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="c1">// 解構數組
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nv">$var1</span><span class="p">,</span> <span class="nv">$var2</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$array</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nv">$var1</span><span class="p">;</span> <span class="c1">// 輸出 1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">echo</span> <span class="nv">$var2</span><span class="p">;</span> <span class="c1">// 輸出 2
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 函數返回多個值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">function</span> <span class="nf">getValues</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nv">$var1</span><span class="p">,</span> <span class="nv">$var2</span><span class="p">]</span> <span class="o">=</span> <span class="nx">getValues</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nv">$var1</span><span class="p">;</span> <span class="c1">// 輸出 1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">echo</span> <span class="nv">$var2</span><span class="p">;</span> <span class="c1">// 輸出 2
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 遍歷數組元素
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$array</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]];</span>
+</span></span><span class="line"><span class="cl"><span class="k">foreach</span> <span class="p">(</span><span class="nv">$array</span> <span class="k">as</span> <span class="p">[</span><span class="nv">$a</span><span class="p">,</span> <span class="nv">$b</span><span class="p">])</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">echo</span> <span class="nv">$a</span><span class="p">;</span> <span class="c1">// 輸出 1，然後 3
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">echo</span> <span class="nv">$b</span><span class="p">;</span> <span class="c1">// 輸出 2，然後 4
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></code></pre></div><h3 id="arrays-common-methods">Arrays Common Methods</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nv">$users</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;john&#39;</span><span class="p">,</span> <span class="s1">&#39;jane&#39;</span><span class="p">,</span> <span class="s1">&#39;bob&#39;</span><span class="p">,</span> <span class="k">null</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 1. isset null 或者 false 會失敗
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nx">isset</span><span class="p">(</span><span class="nv">$users</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">echo</span> <span class="s2">&#34;User Found!&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 2. array_key_exists 只要有值，不管 null 或者 false 都會成立
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nx">array_key_exists</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="nv">$users</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">echo</span> <span class="s2">&#34;User Found!&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 3. array_filter 剔除 null 或者 false
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="nv">$users</span> <span class="o">=</span> <span class="nx">array_filter</span><span class="p">(</span><span class="nv">$users</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="s1">&#39;&lt;pre&gt;&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">print_r</span><span class="p">(</span><span class="nv">$users</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="s1">&#39;&lt;/pre&gt;&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 4. array_filter callback
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="nv">$users</span> <span class="o">=</span> <span class="nx">array_filter</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$users</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">fn</span><span class="p">(</span><span class="nv">$users</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nv">$users</span> <span class="o">!=</span> <span class="s1">&#39;bob&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="s1">&#39;&lt;pre&gt;&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">print_r</span><span class="p">(</span><span class="nv">$users</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="s1">&#39;&lt;/pre&gt;&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 5. array_map
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$users</span> <span class="o">=</span> <span class="nx">array_map</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">fn</span><span class="p">(</span><span class="nv">$user</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">strtoupper</span><span class="p">(</span><span class="nv">$user</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$users</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 6. merge
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$users</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;john&#39;</span><span class="p">,</span> <span class="s1">&#39;jane&#39;</span><span class="p">,</span> <span class="s1">&#39;bob&#39;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$users</span> <span class="o">=</span> <span class="nx">array_merge</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$users</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="s1">&#39;Sam&#39;</span><span class="p">,</span> <span class="s1">&#39;Jessica&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 7. sort
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">sort</span><span class="p">(</span><span class="nv">$users</span><span class="p">);</span>
 </span></span></code></pre></div>]]></content:encoded>
     </item>
     
