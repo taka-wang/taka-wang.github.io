@@ -3106,5 +3106,104 @@ Navigation Controller 需要從第一個畫面長出來，而不是第二頁</p>
 ]]></content:encoded>
     </item>
     
+    <item>
+      <title>PHP 語法基礎</title>
+      <link>https://blog.cmwang.net/zh/posts/2020/10/php-fundamental/</link>
+      <pubDate>Thu, 15 Oct 2020 23:53:02 +0800</pubDate>
+      
+      <guid>https://blog.cmwang.net/zh/posts/2020/10/php-fundamental/</guid>
+      <description>PHP 語法基礎</description>
+      <content:encoded><![CDATA[<h2 id="constrol-structures">Constrol Structures</h2>
+<h3 id="if">if</h3>
+<p><code>else if</code> 或 <code>elseif</code> 都可以。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nv">$score</span> <span class="o">=</span> <span class="mi">95</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nv">$score</span> <span class="o">&gt;</span> <span class="mi">90</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">var_dump</span><span class="p">(</span><span class="s2">&#34;A&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nv">$score</span> <span class="o">&gt;</span> <span class="mi">80</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">var_dump</span><span class="p">(</span><span class="s2">&#34;B&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="k">elseif</span> <span class="p">(</span><span class="nv">$score</span> <span class="o">&gt;</span> <span class="mi">80</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">var_dump</span><span class="p">(</span><span class="s2">&#34;C&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">var_dump</span><span class="p">(</span><span class="s2">&#34;F&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="switch">switch</h3>
+<p>case 為字串也可以，每個條件要加 break 跳出。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nv">$paymentStatus</span> <span class="o">=</span> <span class="s2">&#34;1&#34;</span><span class="p">;</span> <span class="c1">// both 1 or &#34;1&#34; works
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="k">switch</span> <span class="p">(</span><span class="nv">$paymentStatus</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">var_dump</span><span class="p">(</span><span class="s2">&#34;Success&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">case</span> <span class="mi">2</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">var_dump</span><span class="p">(</span><span class="s2">&#34;Denied&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">default</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">var_dump</span><span class="p">(</span><span class="s2">&#34;Unknown&#34;</span><span class="p">);</span> <span class="p">}</span>
+</span></span></code></pre></div><h3 id="match">match</h3>
+<ul>
+<li>match 是一種 expression，總是會回傳值。</li>
+<li>與 switch 比起來， match 需要型態一致，<strong>不會主動 typecasting</strong>。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nv">$paymentStatus</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$message</span> <span class="o">=</span> <span class="nx">match</span> <span class="p">(</span><span class="nv">$paymentStatus</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="mi">1</span> <span class="o">=&gt;</span> <span class="s2">&#34;Success&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="mi">2</span> <span class="o">=&gt;</span> <span class="s2">&#34;Denied&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="k">default</span> <span class="o">=&gt;</span> <span class="s2">&#34;Unknown&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></div><h3 id="while">while</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nv">$a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="p">(</span><span class="nv">$a</span> <span class="o">&lt;=</span> <span class="mi">15</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">echo</span> <span class="nv">$a</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">do</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">echo</span> <span class="nv">$a</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">$a</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="nv">$a</span> <span class="o">&lt;=</span> <span class="mi">15</span><span class="p">);</span>
+</span></span></code></pre></div><h3 id="for-loop">for loop</h3>
+<p>跟 C 類似</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="nv">$i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">&lt;=</span> <span class="mi">15</span><span class="p">;</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">echo</span> <span class="nv">$i</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>跳過特定條件 <code>continue</code>，跳出 <code>break</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="nv">$i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">&lt;=</span> <span class="mi">15</span><span class="p">;</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nv">$i</span> <span class="o">==</span> <span class="mi">6</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">continue</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">echo</span> <span class="nv">$i</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="foreach-loop">Foreach Loop</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nv">$names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;John&#34;</span><span class="p">,</span> <span class="s2">&#34;Jane&#34;</span><span class="p">,</span> <span class="s2">&#34;Sam&#34;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">foreach</span> <span class="p">(</span><span class="nv">$names</span> <span class="k">as</span> <span class="nv">$name</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">var_dump</span><span class="p">(</span><span class="nv">$name</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>獲取 <code>key</code> 的方式</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nv">$names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;John&#34;</span><span class="p">,</span> <span class="s2">&#34;Jane&#34;</span><span class="p">,</span> <span class="s2">&#34;Sam&#34;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">foreach</span> <span class="p">(</span><span class="nv">$names</span> <span class="k">as</span> <span class="nv">$key</span> <span class="o">=&gt;</span> <span class="nv">$name</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">echo</span> <span class="s2">&#34;key: </span><span class="si">{</span><span class="nv">$key</span><span class="si">}</span><span class="s2"> =&gt; &#34;</span> <span class="o">.</span> <span class="s2">&#34;</span><span class="si">{</span><span class="nv">$name</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">echo</span> <span class="s2">&#34;&lt;br&gt;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="function">Function</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 回傳 string
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">function</span> <span class="nf">getStatus</span><span class="p">(</span><span class="nv">$paymentStatus</span><span class="p">,</span> <span class="nv">$showMessage</span> <span class="o">=</span> <span class="k">true</span><span class="p">)</span><span class="o">:</span> <span class="nx">string</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 不回傳
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">function</span> <span class="nf">getStatus</span><span class="p">(</span><span class="nv">$paymentStatus</span><span class="p">,</span> <span class="nv">$showMessage</span> <span class="o">=</span> <span class="k">true</span><span class="p">)</span><span class="o">:</span> <span class="nx">void</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 可以透過 union，回傳可以是字串或者null
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">function</span> <span class="nf">getStatus</span><span class="p">(</span><span class="nx">int</span><span class="o">|</span><span class="nx">float</span> <span class="nv">$paymentStatus</span><span class="p">,</span> <span class="nx">bool</span> <span class="nv">$showMessage</span> <span class="o">=</span> <span class="k">true</span><span class="p">)</span><span class="o">:</span> <span class="o">?</span><span class="nx">string</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 接受各種 data type
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">function</span> <span class="nf">getStatus</span><span class="p">(</span><span class="nx">mixed</span> <span class="nv">$paymentStatus</span><span class="p">,</span> <span class="nx">bool</span> <span class="nv">$showMessage</span> <span class="o">=</span> <span class="k">true</span><span class="p">)</span><span class="o">:</span> <span class="o">?</span><span class="nx">string</span>
+</span></span></code></pre></div><h2 id="misc">Misc</h2>
+<h3 id="strict-types">Strict Types</h3>
+<p>放在最前面，每個檔案都要各別放。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">declare</span><span class="p">(</span><span class="nx">strict_types</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
+</span></span></code></pre></div>]]></content:encoded>
+    </item>
+    
   </channel>
 </rss>
