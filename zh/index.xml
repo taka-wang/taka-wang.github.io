@@ -11,7 +11,28 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 21 Oct 2023 22:53:02 +0800</lastBuildDate><atom:link href="https://blog.cmwang.net/zh/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 29 Oct 2023 16:09:33 +0800</lastBuildDate><atom:link href="https://blog.cmwang.net/zh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VSCode Extension</title>
+      <link>https://blog.cmwang.net/zh/posts/2023/10/vscode-extension/</link>
+      <pubDate>Sun, 29 Oct 2023 16:09:33 +0800</pubDate>
+      
+      <guid>https://blog.cmwang.net/zh/posts/2023/10/vscode-extension/</guid>
+      <description>Common VSCode Extension</description>
+      <content:encoded><![CDATA[<h2 id="web">Web</h2>
+<ul>
+<li>HTML CSS Support (intelligence)</li>
+<li>CSS Peak (link to style)</li>
+<li>Prettier (format on save)</li>
+<li>Highlight Matching Tag</li>
+</ul>
+<h2 id="general">General</h2>
+<ul>
+<li>TODO Highlight</li>
+</ul>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>前端開發歷史</title>
       <link>https://blog.cmwang.net/zh/posts/2023/10/frontend-history/</link>
