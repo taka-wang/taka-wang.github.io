@@ -692,12 +692,15 @@
     <lastmod>2023-10-09T23:21:38+08:00</lastmod>
   </url><url>
     <loc>https://blog.cmwang.net/zh/tags/backend/</loc>
-    <lastmod>2020-10-24T02:47:41+08:00</lastmod>
+    <lastmod>2020-10-25T02:47:41+08:00</lastmod>
   </url><url>
     <loc>https://blog.cmwang.net/zh/tags/django/</loc>
-    <lastmod>2020-10-24T02:47:41+08:00</lastmod>
+    <lastmod>2020-10-25T02:47:41+08:00</lastmod>
   </url><url>
-    <loc>https://blog.cmwang.net/zh/posts/2020/10/django-note/</loc>
+    <loc>https://blog.cmwang.net/zh/posts/2020/10/django-data-model/</loc>
+    <lastmod>2020-10-25T02:47:41+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.cmwang.net/zh/posts/2020/10/django-fundamental/</loc>
     <lastmod>2020-10-24T02:47:41+08:00</lastmod>
   </url><url>
     <loc>https://blog.cmwang.net/zh/tags/cheat-sheet/</loc>
