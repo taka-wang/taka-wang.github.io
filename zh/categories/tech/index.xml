@@ -1994,6 +1994,109 @@ Navigation Controller 需要從第一個畫面長出來，而不是第二頁</p>
     </item>
     
     <item>
+      <title>Django Note</title>
+      <link>https://blog.cmwang.net/zh/posts/2020/10/django-note/</link>
+      <pubDate>Sat, 24 Oct 2020 02:47:41 +0800</pubDate>
+      
+      <guid>https://blog.cmwang.net/zh/posts/2020/10/django-note/</guid>
+      <description>Django Notes</description>
+      <content:encoded><![CDATA[<h2 id="get-started">Get Started</h2>
+<h3 id="create-project">Create Project</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">poetry init
+</span></span><span class="line"><span class="cl">portry add django
+</span></span><span class="line"><span class="cl">django-admin startproject my_site . <span class="c1"># period to current directory</span>
+</span></span><span class="line"><span class="cl">python manage.py runserver <span class="o">[</span>9000<span class="o">]</span>   <span class="c1"># port is optional</span>
+</span></span></code></pre></div><ul>
+<li>Every Django project consists of multiple <code>apps</code>.</li>
+</ul>
+<h3 id="create-app">Create APP</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">python manage.py startapp playground
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">├── manage.py
+</span></span><span class="line"><span class="cl">├── playground
+</span></span><span class="line"><span class="cl">│   ├── __init__.py
+</span></span><span class="line"><span class="cl">│   ├── admin.py
+</span></span><span class="line"><span class="cl">│   ├── apps.py 						# config setting
+</span></span><span class="line"><span class="cl">│   ├── migrations
+</span></span><span class="line"><span class="cl">│   │   └── __init__.py
+</span></span><span class="line"><span class="cl">│   ├── models.py
+</span></span><span class="line"><span class="cl">│   ├── tests.py
+</span></span><span class="line"><span class="cl">│   └── views.py						# request handlers
+</span></span></code></pre></div><h3 id="register-app">Register APP</h3>
+<ul>
+<li>you can use both methods.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># settings.py</span>
+</span></span><span class="line"><span class="cl"><span class="nv">INSTALLED_APPS</span> <span class="o">=</span> <span class="o">[</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># ...</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;playground&#39;</span>,
+</span></span><span class="line"><span class="cl">  <span class="c1"># ...</span>
+</span></span><span class="line"><span class="cl"><span class="o">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># settings.py</span>
+</span></span><span class="line"><span class="cl"><span class="nv">INSTALLED_APPS</span> <span class="o">=</span> <span class="o">[</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># ...</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;playground.apps.PlaygroundConfig&#39;</span>,
+</span></span><span class="line"><span class="cl">  <span class="c1"># ...</span>
+</span></span><span class="line"><span class="cl"><span class="o">]</span>
+</span></span></code></pre></div><h3 id="views">Views</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python3" data-lang="python3"><span class="line"><span class="cl"><span class="c1"># playground/views.py</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">django.http</span> <span class="kn">import</span> <span class="n">HttpResponse</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">say_hello</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="s1">&#39;Hello World&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><h3 id="maps-urls-to-views">Maps URLs to Views</h3>
+<ul>
+<li>setup urls.py in the app</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># playground/urls.py</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="nn">path</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">views</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># URLConf: need to be this variable name 💡</span>
+</span></span><span class="line"><span class="cl"><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">  <span class="n">path</span><span class="p">(</span><span class="s1">&#39;playground/hello&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">say_hello</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">]</span>
+</span></span></code></pre></div><ul>
+<li>include the app&rsquo;s url in the project level</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># storefront/urls.py</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span><span class="p">,</span> <span class="n">include</span> <span class="c1"># add include</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">  <span class="n">path</span><span class="p">(</span><span class="s1">&#39;admin/&#39;</span><span class="p">,</span> <span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">urls</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">  <span class="n">path</span><span class="p">(</span><span class="s1">&#39;playground/&#39;</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="s1">&#39;playground.urls&#39;</span><span class="p">))</span> <span class="c1"># add this</span>
+</span></span><span class="line"><span class="cl"><span class="p">]</span>
+</span></span></code></pre></div><h3 id="use-templates">Use Templates</h3>
+<ul>
+<li>create templates folder under playground and create a new file hello.html.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!-- playground/templates/hello.html --&gt;</span>
+</span></span><span class="line"><span class="cl">{% if name %}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello {{ name }}<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">{% else %}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello World<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">{% endif %}
+</span></span></code></pre></div><ul>
+<li>refine the views.py (request handler)</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># playground/views.py</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#from django.http import HttpResponse</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">say_hello</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;hello.html&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Jamie&#39;</span><span class="p">})</span>
+</span></span></code></pre></div><h3 id="debug-tools">Debug Tools</h3>
+<ul>
+<li>VSCode: Create a <code>launch.json</code> file -&gt; select <code>django</code></li>
+<li>Django Debug Toolbar: follow the <a href="https://django-debug-toolbar.readthedocs.io/en/latest/installation.html">instructions</a> 💎</li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+    <item>
       <title>HTML Cheat Sheet</title>
       <link>https://blog.cmwang.net/zh/posts/2020/10/html-cheat-sheet/</link>
       <pubDate>Tue, 20 Oct 2020 17:14:50 +0800</pubDate>
