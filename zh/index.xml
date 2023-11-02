@@ -2248,6 +2248,193 @@ Navigation Controller 需要從第一個畫面長出來，而不是第二頁</p>
     </item>
     
     <item>
+      <title>Javascript Notes</title>
+      <link>https://blog.cmwang.net/zh/posts/2020/11/javascript-note-1/</link>
+      <pubDate>Mon, 02 Nov 2020 15:44:45 +0800</pubDate>
+      
+      <guid>https://blog.cmwang.net/zh/posts/2020/11/javascript-note-1/</guid>
+      <description>Javascript Notes</description>
+      <content:encoded><![CDATA[<h2 id="variables">Variables</h2>
+<ul>
+<li><code>let</code> name; // undefined</li>
+<li><code>let</code> name = &lsquo;Jamie&rsquo;;</li>
+<li>盡量一行一個變數宣告，這是 best practice</li>
+</ul>
+<h2 id="constant">Constant</h2>
+<ul>
+<li><code>const</code> interestRate = 0.2;</li>
+<li>如果不會改變，盡量用 const 而不是 let</li>
+</ul>
+<h2 id="primitivesvalue-types">Primitives/Value types</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">name</span> <span class="o">=</span> <span class="s2">&#34;jamie&#34;</span><span class="p">;</span> <span class="c1">// string
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">let</span> <span class="nx">age</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span> <span class="c1">// number
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">let</span> <span class="nx">isApproved</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span> <span class="c1">// boolean
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">let</span> <span class="nx">firstName</span> <span class="o">=</span> <span class="kc">undefined</span><span class="p">;</span> <span class="c1">// undefined
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">let</span> <span class="nx">lastName</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span> <span class="c1">// clear a variable
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="k">typeof</span> <span class="nx">age</span><span class="p">;</span> <span class="c1">// &#34;number&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">typeof</span> <span class="nx">firstName</span><span class="p">;</span> <span class="c1">// &#34;undefined&#34;. undefined 既是 type 也是 value
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">typeof</span> <span class="nx">lastName</span><span class="p">;</span> <span class="c1">// &#34;object&#34;
+</span></span></span></code></pre></div><h2 id="reference-types">Reference types</h2>
+<ul>
+<li>object</li>
+<li>Array</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// --- object
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">let</span> <span class="nx">person</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// object
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;jamei&#34;</span><span class="p">,</span> <span class="c1">// property
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">age</span><span class="o">:</span> <span class="mi">30</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">person</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="s2">&#34;john&#34;</span><span class="p">;</span> <span class="c1">// dot notation
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">person</span><span class="p">[</span><span class="s2">&#34;age&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span> <span class="c1">// bracket notation
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">selection</span> <span class="o">=</span> <span class="s2">&#34;name&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">person</span><span class="p">[</span><span class="nx">selection</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&#34;Jenny&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//--- array is also a &#39;object&#39; type 💡
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">let</span> <span class="nx">selectedColors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;red&#34;</span><span class="p">,</span> <span class="s2">&#34;blue&#34;</span><span class="p">];</span> <span class="c1">// array
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">selectedColors</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&#34;green&#34;</span><span class="p">;</span> <span class="c1">// length is dynamic
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">selectedColors</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">selectedColors</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+</span></span></code></pre></div><h2 id="functions">Functions</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// 1. performing a task
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">function</span> <span class="nx">greet</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">lastName</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// name is the parameter
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;hello world &#34;</span> <span class="o">+</span> <span class="nx">name</span> <span class="o">+</span> <span class="s2">&#34; &#34;</span> <span class="o">+</span> <span class="nx">lastName</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">greet</span><span class="p">(</span><span class="s2">&#34;jamie&#34;</span><span class="p">);</span> <span class="c1">// jamie is the argument, actual value is applied
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 2. calculating a value
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">function</span> <span class="nx">square</span><span class="p">(</span><span class="nx">number</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">number</span> <span class="o">*</span> <span class="nx">number</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">number</span> <span class="o">=</span> <span class="nx">square</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</span></span></code></pre></div><h2 id="operators">Operators</h2>
+<ul>
+<li>arithmetic</li>
+<li>assignment</li>
+<li>comparison</li>
+<li>equality (<code>strict</code> &amp; <code>lose</code> equality)</li>
+<li>ternary operator (<code>? a : b</code>)</li>
+<li>logical operator (<code>&amp;&amp;</code>, <code>||</code>, <code>!</code>)
+<ul>
+<li>以下在 logical operator，會自動轉為 Falsy (false)
+<ul>
+<li>undefined</li>
+<li>null</li>
+<li>0</li>
+<li>false</li>
+<li>''</li>
+<li>NaN</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>bit operator(<code>|</code>, <code>&amp;</code>)</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// arithmetic operator
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span> <span class="o">%</span> <span class="mi">2</span><span class="p">);</span> <span class="c1">// remainder
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span> <span class="o">**</span> <span class="nx">y</span><span class="p">);</span> <span class="c1">// exp
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="o">++</span><span class="nx">x</span><span class="p">);</span> <span class="c1">// increment (++)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">y</span><span class="o">--</span><span class="p">);</span> <span class="c1">// decrement (--)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// assignment operator
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">x</span><span class="o">++</span><span class="p">;</span> <span class="c1">// x = x + 1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">x</span> <span class="o">+=</span> <span class="mi">5</span><span class="p">;</span> <span class="c1">// x = x + 5
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">x</span> <span class="o">*=</span> <span class="mi">3</span><span class="p">;</span> <span class="c1">// x = x * 3
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// comparison operator
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">);</span> <span class="c1">// true
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// equality
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span> <span class="o">===</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span> <span class="o">!==</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// strict equality (same type + value)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">1</span> <span class="o">===</span> <span class="mi">1</span><span class="p">);</span> <span class="c1">// true
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;1&#34;</span> <span class="o">===</span> <span class="mi">1</span><span class="p">);</span> <span class="c1">// false
+</span></span></span><span class="line"><span class="cl"><span class="c1">// lose equality (don&#39;t care type, automatically convert type)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">1</span> <span class="o">==</span> <span class="s2">&#34;1&#34;</span><span class="p">);</span> <span class="c1">// true
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="kc">true</span> <span class="o">==</span> <span class="mi">1</span><span class="p">);</span> <span class="c1">// true
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// ternary operator
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">let</span> <span class="nx">poins</span> <span class="o">=</span> <span class="mi">110</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">type</span> <span class="o">=</span> <span class="nx">points</span> <span class="o">&gt;</span> <span class="mi">100</span> <span class="o">?</span> <span class="s2">&#34;gold&#34;</span> <span class="o">:</span> <span class="s2">&#34;silver&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// logical
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="kc">true</span> <span class="o">&amp;&amp;</span> <span class="kc">true</span><span class="p">);</span> <span class="c1">// logical AND (&amp;&amp;)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">let</span> <span class="nx">highIncome</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">goodCreditScore</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">eligibleForLoan</span> <span class="o">=</span> <span class="nx">highIncome</span> <span class="o">&amp;&amp;</span> <span class="nx">goodCreditScore</span><span class="p">;</span> <span class="c1">// true
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">let</span> <span class="nx">eligibleForLoan</span> <span class="o">=</span> <span class="nx">highIncome</span> <span class="o">||</span> <span class="nx">goodCreditScore</span><span class="p">;</span> <span class="c1">// logical OR (||)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">let</span> <span class="nx">applicationRefused</span> <span class="o">=</span> <span class="o">!</span><span class="nx">eligibleForLoan</span><span class="p">;</span> <span class="c1">// Not (!)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// automatically convert operand -&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kc">false</span> <span class="o">||</span> <span class="s2">&#34;jamie&#34;</span><span class="p">;</span> <span class="c1">// &#39;jamie&#39;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kc">false</span> <span class="o">||</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">// 1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 以下在 logical operator，會自動轉為 Falsy (false)
+</span></span></span><span class="line"><span class="cl"><span class="c1">// undefined
+</span></span></span><span class="line"><span class="cl"><span class="c1">// null
+</span></span></span><span class="line"><span class="cl"><span class="c1">// 0
+</span></span></span><span class="line"><span class="cl"><span class="c1">// false
+</span></span></span><span class="line"><span class="cl"><span class="c1">// &#39;&#39;
+</span></span></span><span class="line"><span class="cl"><span class="c1">// NaN
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// short-circult
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">let</span> <span class="nx">userColor</span> <span class="o">=</span> <span class="s2">&#34;red&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">defaultColor</span> <span class="o">=</span> <span class="s2">&#34;blue&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">currentColor</span> <span class="o">=</span> <span class="nx">userColor</span> <span class="o">||</span> <span class="nx">defaultColor</span><span class="p">;</span> <span class="c1">// can provide default value if user not select
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// bit operator application
+</span></span></span><span class="line"><span class="cl"><span class="c1">// Read, Write, Execute
+</span></span></span><span class="line"><span class="cl"><span class="c1">// 00000100
+</span></span></span><span class="line"><span class="cl"><span class="c1">// 00000010
+</span></span></span><span class="line"><span class="cl"><span class="c1">// 00000001
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">readPermission</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">writePermission</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">executePremission</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">myPermission</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">myPermission</span> <span class="o">=</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">myPermission</span> <span class="o">|</span> <span class="nx">readPermission</span> <span class="o">|</span> <span class="nx">writePermission</span> <span class="o">|</span> <span class="nx">executePermission</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">message</span> <span class="o">=</span> <span class="nx">myPermission</span> <span class="o">&amp;</span> <span class="nx">readPermission</span> <span class="o">?</span> <span class="s2">&#34;yes&#34;</span> <span class="o">:</span> <span class="s2">&#34;no&#34;</span><span class="p">;</span> <span class="c1">// 可以用來判斷有無權限
+</span></span></span></code></pre></div><h2 id="conditional-statements">Conditional statements</h2>
+<ul>
+<li>if else</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nx">condition</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// statement
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">anotherCondition</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// statement
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// statement
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></code></pre></div><ul>
+<li>switch case</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// switch case (can be string, number or boolean)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">let</span> <span class="nx">role</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">switch</span> <span class="p">(</span><span class="nx">role</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">case</span> <span class="s2">&#34;guest&#34;</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Guest User&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">break</span><span class="p">;</span> <span class="c1">// need
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">case</span> <span class="s2">&#34;moderator&#34;</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Moderator User&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">default</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Unknow Role&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="flow-control">Flow control</h2>
+]]></content:encoded>
+    </item>
+    
+    <item>
       <title>Django - Data Modelling</title>
       <link>https://blog.cmwang.net/zh/posts/2020/10/django-data-model/</link>
       <pubDate>Sun, 25 Oct 2020 02:47:41 +0100</pubDate>
