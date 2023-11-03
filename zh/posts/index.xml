@@ -25,6 +25,10 @@
 <li>CSS Peak (link to style)</li>
 <li>Prettier (format on save)</li>
 <li>Highlight Matching Tag</li>
+<li>Image preview</li>
+<li>Color highlight</li>
+<li>Auto rename tag</li>
+<li>Live server</li>
 </ul>
 <h2 id="general">General</h2>
 <ul>
