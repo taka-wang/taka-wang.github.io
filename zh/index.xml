@@ -29,6 +29,11 @@
 <li>Color highlight</li>
 <li>Auto rename tag</li>
 <li>Live server</li>
+<li>ESLint</li>
+</ul>
+<h2 id="vue">Vue</h2>
+<ul>
+<li>Volar (Vue Language Features)</li>
 </ul>
 <h2 id="general">General</h2>
 <ul>
