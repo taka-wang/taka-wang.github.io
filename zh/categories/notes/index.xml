@@ -13,31 +13,50 @@
     <language>zh</language>
     <lastBuildDate>Sun, 29 Oct 2023 16:09:33 +0800</lastBuildDate><atom:link href="https://blog.cmwang.net/zh/categories/notes/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>VSCode Extension</title>
-      <link>https://blog.cmwang.net/zh/posts/2023/10/vscode-extension/</link>
+      <title>Extension &amp; More</title>
+      <link>https://blog.cmwang.net/zh/posts/2023/10/extension-and-more/</link>
       <pubDate>Sun, 29 Oct 2023 16:09:33 +0800</pubDate>
       
-      <guid>https://blog.cmwang.net/zh/posts/2023/10/vscode-extension/</guid>
-      <description>Common VSCode Extension</description>
-      <content:encoded><![CDATA[<h2 id="web">Web</h2>
+      <guid>https://blog.cmwang.net/zh/posts/2023/10/extension-and-more/</guid>
+      <description>Common VSCode Extension and More&amp;hellip;</description>
+      <content:encoded><![CDATA[<h2 id="vscode-extension">VSCode Extension</h2>
+<h3 id="web">Web</h3>
 <ul>
-<li>HTML CSS Support (intelligence)</li>
-<li>CSS Peak (link to style)</li>
-<li>Prettier (format on save)</li>
-<li>Highlight Matching Tag</li>
-<li>Image preview</li>
-<li>Color highlight</li>
-<li>Auto rename tag</li>
-<li>Live server</li>
-<li>ESLint</li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=ecmel.vscode-html-css">HTML CSS Support</a> (intelligence)</li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=pranaygp.vscode-css-peek">CSS Peak</a> (link to style)</li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode">Prettier</a> (format on save)</li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag">Highlight Matching Tag</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-gutter-preview">Image preview</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight">Color highlight</a> (Highlight web colors in your editor)</li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag">Auto rename tag</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">Live server</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint">ESLint</a></li>
 </ul>
-<h2 id="vue">Vue</h2>
+<h3 id="vue">Vue</h3>
 <ul>
-<li>Volar (Vue Language Features)</li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=Vue.volar">Volar (Vue Language Features)</a></li>
 </ul>
-<h2 id="general">General</h2>
+<h3 id="php">PHP</h3>
 <ul>
-<li>TODO Highlight</li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client">PHP Intelephense</a></li>
+</ul>
+<h3 id="python">Python</h3>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=batisteo.vscode-django">Django</a></li>
+</ul>
+<h3 id="general">General</h3>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight">TODO Highlight</a></li>
+</ul>
+<h2 id="chrome-extension">Chrome Extension</h2>
+<ul>
+<li><a href="https://chromewebstore.google.com/detail/pesticide-for-chrome/bakpbgckdnepkmkeaiomhmfcnejndkbi?pli=1">Pesticide</a></li>
+<li><a href="https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd">Vue.js devtools</a></li>
+<li><a href="https://chromewebstore.google.com/detail/live-server-web-extension/fiegdmejfepffgpnejdinekhfieaogmj">Live Server Web Extension</a></li>
+</ul>
+<h2 id="cheat-sheet">Cheat Sheet</h2>
+<ul>
+<li><a href="https://adam-marsden.co.uk/css-cheat-sheet">CSS</a></li>
 </ul>
 ]]></content:encoded>
     </item>
