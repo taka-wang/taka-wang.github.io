@@ -11,7 +11,67 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 29 Oct 2023 16:09:33 +0800</lastBuildDate><atom:link href="https://blog.cmwang.net/zh/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Nov 2023 23:03:11 +0800</lastBuildDate><atom:link href="https://blog.cmwang.net/zh/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CSS Positioning</title>
+      <link>https://blog.cmwang.net/zh/posts/2023/11/css-position/</link>
+      <pubDate>Thu, 09 Nov 2023 23:03:11 +0800</pubDate>
+      
+      <guid>https://blog.cmwang.net/zh/posts/2023/11/css-position/</guid>
+      <description>CSS positioning</description>
+      <content:encoded><![CDATA[<h2 id="position">Position</h2>
+<p><img loading="lazy" src="position.png" alt="position image"  />
+</p>
+<h3 id="-static">⚙️ <code>static</code></h3>
+<ul>
+<li>元素在文檔流中正常定位，與其他元素一樣 <strong>(預設)</strong>。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">box</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">position</span><span class="p">:</span> <span class="kc">static</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">left</span><span class="p">:</span> <span class="mi">50</span><span class="kt">px</span><span class="p">;</span> <span class="c">/* ignore */</span>
+</span></span><span class="line"><span class="cl">  <span class="k">top</span><span class="p">:</span> <span class="mi">50</span><span class="kt">px</span><span class="p">;</span> <span class="c">/* ignore */</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="-relative">⚙️ <code>relative</code></h3>
+<ul>
+<li>相對於<strong>原始</strong>位置移動。</li>
+<li><strong>該元素周圍的其他元素仍然會保持原位繞過它，將其視為文件流的一部分，不受影響</strong>。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">box</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">left</span><span class="p">:</span> <span class="mi">50</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">right</span><span class="p">:</span> <span class="mi">50</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="-absolute">⚙️ <code>absolute</code></h3>
+<ul>
+<li>絕對定位是以<strong>最近的父元素</strong>為基準點，進行定位。</li>
+<li>如果沒有父元素，或者它的父元素沒有設定 <code>static</code> 以外的屬性 (通常用 <code>relative</code>)，<strong>它就會以<code>document</code>為基準點進行定位</strong> 🔥</li>
+<li>頁面捲動會跟著動。</li>
+<li><strong>元素會被移出正常文件流，並不為元素預留空間。</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">container</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span> <span class="c">/* 不能為 static，不然會定位到文檔左上角 */</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">box</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">left</span><span class="p">:</span> <span class="mi">50</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">right</span><span class="p">:</span> <span class="mi">50</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="-fixed">⚙️ <code>fixed</code></h3>
+<ul>
+<li>相對於瀏覽器窗口 <code>(viewport)</code> 進行定位。</li>
+<li><strong>即使捲動，還是貼在瀏覽器上方定位。</strong></li>
+<li>這種定位方式常用於創建固定在頁面上方或側邊的導航欄、工具欄等元素，使其在用戶滾動頁面時保持可見。</li>
+<li><strong>元素會被移出正常文件流，並不為元素預留空間。</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">box</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">position</span><span class="p">:</span> <span class="kc">fixed</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">left</span><span class="p">:</span> <span class="mi">50</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">right</span><span class="p">:</span> <span class="mi">50</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>]]></content:encoded>
+    </item>
+    
     <item>
       <title>Extension &amp; More</title>
       <link>https://blog.cmwang.net/zh/posts/2023/10/extension-and-more/</link>
