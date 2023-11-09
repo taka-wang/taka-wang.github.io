@@ -11,7 +11,35 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 09 Nov 2023 23:03:11 +0800</lastBuildDate><atom:link href="https://blog.cmwang.net/zh/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Nov 2023 23:46:58 +0800</lastBuildDate><atom:link href="https://blog.cmwang.net/zh/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CSS Float</title>
+      <link>https://blog.cmwang.net/zh/posts/2023/11/css-float/</link>
+      <pubDate>Thu, 09 Nov 2023 23:46:58 +0800</pubDate>
+      
+      <guid>https://blog.cmwang.net/zh/posts/2023/11/css-float/</guid>
+      <description>CSS Float</description>
+      <content:encoded><![CDATA[<p><img loading="lazy" src="float.png" alt="float image"  />
+</p>
+<p>當你將一個元素的 float 屬性設定為 left 時，它會向左浮動，<strong>脫離正常的文件流</strong>，被移動到其父元素的左邊。其他文件流中的元素會圍繞著浮動元素的周圍進行佈局。浮動元素之後的內容會填充到浮動元素的右側。</p>
+<p>浮動元素的父元素（如果沒有被清除浮動）可能會發生高度塌陷（height collapse），即父元素的高度不會自動地包含浮動元素。這就是所謂的<code>父元素塌陷問題</code>。為了解決這個問題，可以使用 clear 屬性清除浮動。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="c">/* 解決 父元素的高度塌陷 */</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">clearfix</span><span class="p">::</span><span class="nd">after</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">content</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">clear</span><span class="p">:</span> <span class="kc">both</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>使用 float 之後，周圍的元素可能會因為浮動元素的存在而受到影響，例如 Footer，可能需要使用 <code>clear</code> 屬性來確保某個元素不會在浮動元素旁邊顯示。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">clear</span><span class="o">:</span> <span class="nt">left</span><span class="o">|</span><span class="nt">right</span><span class="o">|</span><span class="nt">both</span><span class="o">;</span> <span class="c">/* 用 both 就不用管 float 哪邊 */</span>
+</span></span></code></pre></div><hr>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a href="https://css-tricks.com/all-about-floats/">All About Floats</a></li>
+<li><a href="https://javascript.plainenglish.io/working-with-the-float-property-in-css-f73cf7525261">Working With the Float Property in CSS</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>CSS Positioning</title>
       <link>https://blog.cmwang.net/zh/posts/2023/11/css-position/</link>
