@@ -11,7 +11,18 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 09 Nov 2023 23:46:58 +0800</lastBuildDate><atom:link href="https://blog.cmwang.net/zh/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Nov 2023 17:51:53 +0800</lastBuildDate><atom:link href="https://blog.cmwang.net/zh/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CSS Flexbox</title>
+      <link>https://blog.cmwang.net/zh/posts/2023/11/css-flexbox/</link>
+      <pubDate>Fri, 10 Nov 2023 17:51:53 +0800</pubDate>
+      
+      <guid>https://blog.cmwang.net/zh/posts/2023/11/css-flexbox/</guid>
+      <description>CSS Flexbox</description>
+      <content:encoded><![CDATA[<iframe width="100%" height="600px" src="https://takawang.github.io/flexbox/"></iframe>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>CSS Float</title>
       <link>https://blog.cmwang.net/zh/posts/2023/11/css-float/</link>
