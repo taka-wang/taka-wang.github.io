@@ -19,10 +19,49 @@
       
       <guid>https://blog.cmwang.net/zh/posts/2023/11/css-flexbox/</guid>
       <description>CSS Flexbox</description>
-      <content:encoded><![CDATA[<iframe width="100%" height="600px" src="https://takawang.github.io/flexbox/"></iframe>
+      <content:encoded><![CDATA[<iframe width="100%" height="600px" src="https://takawang.github.io/css/flexbox/"></iframe>
+<h3 id="_尺寸優先順序_"><em>尺寸優先順序</em></h3>
+<p>舉例：若有設 flex-basis 跟 width，優先考慮 flex-basis</p>
+<table>
+<thead>
+<tr>
+<th>優先權 (由大到小)</th>
+<th>屬性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5</td>
+<td>Max-width</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Min-width</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Flex-basis</strong></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Width</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Content-width</td>
+</tr>
+</tbody>
+</table>
+<h3 id="flex-屬性縮寫"><code>flex</code> 屬性縮寫</h3>
+<p>flex: <strong>grow</strong> <strong>shrink</strong> <strong>basis</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">flex</span><span class="o">:</span> <span class="nt">1</span> <span class="nt">1</span> <span class="nt">0</span> <span class="c">/* is the same as flex: 1 */</span>
+</span></span><span class="line"><span class="cl"><span class="nt">flex</span><span class="o">:</span> <span class="nt">2</span> <span class="nt">2</span> <span class="nt">0</span> <span class="c">/* is the same as flex: 2 */</span>
+</span></span><span class="line"><span class="cl"><span class="nt">flex</span><span class="o">:</span> <span class="nt">3</span>     <span class="c">/* is the same as flex: 3 3 0 */</span>
+</span></span></code></pre></div><hr>
 <h2 id="further-reading">Further Reading</h2>
 <ul>
-<li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">A Complete Guide to Flexbox</a></li>
+<li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS-TRICKS: A Complete Guide to Flexbox</a></li>
+<li><a href="https://www.freecodecamp.org/news/do-you-even-flex-box-c16449cfca96/">FreeCodeCamp: A visual guide to CSS Flexbox</a></li>
 </ul>
 ]]></content:encoded>
     </item>
