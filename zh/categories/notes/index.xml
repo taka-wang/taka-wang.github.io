@@ -20,6 +20,10 @@
       <guid>https://blog.cmwang.net/zh/posts/2023/11/css-flexbox/</guid>
       <description>CSS Flexbox</description>
       <content:encoded><![CDATA[<iframe width="100%" height="600px" src="https://takawang.github.io/flexbox/"></iframe>
+<h2 id="further-reading">Further Reading</h2>
+<ul>
+<li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">A Complete Guide to Flexbox</a></li>
+</ul>
 ]]></content:encoded>
     </item>
     
