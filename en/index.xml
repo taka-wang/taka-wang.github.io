@@ -11,7 +11,69 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 19 Oct 2023 19:59:44 +0800</lastBuildDate><atom:link href="https://blog.cmwang.net/en/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Nov 2023 15:40:59 +0800</lastBuildDate><atom:link href="https://blog.cmwang.net/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Critical Rendering Path (CRP)</title>
+      <link>https://blog.cmwang.net/en/posts/2023/11/css-crp/</link>
+      <pubDate>Sun, 12 Nov 2023 15:40:59 +0800</pubDate>
+      
+      <guid>https://blog.cmwang.net/en/posts/2023/11/css-crp/</guid>
+      <description>CSS Critical Rendering Path</description>
+      <content:encoded><![CDATA[<h2 id="critical-rendering-path-crp">Critical Rendering Path (CRP)</h2>
+<blockquote>
+<p>Behind the scenes when a web page is loaded and rendered:</p>
+</blockquote>
+<ol>
+<li><strong>Load HTML:</strong>
+<ul>
+<li>The browser starts by fetching and loading the HTML file.</li>
+</ul>
+</li>
+<li><strong>Parse HTML:</strong>
+<ul>
+<li>The HTML file is parsed to create the Document Object Model (DOM). The DOM represents the structure of the document as a tree of objects, where each object corresponds to a part of the document (e.g., elements, attributes).</li>
+</ul>
+</li>
+<li><strong>Load CSS:</strong>
+<ul>
+<li>If there are linked or inline stylesheets in the HTML, the browser fetches and loads them.</li>
+</ul>
+</li>
+<li><strong>Parse CSS:</strong>
+<ul>
+<li>The loaded CSS files are parsed to create the CSS Object Model (CSSOM). This represents the styles and layout information defined in the CSS.</li>
+<li><strong>Resolve Conflicting CSS Declarations:</strong>
+<ul>
+<li>If there are conflicting CSS declarations (i.e., rules that apply to the same element and property), the browser uses a specific set of rules to determine which styles take precedence.</li>
+</ul>
+</li>
+<li><strong>Process Final CSS Values:</strong>
+<ul>
+<li>The browser processes the final computed values for each CSS property, taking into account inheritance, specificity, and other rules.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Render Tree:</strong>
+<ul>
+<li>The DOM and CSSOM are combined to create the Render Tree. The Render Tree represents the visual hierarchy of the elements on the page that will be rendered. It includes only the elements that will actually be displayed.</li>
+</ul>
+</li>
+<li><strong>The Visual Formatting Model:</strong>
+<ul>
+<li>The visual formatting model takes the render tree and calculates the layout of each element on the page. This includes determining the size and position of each element based on its CSS properties.</li>
+<li>The visual formatting model also takes into account factors like the box model (margins, borders, padding), positioning, and floating elements.</li>
+</ul>
+</li>
+<li><strong>Render the Page:</strong>
+<ul>
+<li>Finally, the browser renders the page by painting each pixel according to the specifications of the visual formatting model.</li>
+</ul>
+</li>
+</ol>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Faster Whisper With Progress Bar</title>
       <link>https://blog.cmwang.net/en/posts/2023/10/faster-whisper-in-python3/</link>
