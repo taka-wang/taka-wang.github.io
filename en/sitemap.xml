@@ -106,6 +106,32 @@
                 href="https://blog.cmwang.net/en/categories/tech/"
                 />
   </url><url>
+    <loc>https://blog.cmwang.net/en/tags/how-to/</loc>
+    <lastmod>2023-10-29T16:09:33+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://blog.cmwang.net/zh/tags/how-to/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.cmwang.net/en/tags/how-to/"
+                />
+  </url><url>
+    <loc>https://blog.cmwang.net/en/posts/2023/10/extension-and-more/</loc>
+    <lastmod>2023-10-29T16:09:33+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://blog.cmwang.net/zh/posts/2023/10/extension-and-more/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.cmwang.net/en/posts/2023/10/extension-and-more/"
+                />
+  </url><url>
     <loc>https://blog.cmwang.net/en/tags/ai/</loc>
     <lastmod>2023-10-19T19:59:44+08:00</lastmod>
     <xhtml:link
@@ -169,19 +195,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://blog.cmwang.net/en/tags/docker/"
-                />
-  </url><url>
-    <loc>https://blog.cmwang.net/en/tags/how-to/</loc>
-    <lastmod>2023-10-16T14:04:06+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://blog.cmwang.net/zh/tags/how-to/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://blog.cmwang.net/en/tags/how-to/"
                 />
   </url><url>
     <loc>https://blog.cmwang.net/en/posts/2023/10/install-nvidia-docker-for-ubuntu/</loc>

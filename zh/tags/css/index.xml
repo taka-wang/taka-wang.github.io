@@ -11,7 +11,620 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 13 Nov 2023 12:59:39 +0800</lastBuildDate><atom:link href="https://blog.cmwang.net/zh/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Nov 2023 13:50:46 +0800</lastBuildDate><atom:link href="https://blog.cmwang.net/zh/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CSS 透明度、可見性和顯示的區別</title>
+      <link>https://blog.cmwang.net/zh/posts/2023/11/css-opacity-visibility-display/</link>
+      <pubDate>Mon, 13 Nov 2023 13:50:46 +0800</pubDate>
+      
+      <guid>https://blog.cmwang.net/zh/posts/2023/11/css-opacity-visibility-display/</guid>
+      <description>Unveiling the Veil: Understanding CSS Opacity, Visibility, and Display</description>
+      <content:encoded><![CDATA[<blockquote>
+<p>key differences between opacity: 0, visibility: hidden, and display: none:</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Visibility</th>
+<th>Layout</th>
+<th>Interaction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>opacity: 0</code></td>
+<td>Invisible</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>visibility: hidden</code></td>
+<td>Invisible</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>display: none</code></td>
+<td>Hidden</td>
+<td>No</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  	
+	
+
+	
+		<script src="/shortcode-gallery/jquery-3.7.1.min.js"></script>
+	
+	
+	
+		<script src="/shortcode-gallery/lazy/jquery.lazy.min.js"></script>
+	
+
+	<script src="/shortcode-gallery/swipebox/js/jquery.swipebox.min.js"></script>
+	<link rel="stylesheet" href="/shortcode-gallery/swipebox/css/swipebox.min.css">
+
+	<script src="/shortcode-gallery/justified_gallery/jquery.justifiedGallery.min.js"></script>
+	<link rel="stylesheet" href="/shortcode-gallery/justified_gallery/justifiedGallery.min.css"/>
+
+
+<style>
+	
+
+	
+</style>
+
+
+
+
+
+<div id="gallery-57e5c498e48c692d40f88275ec05b1ba-0-wrapper" class="gallery-wrapper">
+<div id="gallery-57e5c498e48c692d40f88275ec05b1ba-0" class="justified-gallery">
+	
+		
+		
+				
+			
+			
+			
+				
+			
+
+			
+			
+				
+					
+				
+			
+
+
+			
+			
+			
+				
+				
+				
+				
+				
+				
+				
+				
+			
+
+			
+			
+
+
+			<div>
+				
+				
+					
+				
+				<a href="/zh/posts/2023/11/css-opacity-visibility-display/images/IMG_5596.JPG" 
+					class="galleryImg"
+					
+						
+
+						
+							data-description=" + <br/>mm f/ sec ISO "
+						
+
+						
+					
+					>
+					<img			
+						width="480" height="600"
+
+						
+							
+							style="filter: blur(25px);"
+							
+								src="data:image/jpeg;base64,/9j/2wCEAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4&#43;JS5ESUM8SDc9PjsBCgsLDg0OHBAQHDsoIig7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O//AABEIACAAGgMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5&#43;gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4&#43;Tl5ufo6ery8/T19vf4&#43;fr/2gAMAwEAAhEDEQA/APW85baOp7Uuxv7pqFJHa3EhllQAkHywvPPuKVbxEILPO23OQQvP1xSsQoKxLtb&#43;6aSnJexTblUMDjIyOtUxeHH3P1pMmSsShPKtNpkKtu6gkd/aoP3hkISdz/wOQ/0xVw8jB6elC5X7px9KEylNWFhEhiYNIWwCMEH&#43;ZFZ4tpcfc/UVobm/vGkoZMnc/9k="
+							
+							class="lazy"
+							data-src="/zh/posts/2023/11/css-opacity-visibility-display/images/IMG_5596_hu7f4b4d2c2edffd83f5f66cd9c9c8f952_101146_600x600_fit_q90_lanczos.JPG"
+						
+
+						
+							
+								
+							
+						
+					>
+				</a>
+			</div>
+		
+	
+		
+		
+				
+			
+			
+			
+				
+			
+
+			
+			
+				
+					
+				
+			
+
+
+			
+			
+			
+				
+				
+				
+				
+				
+				
+				
+				
+			
+
+			
+			
+
+
+			<div>
+				
+				
+					
+				
+				<a href="/zh/posts/2023/11/css-opacity-visibility-display/images/IMG_5597.JPG" 
+					class="galleryImg"
+					
+						
+
+						
+							data-description=" + <br/>mm f/ sec ISO "
+						
+
+						
+					
+					>
+					<img			
+						width="480" height="600"
+
+						
+							
+							style="filter: blur(25px);"
+							
+								src="data:image/jpeg;base64,/9j/2wCEAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4&#43;JS5ESUM8SDc9PjsBCgsLDg0OHBAQHDsoIig7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O//AABEIACAAGgMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5&#43;gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4&#43;Tl5ufo6ery8/T19vf4&#43;fr/2gAMAwEAAhEDEQA/APWWkROGIHGaTz0OMBmz0wpNYeqaFpXiC6SS/sI5pUj2qzOwwM5xwR6mr2m6PY6PZmz06D7NCSW2o7HkgDPJ9hQkjJR6miTgKSCN3QEYorPWFrEAieaYsf8Als5bHB6U/wC1S&#43;35UpJJ6E621VhYoXjmDONo2n&#43;lSvcQx/fkxkZ&#43;4x/kKn2gkE0m1OPkTI6EqOKE1YpSsQ3EJkWIq6kMcg/hUf2N/wC8tW8E43Nnb04xRSYm7n//2Q=="
+							
+							class="lazy"
+							data-src="/zh/posts/2023/11/css-opacity-visibility-display/images/IMG_5597_hu22ab2c40678546e28814141d2446a7d5_76103_600x600_fit_q90_lanczos.JPG"
+						
+
+						
+							
+								
+							
+						
+					>
+				</a>
+			</div>
+		
+	
+		
+		
+				
+			
+			
+			
+				
+			
+
+			
+			
+				
+					
+				
+			
+
+
+			
+			
+			
+				
+				
+				
+				
+				
+				
+				
+				
+			
+
+			
+			
+
+
+			<div>
+				
+				
+					
+				
+				<a href="/zh/posts/2023/11/css-opacity-visibility-display/images/IMG_5598.JPG" 
+					class="galleryImg"
+					
+						
+
+						
+							data-description=" + <br/>mm f/ sec ISO "
+						
+
+						
+					
+					>
+					<img			
+						width="480" height="600"
+
+						
+							
+							style="filter: blur(25px);"
+							
+								src="data:image/jpeg;base64,/9j/2wCEAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4&#43;JS5ESUM8SDc9PjsBCgsLDg0OHBAQHDsoIig7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O//AABEIACAAGgMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5&#43;gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4&#43;Tl5ufo6ery8/T19vf4&#43;fr/2gAMAwEAAhEDEQA/APW85baOp7Uuxv7pqGORmthI0kqckHywvr70i3SD/ltcEFe4X86SS7kKCsT7W/umkplvN5hcrLO4AJIcLgfkM1ALw4&#43;5&#43;tDVhSilsTKnlWm0yFTnqCR39qiGc5&#43;0tn/ro9WTyNp6elJsX0H5CkmNTVhbdQ0TnzWdgCMbzxx6GqAtpcfc/UVfA25xxnriihkydz//2Q=="
+							
+							class="lazy"
+							data-src="/zh/posts/2023/11/css-opacity-visibility-display/images/IMG_5598_hu527bec6fd37ae742d2fcf60d9695602a_110500_600x600_fit_q90_lanczos.JPG"
+						
+
+						
+							
+								
+							
+						
+					>
+				</a>
+			</div>
+		
+	
+		
+		
+				
+			
+			
+			
+				
+			
+
+			
+			
+				
+					
+				
+			
+
+
+			
+			
+			
+				
+				
+				
+				
+				
+				
+				
+				
+			
+
+			
+			
+
+
+			<div>
+				
+				
+					
+				
+				<a href="/zh/posts/2023/11/css-opacity-visibility-display/images/IMG_5599.JPG" 
+					class="galleryImg"
+					
+						
+
+						
+							data-description=" + <br/>mm f/ sec ISO "
+						
+
+						
+					
+					>
+					<img			
+						width="480" height="600"
+
+						
+							
+							style="filter: blur(25px);"
+							
+								src="data:image/jpeg;base64,/9j/2wCEAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4&#43;JS5ESUM8SDc9PjsBCgsLDg0OHBAQHDsoIig7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O//AABEIACAAGgMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5&#43;gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4&#43;Tl5ufo6ery8/T19vf4&#43;fr/2gAMAwEAAhEDEQA/APWWkRDhmAOM037TFkAEknoAM1h6h4d0XXNQFzf6ck0xj2lzIw4HQcEeprHutO8D&#43;Fry1a7hSzuwPMiZPObB/vDGR1z1pJIyUb6ncE4Ckgjd0BGKK42Hxz4Zts&#43;XrU05zz50crbePdfeul&#43;1S&#43;35USST0J1tqrCxQvHMGcbRtP8ASpJZ4kUhpthK5BCMfb0qxtBIJpNqcfImR0O0cU01YpSKEWnzxRqHvTch23KWGMdc/wA6l&#43;xv/eWreCcbmzt6cYopSd3clJJWR//Z"
+							
+							class="lazy"
+							data-src="/zh/posts/2023/11/css-opacity-visibility-display/images/IMG_5599_hu284c77e05f0ad30b2052bcd08d739c2c_92186_600x600_fit_q90_lanczos.JPG"
+						
+
+						
+							
+								
+							
+						
+					>
+				</a>
+			</div>
+		
+	
+		
+		
+				
+			
+			
+			
+				
+			
+
+			
+			
+				
+					
+				
+			
+
+
+			
+			
+			
+				
+				
+				
+				
+				
+				
+				
+				
+			
+
+			
+			
+
+
+			<div>
+				
+				
+					
+				
+				<a href="/zh/posts/2023/11/css-opacity-visibility-display/images/IMG_5600.JPG" 
+					class="galleryImg"
+					
+						
+
+						
+							data-description=" + <br/>mm f/ sec ISO "
+						
+
+						
+					
+					>
+					<img			
+						width="480" height="600"
+
+						
+							
+							style="filter: blur(25px);"
+							
+								src="data:image/jpeg;base64,/9j/2wCEAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4&#43;JS5ESUM8SDc9PjsBCgsLDg0OHBAQHDsoIig7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O//AABEIACAAGgMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5&#43;gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4&#43;Tl5ufo6ery8/T19vf4&#43;fr/2gAMAwEAAhEDEQA/APW6KjgeV41cRCTrnkD&#43;YqfL7QRarnJyCwpcpmoNjKKnZVEZOxQcZ6VnC9OPufrSJasSiFfsvlyRRy89C2DUawxJkjT4jnOQ0gP86s0UXK5xIRGFci3hgYgj5SMn8qoi2mx9z9RV&#43;iglu5//2Q=="
+							
+							class="lazy"
+							data-src="/zh/posts/2023/11/css-opacity-visibility-display/images/IMG_5600_hudec4ab41b4aa45b76de306d12467581b_76953_600x600_fit_q90_lanczos.JPG"
+						
+
+						
+							
+								
+							
+						
+					>
+				</a>
+			</div>
+		
+	
+		
+		
+				
+			
+			
+			
+				
+			
+
+			
+			
+				
+					
+				
+			
+
+
+			
+			
+			
+				
+				
+				
+				
+				
+				
+				
+				
+			
+
+			
+			
+
+
+			<div>
+				
+				
+					
+				
+				<a href="/zh/posts/2023/11/css-opacity-visibility-display/images/IMG_5601.JPG" 
+					class="galleryImg"
+					
+						
+
+						
+							data-description=" + <br/>mm f/ sec ISO "
+						
+
+						
+					
+					>
+					<img			
+						width="480" height="600"
+
+						
+							
+							style="filter: blur(25px);"
+							
+								src="data:image/jpeg;base64,/9j/2wCEAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4&#43;JS5ESUM8SDc9PjsBCgsLDg0OHBAQHDsoIig7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O//AABEIACAAGgMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5&#43;gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4&#43;Tl5ufo6ery8/T19vf4&#43;fr/2gAMAwEAAhEDEQA/APWWkRPvHGaaLiMkAZYn0GaytS0nTPEEsI1OyScQK5Tc7DbnGehHoKr6b4a0DQpxc2dqttcmIoXjaQ8EjOOvcUJaGKR0JOApII3dARiiqC27WMaOtzLOJDwZZC&#43;OD0p32qX2/KlJJPQWttVYdBE8c4LqMbT1P0qWR4l/jt0IGV3lePfn3qUqG6&#43;mKabeFiC0YJHTJNNNJDTKvk37oi3TwNzlPLXA6HNO&#43;xv/AHlq3gYUAABOgFFKTu7iskrI/9k="
+							
+							class="lazy"
+							data-src="/zh/posts/2023/11/css-opacity-visibility-display/images/IMG_5601_huae7c82c443566df6f80c0c29e6cd7c27_89040_600x600_fit_q90_lanczos.JPG"
+						
+
+						
+							
+								
+							
+						
+					>
+				</a>
+			</div>
+		
+	
+</div>
+</div>
+
+<script>
+	if (!jQuery) {
+		alert("jquery is not loaded");
+	}
+
+	$( document ).ready(() => {
+		const gallery = $("#gallery-57e5c498e48c692d40f88275ec05b1ba-0");
+		
+
+		
+		let swipeboxInstance = null;
+
+		
+		
+		gallery.on('jg.complete', () => {
+			
+				
+				
+				$(() => {
+					$('.lazy').Lazy({
+						visibleOnly: true,
+						afterLoad: element => element.css({filter: "none", transition: "filter 1.0s ease-in-out"})
+					});
+				});
+			
+
+			swipeboxInstance = $('.galleryImg').swipebox(
+				jQuery.extend({},
+					{  }
+				)
+			);
+		});
+
+		
+		gallery.justifiedGallery({
+			rowHeight : "300",
+			margins : "5",
+			border : 0,
+			randomize :  false ,
+			waitThumbnailsLoad : false,
+			lastRow : "justify",
+			captions : false,
+			
+			
+		});
+
+		
+		
+	});
+</script>
+
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>CSS Units</title>
       <link>https://blog.cmwang.net/zh/posts/2023/11/css-units/</link>
@@ -126,7 +739,10 @@
 </span></span><span class="line"><span class="cl">  <span class="k">color</span><span class="p">:</span> <span class="o">...</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="k">padding</span><span class="p">:</span> <span class="o">...</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><h2 id="element-center">Element Center</h2>
+</span></span></code></pre></div><h2 id="element-center-簡易版">Element Center (簡易版)</h2>
+<ul>
+<li>The easiest way to center anything with the transform, top and left properties.</li>
+</ul>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">text-box</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span> <span class="c">/* relative to parent container */</span>
 </span></span><span class="line"><span class="cl">  <span class="k">top</span><span class="p">:</span> <span class="mi">50</span><span class="kt">%</span><span class="p">;</span>
@@ -337,7 +953,14 @@
 </span></span><span class="line"><span class="cl">  <span class="k">left</span><span class="p">:</span> <span class="mi">50</span><span class="kt">px</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="k">right</span><span class="p">:</span> <span class="mi">50</span><span class="kt">px</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div>]]></content:encoded>
+</span></span></code></pre></div><hr>
+<blockquote>
+<p>簡而言之</p>
+</blockquote>
+<p><img loading="lazy" src="position2.png" alt="Position 2"  />
+
+<em>Image source: <a href="https://codingbff.medium.com/difference-between-css-position-absolute-versus-relative-35f064384c6">Difference between css position absolute versus relative</a></em></p>
+]]></content:encoded>
     </item>
     
   </channel>
