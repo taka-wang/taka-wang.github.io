@@ -11,7 +11,90 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 13 Nov 2023 12:27:06 +0800</lastBuildDate><atom:link href="https://blog.cmwang.net/zh/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Nov 2023 12:59:39 +0800</lastBuildDate><atom:link href="https://blog.cmwang.net/zh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CSS Units</title>
+      <link>https://blog.cmwang.net/zh/posts/2023/11/css-units/</link>
+      <pubDate>Mon, 13 Nov 2023 12:59:39 +0800</pubDate>
+      
+      <guid>https://blog.cmwang.net/zh/posts/2023/11/css-units/</guid>
+      <description>CSS Units</description>
+      <content:encoded><![CDATA[<h2 id="-百分比"><code>%</code> 百分比</h2>
+<ul>
+<li>如果用於指定<strong>字體</strong>大小，則相對於其<code>父元素</code>的字體大小進行測量。</li>
+<li>如果用於指定<strong>長度</strong>，則相對於其<code>父元素</code>的寬度進行測量。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="c">/* 父元素 */</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">parent</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">font-size</span><span class="p">:</span> <span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">width</span><span class="p">:</span> <span class="mi">300</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">/* 子元素 */</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">child</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">font-size</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span> <span class="c">/* 字體大小相對於父元素的字體大小, 16px */</span>
+</span></span><span class="line"><span class="cl">  <span class="k">width</span><span class="p">:</span> <span class="mi">50</span><span class="kt">%</span><span class="p">;</span> <span class="c">/* 寬度相對於父元素的寬度, 150px */</span>
+</span></span><span class="line"><span class="cl">  <span class="k">padding</span><span class="p">:</span> <span class="mi">1</span><span class="kt">em</span><span class="p">;</span> <span class="c">/* 內部填充相對於當前的字體大小 16px */</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="em-相對-em"><code>em</code> (相對 EM)</h2>
+<ul>
+<li>如果用於指定<strong>字體</strong>大小，則相對於其<code>父元素</code>的字體大小進行測量。</li>
+<li>如果用於指定<strong>長度</strong>，則相對於<code>當前</code>的字體大小進行測量。 🔥</li>
+</ul>
+<blockquote>
+<p>用 EM 指定長度，<strong>需注意是用當前字體大小當基準</strong>。若當前沒指定，用繼承來的字體大小當基準。</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="c">/* 父元素 */</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">parent</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">font-size</span><span class="p">:</span> <span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">width</span><span class="p">:</span> <span class="mi">300</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">/* 子元素 */</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">child</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">font-size</span><span class="p">:</span> <span class="mi">2</span><span class="kt">em</span><span class="p">;</span> <span class="c">/* 字體大小相對於父元素的字體大小 32px */</span>
+</span></span><span class="line"><span class="cl">  <span class="k">width</span><span class="p">:</span> <span class="mi">3</span><span class="kt">em</span><span class="p">;</span> <span class="c">/* 寬度相對於相對於[當前]的字體 32px x 3 = 96 px 🔥 */</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="rem-root-em"><code>rem</code> (Root EM)</h2>
+<ul>
+<li>REM (Root EM) 是相對於文檔的 Root element (<code>html</code> 元素) 的字體大小進行測量。</li>
+<li>REM 提供了一種統一的基準，使得在整個文檔中可以輕鬆地維護一致的尺寸比例。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="c">/* 設定根元素字體大小 */</span>
+</span></span><span class="line"><span class="cl"><span class="nt">html</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">font-size</span><span class="p">:</span> <span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">/* 父元素 */</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">parent</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">font-size</span><span class="p">:</span> <span class="mi">1</span><span class="kt">rem</span><span class="p">;</span> <span class="c">/* 字體大小相對於根元素 16px */</span>
+</span></span><span class="line"><span class="cl">  <span class="k">width</span><span class="p">:</span> <span class="mi">300</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">/* 子元素 */</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">child</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">font-size</span><span class="p">:</span> <span class="mi">2</span><span class="kt">rem</span><span class="p">;</span> <span class="c">/* 字體大小相對於根元素 32px */</span>
+</span></span><span class="line"><span class="cl">  <span class="k">width</span><span class="p">:</span> <span class="mi">3</span><span class="kt">rem</span><span class="p">;</span> <span class="c">/* 寬度相對於根元素 48px */</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="vw-與-vh-viewport-width--height"><code>vw</code> 與 <code>vh</code> (Viewport Width &amp; Height)</h2>
+<ul>
+<li><code>vw</code> 表示相對於視窗寬度的百分比。</li>
+<li><code>vh</code> 表示相對於視窗高度的百分比。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="c">/* 父元素 */</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">parent</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">font-size</span><span class="p">:</span> <span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">width</span><span class="p">:</span> <span class="mi">50</span><span class="kt">vw</span><span class="p">;</span> <span class="c">/* 寬度相對於視窗寬度的50% */</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">/* 子元素 */</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">child</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">font-size</span><span class="p">:</span> <span class="mi">2</span><span class="kt">em</span><span class="p">;</span> <span class="c">/* 字體大小相對於父元素的字體大小 32px */</span>
+</span></span><span class="line"><span class="cl">  <span class="k">width</span><span class="p">:</span> <span class="mi">50</span><span class="kt">vh</span><span class="p">;</span> <span class="c">/* 寬度相對於視窗高度的50% */</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>]]></content:encoded>
+    </item>
+    
     <item>
       <title>CSS Reset &amp; Center</title>
       <link>https://blog.cmwang.net/zh/posts/2023/11/css-reset/</link>
