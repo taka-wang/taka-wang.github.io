@@ -20,7 +20,193 @@
       <guid>https://blog.cmwang.net/zh/posts/2023/11/css-grid/</guid>
       <description>CSS Grid 網格</description>
       <content:encoded><![CDATA[<iframe width="100%" height="600px" src="https://takawang.github.io/css/grid/"></iframe>
-]]></content:encoded>
+<h2 id="terminology">Terminology</h2>
+<ul>
+<li>網格項目 (grid item): 網格布局中的元素，可以是任何 HTML 元素。</li>
+<li>網格單元格 (grid cell): 網格中的一個矩形區域，由行和列組成。</li>
+<li>網格軌道 (grid track): 網格中一行或一列的區域。</li>
+</ul>
+<p><img loading="lazy" src="term.png" alt="CSS Grid terminology"  />
+</p>
+<h2 id="grid-sizing">Grid Sizing</h2>
+<blockquote>
+<p>fr 是指 &ldquo;fractional unit&rdquo;，它是一種相對單位，用於指定網格容器（grid container）中的列（columns）或行（rows）的大小</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="c">/* auto */</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">container</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">display</span><span class="p">:</span> <span class="k">grid</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-template-rows</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span> <span class="kc">auto</span><span class="p">;</span> <span class="c">/* 高的 auto 只會 fit content */</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-template-columns</span><span class="p">:</span> <span class="mi">200</span><span class="kt">px</span> <span class="kc">auto</span><span class="p">;</span> <span class="c">/* 寬的 auto 會填滿 100%寬 🔥 */</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">/* minmax */</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">container</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">display</span><span class="p">:</span> <span class="k">grid</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-template-rows</span><span class="p">:</span> <span class="mi">200</span><span class="kt">px</span> <span class="mi">400</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-template-columns</span><span class="p">:</span> <span class="mi">200</span><span class="kt">px</span> <span class="nf">minmax</span><span class="p">(</span><span class="mi">400</span><span class="kt">px</span><span class="p">,</span> <span class="mi">800</span><span class="kt">px</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">/* repeat */</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">container</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">display</span><span class="p">:</span> <span class="k">grid</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-template-columns</span><span class="p">:</span> <span class="nf">repeat</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="n">fr</span><span class="p">);</span> <span class="c">/* 8 columns, each 100px wide */</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-template-rows</span><span class="p">:</span> <span class="nf">repeat</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="n">fr</span><span class="p">);</span> <span class="c">/* 8 rows, each 100px tall */</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">/* grid auto rows 🔥 */</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">container</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">display</span><span class="p">:</span> <span class="k">grid</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-template-columns</span><span class="p">:</span> <span class="mi">200</span><span class="kt">px</span> <span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-template-rows</span><span class="p">:</span> <span class="mi">200</span><span class="kt">px</span> <span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-auto-rows</span><span class="p">:</span> <span class="mi">300</span><span class="kt">px</span><span class="p">;</span> <span class="c">/* 超出的格子，未來設為高度300px 🔥 */</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="position-grid-items">Position Grid Items</h2>
+<h3 id="1-使用-grid-column-和-grid-row-屬性">1. 使用 <code>grid-column</code> 和 <code>grid-row</code> 屬性</h3>
+<p>這種方式通過指定網格項目的起始和終止線的位置來定位它。例如：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">grid-item</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-column</span><span class="p">:</span> <span class="mi">2</span> <span class="o">/</span> <span class="mi">4</span><span class="p">;</span> <span class="c">/* 從第 2 col 到第 4 col */</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-row</span><span class="p">:</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">3</span><span class="p">;</span> <span class="c">/* 從第 1 row 到第 3 row */</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-row</span><span class="p">:</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">span</span> <span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-row</span><span class="p">:</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">-1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="c">/* ... 以下參考就好，不要用 ❌ */</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-column</span><span class="p">:</span> <span class="n">span</span> <span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-column-start</span><span class="p">:</span> <span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-column-end</span><span class="p">:</span> <span class="mi">-1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-area</span><span class="p">:</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">3</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">/</span> <span class="mi">4</span><span class="p">;</span> <span class="c">/* row-start, column-start, row-end, column-end  */</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="2-使用命名的網格線named-grid-lines">2. 使用命名的網格線（Named Grid Lines）</h3>
+<p>你可以在 <code>grid-template-columns</code> 和 <code>grid-template-rows</code> 屬性中使用名稱來定義網格線，然後在 <code>grid-column</code> 和 <code>grid-row</code> 屬性中使用這些名稱。例如：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">grid-container</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">display</span><span class="p">:</span> <span class="k">grid</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-template-columns</span><span class="p">:</span> <span class="p">[</span><span class="n">col1</span><span class="p">]</span> <span class="mi">1</span><span class="n">fr</span> <span class="p">[</span><span class="n">col2</span><span class="p">]</span> <span class="mi">1</span><span class="n">fr</span> <span class="p">[</span><span class="n">col3</span> <span class="n">test</span><span class="p">]</span> <span class="mi">1</span><span class="n">fr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-template-rows</span><span class="p">:</span> <span class="p">[</span><span class="n">row1</span><span class="p">]</span> <span class="mi">100</span><span class="kt">px</span> <span class="p">[</span><span class="n">row2</span><span class="p">]</span> <span class="mi">100</span><span class="kt">px</span> <span class="p">[</span><span class="n">row3</span><span class="p">]</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">grid-item</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-column</span><span class="p">:</span> <span class="n">col1</span> <span class="o">/</span> <span class="n">col3</span> <span class="o">|</span> <span class="n">test</span><span class="p">;</span> <span class="c">/* 從 col1 到 col3 的列 */</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-row</span><span class="p">:</span> <span class="n">row1</span> <span class="o">/</span> <span class="n">row3</span><span class="p">;</span> <span class="c">/* 從 row1 到 row3 的行 */</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="3-使用命名的網格區域named-grid-areas">3. 使用命名的網格區域（Named Grid Areas）：</h3>
+<p>你可以在網格容器中使用 <code>grid-template-areas</code> 屬性為不同的區域命名，然後在網格項目中使用 <code>grid-area</code> 屬性引用這些名稱。例如：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">grid-container</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">display</span><span class="p">:</span> <span class="k">grid</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-template-areas</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;header header .&#34;</span> <span class="c">/* 用點留白 🔥 */</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;main main sidebar&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;footer footer footer&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">grid-item</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-area</span><span class="p">:</span> <span class="n">main</span><span class="p">;</span> <span class="c">/* 使用 &#34;main&#34; 命名的區域 */</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="implicit-grids">Implicit Grids</h2>
+<p>在 CSS Grid 中，<code>grid-auto-rows|columns</code> 和 <code>grid-auto-flow</code> 是用於控制網格自動生成的兩個重要屬性。</p>
+<h3 id="1-grid-auto-rows-與grid-auto-columns">1. <code>grid-auto-rows</code> 與<code>grid-auto-columns</code></h3>
+<p><code>grid-auto-rows</code> 屬性用於指定網格容器中那些由<strong>自動生成</strong>的列的高度。當你的網格項目超出了你在 <code>grid-template-rows</code> 中明確定義的列數時，這些額外的列會由 <code>grid-auto-rows</code> 屬性來控制。例如：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">grid-container</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">display</span><span class="p">:</span> <span class="k">grid</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-template-rows</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span> <span class="c">/* 兩個明確定義的行 */</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-auto-rows</span><span class="p">:</span> <span class="mi">50</span><span class="kt">px</span><span class="p">;</span> <span class="c">/* 自動生成的行的高度 */</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>在這個例子中，如果你有超過兩個網格項目，額外的行高度將為 50px。</p>
+<h3 id="2-grid-auto-flow">2. <code>grid-auto-flow</code></h3>
+<p><code>grid-auto-flow</code> 屬性用於指定在添加新的網格項目時，它們應該如何放置到網格容器中。這個屬性有四個值：</p>
+<ul>
+<li><code>row</code>（預設值）：新的項目將按照行添加。</li>
+<li><code>column</code>：新的項目將按照列添加。</li>
+<li><code>dense</code>：網格容器將嘗試將項目填充到所有的空隙，而不僅僅是按照順序添加。</li>
+<li><code>dense column</code>：組合了 <code>dense</code> 和 <code>column</code>，新的項目將按照列添加，同時容器會嘗試填充所有的空隙。</li>
+</ul>
+<p>例如：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">grid-container</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">display</span><span class="p">:</span> <span class="k">grid</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-auto-flow</span><span class="p">:</span> <span class="kc">column</span><span class="p">;</span> <span class="c">/* 新的項目將按照直行添加 */</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="css-grid-中的大小選項">CSS Grid 中的大小選項</h2>
+<p>在 CSS Grid 中，<code>min-content</code>、<code>max-content</code>和<code>minmax()</code>函數被用來以一種靈活且具有響應性的方式來定義網格軌道（行或列）的大小。</p>
+<ol>
+<li>
+<p><strong><code>min-content</code></strong>：這個關鍵字將軌道的大小設置為其內容的<strong>最小內在</strong>大小。換句話說，它使軌道的大小盡可能小，同時仍然容納其內容。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">grid-template-columns</span><span class="o">:</span> <span class="nt">min-content</span> <span class="nt">1fr</span> <span class="nt">min-content</span><span class="o">;</span>
+</span></span></code></pre></div><p>在這個例子中，第一行和第三行將根據它們包含的最小內容寬度來設置大小，而第二行將占據剩餘的可用空間。</p>
+</li>
+<li>
+<p><strong><code>max-content</code></strong>：這個關鍵字將軌道的大小設置為其內容的<strong>最大內在</strong>大小。它使軌道的大小足以容納其內容，而不會溢出。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">grid-template-columns</span><span class="o">:</span> <span class="nt">max-content</span> <span class="nt">1fr</span> <span class="nt">max-content</span><span class="o">;</span>
+</span></span></code></pre></div><p>類似於<code>min-content</code>，這個例子將基於它們包含的最大內容寬度來設置第一列和第三列的大小，而第二行將占據剩餘的可用空間。</p>
+</li>
+<li>
+<p><strong><code>minmax(min, max)</code></strong>：這個函數允許你為軌道的大小指定一個範圍。它接受兩個參數，即<strong>最小大小</strong>和<strong>最大大小</strong>。瀏覽器將根據網格容器中的可用空間在這些值之間分配空間。</p>
+</li>
+</ol>
+<ul>
+<li>
+<p>minmax() 可以用以下任何值:</p>
+<ul>
+<li>長度</li>
+<li>%</li>
+<li>fr</li>
+<li>max-content</li>
+<li>min-content</li>
+<li>auto</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">grid-template-rows</span><span class="o">:</span> <span class="nt">minmax</span><span class="o">(</span><span class="nt">min-content</span><span class="o">,</span> <span class="nt">200px</span><span class="o">)</span> <span class="nt">1fr</span> <span class="nt">minmax</span><span class="o">(</span><span class="nt">100px</span><span class="o">,</span> <span class="nt">max-content</span><span class="o">);</span>
+</span></span></code></pre></div><p>在這個例子中，第一列的大小將基於最小內容寬度，但不會小於內容的內在大小。第二列占據剩餘的空間，而第三列的大小將基於最大內容寬度，但不會大於 200 像素。</p>
+<h2 id="grid-auto-fill-與-auto-fit">Grid <code>auto-fill</code> 與 <code>auto-fit</code></h2>
+<p>在 CSS Grid 中，<code>auto-fill</code>和<code>auto-fit</code>是與<code>grid-template-columns</code>和<code>grid-template-rows</code>屬性一起使用的兩個值。</p>
+<ol>
+<li>
+<p><code>Auto-fill</code></p>
+<ul>
+<li><code>auto-fill</code>關鍵字用於重複可用的網格軌道（列或行）盡可能多次，以填充可用空間。</li>
+<li>它創建盡可能多的軌道，而不會溢出容器。</li>
+</ul>
+<p>例子：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">container</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">display</span><span class="p">:</span> <span class="k">grid</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-template-columns</span><span class="p">:</span> <span class="nf">repeat</span><span class="p">(</span><span class="kc">auto</span><span class="o">-</span><span class="kc">fill</span><span class="p">,</span> <span class="nf">minmax</span><span class="p">(</span><span class="mi">100</span><span class="kt">px</span><span class="p">,</span> <span class="mi">1</span><span class="n">fr</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>在此示例中，<code>grid-template-columns</code>屬性設置為<code>repeat(auto-fill, minmax(100px, 1fr));</code>。它創建盡可能多的行，最小大小為<code>100px</code>，最大大小為<code>1fr</code>（可用空間的一部分）。</p>
+</li>
+<li>
+<p><code>Auto-fit</code></p>
+<ul>
+<li><code>auto-fit</code>關鍵字與<code>auto-fill</code>類似，但它還會折疊任何空的軌道。如果項目未填滿所有可用的軌道，則空的軌道將被折疊(寬度為 0)，<strong>網格僅占據必要的空間</strong>。</li>
+</ul>
+<p>例子 (RWD Trick 🔥🔥🔥)：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">container</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">display</span><span class="p">:</span> <span class="k">grid</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-template-columns</span><span class="p">:</span> <span class="nf">repeat</span><span class="p">(</span><span class="kc">auto</span><span class="o">-</span><span class="n">fit</span><span class="p">,</span> <span class="nf">minmax</span><span class="p">(</span><span class="mi">100</span><span class="kt">px</span><span class="p">,</span> <span class="mi">1</span><span class="n">fr</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>類似於前一個例子，這裡使用了<code>auto-fit</code>。它創建盡可能多的行，最小大小為<code>100px</code>，最大大小為<code>1fr</code>，但任何空的軌道都將折疊，網格容器僅占據必要的寬度。</p>
+<hr>
+</li>
+</ol>
+<p>以下是一些使用 <code>auto-fill</code> 和 <code>auto-fit</code> 的示例：</p>
+<ul>
+<li><strong>創建一個響應式網格，該網格將根據屏幕的寬度自動調整 col 數：</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">container</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">display</span><span class="p">:</span> <span class="k">grid</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-template-columns</span><span class="p">:</span> <span class="nf">repeat</span><span class="p">(</span><span class="kc">auto</span><span class="o">-</span><span class="kc">fill</span><span class="p">,</span> <span class="mi">1</span><span class="n">fr</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><ul>
+<li><strong>創建具有固定 col 數的網格，無論屏幕的寬度是多少：</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">container</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">display</span><span class="p">:</span> <span class="k">grid</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-template-columns</span><span class="p">:</span> <span class="nf">repeat</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="n">fr</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><ul>
+<li><strong>創建具有 col 的網格，這些 col 始終具有相同的寬度，無論網格項的數量是多少：</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">container</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">display</span><span class="p">:</span> <span class="k">grid</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-template-columns</span><span class="p">:</span> <span class="nf">repeat</span><span class="p">(</span><span class="kc">auto</span><span class="o">-</span><span class="n">fit</span><span class="p">,</span> <span class="mi">100</span><span class="kt">px</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>]]></content:encoded>
     </item>
     
     <item>
