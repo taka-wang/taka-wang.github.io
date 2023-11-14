@@ -11,7 +11,27 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 14 Nov 2023 11:22:04 +0800</lastBuildDate><atom:link href="https://blog.cmwang.net/zh/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 14 Nov 2023 15:43:01 +0800</lastBuildDate><atom:link href="https://blog.cmwang.net/zh/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI</title>
+      <link>https://blog.cmwang.net/zh/tags/ai/</link>
+      <pubDate>Tue, 14 Nov 2023 15:43:01 +0800</pubDate>
+      
+      <guid>https://blog.cmwang.net/zh/tags/ai/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>YouTube</title>
+      <link>https://blog.cmwang.net/zh/tags/youtube/</link>
+      <pubDate>Tue, 14 Nov 2023 15:43:01 +0800</pubDate>
+      
+      <guid>https://blog.cmwang.net/zh/tags/youtube/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
     <item>
       <title>CSS</title>
       <link>https://blog.cmwang.net/zh/tags/css/</link>
@@ -58,16 +78,6 @@
       <pubDate>Sat, 21 Oct 2023 22:53:02 +0800</pubDate>
       
       <guid>https://blog.cmwang.net/zh/tags/vue/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>AI</title>
-      <link>https://blog.cmwang.net/zh/tags/ai/</link>
-      <pubDate>Thu, 19 Oct 2023 19:59:44 +0800</pubDate>
-      
-      <guid>https://blog.cmwang.net/zh/tags/ai/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -178,26 +188,6 @@
       <pubDate>Tue, 10 Oct 2023 19:41:05 +0800</pubDate>
       
       <guid>https://blog.cmwang.net/zh/tags/chocolatey/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>YouTube</title>
-      <link>https://blog.cmwang.net/zh/tags/youtube/</link>
-      <pubDate>Tue, 10 Oct 2023 19:23:34 +0800</pubDate>
-      
-      <guid>https://blog.cmwang.net/zh/tags/youtube/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Think Different</title>
-      <link>https://blog.cmwang.net/zh/tags/think-different/</link>
-      <pubDate>Tue, 10 Oct 2023 17:12:22 +0800</pubDate>
-      
-      <guid>https://blog.cmwang.net/zh/tags/think-different/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
