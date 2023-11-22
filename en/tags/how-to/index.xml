@@ -20,7 +20,7 @@
       <guid>https://blog.cmwang.net/en/posts/2023/10/extension-and-more/</guid>
       <description>Common VSCode Extension and More&amp;hellip;</description>
       <content:encoded><![CDATA[<h2 id="vscode-extension">VSCode Extension</h2>
-<h3 id="web">Web</h3>
+<h3 id="frontend">Frontend</h3>
 <ul>
 <li><a href="https://marketplace.visualstudio.com/items?itemName=ecmel.vscode-html-css">HTML CSS Support</a> (intelligence)</li>
 <li><a href="https://marketplace.visualstudio.com/items?itemName=pranaygp.vscode-css-peek">CSS Peak</a> (link to style)</li>
@@ -31,17 +31,12 @@
 <li><a href="https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag">Auto rename tag</a></li>
 <li><a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">Live server</a></li>
 <li><a href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint">ESLint</a></li>
-</ul>
-<h3 id="vue">Vue</h3>
-<ul>
 <li><a href="https://marketplace.visualstudio.com/items?itemName=Vue.volar">Volar (Vue Language Features)</a></li>
+<li><a href="https://www.toptal.com/developers/keycode">Javascript Key Code</a></li>
 </ul>
-<h3 id="php">PHP</h3>
+<h2 id="backend">Backend</h2>
 <ul>
 <li><a href="https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client">PHP Intelephense</a></li>
-</ul>
-<h3 id="python">Python</h3>
-<ul>
 <li><a href="https://marketplace.visualstudio.com/items?itemName=batisteo.vscode-django">Django</a></li>
 </ul>
 <h3 id="general">General</h3>
