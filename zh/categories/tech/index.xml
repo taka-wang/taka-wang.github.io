@@ -172,6 +172,11 @@
 </span></span><span class="line"><span class="cl">    <span class="nx">count</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}),</span>
 </span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// Getters
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">getters</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">oddOrEven</span><span class="o">:</span> <span class="p">(</span><span class="nx">state</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">(</span><span class="nx">state</span><span class="p">.</span><span class="nx">count</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">===</span> <span class="mi">0</span> <span class="o">?</span> <span class="s2">&#34;even&#34;</span> <span class="o">:</span> <span class="s2">&#34;odd&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="c1">// Methods (Actions)
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">actions</span><span class="o">:</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">increaseCount</span><span class="p">()</span> <span class="p">{</span>
@@ -180,11 +185,6 @@
 </span></span><span class="line"><span class="cl">    <span class="nx">decreaseCount</span><span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">      <span class="k">this</span><span class="p">.</span><span class="nx">count</span><span class="o">--</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">},</span>
-</span></span><span class="line"><span class="cl">  <span class="p">},</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="c1">// Getters
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">getters</span><span class="o">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">oddOrEven</span><span class="o">:</span> <span class="p">(</span><span class="nx">state</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">(</span><span class="nx">state</span><span class="p">.</span><span class="nx">count</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">===</span> <span class="mi">0</span> <span class="o">?</span> <span class="s2">&#34;even&#34;</span> <span class="o">:</span> <span class="s2">&#34;odd&#34;</span><span class="p">),</span>
 </span></span><span class="line"><span class="cl">  <span class="p">},</span>
 </span></span><span class="line"><span class="cl"><span class="p">});</span>
 </span></span></code></pre></div></div>
