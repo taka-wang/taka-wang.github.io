@@ -141,9 +141,9 @@
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">return</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">count</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">doubleCount</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">oddOrEven</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">increaseCount</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">decreaseCount</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">oddOrEven</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">  <span class="p">};</span>
 </span></span><span class="line"><span class="cl"><span class="p">});</span>
 </span></span></code></pre></div></div>
