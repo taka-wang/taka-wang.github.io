@@ -11,13 +11,63 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 25 Nov 2023 22:16:14 +0800</lastBuildDate><atom:link href="https://blog.cmwang.net/zh/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 06 Dec 2023 16:04:59 +0800</lastBuildDate><atom:link href="https://blog.cmwang.net/zh/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI</title>
+      <link>https://blog.cmwang.net/zh/tags/ai/</link>
+      <pubDate>Wed, 06 Dec 2023 16:04:59 +0800</pubDate>
+      
+      <guid>https://blog.cmwang.net/zh/tags/ai/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>YouTube</title>
+      <link>https://blog.cmwang.net/zh/tags/youtube/</link>
+      <pubDate>Wed, 06 Dec 2023 16:04:59 +0800</pubDate>
+      
+      <guid>https://blog.cmwang.net/zh/tags/youtube/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Feeling</title>
+      <link>https://blog.cmwang.net/zh/tags/feeling/</link>
+      <pubDate>Tue, 05 Dec 2023 20:29:32 +0800</pubDate>
+      
+      <guid>https://blog.cmwang.net/zh/tags/feeling/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Meditation</title>
+      <link>https://blog.cmwang.net/zh/tags/meditation/</link>
+      <pubDate>Tue, 05 Dec 2023 20:29:32 +0800</pubDate>
+      
+      <guid>https://blog.cmwang.net/zh/tags/meditation/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
     <item>
       <title>Javascript</title>
       <link>https://blog.cmwang.net/zh/tags/javascript/</link>
-      <pubDate>Sat, 25 Nov 2023 22:16:14 +0800</pubDate>
+      <pubDate>Mon, 27 Nov 2023 14:27:20 +0800</pubDate>
       
       <guid>https://blog.cmwang.net/zh/tags/javascript/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Vue</title>
+      <link>https://blog.cmwang.net/zh/tags/vue/</link>
+      <pubDate>Mon, 27 Nov 2023 14:27:20 +0800</pubDate>
+      
+      <guid>https://blog.cmwang.net/zh/tags/vue/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -33,41 +83,11 @@
     </item>
     
     <item>
-      <title>Vue</title>
-      <link>https://blog.cmwang.net/zh/tags/vue/</link>
-      <pubDate>Sat, 25 Nov 2023 22:16:14 +0800</pubDate>
-      
-      <guid>https://blog.cmwang.net/zh/tags/vue/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
       <title>Architecture</title>
       <link>https://blog.cmwang.net/zh/tags/architecture/</link>
       <pubDate>Sun, 19 Nov 2023 22:01:42 +0800</pubDate>
       
       <guid>https://blog.cmwang.net/zh/tags/architecture/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>YouTube</title>
-      <link>https://blog.cmwang.net/zh/tags/youtube/</link>
-      <pubDate>Sun, 19 Nov 2023 22:01:42 +0800</pubDate>
-      
-      <guid>https://blog.cmwang.net/zh/tags/youtube/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>AI</title>
-      <link>https://blog.cmwang.net/zh/tags/ai/</link>
-      <pubDate>Tue, 14 Nov 2023 15:43:01 +0800</pubDate>
-      
-      <guid>https://blog.cmwang.net/zh/tags/ai/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -223,16 +243,6 @@
     </item>
     
     <item>
-      <title>Feeling</title>
-      <link>https://blog.cmwang.net/zh/tags/feeling/</link>
-      <pubDate>Tue, 10 Oct 2023 16:33:39 +0800</pubDate>
-      
-      <guid>https://blog.cmwang.net/zh/tags/feeling/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
       <title>ShortCodes</title>
       <link>https://blog.cmwang.net/zh/tags/shortcodes/</link>
       <pubDate>Fri, 06 Oct 2023 09:34:04 +0000</pubDate>
@@ -268,16 +278,6 @@
       <pubDate>Sun, 16 Apr 2023 15:16:37 +0000</pubDate>
       
       <guid>https://blog.cmwang.net/zh/tags/plum/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Meditation</title>
-      <link>https://blog.cmwang.net/zh/tags/meditation/</link>
-      <pubDate>Thu, 06 Apr 2023 12:29:10 +0000</pubDate>
-      
-      <guid>https://blog.cmwang.net/zh/tags/meditation/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>

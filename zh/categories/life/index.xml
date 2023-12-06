@@ -11,7 +11,55 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 23 Apr 2023 10:36:21 +0000</lastBuildDate><atom:link href="https://blog.cmwang.net/zh/categories/life/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Dec 2023 20:29:32 +0800</lastBuildDate><atom:link href="https://blog.cmwang.net/zh/categories/life/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>35歲的程式設計師都去哪了</title>
+      <link>https://blog.cmwang.net/zh/posts/2023/12/where-is-the-35&#43;-programmer/</link>
+      <pubDate>Tue, 05 Dec 2023 20:29:32 +0800</pubDate>
+      
+      <guid>https://blog.cmwang.net/zh/posts/2023/12/where-is-the-35&#43;-programmer/</guid>
+      <description>Where is the programmer</description>
+      <content:encoded><![CDATA[<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style type="text/css">
+            .bilibili_shortcodes {
+                position: relative;
+                width: 100%;
+                height: 0;
+                padding-bottom: 66%;
+                margin: 10px auto;  
+                overflow: hidden;
+                text-align: center;
+            }
+            .bilibili_shortcodes iframe {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+            }
+        </style>
+        <title></title>
+    </head>
+    <body>
+        <div class="bilibili_shortcodes">
+            <iframe
+                src="https://player.bilibili.com/player.html?bvid=BV1QN4y127vL&page=1&high_quality=1&danmaku=0&as_wide=0"
+                scrolling="no"
+                border="0"
+                frameborder="no"
+                framespacing="0"
+                allowfullscreen="true"
+            >
+            </iframe>
+        </div>
+    </body>
+</html>
+
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>重啟人生 | BRUSH UP LIFE</title>
       <link>https://blog.cmwang.net/zh/posts/2023/04/brush-up-life/</link>
