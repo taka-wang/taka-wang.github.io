@@ -11,7 +11,96 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 06 Dec 2023 16:04:59 +0800</lastBuildDate><atom:link href="https://blog.cmwang.net/zh/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Dec 2023 17:51:52 +0800</lastBuildDate><atom:link href="https://blog.cmwang.net/zh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PDO Crash Course</title>
+      <link>https://blog.cmwang.net/zh/posts/2023/12/pdo-crash-course/</link>
+      <pubDate>Sun, 17 Dec 2023 17:51:52 +0800</pubDate>
+      
+      <guid>https://blog.cmwang.net/zh/posts/2023/12/pdo-crash-course/</guid>
+      <description>PDO Cheat Sheet</description>
+      <content:encoded><![CDATA[<blockquote>
+<p>PDO (PHP Data Objects) is a database access layer providing a uniform method of access to multiple databases. It is a secure and efficient way to interact with databases in PHP.</p>
+</blockquote>
+<h3 id="1-connecting-to-a-database">1. Connecting to a Database</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$host</span> <span class="o">=</span> <span class="s1">&#39;localhost&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$dbname</span> <span class="o">=</span> <span class="s1">&#39;your_database_name&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$username</span> <span class="o">=</span> <span class="s1">&#39;your_username&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$password</span> <span class="o">=</span> <span class="s1">&#39;your_password&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">try</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$pdo</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="s2">&#34;mysql:host=</span><span class="si">$host</span><span class="s2">;dbname=</span><span class="si">$dbname</span><span class="s2">&#34;</span><span class="p">,</span> <span class="nv">$username</span><span class="p">,</span> <span class="nv">$password</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">setAttribute</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">ATTR_ERRMODE</span><span class="p">,</span> <span class="nx">PDO</span><span class="o">::</span><span class="na">ERRMODE_EXCEPTION</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">echo</span> <span class="s2">&#34;Connected successfully&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">PDOException</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">echo</span> <span class="s2">&#34;Connection failed: &#34;</span> <span class="o">.</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div><p>The line <code>$pdo-&gt;setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);</code> sets the error handling mode for PDO. Specifically, it sets PDO to throw exceptions when errors occur.</p>
+<ul>
+<li><code>PDO::ATTR_ERRMODE</code>: This is an attribute that controls the error reporting mode.</li>
+<li><code>PDO::ERRMODE_EXCEPTION</code>: This mode causes PDO to throw exceptions when errors occur, making it easier to handle errors in your code.</li>
+</ul>
+<p>So, if there&rsquo;s an error in a PDO operation, it will throw an exception, and you can catch that exception to handle errors more gracefully.</p>
+<h3 id="2-executing-queries">2. Executing Queries</h3>
+<ul>
+<li>
+<p>SELECT Statement</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nv">$stmt</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM your_table_name&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$result</span> <span class="o">=</span> <span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">fetchAll</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">FETCH_ASSOC</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">foreach</span> <span class="p">(</span><span class="nv">$result</span> <span class="k">as</span> <span class="nv">$row</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Process each row as needed
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">echo</span> <span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;column1&#39;</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&#34;</span><span class="se">\t</span><span class="s2">&#34;</span> <span class="o">.</span> <span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;column2&#39;</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><ul>
+<li><strong><code>fetchAll</code></strong>: This method is used to fetch all rows from the result set returned by a prepared statement. It retrieves all the rows into an array.</li>
+<li><strong><code>PDO::FETCH_ASSOC</code></strong>: This is a fetch style constant provided by PDO that specifies the format in which the rows should be fetched. In this case, <code>FETCH_ASSOC</code> indicates that the rows should be fetched as an associative array where the column names are used as keys.</li>
+</ul>
+</li>
+<li>
+<p>INSERT Statement:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nv">$data</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;value1&#39;</span><span class="p">,</span> <span class="s1">&#39;value2&#39;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$stmt</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s1">&#39;INSERT INTO your_table_name (column1, column2) VALUES (?, ?)&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">(</span><span class="nv">$data</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="s2">&#34;Data inserted successfully&#34;</span><span class="p">;</span>
+</span></span></code></pre></div></li>
+<li>
+<p>UPDATE Statement:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nv">$newValue</span> <span class="o">=</span> <span class="s1">&#39;new_value&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$stmt</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s1">&#39;UPDATE your_table_name SET column1 = ? WHERE id = ?&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nv">$newValue</span><span class="p">,</span> <span class="nv">$id</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="s2">&#34;Data updated successfully&#34;</span><span class="p">;</span>
+</span></span></code></pre></div></li>
+<li>
+<p>DELETE Statement:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nv">$id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$stmt</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s1">&#39;DELETE FROM your_table_name WHERE id = ?&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nv">$id</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="s2">&#34;Data deleted successfully&#34;</span><span class="p">;</span>
+</span></span></code></pre></div></li>
+</ul>
+<h3 id="3-prepared-statements-and-parameter-binding">3. Prepared Statements and Parameter Binding:</h3>
+<p>Prepared statements help prevent SQL injection by separating SQL code from user input.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nv">$username</span> <span class="o">=</span> <span class="s1">&#39;user&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$password</span> <span class="o">=</span> <span class="s1">&#39;pass&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$stmt</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM users WHERE username = :username AND password = :password&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">bindParam</span><span class="p">(</span><span class="s1">&#39;:username&#39;</span><span class="p">,</span> <span class="nv">$username</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">bindParam</span><span class="p">(</span><span class="s1">&#39;:password&#39;</span><span class="p">,</span> <span class="nv">$password</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$result</span> <span class="o">=</span> <span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">fetch</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">FETCH_ASSOC</span><span class="p">);</span>
+</span></span></code></pre></div><p>In this example, placeholders (<code>:username</code> and <code>:password</code>) are used in the query, and then values are bound to these placeholders using <code>bindParam</code>. This helps prevent SQL injection and allows for better reuse of the prepared statement.</p>
+<h3 id="4-error-handling">4. Error Handling</h3>
+<p>Always handle errors to ensure a robust application.</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>分手一百天 (break up 100 days) - AI (Lee Ji Eun)</title>
       <link>https://blog.cmwang.net/zh/posts/2023/12/break-up-100-days/</link>

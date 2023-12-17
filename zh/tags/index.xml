@@ -11,7 +11,37 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 06 Dec 2023 16:04:59 +0800</lastBuildDate><atom:link href="https://blog.cmwang.net/zh/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Dec 2023 17:51:52 +0800</lastBuildDate><atom:link href="https://blog.cmwang.net/zh/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Backend</title>
+      <link>https://blog.cmwang.net/zh/tags/backend/</link>
+      <pubDate>Sun, 17 Dec 2023 17:51:52 +0800</pubDate>
+      
+      <guid>https://blog.cmwang.net/zh/tags/backend/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet</title>
+      <link>https://blog.cmwang.net/zh/tags/cheat-sheet/</link>
+      <pubDate>Sun, 17 Dec 2023 17:51:52 +0800</pubDate>
+      
+      <guid>https://blog.cmwang.net/zh/tags/cheat-sheet/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>PHP</title>
+      <link>https://blog.cmwang.net/zh/tags/php/</link>
+      <pubDate>Sun, 17 Dec 2023 17:51:52 +0800</pubDate>
+      
+      <guid>https://blog.cmwang.net/zh/tags/php/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
     <item>
       <title>AI</title>
       <link>https://blog.cmwang.net/zh/tags/ai/</link>
@@ -373,16 +403,6 @@
     </item>
     
     <item>
-      <title>Backend</title>
-      <link>https://blog.cmwang.net/zh/tags/backend/</link>
-      <pubDate>Sun, 25 Oct 2020 02:47:41 +0100</pubDate>
-      
-      <guid>https://blog.cmwang.net/zh/tags/backend/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
       <title>Django</title>
       <link>https://blog.cmwang.net/zh/tags/django/</link>
       <pubDate>Sun, 25 Oct 2020 02:47:41 +0100</pubDate>
@@ -393,31 +413,11 @@
     </item>
     
     <item>
-      <title>Cheat Sheet</title>
-      <link>https://blog.cmwang.net/zh/tags/cheat-sheet/</link>
-      <pubDate>Tue, 20 Oct 2020 17:14:50 +0800</pubDate>
-      
-      <guid>https://blog.cmwang.net/zh/tags/cheat-sheet/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
       <title>HTML</title>
       <link>https://blog.cmwang.net/zh/tags/html/</link>
       <pubDate>Tue, 20 Oct 2020 17:14:50 +0800</pubDate>
       
       <guid>https://blog.cmwang.net/zh/tags/html/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>PHP</title>
-      <link>https://blog.cmwang.net/zh/tags/php/</link>
-      <pubDate>Sat, 17 Oct 2020 14:25:53 +0800</pubDate>
-      
-      <guid>https://blog.cmwang.net/zh/tags/php/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
