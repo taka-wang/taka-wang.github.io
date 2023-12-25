@@ -11,13 +11,13 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 25 Dec 2023 02:16:20 +0800</lastBuildDate><atom:link href="https://blog.cmwang.net/zh/tags/html/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Oct 2020 17:14:50 +0800</lastBuildDate><atom:link href="https://blog.cmwang.net/zh/tags/html/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Html Form Cheat Sheet</title>
-      <link>https://blog.cmwang.net/zh/posts/2023/12/html-form-cheat-sheet/</link>
-      <pubDate>Mon, 25 Dec 2023 02:16:20 +0800</pubDate>
+      <link>https://blog.cmwang.net/zh/posts/2020/10/html-form-cheat-sheet/</link>
+      <pubDate>Wed, 21 Oct 2020 17:14:50 +0800</pubDate>
       
-      <guid>https://blog.cmwang.net/zh/posts/2023/12/html-form-cheat-sheet/</guid>
+      <guid>https://blog.cmwang.net/zh/posts/2020/10/html-form-cheat-sheet/</guid>
       <description>HTML Form Cheat Sheet</description>
       <content:encoded><![CDATA[<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
