@@ -11,7 +11,239 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 17 Dec 2023 17:51:52 +0800</lastBuildDate><atom:link href="https://blog.cmwang.net/zh/categories/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 25 Dec 2023 20:25:54 +0800</lastBuildDate><atom:link href="https://blog.cmwang.net/zh/categories/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SCSS Crash Course</title>
+      <link>https://blog.cmwang.net/zh/posts/2023/12/scss-crash-course/</link>
+      <pubDate>Mon, 25 Dec 2023 20:25:54 +0800</pubDate>
+      
+      <guid>https://blog.cmwang.net/zh/posts/2023/12/scss-crash-course/</guid>
+      <description>SCSS Crash Course</description>
+      <content:encoded><![CDATA[<p>SCSS 是一種用於簡化和增強 CSS 的語言，它具有變數、巢狀規則、混入、函數等功能，使得 CSS 更易於維護和擴展。</p>
+<h2 id="1-安裝-sass">1. 安裝 Sass</h2>
+<p>首先，確保你的開發環境中已經安裝了 Sass。你可以使用 npm（Node.js 包管理器）來安裝 Sass：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm install -g sass
+</span></span></code></pre></div><h2 id="2-創建-scss-文件">2. 創建 SCSS 文件</h2>
+<p>在你的專案中，創建一個新的 <code>.scss</code> 文件，例如 <code>styles.scss</code>。</p>
+<h2 id="3-基本語法">3. 基本語法</h2>
+<h3 id="變數-variable-">變數 (Variable) 🔥</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$primary-color</span><span class="o">:</span> <span class="mh">#3498db</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$font-size</span><span class="o">:</span> <span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nt">body</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">color</span><span class="o">:</span> <span class="nv">$primary-color</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">font-size</span><span class="o">:</span> <span class="nv">$font-size</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="巢狀規則-nested-">巢狀規則 (Nested) 🔥</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nt">nav</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">background</span><span class="o">:</span> <span class="nv">$primary-color</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nt">ul</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="na">list-style</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">padding</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nt">li</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="na">display</span><span class="o">:</span> <span class="ni">inline-block</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="na">margin-right</span><span class="o">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>對應的 CSS</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">nav</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">background</span><span class="o">:</span> <span class="nv">$primary</span><span class="o">-</span><span class="nx">color</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">nav</span> <span class="nx">ul</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">list</span><span class="o">-</span><span class="nx">style</span><span class="o">:</span> <span class="nx">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">padding</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">nav</span> <span class="nx">ul</span> <span class="nx">li</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">display</span><span class="o">:</span> <span class="nx">inline</span><span class="o">-</span><span class="nx">block</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">margin</span><span class="o">-</span><span class="nx">right</span><span class="o">:</span> <span class="mi">10</span><span class="nx">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="父選擇器或巢狀選擇器-parent-selector-">父選擇器或巢狀選擇器 (Parent Selector) 🔥</h3>
+<p>在 SCSS 中，<code>&amp;</code> 符號被稱為“父選擇器”（Parent Selector）或“嵌套選擇器”（Nested Selector）。它在 SCSS 中的主要作用是引用父選擇器的上下文，使得在嵌套的情況下能夠更靈活地構建和生成 CSS。</p>
+<p>以下是一些常見用法：</p>
+<ol>
+<li>
+<p><strong>嵌套選擇器：</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nt">nav</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">background</span><span class="o">:</span> <span class="mh">#333</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nt">a</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="na">color</span><span class="o">:</span> <span class="mh">#fff</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">&amp;</span><span class="nd">:hover</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="na">text-decoration</span><span class="o">:</span> <span class="ni">underline</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><ul>
+<li>對應的 CSS：</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">nav</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">background</span><span class="p">:</span> <span class="mh">#333</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nt">nav</span> <span class="nt">a</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">color</span><span class="p">:</span> <span class="mh">#fff</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nt">nav</span> <span class="nt">a</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">text-decoration</span><span class="p">:</span> <span class="kc">underline</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>在這裡，<code>&amp;</code> 用於引用其上下文中的父選擇器 <code>nav</code>。</p>
+</li>
+<li>
+<p><strong>擴展選擇器：</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nc">.button</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">background</span><span class="o">:</span> <span class="no">blue</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">&amp;</span><span class="nc">.active</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="na">background</span><span class="o">:</span> <span class="no">red</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><ul>
+<li>對應的 CSS：</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">button</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">background</span><span class="p">:</span> <span class="kc">blue</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">button</span><span class="p">.</span><span class="nc">active</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">background</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>在這裡，<code>&amp;</code> 被用於嵌套地構建 <code>.button.active</code>。</p>
+</li>
+</ol>
+<h3 id="混入-mixin-">混入 (Mixin) 🔥</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="k">@mixin</span><span class="nf"> border-radius</span><span class="p">(</span><span class="nv">$radius</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">-webkit-border-radius</span><span class="o">:</span> <span class="nv">$radius</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">-moz-border-radius</span><span class="o">:</span> <span class="nv">$radius</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">border-radius</span><span class="o">:</span> <span class="nv">$radius</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nc">.box</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">@include</span><span class="nd"> border-radius</span><span class="p">(</span><span class="mi">10</span><span class="kt">px</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="導入-import-">導入 (Import) 💡</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// _variables.scss
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$primary-color</span><span class="o">:</span> <span class="mh">#3498db</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// styles.scss
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;variables&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nt">body</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">color</span><span class="o">:</span> <span class="nv">$primary-color</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="擴展-extend-">擴展 (Extend) 💡</h3>
+<p>擴展是一種 SCSS 功能，允許你使用一個選擇器的樣式來擴展另一個選擇器的樣式，類似於 CSS 中的類。這可以減少代碼的重複並提高可維護性。</p>
+<ul>
+<li>
+<p>SCSS 範例</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="o">%</span><span class="nc">button-style</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">display</span><span class="o">:</span> <span class="ni">inline-block</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">padding</span><span class="o">:</span> <span class="mi">10</span><span class="kt">px</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">font-size</span><span class="o">:</span> <span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nc">.btn-primary</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">@extend</span> <span class="o">%</span><span class="nc">button-style</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">background-color</span><span class="o">:</span> <span class="mh">#3498db</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">color</span><span class="o">:</span> <span class="mh">#fff</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nc">.btn-secondary</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">@extend</span> <span class="o">%</span><span class="nc">button-style</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">background-color</span><span class="o">:</span> <span class="mh">#e74c3c</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">color</span><span class="o">:</span> <span class="mh">#fff</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>在這個例子中，<code>%button-style</code> 是一個 placeholder，它包含了通用的按鈕樣式。然後，<code>btn-primary</code> 和 <code>btn-secondary</code> 透過 <code>@extend</code> 將這些通用樣式擴展到具體的按鈕類別中。</p>
+</li>
+<li>
+<p>對應的 CSS</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">.</span><span class="nx">btn</span><span class="o">-</span><span class="nx">primary</span><span class="p">,</span> <span class="o">.</span><span class="nx">btn</span><span class="o">-</span><span class="nx">secondary</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">display</span><span class="o">:</span> <span class="nx">inline</span><span class="o">-</span><span class="nx">block</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">padding</span><span class="o">:</span> <span class="mi">10</span><span class="nx">px</span> <span class="mi">20</span><span class="nx">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">font</span><span class="o">-</span><span class="nx">size</span><span class="o">:</span> <span class="mi">16</span><span class="nx">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">.</span><span class="nx">btn</span><span class="o">-</span><span class="nx">primary</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">background</span><span class="o">-</span><span class="nx">color</span><span class="o">:</span> <span class="c1">#3498db;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">color</span><span class="o">:</span> <span class="c1">#fff;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">.</span><span class="nx">btn</span><span class="o">-</span><span class="nx">secondary</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">background</span><span class="o">-</span><span class="nx">color</span><span class="o">:</span> <span class="c1">#e74c3c;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">color</span><span class="o">:</span> <span class="c1">#fff;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></code></pre></div></li>
+</ul>
+<h3 id="函數-function">函數 (Function)</h3>
+<p>SCSS 允許你定義和使用函數，這樣你就可以更靈活地處理數據和生成樣式。</p>
+<ul>
+<li>
+<p>SCSS 範例</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="k">@function</span><span class="nf"> calculate-width</span><span class="p">(</span><span class="nv">$width</span><span class="o">,</span> <span class="nv">$padding</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">@return</span> <span class="nv">$width</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="nv">$padding</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nc">.container</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">width</span><span class="o">:</span> <span class="nf">calculate-width</span><span class="p">(</span><span class="mi">200</span><span class="kt">px</span><span class="o">,</span> <span class="mi">10</span><span class="kt">px</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">padding</span><span class="o">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>在這個例子中，<code>calculate-width</code> 函數接受兩個參數：<code>$width</code> 和 <code>$padding</code>，然後返回計算後的寬度。這個函數被用於設置 <code>.container</code> 元素的寬度。</p>
+</li>
+</ul>
+<h2 id="4-編譯-scss-到-css">4. 編譯 SCSS 到 CSS</h2>
+<p>在終端機中執行以下命令，將你的 SCSS 文件編譯成 CSS：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sass input.scss output.css
+</span></span></code></pre></div><p>或者，如果你想要在每次保存文件時自動編譯，可以使用以下命令：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sass --watch input.scss:output.css
+</span></span></code></pre></div><ul>
+<li>
+<ol start="5">
+<li>Sass 與 SCSS 語法差異</li>
+</ol>
+<p>Sass（Syntactically Awesome Stylesheets）和 SCSS（Sassy CSS）都是 CSS 預處理器，它們提供了一些額外的功能和語法來更有效地編寫和管理樣式表。以下是 Sass 和 SCSS 的主要差異：</p>
+<ol>
+<li><strong>語法差異：</strong></li>
+</ol>
+<ul>
+<li>
+<p><strong>Sass：</strong> 使用縮進來表示區塊和層次結構，並且不使用分號和大括號。例如：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sass" data-lang="sass"><span class="line"><span class="cl"><span class="nt">body</span>
+</span></span><span class="line"><span class="cl"><span class="err">  </span><span class="na">font</span><span class="o">:</span> <span class="mi">14</span><span class="kt">px</span><span class="o">/</span><span class="mi">1</span><span class="mf">.4</span> <span class="s2">&#34;Helvetica Neue&#34;</span><span class="o">,</span> <span class="no">sans-serif</span>
+</span></span><span class="line"><span class="cl"><span class="err">  </span><span class="na">color</span><span class="o">:</span> <span class="mh">#333</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nc">.container</span>
+</span></span><span class="line"><span class="cl"><span class="err">  </span><span class="na">width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span>
+</span></span><span class="line"><span class="cl"><span class="err">  </span><span class="na">margin</span><span class="o">:</span> <span class="mi">0</span> <span class="no">auto</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>SCSS：</strong> 使用大括號表示區塊和分號來結束每個聲明，更接近傳統的 CSS 語法。例如：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nt">body</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">font</span><span class="o">:</span> <span class="mi">14</span><span class="kt">px</span><span class="o">/</span><span class="mi">1</span><span class="mf">.4</span> <span class="s2">&#34;Helvetica Neue&#34;</span><span class="o">,</span> <span class="ni">sans-serif</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">color</span><span class="o">:</span> <span class="mh">#333</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nc">.container</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">margin</span><span class="o">:</span> <span class="mi">0</span> <span class="ni">auto</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div></li>
+</ul>
+<ol start="2">
+<li><strong>文件擴展名：</strong></li>
+</ol>
+<ul>
+<li><strong>Sass：</strong> Sass 文件使用 <code>.sass</code> 作為擴展名。</li>
+<li><strong>SCSS：</strong> SCSS 文件使用 <code>.scss</code> 作為擴展名。</li>
+</ul>
+</li>
+</ul>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>PDO Crash Course</title>
       <link>https://blog.cmwang.net/zh/posts/2023/12/pdo-crash-course/</link>
