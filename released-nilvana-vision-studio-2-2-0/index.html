@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nilvana Vision Studio 2.2.0: Heatmap for Annotations</title>
+    <link rel="stylesheet" href="/assets/built/screen.css?v=3d5e5f43ed">
+
+    <meta name="description" content="We are pleased to introduce version 2.2.0 of vision studio, a user-friendly web-based collaborative data annotation, model training, and model evaluation No-code toolkit. You can find more…">
+    <link rel="icon" href="https://blog.cmwang.net/content/images/size/w256h256/2024/01/2-removebg-preview.png" type="image/png">
+    <link rel="canonical" href="https://blog.cmwang.net/released-nilvana-vision-studio-2-2-0/">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta property="og:site_name" content="Liberation Notes">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Nilvana Vision Studio 2.2.0: Heatmap for Annotations">
+    <meta property="og:description" content="Introducing vision studio 2.2.0 with heatmap for object detection annotations">
+    <meta property="og:url" content="https://blog.cmwang.net/released-nilvana-vision-studio-2-2-0/">
+    <meta property="og:image" content="https://blog.cmwang.net/content/images/v2/resize:fit:1200/1-6gudkrjpaa0p3tqphk00kw.jpg">
+    <meta property="article:published_time" content="2023-04-10T02:35:32.000Z">
+    <meta property="article:modified_time" content="2023-04-10T02:35:32.000Z">
+    <meta property="article:tag" content="Computer Vision">
+    <meta property="article:tag" content="Artificial Intelligence">
+    <meta property="article:tag" content="Object Detection">
+    
+    <meta property="article:publisher" content="https://www.facebook.com/ghost">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nilvana Vision Studio 2.2.0: Heatmap for Annotations">
+    <meta name="twitter:description" content="Introducing vision studio 2.2.0 with heatmap for object detection annotations">
+    <meta name="twitter:url" content="https://blog.cmwang.net/released-nilvana-vision-studio-2-2-0/">
+    <meta name="twitter:image" content="https://blog.cmwang.net/content/images/v2/resize:fit:1200/1-6gudkrjpaa0p3tqphk00kw.jpg">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Taka Wang">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="Computer Vision, Artificial Intelligence, Object Detection">
+    <meta name="twitter:site" content="@ghost">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="640">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Liberation Notes",
+        "url": "https://blog.cmwang.net/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://blog.cmwang.net/content/images/size/w256h256/2024/01/2-removebg-preview.png",
+            "width": 60,
+            "height": 60
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Taka Wang",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://blog.cmwang.net/content/images/v2/resize:fill:144:144/1-mzehvowngfwyye2pswx_vw.png",
+            "width": 144,
+            "height": 144
+        },
+        "url": "https://blog.cmwang.net/author/takawang/",
+        "sameAs": []
+    },
+    "headline": "Nilvana Vision Studio 2.2.0: Heatmap for Annotations",
+    "url": "https://blog.cmwang.net/released-nilvana-vision-studio-2-2-0/",
+    "datePublished": "2023-04-10T02:35:32.000Z",
+    "dateModified": "2023-04-10T02:35:32.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://blog.cmwang.net/content/images/max/800/1-6gudkrjpaa0p3tqphk00kw.jpg",
+        "width": 800,
+        "height": 427
+    },
+    "keywords": "Computer Vision, Artificial Intelligence, Object Detection",
+    "description": "Introducing vision studio 2.2.0 with heatmap for object detection annotations",
+    "mainEntityOfPage": "https://blog.cmwang.net/released-nilvana-vision-studio-2-2-0/"
+}
+    </script>
+
+    <meta name="generator" content="Ghost 5.78">
+    <link rel="alternate" type="application/rss+xml" title="Liberation Notes" href="https://blog.cmwang.net/rss/">
+    
+    <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="415aa5f59e59c087cacf652d7b" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css" data-sodo-search="https://blog.cmwang.net/" crossorigin="anonymous"></script>
+    
+    <link href="https://blog.cmwang.net/webmentions/receive/" rel="webmention">
+    <script defer src="/public/cards.min.js?v=3d5e5f43ed"></script><style>:root {--ghost-accent-color: #FF1A74;}</style>
+    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=3d5e5f43ed">
+</head>
+
+<body class="post-template tag-computer-vision tag-artificial-intelligence tag-object-detection tag-hash-medium tag-hash-import-2024-02-01-00-16 is-head-left-logo">
+<div class="gh-site">
+
+    <header id="gh-head" class="gh-head gh-outer">
+        <div class="gh-head-inner gh-inner">
+            <div class="gh-head-brand">
+                <div class="gh-head-brand-wrapper">
+                    <a class="gh-head-logo" href="https://blog.cmwang.net">
+                            Liberation Notes
+                    </a>
+                </div>
+                <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+                <button class="gh-burger"></button>
+            </div>
+
+            <nav class="gh-head-menu">
+                <ul class="nav">
+    <li class="nav-home"><a href="https://blog.cmwang.net/">Home</a></li>
+    <li class="nav-about"><a href="https://blog.cmwang.net/about/">About</a></li>
+</ul>
+
+            </nav>
+
+            <div class="gh-head-actions">
+                        <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="site-content">
+        
+<main class="site-main">
+
+
+    <article class="gh-article post tag-computer-vision tag-artificial-intelligence tag-object-detection tag-hash-medium tag-hash-import-2024-02-01-00-16">
+
+        <header class="gh-article-header gh-canvas">
+            <span class="gh-article-meta">
+                By <a href="/author/takawang/">Taka Wang</a>
+                    in
+                    <a class="gh-article-tag" href="https://blog.cmwang.net/tag/computer-vision/">Computer Vision</a>
+                —
+                <time datetime="2023-04-10">Apr 10, 2023</time>
+            </span>
+
+            <h1 class="gh-article-title">Nilvana Vision Studio 2.2.0: Heatmap for Annotations</h1>
+
+                <p class="gh-article-excerpt">Introducing vision studio 2.2.0 with heatmap for object detection annotations</p>
+
+                <figure class="gh-article-image kg-width-wide">
+        <img
+            srcset="/content/images/size/w400/max/800/1-6gudkrjpaa0p3tqphk00kw.jpg 400w,
+                    /content/images/size/w720/max/800/1-6gudkrjpaa0p3tqphk00kw.jpg 720w,
+                    /content/images/size/w960/max/800/1-6gudkrjpaa0p3tqphk00kw.jpg 960w,
+                    /content/images/size/w1200/max/800/1-6gudkrjpaa0p3tqphk00kw.jpg 1200w,
+                    /content/images/size/w2000/max/800/1-6gudkrjpaa0p3tqphk00kw.jpg 2000w"
+            sizes="(max-width: 1200px) 100vw, 1200px"
+            src="/content/images/size/w1200/max/800/1-6gudkrjpaa0p3tqphk00kw.jpg"
+            alt="Nilvana Vision Studio 2.2.0: Heatmap for Annotations"
+        >
+            <figcaption>nilvana vision studio&nbsp;2.2.0</figcaption>
+    </figure>
+        </header>
+
+        <div class="gh-content gh-canvas">
+            <p>We are pleased to introduce version 2.2.0 of vision studio, a user-friendly web-based collaborative data annotation, model training, and model evaluation No-code toolkit. You can find more information about <strong>Nilvana™ vision studio</strong> on the <a href="https://shop.nilvana.ai/products/nilvana-vision-studio?ref=localhost" rel="noopener ugc nofollow noopener">official website</a>.</p><h4 id="heatmap-for-annotations">Heatmap for Annotations</h4><p>In this version, we have added a new feature: heatmap for annotations, which allows you to more effectively visualize the positions of object detection bounding boxes in your dataset and version. The heatmap provides a color-coded representation of the density of annotations, making it easier to identify areas of high or low annotation density. This feature can be particularly useful for evaluating the quality of collaborative annotation efforts and identifying areas where additional annotation may be needed. Overall, the heatmap for annotations provides a powerful tool for improving the accuracy and efficiency of your annotation workflow.</p><h4 id="improvements-and-bug-fixes">Improvements and Bug Fixes</h4><p>We have not been sitting on our hands. In this version, in addition to the new features mentioned above, we also fixed a lot of bugs. These items are fairly trivial and I won’t list them here. But yes, we have improved it if you see any differences.</p><hr><p>Nilvana<strong>™</strong> has developed <strong>Vision Studio</strong> and <strong>Vision Inference Runtime</strong> toolkits, which enable collaborative data annotation, model creation, and rapid inference without AI expertise.</p><p>Nilvana<strong>™</strong> provides a <a href="https://shop.nilvana.ai/pages/our-services?ref=localhost" rel="noopener ugc nofollow noopener">wide range of services</a> from consulting and model creation to the development of AI-based applications. Feel free to <a href="https://shop.nilvana.ai/pages/contact-us?ref=localhost" rel="noopener ugc nofollow noopener">contact us</a> for any inquiries.</p><!--kg-card-begin: html--><figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://nilvana.ai/?ref=localhost"><div class="kg-bookmark-content"><div class="kg-bookmark-title">Hello nilvana™, Hello Tomorrow</div><div class="kg-bookmark-description">AI Workstation, Jetson Nano, Xavier, Nvidia, Edge Computing, IoT, Edge Computing, 人工智慧，工作站，物聯網，邊緣運算，邊緣裝置。</div><div class="kg-bookmark-metadata"></div></div><div class="kg-bookmark-thumbnail"><img src="https://blog.cmwang.net/content/images/fit/c/160/160/0-4nxbz0zkih9jhi69.jpg" alt></div></a></figure><!--kg-card-end: html-->
+        </div>
+
+    </article>
+
+    <div class="gh-canvas">
+    <div class="navigation">
+            <a class="navigation-item navigation-previous" href="/e4-bb-8a-e5-a4-a9-e4-bd-a0-e6-9c-83-e6-9c-89-e5-a5-bd-e4-ba-8b-e7-99-bc-e7-94-9f/">
+                <span class="navigation-label">Previous</span>
+                <h4 class="navigation-title">今天你會有好事發生</h4>
+            </a>
+            <a class="navigation-item navigation-next" href="/e8-a3-bd-e4-bd-9c-e8-84-86-e6-a2-85-e7-9a-84-e6-99-82-e7-af-80-make-crispy-plum/">
+                <span class="navigation-label">Next</span>
+                <h4 class="navigation-title">製作脆梅的時節 / Make Crispy Plum</h4>
+            </a>
+    </div>
+</div>
+
+
+        <div class="related-wrapper gh-outer">
+        <section class="related-posts gh-inner">
+            <h3 class="related-title">
+                <span class="text">You might also like...</span>
+            </h3>
+            <div class="post-feed">
+                    <article class="post tag-plum tag-cui-mei tag-ceremony tag-life tag-family tag-hash-medium tag-hash-import-2024-02-01-00-16 u-shadow">
+<a class="post-link" href="/e8-a3-bd-e4-bd-9c-e8-84-86-e6-a2-85-e7-9a-84-e6-99-82-e7-af-80-make-crispy-plum/">
+        <figure class="post-media">
+            <div class="u-placeholder same-height rectangle">
+                <img
+                    class="post-image u-object-fit"
+                    srcset="/content/images/size/w400/max/800/1-1kj9n9ovro9pacr9jkftsw.jpg 400w,
+                            /content/images/size/w720/max/800/1-1kj9n9ovro9pacr9jkftsw.jpg 750w,
+                            /content/images/size/w960/max/800/1-1kj9n9ovro9pacr9jkftsw.jpg 960w,
+                            /content/images/size/w1200/max/800/1-1kj9n9ovro9pacr9jkftsw.jpg 1140w,
+                            /content/images/size/w2000/max/800/1-1kj9n9ovro9pacr9jkftsw.jpg 1920w"
+                    sizes="600px"
+                    src="/content/images/size/w960/max/800/1-1kj9n9ovro9pacr9jkftsw.jpg"
+                    alt="製作脆梅的時節 / Make Crispy Plum"
+                    loading="lazy"
+                >
+            </div>
+        </figure>
+
+    <div class="post-wrapper">
+        <header class="post-header">
+                <span class="post-tag">Plum</span>
+
+            <h2 class="post-title">
+                製作脆梅的時節 / Make Crispy Plum
+            </h2>
+        </header>
+
+            <div class="post-excerpt">
+                製作脆梅一直是我們家重要的儀式，每年我們都會在年初與信義鄉的小農預訂青梅，並以此製作脆梅。
+            </div>
+    </div>
+
+    <footer class="post-footer">
+        <span class="post-more">Read More</span>
+
+        <div class="post-author">
+                    <span class="post-author-link">
+                        <img class="post-author-image" src="/content/images/size/w150/v2/resize:fill:144:144/1-mzehvowngfwyye2pswx_vw.png" alt="Taka Wang" loading="lazy">
+                    </span>
+        </div>
+    </footer>
+</a>
+</article>                    <article class="post tag-job-search tag-taipei tag-backend-development tag-data-science tag-tech-jobs tag-hash-medium tag-hash-import-2024-02-01-00-16 u-shadow">
+<a class="post-link" href="/backing-up-a-stellar-data-engineer-open-for-new-opportunities-in-taipei/">
+        <figure class="post-media">
+            <div class="u-placeholder same-height rectangle">
+                <img
+                    class="post-image u-object-fit"
+                    srcset="/content/images/size/w400/max/800/1-h3-aa9-_smfa7fsgn8kavw.png 400w,
+                            /content/images/size/w720/max/800/1-h3-aa9-_smfa7fsgn8kavw.png 750w,
+                            /content/images/size/w960/max/800/1-h3-aa9-_smfa7fsgn8kavw.png 960w,
+                            /content/images/size/w1200/max/800/1-h3-aa9-_smfa7fsgn8kavw.png 1140w,
+                            /content/images/size/w2000/max/800/1-h3-aa9-_smfa7fsgn8kavw.png 1920w"
+                    sizes="600px"
+                    src="/content/images/size/w960/max/800/1-h3-aa9-_smfa7fsgn8kavw.png"
+                    alt="Backing Up a Stellar Data Engineer: Open for New Opportunities in Taipei"
+                    loading="lazy"
+                >
+            </div>
+        </figure>
+
+    <div class="post-wrapper">
+        <header class="post-header">
+                <span class="post-tag">Jobsearch</span>
+
+            <h2 class="post-title">
+                Backing Up a Stellar Data Engineer: Open for New Opportunities in Taipei
+            </h2>
+        </header>
+
+            <div class="post-excerpt">
+                I am writing this post to recommend my colleague Jill Hsu for any relevant job opportunities in Taipei.
+            </div>
+    </div>
+
+    <footer class="post-footer">
+        <span class="post-more">Read More</span>
+
+        <div class="post-author">
+                    <span class="post-author-link">
+                        <img class="post-author-image" src="/content/images/size/w150/v2/resize:fill:144:144/1-mzehvowngfwyye2pswx_vw.png" alt="Taka Wang" loading="lazy">
+                    </span>
+        </div>
+    </footer>
+</a>
+</article>                    <article class="post tag-computer-vision tag-artificial-intelligence tag-ren-gong-zhi-hui tag-dian-nao-shi-jue tag-instance-segmentation tag-hash-medium tag-hash-import-2024-02-01-00-16 u-shadow">
+<a class="post-link" href="/nilvana-vision-studio-2-1-0-advanced-instance-segmentation-features-now-available/">
+        <figure class="post-media">
+            <div class="u-placeholder same-height rectangle">
+                <img
+                    class="post-image u-object-fit"
+                    srcset="/content/images/size/w400/max/800/1-cxjzei7velztfrloui4njg.jpg 400w,
+                            /content/images/size/w720/max/800/1-cxjzei7velztfrloui4njg.jpg 750w,
+                            /content/images/size/w960/max/800/1-cxjzei7velztfrloui4njg.jpg 960w,
+                            /content/images/size/w1200/max/800/1-cxjzei7velztfrloui4njg.jpg 1140w,
+                            /content/images/size/w2000/max/800/1-cxjzei7velztfrloui4njg.jpg 1920w"
+                    sizes="600px"
+                    src="/content/images/size/w960/max/800/1-cxjzei7velztfrloui4njg.jpg"
+                    alt="Nilvana Vision Studio 2.1.0: Advanced Instance Segmentation Features Now Available"
+                    loading="lazy"
+                >
+            </div>
+        </figure>
+
+    <div class="post-wrapper">
+        <header class="post-header">
+                <span class="post-tag">Computer Vision</span>
+
+            <h2 class="post-title">
+                Nilvana Vision Studio 2.1.0: Advanced Instance Segmentation Features Now Available
+            </h2>
+        </header>
+
+            <div class="post-excerpt">
+                Introducing vision studio 2.1.0 with instance segmentation support and streamlined annotation workflow features.
+            </div>
+    </div>
+
+    <footer class="post-footer">
+        <span class="post-more">Read More</span>
+
+        <div class="post-author">
+                    <span class="post-author-link">
+                        <img class="post-author-image" src="/content/images/size/w150/v2/resize:fill:144:144/1-mzehvowngfwyye2pswx_vw.png" alt="Taka Wang" loading="lazy">
+                    </span>
+        </div>
+    </footer>
+</a>
+</article>                    <article class="post tag-industrial-camera-systems tag-embedded-systems tag-u3v tag-computer-vision tag-machine-vision-system tag-hash-medium tag-hash-import-2024-02-01-00-16 u-shadow">
+<a class="post-link" href="/configuring-usb-fs-for-usb3-vision-camera/">
+        <figure class="post-media">
+            <div class="u-placeholder same-height rectangle">
+                <img
+                    class="post-image u-object-fit"
+                    srcset="/content/images/size/w400/max/800/1-uoy9jp33j7xif2emebtdcg.jpg 400w,
+                            /content/images/size/w720/max/800/1-uoy9jp33j7xif2emebtdcg.jpg 750w,
+                            /content/images/size/w960/max/800/1-uoy9jp33j7xif2emebtdcg.jpg 960w,
+                            /content/images/size/w1200/max/800/1-uoy9jp33j7xif2emebtdcg.jpg 1140w,
+                            /content/images/size/w2000/max/800/1-uoy9jp33j7xif2emebtdcg.jpg 1920w"
+                    sizes="600px"
+                    src="/content/images/size/w960/max/800/1-uoy9jp33j7xif2emebtdcg.jpg"
+                    alt="Configuring USB-FS for USB3 Vision Camera"
+                    loading="lazy"
+                >
+            </div>
+        </figure>
+
+    <div class="post-wrapper">
+        <header class="post-header">
+                <span class="post-tag">Industrial Camera Systems</span>
+
+            <h2 class="post-title">
+                Configuring USB-FS for USB3 Vision Camera
+            </h2>
+        </header>
+
+            <div class="post-excerpt">
+                This post explains how to increase the buffer memory for USB-FS devices on Linux systems.
+            </div>
+    </div>
+
+    <footer class="post-footer">
+        <span class="post-more">Read More</span>
+
+        <div class="post-author">
+                    <span class="post-author-link">
+                        <img class="post-author-image" src="/content/images/size/w150/v2/resize:fill:144:144/1-mzehvowngfwyye2pswx_vw.png" alt="Taka Wang" loading="lazy">
+                    </span>
+        </div>
+    </footer>
+</a>
+</article>            </div>
+        </section>
+</div>
+</main>
+    </div>
+
+    <footer class="gh-foot no-menu gh-outer">
+        <div class="gh-foot-inner gh-inner">
+            <div class="gh-copyright">
+                Liberation Notes © 2024
+            </div>
+            <div class="gh-powered-by">
+                <a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+
+    <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/assets/built/main.min.js?v=3d5e5f43ed"></script>
+
+<style>
+.gh-foot-menu {
+    display: none;
+}
+
+.gh-powered-by {
+    display: none;
+}
+</style>
+
+</body>
+</html>
