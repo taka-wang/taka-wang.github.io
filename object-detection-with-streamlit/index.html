@@ -19,7 +19,7 @@
     <meta property="og:url" content="https://blog.cmwang.net/object-detection-with-streamlit/">
     <meta property="og:image" content="https://blog.cmwang.net/content/images/v2/resize:fit:1080/1-_uc9oywq_buu-1kpjnmvlw.png">
     <meta property="article:published_time" content="2022-04-25T15:25:22.000Z">
-    <meta property="article:modified_time" content="2024-01-31T19:53:07.000Z">
+    <meta property="article:modified_time" content="2024-01-31T21:32:34.000Z">
     <meta property="article:tag" content="Computer Vision">
     <meta property="article:tag" content="AI">
     <meta property="article:tag" content="Object Detection">
@@ -70,7 +70,7 @@
     "headline": "Building an Object Detection App quickly with Streamlit",
     "url": "https://blog.cmwang.net/object-detection-with-streamlit/",
     "datePublished": "2022-04-25T15:25:22.000Z",
-    "dateModified": "2024-01-31T19:53:07.000Z",
+    "dateModified": "2024-01-31T21:32:34.000Z",
     "image": {
         "@type": "ImageObject",
         "url": "https://blog.cmwang.net/content/images/max/800/1-_uc9oywq_buu-1kpjnmvlw.png",
@@ -176,11 +176,26 @@
         </header>
 
         <div class="gh-content gh-canvas">
-            <h3 id="building-an-object-detection-web-app-quickly-with-streamlit">Building an Object Detection Web App quickly with Streamlit</h3><p>Sometimes, you may want to quickly create a graphical interface for others to test your model, but you don’t want to deal with front-end technologies. This is where <a href="https://streamlit.io/" rel="noopener">Streamlit</a> comes in, allowing you to quickly create a web application using Python syntax.</p><p>In this article, I will show you how to use <a href="https://streamlit.io/" rel="noopener">Streamlit</a> and <a href="https://nilvana.tw/products/nilvana-vision-inference-runtime" rel="noopener">Nilvana Vision Inference Runtime</a> to quickly deploy a web application that can detect masks. If you are not familiar with <a href="https://nilvana.tw/products/nilvana-vision-inference-runtime" rel="noopener">Nilvana Vision Inference Runtime</a>, it is a software package we developed for node-code deployment of AI models, which you can refer to in our previous articles.</p>
+            <h3 id="building-an-object-detection-web-app-quickly-with-streamlit">Building an Object Detection Web App quickly with Streamlit</h3><p>Sometimes, you may want to quickly create a graphical interface for others to test your model, but you don’t want to deal with front-end technologies. This is where <a href="https://streamlit.io/" rel="noopener">Streamlit</a> comes in, allowing you to quickly create a web application using Python syntax.</p><p>In this article, I will show you how to use <a href="https://streamlit.io/" rel="noopener">Streamlit</a> and Nilvana Vision Inference Runtime to quickly deploy a web application that can detect masks. If you are not familiar with Nilvana Vision Inference Runtime, it is a software package we developed for node-code deployment of AI models, which you can refer to in our previous articles.</p>
 <!--kg-card-begin: html-->
 <figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://medium.com/hello-nilvana/%E9%80%8F%E9%81%8E-nilvana-vision-inference-runtime-%E9%83%A8%E7%BD%B2%E6%A8%A1%E5%9E%8B-a52b05a63b74"><div class="kg-bookmark-content"><div class="kg-bookmark-title">Deploying models through Nilvana Vision Inference Runtime</div><div class="kg-bookmark-description">Using Nilvana Vision Inference Runtime (inference engine), you can easily deploy your models to x86 or Jetson…</div><div class="kg-bookmark-metadata"></div></div><div class="kg-bookmark-thumbnail"><img src="https://blog.cmwang.net/content/images/fit/c/160/160/1-u6xc7wr939zohyws2_7okg.png" alt=""></div></a></figure>
 <!--kg-card-end: html-->
-<p>The completed result is shown in the following figure:</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://blog.cmwang.net/content/images/max/800/1-fk7w7zaaph74duaps6_kla.gif" class="kg-image" alt="" loading="lazy" width="800" height="453" srcset="https://blog.cmwang.net/content/images/size/w600/max/800/1-fk7w7zaaph74duaps6_kla.gif 600w, https://blog.cmwang.net/content/images/max/800/1-fk7w7zaaph74duaps6_kla.gif 800w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Video by cottonbro from&nbsp;Pexels:</span></figcaption></figure><p>You only need to install Streamlit by running <code>pip install streamlit</code>. Then, you can use the <code>st</code> object to generate the sidebar, and the entire process takes less than three lines of code.import streamlit as sturl = st.sidebar.text_input('NVIR Endpoint URL', 'http://192.168.41.200:52010/v1/infer/111111111')st.sidebar.write('#### Select a video to upload.')uploaded_video = st.sidebar.file_uploader("Choose video", type=["mp4"])</p><p>The main screen is also quite simple. Declare two containers created by <strong><code>st.empty() </code></strong>to hold the video and JSON output, respectively. This step fixes the <strong>frame</strong> and <strong>JSON output</strong> positions. Open the video file through the main loop of OpenCV and obtain the inference result using the Restful API provided by <a href="https://nilvana.tw/products/nilvana-vision-inference-runtime" rel="noopener">Nilvana Vision Inference Runtime</a>. Then, overlay the inference result on the frame. This part is similar to the content of the previous article. In other words, you can easily convert OpenCV applications into Streamlit web applications.frame_holder = st.empty()<br>placeholder = st.empty()# ... opencv partsframe_holder.image(frame) # put your frame herewith placeholder.container():<br>  # Display the JSON in main window.<br>  st.write('### JSON Output')<br>  st.write(result)</p><p>The entire application can be completed in less than 60 lines of code, and we highly recommend that Python developers further explore this. The complete example code is also available on our GitHub page at the end of the article. Happy Deployment!</p>
+<p>The completed result is shown in the following figure:</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://blog.cmwang.net/content/images/max/800/1-fk7w7zaaph74duaps6_kla.gif" class="kg-image" alt="" loading="lazy" width="800" height="453" srcset="https://blog.cmwang.net/content/images/size/w600/max/800/1-fk7w7zaaph74duaps6_kla.gif 600w, https://blog.cmwang.net/content/images/max/800/1-fk7w7zaaph74duaps6_kla.gif 800w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Video by cottonbro from&nbsp;Pexels:</span></figcaption></figure><p>You only need to install Streamlit by running <code>pip install streamlit</code>. Then, you can use the <code>st</code> object to generate the sidebar, and the entire process takes less than three lines of code.</p><pre><code class="language-Python">import streamlit as st
+
+url = st.sidebar.text_input('NVIR Endpoint URL', 'http://192.168.41.200:52010/v1/infer/111111111')
+
+st.sidebar.write('#### Select a video to upload.')
+
+uploaded_video = st.sidebar.file_uploader("Choose video", type=["mp4"])
+</code></pre><p>The main screen is also quite simple. Declare two containers created by <strong><code>st.empty() </code></strong>to hold the video and JSON output, respectively. This step fixes the <strong>frame</strong> and <strong>JSON output</strong> positions. Open the video file through the main loop of OpenCV and obtain the inference result using the Restful API provided by <a href="https://nilvana.tw/products/nilvana-vision-inference-runtime" rel="noopener">Nilvana Vision Inference Runtime</a>. Then, overlay the inference result on the frame. This part is similar to the content of the previous article. In other words, you can easily convert OpenCV applications into Streamlit web applications.</p><pre><code class="language-python">frame_holder = st.empty()
+placeholder = st.empty()
+# ... opencv parts
+frame_holder.image(frame) # put your frame here
+
+with placeholder.container():
+  # Display the JSON in main window.
+  st.write('### JSON Output')
+  st.write(result)</code></pre><p>The entire application can be completed in less than 60 lines of code, and we highly recommend that Python developers further explore this. The complete example code is also available on our GitHub page at the end of the article. Happy Deployment!</p>
 <!--kg-card-begin: html-->
 <figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://docs.streamlit.io/"><div class="kg-bookmark-content"><div class="kg-bookmark-title">Streamlit Docs</div><div class="kg-bookmark-description">Streamlit is more than just a way to make data apps, it's also a community of creators that share their apps and ideas…</div><div class="kg-bookmark-metadata"></div></div><div class="kg-bookmark-thumbnail"><img src="https://blog.cmwang.net/content/images/fit/c/160/160/0-od3ubed0y3nqqemw.jpg" alt=""></div></a></figure>
 <!--kg-card-end: html-->
@@ -189,16 +204,16 @@
 <figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://github.com/nilvana-ai/nvir-streamlit-demo"><div class="kg-bookmark-content"><div class="kg-bookmark-title">GitHub - nilvana-ai/nvir-streamlit-demo: This is a demo repo to demonstrate nilvana vision…</div><div class="kg-bookmark-description">This is a demo repo to demonstrate nilvana vision inference runtime with streamlit. </div><div class="kg-bookmark-metadata"></div></div><div class="kg-bookmark-thumbnail"><img src="https://blog.cmwang.net/content/images/fit/c/160/160/0-8tnv3cnpvuvsfnkf.png" alt=""></div></a></figure>
 <!--kg-card-end: html-->
 
-<!--kg-card-begin: html-->
-<figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://nilvana.ai"><div class="kg-bookmark-content"><div class="kg-bookmark-title">Hello nilvana™, Hello Tomorrow</div><div class="kg-bookmark-description">AI Workstation, Jetson Nano, Xavier, Nvidia, Edge Computing, IoT, Edge Computing, 人工智慧，工作站，物聯網，邊緣運算，邊緣裝置。</div><div class="kg-bookmark-metadata"></div></div><div class="kg-bookmark-thumbnail"><img src="https://blog.cmwang.net/content/images/fit/c/160/160/0-gegawc126g4zni92.jpg" alt=""></div></a></figure>
-<!--kg-card-end: html-->
-
         </div>
 
     </article>
 
     <div class="gh-canvas">
     <div class="navigation">
+            <a class="navigation-item navigation-previous" href="/html-form-cheat-sheet/">
+                <span class="navigation-label">Previous</span>
+                <h4 class="navigation-title">Html Form Cheat Sheet</h4>
+            </a>
             <a class="navigation-item navigation-next" href="/performance-benchmarking-of-yolov7-tensorrt-from-cloud-gpus-to-edge-gpus/">
                 <span class="navigation-label">Next</span>
                 <h4 class="navigation-title">Performance Benchmarking of YOLOv7 TensorRT from Cloud GPUs to Edge GPUs</h4>
@@ -351,13 +366,13 @@
             <div class="u-placeholder same-height rectangle">
                 <img
                     class="post-image u-object-fit"
-                    srcset="/content/images/size/w400/max/800/1-0nm5zh4imj2n42wibaybtq.jpg 400w,
-                            /content/images/size/w720/max/800/1-0nm5zh4imj2n42wibaybtq.jpg 750w,
-                            /content/images/size/w960/max/800/1-0nm5zh4imj2n42wibaybtq.jpg 960w,
-                            /content/images/size/w1200/max/800/1-0nm5zh4imj2n42wibaybtq.jpg 1140w,
-                            /content/images/size/w2000/max/800/1-0nm5zh4imj2n42wibaybtq.jpg 1920w"
+                    srcset="/content/images/size/w400/2024/01/1-0nm5zh4imj2n42wibaybtq.jpg 400w,
+                            /content/images/size/w720/2024/01/1-0nm5zh4imj2n42wibaybtq.jpg 750w,
+                            /content/images/size/w960/2024/01/1-0nm5zh4imj2n42wibaybtq.jpg 960w,
+                            /content/images/size/w1200/2024/01/1-0nm5zh4imj2n42wibaybtq.jpg 1140w,
+                            /content/images/size/w2000/2024/01/1-0nm5zh4imj2n42wibaybtq.jpg 1920w"
                     sizes="600px"
-                    src="/content/images/size/w960/max/800/1-0nm5zh4imj2n42wibaybtq.jpg"
+                    src="/content/images/size/w960/2024/01/1-0nm5zh4imj2n42wibaybtq.jpg"
                     alt="Execute YOLOv7 model on iOS devices"
                     loading="lazy"
                 >

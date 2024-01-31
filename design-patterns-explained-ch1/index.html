@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Design Patterns Explained - CH1</title>
+    <link rel="stylesheet" href="/assets/built/screen.css?v=2feb8aced2">
+
+    <meta name="description" content="This is a summary note about the content of the first chapter of Design Patterns Explained.">
+    <link rel="icon" href="https://blog.cmwang.net/content/images/size/w256h256/2024/01/2-removebg-preview.png" type="image/png">
+    <link rel="canonical" href="https://blog.cmwang.net/design-patterns-explained-ch1/">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta property="og:site_name" content="Liberation Notes">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Design Patterns Explained - CH1">
+    <meta property="og:description" content="This is a summary note about the content of the first chapter of Design Patterns Explained.">
+    <meta property="og:url" content="https://blog.cmwang.net/design-patterns-explained-ch1/">
+    <meta property="og:image" content="https://blog.cmwang.net/content/images/2024/01/81xYhfUxw8L._AC_UF1000-1000_QL80_.jpg">
+    <meta property="article:published_time" content="2017-01-19T16:00:00.000Z">
+    <meta property="article:modified_time" content="2024-01-31T21:46:25.000Z">
+    <meta property="article:tag" content="Design Patterns">
+    <meta property="article:tag" content="OOP">
+    
+    <meta property="article:publisher" content="https://www.facebook.com/ghost">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Design Patterns Explained - CH1">
+    <meta name="twitter:description" content="This is a summary note about the content of the first chapter of Design Patterns Explained.">
+    <meta name="twitter:url" content="https://blog.cmwang.net/design-patterns-explained-ch1/">
+    <meta name="twitter:image" content="https://blog.cmwang.net/content/images/2024/01/81xYhfUxw8L._AC_UF1000-1000_QL80_.jpg">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Jamie Wang">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="Design Patterns, OOP">
+    <meta name="twitter:site" content="@ghost">
+    <meta property="og:image:width" content="756">
+    <meta property="og:image:height" content="1000">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Liberation Notes",
+        "url": "https://blog.cmwang.net/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://blog.cmwang.net/content/images/size/w256h256/2024/01/2-removebg-preview.png",
+            "width": 60,
+            "height": 60
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Jamie Wang",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://blog.cmwang.net/content/images/2024/01/jamie2.jpg",
+            "width": 1200,
+            "height": 1200
+        },
+        "url": "https://blog.cmwang.net/author/jamie/",
+        "sameAs": [
+            "https://blog.cmwang.net"
+        ]
+    },
+    "headline": "Design Patterns Explained - CH1",
+    "url": "https://blog.cmwang.net/design-patterns-explained-ch1/",
+    "datePublished": "2017-01-19T16:00:00.000Z",
+    "dateModified": "2024-01-31T21:46:25.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://blog.cmwang.net/content/images/2024/01/81xYhfUxw8L._AC_UF1000-1000_QL80_.jpg",
+        "width": 756,
+        "height": 1000
+    },
+    "keywords": "Design Patterns, OOP",
+    "description": "This is a summary note about the content of the first chapter of Design Patterns Explained.",
+    "mainEntityOfPage": "https://blog.cmwang.net/design-patterns-explained-ch1/"
+}
+    </script>
+
+    <meta name="generator" content="Ghost 5.78">
+    <link rel="alternate" type="application/rss+xml" title="Liberation Notes" href="https://blog.cmwang.net/rss/">
+    
+    <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="415aa5f59e59c087cacf652d7b" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css" data-sodo-search="https://blog.cmwang.net/" crossorigin="anonymous"></script>
+    
+    <link href="https://blog.cmwang.net/webmentions/receive/" rel="webmention">
+    <script defer src="/public/cards.min.js?v=2feb8aced2"></script>
+    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=2feb8aced2">
+    <style>
+  .gh-search {
+    display: none !important;
+}
+</style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G9WYYRMSWH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G9WYYRMSWH');
+</script>
+
+<!-- prism.js -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" integrity="sha512-vswe+cgvic/XBoF1OcM/TeJ2FW0OofqAVdCZiEYkd6dwGXthvkSFWOoGGJgS2CW70VK5dQM5Oh+7ne47s74VTg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css" integrity="sha512-Dqf5696xtofgH089BgZJo2lSWTvev4GFo+gA2o4GullFY65rzQVQLQVlzLvYwTo0Bb2Gpb6IqwxYWtoMonfdhQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /><style>:root {--ghost-accent-color: #D63484;}</style>
+</head>
+
+<body class="post-template tag-design-patterns tag-oop is-head-left-logo">
+<div class="gh-site">
+
+    <header id="gh-head" class="gh-head gh-outer">
+        <div class="gh-head-inner gh-inner">
+            <div class="gh-head-brand">
+                <div class="gh-head-brand-wrapper">
+                    <a class="gh-head-logo" href="https://blog.cmwang.net">
+                            Liberation Notes
+                    </a>
+                </div>
+                <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+                <button class="gh-burger"></button>
+            </div>
+
+            <nav class="gh-head-menu">
+                <ul class="nav">
+    <li class="nav-home"><a href="https://blog.cmwang.net/">Home</a></li>
+    <li class="nav-about"><a href="https://blog.cmwang.net/about/">About</a></li>
+</ul>
+
+            </nav>
+
+            <div class="gh-head-actions">
+                        <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="site-content">
+        
+<main class="site-main">
+
+
+    <article class="gh-article post tag-design-patterns tag-oop">
+
+        <header class="gh-article-header gh-canvas">
+            <span class="gh-article-meta">
+                By <a href="/author/jamie/">Jamie Wang</a>
+                    in
+                    <a class="gh-article-tag" href="https://blog.cmwang.net/tag/design-patterns/">Design Patterns</a>
+                —
+                <time datetime="2017-01-20">Jan 20, 2017</time>
+            </span>
+
+            <h1 class="gh-article-title">Design Patterns Explained - CH1</h1>
+
+
+                <figure class="gh-article-image kg-width-wide">
+        <img
+            srcset="/content/images/size/w400/2024/01/81xYhfUxw8L._AC_UF1000-1000_QL80_.jpg 400w,
+                    /content/images/size/w720/2024/01/81xYhfUxw8L._AC_UF1000-1000_QL80_.jpg 720w,
+                    /content/images/size/w960/2024/01/81xYhfUxw8L._AC_UF1000-1000_QL80_.jpg 960w,
+                    /content/images/size/w1200/2024/01/81xYhfUxw8L._AC_UF1000-1000_QL80_.jpg 1200w,
+                    /content/images/size/w2000/2024/01/81xYhfUxw8L._AC_UF1000-1000_QL80_.jpg 2000w"
+            sizes="(max-width: 1200px) 100vw, 1200px"
+            src="/content/images/size/w1200/2024/01/81xYhfUxw8L._AC_UF1000-1000_QL80_.jpg"
+            alt="Design Patterns Explained - CH1"
+        >
+            <figcaption><span style="white-space: pre-wrap;">Design Patterns Explained: A New Perspective on Object Oriented Design</span></figcaption>
+    </figure>
+        </header>
+
+        <div class="gh-content gh-canvas">
+            <h1 id="object-oriented-paradigm">Object-Oriented Paradigm</h1><p>Purpose: Explain why object-oriented paradigm over functional decomposition.</p><h2 id="naive-problem">Naive Problem</h2><p>If I were to give you the task of writing code to access a description of shapes that were stored in a database and then display them.</p><p>如果給你一個任務，要編寫一段程式，存取在資料庫中儲存的形狀描述，然後將它顯示出來。</p><h2 id="structural-programming-thinkingpossible-steps">Structural Programming thinking - possible steps</h2><ol><li>Locate the list of shapes in the database. (在資料庫中找到形狀清單)。</li><li>Open up the list of shapes. (打開形狀清單)。</li><li>Sort the list according to some rules. (依照某種規則將清單排序)。</li><li>Display the individual shapes on the monitor. (在螢幕上顯示各種形狀)。</li></ol><h2 id="functional-decomposition-%E5%8A%9F%E8%83%BD%E5%88%86%E8%A7%A3">Functional Decomposition (功能分解)</h2><p>4a. Identify the type of shape. (識別形狀的類型)。 4b. Get the location of the shape. (獲取形狀的位置)。</p><p>4c. Call the appropriate function that will display the shape, giving it the shape’s location. (以形狀的位置為參數，呼叫顯示形狀的 Function)。</p><h2 id="functional-decomposition-%E7%9A%84%E6%8C%91%E6%88%B0">Functional Decomposition 的挑戰</h2><ol><li>它通常會導致一個<strong>主程式負責控制子程式(subprograms)。 這使得主程式所承受的責任</strong>太多了：要協調各 subprograms，還要控制他們的順序 (Why not delegation?)。&nbsp;<strong>«上帝物件：能者多勞»</strong></li><li>如果將實作各步驟的所有邏輯都放在一個大 Function 或大 module 的話，則這些步驟的實質性變化，都必須對這個 Function 或 module 進行修改。&nbsp;<strong>«因應變化的能力差»</strong></li></ol><h2 id="%E8%A8%8E%E8%AB%96">討論</h2><ol><li>需求總是在改變&nbsp;<strong>(不變的真理)</strong>。</li><li>我們可能不知道會發生什麼變化，但我們能夠猜到哪裡會變化。<strong>(OO 最大的優點之一，就是可以封裝這些變化區域)。</strong></li><li>與其抱怨需要總是改變，不如改變開發流程，有效的因應變化。</li></ol><h2 id="dealing-with-changes-functional-decomposition">Dealing with Changes: Functional Decomposition</h2><p>4c. Call the appropriate function that will display the shape, giving it the shape’s location. (以形狀的位置為參數，呼叫顯示形狀的 Function)。</p><p><strong>Using Modularity to Contain Variation</strong></p><pre><code class="language-c">function: display shape
+input: type of shape, description of shape
+action:
+   switch (type of shape)
+      case square: put display function for square here
+      case circle: put display function for circle here
+</code></pre><h2 id="%E8%A8%8E%E8%AB%96-1">討論</h2><ol><li>如果要顯示一個新的形狀(例如三角形)，我可能只需要改這個模組(希望是)。</li><li>這個模組的輸入是 type of shape, description of shape，如果今天使用不同方式提供輸入(例如 array of points 或其他方式)，該怎麼辦？</li></ol><hr><h2 id="functional-decomposition-%E5%85%A9%E5%80%8B%E5%8F%AF%E8%83%BD%E7%9A%84%E5%95%8F%E9%A1%8C">Functional Decomposition 兩個可能的問題</h2><ol><li><strong>Weak cohesion</strong>&nbsp;(Cohesion refers to how “closely the operations in a routine are related; cohesion as&nbsp;<strong>clarity</strong>&nbsp;because the more that operations are related in a routine (or a class), the easier it is to understand things.)</li><li><strong>Tight Coupling</strong>&nbsp;(Coupling refers to “the strength of a connection between two routines. Coupling is a complement to cohesion.)</li></ol><p>The goal is to create routines with internal integrity&nbsp;<strong>(strong cohesion)</strong>&nbsp;and small, direct, visible, and flexible relations to other routines&nbsp;<strong>(loose coupling)</strong>.</p><hr><h2 id="%E5%BE%9E%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB%E5%80%9F%E9%8F%A1">從日常生活借鏡</h2><p>You are an instructor at a conference. People in your class have another class to attend following yours, but don’t know where it is located. One of your responsibilities is to make sure everyone knows how to get to the next class.</p><p>你的責任是確保大家知道怎麼去到下一堂課的位置。</p><hr><h2 id="%E5%8F%AF%E8%83%BD%E7%9A%84%E6%AD%A5%E9%A9%9F">可能的步驟</h2><ol><li>Get list of people in the class.</li><li>For each person on this list, do the following:<ol><li>Find the next class he or she is taking.</li><li>Find the location of that class.</li><li>Find the way to get from your classroom to the person’s next class.</li><li>Tell the person how to get to his or her next class.</li></ol></li></ol><hr><h2 id="%E6%89%80%E4%BB%A5%E4%BD%A0%E5%8F%AF%E8%83%BD%E9%9C%80%E8%A6%81%E9%80%99%E9%BA%BC%E5%81%9A">所以你可能需要這麼做</h2><ol><li>A way of getting the list of people in the class.</li><li>A way of getting the schedule for each person in the class.</li><li>A program that gives someone directions from your classrom to any other classroom.</li><li>A control program that works for each person in the class and does the reuqired steps for each person.</li></ol><hr><h2 id="%E4%B8%8D-%E4%BD%A0%E6%87%89%E8%A9%B2%E6%9C%83%E9%80%99%E6%A8%A3%E5%81%9A">不! 你應該會這樣做</h2><p>你可能會把從這個教室到其他教室的路線貼出來，然後告訴所有人：我們已經將下一堂課的地點和其他教室的位置都貼在後面了，請根據它找到你們下一堂課的教室。</p><p>You would probably post directions to go from this classroom to the other classrooms and then tell everyone in the class,&nbsp;<strong><em>I have posted the locations of the classes following this in the back of the room, as well as the locations of the other classrooms. Please use them to go to your next classroom.</em></strong></p><hr><h2 id="%E5%85%A9%E7%A8%AE%E7%AD%96%E7%95%A5%E7%9A%84%E5%B7%AE%E5%88%A5">兩種策略的差別</h2><ol><li>Giving&nbsp;<strong>explicit directions</strong>&nbsp;to everyone.</li><li>Giving&nbsp;<strong>general instructions</strong>&nbsp;and then expect the each person will figure out how to do the task individually.&nbsp;<strong>(責任轉移 delegation)</strong></li></ol><hr><h2 id="%E9%9C%80%E6%B1%82%E5%8F%88%E6%94%B9%E8%AE%8A%E4%BA%86">需求又改變了</h2><p>如果我被告知，需要給擔任助教工作的學生一些特殊指示。他們可能需要在下一堂課前收集本堂課學生的評價，並且交到辦公室。</p><ol><li>第一種方式，不得不改控製程式，<strong>區別研究生跟大學生</strong>，然後給研究生特別的指示。</li><li>第二種方式，只需要為研究生再編寫一個程式，但控製程式仍然只需要說:&nbsp;<strong>找到你們的下一堂教室</strong>。</li></ol><hr><h2 id="%E7%82%BA%E4%BB%80%E9%BA%BC%E6%9C%89%E9%80%99%E9%BA%BC%E5%A4%A7%E7%9A%84%E5%B7%AE%E7%95%B0">為什麼有這麼大的差異</h2><ol><li>人們對自己的行為負責，而不再由一個中央控製程式負責決定。</li><li>控製程式可以與不同類型的學生交流(大學生或研究生)。</li><li>控製程式不需要知道學生從這個教室到下一個教室可能需要採取的任何特殊步驟。</li></ol><hr><h2 id="%E8%BB%9F%E9%AB%94%E9%96%8B%E7%99%BC%E7%9A%84%E4%B8%89%E7%A8%AE%E8%A6%96%E8%A7%92">軟體開發的三種視角</h2><ol><li><strong>Conceptual:</strong>&nbsp;表示 domain concepts，不管如何實作。回答這個問題：<strong>What am I responsibile for?</strong></li><li><strong>Specification:</strong>&nbsp;關注軟體的 interface，但還是不管如何實作。回答這個問題：<strong>How am I used?</strong></li><li><strong>Implementation:</strong>&nbsp;我們都很熟。回答這個問題：&nbsp;<strong>How do I fulfill my responsibilities?"</strong></li></ol><hr><h2 id="%E4%B8%8D%E5%90%8C%E8%A6%96%E8%A7%92%E7%9A%84%E7%94%A8%E9%80%94">不同視角的用途</h2><p>概念層次上的溝通：你告訴學生的是「你要他們怎麼做」，而不是「如何去做」。 (you are telling people what you want, not how to do it.)</p><p>在概念層次上交流，而在另一層次(實作)上執行，這樣講師就不需要知道具體的實作細節。只需要一般性，概念性的知道即可。</p><p><strong>效力</strong>：只要概念不變，請求者與<strong>實作細節的變化</strong>就被隔離開來。</p><hr><h2 id="object-oriented-paradigm-1">Object-Oriented Paradigm</h2><p>使用物件的優點在於，可以定義物件負責自己的事務。</p><figure class="kg-card kg-image-card"><img src="https://blog.cmwang.net/content/images/2024/01/resp.png" class="kg-image" alt="" loading="lazy" width="2000" height="1316" srcset="https://blog.cmwang.net/content/images/size/w600/2024/01/resp.png 600w, https://blog.cmwang.net/content/images/size/w1000/2024/01/resp.png 1000w, https://blog.cmwang.net/content/images/size/w1600/2024/01/resp.png 1600w, https://blog.cmwang.net/content/images/size/w2400/2024/01/resp.png 2400w" sizes="(min-width: 720px) 720px"></figure><hr><h2 id="%E8%A8%8E%E8%AB%96-2">討論</h2><p>The&nbsp;<strong>objects</strong>&nbsp;were identified by looking at the entities in the&nbsp;<strong>problem domain</strong>. I identified the&nbsp;<strong>responsibilities (or methods)</strong>&nbsp;for each object by looking at what these entities&nbsp;<strong>need to do</strong>.</p><p>– ☆☆☆ 理解物件的最佳方式 ☆☆☆&nbsp;<strong>將其看為具有責任的東西</strong>。物件應該自己負責自己，而且應該清楚地定義責任。</p><hr><h2 id="apply-fowler%E2%80%99s-perspectives">Apply Fowler’s Perspectives</h2><ul><li>At the&nbsp;<strong>conceptual</strong>&nbsp;level, an object is a set of responsibilities. (一組責任)</li><li>At the&nbsp;<strong>specification</strong>&nbsp;level, an object is a set of methods (behaviors) that can be invoked by other objects or by itself. (一組行為)</li><li>At the&nbsp;<strong>implementation</strong>&nbsp;level, an object is code and data and computational interactions between them.</li></ul><hr><h2 id="object-oriented-approach">Object-Oriented Approach</h2><ol><li>Start the control program.</li><li>Instantiate the collection of students in the classroom.</li><li>Tell the collection to have the students go to their next class.</li><li>The collection tells each student to go to his or her next class.</li><li>Each student:<ol><li>Finds where his next class is.</li><li>Determines how to get there.</li><li>Goes there.</li></ol></li><li>Done.</li></ol><hr><h2 id="abstract-and-polymorphism">Abstract and Polymorphism</h2><ul><li>Student abstract class, GraduageStudent and RegularStudent classes.</li><li>Abstract classes define what other, related, classes can do. Abstract classes act as&nbsp;<strong>placeholders</strong>&nbsp;for other classes.</li><li>Collection 只需要處理 Student 這個 Concept (Abstract)，每一種 Student 都可以按照自己的方式實作功能 (Concrete)。</li><li>當我們透過抽象參考，概念性的要求物件做什麼時，將得到不同的行為，具體行為取決於 Derived Class 的實作。<strong>(Polymorphism)</strong></li></ul><hr><h2 id="%E5%9B%9E%E5%88%B0%E4%B8%80%E9%96%8B%E5%A7%8B%E7%9A%84%E5%95%8F%E9%A1%8C">回到一開始的問題</h2><ol><li>Locate the list of shapes in the database. (在資料庫中找到形狀清單)。</li><li>Open up the list of shapes. (打開形狀清單)。</li><li>Sort the list according to some rules. (依照某種規則將清單排序)。</li><li>Display the individual shapes on the monitor. (在螢幕上顯示各種形狀)。</li></ol><hr><h2 id="object-oriented-approach-12">Object-Oriented Approach (1/2)</h2><figure class="kg-card kg-image-card"><img src="https://blog.cmwang.net/content/images/2024/01/resp2.png" class="kg-image" alt="" loading="lazy" width="837" height="724" srcset="https://blog.cmwang.net/content/images/size/w600/2024/01/resp2.png 600w, https://blog.cmwang.net/content/images/2024/01/resp2.png 837w" sizes="(min-width: 720px) 720px"></figure><hr><h2 id="object-oriented-approach-22">Object-Oriented Approach (2/2)</h2><ol><li>主程式建立一個&nbsp;<em>ShapeDataBase</em>&nbsp;物件。</li><li>主程式要求 database object 找到我感興趣的一組形狀，並且 instantiate 一個保存這些形狀的 collection 物件.</li><li>主程式要求 Collection 物件排序所存放的形狀。</li><li>主程式要求 Collection 物件顯示形狀。</li><li>Collection 物件要求所存放的每個形狀顯示自己。</li><li>每個形狀根據形狀種類顯示自己。</li></ol><hr><h2 id="%E9%9C%80%E6%B1%82%E5%8F%88%E6%94%B9%E8%AE%8A%E4%BA%86-1">需求又改變了</h2><ul><li>增加新的形狀 (三角形)<ol><li>增加一個新的三角形 Concrete Class</li><li>在此 Derived Class 實作自己的顯示方法。</li></ol></li><li>更改排序方式<ol><li>修改 Collection 的 Sorting algorithm</li></ol></li></ul><p><strong>結果</strong>：The object-oriented approach has limited the impact of&nbsp;<strong>changing</strong>&nbsp;requirements.</p><hr><h2 id="%E5%B0%81%E8%A3%9D%E7%9A%84%E5%84%AA%E9%BB%9E">封裝的優點</h2><ol><li>使用更容易，因為使用者不再需要擔心實作問題</li><li>可以在不考慮呼叫者的情況下修改實作 (因為它一開始就不知道物件怎麼實作的 depend on interface, not implementation)</li><li>The internals of an object are unknown to other objects. (封裝使物件內部行為的變化對其他物件變得透明了&nbsp;<strong>&lt;不可見&gt;</strong>)。</li></ol><hr><h2 id="take-away">Take away</h2><ol><li>將物件看為<strong>具有責任</strong>的東西。物件應該自己負責自己，而且應該清楚地定義責任。</li><li>物件真正的威力不在於繼承，而是來自於<strong>封裝行為</strong>(採取更廣義的封裝定義)。</li><li>OO 最大的優點之一，就是可以<strong>封裝</strong>這些<strong>變化區域</strong>。</li><li>抽象與責任轉嫁的好處 (placeholder and delegation)。</li><li>三種視角的應用 (在抽象層次上溝通，在實作層次上執行)。</li></ol>
+        </div>
+
+    </article>
+
+    <div class="gh-canvas">
+    <div class="navigation">
+            <a class="navigation-item navigation-next" href="/design-patterns-explained-ch8/">
+                <span class="navigation-label">Next</span>
+                <h4 class="navigation-title">Design Patterns Explained - CH8</h4>
+            </a>
+    </div>
+</div>
+
+
+        <div class="related-wrapper gh-outer">
+        <section class="related-posts gh-inner">
+            <h3 class="related-title">
+                <span class="text">You might also like...</span>
+            </h3>
+            <div class="post-feed">
+                    <article class="post tag-design-patterns tag-oop u-shadow">
+<a class="post-link" href="/design-patterns-explained-ch8/">
+        <figure class="post-media">
+            <div class="u-placeholder same-height rectangle">
+                <img
+                    class="post-image u-object-fit"
+                    srcset="/content/images/size/w400/2024/01/81xYhfUxw8L._AC_UF1000-1000_QL80_-1.jpg 400w,
+                            /content/images/size/w720/2024/01/81xYhfUxw8L._AC_UF1000-1000_QL80_-1.jpg 750w,
+                            /content/images/size/w960/2024/01/81xYhfUxw8L._AC_UF1000-1000_QL80_-1.jpg 960w,
+                            /content/images/size/w1200/2024/01/81xYhfUxw8L._AC_UF1000-1000_QL80_-1.jpg 1140w,
+                            /content/images/size/w2000/2024/01/81xYhfUxw8L._AC_UF1000-1000_QL80_-1.jpg 1920w"
+                    sizes="600px"
+                    src="/content/images/size/w960/2024/01/81xYhfUxw8L._AC_UF1000-1000_QL80_-1.jpg"
+                    alt="Design Patterns Explained - CH8"
+                    loading="lazy"
+                >
+            </div>
+        </figure>
+
+    <div class="post-wrapper">
+        <header class="post-header">
+                <span class="post-tag">Design Patterns</span>
+
+            <h2 class="post-title">
+                Design Patterns Explained - CH8
+            </h2>
+        </header>
+
+            <div class="post-excerpt">
+                This is a summary note about the content of the 8th chapter of Design Patterns Explained.
+            </div>
+    </div>
+
+    <footer class="post-footer">
+        <span class="post-more">Read More</span>
+        <span class="post-time"><time class="post-card-meta-date" datetime="2017-01-21">Jan 21, 2017</time></span>
+
+        <div class="post-author">
+                    <span class="post-author-link">
+                        <img class="post-author-image" src="/content/images/size/w150/2024/01/jamie2.jpg" alt="Jamie Wang" loading="lazy">
+                    </span>
+        </div>
+    </footer>
+</a>
+</article>            </div>
+        </section>
+</div>
+</main>
+    </div>
+
+    <footer class="gh-foot no-menu gh-outer">
+        <div class="gh-foot-inner gh-inner">
+            <div class="gh-copyright">
+                Liberation Notes © 2024
+            </div>
+            <div class="gh-powered-by">
+                <a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+
+    <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/assets/built/main.min.js?v=2feb8aced2"></script>
+
+<style>
+.gh-foot-menu {
+    display: none;
+}
+
+.gh-powered-by {
+    display: none;
+}
+.gh-footer-copyright {
+  display: none;
+}
+</style>
+
+<!-- prism.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js" integrity="sha512-9khQRAUBYEJDCDVP2yw3LRUQvjJ0Pjx0EShmaQjcHa6AXiOv6qHQu9lCAIR8O+/D8FtaCoJ2c0Tf9Xo7hYH01Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha512-SkmBfuA2hqjzEVpmnMt/LINrjop3GKWqsuLSSB3e7iBmYK7JuWw4ldmmxwD9mdm2IRTTi0OxSAfEGvgEi0i2Kw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.js" integrity="sha512-st608h+ZqzliahyzEpETxzU0f7z7a9acN6AFvYmHvpFhmcFuKT8a22TT5TpKpjDa3pt3Wv7Z3SdQBCBdDPhyWA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" integrity="sha512-/kVH1uXuObC0iYgxxCKY41JdWOkKOxorFVmip+YVifKsJ4Au/87EisD1wty7vxN2kAhnWh6Yc8o/dSAXj6Oz7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</body>
+</html>

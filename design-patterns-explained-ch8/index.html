@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Design Patterns Explained - CH8</title>
+    <link rel="stylesheet" href="/assets/built/screen.css?v=2feb8aced2">
+
+    <meta name="description" content="This is a summary note about the content of the 8th chapter of Design Patterns Explained.">
+    <link rel="icon" href="https://blog.cmwang.net/content/images/size/w256h256/2024/01/2-removebg-preview.png" type="image/png">
+    <link rel="canonical" href="https://blog.cmwang.net/design-patterns-explained-ch8/">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta property="og:site_name" content="Liberation Notes">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Design Patterns Explained - CH8">
+    <meta property="og:description" content="This is a summary note about the content of the 8th chapter of Design Patterns Explained.">
+    <meta property="og:url" content="https://blog.cmwang.net/design-patterns-explained-ch8/">
+    <meta property="og:image" content="https://blog.cmwang.net/content/images/2024/01/81xYhfUxw8L._AC_UF1000-1000_QL80_-1.jpg">
+    <meta property="article:published_time" content="2017-01-20T16:00:00.000Z">
+    <meta property="article:modified_time" content="2024-01-31T21:49:38.000Z">
+    <meta property="article:tag" content="Design Patterns">
+    <meta property="article:tag" content="OOP">
+    
+    <meta property="article:publisher" content="https://www.facebook.com/ghost">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Design Patterns Explained - CH8">
+    <meta name="twitter:description" content="This is a summary note about the content of the 8th chapter of Design Patterns Explained.">
+    <meta name="twitter:url" content="https://blog.cmwang.net/design-patterns-explained-ch8/">
+    <meta name="twitter:image" content="https://blog.cmwang.net/content/images/2024/01/81xYhfUxw8L._AC_UF1000-1000_QL80_-1.jpg">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Jamie Wang">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="Design Patterns, OOP">
+    <meta name="twitter:site" content="@ghost">
+    <meta property="og:image:width" content="756">
+    <meta property="og:image:height" content="1000">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Liberation Notes",
+        "url": "https://blog.cmwang.net/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://blog.cmwang.net/content/images/size/w256h256/2024/01/2-removebg-preview.png",
+            "width": 60,
+            "height": 60
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Jamie Wang",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://blog.cmwang.net/content/images/2024/01/jamie2.jpg",
+            "width": 1200,
+            "height": 1200
+        },
+        "url": "https://blog.cmwang.net/author/jamie/",
+        "sameAs": [
+            "https://blog.cmwang.net"
+        ]
+    },
+    "headline": "Design Patterns Explained - CH8",
+    "url": "https://blog.cmwang.net/design-patterns-explained-ch8/",
+    "datePublished": "2017-01-20T16:00:00.000Z",
+    "dateModified": "2024-01-31T21:49:38.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://blog.cmwang.net/content/images/2024/01/81xYhfUxw8L._AC_UF1000-1000_QL80_-1.jpg",
+        "width": 756,
+        "height": 1000
+    },
+    "keywords": "Design Patterns, OOP",
+    "description": "This is a summary note about the content of the 8th chapter of Design Patterns Explained.",
+    "mainEntityOfPage": "https://blog.cmwang.net/design-patterns-explained-ch8/"
+}
+    </script>
+
+    <meta name="generator" content="Ghost 5.78">
+    <link rel="alternate" type="application/rss+xml" title="Liberation Notes" href="https://blog.cmwang.net/rss/">
+    
+    <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="415aa5f59e59c087cacf652d7b" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css" data-sodo-search="https://blog.cmwang.net/" crossorigin="anonymous"></script>
+    
+    <link href="https://blog.cmwang.net/webmentions/receive/" rel="webmention">
+    <script defer src="/public/cards.min.js?v=2feb8aced2"></script>
+    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=2feb8aced2">
+    <style>
+  .gh-search {
+    display: none !important;
+}
+</style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G9WYYRMSWH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G9WYYRMSWH');
+</script>
+
+<!-- prism.js -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" integrity="sha512-vswe+cgvic/XBoF1OcM/TeJ2FW0OofqAVdCZiEYkd6dwGXthvkSFWOoGGJgS2CW70VK5dQM5Oh+7ne47s74VTg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css" integrity="sha512-Dqf5696xtofgH089BgZJo2lSWTvev4GFo+gA2o4GullFY65rzQVQLQVlzLvYwTo0Bb2Gpb6IqwxYWtoMonfdhQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /><style>:root {--ghost-accent-color: #D63484;}</style>
+</head>
+
+<body class="post-template tag-design-patterns tag-oop is-head-left-logo">
+<div class="gh-site">
+
+    <header id="gh-head" class="gh-head gh-outer">
+        <div class="gh-head-inner gh-inner">
+            <div class="gh-head-brand">
+                <div class="gh-head-brand-wrapper">
+                    <a class="gh-head-logo" href="https://blog.cmwang.net">
+                            Liberation Notes
+                    </a>
+                </div>
+                <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+                <button class="gh-burger"></button>
+            </div>
+
+            <nav class="gh-head-menu">
+                <ul class="nav">
+    <li class="nav-home"><a href="https://blog.cmwang.net/">Home</a></li>
+    <li class="nav-about"><a href="https://blog.cmwang.net/about/">About</a></li>
+</ul>
+
+            </nav>
+
+            <div class="gh-head-actions">
+                        <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="site-content">
+        
+<main class="site-main">
+
+
+    <article class="gh-article post tag-design-patterns tag-oop">
+
+        <header class="gh-article-header gh-canvas">
+            <span class="gh-article-meta">
+                By <a href="/author/jamie/">Jamie Wang</a>
+                    in
+                    <a class="gh-article-tag" href="https://blog.cmwang.net/tag/design-patterns/">Design Patterns</a>
+                —
+                <time datetime="2017-01-21">Jan 21, 2017</time>
+            </span>
+
+            <h1 class="gh-article-title">Design Patterns Explained - CH8</h1>
+
+
+                <figure class="gh-article-image kg-width-wide">
+        <img
+            srcset="/content/images/size/w400/2024/01/81xYhfUxw8L._AC_UF1000-1000_QL80_-1.jpg 400w,
+                    /content/images/size/w720/2024/01/81xYhfUxw8L._AC_UF1000-1000_QL80_-1.jpg 720w,
+                    /content/images/size/w960/2024/01/81xYhfUxw8L._AC_UF1000-1000_QL80_-1.jpg 960w,
+                    /content/images/size/w1200/2024/01/81xYhfUxw8L._AC_UF1000-1000_QL80_-1.jpg 1200w,
+                    /content/images/size/w2000/2024/01/81xYhfUxw8L._AC_UF1000-1000_QL80_-1.jpg 2000w"
+            sizes="(max-width: 1200px) 100vw, 1200px"
+            src="/content/images/size/w1200/2024/01/81xYhfUxw8L._AC_UF1000-1000_QL80_-1.jpg"
+            alt="Design Patterns Explained - CH8"
+        >
+    </figure>
+        </header>
+
+        <div class="gh-content gh-canvas">
+            <h1 id="expanding-our-horizons">Expanding Our Horizons</h1><h2 id="overview">Overview</h2><ul><li>Object</li><li>Encapsulation</li><li>Inheritance</li><li>Handling variation</li><li>Commonality and variability analysis</li><li>Abstract class and its derived classes</li></ul><h2 id="objects-traditional-view-and-new-view">Objects: Traditional view and new view</h2><h3 id="traditional-view">Traditional View</h3><ul><li>Data with methods -&nbsp;<strong>smart data</strong></li><li>too narrow from&nbsp;<strong>implementation</strong>&nbsp;perspective</li></ul><h3 id="broad-view">Broad View</h3><ul><li>From&nbsp;<strong>conceptual</strong>&nbsp;perspective</li><li>an object is an&nbsp;<em>entity that has responsibilities</em>&nbsp;(責任), these responsibilities define the behavior of the object. Or an&nbsp;<em>entity that has specific behavior</em>&nbsp;(特定行為).</li></ul><h2 id="focus-on-intentionmotivation-not-implementation">Focus on intention/motivation not implementation</h2><p>This view enables us to build software in two steps:</p><ol><li>Make a preliminary design without worrying about all the details involved.</li><li>Implement the design.</li></ol><p>The reason this works is that we only have to focus on the object’s&nbsp;<strong>public interface</strong>&nbsp;— the communication window through which I ask the object to do something.</p><p>Hiding implementations behind interfaces essentially&nbsp;<strong>decouples</strong>&nbsp;them from the using objects.</p><hr><h2 id="encapsulation-traditional-view-and-new-view">Encapsulation: Traditional view and new view</h2><h3 id="traditional-view-1">Traditional View</h3><ul><li>data hiding</li></ul><h3 id="broad-view-1">Broad View</h3><ul><li><strong>any kind of hiding</strong><ul><li>Implementations (data, methods..)</li><li><strong>Drived</strong>&nbsp;classes (<strong>Encapsulation of type</strong>&nbsp;is achieved when there is an&nbsp;<em>abstract class</em>&nbsp;with derivations (or an interface with implementations) that are used&nbsp;<em>polymorphically</em>)</li><li>Design details</li><li>Instantiation rules (ex. creational patterns)</li></ul></li></ul><h2 id="advantage">Advantage</h2><p>It gives us a better way to split up (decompose) our programs. The&nbsp;<strong>encapsulating layers</strong>&nbsp;become the&nbsp;<strong>interfaces</strong>&nbsp;we design to. (封裝層成為設計需要遵循的介面)</p><p>By encapsulating different kinds of subclasses (<strong>encapsulation of type</strong>), we can add new ones without changing any of the client programs using them. (<em>GoF typically means when they mention encapsulation</em>)</p><hr><h2 id="inheritance">Inheritance</h2><h3 id="traditional-view-2">Traditional View</h3><ul><li><strong>reuse</strong>&nbsp;of classes</li><li>achived by creating classes and then deriving new (<em>spcialized</em>) classes bases on these base (<em>generalized</em>) classes</li></ul><h3 id="broad-view-2">Broad View</h3><ul><li>using inheritance for specialization, however<ul><li>can cause weak cohesion</li><li>reduces possibility of reuse</li><li>does not scale well with variation</li></ul></li><li><em>to classify classes as things that behave the same way</em>. (<strong>placeholder</strong>)</li></ul><hr><h2 id="find-what-is-varying-and-encapsulate-it">Find What Is Varying and Encapsulate It</h2><blockquote>Consider&nbsp;<strong>what</strong>&nbsp;should be variable in your design. This approach is the opposite of focusing on the&nbsp;<strong>cause</strong>&nbsp;of redesign. Instead of considering what might force a change to a design, consider what you want to be&nbsp;<strong><em>able</em></strong>&nbsp;to change without redesign. The focus here is on&nbsp;<strong><em>encapsulating the concept that varies</em></strong>, a theme of many design patterns. – GoF, Design Patterns</blockquote><hr><h2 id="more-about-gof%E2%80%99s-encapsulation">More about GoF’s Encapsulation</h2><ul><li>Design Patterns use inheritance to classify variations in behaviors.</li><li>Hiding classes with an abstract class or interface —&nbsp;<strong>type encapsulation</strong>.</li><li>Containing a reference of this&nbsp;<em>abstract class</em>&nbsp;or&nbsp;<em>interface</em>&nbsp;type (aggregation)&nbsp;<strong>hides</strong>&nbsp;these&nbsp;<em>derived classes</em>&nbsp;that represent&nbsp;<strong>variations</strong>&nbsp;in behavior.</li><li>In effect, many design patterns&nbsp;<em>use encapsulation to create layers</em>&nbsp;between objects.</li></ul><hr><h2 id="containing-variation-in-data-vs-containing-variation-in-behavior">Containing variation in data vs containing variation in behavior</h2><h3 id="handling-variation-in-data">Handling variation in data</h3><ul><li>Have a data member that tells me what type of movement my object has.</li><li>Have two different types of&nbsp;<strong>Animals</strong>&nbsp;(both derived from the base&nbsp;<strong>Animal</strong>&nbsp;class) — one for walking and one for flying.</li></ul><h3 id="handling-variation-in-behavior-with-objects">Handling variation in behavior with objects</h3><p>Using objects to contain variation in attributes and using objects to contain variation in behavior are very similar. Don’t afraid.</p><hr><h2 id="commonality-and-variability">Commonality and Variability</h2><p>Identify&nbsp;<strong>where</strong>&nbsp;things vary (commonality analysis) and then identify&nbsp;<strong>how</strong>&nbsp;they vary (variability analysis).</p><p><strong>Commonality analysis</strong>&nbsp;is the search for common elements that helps us understand how family members are the same.</p><p><strong>Variability analysis</strong>&nbsp;reveals how family members vary. Variability only makes sense within a given commonality.</p><p>Ex. Whiteboard marker, pencil, ballpoint pen</p><ul><li>Commonality: writing instrument</li><li>Variability: material to write, shape..</li></ul><h2 id="commonality-and-variability-and-abstract-class">Commonality and Variability and Abstract class</h2><p><strong>Commonality analysis</strong>&nbsp;seeks structure that is unlikely to change over time, while&nbsp;<strong>variability analysis</strong>&nbsp;captures structure that is likely to change.&nbsp;<strong><em>Variability analysis makes sense only in terms of the context defined by the associated commonality analysis</em></strong>. In other words, if variations are the specific concrete cases in the domain, commonality defines the concepts in the domain that tie them together. The&nbsp;<strong><em>common concepts</em></strong>&nbsp;will be represented by&nbsp;<strong>abstract classes</strong>. The&nbsp;<strong><em>variations</em></strong>&nbsp;found by variability analysis will be implemented by the&nbsp;<strong>concrete classes</strong>.</p><h2 id="relationship-between-commonality-and-variability-perspectives-and-abstract-classes">Relationship between Commonality and Variability, perspectives, and abstract classes</h2><figure class="kg-card kg-image-card"><img src="https://blog.cmwang.net/content/images/2024/01/relationship.png" class="kg-image" alt="" loading="lazy" width="1163" height="511" srcset="https://blog.cmwang.net/content/images/size/w600/2024/01/relationship.png 600w, https://blog.cmwang.net/content/images/size/w1000/2024/01/relationship.png 1000w, https://blog.cmwang.net/content/images/2024/01/relationship.png 1163w" sizes="(min-width: 720px) 720px"></figure><hr><h2 id="benefits-of-using-abstract-classes-for-specialization">Benefits of using abstract classes for specialization</h2><figure class="kg-card kg-image-card"><img src="https://blog.cmwang.net/content/images/2024/01/benefits.png" class="kg-image" alt="" loading="lazy" width="1165" height="490" srcset="https://blog.cmwang.net/content/images/size/w600/2024/01/benefits.png 600w, https://blog.cmwang.net/content/images/size/w1000/2024/01/benefits.png 1000w, https://blog.cmwang.net/content/images/2024/01/benefits.png 1165w" sizes="(min-width: 720px) 720px"></figure><hr><h2 id="two-step-procedure-for-design">Two-Step Procedure for Design</h2><p>Ask yourself:</p><ul><li>When defining an&nbsp;<strong>abstract class</strong>&nbsp;(commonality):<ul><li>What&nbsp;<strong>interface</strong>&nbsp;is needed to handle all the responsibilities (core concepts from the conceptual perspective) of this class?</li></ul></li><li>When defining&nbsp;<strong>derived classes</strong>:<ul><li>Given this particular implementation (this&nbsp;<strong>variation</strong>), how can I implement it (variation) with the given specification?</li></ul></li></ul><hr><h2 id="take-away">Take away</h2><p>Think object-oriented in a broad way.</p><ul><li>Object: an&nbsp;<em>entity that has responsibilities (specific behavior)</em></li><li>Encapsulation:&nbsp;<strong>any</strong>&nbsp;kind of&nbsp;<strong>hiding</strong>&nbsp;(instantiation rule, type..)</li><li>Inheritance: use for&nbsp;<strong>specialization</strong>&nbsp;and&nbsp;<em>classify classes as things that behave the same way</em>.</li></ul><p><strong>Find what is varying and encapsulate it</strong>&nbsp;(in behavior).</p><p>Commonality, variability and abstract class: use inheritance to classify variations in behaviors.</p>
+        </div>
+
+    </article>
+
+    <div class="gh-canvas">
+    <div class="navigation">
+            <a class="navigation-item navigation-previous" href="/design-patterns-explained-ch1/">
+                <span class="navigation-label">Previous</span>
+                <h4 class="navigation-title">Design Patterns Explained - CH1</h4>
+            </a>
+            <a class="navigation-item navigation-next" href="/php-cheat-sheet/">
+                <span class="navigation-label">Next</span>
+                <h4 class="navigation-title">PHP Cheat Sheet</h4>
+            </a>
+    </div>
+</div>
+
+
+        <div class="related-wrapper gh-outer">
+        <section class="related-posts gh-inner">
+            <h3 class="related-title">
+                <span class="text">You might also like...</span>
+            </h3>
+            <div class="post-feed">
+                    <article class="post tag-design-patterns tag-oop u-shadow">
+<a class="post-link" href="/design-patterns-explained-ch1/">
+        <figure class="post-media">
+            <div class="u-placeholder same-height rectangle">
+                <img
+                    class="post-image u-object-fit"
+                    srcset="/content/images/size/w400/2024/01/81xYhfUxw8L._AC_UF1000-1000_QL80_.jpg 400w,
+                            /content/images/size/w720/2024/01/81xYhfUxw8L._AC_UF1000-1000_QL80_.jpg 750w,
+                            /content/images/size/w960/2024/01/81xYhfUxw8L._AC_UF1000-1000_QL80_.jpg 960w,
+                            /content/images/size/w1200/2024/01/81xYhfUxw8L._AC_UF1000-1000_QL80_.jpg 1140w,
+                            /content/images/size/w2000/2024/01/81xYhfUxw8L._AC_UF1000-1000_QL80_.jpg 1920w"
+                    sizes="600px"
+                    src="/content/images/size/w960/2024/01/81xYhfUxw8L._AC_UF1000-1000_QL80_.jpg"
+                    alt="Design Patterns Explained - CH1"
+                    loading="lazy"
+                >
+            </div>
+        </figure>
+
+    <div class="post-wrapper">
+        <header class="post-header">
+                <span class="post-tag">Design Patterns</span>
+
+            <h2 class="post-title">
+                Design Patterns Explained - CH1
+            </h2>
+        </header>
+
+            <div class="post-excerpt">
+                This is a summary note about the content of the first chapter of Design Patterns Explained.
+            </div>
+    </div>
+
+    <footer class="post-footer">
+        <span class="post-more">Read More</span>
+        <span class="post-time"><time class="post-card-meta-date" datetime="2017-01-20">Jan 20, 2017</time></span>
+
+        <div class="post-author">
+                    <span class="post-author-link">
+                        <img class="post-author-image" src="/content/images/size/w150/2024/01/jamie2.jpg" alt="Jamie Wang" loading="lazy">
+                    </span>
+        </div>
+    </footer>
+</a>
+</article>            </div>
+        </section>
+</div>
+</main>
+    </div>
+
+    <footer class="gh-foot no-menu gh-outer">
+        <div class="gh-foot-inner gh-inner">
+            <div class="gh-copyright">
+                Liberation Notes © 2024
+            </div>
+            <div class="gh-powered-by">
+                <a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+
+    <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/assets/built/main.min.js?v=2feb8aced2"></script>
+
+<style>
+.gh-foot-menu {
+    display: none;
+}
+
+.gh-powered-by {
+    display: none;
+}
+.gh-footer-copyright {
+  display: none;
+}
+</style>
+
+<!-- prism.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js" integrity="sha512-9khQRAUBYEJDCDVP2yw3LRUQvjJ0Pjx0EShmaQjcHa6AXiOv6qHQu9lCAIR8O+/D8FtaCoJ2c0Tf9Xo7hYH01Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha512-SkmBfuA2hqjzEVpmnMt/LINrjop3GKWqsuLSSB3e7iBmYK7JuWw4ldmmxwD9mdm2IRTTi0OxSAfEGvgEi0i2Kw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.js" integrity="sha512-st608h+ZqzliahyzEpETxzU0f7z7a9acN6AFvYmHvpFhmcFuKT8a22TT5TpKpjDa3pt3Wv7Z3SdQBCBdDPhyWA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" integrity="sha512-/kVH1uXuObC0iYgxxCKY41JdWOkKOxorFVmip+YVifKsJ4Au/87EisD1wty7vxN2kAhnWh6Yc8o/dSAXj6Oz7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</body>
+</html>

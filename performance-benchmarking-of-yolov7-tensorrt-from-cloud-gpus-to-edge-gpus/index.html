@@ -19,7 +19,7 @@
     <meta property="og:url" content="https://blog.cmwang.net/performance-benchmarking-of-yolov7-tensorrt-from-cloud-gpus-to-edge-gpus/">
     <meta property="og:image" content="https://blog.cmwang.net/content/images/v2/da:true/resize:fit:960/1-uilai7xjc-5scp4rozd8-w.gif">
     <meta property="article:published_time" content="2022-07-25T10:30:00.000Z">
-    <meta property="article:modified_time" content="2024-01-31T19:52:24.000Z">
+    <meta property="article:modified_time" content="2024-01-31T21:33:24.000Z">
     <meta property="article:tag" content="Computer Vision">
     <meta property="article:tag" content="Object Detection">
     <meta property="article:tag" content="AI">
@@ -71,7 +71,7 @@
     "headline": "Performance Benchmarking of YOLOv7 TensorRT from Cloud GPUs to Edge GPUs",
     "url": "https://blog.cmwang.net/performance-benchmarking-of-yolov7-tensorrt-from-cloud-gpus-to-edge-gpus/",
     "datePublished": "2022-07-25T10:30:00.000Z",
-    "dateModified": "2024-01-31T19:52:24.000Z",
+    "dateModified": "2024-01-31T21:33:24.000Z",
     "image": {
         "@type": "ImageObject",
         "url": "https://blog.cmwang.net/content/images/max/800/1-uilai7xjc-5scp4rozd8-w.gif",
@@ -181,15 +181,11 @@
 <!--kg-card-begin: html-->
 <figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://github.com/WongKinYiu/yolov7"><div class="kg-bookmark-content"><div class="kg-bookmark-title">GitHub - WongKinYiu/yolov7: Implementation of paper - YOLOv7: Trainable bag-of-freebies sets new…</div><div class="kg-bookmark-description">Implementation of paper - YOLOv7: Trainable bag-of-freebies sets new state-of-the-art for real-time object detectors MS…</div><div class="kg-bookmark-metadata"></div></div><div class="kg-bookmark-thumbnail"><img src="https://blog.cmwang.net/content/images/fit/c/160/160/0-pex7bashe7svci5r.png" alt=""></div></a></figure>
 <!--kg-card-end: html-->
-<p>If you are trying to learn how to train your model on a custom dataset from the beginning, there are already many tutorials, notebooks and videos available online. In <a href="https://nilvana.ai/" rel="noopener">Nilvana</a>, we really care about its real-world performance on the embedded devices, especially Nvidia Jetson family devices. So we conducted a series performance testing of YOLOv7 variants models on different devices, from cloud GPUs A100 to the latest tiny powerhouse<a href="https://developer.nvidia.com/embedded/jetson-orin" rel="noopener"> AGX Orin</a>.</p>
+<p>If you are trying to learn how to train your model on a custom dataset from the beginning, there are already many tutorials, notebooks and videos available online. In Nilvana, we really care about its real-world performance on the embedded devices, especially Nvidia Jetson family devices. So we conducted a series performance testing of YOLOv7 variants models on different devices, from cloud GPUs A100 to the latest tiny powerhouse<a href="https://developer.nvidia.com/embedded/jetson-orin" rel="noopener"> AGX Orin</a>.</p>
 <!--kg-card-begin: html-->
 <figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Orin-Developer-Kit-p-5314.html"><div class="kg-bookmark-content"><div class="kg-bookmark-title">NVIDIA® Jetson AGX Orin™ Developer Kit: smallest and most powerful AI edge computer</div><div class="kg-bookmark-description">NVIDIA® Jetson AGX Orin™ Developer Kit, provides a giant leap forward for Robotics and Edge AI. With up to 275 TOPS of…</div><div class="kg-bookmark-metadata"></div></div><div class="kg-bookmark-thumbnail"><img src="https://blog.cmwang.net/content/images/fit/c/160/160/0-ze7j0-x469op2ttq.jpg" alt=""></div></a></figure>
 <!--kg-card-end: html-->
 <blockquote>The main reason YOLOv7 is more accurate, compare to other models with similar AP, YOLOv7 has only about half computational cost. — <a href="https://github.com/WongKinYiu/yolov7/issues/207#issuecomment-1186934294" rel="noopener">WongKinYiu</a></blockquote><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://blog.cmwang.net/content/images/max/800/1-egbwzwax-kjvas4om68ypa.png" class="kg-image" alt="" loading="lazy" width="488" height="197"><figcaption><span style="white-space: pre-wrap;">Input and Output shape of YOLOv7 (80&nbsp;class)</span></figcaption></figure><p>According to the results table, Xavier NX can run YOLOv7-tiny model pretty well. AGX Orin can even run YOLOv7x model more than 30 FPS, it’s amazing!</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://blog.cmwang.net/content/images/max/800/1-qkotq0kxs9ewjblqz2h9ga.png" class="kg-image" alt="" loading="lazy" width="755" height="279" srcset="https://blog.cmwang.net/content/images/size/w600/max/800/1-qkotq0kxs9ewjblqz2h9ga.png 600w, https://blog.cmwang.net/content/images/max/800/1-qkotq0kxs9ewjblqz2h9ga.png 755w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">End-to-End Performance on 1080P video, Batch&nbsp;Size=1</span></figcaption></figure><figure class="kg-card kg-embed-card kg-card-hascaption"><iframe src="https://www.youtube.com/embed/videoseries?list=PL3ZyjLA-y4kHCeKiUT9HsYNheLKsuVuqj" width="700" height="394" frameborder="0" scrolling="no"></iframe><figcaption><p><span style="white-space: pre-wrap;">Performance Benchmarking Playlist</span></p></figcaption></figure>
-<!--kg-card-begin: html-->
-<figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://nilvana.ai/"><div class="kg-bookmark-content"><div class="kg-bookmark-title">Hello nilvana™, Hello Tomorrow</div><div class="kg-bookmark-description">AI Workstation, Jetson Nano, Xavier, Nvidia, Edge Computing, IoT, Edge Computing, 人工智慧，工作站，物聯網，邊緣運算，邊緣裝置。</div><div class="kg-bookmark-metadata"></div></div><div class="kg-bookmark-thumbnail"><img src="https://blog.cmwang.net/content/images/fit/c/160/160/0-jdybrwmwowhvmnps.jpg" alt=""></div></a></figure>
-<!--kg-card-end: html-->
-
         </div>
 
     </article>
@@ -352,13 +348,13 @@
             <div class="u-placeholder same-height rectangle">
                 <img
                     class="post-image u-object-fit"
-                    srcset="/content/images/size/w400/max/800/1-0nm5zh4imj2n42wibaybtq.jpg 400w,
-                            /content/images/size/w720/max/800/1-0nm5zh4imj2n42wibaybtq.jpg 750w,
-                            /content/images/size/w960/max/800/1-0nm5zh4imj2n42wibaybtq.jpg 960w,
-                            /content/images/size/w1200/max/800/1-0nm5zh4imj2n42wibaybtq.jpg 1140w,
-                            /content/images/size/w2000/max/800/1-0nm5zh4imj2n42wibaybtq.jpg 1920w"
+                    srcset="/content/images/size/w400/2024/01/1-0nm5zh4imj2n42wibaybtq.jpg 400w,
+                            /content/images/size/w720/2024/01/1-0nm5zh4imj2n42wibaybtq.jpg 750w,
+                            /content/images/size/w960/2024/01/1-0nm5zh4imj2n42wibaybtq.jpg 960w,
+                            /content/images/size/w1200/2024/01/1-0nm5zh4imj2n42wibaybtq.jpg 1140w,
+                            /content/images/size/w2000/2024/01/1-0nm5zh4imj2n42wibaybtq.jpg 1920w"
                     sizes="600px"
-                    src="/content/images/size/w960/max/800/1-0nm5zh4imj2n42wibaybtq.jpg"
+                    src="/content/images/size/w960/2024/01/1-0nm5zh4imj2n42wibaybtq.jpg"
                     alt="Execute YOLOv7 model on iOS devices"
                     loading="lazy"
                 >
