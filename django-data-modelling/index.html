@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Django - Data Modelling</title>
+    <link rel="stylesheet" href="/assets/built/screen.css?v=2feb8aced2">
+
+    <meta name="description" content="Django Notes.">
+    <link rel="icon" href="https://blog.cmwang.net/content/images/size/w256h256/2024/01/2-removebg-preview.png" type="image/png">
+    <link rel="canonical" href="https://blog.cmwang.net/django-data-modelling/">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta property="og:site_name" content="Liberation Notes">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Django - Data Modelling">
+    <meta property="og:description" content="Django Notes.">
+    <meta property="og:url" content="https://blog.cmwang.net/django-data-modelling/">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1580121441575-41bcb5c6b47c?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fHB5dGhvbiUyMGRqYW5nb3xlbnwwfHx8fDE3MDY3NDQwOTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000">
+    <meta property="article:published_time" content="2020-10-24T16:00:00.000Z">
+    <meta property="article:modified_time" content="2024-01-31T23:35:15.000Z">
+    <meta property="article:tag" content="Backend Development">
+    <meta property="article:tag" content="Python">
+    <meta property="article:tag" content="Django">
+    <meta property="article:tag" content="Notes">
+    
+    <meta property="article:publisher" content="https://www.facebook.com/ghost">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Django - Data Modelling">
+    <meta name="twitter:description" content="Django Notes.">
+    <meta name="twitter:url" content="https://blog.cmwang.net/django-data-modelling/">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1580121441575-41bcb5c6b47c?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fHB5dGhvbiUyMGRqYW5nb3xlbnwwfHx8fDE3MDY3NDQwOTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Jamie Wang">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="Backend Development, Python, Django, Notes">
+    <meta name="twitter:site" content="@ghost">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="900">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Liberation Notes",
+        "url": "https://blog.cmwang.net/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://blog.cmwang.net/content/images/size/w256h256/2024/01/2-removebg-preview.png",
+            "width": 60,
+            "height": 60
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Jamie Wang",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://blog.cmwang.net/content/images/2024/01/jamie2.jpg",
+            "width": 1200,
+            "height": 1200
+        },
+        "url": "https://blog.cmwang.net/author/jamie/",
+        "sameAs": [
+            "https://blog.cmwang.net"
+        ]
+    },
+    "headline": "Django - Data Modelling",
+    "url": "https://blog.cmwang.net/django-data-modelling/",
+    "datePublished": "2020-10-24T16:00:00.000Z",
+    "dateModified": "2024-01-31T23:35:15.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://images.unsplash.com/photo-1580121441575-41bcb5c6b47c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDR8fHB5dGhvbiUyMGRqYW5nb3xlbnwwfHx8fDE3MDY3NDQwOTF8MA&ixlib=rb-4.0.3&q=80&w=2000",
+        "width": 1200,
+        "height": 900
+    },
+    "keywords": "Backend Development, Python, Django, Notes",
+    "description": "Django Notes.",
+    "mainEntityOfPage": "https://blog.cmwang.net/django-data-modelling/"
+}
+    </script>
+
+    <meta name="generator" content="Ghost 5.78">
+    <link rel="alternate" type="application/rss+xml" title="Liberation Notes" href="https://blog.cmwang.net/rss/">
+    
+    <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="415aa5f59e59c087cacf652d7b" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css" data-sodo-search="https://blog.cmwang.net/" crossorigin="anonymous"></script>
+    
+    <link href="https://blog.cmwang.net/webmentions/receive/" rel="webmention">
+    <script defer src="/public/cards.min.js?v=2feb8aced2"></script>
+    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=2feb8aced2">
+    <style>
+  .gh-search {
+    display: none !important;
+}
+</style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G9WYYRMSWH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G9WYYRMSWH');
+</script>
+
+<!-- prism.js -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" integrity="sha512-vswe+cgvic/XBoF1OcM/TeJ2FW0OofqAVdCZiEYkd6dwGXthvkSFWOoGGJgS2CW70VK5dQM5Oh+7ne47s74VTg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css" integrity="sha512-Dqf5696xtofgH089BgZJo2lSWTvev4GFo+gA2o4GullFY65rzQVQLQVlzLvYwTo0Bb2Gpb6IqwxYWtoMonfdhQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /><style>:root {--ghost-accent-color: #D63484;}</style>
+</head>
+
+<body class="post-template tag-backend-development tag-python tag-django tag-notes is-head-left-logo">
+<div class="gh-site">
+
+    <header id="gh-head" class="gh-head gh-outer">
+        <div class="gh-head-inner gh-inner">
+            <div class="gh-head-brand">
+                <div class="gh-head-brand-wrapper">
+                    <a class="gh-head-logo" href="https://blog.cmwang.net">
+                            Liberation Notes
+                    </a>
+                </div>
+                <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+                <button class="gh-burger"></button>
+            </div>
+
+            <nav class="gh-head-menu">
+                <ul class="nav">
+    <li class="nav-home"><a href="https://blog.cmwang.net/">Home</a></li>
+    <li class="nav-about"><a href="https://blog.cmwang.net/about/">About</a></li>
+</ul>
+
+            </nav>
+
+            <div class="gh-head-actions">
+                        <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="site-content">
+        
+<main class="site-main">
+
+
+    <article class="gh-article post tag-backend-development tag-python tag-django tag-notes">
+
+        <header class="gh-article-header gh-canvas">
+            <span class="gh-article-meta">
+                By <a href="/author/jamie/">Jamie Wang</a>
+                    in
+                    <a class="gh-article-tag" href="https://blog.cmwang.net/tag/backend-development/">Backend Development</a>
+                —
+                <time datetime="2020-10-25">Oct 25, 2020</time>
+            </span>
+
+            <h1 class="gh-article-title">Django - Data Modelling</h1>
+
+
+                <figure class="gh-article-image kg-width-wide">
+        <img
+            srcset="https://images.unsplash.com/photo-1580121441575-41bcb5c6b47c?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fHB5dGhvbiUyMGRqYW5nb3xlbnwwfHx8fDE3MDY3NDQwOTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;400 400w,
+                    https://images.unsplash.com/photo-1580121441575-41bcb5c6b47c?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fHB5dGhvbiUyMGRqYW5nb3xlbnwwfHx8fDE3MDY3NDQwOTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;720 720w,
+                    https://images.unsplash.com/photo-1580121441575-41bcb5c6b47c?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fHB5dGhvbiUyMGRqYW5nb3xlbnwwfHx8fDE3MDY3NDQwOTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;960 960w,
+                    https://images.unsplash.com/photo-1580121441575-41bcb5c6b47c?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fHB5dGhvbiUyMGRqYW5nb3xlbnwwfHx8fDE3MDY3NDQwOTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1200 1200w,
+                    https://images.unsplash.com/photo-1580121441575-41bcb5c6b47c?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fHB5dGhvbiUyMGRqYW5nb3xlbnwwfHx8fDE3MDY3NDQwOTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000 2000w"
+            sizes="(max-width: 1200px) 100vw, 1200px"
+            src="https://images.unsplash.com/photo-1580121441575-41bcb5c6b47c?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fHB5dGhvbiUyMGRqYW5nb3xlbnwwfHx8fDE3MDY3NDQwOTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1200"
+            alt="Django - Data Modelling"
+        >
+            <figcaption><span style="white-space: pre-wrap;">Photo by </span><a href="https://unsplash.com/@faisaldada?utm_source=ghost&amp;utm_medium=referral&amp;utm_campaign=api-credit"><span style="white-space: pre-wrap;">Faisal</span></a><span style="white-space: pre-wrap;"> / </span><a href="https://unsplash.com/?utm_source=ghost&amp;utm_medium=referral&amp;utm_campaign=api-credit"><span style="white-space: pre-wrap;">Unsplash</span></a></figcaption>
+    </figure>
+        </header>
+
+        <div class="gh-content gh-canvas">
+            <h2 id="create-model">Create Model</h2>
+<ul>
+<li>會自動產生 primary key，因為繼承自 <strong>models.Model</strong>。若想要自訂 <code>primary key</code>，可以參考 sku 的寫法</li>
+</ul>
+<pre><code class="language-python"># playground/models.py
+from django.db import models
+
+# Create your models here.
+class Product(models.Model):
+    #sku = models.CharField(max_length=10, primary_key=True) # use this primary key
+    title = models.CharField(max_length=300)
+    description = models.TextField()
+    price = models.DecimalField(max_digits=6, decimal_places=2)
+    inventory = models.IntegerField()
+    last_updated = models.DateTimeField(auto_now=True) # update every time
+</code></pre>
+<h2 id="choices-field"><code>Choices</code> field</h2>
+<pre><code class="language-python">class Customer(models.Model):
+    # best practice to prevent hardcode
+    MEMBERSHIP_BRONZE = 'B'
+    MEMBERSHIP_SILVER = 'S'
+    MEMBERSHIP_GOLD = 'G'
+
+    MEMBERSHIP_CHOICES = [
+        (MEMBERSHIP_BRONZE, 'Bronze'),
+        (MEMBERSHIP_SILVER, 'Silver'),
+        (MEMBERSHIP_GOLD, 'Gold'),
+    ]
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    email = models.EmailField(max_length=100,unique=True)
+    phone = models.CharField(max_length=15, unique=True)
+    birth_date = models.DateTimeField(null=True, blank=True)
+    membership = models.CharField(max_length=1, choices=MEMBERSHIP_CHOICES, default=MEMBERSHIP_BRONZE)
+</code></pre>
+<h2 id="one-to-one-relationship"><code>One-to-One</code> relationship</h2>
+<pre><code class="language-python">class Address(models.Model):
+    street = models.CharField(max_length=255)
+    city = models.CharField(max_length=255)
+    # address is the child, customer is the parent
+    customr = models.OneToOneField(
+        Customer, on_delete=models.CASCADE, primary_key=True)
+</code></pre>
+<ul>
+<li><strong><code>on_delete=models.CASCADE</code> (層級刪除)</strong>: 當父模型被刪除時，與之相關聯的子模型也會被刪除</li>
+<li><strong><code>on_delete=models.PROTECT</code> (保護模式)</strong>: 防止刪除父模型，除非先刪除所有與之相關的子模型。</li>
+<li><strong><code>on_delete=models.SET_NULL</code> (設為空值)</strong>: 當父模型被刪除時，與之相關聯的子模型的外鍵欄位（即<code>OneToOneField</code>）會被設為 NULL。
+<ul>
+<li>範例：一個簡單的部落格系統，如果一篇文章被作者刪除，該文章的作者欄位會被設為 NULL。</li>
+</ul>
+</li>
+<li><strong><code>on_delete=models.SET_DEFAULT</code> (設為預設值)</strong>: 當父模型被刪除時，與之相關聯的子模型的外鍵欄位會被設為預設值。
+<ul>
+<li>範例：一個簡單的部落格系統，如果一篇文章被作者刪除，該文章的作者欄位會被設為 NULL。</li>
+</ul>
+</li>
+<li><strong><code>on_delete=models.SET()</code> (設定為特定值)</strong>: 當父模型被刪除時，與之相關聯的子模型的外鍵欄位會被設為特定的值（通常是另一個存在的模型實例）。
+<ul>
+<li>範例：一個論壇系統，如果一個用戶帳號被刪除，與之相關聯的文章的作者欄位會被設為論壇的預設用戶，這個預設用戶的 ID 為 1。</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-python">class Child(models.Model):
+    parent = models.OneToOneField(Parent, on_delete=models.CASCADE)
+    ...
+class Child(models.Model):
+    parent = models.OneToOneField(Parent, on_delete=models.PROTECT)
+    ...
+class Child(models.Model):
+    parent = models.OneToOneField(Parent, on_delete=models.SET_NULL, null=True)
+    ...
+class Child(models.Model):
+    parent = models.OneToOneField(Parent, on_delete=models.SET_DEFAULT, default=1)
+    ...
+class Child(models.Model):
+    parent = models.OneToOneField(Parent, on_delete=models.SET(DefaultParent.objects.get(pk=1)))
+    ...
+</code></pre>
+<h2 id="one-to-many-relationship"><code>One-to-many</code> relationship</h2>
+<p>one collection can have many products</p>
+<ul>
+<li>
+<p>Use <code>foreignkey</code></p>
+</li>
+<li>
+<p>if you can not modify the order of declaration for the <code>collection</code> model, you can employ a <code>string argument</code> within the <code>ForeignKey</code> field:</p>
+<p><code>collection = models.ForeignKey('Collection', on_delete=models.PROTECT)</code></p>
+</li>
+</ul>
+<pre><code class="language-python">class Collection(models.Model):
+    title = models.CharField(max_length=300)
+
+class Product(models.Model):
+    ...
+    collection = models.ForeignKey(Collection, on_delete=models.PROTECT)
+</code></pre>
+<h2 id="many-to-many-relationship"><code>Many-to-Many</code> relationship</h2>
+<ul>
+<li>Use <code>ManyToManyField</code></li>
+<li>to customize the name of the reverse relation. Instead of the default <code>product_set</code>, you can use the <code>related_name</code> field</li>
+</ul>
+<pre><code class="language-python">class Promotion(models.Model):
+    description = models.CharField(max_length=255)
+    discount = models.FloatField()
+    # product_set
+
+class Product(models.Model):
+    ...
+    collection = models.ForeignKey('Collection', on_delete=models.PROTECT)
+    #promotions = models.ManyToManyField(Promotion, related_name='products')
+    promotions = models.ManyToManyField(Promotion)
+
+</code></pre>
+<h2 id="generic-relationship"><code>Generic</code> Relationship</h2>
+<pre><code class="language-python">from django.contrib.contenttypes.models import ContentType
+from django.contrib.contenttypes.fields import GenericForeignKey
+from django.contrib.auth.models import User
+
+class LikeItem(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    # type (Table)
+    content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
+    # ID (record)
+    object_id = models.PositiveSmallIntegerField()
+    # Pointer
+    content_object = GenericForeignKey()
+</code></pre>
+<ol>
+<li>
+<p><strong><code>ContentType</code> (內容類型)</strong>: 在 Django 中，<code>ContentType</code> 是一個模型，它用來表示其他模型的類型。在這個程式碼中，<code>content_type</code> 欄位是一個外鍵，關聯到 <code>ContentType</code> 模型。這麼做的好處是，它允許你動態地參照其他模型，而不是在程式碼中直接寫死模型的名稱。這樣的設計可以增加彈性，讓你的程式碼更容易擴展和修改，而不需要改動太多程式碼。</p>
+</li>
+<li>
+<p><strong><code>GenericForeignKey</code> (通用外鍵)</strong>: <code>GenericForeignKey</code> 是一個用於關聯任意模型的特殊欄位。在這個例子中，<code>content_object</code> 欄位使用了 <code>GenericForeignKey</code>。這意味著 <code>LikeItem</code> 模型可以與任何其他模型建立關聯，而不僅僅是固定的一個或幾個模型。通過 <code>content_type</code> 和 <code>object_id</code> 這兩個欄位，你可以動態地建立與不同模型的關聯。</p>
+</li>
+<li>
+<p><strong><code>LikeItem</code> 模型</strong>: <code>LikeItem</code> 是一個用戶點贊的模型，它關聯到了使用者 (<code>user</code>) 和其他模型 (<code>content_type</code> 和 <code>object_id</code> 確定的模型)。這樣的設計允許你在不確定具體模型的情況下，保存用戶對不同類型物件的喜愛。</p>
+</li>
+</ol>
+<p>在 <code>LikeItem</code> 模型中，<code>content_type</code> 是一個外鍵欄位，關聯到 <code>ContentType</code> 模型，用來指定被點贊物件的類型（例如，是一篇文章還是一張圖片等等）。而 <code>object_id</code> 是一個正整數欄位，用來指定具體的被點贊物件的 ID。</p>
+<p><code>GenericForeignKey</code> 的作用就是把 <code>content_type</code> 和 <code>object_id</code> 這兩個欄位關聯到一個具體的模型實例上，這樣你就可以在 <code>LikeItem</code> 中使用 <code>content_object</code> 這個屬性，直接訪問被點贊的具體物件，而不需要關心它是哪種模型。</p>
+<p>例如，如果 <code>content_type</code> 指定為文章，<code>object_id</code> 指定為某篇文章的 ID，那麼 <code>content_object</code> 就可以直接訪問該篇文章的所有屬性和方法。這樣，你可以在不確定具體模型的情況下，動態地建立關聯，使得程式碼更加靈活和可擴展。</p>
+<p>你可以將 <code>content_object</code> 想像成程式語言中的指標 <code>pointer</code>。在這個上下文中，<code>content_object</code> 實際上是一個通用指標，指向了應用中的任何一個模型的特定實例。這樣的設計使得你可以動態地指向和訪問不同模型的物件，而不需要知道具體是哪個類型的物件。</p>
+<p>就像指標在程式語言中可以指向不同的變數或數據結構，<code>content_object</code> 允許你在 <code>LikeItem</code> 模型中指向任何類型的物件，從而實現彈性的資料模型。這樣的抽象設計使得程式碼更具通用性，可以應對多種不同的情況，同時也使得程式碼更容易擴展和維護。</p>
+<hr>
+<h2 id="generic-relationshipexample">Generic Relationship - <strong>Example</strong></h2>
+<p>假設你的對象是 <code>Article</code>（文章）模型，你可以使用 <code>GenericForeignKey</code> 來建立 <code>LikeItem</code> 與 <code>Article</code> 之間的關聯。以下是一個簡單的範例：</p>
+<p>首先，定義你的 <code>Article</code> 模型：</p>
+<pre><code class="language-python">from django.db import models
+
+class Article(models.Model):
+    # 文章的屬性，例如標題、內容等等
+    title = models.CharField(max_length=100)
+    content = models.TextField()
+
+    def __str__(self):
+        return self.title
+</code></pre>
+<p>然後，定義你的 <code>LikeItem</code> 模型，使用 <code>GenericForeignKey</code> 來建立通用外鍵關聯：</p>
+<pre><code class="language-python">from django.contrib.contenttypes.fields import GenericForeignKey
+from django.contrib.contenttypes.models import ContentType
+from django.contrib.auth.models import User
+from django.db import models
+
+class LikeItem(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
+    object_id = models.PositiveIntegerField()
+    content_object = GenericForeignKey('content_type', 'object_id')
+</code></pre>
+<p>在這個例子中，<code>LikeItem</code> 模型可以關聯到任何模型的實例，包括 <code>Article</code>。當你想要為某篇文章建立一個 <code>LikeItem</code> 時，你可以這樣做：</p>
+<pre><code class="language-python"># 創建一篇文章
+article = Article.objects.create(title="標題", content="文章內容")
+
+# 創建一個 LikeItem 關聯到這篇文章
+like_item = LikeItem.objects.create(user=user, content_type=ContentType.objects.get_for_model(article), object_id=article.id)
+
+# 使用 GenericForeignKey 訪問被點贊的物件
+liked_article = like_item.content_object
+print(liked_article.title)  # 輸出: 標題
+</code></pre>
+<p>在這個例子中，<code>content_type</code> 指定為 <code>Article</code> 模型的類型，<code>object_id</code> 指定為具體文章的 ID。通過 <code>GenericForeignKey</code>，你可以使用 <code>content_object</code> 直接訪問到被點贊的文章的屬性。這樣，你可以動態地建立與不同模型的關聯，而不需要為每種模型都定義一個單獨的外鍵。</p>
+<hr>
+<h2 id="reverse-relationshipexample">Reverse Relationship - <strong>Example</strong></h2>
+<p>在 Django 中，<strong>反向關係(reverse relationship)</strong> 通常是自動產生的，無論是在一對一（One-to-One）、一對多（One-to-Many）還是多對多（Many-to-Many）的關係中，Django 都會自動為你建立反向關係。這意味著你可以從一個模型對象訪問與之相關聯的其他模型對象。</p>
+<p>假設你有兩個模型，一個是<code>Author</code>，另一個是<code>Book</code>。<code>Book</code>模型有一個外鍵欄位指向<code>Author</code>模型：</p>
+<pre><code class="language-python">from django.db import models
+
+class Author(models.Model):
+    name = models.CharField(max_length=100)
+
+class Book(models.Model):
+    title = models.CharField(max_length=100)
+    author = models.ForeignKey(Author, on_delete=models.CASCADE)
+</code></pre>
+<p>在這個例子中，<code>Book</code>模型有一個外鍵欄位<code>author</code>指向<code>Author</code>模型。Django 會自動為<code>Author</code>模型生成一個反向關係。這意味著你可以透過<code>Author</code>模型來訪問所有與之相關聯的書籍，即使你並沒有在<code>Author</code>模型中定義相關的欄位。</p>
+<p>例如，如果你有一個<code>Author</code>的實例<code>author</code>，你可以這樣獲取所有與這個作者相關的書籍：</p>
+<pre><code class="language-python">books = author.book_set.all()
+</code></pre>
+<p>在這裡，<code>book_set</code>就是 Django 自動為<code>Author</code>模型生成的反向關係。這個名稱的格式是<code>小寫的模型名稱_set</code>，它可以讓你訪問到所有與這個模型相關的對象。這種反向關係的自動生成使得在 Django 中進行模型之間的查詢和操作更加方便。</p>
+<hr>
+<p>然而，有一個特殊的情況是如果你已經使用了 <code>related_name</code> 參數來定義了自定義的反向關係名稱，反向關係的名稱就不再是默認的 <code>小寫的模型名稱_set</code> 格式。在這種情況下，你必須通過自定義的名稱來訪問反向關係。</p>
+<p>舉例來說：</p>
+<pre><code class="language-python">from django.db import models
+
+class Person(models.Model):
+    name = models.CharField(max_length=100)
+
+class Passport(models.Model):
+    number = models.CharField(max_length=20)
+    person = models.OneToOneField(Person, on_delete=models.CASCADE, related_name='passport')
+</code></pre>
+<p>在這個例子中，<code>Passport</code> 模型有一個一對一的外鍵關係，並且使用了 <code>related_name='passport'</code> 參數。這樣，在 <code>Person</code> 模型中就不會自動生成默認的反向關係。要訪問這個關係，你需要使用 <code>passport</code> 這個自定義的名稱：</p>
+<pre><code class="language-python">person = Person.objects.get(pk=1)
+passport = person.passport  # 訪問一對一關係的反向關係
+</code></pre>
+<p>在其他情況下（包括一對多和多對多關係），Django 都會自動生成默認的反向關係，你可以直接使用模型的名稱（小寫）作為反向關係的名稱。</p>
+<h2 id="relatedname-field-in-foreignkey"><code>related_name</code> field in <strong>ForeignKey</strong></h2>
+<p>在一對多關係中，<code>related_name</code> 可以被用來定義反向關係的名稱，使你能夠更具意義地訪問相關對象。在多對多關係中，<code>related_name</code> 可以被用來定義通過中間表訪問相關對象時的名稱。</p>
+<p>以下是一個一對多和多對多關係中 <code>related_name</code> 的使用示例：</p>
+<p><strong>一對多（One-to-Many）關係：</strong></p>
+<pre><code class="language-python">from django.db import models
+
+class Author(models.Model):
+    name = models.CharField(max_length=100)
+
+class Book(models.Model):
+    title = models.CharField(max_length=100)
+    author = models.ForeignKey(Author, on_delete=models.CASCADE, related_name='books')
+</code></pre>
+<p>在這個例子中，<code>Book</code> 模型的 <code>author</code> 欄位定義了外鍵關係，並且使用了 <code>related_name='books'</code> 參數。這樣，你就可以透過 <code>author.books.all()</code> 來訪問一位作者的所有書籍。</p>
+<p><strong>多對多（Many-to-Many）關係：</strong></p>
+<pre><code class="language-python">from django.db import models
+
+class Person(models.Model):
+    name = models.CharField(max_length=100)
+    groups = models.ManyToManyField('Group', related_name='memberships')
+
+class Group(models.Model):
+    name = models.CharField(max_length=100)
+    # 其他欄位和方法
+</code></pre>
+<p>在這個例子中，<code>Person</code> 模型和 <code>Group</code> 模型之間建立了多對多的關係。<code>Person</code> 模型的 <code>groups</code> 欄位使用了 <code>related_name='memberships'</code> 參數。這樣，你可以透過 <code>group.memberships.all()</code> 來訪問一個群組中的所有成員。</p>
+
+        </div>
+
+    </article>
+
+    <div class="gh-canvas">
+    <div class="navigation">
+            <a class="navigation-item navigation-previous" href="/django-fundamental/">
+                <span class="navigation-label">Previous</span>
+                <h4 class="navigation-title">Django - Fundamental</h4>
+            </a>
+            <a class="navigation-item navigation-next" href="/replicate-apple-music-ipad-os-app/">
+                <span class="navigation-label">Next</span>
+                <h4 class="navigation-title">仿製 iPad 上的 Apple Music</h4>
+            </a>
+    </div>
+</div>
+
+
+        <div class="related-wrapper gh-outer">
+        <section class="related-posts gh-inner">
+            <h3 class="related-title">
+                <span class="text">You might also like...</span>
+            </h3>
+            <div class="post-feed">
+                    <article class="post tag-backend-development tag-python tag-django tag-notes u-shadow">
+<a class="post-link" href="/django-fundamental/">
+        <figure class="post-media">
+            <div class="u-placeholder same-height rectangle">
+                <img
+                    class="post-image u-object-fit"
+                    srcset="https://images.unsplash.com/photo-1580121441575-41bcb5c6b47c?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDEwfHxweXRob258ZW58MHx8fHwxNzA2NzQzOTAyfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;400 400w,
+                            https://images.unsplash.com/photo-1580121441575-41bcb5c6b47c?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDEwfHxweXRob258ZW58MHx8fHwxNzA2NzQzOTAyfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;720 750w,
+                            https://images.unsplash.com/photo-1580121441575-41bcb5c6b47c?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDEwfHxweXRob258ZW58MHx8fHwxNzA2NzQzOTAyfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;960 960w,
+                            https://images.unsplash.com/photo-1580121441575-41bcb5c6b47c?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDEwfHxweXRob258ZW58MHx8fHwxNzA2NzQzOTAyfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1200 1140w,
+                            https://images.unsplash.com/photo-1580121441575-41bcb5c6b47c?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDEwfHxweXRob258ZW58MHx8fHwxNzA2NzQzOTAyfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000 1920w"
+                    sizes="600px"
+                    src="https://images.unsplash.com/photo-1580121441575-41bcb5c6b47c?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDEwfHxweXRob258ZW58MHx8fHwxNzA2NzQzOTAyfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;960"
+                    alt="Django - Fundamental"
+                    loading="lazy"
+                >
+            </div>
+        </figure>
+
+    <div class="post-wrapper">
+        <header class="post-header">
+                <span class="post-tag">Backend Development</span>
+
+            <h2 class="post-title">
+                Django - Fundamental
+            </h2>
+        </header>
+
+            <div class="post-excerpt">
+                Django Notes.
+            </div>
+    </div>
+
+    <footer class="post-footer">
+        <span class="post-more">Read More</span>
+        <span class="post-time"><time class="post-card-meta-date" datetime="2020-10-24">Oct 24, 2020</time></span>
+
+        <div class="post-author">
+                    <span class="post-author-link">
+                        <img class="post-author-image" src="/content/images/size/w150/2024/01/jamie2.jpg" alt="Jamie Wang" loading="lazy">
+                    </span>
+        </div>
+    </footer>
+</a>
+</article>                    <article class="post tag-frontend-development tag-html tag-cheat-sheet tag-notes u-shadow">
+<a class="post-link" href="/html-form-cheat-sheet/">
+        <figure class="post-media">
+            <div class="u-placeholder same-height rectangle">
+                <img
+                    class="post-image u-object-fit"
+                    srcset="https://images.unsplash.com/photo-1621839673705-6617adf9e890?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fGh0bWx8ZW58MHx8fHwxNzA2NzQwNDUyfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;400 400w,
+                            https://images.unsplash.com/photo-1621839673705-6617adf9e890?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fGh0bWx8ZW58MHx8fHwxNzA2NzQwNDUyfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;720 750w,
+                            https://images.unsplash.com/photo-1621839673705-6617adf9e890?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fGh0bWx8ZW58MHx8fHwxNzA2NzQwNDUyfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;960 960w,
+                            https://images.unsplash.com/photo-1621839673705-6617adf9e890?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fGh0bWx8ZW58MHx8fHwxNzA2NzQwNDUyfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1200 1140w,
+                            https://images.unsplash.com/photo-1621839673705-6617adf9e890?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fGh0bWx8ZW58MHx8fHwxNzA2NzQwNDUyfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000 1920w"
+                    sizes="600px"
+                    src="https://images.unsplash.com/photo-1621839673705-6617adf9e890?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fGh0bWx8ZW58MHx8fHwxNzA2NzQwNDUyfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;960"
+                    alt="Html Form Cheat Sheet"
+                    loading="lazy"
+                >
+            </div>
+        </figure>
+
+    <div class="post-wrapper">
+        <header class="post-header">
+                <span class="post-tag">Frontend Development</span>
+
+            <h2 class="post-title">
+                Html Form Cheat Sheet
+            </h2>
+        </header>
+
+            <div class="post-excerpt">
+                HTML Form Cheat Sheet
+            </div>
+    </div>
+
+    <footer class="post-footer">
+        <span class="post-more">Read More</span>
+        <span class="post-time"><time class="post-card-meta-date" datetime="2020-10-21">Oct 21, 2020</time></span>
+
+        <div class="post-author">
+                    <span class="post-author-link">
+                        <img class="post-author-image" src="/content/images/size/w150/2024/01/jamie2.jpg" alt="Jamie Wang" loading="lazy">
+                    </span>
+        </div>
+    </footer>
+</a>
+</article>                    <article class="post tag-frontend-development tag-html tag-cheat-sheet tag-notes u-shadow">
+<a class="post-link" href="/html-cheat-sheet/">
+        <figure class="post-media">
+            <div class="u-placeholder same-height rectangle">
+                <img
+                    class="post-image u-object-fit"
+                    srcset="https://images.unsplash.com/photo-1621839673705-6617adf9e890?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fGh0bWx8ZW58MHx8fHwxNzA2NzQwNDUyfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;400 400w,
+                            https://images.unsplash.com/photo-1621839673705-6617adf9e890?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fGh0bWx8ZW58MHx8fHwxNzA2NzQwNDUyfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;720 750w,
+                            https://images.unsplash.com/photo-1621839673705-6617adf9e890?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fGh0bWx8ZW58MHx8fHwxNzA2NzQwNDUyfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;960 960w,
+                            https://images.unsplash.com/photo-1621839673705-6617adf9e890?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fGh0bWx8ZW58MHx8fHwxNzA2NzQwNDUyfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1200 1140w,
+                            https://images.unsplash.com/photo-1621839673705-6617adf9e890?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fGh0bWx8ZW58MHx8fHwxNzA2NzQwNDUyfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000 1920w"
+                    sizes="600px"
+                    src="https://images.unsplash.com/photo-1621839673705-6617adf9e890?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fGh0bWx8ZW58MHx8fHwxNzA2NzQwNDUyfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;960"
+                    alt="HTML Cheat Sheet"
+                    loading="lazy"
+                >
+            </div>
+        </figure>
+
+    <div class="post-wrapper">
+        <header class="post-header">
+                <span class="post-tag">Frontend Development</span>
+
+            <h2 class="post-title">
+                HTML Cheat Sheet
+            </h2>
+        </header>
+
+            <div class="post-excerpt">
+                Cheat Sheet for HTML
+            </div>
+    </div>
+
+    <footer class="post-footer">
+        <span class="post-more">Read More</span>
+        <span class="post-time"><time class="post-card-meta-date" datetime="2020-10-20">Oct 20, 2020</time></span>
+
+        <div class="post-author">
+                    <span class="post-author-link">
+                        <img class="post-author-image" src="/content/images/size/w150/2024/01/jamie2.jpg" alt="Jamie Wang" loading="lazy">
+                    </span>
+        </div>
+    </footer>
+</a>
+</article>                    <article class="post tag-backend-development tag-php tag-cheat-sheet tag-notes u-shadow">
+<a class="post-link" href="/php-cheat-sheet/">
+        <figure class="post-media">
+            <div class="u-placeholder same-height rectangle">
+                <img
+                    class="post-image u-object-fit"
+                    srcset="https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;400 400w,
+                            https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;720 750w,
+                            https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;960 960w,
+                            https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1200 1140w,
+                            https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000 1920w"
+                    sizes="600px"
+                    src="https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;960"
+                    alt="PHP Cheat Sheet"
+                    loading="lazy"
+                >
+            </div>
+        </figure>
+
+    <div class="post-wrapper">
+        <header class="post-header">
+                <span class="post-tag">Backend Development</span>
+
+            <h2 class="post-title">
+                PHP Cheat Sheet
+            </h2>
+        </header>
+
+            <div class="post-excerpt">
+                Cheat Sheet for PHP8
+            </div>
+    </div>
+
+    <footer class="post-footer">
+        <span class="post-more">Read More</span>
+        <span class="post-time"><time class="post-card-meta-date" datetime="2020-10-17">Oct 17, 2020</time></span>
+
+        <div class="post-author">
+                    <span class="post-author-link">
+                        <img class="post-author-image" src="/content/images/size/w150/2024/01/jamie2.jpg" alt="Jamie Wang" loading="lazy">
+                    </span>
+        </div>
+    </footer>
+</a>
+</article>            </div>
+        </section>
+</div>
+</main>
+    </div>
+
+    <footer class="gh-foot no-menu gh-outer">
+        <div class="gh-foot-inner gh-inner">
+            <div class="gh-copyright">
+                Liberation Notes © 2024
+            </div>
+            <div class="gh-powered-by">
+                <a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+
+    <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/assets/built/main.min.js?v=2feb8aced2"></script>
+
+<style>
+.gh-foot-menu {
+    display: none;
+}
+
+.gh-powered-by {
+    display: none;
+}
+.gh-footer-copyright {
+  display: none;
+}
+</style>
+
+<!-- prism.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js" integrity="sha512-9khQRAUBYEJDCDVP2yw3LRUQvjJ0Pjx0EShmaQjcHa6AXiOv6qHQu9lCAIR8O+/D8FtaCoJ2c0Tf9Xo7hYH01Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha512-SkmBfuA2hqjzEVpmnMt/LINrjop3GKWqsuLSSB3e7iBmYK7JuWw4ldmmxwD9mdm2IRTTi0OxSAfEGvgEi0i2Kw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.js" integrity="sha512-st608h+ZqzliahyzEpETxzU0f7z7a9acN6AFvYmHvpFhmcFuKT8a22TT5TpKpjDa3pt3Wv7Z3SdQBCBdDPhyWA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" integrity="sha512-/kVH1uXuObC0iYgxxCKY41JdWOkKOxorFVmip+YVifKsJ4Au/87EisD1wty7vxN2kAhnWh6Yc8o/dSAXj6Oz7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</body>
+</html>
