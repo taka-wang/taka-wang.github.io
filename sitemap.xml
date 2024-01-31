@@ -1,18 +1,1 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <sitemap>
-    <loc>https://blog.cmwang.net/en/sitemap.xml</loc>
-    
-      <lastmod>2023-11-12T15:40:59+08:00</lastmod>
-    
-  </sitemap>
-  
-  <sitemap>
-    <loc>https://blog.cmwang.net/zh/sitemap.xml</loc>
-    
-      <lastmod>2023-12-25T20:25:54+08:00</lastmod>
-    
-  </sitemap>
-  
-</sitemapindex>
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="//localhost:2368/sitemap.xsl"?><sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><sitemap><loc>http://localhost:2368/sitemap-pages.xml</loc><lastmod>2024-01-31T13:10:15.450Z</lastmod></sitemap><sitemap><loc>http://localhost:2368/sitemap-posts.xml</loc><lastmod>2024-01-31T13:10:15.358Z</lastmod></sitemap><sitemap><loc>http://localhost:2368/sitemap-authors.xml</loc><lastmod>2024-01-31T13:10:16.065Z</lastmod></sitemap><sitemap><loc>http://localhost:2368/sitemap-tags.xml</loc><lastmod>2024-01-31T13:08:21.000Z</lastmod></sitemap></sitemapindex>
