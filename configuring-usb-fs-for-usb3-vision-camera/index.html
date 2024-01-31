@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Configuring USB-FS for USB3 Vision Camera</title>
-    <link rel="stylesheet" href="/assets/built/screen.css?v=69d004e056">
+    <link rel="stylesheet" href="/assets/built/screen.css?v=2feb8aced2">
 
     <meta name="description" content="This post explains how to increase the buffer memory for USB-FS devices on Linux systems in order to make full use of the imaging hardware’s capabilities. By default, USB-FS on Linux systems only…">
     <link rel="icon" href="https://blog.cmwang.net/content/images/size/w256h256/2024/01/2-removebg-preview.png" type="image/png">
@@ -89,13 +89,27 @@
     <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="415aa5f59e59c087cacf652d7b" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css" data-sodo-search="https://blog.cmwang.net/" crossorigin="anonymous"></script>
     
     <link href="https://blog.cmwang.net/webmentions/receive/" rel="webmention">
-    <script defer src="/public/cards.min.js?v=69d004e056"></script>
-    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=69d004e056">
+    <script defer src="/public/cards.min.js?v=2feb8aced2"></script>
+    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=2feb8aced2">
     <style>
   .gh-search {
     display: none !important;
 }
-</style><style>:root {--ghost-accent-color: #D63484;}</style>
+</style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G9WYYRMSWH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G9WYYRMSWH');
+</script>
+
+<!-- prism.js -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" integrity="sha512-vswe+cgvic/XBoF1OcM/TeJ2FW0OofqAVdCZiEYkd6dwGXthvkSFWOoGGJgS2CW70VK5dQM5Oh+7ne47s74VTg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css" integrity="sha512-Dqf5696xtofgH089BgZJo2lSWTvev4GFo+gA2o4GullFY65rzQVQLQVlzLvYwTo0Bb2Gpb6IqwxYWtoMonfdhQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /><style>:root {--ghost-accent-color: #D63484;}</style>
 </head>
 
 <body class="post-template tag-embedded-systems tag-computer-vision tag-machine-vision-system is-head-left-logo">
@@ -166,7 +180,7 @@
  
 #!/bin/sh -e 
 echo 1000 &gt; /sys/module/usbcore/parameters/usbfs_memory_mb 
-exit 0</code></pre><p>After changing the memory limit, it is important to confirm the changes have been made correctly. This can be done by running the command <code>cat /sys/module/usbcore/parameters/usbfs_memory_mb</code>, which will display the current memory limit. If the limit is still 16 MB, then the changes will need to be made again. Additionally, further information about USB-FS on Linux can be found in the following sources:</p><ul><li><a href="https://www.flir.asia/support-center/iis/machine-vision/application-note/understanding-usbfs-on-linux/?ref=localhost" rel="noopener">Understanding USBFS on Linux</a></li><li><a href="https://importgeek.wordpress.com/2017/02/26/increase-usbfs-memory-limit-in-ubuntu/?ref=localhost" rel="noopener">Increase USBFS Memory Limit in Ubuntu</a></li><li><a href="https://forums.developer.nvidia.com/t/change-kernel-cmdline-by-edit-etc-default-grub-failed/159831/2?ref=localhost" rel="noopener">Change Kernel Cmdline by Edit /etc/default/grub Failed</a></li></ul>
+exit 0</code></pre><p>After changing the memory limit, it is important to confirm the changes have been made correctly. This can be done by running the command <code>cat /sys/module/usbcore/parameters/usbfs_memory_mb</code>, which will display the current memory limit. If the limit is still 16 MB, then the changes will need to be made again. Additionally, further information about USB-FS on Linux can be found in the following sources:</p><ul><li><a href="https://www.flir.asia/support-center/iis/machine-vision/application-note/understanding-usbfs-on-linux/" rel="noopener">Understanding USBFS on Linux</a></li><li><a href="https://importgeek.wordpress.com/2017/02/26/increase-usbfs-memory-limit-in-ubuntu/" rel="noopener">Increase USBFS Memory Limit in Ubuntu</a></li><li><a href="https://forums.developer.nvidia.com/t/change-kernel-cmdline-by-edit-etc-default-grub-failed/159831/2" rel="noopener">Change Kernel Cmdline by Edit /etc/default/grub Failed</a></li></ul>
         </div>
 
     </article>
@@ -427,7 +441,7 @@ exit 0</code></pre><p>After changing the memory limit, it is important to confir
         </div>
     </div>
 </div>
-<script src="/assets/built/main.min.js?v=69d004e056"></script>
+<script src="/assets/built/main.min.js?v=2feb8aced2"></script>
 
 <style>
 .gh-foot-menu {
@@ -441,6 +455,12 @@ exit 0</code></pre><p>After changing the memory limit, it is important to confir
   display: none;
 }
 </style>
+
+<!-- prism.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js" integrity="sha512-9khQRAUBYEJDCDVP2yw3LRUQvjJ0Pjx0EShmaQjcHa6AXiOv6qHQu9lCAIR8O+/D8FtaCoJ2c0Tf9Xo7hYH01Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha512-SkmBfuA2hqjzEVpmnMt/LINrjop3GKWqsuLSSB3e7iBmYK7JuWw4ldmmxwD9mdm2IRTTi0OxSAfEGvgEi0i2Kw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.js" integrity="sha512-st608h+ZqzliahyzEpETxzU0f7z7a9acN6AFvYmHvpFhmcFuKT8a22TT5TpKpjDa3pt3Wv7Z3SdQBCBdDPhyWA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" integrity="sha512-/kVH1uXuObC0iYgxxCKY41JdWOkKOxorFVmip+YVifKsJ4Au/87EisD1wty7vxN2kAhnWh6Yc8o/dSAXj6Oz7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 </body>
 </html>
