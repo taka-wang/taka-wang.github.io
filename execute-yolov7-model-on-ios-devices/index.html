@@ -19,12 +19,12 @@
     <meta property="og:url" content="https://blog.cmwang.net/execute-yolov7-model-on-ios-devices/">
     <meta property="og:image" content="https://blog.cmwang.net/content/images/v2/resize:fit:700/1-0nm5zh4imj2n42wibaybtq.jpg">
     <meta property="article:published_time" content="2022-08-06T11:04:15.000Z">
-    <meta property="article:modified_time" content="2022-08-06T11:04:15.000Z">
+    <meta property="article:modified_time" content="2024-01-31T19:51:41.000Z">
     <meta property="article:tag" content="Coreml">
     <meta property="article:tag" content="iOS">
     <meta property="article:tag" content="Yolov7">
     <meta property="article:tag" content="Object Detection">
-    <meta property="article:tag" content="Artificial Intelligence">
+    <meta property="article:tag" content="AI">
     
     <meta property="article:publisher" content="https://www.facebook.com/ghost">
     <meta name="twitter:card" content="summary_large_image">
@@ -33,9 +33,9 @@
     <meta name="twitter:url" content="https://blog.cmwang.net/execute-yolov7-model-on-ios-devices/">
     <meta name="twitter:image" content="https://blog.cmwang.net/content/images/v2/resize:fit:700/1-0nm5zh4imj2n42wibaybtq.jpg">
     <meta name="twitter:label1" content="Written by">
-    <meta name="twitter:data1" content="Taka Wang">
+    <meta name="twitter:data1" content="Jamie Wang">
     <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="Coreml, iOS, Yolov7, Object Detection, Artificial Intelligence">
+    <meta name="twitter:data2" content="Coreml, iOS, Yolov7, Object Detection, AI">
     <meta name="twitter:site" content="@ghost">
     <meta property="og:image:width" content="700">
     <meta property="og:image:height" content="400">
@@ -57,27 +57,29 @@
     },
     "author": {
         "@type": "Person",
-        "name": "Taka Wang",
+        "name": "Jamie Wang",
         "image": {
             "@type": "ImageObject",
-            "url": "https://blog.cmwang.net/content/images/v2/resize:fill:144:144/1-mzehvowngfwyye2pswx_vw.png",
-            "width": 144,
-            "height": 144
+            "url": "https://blog.cmwang.net/content/images/2024/01/jamie2.jpg",
+            "width": 1200,
+            "height": 1200
         },
-        "url": "https://blog.cmwang.net/author/takawang/",
-        "sameAs": []
+        "url": "https://blog.cmwang.net/author/jamie/",
+        "sameAs": [
+            "https://blog.cmwang.net"
+        ]
     },
     "headline": "Execute YOLOv7 model on iOS devices",
     "url": "https://blog.cmwang.net/execute-yolov7-model-on-ios-devices/",
     "datePublished": "2022-08-06T11:04:15.000Z",
-    "dateModified": "2022-08-06T11:04:15.000Z",
+    "dateModified": "2024-01-31T19:51:41.000Z",
     "image": {
         "@type": "ImageObject",
         "url": "https://blog.cmwang.net/content/images/max/800/1-0nm5zh4imj2n42wibaybtq.jpg",
         "width": 700,
         "height": 400
     },
-    "keywords": "Coreml, iOS, Yolov7, Object Detection, Artificial Intelligence",
+    "keywords": "Coreml, iOS, Yolov7, Object Detection, AI",
     "description": "Real-time object detection with CoreML is trickier than you think.",
     "mainEntityOfPage": "https://blog.cmwang.net/execute-yolov7-model-on-ios-devices/"
 }
@@ -93,7 +95,7 @@
     <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=69d004e056">
 </head>
 
-<body class="post-template tag-coreml tag-ios tag-yolov7 tag-object-detection tag-artificial-intelligence tag-hash-medium tag-hash-import-2024-02-01-00-16 is-head-left-logo">
+<body class="post-template tag-coreml tag-ios tag-yolov7 tag-object-detection tag-ai is-head-left-logo">
 <div class="gh-site">
 
     <header id="gh-head" class="gh-head gh-outer">
@@ -127,11 +129,11 @@
 <main class="site-main">
 
 
-    <article class="gh-article post tag-coreml tag-ios tag-yolov7 tag-object-detection tag-artificial-intelligence tag-hash-medium tag-hash-import-2024-02-01-00-16">
+    <article class="gh-article post tag-coreml tag-ios tag-yolov7 tag-object-detection tag-ai">
 
         <header class="gh-article-header gh-canvas">
             <span class="gh-article-meta">
-                By <a href="/author/takawang/">Taka Wang</a>
+                By <a href="/author/jamie/">Jamie Wang</a>
                     in
                     <a class="gh-article-tag" href="https://blog.cmwang.net/tag/coreml/">Coreml</a>
                 —
@@ -152,12 +154,24 @@
             src="/content/images/size/w1200/max/800/1-0nm5zh4imj2n42wibaybtq.jpg"
             alt="Execute YOLOv7 model on iOS devices"
         >
-            <figcaption>Real-time object detection with CoreML is trickier than you&nbsp;think.</figcaption>
+            <figcaption><span style="white-space: pre-wrap;">Real-time object detection with CoreML is trickier than you&nbsp;think.</span></figcaption>
     </figure>
         </header>
 
         <div class="gh-content gh-canvas">
-            <h3 id="run-yolov7-model-on-ios-devices">Run YOLOv7 model on iOS devices</h3><p>Usually, you have two choices to build a machine learning app for your mobile device, <strong>inference</strong> can happen either directly on-device or on cloud-based servers. It all depends on your usage scenario, there is no one-size fit all solution. In this article, we will only focus on on-device inference, if your are interested in remote inference solution, maybe you can take a look at <a href="https://shop.nilvana.ai/products/nilvana-vision-inference-runtime?ref=localhost" rel="noopener">Nilvana™ Vision Inference Runtime</a>.</p><p>At WWDC 2017 Apple released first Core ML. Core ML is Apple’s machine learning framework for doing on-device inference. Core ML is not the only way to do on-device inference, there are tens of libraries and frameworks that are compatible with iOS, but that’s beyond the scope of this article. From the <a href="https://github.com/WongKinYiu/yolov7?ref=localhost" rel="noopener">YOLOv7 official repository</a>, we can get the <a href="https://github.com/WongKinYiu/yolov7/blob/main/export.py?ref=localhost" rel="noopener">export script</a> to convert trained PyTorch model to Core ML format effortlessly. However, keep one thing in mind, YOLOv7 is a popular open source project, new changes and updates are added very quickly. I’m also very glad to send a <a href="https://github.com/WongKinYiu/yolov7/pull/434/commits?ref=localhost" rel="noopener">PR</a> to improve the export script last night due to this writing 😃.</p><hr><p>After you got the exported Core ML models, no kidding, you have tons of things in your todo list. <a href="https://twitter.com/mhollemans?ref=localhost" rel="noopener">Matthijs Hollemans</a> has already written an insightful <a href="https://machinethink.net/blog/bounding-boxes/?ref=localhost" rel="noopener">article</a> in his blog, be sure to checkout and <a href="https://leanpub.com/coreml-survival-guide?ref=localhost" rel="noopener">support his efforts</a>! Here is my short list:</p><ul><li>Configure your Core ML model in a particular way. You can either append NMS to your model or write a lot of additional Swift code. IMHO, this is the most difficult part if you know nothing about the object detection model.</li><li>Specify camera resolution, don’t simply select the highest resolution available if your app doesn’t require it.</li><li>Resize or crop your input image to fit network input dimension, it depends on your application.</li><li>Feed modified images to your model in a correct orientation.</li><li>Fix Vision’s weird orin.</li><li>Convert bounding boxes coordinate system for display. This is also a trickier part, you need some iOS development experiences and a pencil for calculation 😎.</li></ul><p>According to Hollemans’s article, there are at least 5 different coordinate systems you need to take care, not to mention how to handle real-time capturing correctly and efficiently is also non-trivial. You can follow these two articles to learn how to create a custom camera view.</p><!--kg-card-begin: html--><figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://developer.apple.com/documentation/vision/recognizing_objects_in_live_capture?ref=localhost"><div class="kg-bookmark-content"><div class="kg-bookmark-title">Apple Developer Documentation | Recognizing Objects in Live Capture</div><div class="kg-bookmark-description"></div><div class="kg-bookmark-metadata"></div></div></a></figure><!--kg-card-end: html--><!--kg-card-begin: html--><figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://guides.codepath.com/ios/Creating-a-Custom-Camera-View?ref=localhost"><div class="kg-bookmark-content"><div class="kg-bookmark-title">Creating a Custom Camera View | CodePath iOS Cliffnotes</div><div class="kg-bookmark-description">Accessing the Built in Image Picker Controller is a quick and easy way to get image and video capture into your app…</div><div class="kg-bookmark-metadata"></div></div></a></figure><!--kg-card-end: html--><hr><p>At the latest <a href="https://developer.apple.com/videos/play/wwdc2022/10027/?ref=localhost" rel="noopener">WWDC 2022</a>, Apple introduced even more performance tools to its CoreML toolchain, now you can check your model’s metadata via <strong>performance reports</strong> and <strong>Core ML Instrument </strong>without writing any code. You can also use <code>computeUnits = .cpuAndNeuralEngine</code> if you don’t want to use the GPU but always force the model to run on the CPU and ANE if available.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://blog.cmwang.net/content/images/max/800/1-pmnazzvfrotjl62lsin-cq.png" class="kg-image" alt loading="lazy" width="2000" height="784" srcset="https://blog.cmwang.net/content/images/size/w600/max/800/1-pmnazzvfrotjl62lsin-cq.png 600w, https://blog.cmwang.net/content/images/size/w1000/max/800/1-pmnazzvfrotjl62lsin-cq.png 1000w, https://blog.cmwang.net/content/images/size/w1600/max/800/1-pmnazzvfrotjl62lsin-cq.png 1600w, https://blog.cmwang.net/content/images/size/w2400/max/800/1-pmnazzvfrotjl62lsin-cq.png 2400w" sizes="(min-width: 720px) 720px"><figcaption>Prefer CPU and ANE instead of&nbsp;GPU.</figcaption></figure><p>You can learn more about ANE from the following repository, thank you again Hollemans.</p><!--kg-card-begin: html--><figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://github.com/hollance/neural-engine?ref=localhost"><div class="kg-bookmark-content"><div class="kg-bookmark-title">GitHub - hollance/neural-engine: Everything we actually know about the Apple Neural Engine (ANE)</div><div class="kg-bookmark-description">Most new iPhones and iPads have a Neural Engine, a special processor that makes machine learning models really fast…</div><div class="kg-bookmark-metadata"></div></div><div class="kg-bookmark-thumbnail"><img src="https://blog.cmwang.net/content/images/fit/c/160/160/0-bim0fuyf26vxrxj3.png" alt></div></a></figure><!--kg-card-end: html--><p>Here are snapshots from my model’s performance reports.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://blog.cmwang.net/content/images/max/800/1-chrnkwsmronwdmxy5gzk5g.png" class="kg-image" alt loading="lazy" width="999" height="924" srcset="https://blog.cmwang.net/content/images/size/w600/max/800/1-chrnkwsmronwdmxy5gzk5g.png 600w, https://blog.cmwang.net/content/images/max/800/1-chrnkwsmronwdmxy5gzk5g.png 999w" sizes="(min-width: 720px) 720px"><figcaption>You can evaluate your model via drag-and-drop image&nbsp;files.</figcaption></figure><p>There is no significant inference speed differences among quantization models, but the model size only about half the size. It’s a good thing for your mobile applications.</p><figure class="kg-card kg-gallery-card kg-width-wide kg-card-hascaption"><div class="kg-gallery-container"><div class="kg-gallery-row"><div class="kg-gallery-image"><img src="https://blog.cmwang.net/content/images/max/600/1-8nh4sx9qus2s6vjpdl8kdw.png" width="761" height="376" loading="lazy" alt srcset="https://blog.cmwang.net/content/images/size/w600/max/600/1-8nh4sx9qus2s6vjpdl8kdw.png 600w, https://blog.cmwang.net/content/images/max/600/1-8nh4sx9qus2s6vjpdl8kdw.png 761w" sizes="(min-width: 720px) 720px"></div><div class="kg-gallery-image"><img src="https://blog.cmwang.net/content/images/max/600/1-b1dmp5fanjnpxlmdx6ovfg.png" width="757" height="374" loading="lazy" alt srcset="https://blog.cmwang.net/content/images/size/w600/max/600/1-b1dmp5fanjnpxlmdx6ovfg.png 600w, https://blog.cmwang.net/content/images/max/600/1-b1dmp5fanjnpxlmdx6ovfg.png 757w" sizes="(min-width: 720px) 720px"></div></div></div><figcaption>No inference speed improved. (Left is FP32, right is&nbsp;FP16)</figcaption></figure><figure class="kg-card kg-gallery-card kg-width-wide kg-card-hascaption"><div class="kg-gallery-container"><div class="kg-gallery-row"><div class="kg-gallery-image"><img src="https://blog.cmwang.net/content/images/max/600/1-t-t3lxffhjluzrfmcjyrcq.png" width="927" height="724" loading="lazy" alt srcset="https://blog.cmwang.net/content/images/size/w600/max/600/1-t-t3lxffhjluzrfmcjyrcq.png 600w, https://blog.cmwang.net/content/images/max/600/1-t-t3lxffhjluzrfmcjyrcq.png 927w" sizes="(min-width: 720px) 720px"></div><div class="kg-gallery-image"><img src="https://blog.cmwang.net/content/images/max/600/1-xqsp3itb9mi-ozpyndna9a.png" width="929" height="718" loading="lazy" alt srcset="https://blog.cmwang.net/content/images/size/w600/max/600/1-xqsp3itb9mi-ozpyndna9a.png 600w, https://blog.cmwang.net/content/images/max/600/1-xqsp3itb9mi-ozpyndna9a.png 929w" sizes="(min-width: 720px) 720px"></div></div></div><figcaption>Half the size of the FP32&nbsp;model.</figcaption></figure><p>Finally, you have a working YOLOv7 Core ML model on the iOS devices, be careful of the heat🔥. Happy coding!</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://blog.cmwang.net/content/images/max/800/1-f23rqz-9nanzq4n65ymkda.gif" class="kg-image" alt loading="lazy" width="800" height="449" srcset="https://blog.cmwang.net/content/images/size/w600/max/800/1-f23rqz-9nanzq4n65ymkda.gif 600w, https://blog.cmwang.net/content/images/max/800/1-f23rqz-9nanzq4n65ymkda.gif 800w" sizes="(min-width: 720px) 720px"><figcaption><strong class="markup--strong markup--figure-strong">Yolov7-tiny on iPad Mini 6.</strong> Copyrights of <a href="https://youtu.be/hngml3y2Rq8?ref=localhost" data-href="https://youtu.be/hngml3y2Rq8" class="markup--anchor markup--figure-anchor" rel="noopener" target="_blank">BBIBBI Dance Practice</a> belongs Kakao Entertainment.</figcaption></figure><hr><p>Any opinions expressed are solely my own and do not express the views or opinions of my employer.</p><h3 id="references">References</h3><ul><li><a href="https://developer.apple.com/documentation/vision/recognizing_objects_in_live_capture?ref=localhost" rel="noopener">Recognizing Objects in Live Capture</a></li><li><a href="https://machinethink.net/blog/bounding-boxes/?ref=localhost" rel="noopener">How to display Vision bounding boxes</a></li><li><a href="https://guides.codepath.com/ios/Creating-a-Custom-Camera-View?ref=localhost" rel="noopener">Creating a Custom Camera View</a></li><li><a href="https://github.com/hollance/neural-engine?ref=localhost" rel="noopener">The Neural Engine — what do we know about it?</a></li><li><a href="https://github.com/WongKinYiu/yolov7?ref=localhost" rel="noopener">WongKinYiu/yolov7</a></li><li><a href="https://developer.apple.com/videos/play/wwdc2022/10027/?ref=localhost" rel="noopener">WWDC2022 — Optimize your Core ML usage</a></li><li><a href="https://machinethink.net/blog/mobilenet-ssdlite-coreml/?ref=localhost" rel="noopener">MobileNetV2 + SSDLite with Core ML</a></li><li><a href="https://github.com/dbsystel/yolov5-coreml-tools?ref=localhost" rel="noopener">yolov5 — CoreML Tools</a></li></ul>
+            <h3 id="run-yolov7-model-on-ios-devices">Run YOLOv7 model on iOS devices</h3><p>Usually, you have two choices to build a machine learning app for your mobile device, <strong>inference</strong> can happen either directly on-device or on cloud-based servers. It all depends on your usage scenario, there is no one-size fit all solution. In this article, we will only focus on on-device inference, if your are interested in remote inference solution, maybe you can take a look at <a href="https://shop.nilvana.ai/products/nilvana-vision-inference-runtime?ref=localhost" rel="noopener">Nilvana™ Vision Inference Runtime</a>.</p><p>At WWDC 2017 Apple released first Core ML. Core ML is Apple’s machine learning framework for doing on-device inference. Core ML is not the only way to do on-device inference, there are tens of libraries and frameworks that are compatible with iOS, but that’s beyond the scope of this article. From the <a href="https://github.com/WongKinYiu/yolov7?ref=localhost" rel="noopener">YOLOv7 official repository</a>, we can get the <a href="https://github.com/WongKinYiu/yolov7/blob/main/export.py?ref=localhost" rel="noopener">export script</a> to convert trained PyTorch model to Core ML format effortlessly. However, keep one thing in mind, YOLOv7 is a popular open source project, new changes and updates are added very quickly. I’m also very glad to send a <a href="https://github.com/WongKinYiu/yolov7/pull/434/commits?ref=localhost" rel="noopener">PR</a> to improve the export script last night due to this writing 😃.</p><hr><p>After you got the exported Core ML models, no kidding, you have tons of things in your todo list. <a href="https://twitter.com/mhollemans?ref=localhost" rel="noopener">Matthijs Hollemans</a> has already written an insightful <a href="https://machinethink.net/blog/bounding-boxes/?ref=localhost" rel="noopener">article</a> in his blog, be sure to checkout and <a href="https://leanpub.com/coreml-survival-guide?ref=localhost" rel="noopener">support his efforts</a>! Here is my short list:</p><ul><li>Configure your Core ML model in a particular way. You can either append NMS to your model or write a lot of additional Swift code. IMHO, this is the most difficult part if you know nothing about the object detection model.</li><li>Specify camera resolution, don’t simply select the highest resolution available if your app doesn’t require it.</li><li>Resize or crop your input image to fit network input dimension, it depends on your application.</li><li>Feed modified images to your model in a correct orientation.</li><li>Fix Vision’s weird orin.</li><li>Convert bounding boxes coordinate system for display. This is also a trickier part, you need some iOS development experiences and a pencil for calculation 😎.</li></ul><p>According to Hollemans’s article, there are at least 5 different coordinate systems you need to take care, not to mention how to handle real-time capturing correctly and efficiently is also non-trivial. You can follow these two articles to learn how to create a custom camera view.</p>
+<!--kg-card-begin: html-->
+<figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://developer.apple.com/documentation/vision/recognizing_objects_in_live_capture?ref=localhost"><div class="kg-bookmark-content"><div class="kg-bookmark-title">Apple Developer Documentation | Recognizing Objects in Live Capture</div><div class="kg-bookmark-description"></div><div class="kg-bookmark-metadata"></div></div></a></figure>
+<!--kg-card-end: html-->
+
+<!--kg-card-begin: html-->
+<figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://guides.codepath.com/ios/Creating-a-Custom-Camera-View?ref=localhost"><div class="kg-bookmark-content"><div class="kg-bookmark-title">Creating a Custom Camera View | CodePath iOS Cliffnotes</div><div class="kg-bookmark-description">Accessing the Built in Image Picker Controller is a quick and easy way to get image and video capture into your app…</div><div class="kg-bookmark-metadata"></div></div></a></figure>
+<!--kg-card-end: html-->
+<hr><p>At the latest <a href="https://developer.apple.com/videos/play/wwdc2022/10027/?ref=localhost" rel="noopener">WWDC 2022</a>, Apple introduced even more performance tools to its CoreML toolchain, now you can check your model’s metadata via <strong>performance reports</strong> and <strong>Core ML Instrument </strong>without writing any code. You can also use <code>computeUnits = .cpuAndNeuralEngine</code> if you don’t want to use the GPU but always force the model to run on the CPU and ANE if available.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://blog.cmwang.net/content/images/max/800/1-pmnazzvfrotjl62lsin-cq.png" class="kg-image" alt loading="lazy" width="800" height="314" srcset="https://blog.cmwang.net/content/images/size/w600/max/800/1-pmnazzvfrotjl62lsin-cq.png 600w, https://blog.cmwang.net/content/images/max/800/1-pmnazzvfrotjl62lsin-cq.png 800w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Prefer CPU and ANE instead of&nbsp;GPU.</span></figcaption></figure><p>You can learn more about ANE from the following repository, thank you again Hollemans.</p>
+<!--kg-card-begin: html-->
+<figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://github.com/hollance/neural-engine?ref=localhost"><div class="kg-bookmark-content"><div class="kg-bookmark-title">GitHub - hollance/neural-engine: Everything we actually know about the Apple Neural Engine (ANE)</div><div class="kg-bookmark-description">Most new iPhones and iPads have a Neural Engine, a special processor that makes machine learning models really fast…</div><div class="kg-bookmark-metadata"></div></div><div class="kg-bookmark-thumbnail"><img src="https://blog.cmwang.net/content/images/fit/c/160/160/0-bim0fuyf26vxrxj3.png" alt></div></a></figure>
+<!--kg-card-end: html-->
+<p>Here are snapshots from my model’s performance reports.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://blog.cmwang.net/content/images/max/800/1-chrnkwsmronwdmxy5gzk5g.png" class="kg-image" alt loading="lazy" width="800" height="740" srcset="https://blog.cmwang.net/content/images/size/w600/max/800/1-chrnkwsmronwdmxy5gzk5g.png 600w, https://blog.cmwang.net/content/images/max/800/1-chrnkwsmronwdmxy5gzk5g.png 800w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">You can evaluate your model via drag-and-drop image&nbsp;files.</span></figcaption></figure><p>There is no significant inference speed differences among quantization models, but the model size only about half the size. It’s a good thing for your mobile applications.</p><figure class="kg-card kg-gallery-card kg-width-wide kg-card-hascaption"><div class="kg-gallery-container"><div class="kg-gallery-row"><div class="kg-gallery-image"><img src="https://blog.cmwang.net/content/images/max/600/1-8nh4sx9qus2s6vjpdl8kdw.png" width="761" height="376" loading="lazy" alt srcset="https://blog.cmwang.net/content/images/size/w600/max/600/1-8nh4sx9qus2s6vjpdl8kdw.png 600w, https://blog.cmwang.net/content/images/max/600/1-8nh4sx9qus2s6vjpdl8kdw.png 761w" sizes="(min-width: 720px) 720px"></div><div class="kg-gallery-image"><img src="https://blog.cmwang.net/content/images/max/600/1-b1dmp5fanjnpxlmdx6ovfg.png" width="757" height="374" loading="lazy" alt srcset="https://blog.cmwang.net/content/images/size/w600/max/600/1-b1dmp5fanjnpxlmdx6ovfg.png 600w, https://blog.cmwang.net/content/images/max/600/1-b1dmp5fanjnpxlmdx6ovfg.png 757w" sizes="(min-width: 720px) 720px"></div></div></div><figcaption><p><span style="white-space: pre-wrap;">No inference speed improved. (Left is FP32, right is&nbsp;FP16)</span></p></figcaption></figure><figure class="kg-card kg-gallery-card kg-width-wide kg-card-hascaption"><div class="kg-gallery-container"><div class="kg-gallery-row"><div class="kg-gallery-image"><img src="https://blog.cmwang.net/content/images/max/600/1-t-t3lxffhjluzrfmcjyrcq.png" width="927" height="724" loading="lazy" alt srcset="https://blog.cmwang.net/content/images/size/w600/max/600/1-t-t3lxffhjluzrfmcjyrcq.png 600w, https://blog.cmwang.net/content/images/max/600/1-t-t3lxffhjluzrfmcjyrcq.png 927w" sizes="(min-width: 720px) 720px"></div><div class="kg-gallery-image"><img src="https://blog.cmwang.net/content/images/max/600/1-xqsp3itb9mi-ozpyndna9a.png" width="929" height="718" loading="lazy" alt srcset="https://blog.cmwang.net/content/images/size/w600/max/600/1-xqsp3itb9mi-ozpyndna9a.png 600w, https://blog.cmwang.net/content/images/max/600/1-xqsp3itb9mi-ozpyndna9a.png 929w" sizes="(min-width: 720px) 720px"></div></div></div><figcaption><p><span style="white-space: pre-wrap;">Half the size of the FP32&nbsp;model.</span></p></figcaption></figure><p>Finally, you have a working YOLOv7 Core ML model on the iOS devices, be careful of the heat🔥. Happy coding!</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://blog.cmwang.net/content/images/max/800/1-f23rqz-9nanzq4n65ymkda.gif" class="kg-image" alt loading="lazy" width="800" height="449" srcset="https://blog.cmwang.net/content/images/size/w600/max/800/1-f23rqz-9nanzq4n65ymkda.gif 600w, https://blog.cmwang.net/content/images/max/800/1-f23rqz-9nanzq4n65ymkda.gif 800w" sizes="(min-width: 720px) 720px"><figcaption><b><strong style="white-space: pre-wrap;">Yolov7-tiny on iPad Mini 6.</strong></b><span style="white-space: pre-wrap;"> Copyrights of </span><a href="https://youtu.be/hngml3y2Rq8?ref=localhost" target="_blank" rel="noopener"><span style="white-space: pre-wrap;">BBIBBI Dance Practice</span></a><span style="white-space: pre-wrap;"> belongs Kakao Entertainment.</span></figcaption></figure><hr><p>Any opinions expressed are solely my own and do not express the views or opinions of my employer.</p><h3 id="references">References</h3><ul><li><a href="https://developer.apple.com/documentation/vision/recognizing_objects_in_live_capture?ref=localhost" rel="noopener">Recognizing Objects in Live Capture</a></li><li><a href="https://machinethink.net/blog/bounding-boxes/?ref=localhost" rel="noopener">How to display Vision bounding boxes</a></li><li><a href="https://guides.codepath.com/ios/Creating-a-Custom-Camera-View?ref=localhost" rel="noopener">Creating a Custom Camera View</a></li><li><a href="https://github.com/hollance/neural-engine?ref=localhost" rel="noopener">The Neural Engine — what do we know about it?</a></li><li><a href="https://github.com/WongKinYiu/yolov7?ref=localhost" rel="noopener">WongKinYiu/yolov7</a></li><li><a href="https://developer.apple.com/videos/play/wwdc2022/10027/?ref=localhost" rel="noopener">WWDC2022 — Optimize your Core ML usage</a></li><li><a href="https://machinethink.net/blog/mobilenet-ssdlite-coreml/?ref=localhost" rel="noopener">MobileNetV2 + SSDLite with Core ML</a></li><li><a href="https://github.com/dbsystel/yolov5-coreml-tools?ref=localhost" rel="noopener">yolov5 — CoreML Tools</a></li></ul>
         </div>
 
     </article>
@@ -182,20 +196,20 @@
                 <span class="text">You might also like...</span>
             </h3>
             <div class="post-feed">
-                    <article class="post tag-plum tag-cui-mei tag-ceremony tag-life tag-family tag-hash-medium tag-hash-import-2024-02-01-00-16 u-shadow">
-<a class="post-link" href="/e8-a3-bd-e4-bd-9c-e8-84-86-e6-a2-85-e7-9a-84-e6-99-82-e7-af-80-make-crispy-plum/">
+                    <article class="post tag-object-detection tag-object-tracking tag-computer-vision tag-deep-learning tag-ai u-shadow">
+<a class="post-link" href="/make-your-own-pig-counter/">
         <figure class="post-media">
             <div class="u-placeholder same-height rectangle">
                 <img
                     class="post-image u-object-fit"
-                    srcset="/content/images/size/w400/max/800/1-1kj9n9ovro9pacr9jkftsw.jpg 400w,
-                            /content/images/size/w720/max/800/1-1kj9n9ovro9pacr9jkftsw.jpg 750w,
-                            /content/images/size/w960/max/800/1-1kj9n9ovro9pacr9jkftsw.jpg 960w,
-                            /content/images/size/w1200/max/800/1-1kj9n9ovro9pacr9jkftsw.jpg 1140w,
-                            /content/images/size/w2000/max/800/1-1kj9n9ovro9pacr9jkftsw.jpg 1920w"
+                    srcset="/content/images/size/w400/max/800/1-g2dy2xyioybolnrapwaxvg.jpg 400w,
+                            /content/images/size/w720/max/800/1-g2dy2xyioybolnrapwaxvg.jpg 750w,
+                            /content/images/size/w960/max/800/1-g2dy2xyioybolnrapwaxvg.jpg 960w,
+                            /content/images/size/w1200/max/800/1-g2dy2xyioybolnrapwaxvg.jpg 1140w,
+                            /content/images/size/w2000/max/800/1-g2dy2xyioybolnrapwaxvg.jpg 1920w"
                     sizes="600px"
-                    src="/content/images/size/w960/max/800/1-1kj9n9ovro9pacr9jkftsw.jpg"
-                    alt="製作脆梅的時節 / Make Crispy Plum"
+                    src="/content/images/size/w960/max/800/1-g2dy2xyioybolnrapwaxvg.jpg"
+                    alt="Make your own pig counter"
                     loading="lazy"
                 >
             </div>
@@ -203,43 +217,43 @@
 
     <div class="post-wrapper">
         <header class="post-header">
-                <span class="post-tag">Plum</span>
+                <span class="post-tag">Object Detection</span>
 
             <h2 class="post-title">
-                製作脆梅的時節 / Make Crispy Plum
+                Make your own pig counter
             </h2>
         </header>
 
             <div class="post-excerpt">
-                製作脆梅一直是我們家重要的儀式，每年我們都會在年初與信義鄉的小農預訂青梅，並以此製作脆梅。
+                In this article, I’ll show you how to create a basic pig counter using vision studio and inference runtime.
             </div>
     </div>
 
     <footer class="post-footer">
         <span class="post-more">Read More</span>
-        <span class="post-time"><time class="post-card-meta-date" datetime="2023-04-16">Apr 16, 2023</time></span>
+        <span class="post-time"><time class="post-card-meta-date" datetime="2022-09-15">Sep 15, 2022</time></span>
 
         <div class="post-author">
                     <span class="post-author-link">
-                        <img class="post-author-image" src="/content/images/size/w150/v2/resize:fill:144:144/1-mzehvowngfwyye2pswx_vw.png" alt="Taka Wang" loading="lazy">
+                        <img class="post-author-image" src="/content/images/size/w150/2024/01/jamie2.jpg" alt="Jamie Wang" loading="lazy">
                     </span>
         </div>
     </footer>
 </a>
-</article>                    <article class="post tag-job-search tag-taipei tag-backend-development tag-data-science tag-tech-jobs tag-hash-medium tag-hash-import-2024-02-01-00-16 u-shadow">
-<a class="post-link" href="/backing-up-a-stellar-data-engineer-open-for-new-opportunities-in-taipei/">
+</article>                    <article class="post tag-drones tag-object-detection tag-computer-vision tag-deep-learning tag-ai u-shadow">
+<a class="post-link" href="/object-detection-from-the-video-taken-by-drone/">
         <figure class="post-media">
             <div class="u-placeholder same-height rectangle">
                 <img
                     class="post-image u-object-fit"
-                    srcset="/content/images/size/w400/max/800/1-h3-aa9-_smfa7fsgn8kavw.png 400w,
-                            /content/images/size/w720/max/800/1-h3-aa9-_smfa7fsgn8kavw.png 750w,
-                            /content/images/size/w960/max/800/1-h3-aa9-_smfa7fsgn8kavw.png 960w,
-                            /content/images/size/w1200/max/800/1-h3-aa9-_smfa7fsgn8kavw.png 1140w,
-                            /content/images/size/w2000/max/800/1-h3-aa9-_smfa7fsgn8kavw.png 1920w"
+                    srcset="/content/images/size/w400/max/800/1-4hcxr7y6b8vdvqo31il38g.jpg 400w,
+                            /content/images/size/w720/max/800/1-4hcxr7y6b8vdvqo31il38g.jpg 750w,
+                            /content/images/size/w960/max/800/1-4hcxr7y6b8vdvqo31il38g.jpg 960w,
+                            /content/images/size/w1200/max/800/1-4hcxr7y6b8vdvqo31il38g.jpg 1140w,
+                            /content/images/size/w2000/max/800/1-4hcxr7y6b8vdvqo31il38g.jpg 1920w"
                     sizes="600px"
-                    src="/content/images/size/w960/max/800/1-h3-aa9-_smfa7fsgn8kavw.png"
-                    alt="Backing Up a Stellar Data Engineer: Open for New Opportunities in Taipei"
+                    src="/content/images/size/w960/max/800/1-4hcxr7y6b8vdvqo31il38g.jpg"
+                    alt="Object Detection from the Video Taken by Drone"
                     loading="lazy"
                 >
             </div>
@@ -247,43 +261,43 @@
 
     <div class="post-wrapper">
         <header class="post-header">
-                <span class="post-tag">Jobsearch</span>
+                <span class="post-tag">Drones</span>
 
             <h2 class="post-title">
-                Backing Up a Stellar Data Engineer: Open for New Opportunities in Taipei
+                Object Detection from the Video Taken by Drone
             </h2>
         </header>
 
             <div class="post-excerpt">
-                I am writing this post to recommend my colleague Jill Hsu for any relevant job opportunities in Taipei.
+                Nilvana™ Vision Studio has an intuitive web interface that makes it easy to merge annotation data or categories from different datasets.
             </div>
     </div>
 
     <footer class="post-footer">
         <span class="post-more">Read More</span>
-        <span class="post-time"><time class="post-card-meta-date" datetime="2023-03-23">Mar 23, 2023</time></span>
+        <span class="post-time"><time class="post-card-meta-date" datetime="2022-09-13">Sep 13, 2022</time></span>
 
         <div class="post-author">
                     <span class="post-author-link">
-                        <img class="post-author-image" src="/content/images/size/w150/v2/resize:fill:144:144/1-mzehvowngfwyye2pswx_vw.png" alt="Taka Wang" loading="lazy">
+                        <img class="post-author-image" src="/content/images/size/w150/2024/01/jamie2.jpg" alt="Jamie Wang" loading="lazy">
                     </span>
         </div>
     </footer>
 </a>
-</article>                    <article class="post tag-industrial-camera-systems tag-embedded-systems tag-u3v tag-computer-vision tag-machine-vision-system tag-hash-medium tag-hash-import-2024-02-01-00-16 u-shadow">
-<a class="post-link" href="/configuring-usb-fs-for-usb3-vision-camera/">
+</article>                    <article class="post tag-object-tracking tag-object-detection tag-computer-vision tag-deep-learning tag-ai u-shadow">
+<a class="post-link" href="/object-detection-on-a-360-degree-camera/">
         <figure class="post-media">
             <div class="u-placeholder same-height rectangle">
                 <img
                     class="post-image u-object-fit"
-                    srcset="/content/images/size/w400/max/800/1-uoy9jp33j7xif2emebtdcg.jpg 400w,
-                            /content/images/size/w720/max/800/1-uoy9jp33j7xif2emebtdcg.jpg 750w,
-                            /content/images/size/w960/max/800/1-uoy9jp33j7xif2emebtdcg.jpg 960w,
-                            /content/images/size/w1200/max/800/1-uoy9jp33j7xif2emebtdcg.jpg 1140w,
-                            /content/images/size/w2000/max/800/1-uoy9jp33j7xif2emebtdcg.jpg 1920w"
+                    srcset="/content/images/size/w400/max/800/1-akdt9gxneokjpcdchodnoq.jpg 400w,
+                            /content/images/size/w720/max/800/1-akdt9gxneokjpcdchodnoq.jpg 750w,
+                            /content/images/size/w960/max/800/1-akdt9gxneokjpcdchodnoq.jpg 960w,
+                            /content/images/size/w1200/max/800/1-akdt9gxneokjpcdchodnoq.jpg 1140w,
+                            /content/images/size/w2000/max/800/1-akdt9gxneokjpcdchodnoq.jpg 1920w"
                     sizes="600px"
-                    src="/content/images/size/w960/max/800/1-uoy9jp33j7xif2emebtdcg.jpg"
-                    alt="Configuring USB-FS for USB3 Vision Camera"
+                    src="/content/images/size/w960/max/800/1-akdt9gxneokjpcdchodnoq.jpg"
+                    alt="Object detection on a 360 degree camera"
                     loading="lazy"
                 >
             </div>
@@ -291,43 +305,43 @@
 
     <div class="post-wrapper">
         <header class="post-header">
-                <span class="post-tag">Industrial Camera Systems</span>
+                <span class="post-tag">Object Tracking</span>
 
             <h2 class="post-title">
-                Configuring USB-FS for USB3 Vision Camera
+                Object detection on a 360 degree camera
             </h2>
         </header>
 
             <div class="post-excerpt">
-                This post explains how to increase the buffer memory for USB-FS devices on Linux systems.
+                As long as you use the same camera to collect photos and perform model inference, you don’t need to care about the type of cameras.
             </div>
     </div>
 
     <footer class="post-footer">
         <span class="post-more">Read More</span>
-        <span class="post-time"><time class="post-card-meta-date" datetime="2022-12-29">Dec 29, 2022</time></span>
+        <span class="post-time"><time class="post-card-meta-date" datetime="2022-09-07">Sep 7, 2022</time></span>
 
         <div class="post-author">
                     <span class="post-author-link">
-                        <img class="post-author-image" src="/content/images/size/w150/v2/resize:fill:144:144/1-mzehvowngfwyye2pswx_vw.png" alt="Taka Wang" loading="lazy">
+                        <img class="post-author-image" src="/content/images/size/w150/2024/01/jamie2.jpg" alt="Jamie Wang" loading="lazy">
                     </span>
         </div>
     </footer>
 </a>
-</article>                    <article class="post tag-computer-vision tag-artificial-intelligence tag-deep-learning tag-ai tag-jetson-nano tag-hash-medium tag-hash-import-2024-02-01-00-16 u-shadow">
-<a class="post-link" href="/how-to-install-people-counting-toolkit-on-your-jetson-devices/">
+</article>                    <article class="post tag-computer-vision tag-object-detection tag-ai tag-yolo u-shadow">
+<a class="post-link" href="/performance-benchmarking-of-yolov7-tensorrt-from-cloud-gpus-to-edge-gpus/">
         <figure class="post-media">
             <div class="u-placeholder same-height rectangle">
                 <img
                     class="post-image u-object-fit"
-                    srcset="/content/images/size/w400/max/800/1-2zavqgypzo5yujkr_uzflq.jpg 400w,
-                            /content/images/size/w720/max/800/1-2zavqgypzo5yujkr_uzflq.jpg 750w,
-                            /content/images/size/w960/max/800/1-2zavqgypzo5yujkr_uzflq.jpg 960w,
-                            /content/images/size/w1200/max/800/1-2zavqgypzo5yujkr_uzflq.jpg 1140w,
-                            /content/images/size/w2000/max/800/1-2zavqgypzo5yujkr_uzflq.jpg 1920w"
+                    srcset="/content/images/size/w400/max/800/1-uilai7xjc-5scp4rozd8-w.gif 400w,
+                            /content/images/size/w720/max/800/1-uilai7xjc-5scp4rozd8-w.gif 750w,
+                            /content/images/size/w960/max/800/1-uilai7xjc-5scp4rozd8-w.gif 960w,
+                            /content/images/size/w1200/max/800/1-uilai7xjc-5scp4rozd8-w.gif 1140w,
+                            /content/images/size/w2000/max/800/1-uilai7xjc-5scp4rozd8-w.gif 1920w"
                     sizes="600px"
-                    src="/content/images/size/w960/max/800/1-2zavqgypzo5yujkr_uzflq.jpg"
-                    alt="How to install People Counting Toolkit on your Jetson devices"
+                    src="/content/images/size/w960/max/800/1-uilai7xjc-5scp4rozd8-w.gif"
+                    alt="Performance Benchmarking of YOLOv7 TensorRT from Cloud GPUs to Edge GPUs"
                     loading="lazy"
                 >
             </div>
@@ -338,22 +352,22 @@
                 <span class="post-tag">Computer Vision</span>
 
             <h2 class="post-title">
-                How to install People Counting Toolkit on your Jetson devices
+                Performance Benchmarking of YOLOv7 TensorRT from Cloud GPUs to Edge GPUs
             </h2>
         </header>
 
             <div class="post-excerpt">
-                The installation procedure is quite simple — bash &lt;(curl -fsSL https://links.nilvana.ai/get-pc)
+                We will conduct a series performance test of YOLOv7 variants models from cloud GPUs to the latest powerhouse AGX Orin in this post.
             </div>
     </div>
 
     <footer class="post-footer">
         <span class="post-more">Read More</span>
-        <span class="post-time"><time class="post-card-meta-date" datetime="2022-09-28">Sep 28, 2022</time></span>
+        <span class="post-time"><time class="post-card-meta-date" datetime="2022-07-25">Jul 25, 2022</time></span>
 
         <div class="post-author">
                     <span class="post-author-link">
-                        <img class="post-author-image" src="/content/images/size/w150/v2/resize:fill:144:144/1-mzehvowngfwyye2pswx_vw.png" alt="Taka Wang" loading="lazy">
+                        <img class="post-author-image" src="/content/images/size/w150/2024/01/jamie2.jpg" alt="Jamie Wang" loading="lazy">
                     </span>
         </div>
     </footer>

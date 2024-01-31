@@ -4,40 +4,39 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Performance Benchmarking of YOLOv7 TensorRT from Cloud GPUs to Edge GPUs</title>
+    <title>Building an Object Detection App quickly with Streamlit</title>
     <link rel="stylesheet" href="/assets/built/screen.css?v=69d004e056">
 
-    <meta name="description" content="We will conduct a series performance test of YOLOv7 variants models from cloud GPUs to the latest powerhouse AGX Orin in this post.">
+    <meta name="description" content="Sometimes, you may want to quickly create a graphical interface for others to test your model, but you don’t want to deal with front-end technologies. This is where Streamlit comes in, allowing you…">
     <link rel="icon" href="https://blog.cmwang.net/content/images/size/w256h256/2024/01/2-removebg-preview.png" type="image/png">
-    <link rel="canonical" href="https://blog.cmwang.net/performance-benchmarking-of-yolov7-tensorrt-from-cloud-gpus-to-edge-gpus/">
+    <link rel="canonical" href="https://blog.cmwang.net/object-detection-with-streamlit/">
     <meta name="referrer" content="no-referrer-when-downgrade">
     
     <meta property="og:site_name" content="Liberation Notes">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Performance Benchmarking of YOLOv7 TensorRT from Cloud GPUs to Edge GPUs">
-    <meta property="og:description" content="We will conduct a series performance test of YOLOv7 variants models from cloud GPUs to the latest powerhouse AGX Orin in this post.">
-    <meta property="og:url" content="https://blog.cmwang.net/performance-benchmarking-of-yolov7-tensorrt-from-cloud-gpus-to-edge-gpus/">
-    <meta property="og:image" content="https://blog.cmwang.net/content/images/v2/da:true/resize:fit:960/1-uilai7xjc-5scp4rozd8-w.gif">
-    <meta property="article:published_time" content="2022-07-25T10:30:00.000Z">
-    <meta property="article:modified_time" content="2024-01-31T19:52:24.000Z">
+    <meta property="og:title" content="Building an Object Detection App quickly with Streamlit">
+    <meta property="og:description" content="With Streamlit, you can quickly integrate Nilvana Vision Inference Runtime to develop your own object detection Web App">
+    <meta property="og:url" content="https://blog.cmwang.net/object-detection-with-streamlit/">
+    <meta property="og:image" content="https://blog.cmwang.net/content/images/v2/resize:fit:1080/1-_uc9oywq_buu-1kpjnmvlw.png">
+    <meta property="article:published_time" content="2022-04-25T15:25:22.000Z">
+    <meta property="article:modified_time" content="2024-01-31T19:53:07.000Z">
     <meta property="article:tag" content="Computer Vision">
-    <meta property="article:tag" content="Object Detection">
     <meta property="article:tag" content="AI">
-    <meta property="article:tag" content="yolo">
+    <meta property="article:tag" content="Object Detection">
     
     <meta property="article:publisher" content="https://www.facebook.com/ghost">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Performance Benchmarking of YOLOv7 TensorRT from Cloud GPUs to Edge GPUs">
-    <meta name="twitter:description" content="We will conduct a series performance test of YOLOv7 variants models from cloud GPUs to the latest powerhouse AGX Orin in this post.">
-    <meta name="twitter:url" content="https://blog.cmwang.net/performance-benchmarking-of-yolov7-tensorrt-from-cloud-gpus-to-edge-gpus/">
-    <meta name="twitter:image" content="https://blog.cmwang.net/content/images/v2/da:true/resize:fit:960/1-uilai7xjc-5scp4rozd8-w.gif">
+    <meta name="twitter:title" content="Building an Object Detection App quickly with Streamlit">
+    <meta name="twitter:description" content="With Streamlit, you can quickly integrate Nilvana Vision Inference Runtime to develop your own object detection Web App">
+    <meta name="twitter:url" content="https://blog.cmwang.net/object-detection-with-streamlit/">
+    <meta name="twitter:image" content="https://blog.cmwang.net/content/images/v2/resize:fit:1080/1-_uc9oywq_buu-1kpjnmvlw.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Jamie Wang">
     <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="Computer Vision, Object Detection, AI, yolo">
+    <meta name="twitter:data2" content="Computer Vision, AI, Object Detection">
     <meta name="twitter:site" content="@ghost">
-    <meta property="og:image:width" content="960">
-    <meta property="og:image:height" content="540">
+    <meta property="og:image:width" content="1080">
+    <meta property="og:image:height" content="646">
     
     <script type="application/ld+json">
 {
@@ -68,19 +67,19 @@
             "https://blog.cmwang.net"
         ]
     },
-    "headline": "Performance Benchmarking of YOLOv7 TensorRT from Cloud GPUs to Edge GPUs",
-    "url": "https://blog.cmwang.net/performance-benchmarking-of-yolov7-tensorrt-from-cloud-gpus-to-edge-gpus/",
-    "datePublished": "2022-07-25T10:30:00.000Z",
-    "dateModified": "2024-01-31T19:52:24.000Z",
+    "headline": "Building an Object Detection App quickly with Streamlit",
+    "url": "https://blog.cmwang.net/object-detection-with-streamlit/",
+    "datePublished": "2022-04-25T15:25:22.000Z",
+    "dateModified": "2024-01-31T19:53:07.000Z",
     "image": {
         "@type": "ImageObject",
-        "url": "https://blog.cmwang.net/content/images/max/800/1-uilai7xjc-5scp4rozd8-w.gif",
-        "width": 960,
-        "height": 540
+        "url": "https://blog.cmwang.net/content/images/max/800/1-_uc9oywq_buu-1kpjnmvlw.png",
+        "width": 800,
+        "height": 479
     },
-    "keywords": "Computer Vision, Object Detection, AI, yolo",
-    "description": "We will conduct a series performance test of YOLOv7 variants models from cloud GPUs to the latest powerhouse AGX Orin in this post.",
-    "mainEntityOfPage": "https://blog.cmwang.net/performance-benchmarking-of-yolov7-tensorrt-from-cloud-gpus-to-edge-gpus/"
+    "keywords": "Computer Vision, AI, Object Detection",
+    "description": "With Streamlit, you can quickly integrate Nilvana Vision Inference Runtime to develop your own object detection Web App",
+    "mainEntityOfPage": "https://blog.cmwang.net/object-detection-with-streamlit/"
 }
     </script>
 
@@ -94,7 +93,7 @@
     <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=69d004e056">
 </head>
 
-<body class="post-template tag-computer-vision tag-object-detection tag-ai tag-yolo is-head-left-logo">
+<body class="post-template tag-computer-vision tag-ai tag-object-detection is-head-left-logo">
 <div class="gh-site">
 
     <header id="gh-head" class="gh-head gh-outer">
@@ -128,7 +127,7 @@
 <main class="site-main">
 
 
-    <article class="gh-article post tag-computer-vision tag-object-detection tag-ai tag-yolo">
+    <article class="gh-article post tag-computer-vision tag-ai tag-object-detection">
 
         <header class="gh-article-header gh-canvas">
             <span class="gh-article-meta">
@@ -136,39 +135,43 @@
                     in
                     <a class="gh-article-tag" href="https://blog.cmwang.net/tag/computer-vision/">Computer Vision</a>
                 —
-                <time datetime="2022-07-25">Jul 25, 2022</time>
+                <time datetime="2022-04-25">Apr 25, 2022</time>
             </span>
 
-            <h1 class="gh-article-title">Performance Benchmarking of YOLOv7 TensorRT from Cloud GPUs to Edge GPUs</h1>
+            <h1 class="gh-article-title">Building an Object Detection App quickly with Streamlit</h1>
 
 
                 <figure class="gh-article-image kg-width-wide">
         <img
-            srcset="/content/images/size/w400/max/800/1-uilai7xjc-5scp4rozd8-w.gif 400w,
-                    /content/images/size/w720/max/800/1-uilai7xjc-5scp4rozd8-w.gif 720w,
-                    /content/images/size/w960/max/800/1-uilai7xjc-5scp4rozd8-w.gif 960w,
-                    /content/images/size/w1200/max/800/1-uilai7xjc-5scp4rozd8-w.gif 1200w,
-                    /content/images/size/w2000/max/800/1-uilai7xjc-5scp4rozd8-w.gif 2000w"
+            srcset="/content/images/size/w400/max/800/1-_uc9oywq_buu-1kpjnmvlw.png 400w,
+                    /content/images/size/w720/max/800/1-_uc9oywq_buu-1kpjnmvlw.png 720w,
+                    /content/images/size/w960/max/800/1-_uc9oywq_buu-1kpjnmvlw.png 960w,
+                    /content/images/size/w1200/max/800/1-_uc9oywq_buu-1kpjnmvlw.png 1200w,
+                    /content/images/size/w2000/max/800/1-_uc9oywq_buu-1kpjnmvlw.png 2000w"
             sizes="(max-width: 1200px) 100vw, 1200px"
-            src="/content/images/size/w1200/max/800/1-uilai7xjc-5scp4rozd8-w.gif"
-            alt="Performance Benchmarking of YOLOv7 TensorRT from Cloud GPUs to Edge GPUs"
+            src="/content/images/size/w1200/max/800/1-_uc9oywq_buu-1kpjnmvlw.png"
+            alt="Building an Object Detection App quickly with Streamlit"
         >
-            <figcaption><span style="white-space: pre-wrap;">YOLOv7 TensorRT Performance Benchmarking.</span></figcaption>
+            <figcaption><span style="white-space: pre-wrap;">Streamlit is a package that allows for the rapid creation of web applications.</span></figcaption>
     </figure>
         </header>
 
         <div class="gh-content gh-canvas">
-            <p>Object detection is one of the fundamental problems of computer vision. Instead of region detection and object classification separately in two stage detectors, object classification and bounding-box regression are done directly without using pre-generated region proposals in one stage detectors. YOLO (You Only Look Once) is one of the representative models of one-stage architecture. The YOLO family has continued to evolve since 2016, this summer we’ve got its latest update to version 7.</p>
+            <h3 id="building-an-object-detection-web-app-quickly-with-streamlit">Building an Object Detection Web App quickly with Streamlit</h3><p>Sometimes, you may want to quickly create a graphical interface for others to test your model, but you don’t want to deal with front-end technologies. This is where <a href="https://streamlit.io/?ref=localhost" rel="noopener">Streamlit</a> comes in, allowing you to quickly create a web application using Python syntax.</p><p>In this article, I will show you how to use <a href="https://streamlit.io/?ref=localhost" rel="noopener">Streamlit</a> and <a href="https://nilvana.tw/products/nilvana-vision-inference-runtime?ref=localhost" rel="noopener">Nilvana Vision Inference Runtime</a> to quickly deploy a web application that can detect masks. If you are not familiar with <a href="https://nilvana.tw/products/nilvana-vision-inference-runtime?ref=localhost" rel="noopener">Nilvana Vision Inference Runtime</a>, it is a software package we developed for node-code deployment of AI models, which you can refer to in our previous articles.</p>
 <!--kg-card-begin: html-->
-<figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://github.com/WongKinYiu/yolov7?ref=localhost"><div class="kg-bookmark-content"><div class="kg-bookmark-title">GitHub - WongKinYiu/yolov7: Implementation of paper - YOLOv7: Trainable bag-of-freebies sets new…</div><div class="kg-bookmark-description">Implementation of paper - YOLOv7: Trainable bag-of-freebies sets new state-of-the-art for real-time object detectors MS…</div><div class="kg-bookmark-metadata"></div></div><div class="kg-bookmark-thumbnail"><img src="https://blog.cmwang.net/content/images/fit/c/160/160/0-pex7bashe7svci5r.png" alt></div></a></figure>
+<figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://medium.com/hello-nilvana/%E9%80%8F%E9%81%8E-nilvana-vision-inference-runtime-%E9%83%A8%E7%BD%B2%E6%A8%A1%E5%9E%8B-a52b05a63b74?ref=localhost"><div class="kg-bookmark-content"><div class="kg-bookmark-title">Deploying models through Nilvana Vision Inference Runtime</div><div class="kg-bookmark-description">Using Nilvana Vision Inference Runtime (inference engine), you can easily deploy your models to x86 or Jetson…</div><div class="kg-bookmark-metadata"></div></div><div class="kg-bookmark-thumbnail"><img src="https://blog.cmwang.net/content/images/fit/c/160/160/1-u6xc7wr939zohyws2_7okg.png" alt></div></a></figure>
 <!--kg-card-end: html-->
-<p>If you are trying to learn how to train your model on a custom dataset from the beginning, there are already many tutorials, notebooks and videos available online. In <a href="https://nilvana.ai/?ref=localhost" rel="noopener">Nilvana</a>, we really care about its real-world performance on the embedded devices, especially Nvidia Jetson family devices. So we conducted a series performance testing of YOLOv7 variants models on different devices, from cloud GPUs A100 to the latest tiny powerhouse<a href="https://developer.nvidia.com/embedded/jetson-orin?ref=localhost" rel="noopener"> AGX Orin</a>.</p>
+<p>The completed result is shown in the following figure:</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://blog.cmwang.net/content/images/max/800/1-fk7w7zaaph74duaps6_kla.gif" class="kg-image" alt loading="lazy" width="800" height="453" srcset="https://blog.cmwang.net/content/images/size/w600/max/800/1-fk7w7zaaph74duaps6_kla.gif 600w, https://blog.cmwang.net/content/images/max/800/1-fk7w7zaaph74duaps6_kla.gif 800w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Video by cottonbro from&nbsp;Pexels:</span></figcaption></figure><p>You only need to install Streamlit by running <code>pip install streamlit</code>. Then, you can use the <code>st</code> object to generate the sidebar, and the entire process takes less than three lines of code.import streamlit as sturl = st.sidebar.text_input('NVIR Endpoint URL', 'http://192.168.41.200:52010/v1/infer/111111111')st.sidebar.write('#### Select a video to upload.')uploaded_video = st.sidebar.file_uploader("Choose video", type=["mp4"])</p><p>The main screen is also quite simple. Declare two containers created by <strong><code>st.empty() </code></strong>to hold the video and JSON output, respectively. This step fixes the <strong>frame</strong> and <strong>JSON output</strong> positions. Open the video file through the main loop of OpenCV and obtain the inference result using the Restful API provided by <a href="https://nilvana.tw/products/nilvana-vision-inference-runtime?ref=localhost" rel="noopener">Nilvana Vision Inference Runtime</a>. Then, overlay the inference result on the frame. This part is similar to the content of the previous article. In other words, you can easily convert OpenCV applications into Streamlit web applications.frame_holder = st.empty()<br>placeholder = st.empty()# ... opencv partsframe_holder.image(frame) # put your frame herewith placeholder.container():<br>  # Display the JSON in main window.<br>  st.write('### JSON Output')<br>  st.write(result)</p><p>The entire application can be completed in less than 60 lines of code, and we highly recommend that Python developers further explore this. The complete example code is also available on our GitHub page at the end of the article. Happy Deployment!</p>
 <!--kg-card-begin: html-->
-<figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Orin-Developer-Kit-p-5314.html?ref=localhost"><div class="kg-bookmark-content"><div class="kg-bookmark-title">NVIDIA® Jetson AGX Orin™ Developer Kit: smallest and most powerful AI edge computer</div><div class="kg-bookmark-description">NVIDIA® Jetson AGX Orin™ Developer Kit, provides a giant leap forward for Robotics and Edge AI. With up to 275 TOPS of…</div><div class="kg-bookmark-metadata"></div></div><div class="kg-bookmark-thumbnail"><img src="https://blog.cmwang.net/content/images/fit/c/160/160/0-ze7j0-x469op2ttq.jpg" alt></div></a></figure>
+<figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://docs.streamlit.io/?ref=localhost"><div class="kg-bookmark-content"><div class="kg-bookmark-title">Streamlit Docs</div><div class="kg-bookmark-description">Streamlit is more than just a way to make data apps, it's also a community of creators that share their apps and ideas…</div><div class="kg-bookmark-metadata"></div></div><div class="kg-bookmark-thumbnail"><img src="https://blog.cmwang.net/content/images/fit/c/160/160/0-od3ubed0y3nqqemw.jpg" alt></div></a></figure>
 <!--kg-card-end: html-->
-<blockquote>The main reason YOLOv7 is more accurate, compare to other models with similar AP, YOLOv7 has only about half computational cost. — <a href="https://github.com/WongKinYiu/yolov7/issues/207?ref=localhost#issuecomment-1186934294" rel="noopener">WongKinYiu</a></blockquote><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://blog.cmwang.net/content/images/max/800/1-egbwzwax-kjvas4om68ypa.png" class="kg-image" alt loading="lazy" width="488" height="197"><figcaption><span style="white-space: pre-wrap;">Input and Output shape of YOLOv7 (80&nbsp;class)</span></figcaption></figure><p>According to the results table, Xavier NX can run YOLOv7-tiny model pretty well. AGX Orin can even run YOLOv7x model more than 30 FPS, it’s amazing!</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://blog.cmwang.net/content/images/max/800/1-qkotq0kxs9ewjblqz2h9ga.png" class="kg-image" alt loading="lazy" width="755" height="279" srcset="https://blog.cmwang.net/content/images/size/w600/max/800/1-qkotq0kxs9ewjblqz2h9ga.png 600w, https://blog.cmwang.net/content/images/max/800/1-qkotq0kxs9ewjblqz2h9ga.png 755w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">End-to-End Performance on 1080P video, Batch&nbsp;Size=1</span></figcaption></figure><figure class="kg-card kg-embed-card kg-card-hascaption"><iframe src="https://www.youtube.com/embed/videoseries?list=PL3ZyjLA-y4kHCeKiUT9HsYNheLKsuVuqj" width="700" height="394" frameborder="0" scrolling="no"></iframe><figcaption><p><span style="white-space: pre-wrap;">Performance Benchmarking Playlist</span></p></figcaption></figure>
+
 <!--kg-card-begin: html-->
-<figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://nilvana.ai/?ref=localhost"><div class="kg-bookmark-content"><div class="kg-bookmark-title">Hello nilvana™, Hello Tomorrow</div><div class="kg-bookmark-description">AI Workstation, Jetson Nano, Xavier, Nvidia, Edge Computing, IoT, Edge Computing, 人工智慧，工作站，物聯網，邊緣運算，邊緣裝置。</div><div class="kg-bookmark-metadata"></div></div><div class="kg-bookmark-thumbnail"><img src="https://blog.cmwang.net/content/images/fit/c/160/160/0-jdybrwmwowhvmnps.jpg" alt></div></a></figure>
+<figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://github.com/nilvana-ai/nvir-streamlit-demo?ref=localhost"><div class="kg-bookmark-content"><div class="kg-bookmark-title">GitHub - nilvana-ai/nvir-streamlit-demo: This is a demo repo to demonstrate nilvana vision…</div><div class="kg-bookmark-description">This is a demo repo to demonstrate nilvana vision inference runtime with streamlit. </div><div class="kg-bookmark-metadata"></div></div><div class="kg-bookmark-thumbnail"><img src="https://blog.cmwang.net/content/images/fit/c/160/160/0-8tnv3cnpvuvsfnkf.png" alt></div></a></figure>
+<!--kg-card-end: html-->
+
+<!--kg-card-begin: html-->
+<figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://nilvana.ai/?ref=localhost"><div class="kg-bookmark-content"><div class="kg-bookmark-title">Hello nilvana™, Hello Tomorrow</div><div class="kg-bookmark-description">AI Workstation, Jetson Nano, Xavier, Nvidia, Edge Computing, IoT, Edge Computing, 人工智慧，工作站，物聯網，邊緣運算，邊緣裝置。</div><div class="kg-bookmark-metadata"></div></div><div class="kg-bookmark-thumbnail"><img src="https://blog.cmwang.net/content/images/fit/c/160/160/0-gegawc126g4zni92.jpg" alt></div></a></figure>
 <!--kg-card-end: html-->
 
         </div>
@@ -177,13 +180,9 @@
 
     <div class="gh-canvas">
     <div class="navigation">
-            <a class="navigation-item navigation-previous" href="/object-detection-with-streamlit/">
-                <span class="navigation-label">Previous</span>
-                <h4 class="navigation-title">Building an Object Detection App quickly with Streamlit</h4>
-            </a>
-            <a class="navigation-item navigation-next" href="/execute-yolov7-model-on-ios-devices/">
+            <a class="navigation-item navigation-next" href="/performance-benchmarking-of-yolov7-tensorrt-from-cloud-gpus-to-edge-gpus/">
                 <span class="navigation-label">Next</span>
-                <h4 class="navigation-title">Execute YOLOv7 model on iOS devices</h4>
+                <h4 class="navigation-title">Performance Benchmarking of YOLOv7 TensorRT from Cloud GPUs to Edge GPUs</h4>
             </a>
     </div>
 </div>
