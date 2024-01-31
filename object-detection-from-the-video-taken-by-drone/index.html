@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Object Detection from the Video Taken by Drone</title>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <link rel="preload" as="style" href="/assets/built/screen.css?v=9aaa8e31ca" />
-    <link rel="preload" as="script" href="/assets/built/casper.js?v=9aaa8e31ca" />
-
-    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css?v=9aaa8e31ca" />
+    <link rel="stylesheet" href="/assets/built/screen.css?v=2e7b6649be">
 
     <meta name="description" content="In the last article from hello nilvana, we learned how to import the VisDrone dataset into Nilvana™ Vision Studio. It’s not that difficult, just follow the instructions or ask us for help. If you…">
     <link rel="icon" href="https://blog.cmwang.net/content/images/size/w256h256/2024/01/2-removebg-preview.png" type="image/png">
@@ -95,19 +89,21 @@
     <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="415aa5f59e59c087cacf652d7b" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css" data-sodo-search="https://blog.cmwang.net/" crossorigin="anonymous"></script>
     
     <link href="https://blog.cmwang.net/webmentions/receive/" rel="webmention">
-    <script defer src="/public/cards.min.js?v=9aaa8e31ca"></script><style>:root {--ghost-accent-color: #FF1A74;}</style>
-    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=9aaa8e31ca">
-
+    <script defer src="/public/cards.min.js?v=2e7b6649be"></script><style>:root {--ghost-accent-color: #FF1A74;}</style>
+    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=2e7b6649be">
 </head>
-<body class="post-template tag-drones tag-object-detection tag-computer-vision tag-deep-learning tag-artificial-intelligence tag-hash-medium tag-hash-import-2024-02-01-00-16 is-head-left-logo has-cover">
-<div class="viewport">
 
-    <header id="gh-head" class="gh-head outer">
-        <div class="gh-head-inner inner">
+<body class="post-template tag-drones tag-object-detection tag-computer-vision tag-deep-learning tag-artificial-intelligence tag-hash-medium tag-hash-import-2024-02-01-00-16 is-head-left-logo">
+<div class="gh-site">
+
+    <header id="gh-head" class="gh-head gh-outer">
+        <div class="gh-head-inner gh-inner">
             <div class="gh-head-brand">
-                <a class="gh-head-logo no-image" href="https://blog.cmwang.net">
-                        Liberation Notes
-                </a>
+                <div class="gh-head-brand-wrapper">
+                    <a class="gh-head-logo" href="https://blog.cmwang.net">
+                            Liberation Notes
+                    </a>
+                </div>
                 <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
                 <button class="gh-burger"></button>
             </div>
@@ -121,218 +117,257 @@
             </nav>
 
             <div class="gh-head-actions">
-                        <button class="gh-search gh-icon-btn" data-ghost-search><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+                        <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
             </div>
         </div>
     </header>
 
     <div class="site-content">
         
+<main class="site-main">
 
 
+    <article class="gh-article post tag-drones tag-object-detection tag-computer-vision tag-deep-learning tag-artificial-intelligence tag-hash-medium tag-hash-import-2024-02-01-00-16">
 
-<main id="site-main" class="site-main">
-<article class="article post tag-drones tag-object-detection tag-computer-vision tag-deep-learning tag-artificial-intelligence tag-hash-medium tag-hash-import-2024-02-01-00-16 image-small">
+        <header class="gh-article-header gh-canvas">
+            <span class="gh-article-meta">
+                By <a href="/author/takawang/">Taka Wang</a>
+                    in
+                    <a class="gh-article-tag" href="https://blog.cmwang.net/tag/drones/">Drones</a>
+                —
+                <time datetime="2022-09-13">Sep 13, 2022</time>
+            </span>
 
-    <header class="article-header gh-canvas">
+            <h1 class="gh-article-title">Object Detection from the Video Taken by Drone</h1>
 
-        <div class="article-tag post-card-tags">
-                <span class="post-card-primary-tag">
-                    <a href="/tag/drones/">Drones</a>
-                </span>
+
+                <figure class="gh-article-image kg-width-wide">
+        <img
+            srcset="/content/images/size/w400/max/800/1-4hcxr7y6b8vdvqo31il38g.jpg 400w,
+                    /content/images/size/w720/max/800/1-4hcxr7y6b8vdvqo31il38g.jpg 720w,
+                    /content/images/size/w960/max/800/1-4hcxr7y6b8vdvqo31il38g.jpg 960w,
+                    /content/images/size/w1200/max/800/1-4hcxr7y6b8vdvqo31il38g.jpg 1200w,
+                    /content/images/size/w2000/max/800/1-4hcxr7y6b8vdvqo31il38g.jpg 2000w"
+            sizes="(max-width: 1200px) 100vw, 1200px"
+            src="/content/images/size/w1200/max/800/1-4hcxr7y6b8vdvqo31il38g.jpg"
+            alt="Object Detection from the Video Taken by Drone"
+        >
+            <figcaption>Photo by <a href="https://unsplash.com/@aaronburden?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" data-href="https://unsplash.com/@aaronburden?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" class="markup--anchor markup--figure-anchor" rel="noopener" target="_blank">Aaron Burden</a> on&nbsp;<a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" data-href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" class="markup--anchor markup--figure-anchor" rel="noopener" target="_blank">Unsplash</a></figcaption>
+    </figure>
+        </header>
+
+        <div class="gh-content gh-canvas">
+            <p>In the <a href="https://link.medium.com/0pZ5J3tCftb?ref=localhost" rel="noopener"><strong>last article</strong></a> from <a href="https://medium.com/hello-nilvana?ref=localhost">hello nilvana</a>, we learned how to import the <a href="http://aiskyeye.com/?ref=localhost" rel="noopener">VisDrone dataset</a> into Nilvana<strong>™</strong> Vision Studio. It’s not that difficult, just follow the instructions or ask us for help. If you have not read it yet, you definitely have to!</p><!--kg-card-begin: html--><figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://link.medium.com/0pZ5J3tCftb?ref=localhost"><div class="kg-bookmark-content"><div class="kg-bookmark-title">VisDrone Datasets - Nilavna Vision Studio</div><div class="kg-bookmark-description">今日要分享的是，如何將目前 VisDrone 的照片資料集透過 Nilvana™ Vision Studio 進行匯入，方便日後進行模型的訓練。</div><div class="kg-bookmark-metadata"></div></div><div class="kg-bookmark-thumbnail"><img src="https://blog.cmwang.net/content/images/fit/c/160/160/0-worej9bweqrri1bg.png" alt></div></a></figure><!--kg-card-end: html--><p>As you can see in the Vision Studio screenshots below, you can clearly see the 10 categories annotated in the images. Some time ago I found a beautiful video — <a href="https://youtu.be/yXEb0fWLJIY?ref=localhost" rel="noopener"><strong>World’s longest drone fpv one shot</strong></a> made by <a href="https://newstepmedia.net/?ref=localhost" rel="noopener">New Step Media</a> on Youtube. I found that there are a lot of indoor scenes that are very suitable for adding the COCO dataset based on the visdrone dataset, so I used this combined dataset to train a object detector. In case you didn’t already know, Nilvana<strong>™</strong> Vision Studio has an intuitive web interface that makes it easy to <strong>merge annotation data</strong> or <strong>categories</strong> from different datasets with a few mouse clicks.</p><figure class="kg-card kg-gallery-card kg-width-wide kg-card-hascaption"><div class="kg-gallery-container"><div class="kg-gallery-row"><div class="kg-gallery-image"><img src="https://blog.cmwang.net/content/images/max/1000/1-hsvqcqt8rvoqfztapf_yra.png" width="1756" height="938" loading="lazy" alt srcset="https://blog.cmwang.net/content/images/size/w600/max/1000/1-hsvqcqt8rvoqfztapf_yra.png 600w, https://blog.cmwang.net/content/images/size/w1000/max/1000/1-hsvqcqt8rvoqfztapf_yra.png 1000w, https://blog.cmwang.net/content/images/size/w1600/max/1000/1-hsvqcqt8rvoqfztapf_yra.png 1600w, https://blog.cmwang.net/content/images/max/1000/1-hsvqcqt8rvoqfztapf_yra.png 1756w" sizes="(min-width: 720px) 720px"></div><div class="kg-gallery-image"><img src="https://blog.cmwang.net/content/images/max/400/1-qhif2slonafquakcfivdwg.png" width="619" height="907" loading="lazy" alt srcset="https://blog.cmwang.net/content/images/size/w600/max/400/1-qhif2slonafquakcfivdwg.png 600w, https://blog.cmwang.net/content/images/max/400/1-qhif2slonafquakcfivdwg.png 619w"></div></div></div><figcaption>Visdrone dataset on Nilvana<strong class="markup--strong markup--figure-strong">™</strong> Vision&nbsp;Studio</figcaption></figure><p>You can watch the finished video below. Kudos to <a href="https://newstepmedia.net/?ref=localhost" rel="noopener">New Step Media</a> for creating such a stunning aerial video. Ownership of the original video belongs to <a href="https://newstepmedia.net/?ref=localhost" rel="noopener">New Step Media</a>.</p><figure class="kg-card kg-embed-card kg-card-hascaption"><iframe src="https://www.youtube.com/embed/-sPxNKfXasU?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe><figcaption>Drone video object detection</figcaption></figure><hr><p>Nilvana<strong>™</strong> has developed <strong>Vision Studio</strong> and <strong>Vision Inference Runtime</strong> toolkits, which enable collaborative data annotation, model creation, and rapid inference without AI expertise.</p><p>Nilvana<strong>™</strong> provides a <a href="https://shop.nilvana.ai/pages/our-services?ref=localhost" rel="noopener ugc nofollow noopener">wide range of services</a> from consulting and model creation to the development of AI-based applications. Feel free to <a href="https://shop.nilvana.ai/pages/contact-us?ref=localhost" rel="noopener ugc nofollow noopener">contact us</a> for any inquiries.</p><!--kg-card-begin: html--><figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://shop.nilvana.ai/products/nilvana-vision-studio?ref=localhost"><div class="kg-bookmark-content"><div class="kg-bookmark-title">Nilvana™ Vision Studio</div><div class="kg-bookmark-description">AI Workstation, Jetson Nano, Xavier, Nvidia, Edge Computing, IoT, Edge Computing, 人工智慧，工作站，物聯網，邊緣運算，邊緣裝置。</div><div class="kg-bookmark-metadata"></div></div><div class="kg-bookmark-thumbnail"><img src="https://blog.cmwang.net/content/images/fit/c/160/160/0-t1p4i956ywoiisku.png" alt></div></a></figure><!--kg-card-end: html--><!--kg-card-begin: html--><figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://nilvana.ai/?ref=localhost"><div class="kg-bookmark-content"><div class="kg-bookmark-title">Hello nilvana™, Hello Tomorrow</div><div class="kg-bookmark-description">AI Workstation, Jetson Nano, Xavier, Nvidia, Edge Computing, IoT, Edge Computing, 人工智慧，工作站，物聯網，邊緣運算，邊緣裝置。</div><div class="kg-bookmark-metadata"></div></div><div class="kg-bookmark-thumbnail"><img src="https://blog.cmwang.net/content/images/fit/c/160/160/0-axl713cxhhq1guco.jpg" alt></div></a></figure><!--kg-card-end: html-->
         </div>
 
-        <h1 class="article-title">Object Detection from the Video Taken by Drone</h1>
+    </article>
 
-            <p class="article-excerpt">Nilvana™ Vision Studio has an intuitive web interface that makes it easy to merge annotation data or categories from different datasets.</p>
+    <div class="gh-canvas">
+    <div class="navigation">
+            <a class="navigation-item navigation-previous" href="/object-detection-on-a-360-degree-camera/">
+                <span class="navigation-label">Previous</span>
+                <h4 class="navigation-title">Object detection on a 360 degree camera</h4>
+            </a>
+            <a class="navigation-item navigation-next" href="/make-your-own-pig-counter/">
+                <span class="navigation-label">Next</span>
+                <h4 class="navigation-title">Make your own pig counter</h4>
+            </a>
+    </div>
+</div>
 
-        <div class="article-byline">
-        <section class="article-byline-content">
 
-            <ul class="author-list">
-                <li class="author-list-item">
-                    <a href="/author/takawang/" class="author-avatar">
-                        <img class="author-profile-image" src="/content/images/size/w100/v2/resize:fill:144:144/1-mzehvowngfwyye2pswx_vw.png" alt="Taka Wang" />
-                    </a>
-                </li>
-            </ul>
-
-            <div class="article-byline-meta">
-                <h4 class="author-name"><a href="/author/takawang/">Taka Wang</a></h4>
-                <div class="byline-meta-content">
-                    <time class="byline-meta-date" datetime="2022-09-13">Sep 13, 2022</time>
-                        <span class="byline-reading-time"><span class="bull">&bull;</span> 2 min read</span>
-                </div>
-            </div>
-
-        </section>
-        </div>
-
-            <figure class="article-image">
+        <div class="related-wrapper gh-outer">
+        <section class="related-posts gh-inner">
+            <h3 class="related-title">
+                <span class="text">You might also like...</span>
+            </h3>
+            <div class="post-feed">
+                    <article class="post tag-plum tag-cui-mei tag-ceremony tag-life tag-family tag-hash-medium tag-hash-import-2024-02-01-00-16 u-shadow">
+<a class="post-link" href="/e8-a3-bd-e4-bd-9c-e8-84-86-e6-a2-85-e7-9a-84-e6-99-82-e7-af-80-make-crispy-plum/">
+        <figure class="post-media">
+            <div class="u-placeholder same-height rectangle">
                 <img
-                    srcset="/content/images/size/w300/max/800/1-4hcxr7y6b8vdvqo31il38g.jpg 300w,
-                            /content/images/size/w600/max/800/1-4hcxr7y6b8vdvqo31il38g.jpg 600w,
-                            /content/images/size/w1000/max/800/1-4hcxr7y6b8vdvqo31il38g.jpg 1000w,
-                            /content/images/size/w2000/max/800/1-4hcxr7y6b8vdvqo31il38g.jpg 2000w"
-                    sizes="(min-width: 1400px) 1400px, 92vw"
-                    src="/content/images/size/w2000/max/800/1-4hcxr7y6b8vdvqo31il38g.jpg"
-                    alt="Object Detection from the Video Taken by Drone"
-                />
-                    <figcaption>Photo by <a href="https://unsplash.com/@aaronburden?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" data-href="https://unsplash.com/@aaronburden?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" class="markup--anchor markup--figure-anchor" rel="noopener" target="_blank">Aaron Burden</a> on&nbsp;<a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" data-href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" class="markup--anchor markup--figure-anchor" rel="noopener" target="_blank">Unsplash</a></figcaption>
-            </figure>
+                    class="post-image u-object-fit"
+                    srcset="/content/images/size/w400/max/800/1-1kj9n9ovro9pacr9jkftsw.jpg 400w,
+                            /content/images/size/w720/max/800/1-1kj9n9ovro9pacr9jkftsw.jpg 750w,
+                            /content/images/size/w960/max/800/1-1kj9n9ovro9pacr9jkftsw.jpg 960w,
+                            /content/images/size/w1200/max/800/1-1kj9n9ovro9pacr9jkftsw.jpg 1140w,
+                            /content/images/size/w2000/max/800/1-1kj9n9ovro9pacr9jkftsw.jpg 1920w"
+                    sizes="600px"
+                    src="/content/images/size/w960/max/800/1-1kj9n9ovro9pacr9jkftsw.jpg"
+                    alt="製作脆梅的時節 / Make Crispy Plum"
+                    loading="lazy"
+                >
+            </div>
+        </figure>
 
-    </header>
+    <div class="post-wrapper">
+        <header class="post-header">
+                <span class="post-tag">Plum</span>
 
-    <section class="gh-content gh-canvas">
-        <p>In the <a href="https://link.medium.com/0pZ5J3tCftb?ref=localhost" rel="noopener"><strong>last article</strong></a> from <a href="https://medium.com/hello-nilvana?ref=localhost">hello nilvana</a>, we learned how to import the <a href="http://aiskyeye.com/?ref=localhost" rel="noopener">VisDrone dataset</a> into Nilvana<strong>™</strong> Vision Studio. It’s not that difficult, just follow the instructions or ask us for help. If you have not read it yet, you definitely have to!</p><!--kg-card-begin: html--><figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://link.medium.com/0pZ5J3tCftb?ref=localhost"><div class="kg-bookmark-content"><div class="kg-bookmark-title">VisDrone Datasets - Nilavna Vision Studio</div><div class="kg-bookmark-description">今日要分享的是，如何將目前 VisDrone 的照片資料集透過 Nilvana™ Vision Studio 進行匯入，方便日後進行模型的訓練。</div><div class="kg-bookmark-metadata"></div></div><div class="kg-bookmark-thumbnail"><img src="https://blog.cmwang.net/content/images/fit/c/160/160/0-worej9bweqrri1bg.png" alt></div></a></figure><!--kg-card-end: html--><p>As you can see in the Vision Studio screenshots below, you can clearly see the 10 categories annotated in the images. Some time ago I found a beautiful video — <a href="https://youtu.be/yXEb0fWLJIY?ref=localhost" rel="noopener"><strong>World’s longest drone fpv one shot</strong></a> made by <a href="https://newstepmedia.net/?ref=localhost" rel="noopener">New Step Media</a> on Youtube. I found that there are a lot of indoor scenes that are very suitable for adding the COCO dataset based on the visdrone dataset, so I used this combined dataset to train a object detector. In case you didn’t already know, Nilvana<strong>™</strong> Vision Studio has an intuitive web interface that makes it easy to <strong>merge annotation data</strong> or <strong>categories</strong> from different datasets with a few mouse clicks.</p><figure class="kg-card kg-gallery-card kg-width-wide kg-card-hascaption"><div class="kg-gallery-container"><div class="kg-gallery-row"><div class="kg-gallery-image"><img src="https://blog.cmwang.net/content/images/max/1000/1-hsvqcqt8rvoqfztapf_yra.png" width="1756" height="938" loading="lazy" alt srcset="https://blog.cmwang.net/content/images/size/w600/max/1000/1-hsvqcqt8rvoqfztapf_yra.png 600w, https://blog.cmwang.net/content/images/size/w1000/max/1000/1-hsvqcqt8rvoqfztapf_yra.png 1000w, https://blog.cmwang.net/content/images/size/w1600/max/1000/1-hsvqcqt8rvoqfztapf_yra.png 1600w, https://blog.cmwang.net/content/images/max/1000/1-hsvqcqt8rvoqfztapf_yra.png 1756w" sizes="(min-width: 720px) 720px"></div><div class="kg-gallery-image"><img src="https://blog.cmwang.net/content/images/max/400/1-qhif2slonafquakcfivdwg.png" width="619" height="907" loading="lazy" alt srcset="https://blog.cmwang.net/content/images/size/w600/max/400/1-qhif2slonafquakcfivdwg.png 600w, https://blog.cmwang.net/content/images/max/400/1-qhif2slonafquakcfivdwg.png 619w"></div></div></div><figcaption>Visdrone dataset on Nilvana<strong class="markup--strong markup--figure-strong">™</strong> Vision&nbsp;Studio</figcaption></figure><p>You can watch the finished video below. Kudos to <a href="https://newstepmedia.net/?ref=localhost" rel="noopener">New Step Media</a> for creating such a stunning aerial video. Ownership of the original video belongs to <a href="https://newstepmedia.net/?ref=localhost" rel="noopener">New Step Media</a>.</p><figure class="kg-card kg-embed-card kg-card-hascaption"><iframe src="https://www.youtube.com/embed/-sPxNKfXasU?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe><figcaption>Drone video object detection</figcaption></figure><hr><p>Nilvana<strong>™</strong> has developed <strong>Vision Studio</strong> and <strong>Vision Inference Runtime</strong> toolkits, which enable collaborative data annotation, model creation, and rapid inference without AI expertise.</p><p>Nilvana<strong>™</strong> provides a <a href="https://shop.nilvana.ai/pages/our-services?ref=localhost" rel="noopener ugc nofollow noopener">wide range of services</a> from consulting and model creation to the development of AI-based applications. Feel free to <a href="https://shop.nilvana.ai/pages/contact-us?ref=localhost" rel="noopener ugc nofollow noopener">contact us</a> for any inquiries.</p><!--kg-card-begin: html--><figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://shop.nilvana.ai/products/nilvana-vision-studio?ref=localhost"><div class="kg-bookmark-content"><div class="kg-bookmark-title">Nilvana™ Vision Studio</div><div class="kg-bookmark-description">AI Workstation, Jetson Nano, Xavier, Nvidia, Edge Computing, IoT, Edge Computing, 人工智慧，工作站，物聯網，邊緣運算，邊緣裝置。</div><div class="kg-bookmark-metadata"></div></div><div class="kg-bookmark-thumbnail"><img src="https://blog.cmwang.net/content/images/fit/c/160/160/0-t1p4i956ywoiisku.png" alt></div></a></figure><!--kg-card-end: html--><!--kg-card-begin: html--><figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://nilvana.ai/?ref=localhost"><div class="kg-bookmark-content"><div class="kg-bookmark-title">Hello nilvana™, Hello Tomorrow</div><div class="kg-bookmark-description">AI Workstation, Jetson Nano, Xavier, Nvidia, Edge Computing, IoT, Edge Computing, 人工智慧，工作站，物聯網，邊緣運算，邊緣裝置。</div><div class="kg-bookmark-metadata"></div></div><div class="kg-bookmark-thumbnail"><img src="https://blog.cmwang.net/content/images/fit/c/160/160/0-axl713cxhhq1guco.jpg" alt></div></a></figure><!--kg-card-end: html-->
-    </section>
+            <h2 class="post-title">
+                製作脆梅的時節 / Make Crispy Plum
+            </h2>
+        </header>
 
+            <div class="post-excerpt">
+                製作脆梅一直是我們家重要的儀式，每年我們都會在年初與信義鄉的小農預訂青梅，並以此製作脆梅。
+            </div>
+    </div>
 
-</article>
+    <footer class="post-footer">
+        <span class="post-more">Read More</span>
+
+        <div class="post-author">
+                    <span class="post-author-link">
+                        <img class="post-author-image" src="/content/images/size/w150/v2/resize:fill:144:144/1-mzehvowngfwyye2pswx_vw.png" alt="Taka Wang" loading="lazy">
+                    </span>
+        </div>
+    </footer>
+</a>
+</article>                    <article class="post tag-job-search tag-taipei tag-backend-development tag-data-science tag-tech-jobs tag-hash-medium tag-hash-import-2024-02-01-00-16 u-shadow">
+<a class="post-link" href="/backing-up-a-stellar-data-engineer-open-for-new-opportunities-in-taipei/">
+        <figure class="post-media">
+            <div class="u-placeholder same-height rectangle">
+                <img
+                    class="post-image u-object-fit"
+                    srcset="/content/images/size/w400/max/800/1-h3-aa9-_smfa7fsgn8kavw.png 400w,
+                            /content/images/size/w720/max/800/1-h3-aa9-_smfa7fsgn8kavw.png 750w,
+                            /content/images/size/w960/max/800/1-h3-aa9-_smfa7fsgn8kavw.png 960w,
+                            /content/images/size/w1200/max/800/1-h3-aa9-_smfa7fsgn8kavw.png 1140w,
+                            /content/images/size/w2000/max/800/1-h3-aa9-_smfa7fsgn8kavw.png 1920w"
+                    sizes="600px"
+                    src="/content/images/size/w960/max/800/1-h3-aa9-_smfa7fsgn8kavw.png"
+                    alt="Backing Up a Stellar Data Engineer: Open for New Opportunities in Taipei"
+                    loading="lazy"
+                >
+            </div>
+        </figure>
+
+    <div class="post-wrapper">
+        <header class="post-header">
+                <span class="post-tag">Jobsearch</span>
+
+            <h2 class="post-title">
+                Backing Up a Stellar Data Engineer: Open for New Opportunities in Taipei
+            </h2>
+        </header>
+
+            <div class="post-excerpt">
+                I am writing this post to recommend my colleague Jill Hsu for any relevant job opportunities in Taipei.
+            </div>
+    </div>
+
+    <footer class="post-footer">
+        <span class="post-more">Read More</span>
+
+        <div class="post-author">
+                    <span class="post-author-link">
+                        <img class="post-author-image" src="/content/images/size/w150/v2/resize:fill:144:144/1-mzehvowngfwyye2pswx_vw.png" alt="Taka Wang" loading="lazy">
+                    </span>
+        </div>
+    </footer>
+</a>
+</article>                    <article class="post tag-industrial-camera-systems tag-embedded-systems tag-u3v tag-computer-vision tag-machine-vision-system tag-hash-medium tag-hash-import-2024-02-01-00-16 u-shadow">
+<a class="post-link" href="/configuring-usb-fs-for-usb3-vision-camera/">
+        <figure class="post-media">
+            <div class="u-placeholder same-height rectangle">
+                <img
+                    class="post-image u-object-fit"
+                    srcset="/content/images/size/w400/max/800/1-uoy9jp33j7xif2emebtdcg.jpg 400w,
+                            /content/images/size/w720/max/800/1-uoy9jp33j7xif2emebtdcg.jpg 750w,
+                            /content/images/size/w960/max/800/1-uoy9jp33j7xif2emebtdcg.jpg 960w,
+                            /content/images/size/w1200/max/800/1-uoy9jp33j7xif2emebtdcg.jpg 1140w,
+                            /content/images/size/w2000/max/800/1-uoy9jp33j7xif2emebtdcg.jpg 1920w"
+                    sizes="600px"
+                    src="/content/images/size/w960/max/800/1-uoy9jp33j7xif2emebtdcg.jpg"
+                    alt="Configuring USB-FS for USB3 Vision Camera"
+                    loading="lazy"
+                >
+            </div>
+        </figure>
+
+    <div class="post-wrapper">
+        <header class="post-header">
+                <span class="post-tag">Industrial Camera Systems</span>
+
+            <h2 class="post-title">
+                Configuring USB-FS for USB3 Vision Camera
+            </h2>
+        </header>
+
+            <div class="post-excerpt">
+                This post explains how to increase the buffer memory for USB-FS devices on Linux systems.
+            </div>
+    </div>
+
+    <footer class="post-footer">
+        <span class="post-more">Read More</span>
+
+        <div class="post-author">
+                    <span class="post-author-link">
+                        <img class="post-author-image" src="/content/images/size/w150/v2/resize:fill:144:144/1-mzehvowngfwyye2pswx_vw.png" alt="Taka Wang" loading="lazy">
+                    </span>
+        </div>
+    </footer>
+</a>
+</article>                    <article class="post tag-computer-vision tag-artificial-intelligence tag-deep-learning tag-ai tag-jetson-nano tag-hash-medium tag-hash-import-2024-02-01-00-16 u-shadow">
+<a class="post-link" href="/how-to-install-people-counting-toolkit-on-your-jetson-devices/">
+        <figure class="post-media">
+            <div class="u-placeholder same-height rectangle">
+                <img
+                    class="post-image u-object-fit"
+                    srcset="/content/images/size/w400/max/800/1-2zavqgypzo5yujkr_uzflq.jpg 400w,
+                            /content/images/size/w720/max/800/1-2zavqgypzo5yujkr_uzflq.jpg 750w,
+                            /content/images/size/w960/max/800/1-2zavqgypzo5yujkr_uzflq.jpg 960w,
+                            /content/images/size/w1200/max/800/1-2zavqgypzo5yujkr_uzflq.jpg 1140w,
+                            /content/images/size/w2000/max/800/1-2zavqgypzo5yujkr_uzflq.jpg 1920w"
+                    sizes="600px"
+                    src="/content/images/size/w960/max/800/1-2zavqgypzo5yujkr_uzflq.jpg"
+                    alt="How to install People Counting Toolkit on your Jetson devices"
+                    loading="lazy"
+                >
+            </div>
+        </figure>
+
+    <div class="post-wrapper">
+        <header class="post-header">
+                <span class="post-tag">Computer Vision</span>
+
+            <h2 class="post-title">
+                How to install People Counting Toolkit on your Jetson devices
+            </h2>
+        </header>
+
+            <div class="post-excerpt">
+                The installation procedure is quite simple — bash &lt;(curl -fsSL https://links.nilvana.ai/get-pc)
+            </div>
+    </div>
+
+    <footer class="post-footer">
+        <span class="post-more">Read More</span>
+
+        <div class="post-author">
+                    <span class="post-author-link">
+                        <img class="post-author-image" src="/content/images/size/w150/v2/resize:fill:144:144/1-mzehvowngfwyye2pswx_vw.png" alt="Taka Wang" loading="lazy">
+                    </span>
+        </div>
+    </footer>
+</a>
+</article>            </div>
+        </section>
+</div>
 </main>
-
-
-
-
-            <aside class="read-more-wrap outer">
-                <div class="read-more inner">
-                        
-<article class="post-card post featured keep-ratio">
-
-    <a class="post-card-image-link" href="/ai-iu-astray/">
-
-        <img class="post-card-image"
-            srcset="/content/images/size/w300/2024/01/1616593-1.jpg 300w,
-                    /content/images/size/w600/2024/01/1616593-1.jpg 600w,
-                    /content/images/size/w1000/2024/01/1616593-1.jpg 1000w,
-                    /content/images/size/w2000/2024/01/1616593-1.jpg 2000w"
-            sizes="(max-width: 1000px) 400px, 800px"
-            src="/content/images/size/w600/2024/01/1616593-1.jpg"
-            alt="迷途 (Astray) - AI (Lee Ji Eun)"
-            loading="lazy"
-        />
-
-
-    </a>
-
-    <div class="post-card-content">
-
-        <a class="post-card-content-link" href="/ai-iu-astray/">
-            <header class="post-card-header">
-                <div class="post-card-tags">
-                        <span class="post-card-featured"><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M4.49365 4.58752C3.53115 6.03752 2.74365 7.70002 2.74365 9.25002C2.74365 10.6424 3.29678 11.9778 4.28134 12.9623C5.26591 13.9469 6.60127 14.5 7.99365 14.5C9.38604 14.5 10.7214 13.9469 11.706 12.9623C12.6905 11.9778 13.2437 10.6424 13.2437 9.25002C13.2437 6.00002 10.9937 3.50002 9.16865 1.68127L6.99365 6.25002L4.49365 4.58752Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-</svg> Featured</span>
-                </div>
-                <h2 class="post-card-title">
-                    迷途 (Astray) - AI (Lee Ji Eun)
-                </h2>
-            </header>
-                <div class="post-card-excerpt">Disclaimer: Songs generated by this AI are for entertainment purposes only and strictly prohibited for commercial use. Not liable for legal consequences.</div>
-        </a>
-
-        <footer class="post-card-meta">
-            <time class="post-card-meta-date" datetime="2023-11-14">Nov 14, 2023</time>
-                <span class="post-card-meta-length">1 min read</span>
-        </footer>
-
     </div>
 
-</article>
-                        
-<article class="post-card post keep-ratio">
-
-    <a class="post-card-image-link" href="/brush-up-life/">
-
-        <img class="post-card-image"
-            srcset="/content/images/size/w300/max/800/1-qmnohe88z8o1ibeoayglua.png 300w,
-                    /content/images/size/w600/max/800/1-qmnohe88z8o1ibeoayglua.png 600w,
-                    /content/images/size/w1000/max/800/1-qmnohe88z8o1ibeoayglua.png 1000w,
-                    /content/images/size/w2000/max/800/1-qmnohe88z8o1ibeoayglua.png 2000w"
-            sizes="(max-width: 1000px) 400px, 800px"
-            src="/content/images/size/w600/max/800/1-qmnohe88z8o1ibeoayglua.png"
-            alt="重啟人生 | BRUSH UP LIFE"
-            loading="lazy"
-        />
-
-
-    </a>
-
-    <div class="post-card-content">
-
-        <a class="post-card-content-link" href="/brush-up-life/">
-            <header class="post-card-header">
-                <div class="post-card-tags">
-                </div>
-                <h2 class="post-card-title">
-                    重啟人生 | BRUSH UP LIFE
-                </h2>
-            </header>
-                <div class="post-card-excerpt">《重啟人生》（ブラッシュアップライフ）是今年度最熱門的日劇之一，它深深觸動了許多人的心靈。</div>
-        </a>
-
-        <footer class="post-card-meta">
-            <time class="post-card-meta-date" datetime="2023-04-23">Apr 23, 2023</time>
-                <span class="post-card-meta-length">4 min read</span>
-        </footer>
-
-    </div>
-
-</article>
-                        
-<article class="post-card post keep-ratio">
-
-    <a class="post-card-image-link" href="/e8-a3-bd-e4-bd-9c-e8-84-86-e6-a2-85-e7-9a-84-e6-99-82-e7-af-80-make-crispy-plum/">
-
-        <img class="post-card-image"
-            srcset="/content/images/size/w300/max/800/1-1kj9n9ovro9pacr9jkftsw.jpg 300w,
-                    /content/images/size/w600/max/800/1-1kj9n9ovro9pacr9jkftsw.jpg 600w,
-                    /content/images/size/w1000/max/800/1-1kj9n9ovro9pacr9jkftsw.jpg 1000w,
-                    /content/images/size/w2000/max/800/1-1kj9n9ovro9pacr9jkftsw.jpg 2000w"
-            sizes="(max-width: 1000px) 400px, 800px"
-            src="/content/images/size/w600/max/800/1-1kj9n9ovro9pacr9jkftsw.jpg"
-            alt="製作脆梅的時節 / Make Crispy Plum"
-            loading="lazy"
-        />
-
-
-    </a>
-
-    <div class="post-card-content">
-
-        <a class="post-card-content-link" href="/e8-a3-bd-e4-bd-9c-e8-84-86-e6-a2-85-e7-9a-84-e6-99-82-e7-af-80-make-crispy-plum/">
-            <header class="post-card-header">
-                <div class="post-card-tags">
-                </div>
-                <h2 class="post-card-title">
-                    製作脆梅的時節 / Make Crispy Plum
-                </h2>
-            </header>
-                <div class="post-card-excerpt">製作脆梅一直是我們家重要的儀式，每年我們都會在年初與信義鄉的小農預訂青梅，並以此製作脆梅。</div>
-        </a>
-
-        <footer class="post-card-meta">
-            <time class="post-card-meta-date" datetime="2023-04-16">Apr 16, 2023</time>
-                <span class="post-card-meta-length">3 min read</span>
-        </footer>
-
-    </div>
-
-</article>
-                </div>
-            </aside>
-
-
-
-    </div>
-
-    <footer class="site-footer outer">
-        <div class="inner">
-            <section class="copyright"><a href="https://blog.cmwang.net">Liberation Notes</a> &copy; 2024</section>
-            <nav class="site-footer-nav">
-                
-            </nav>
-            <div class="gh-powered-by"><a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a></div>
+    <footer class="gh-foot no-menu gh-outer">
+        <div class="gh-foot-inner gh-inner">
+            <div class="gh-copyright">
+                Liberation Notes © 2024
+            </div>
+            <div class="gh-powered-by">
+                <a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a>
+            </div>
         </div>
     </footer>
 
@@ -379,22 +414,7 @@
         </div>
     </div>
 </div>
-<script
-    src="https://code.jquery.com/jquery-3.5.1.min.js"
-    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-    crossorigin="anonymous">
-</script>
-<script src="/assets/built/casper.js?v=9aaa8e31ca"></script>
-<script>
-$(document).ready(function () {
-    // Mobile Menu Trigger
-    $('.gh-burger').click(function () {
-        $('body').toggleClass('gh-head-open');
-    });
-    // FitVids - Makes video embeds responsive
-    $(".gh-content").fitVids();
-});
-</script>
+<script src="/assets/built/main.min.js?v=2e7b6649be"></script>
 
 <style>
 .gh-foot-menu {
