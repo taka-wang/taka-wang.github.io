@@ -19,9 +19,9 @@
     <meta property="og:url" content="https://blog.cmwang.net/object-detection-from-the-video-taken-by-drone/">
     <meta property="og:image" content="https://blog.cmwang.net/content/images/v2/resize:fit:1200/1-4hcxr7y6b8vdvqo31il38g.jpg">
     <meta property="article:published_time" content="2022-09-13T01:46:48.000Z">
-    <meta property="article:modified_time" content="2024-01-31T19:51:09.000Z">
-    <meta property="article:tag" content="Drones">
+    <meta property="article:modified_time" content="2024-01-31T23:11:07.000Z">
     <meta property="article:tag" content="Object Detection">
+    <meta property="article:tag" content="Drones">
     <meta property="article:tag" content="Computer Vision">
     <meta property="article:tag" content="Deep Learning">
     <meta property="article:tag" content="AI">
@@ -35,7 +35,7 @@
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Jamie Wang">
     <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="Drones, Object Detection, Computer Vision, Deep Learning, AI">
+    <meta name="twitter:data2" content="Object Detection, Drones, Computer Vision, Deep Learning, AI">
     <meta name="twitter:site" content="@ghost">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="865">
@@ -72,15 +72,15 @@
     "headline": "Object Detection from the Video Taken by Drone",
     "url": "https://blog.cmwang.net/object-detection-from-the-video-taken-by-drone/",
     "datePublished": "2022-09-13T01:46:48.000Z",
-    "dateModified": "2024-01-31T19:51:09.000Z",
+    "dateModified": "2024-01-31T23:11:07.000Z",
     "image": {
         "@type": "ImageObject",
         "url": "https://blog.cmwang.net/content/images/max/800/1-4hcxr7y6b8vdvqo31il38g.jpg",
         "width": 800,
         "height": 577
     },
-    "keywords": "Drones, Object Detection, Computer Vision, Deep Learning, AI",
-    "description": "Nilvana™ Vision Studio has an intuitive web interface that makes it easy to merge annotation data or categories from different datasets.",
+    "keywords": "Object Detection, Drones, Computer Vision, Deep Learning, AI",
+    "description": "This article presents the use of object detection in drone FPV video.",
     "mainEntityOfPage": "https://blog.cmwang.net/object-detection-from-the-video-taken-by-drone/"
 }
     </script>
@@ -114,7 +114,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css" integrity="sha512-Dqf5696xtofgH089BgZJo2lSWTvev4GFo+gA2o4GullFY65rzQVQLQVlzLvYwTo0Bb2Gpb6IqwxYWtoMonfdhQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /><style>:root {--ghost-accent-color: #D63484;}</style>
 </head>
 
-<body class="post-template tag-drones tag-object-detection tag-computer-vision tag-deep-learning tag-ai is-head-left-logo">
+<body class="post-template tag-object-detection tag-drones tag-computer-vision tag-deep-learning tag-ai is-head-left-logo">
 <div class="gh-site">
 
     <header id="gh-head" class="gh-head gh-outer">
@@ -148,13 +148,13 @@
 <main class="site-main">
 
 
-    <article class="gh-article post tag-drones tag-object-detection tag-computer-vision tag-deep-learning tag-ai">
+    <article class="gh-article post tag-object-detection tag-drones tag-computer-vision tag-deep-learning tag-ai">
 
         <header class="gh-article-header gh-canvas">
             <span class="gh-article-meta">
                 By <a href="/author/jamie/">Jamie Wang</a>
                     in
-                    <a class="gh-article-tag" href="https://blog.cmwang.net/tag/drones/">Drones</a>
+                    <a class="gh-article-tag" href="https://blog.cmwang.net/tag/object-detection/">Object Detection</a>
                 —
                 <time datetime="2022-09-13">Sep 13, 2022</time>
             </span>
@@ -178,19 +178,11 @@
         </header>
 
         <div class="gh-content gh-canvas">
-            <p>In the <a href="https://link.medium.com/0pZ5J3tCftb" rel="noopener"><strong>last article</strong></a> from <a href="https://medium.com/hello-nilvana" rel="noopener">hello nilvana</a>, we learned how to import the <a href="http://aiskyeye.com" rel="noopener">VisDrone dataset</a> into Nilvana<strong>™</strong> Vision Studio. It’s not that difficult, just follow the instructions or ask us for help. If you have not read it yet, you definitely have to!</p>
+            <p>In the last article, we learned how to import the <a href="http://aiskyeye.com" rel="noopener">VisDrone dataset</a> into Nilvana<strong>™</strong> Vision Studio. It’s not that difficult, just follow the instructions or ask us for help. If you have not read it yet, you definitely have to!</p>
 <!--kg-card-begin: html-->
 <figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://link.medium.com/0pZ5J3tCftb"><div class="kg-bookmark-content"><div class="kg-bookmark-title">VisDrone Datasets - Nilavna Vision Studio</div><div class="kg-bookmark-description">今日要分享的是，如何將目前 VisDrone 的照片資料集透過 Nilvana™ Vision Studio 進行匯入，方便日後進行模型的訓練。</div><div class="kg-bookmark-metadata"></div></div><div class="kg-bookmark-thumbnail"><img src="https://blog.cmwang.net/content/images/fit/c/160/160/0-worej9bweqrri1bg.png" alt=""></div></a></figure>
 <!--kg-card-end: html-->
-<p>As you can see in the Vision Studio screenshots below, you can clearly see the 10 categories annotated in the images. Some time ago I found a beautiful video — <a href="https://youtu.be/yXEb0fWLJIY" rel="noopener"><strong>World’s longest drone fpv one shot</strong></a> made by <a href="https://newstepmedia.net" rel="noopener">New Step Media</a> on Youtube. I found that there are a lot of indoor scenes that are very suitable for adding the COCO dataset based on the visdrone dataset, so I used this combined dataset to train a object detector. In case you didn’t already know, Nilvana<strong>™</strong> Vision Studio has an intuitive web interface that makes it easy to <strong>merge annotation data</strong> or <strong>categories</strong> from different datasets with a few mouse clicks.</p><figure class="kg-card kg-gallery-card kg-width-wide kg-card-hascaption"><div class="kg-gallery-container"><div class="kg-gallery-row"><div class="kg-gallery-image"><img src="https://blog.cmwang.net/content/images/max/1000/1-hsvqcqt8rvoqfztapf_yra.png" width="1756" height="938" loading="lazy" alt="" srcset="https://blog.cmwang.net/content/images/size/w600/max/1000/1-hsvqcqt8rvoqfztapf_yra.png 600w, https://blog.cmwang.net/content/images/size/w1000/max/1000/1-hsvqcqt8rvoqfztapf_yra.png 1000w, https://blog.cmwang.net/content/images/size/w1600/max/1000/1-hsvqcqt8rvoqfztapf_yra.png 1600w, https://blog.cmwang.net/content/images/max/1000/1-hsvqcqt8rvoqfztapf_yra.png 1756w" sizes="(min-width: 720px) 720px"></div><div class="kg-gallery-image"><img src="https://blog.cmwang.net/content/images/max/400/1-qhif2slonafquakcfivdwg.png" width="619" height="907" loading="lazy" alt="" srcset="https://blog.cmwang.net/content/images/size/w600/max/400/1-qhif2slonafquakcfivdwg.png 600w, https://blog.cmwang.net/content/images/max/400/1-qhif2slonafquakcfivdwg.png 619w"></div></div></div><figcaption><p><span style="white-space: pre-wrap;">Visdrone dataset on Nilvana</span><b><strong style="white-space: pre-wrap;">™</strong></b><span style="white-space: pre-wrap;"> Vision&nbsp;Studio</span></p></figcaption></figure><p>You can watch the finished video below. Kudos to <a href="https://newstepmedia.net" rel="noopener">New Step Media</a> for creating such a stunning aerial video. Ownership of the original video belongs to <a href="https://newstepmedia.net" rel="noopener">New Step Media</a>.</p><figure class="kg-card kg-embed-card kg-card-hascaption"><iframe src="https://www.youtube.com/embed/-sPxNKfXasU?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe><figcaption><p><span style="white-space: pre-wrap;">Drone video object detection</span></p></figcaption></figure><hr><p>Nilvana<strong>™</strong> has developed <strong>Vision Studio</strong> and <strong>Vision Inference Runtime</strong> toolkits, which enable collaborative data annotation, model creation, and rapid inference without AI expertise.</p><p>Nilvana<strong>™</strong> provides a <a href="https://shop.nilvana.ai/pages/our-services" rel="noopener ugc nofollow noopener">wide range of services</a> from consulting and model creation to the development of AI-based applications. Feel free to <a href="https://shop.nilvana.ai/pages/contact-us" rel="noopener ugc nofollow noopener">contact us</a> for any inquiries.</p>
-<!--kg-card-begin: html-->
-<figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://shop.nilvana.ai/products/nilvana-vision-studio"><div class="kg-bookmark-content"><div class="kg-bookmark-title">Nilvana™ Vision Studio</div><div class="kg-bookmark-description">AI Workstation, Jetson Nano, Xavier, Nvidia, Edge Computing, IoT, Edge Computing, 人工智慧，工作站，物聯網，邊緣運算，邊緣裝置。</div><div class="kg-bookmark-metadata"></div></div><div class="kg-bookmark-thumbnail"><img src="https://blog.cmwang.net/content/images/fit/c/160/160/0-t1p4i956ywoiisku.png" alt=""></div></a></figure>
-<!--kg-card-end: html-->
-
-<!--kg-card-begin: html-->
-<figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://nilvana.ai"><div class="kg-bookmark-content"><div class="kg-bookmark-title">Hello nilvana™, Hello Tomorrow</div><div class="kg-bookmark-description">AI Workstation, Jetson Nano, Xavier, Nvidia, Edge Computing, IoT, Edge Computing, 人工智慧，工作站，物聯網，邊緣運算，邊緣裝置。</div><div class="kg-bookmark-metadata"></div></div><div class="kg-bookmark-thumbnail"><img src="https://blog.cmwang.net/content/images/fit/c/160/160/0-axl713cxhhq1guco.jpg" alt=""></div></a></figure>
-<!--kg-card-end: html-->
-
+<p>As you can see in the Vision Studio screenshots below, you can clearly see the 10 categories annotated in the images. Some time ago I found a beautiful video — <a href="https://youtu.be/yXEb0fWLJIY" rel="noopener"><strong>World’s longest drone fpv one shot</strong></a> made by <a href="https://newstepmedia.net" rel="noopener">New Step Media</a> on Youtube. I found that there are a lot of indoor scenes that are very suitable for adding the COCO dataset based on the visdrone dataset, so I used this combined dataset to train a object detector. In case you didn’t already know, Nilvana<strong>™</strong> Vision Studio has an intuitive web interface that makes it easy to <strong>merge annotation data</strong> or <strong>categories</strong> from different datasets with a few mouse clicks.</p><figure class="kg-card kg-gallery-card kg-width-wide kg-card-hascaption"><div class="kg-gallery-container"><div class="kg-gallery-row"><div class="kg-gallery-image"><img src="https://blog.cmwang.net/content/images/max/1000/1-hsvqcqt8rvoqfztapf_yra.png" width="1756" height="938" loading="lazy" alt="" srcset="https://blog.cmwang.net/content/images/size/w600/max/1000/1-hsvqcqt8rvoqfztapf_yra.png 600w, https://blog.cmwang.net/content/images/size/w1000/max/1000/1-hsvqcqt8rvoqfztapf_yra.png 1000w, https://blog.cmwang.net/content/images/size/w1600/max/1000/1-hsvqcqt8rvoqfztapf_yra.png 1600w, https://blog.cmwang.net/content/images/max/1000/1-hsvqcqt8rvoqfztapf_yra.png 1756w" sizes="(min-width: 720px) 720px"></div><div class="kg-gallery-image"><img src="https://blog.cmwang.net/content/images/max/400/1-qhif2slonafquakcfivdwg.png" width="619" height="907" loading="lazy" alt="" srcset="https://blog.cmwang.net/content/images/size/w600/max/400/1-qhif2slonafquakcfivdwg.png 600w, https://blog.cmwang.net/content/images/max/400/1-qhif2slonafquakcfivdwg.png 619w"></div></div></div><figcaption><p><span style="white-space: pre-wrap;">Visdrone dataset on Nilvana</span><b><strong style="white-space: pre-wrap;">™</strong></b><span style="white-space: pre-wrap;"> Vision&nbsp;Studio</span></p></figcaption></figure><p>You can watch the finished video below. Kudos to <a href="https://newstepmedia.net" rel="noopener">New Step Media</a> for creating such a stunning aerial video. Ownership of the original video belongs to <a href="https://newstepmedia.net" rel="noopener">New Step Media</a>.</p><figure class="kg-card kg-embed-card kg-card-hascaption"><iframe src="https://www.youtube.com/embed/-sPxNKfXasU?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe><figcaption><p><span style="white-space: pre-wrap;">Drone video object detection</span></p></figcaption></figure>
         </div>
 
     </article>
@@ -376,7 +368,7 @@
         </header>
 
             <div class="post-excerpt">
-                We will conduct a series performance test of YOLOv7 variants models from cloud GPUs to the latest powerhouse AGX Orin in this post.
+                I&#39;ll test YOLOv7 variant models across different platforms, from cloud GPUs to the latest AGX Orin in this post.
             </div>
     </div>
 
