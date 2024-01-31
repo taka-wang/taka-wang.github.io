@@ -1,7 +1,3 @@
 User-agent: *
-Sitemap: http://localhost:2368/sitemap.xml
-Disallow: /ghost/
-Disallow: /p/
-Disallow: /email/
-Disallow: /r/
-Disallow: /webmentions/receive/
+Disallow:
+Sitemap: https://blog.cmwang.net/sitemap.xml
