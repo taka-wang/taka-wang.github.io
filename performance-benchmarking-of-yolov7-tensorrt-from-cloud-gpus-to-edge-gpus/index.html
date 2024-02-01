@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Performance Benchmarking of YOLOv7 TensorRT from Cloud GPUs to Edge GPUs</title>
-    <link rel="stylesheet" href="/assets/built/screen.css?v=49b1cfe6fc">
+    <title>Performance Benchmarking of YOLOv7 TensorRT</title>
+    <link rel="stylesheet" href="/assets/built/screen.css?v=72a4ef7e32">
 
     <meta name="description" content="We will conduct a series performance test of YOLOv7 variants models from cloud GPUs to the latest powerhouse AGX Orin in this post.">
     <link rel="icon" href="https://blog.cmwang.net/content/images/size/w256h256/2024/01/2-removebg-preview.png" type="image/png">
@@ -19,11 +19,11 @@
     <meta property="og:url" content="https://blog.cmwang.net/performance-benchmarking-of-yolov7-tensorrt-from-cloud-gpus-to-edge-gpus/">
     <meta property="og:image" content="https://blog.cmwang.net/content/images/v2/da:true/resize:fit:960/1-uilai7xjc-5scp4rozd8-w.gif">
     <meta property="article:published_time" content="2022-07-25T10:30:00.000Z">
-    <meta property="article:modified_time" content="2024-02-01T00:26:03.000Z">
-    <meta property="article:tag" content="Computer Vision">
+    <meta property="article:modified_time" content="2024-02-01T09:23:48.000Z">
     <meta property="article:tag" content="Object Detection">
-    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="Computer Vision">
     <meta property="article:tag" content="yolo">
+    <meta property="article:tag" content="AI">
     
     <meta property="article:publisher" content="https://www.facebook.com/ghost">
     <meta name="twitter:card" content="summary_large_image">
@@ -34,7 +34,7 @@
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Jamie Wang">
     <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="Computer Vision, Object Detection, AI, yolo">
+    <meta name="twitter:data2" content="Object Detection, Computer Vision, yolo, AI">
     <meta name="twitter:site" content="@ghost">
     <meta property="og:image:width" content="960">
     <meta property="og:image:height" content="540">
@@ -68,17 +68,17 @@
             "https://blog.cmwang.net"
         ]
     },
-    "headline": "Performance Benchmarking of YOLOv7 TensorRT from Cloud GPUs to Edge GPUs",
+    "headline": "Performance Benchmarking of YOLOv7 TensorRT",
     "url": "https://blog.cmwang.net/performance-benchmarking-of-yolov7-tensorrt-from-cloud-gpus-to-edge-gpus/",
     "datePublished": "2022-07-25T10:30:00.000Z",
-    "dateModified": "2024-02-01T00:26:03.000Z",
+    "dateModified": "2024-02-01T09:23:48.000Z",
     "image": {
         "@type": "ImageObject",
         "url": "https://blog.cmwang.net/content/images/max/800/1-uilai7xjc-5scp4rozd8-w.gif",
         "width": 960,
         "height": 540
     },
-    "keywords": "Computer Vision, Object Detection, AI, yolo",
+    "keywords": "Object Detection, Computer Vision, yolo, AI",
     "description": "I&#x27;ll test YOLOv7 variant models across different platforms, from cloud GPUs to the latest AGX Orin in this post.",
     "mainEntityOfPage": "https://blog.cmwang.net/performance-benchmarking-of-yolov7-tensorrt-from-cloud-gpus-to-edge-gpus/"
 }
@@ -90,8 +90,8 @@
     <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="415aa5f59e59c087cacf652d7b" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css" data-sodo-search="https://blog.cmwang.net/" crossorigin="anonymous"></script>
     
     <link href="https://blog.cmwang.net/webmentions/receive/" rel="webmention">
-    <script defer src="/public/cards.min.js?v=49b1cfe6fc"></script>
-    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=49b1cfe6fc">
+    <script defer src="/public/cards.min.js?v=72a4ef7e32"></script>
+    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=72a4ef7e32">
     <style>
   .gh-search {
     display: none !important;
@@ -113,7 +113,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css" integrity="sha512-Dqf5696xtofgH089BgZJo2lSWTvev4GFo+gA2o4GullFY65rzQVQLQVlzLvYwTo0Bb2Gpb6IqwxYWtoMonfdhQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /><style>:root {--ghost-accent-color: #D63484;}</style>
 </head>
 
-<body class="post-template tag-computer-vision tag-object-detection tag-ai tag-yolo is-head-left-logo">
+<body class="post-template tag-object-detection tag-computer-vision tag-yolo tag-ai is-head-left-logo">
 <div class="gh-site">
 
     <header id="gh-head" class="gh-head gh-outer">
@@ -147,20 +147,20 @@
 <main class="site-main">
 
 
-    <article class="gh-article post tag-computer-vision tag-object-detection tag-ai tag-yolo">
+    <article class="gh-article post tag-object-detection tag-computer-vision tag-yolo tag-ai">
 
         <header class="gh-article-header gh-canvas">
             <span class="gh-article-meta">
                 By <a href="/author/jamie/">Jamie Wang</a>
                     in
-                    <a href="/tag/computer-vision/" class="gh-article-tag">Computer Vision</a>, <a href="/tag/object-detection/" class="gh-article-tag">Object Detection</a>, <a href="/tag/ai/" class="gh-article-tag">AI</a>, <a href="/tag/yolo/" class="gh-article-tag">yolo</a>
+                    <a href="/tag/object-detection/" class="gh-article-tag">Object Detection</a>, <a href="/tag/computer-vision/" class="gh-article-tag">Computer Vision</a>, <a href="/tag/yolo/" class="gh-article-tag">yolo</a>, <a href="/tag/ai/" class="gh-article-tag">AI</a>
                 —
                 <time datetime="2022-07-25">Jul 25, 2022</time>
                 
                 
             </span>
 
-            <h1 class="gh-article-title">Performance Benchmarking of YOLOv7 TensorRT from Cloud GPUs to Edge GPUs</h1>
+            <h1 class="gh-article-title">Performance Benchmarking of YOLOv7 TensorRT</h1>
 
 
                 <figure class="gh-article-image kg-width-wide">
@@ -172,7 +172,7 @@
                     /content/images/size/w2000/max/800/1-uilai7xjc-5scp4rozd8-w.gif 2000w"
             sizes="(max-width: 1200px) 100vw, 1200px"
             src="/content/images/size/w1200/max/800/1-uilai7xjc-5scp4rozd8-w.gif"
-            alt="Performance Benchmarking of YOLOv7 TensorRT from Cloud GPUs to Edge GPUs"
+            alt="Performance Benchmarking of YOLOv7 TensorRT"
         >
             <figcaption><span style="white-space: pre-wrap;">YOLOv7 TensorRT Performance Benchmarking.</span></figcaption>
     </figure>
@@ -212,7 +212,7 @@
                 <span class="text">You might also like...</span>
             </h3>
             <div class="post-feed">
-                    <article class="post tag-object-detection tag-object-tracking tag-computer-vision tag-deep-learning tag-ai u-shadow">
+                    <article class="post tag-object-detection tag-computer-vision tag-deep-learning tag-ai u-shadow">
 <a class="post-link" href="/make-your-own-pig-counter/">
         <figure class="post-media">
             <div class="u-placeholder same-height rectangle">
@@ -438,7 +438,7 @@
         </div>
     </div>
 </div>
-<script src="/assets/built/main.min.js?v=49b1cfe6fc"></script>
+<script src="/assets/built/main.min.js?v=72a4ef7e32"></script>
 
 <style>
 .gh-foot-menu {
