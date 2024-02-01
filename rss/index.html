@@ -1,4 +1,633 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Liberation Notes]]></title><description><![CDATA[This is me thinking about life and software, discovering old lessons and learning new stuff.]]></description><link>https://blog.cmwang.net/</link><image><url>https://blog.cmwang.net/favicon.png</url><title>Liberation Notes</title><link>https://blog.cmwang.net/</link></image><generator>Ghost 5.78</generator><lastBuildDate>Thu, 01 Feb 2024 12:28:35 GMT</lastBuildDate><atom:link href="https://blog.cmwang.net/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[DHH: Microservices vs. Monolith]]></title><description><![CDATA[David Heinemeier Hansson: Microservices vs. Monolith]]></description><link>https://blog.cmwang.net/dhh-microservices-vs-monolith/</link><guid isPermaLink="false">65badd56514868c0d44d1b20</guid><category><![CDATA[Youtube]]></category><category><![CDATA[Software Design]]></category><dc:creator><![CDATA[Jamie Wang]]></dc:creator><pubDate>Sat, 18 Nov 2023 23:59:00 GMT</pubDate><media:content url="https://blog.cmwang.net/content/images/2024/02/0_T7e2X1sDkH1SYayD.png" medium="image"/><content:encoded><![CDATA[<figure class="kg-card kg-embed-card"><iframe width="200" height="113" src="https://www.youtube.com/embed/rkXGSLf-rVQ?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen title="David Heinemeier Hansson: Microservices vs. Monolith"></iframe></figure><h2 id="%E7%B5%84%E7%B9%94%E7%B5%90%E6%A7%8B%E8%80%83%E6%85%AE">&#x7D44;&#x7E54;&#x7D50;&#x69CB;&#x8003;&#x616E;</h2>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Liberation Notes]]></title><description><![CDATA[This is me thinking about life and software, discovering old lessons and learning new stuff.]]></description><link>https://blog.cmwang.net/</link><image><url>https://blog.cmwang.net/favicon.png</url><title>Liberation Notes</title><link>https://blog.cmwang.net/</link></image><generator>Ghost 5.78</generator><lastBuildDate>Thu, 01 Feb 2024 13:58:27 GMT</lastBuildDate><atom:link href="https://blog.cmwang.net/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Learn CSS Grid the easy way]]></title><description><![CDATA[Youtube Summary]]></description><link>https://blog.cmwang.net/learn-css-grid-the-easy-way/</link><guid isPermaLink="false">65bba2084c147810992a1ba8</guid><category><![CDATA[Youtube]]></category><category><![CDATA[Frontend]]></category><category><![CDATA[CSS]]></category><category><![CDATA[Notes]]></category><dc:creator><![CDATA[Jamie Wang]]></dc:creator><pubDate>Thu, 01 Feb 2024 13:55:08 GMT</pubDate><content:encoded><![CDATA[<figure class="kg-card kg-embed-card kg-card-hascaption"><iframe width="200" height="113" src="https://www.youtube.com/embed/rg7Fvvl3taU?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen title="Learn CSS Grid the easy way"></iframe><figcaption><p dir="ltr"><span style="white-space: pre-wrap;">source: </span><a href="https://www.youtube.com/watch?v=rg7Fvvl3taU"><span style="white-space: pre-wrap;">https://www.youtube.com/watch?v=rg7Fvvl3taU</span></a></p></figcaption></figure><h2 id="%E2%9A%99%EF%B8%8F-%E6%96%B9%E6%B3%951">&#x2699;&#xFE0F;&#xA0;&#x65B9;&#x6CD5;1</h2>
+<p>&#x5F9E;&#x650F;&#x7D71;&#x958B;&#x59CB;&#xFF0C;&#x9664;&#x975E;&#x9700;&#x8981;&#x7279;&#x5225;&#x6307;&#x5B9A;&#xFF0C;&#x624D;&#x8655;&#x7406;&#x7279;&#x5225;&#x4E4B;&#x8655;&#xFF0C;&#x7C21;&#x5316;&#x8A2D;&#x8A08;&#x3002;</p>
+<ul>
+<li>
+<p><code>grid-template-columns</code></p>
+<pre><code class="language-css">.testimonial-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+</code></pre>
+</li>
+<li>
+<p><code>grid-template-rows</code> &#x76E1;&#x91CF;&#x4E0D;&#x7528;, &#x8B93;&#x5B83;&#x81EA;&#x5DF1;&#x9577; (&#x96B1;&#x5F0F;&#x7DB2;&#x683C;&#xFF0C;Implicit Grid Rows)&#xFF0C;&#x7C21;&#x5316;&#x8A2D;&#x8A08;</p>
+</li>
+<li>
+<p><code>gap</code></p>
+<pre><code class="language-css">grid-row-gap: 20px;
+grid-colume-gap: 10px;
+
+/* or */
+gap: 20px 10px; /* Different row and column gaps */
+
+/* or */
+gap: 1.5rem;
+</code></pre>
+</li>
+<li>
+<p><code>span</code> (&#x5728; grid item &#x4E0A;)</p>
+<pre><code class="language-css">.grid-col-span-2 {
+   grid-column: span 2;
+}
+</code></pre>
+<pre><code class="language-html">&lt;article class=&quot;testimonial grid-col-span-2 ...&quot;&gt;
+</code></pre>
+</li>
+<li>
+<p>&#x8655;&#x7406;&#x7279;&#x5225;&#x7684;&#x5361;&#x7247;&#xFF0C;&#x500B;&#x5225;&#x6307;&#x5B9A;&#x958B;&#x59CB;&#x8DDF;&#x7D50;&#x675F;</p>
+<pre><code class="language-css">.testimonial:last-child {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 3; /* or span 2 */
+}
+
+/* or &#x7E2E;&#x5BEB; */
+.testimonial:last-child {
+  grid-column: 4 / 5;
+  grid-row: 1 / 3; /* or 1 / span 2 */
+}
+</code></pre>
+</li>
+<li>
+<p>media query (mobile first)</p>
+<ul>
+<li><strong><code>@media (min-width: 40em) {}</code></strong> &#x8868;&#x793A;&#x7576;&#x87A2;&#x5E55;&#x5BEC;&#x5EA6;&#x5927;&#x65BC;&#x6216;&#x7B49;&#x65BC; 40em &#x6642;&#x5957;&#x7528;&#x6A23;&#x5F0F;&#x3002;&#x9019;&#x662F;&#x4F7F;&#x7528; <strong><code>min-width</code></strong> &#x7684;&#x60C5;&#x6CC1;&#x3002;</li>
+<li>&#x5728; mobile-first &#x8A2D;&#x8A08;&#x4E2D;&#xFF0C;&#x901A;&#x5E38;&#x6703;&#x4F7F;&#x7528; <strong><code>min-width</code></strong>&#xFF0C;&#x56E0;&#x70BA;&#x4E00;&#x958B;&#x59CB;&#x7684;&#x6A23;&#x5F0F;&#x662F;&#x91DD;&#x5C0D;&#x8F03;&#x5C0F;&#x7684;&#x87A2;&#x5E55;&#xFF08;&#x4F8B;&#x5982;&#x624B;&#x6A5F;&#xFF09;&#x8A2D;&#x8A08;&#x7684;&#xFF0C;&#x7136;&#x5F8C;&#x4F7F;&#x7528;&#x5A92;&#x9AD4;&#x67E5;&#x8A62;&#x9010;&#x6F38;&#x589E;&#x52A0;&#x6A23;&#x5F0F;&#x4EE5;&#x9069;&#x61C9;&#x8F03;&#x5927;&#x7684;&#x87A2;&#x5E55;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x4E00;&#x958B;&#x59CB;&#x7684;&#x6A23;&#x5F0F;&#x5C07;&#x4E0D;&#x5E36;&#x6709;&#x5A92;&#x9AD4;&#x67E5;&#x8A62;&#xFF0C;&#x800C;&#x5F8C;&#x7E8C;&#x7684;&#x6A23;&#x5F0F;&#x5C07;&#x4F7F;&#x7528; <strong><code>min-width</code></strong> &#x4F86;&#x78BA;&#x4FDD;&#x5B83;&#x5011;&#x53EA;&#x5728;&#x87A2;&#x5E55;&#x5BEC;&#x5EA6;&#x8D85;&#x904E;&#x7279;&#x5B9A;&#x503C;&#x6642;&#x5957;&#x7528;&#x3002;</li>
+</ul>
+</li>
+<li>
+<p>&#x1F4AA;&#x1F4AA;&#x1F4AA;&#xA0;Final</p>
+<pre><code class="language-css">@media (min-width: 40em) {
+  .grid-col-span-2 {
+     grid-column: span 2;
+  }
+
+  .testimonial-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .testimonial:last-child {
+    grid-column-start: 4;
+    grid-row: 1 / span 2;
+  }
+}
+</code></pre>
+</li>
+<li>
+<p>&#x1F525;&#xA0;&#x4F7F;&#x7528; Tailwind CSS &#x9054;&#x5230;&#x540C;&#x6A23;&#x6548;&#x679C;</p>
+<pre><code class="language-html">&lt;div class=&quot;grid-container grid grid-cols-1 gap-4 md:grid-cols-4&quot;&gt;
+  &lt;div class=&quot;itm border-2 md:col-span-2&quot;&gt;1&lt;/div&gt;
+  &lt;div class=&quot;itm border-2&quot;&gt;2&lt;/div&gt;
+  &lt;div class=&quot;ite border-2&quot;&gt;3&lt;/div&gt;
+  &lt;div class=&quot;ite border-2 md:col-span-2&quot;&gt;4&lt;/div&gt;
+  &lt;div class=&quot;ite border-2 md:col-start-4 md:row-span-2 md:row-start-1&quot;&gt;5&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+</li>
+</ul>
+<hr>
+<h2 id="%E2%9A%99%EF%B8%8F-%E6%96%B9%E6%B3%952">&#x2699;&#xFE0F;&#xA0;&#x65B9;&#x6CD5;2</h2>
+<ul>
+<li>
+<p><code>grid-template-areas</code></p>
+<ul>
+<li><strong><code>grid-template-areas</code></strong> &#x5C6C;&#x6027;&#x7528;&#x65BC;&#x5B9A;&#x7FA9; CSS Grid &#x7684;&#x5340;&#x57DF;&#x4F48;&#x5C40;&#x3002;</li>
+<li>&#x900F;&#x904E;&#x6307;&#x5B9A;&#x5340;&#x57DF;&#x540D;&#x7A31;&#xFF0C;&#x53EF;&#x4EE5;&#x8F15;&#x9B06;&#x5730;&#x7D44;&#x614B;&#x5B50;&#x5143;&#x7D20;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</li>
+<li>&#x5728; <strong><code>.testimonial-grid</code></strong> &#x4E2D;&#xFF0C;&#x4F7F;&#x7528;&#x4E86;&#x4E94;&#x500B;&#x5340;&#x57DF;&#x540D;&#x7A31; <code>one</code>, <code>two</code>, <code>three</code>, <code>four</code>, <code>five</code> &#x4F86;&#x5B9A;&#x7FA9;&#x5340;&#x57DF;&#x3002;</li>
+<li>&#x6CE8;&#x610F;&#x6700;&#x5F8C;&#x7684;&#x5206;&#x865F;&#x1F525;&#x3002;</li>
+</ul>
+</li>
+<li>
+<p><code>nth-child()</code> &#x9019;&#x90E8;&#x5206;&#x5982;&#x679C;&#x4E0D;&#x8A2D;&#x5B9A;&#xFF0C;&#x6703;&#x932F;&#x4F4D;</p>
+<ul>
+<li><strong><code>nth-child()</code></strong> &#x662F; CSS &#x9078;&#x64C7;&#x5668;&#x4E2D;&#x7684;&#x4E00;&#x7A2E;&#xFF0C;&#x7528;&#x65BC;&#x9078;&#x64C7;&#x7236;&#x5143;&#x7D20;&#x7684;&#x7279;&#x5B9A;&#x5B50;&#x5143;&#x7D20;&#x3002;</li>
+<li>&#x5728;&#x9019;&#x88E1;&#xFF0C;<strong><code>.testimonial:nth-child(n)</code></strong> &#x88AB;&#x7528;&#x4F86;&#x9078;&#x64C7; <strong><code>.testimonial</code></strong> &#x5143;&#x7D20;&#x4E2D;&#x7684;&#x7B2C; n &#x500B;&#x5B50;&#x5143;&#x7D20;&#xFF0C;&#x4E26;&#x4E14;&#x900F;&#x904E; <strong><code>grid-area</code></strong> &#x5C6C;&#x6027;&#x6307;&#x5B9A;&#x5B83;&#x5011;&#x5728; grid &#x4E2D;&#x7684;&#x5340;&#x57DF;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x79FB;&#x9664;&#x4E86; <strong><code>.testimonial:nth-child(n)</code></strong> &#x9078;&#x64C7;&#x5668;&#x4E2D;&#x7684; <strong><code>grid-area</code></strong> &#x5C6C;&#x6027;&#xFF0C;&#x5C07;&#x6703;&#x5F71;&#x97FF;&#x5230; grid &#x7684;&#x4F48;&#x5C40;&#x3002;&#x5728;&#x9019;&#x500B;&#x7279;&#x5B9A;&#x7684;&#x60C5;&#x5883;&#x4E2D;&#xFF0C;<strong><code>.testimonial-grid</code></strong> &#x4F7F;&#x7528;&#x4E86; <strong><code>grid-template-areas</code></strong> &#x4F86;&#x5B9A;&#x7FA9;&#x5340;&#x57DF;&#x4F48;&#x5C40;&#xFF0C;&#x800C; <strong><code>.testimonial:nth-child(n)</code></strong> &#x9078;&#x64C7;&#x5668;&#x88AB;&#x7528;&#x4F86;&#x5C07;&#x7279;&#x5B9A;&#x7684; <strong><code>.testimonial</code></strong> &#x5143;&#x7D20;&#x653E;&#x7F6E;&#x5230;&#x76F8;&#x61C9;&#x7684;&#x5340;&#x57DF;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x7701;&#x7565;&#x4E86; <strong><code>grid-area</code></strong>&#xFF0C;<strong><code>.testimonial</code></strong> &#x5143;&#x7D20;&#x5C07;&#x4E0D;&#x6703;&#x88AB;&#x5C0D;&#x61C9;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x5340;&#x57DF;&#xFF0C;&#x800C;&#x662F;&#x9810;&#x8A2D;&#x5C07;&#x5B83;&#x5011;&#x6309;&#x7167;&#x6B63;&#x5E38;&#x7684;&#x6D41;&#x52D5;&#x653E;&#x7F6E;&#x5728; grid &#x4E2D;&#x3002;&#x9019;&#x53EF;&#x80FD;&#x6703;&#x5C0E;&#x81F4; grid &#x7684;&#x4F48;&#x5C40;&#x6DF7;&#x4E82;&#xFF0C;&#x56E0;&#x70BA;&#x6C92;&#x6709;&#x78BA;&#x5B9A;&#x6BCF;&#x500B; testimonial &#x61C9;&#x8A72;&#x653E;&#x7F6E;&#x5728;&#x54EA;&#x500B;&#x5340;&#x57DF;&#x3002;</li>
+<li>&#x7C21;&#x800C;&#x8A00;&#x4E4B;&#xFF0C;<strong><code>.testimonial</code></strong> &#x5143;&#x7D20;&#x7684;&#x4F4D;&#x7F6E;&#x4E0D;&#x518D;&#x53D7;&#x5230; <strong><code>grid-template-areas</code></strong> &#x7684;&#x5F71;&#x97FF;&#xFF0C;&#x5B83;&#x5011;&#x5C07;&#x6309;&#x7167;&#x6B63;&#x5E38;&#x6587;&#x6A94;&#x6D41;&#x7684;&#x65B9;&#x5F0F;&#x6392;&#x5217;&#x3002;&#x9019;&#x53EF;&#x80FD;&#x6703;&#x4F7F;&#x5F97;&#x539F;&#x672C;&#x70BA;&#x6BCF;&#x500B; testimonial &#x5B9A;&#x7FA9;&#x7684;&#x5340;&#x57DF;&#x4F48;&#x5C40;&#x5931;&#x6548;&#xFF0C;&#x4E26;&#x53EF;&#x80FD;&#x9020;&#x6210;&#x4E0D;&#x7B26;&#x5408;&#x9810;&#x671F;&#x7684;&#x5916;&#x89C0;&#x3002;</li>
+</ul>
+</li>
+<li>
+<p><code>grid-auto-columns</code> &#x8B93; column &#x7B49;&#x5BEC;&#xFF0C;&#x4E0D;&#x7136;&#x5C31;&#x6703;&#x81EA;&#x7136;&#x6D41;&#x52D5;&#x5206;&#x914D;</p>
+<ul>
+<li>&#x5982;&#x679C;&#x79FB;&#x9664;&#x4E86; <strong><code>.testimonial-grid</code></strong> &#x4E2D;&#x7684; <strong><code>grid-auto-columns</code></strong> &#x5C6C;&#x6027;&#xFF0C;&#x5247;&#x5C07;&#x5F71;&#x97FF;&#x5230;&#x81EA;&#x52D5;&#x751F;&#x6210;&#x6B04;&#x7684;&#x5BEC;&#x5EA6;&#x3002;&#x5728;&#x9019;&#x88E1;&#xFF0C;<strong><code>grid-auto-columns: 1fr;</code></strong> &#x7684;&#x8A2D;&#x7F6E;&#x8868;&#x793A;&#x81EA;&#x52D5;&#x751F;&#x6210;&#x7684;&#x6B04;&#x5BEC;&#x5EA6;&#x5747;&#x70BA; 1fr&#x3002;</li>
+<li>&#x5982;&#x679C;&#x7701;&#x7565;&#x4E86; <strong><code>grid-auto-columns</code></strong>&#xFF0C;&#x5247;&#x81EA;&#x52D5;&#x751F;&#x6210;&#x7684;&#x6B04;&#x5C07;&#x4F7F;&#x7528;&#x9810;&#x8A2D;&#x7684;&#x6B04;&#x5BEC;&#x5EA6;&#x3002;&#x9019;&#x53EF;&#x80FD;&#x6703;&#x5F71;&#x97FF;&#x5230;&#x8A72; grid &#x7684;&#x5916;&#x89C0;&#xFF0C;&#x7279;&#x5225;&#x662F;&#x7576;&#x6C92;&#x6709;&#x660E;&#x78BA;&#x5B9A;&#x7FA9;&#x6B04;&#x5BEC;&#x5EA6;&#x6642;&#xFF0C;&#x6B04;&#x7684;&#x5BEC;&#x5EA6;&#x53EF;&#x80FD;&#x6703;&#x88AB;&#x5167;&#x5BB9;&#x7684;&#x5BEC;&#x5EA6;&#x6240;&#x5F71;&#x97FF;&#x3002;</li>
+<li>&#x7C21;&#x800C;&#x8A00;&#x4E4B;&#xFF0C;<strong><code>grid-auto-columns</code></strong> &#x7684;&#x5B58;&#x5728;&#x6709;&#x52A9;&#x65BC;&#x660E;&#x78BA;&#x6307;&#x5B9A;&#x81EA;&#x52D5;&#x751F;&#x6210;&#x7684;&#x6B04;&#x7684;&#x5BEC;&#x5EA6;&#xFF0C;&#x800C;&#x7701;&#x7565;&#x5B83;&#x5C07;&#x4F7F;&#x7528;&#x9ED8;&#x8A8D;&#x503C;&#x3002;&#x5177;&#x9AD4;&#x5F71;&#x97FF;&#x53D6;&#x6C7A;&#x65BC;&#x5176;&#x4ED6;&#x6A23;&#x5F0F;&#x898F;&#x5247;&#x548C;&#x5167;&#x5BB9;&#x7684;&#x7279;&#x6027;&#xFF0C;&#x4F46;&#x5728;&#x9019;&#x500B;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x53EF;&#x80FD;&#x6703;&#x5C0E;&#x81F4; grid &#x7684;&#x6B04;&#x5BEC;&#x5EA6;&#x4E0D;&#x5982;&#x9810;&#x671F;&#x3002;</li>
+</ul>
+</li>
+<li>
+<p>&#x1F4AA;&#x1F4AA;&#x1F4AA;&#xA0;Final</p>
+<pre><code class="language-css">.testimonial-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-auto-columns: 1fr; /* &#x1F525; */
+  grid-template-areas:
+    &apos;one&apos;
+    &apos;two&apos;
+    &apos;three&apos;
+    &apos;four&apos;
+    &apos;five&apos;; /* don&apos;t forget */
+}
+
+.testimonial:nth-child(1) {
+  grid-area: one;
+}
+.testimonial:nth-child(2) {
+  grid-area: two;
+}
+.testimonial:nth-child(3) {
+  grid-area: three;
+}
+.testimonial:nth-child(4) {
+  grid-area: four;
+}
+.testimonial:nth-child(5) {
+  grid-area: five;
+}
+
+@media (min-width: 50em) {
+  .testimonial-grid {
+    grid-template-areas:
+      &apos;one one two five&apos;
+      &apos;three four four five&apos;;
+  }
+}
+</code></pre>
+</li>
+</ul>
+<hr><h2 id="codepen">CodePen</h2><figure class="kg-card kg-embed-card"><iframe id="cp_embed_wvOyvoY" src="https://codepen.io/jamie-the-looper/embed/preview/wvOyvoY?default-tabs=html%2Cresult&amp;height=300&amp;host=https%3A%2F%2Fcodepen.io&amp;slug-hash=wvOyvoY" title="Testimonials grid" scrolling="no" frameborder="0" height="300" allowtransparency="true" class="cp_embed_iframe" style="width: 100%; overflow: hidden;"></iframe></figure>]]></content:encoded></item><item><title><![CDATA[Pinia State Management]]></title><description><![CDATA[Pinia Cheat Sheet]]></description><link>https://blog.cmwang.net/pinia-state-management/</link><guid isPermaLink="false">65bb9aa44c147810992a1b45</guid><category><![CDATA[Frontend]]></category><category><![CDATA[Vue]]></category><category><![CDATA[Notes]]></category><category><![CDATA[Cheat Sheet]]></category><dc:creator><![CDATA[Jamie Wang]]></dc:creator><pubDate>Thu, 01 Feb 2024 13:27:08 GMT</pubDate><media:content url="https://blog.cmwang.net/content/images/2024/02/pinia.png" medium="image"/><content:encoded><![CDATA[<h2 id="initialize-pinia-for-your-app">Initialize Pinia for your app</h2>
+<pre><code class="language-js">// /src/main.js
+
+import &quot;./assets/main.css&quot;;
+
+import { createApp } from &quot;vue&quot;;
+import { createPinia } from &quot;pinia&quot;; // here &#x1F448;
+
+import App from &quot;./App.vue&quot;;
+
+const app = createApp(App);
+
+app.use(createPinia()); // here &#x1F448;
+app.mount(&quot;#app&quot;);
+</code></pre>
+<h2 id="use-the-store">Use the store</h2>
+<pre><code class="language-html">&lt;template&gt;
+  &lt;div class=&quot;counter-container&quot;&gt;
+    &lt;!-- state (data) --&gt;
+    &lt;h2&gt;{{ storeCounter.count }}&lt;/h2&gt;
+
+    &lt;!-- actions (methods)--&gt;
+    &lt;button @click=&quot;storeCounter.increaseCount&quot;&gt;+&lt;/button&gt;
+    &lt;button @click=&quot;storeCounter.decreaseCount&quot;&gt;-&lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;!-- getters (computed) --&gt;
+  &lt;div&gt;The counter is {{ storeCounter.oddOrEven }}&lt;/div&gt;
+
+  &lt;!-- two-way data binding--&gt;
+  &lt;input v-model=&quot;storeCounter.count&quot; type=&quot;number&quot; /&gt;
+&lt;/template&gt;
+</code></pre>
+<pre><code class="language-javascript">&lt;script setup&gt;
+  import {useCounterStore} from &apos;@/stores/counter&apos;; const storeCounter =
+  useCounterStore();
+&lt;/script&gt;
+</code></pre>
+<h2 id="define-the-store-composition-api">Define the store (Composition API)</h2>
+<ul>
+<li>composition api store</li>
+</ul>
+<pre><code class="language-javascript">import { ref, computed } from &quot;vue&quot;;
+import { defineStore } from &quot;pinia&quot;;
+
+export const useCounterStore = defineStore(&quot;counter&quot;, () =&gt; {
+  // State
+  const count = ref(0);
+
+  // Getters
+  const doubleCount = computed(() =&gt; count.value * 2);
+  const oddOrEven = computed(() =&gt; (count.value % 2 === 0 ? &quot;even&quot; : &quot;odd&quot;));
+
+  // Actions
+  function increaseCount() {
+    count.value++;
+  }
+
+  function decreaseCount() {
+    count.value--;
+  }
+
+  // Expose the state, getters, and actions
+  return {
+    count,
+    doubleCount,
+    oddOrEven,
+    increaseCount,
+    decreaseCount,
+  };
+});
+</code></pre>
+<h2 id="define-the-store-options-api">Define the store (Options API)</h2>
+<ul>
+<li>options api store</li>
+</ul>
+<pre><code class="language-javascript">import { defineStore } from &quot;pinia&quot;;
+
+export const useCounterStore = defineStore(&quot;counter&quot;, {
+  // State
+  state: () =&gt; ({
+    count: 0,
+  }),
+
+  // Getters
+  getters: {
+    oddOrEven: (state) =&gt; (state.count % 2 === 0 ? &quot;even&quot; : &quot;odd&quot;),
+  },
+
+  // Methods (Actions)
+  actions: {
+    increaseCount() {
+      this.count++;
+    },
+    decreaseCount() {
+      this.count--;
+    },
+  },
+});
+</code></pre>
+]]></content:encoded></item><item><title><![CDATA[SCSS Crash Course]]></title><description><![CDATA[SCSS Crash Course]]></description><link>https://blog.cmwang.net/scss-crash-course/</link><guid isPermaLink="false">65bb9f164c147810992a1b86</guid><category><![CDATA[Frontend]]></category><category><![CDATA[CSS]]></category><category><![CDATA[Notes]]></category><dc:creator><![CDATA[Jamie Wang]]></dc:creator><pubDate>Sun, 24 Dec 2023 16:00:00 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDJ8fGNzc3xlbnwwfHx8fDE3MDY3OTIwMDd8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<img src="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDJ8fGNzc3xlbnwwfHx8fDE3MDY3OTIwMDd8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="SCSS Crash Course"><p>SCSS &#x662F;&#x4E00;&#x7A2E;&#x7528;&#x65BC;&#x7C21;&#x5316;&#x548C;&#x589E;&#x5F37; CSS &#x7684;&#x8A9E;&#x8A00;&#xFF0C;&#x5B83;&#x5177;&#x6709;&#x8B8A;&#x6578;&#x3001;&#x5DE2;&#x72C0;&#x898F;&#x5247;&#x3001;&#x6DF7;&#x5165;&#x3001;&#x51FD;&#x6578;&#x7B49;&#x529F;&#x80FD;&#xFF0C;&#x4F7F;&#x5F97; CSS &#x66F4;&#x6613;&#x65BC;&#x7DAD;&#x8B77;&#x548C;&#x64F4;&#x5C55;&#x3002;</p>
+<h2 id="1-%E5%AE%89%E8%A3%9D-sass">1. &#x5B89;&#x88DD; Sass</h2>
+<p>&#x9996;&#x5148;&#xFF0C;&#x78BA;&#x4FDD;&#x4F60;&#x7684;&#x958B;&#x767C;&#x74B0;&#x5883;&#x4E2D;&#x5DF2;&#x7D93;&#x5B89;&#x88DD;&#x4E86; Sass&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; npm&#xFF08;Node.js &#x5305;&#x7BA1;&#x7406;&#x5668;&#xFF09;&#x4F86;&#x5B89;&#x88DD; Sass&#xFF1A;</p>
+<pre><code class="language-bash">npm install -g sass
+</code></pre>
+<h2 id="2-%E5%89%B5%E5%BB%BA-scss-%E6%96%87%E4%BB%B6">2. &#x5275;&#x5EFA; SCSS &#x6587;&#x4EF6;</h2>
+<p>&#x5728;&#x4F60;&#x7684;&#x5C08;&#x6848;&#x4E2D;&#xFF0C;&#x5275;&#x5EFA;&#x4E00;&#x500B;&#x65B0;&#x7684; <code>.scss</code> &#x6587;&#x4EF6;&#xFF0C;&#x4F8B;&#x5982; <code>styles.scss</code>&#x3002;</p>
+<h2 id="3-%E5%9F%BA%E6%9C%AC%E8%AA%9E%E6%B3%95">3. &#x57FA;&#x672C;&#x8A9E;&#x6CD5;</h2>
+<h3 id="%E8%AE%8A%E6%95%B8-variable-%F0%9F%94%A5">&#x8B8A;&#x6578; (Variable) &#x1F525;</h3>
+<pre><code class="language-scss">$primary-color: #3498db;
+$font-size: 16px;
+
+body {
+  color: $primary-color;
+  font-size: $font-size;
+}
+</code></pre>
+<h3 id="%E5%B7%A2%E7%8B%80%E8%A6%8F%E5%89%87-nested-%F0%9F%94%A5">&#x5DE2;&#x72C0;&#x898F;&#x5247; (Nested) &#x1F525;</h3>
+<pre><code class="language-scss">nav {
+  background: $primary-color;
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
+}
+</code></pre>
+<p>&#x5C0D;&#x61C9;&#x7684; CSS</p>
+<pre><code class="language-php">nav {
+  background: $primary-color;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+</code></pre>
+<h3 id="%E7%88%B6%E9%81%B8%E6%93%87%E5%99%A8%E6%88%96%E5%B7%A2%E7%8B%80%E9%81%B8%E6%93%87%E5%99%A8-parent-selector-%F0%9F%94%A5">&#x7236;&#x9078;&#x64C7;&#x5668;&#x6216;&#x5DE2;&#x72C0;&#x9078;&#x64C7;&#x5668; (Parent Selector) &#x1F525;</h3>
+<p>&#x5728; SCSS &#x4E2D;&#xFF0C;<code>&amp;</code> &#x7B26;&#x865F;&#x88AB;&#x7A31;&#x70BA;&#x201C;&#x7236;&#x9078;&#x64C7;&#x5668;&#x201D;&#xFF08;Parent Selector&#xFF09;&#x6216;&#x201C;&#x5D4C;&#x5957;&#x9078;&#x64C7;&#x5668;&#x201D;&#xFF08;Nested Selector&#xFF09;&#x3002;&#x5B83;&#x5728; SCSS &#x4E2D;&#x7684;&#x4E3B;&#x8981;&#x4F5C;&#x7528;&#x662F;&#x5F15;&#x7528;&#x7236;&#x9078;&#x64C7;&#x5668;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#xFF0C;&#x4F7F;&#x5F97;&#x5728;&#x5D4C;&#x5957;&#x7684;&#x60C5;&#x6CC1;&#x4E0B;&#x80FD;&#x5920;&#x66F4;&#x9748;&#x6D3B;&#x5730;&#x69CB;&#x5EFA;&#x548C;&#x751F;&#x6210; CSS&#x3002;</p>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x4E00;&#x4E9B;&#x5E38;&#x898B;&#x7528;&#x6CD5;&#xFF1A;</p>
+<ol>
+<li>
+<p><strong>&#x5D4C;&#x5957;&#x9078;&#x64C7;&#x5668;&#xFF1A;</strong></p>
+<pre><code class="language-scss">nav {
+  background: #333;
+
+  a {
+    color: #fff;
+    &amp;:hover {
+      text-decoration: underline;
+    }
+  }
+}
+</code></pre>
+<ul>
+<li>&#x5C0D;&#x61C9;&#x7684; CSS&#xFF1A;</li>
+</ul>
+<pre><code class="language-css">nav {
+  background: #333;
+}
+
+nav a {
+  color: #fff;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+</code></pre>
+<p>&#x5728;&#x9019;&#x88E1;&#xFF0C;<code>&amp;</code> &#x7528;&#x65BC;&#x5F15;&#x7528;&#x5176;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x7684;&#x7236;&#x9078;&#x64C7;&#x5668; <code>nav</code>&#x3002;</p>
+</li>
+<li>
+<p><strong>&#x64F4;&#x5C55;&#x9078;&#x64C7;&#x5668;&#xFF1A;</strong></p>
+<pre><code class="language-scss">.button {
+  background: blue;
+  &amp;.active {
+    background: red;
+  }
+}
+</code></pre>
+<ul>
+<li>&#x5C0D;&#x61C9;&#x7684; CSS&#xFF1A;</li>
+</ul>
+<pre><code class="language-css">.button {
+  background: blue;
+}
+
+.button.active {
+  background: red;
+}
+</code></pre>
+<p>&#x5728;&#x9019;&#x88E1;&#xFF0C;<code>&amp;</code> &#x88AB;&#x7528;&#x65BC;&#x5D4C;&#x5957;&#x5730;&#x69CB;&#x5EFA; <code>.button.active</code>&#x3002;</p>
+</li>
+</ol>
+<h3 id="%E6%B7%B7%E5%85%A5-mixin-%F0%9F%94%A5">&#x6DF7;&#x5165; (Mixin) &#x1F525;</h3>
+<pre><code class="language-scss">@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+.box {
+  @include border-radius(10px);
+}
+</code></pre>
+<h3 id="%E5%B0%8E%E5%85%A5-import-%F0%9F%92%A1">&#x5C0E;&#x5165; (Import) &#x1F4A1;</h3>
+<pre><code class="language-scss">// _variables.scss
+$primary-color: #3498db;
+
+// styles.scss
+@import &quot;variables&quot;;
+
+body {
+  color: $primary-color;
+}
+</code></pre>
+<h3 id="%E6%93%B4%E5%B1%95-extend-%F0%9F%92%A1">&#x64F4;&#x5C55; (Extend) &#x1F4A1;</h3>
+<p>&#x64F4;&#x5C55;&#x662F;&#x4E00;&#x7A2E; SCSS &#x529F;&#x80FD;&#xFF0C;&#x5141;&#x8A31;&#x4F60;&#x4F7F;&#x7528;&#x4E00;&#x500B;&#x9078;&#x64C7;&#x5668;&#x7684;&#x6A23;&#x5F0F;&#x4F86;&#x64F4;&#x5C55;&#x53E6;&#x4E00;&#x500B;&#x9078;&#x64C7;&#x5668;&#x7684;&#x6A23;&#x5F0F;&#xFF0C;&#x985E;&#x4F3C;&#x65BC; CSS &#x4E2D;&#x7684;&#x985E;&#x3002;&#x9019;&#x53EF;&#x4EE5;&#x6E1B;&#x5C11;&#x4EE3;&#x78BC;&#x7684;&#x91CD;&#x8907;&#x4E26;&#x63D0;&#x9AD8;&#x53EF;&#x7DAD;&#x8B77;&#x6027;&#x3002;</p>
+<ul>
+<li>
+<p>SCSS &#x7BC4;&#x4F8B;</p>
+<pre><code class="language-scss">%button-style {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.btn-primary {
+  @extend %button-style;
+  background-color: #3498db;
+  color: #fff;
+}
+
+.btn-secondary {
+  @extend %button-style;
+  background-color: #e74c3c;
+  color: #fff;
+}
+</code></pre>
+<p>&#x5728;&#x9019;&#x500B;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;<code>%button-style</code> &#x662F;&#x4E00;&#x500B; placeholder&#xFF0C;&#x5B83;&#x5305;&#x542B;&#x4E86;&#x901A;&#x7528;&#x7684;&#x6309;&#x9215;&#x6A23;&#x5F0F;&#x3002;&#x7136;&#x5F8C;&#xFF0C;<code>btn-primary</code> &#x548C; <code>btn-secondary</code> &#x900F;&#x904E; <code>@extend</code> &#x5C07;&#x9019;&#x4E9B;&#x901A;&#x7528;&#x6A23;&#x5F0F;&#x64F4;&#x5C55;&#x5230;&#x5177;&#x9AD4;&#x7684;&#x6309;&#x9215;&#x985E;&#x5225;&#x4E2D;&#x3002;</p>
+</li>
+<li>
+<p>&#x5C0D;&#x61C9;&#x7684; CSS</p>
+<pre><code class="language-php">.btn-primary, .btn-secondary {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.btn-primary {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: #e74c3c;
+  color: #fff;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="%E5%87%BD%E6%95%B8-function">&#x51FD;&#x6578; (Function)</h3>
+<p>SCSS &#x5141;&#x8A31;&#x4F60;&#x5B9A;&#x7FA9;&#x548C;&#x4F7F;&#x7528;&#x51FD;&#x6578;&#xFF0C;&#x9019;&#x6A23;&#x4F60;&#x5C31;&#x53EF;&#x4EE5;&#x66F4;&#x9748;&#x6D3B;&#x5730;&#x8655;&#x7406;&#x6578;&#x64DA;&#x548C;&#x751F;&#x6210;&#x6A23;&#x5F0F;&#x3002;</p>
+<ul>
+<li>
+<p>SCSS &#x7BC4;&#x4F8B;</p>
+<pre><code class="language-scss">@function calculate-width($width, $padding) {
+  @return $width + 2 * $padding;
+}
+
+.container {
+  width: calculate-width(200px, 10px);
+  padding: 10px;
+}
+</code></pre>
+<p>&#x5728;&#x9019;&#x500B;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;<code>calculate-width</code> &#x51FD;&#x6578;&#x63A5;&#x53D7;&#x5169;&#x500B;&#x53C3;&#x6578;&#xFF1A;<code>$width</code> &#x548C; <code>$padding</code>&#xFF0C;&#x7136;&#x5F8C;&#x8FD4;&#x56DE;&#x8A08;&#x7B97;&#x5F8C;&#x7684;&#x5BEC;&#x5EA6;&#x3002;&#x9019;&#x500B;&#x51FD;&#x6578;&#x88AB;&#x7528;&#x65BC;&#x8A2D;&#x7F6E; <code>.container</code> &#x5143;&#x7D20;&#x7684;&#x5BEC;&#x5EA6;&#x3002;</p>
+</li>
+</ul>
+<h2 id="4-%E7%B7%A8%E8%AD%AF-scss-%E5%88%B0-css">4. &#x7DE8;&#x8B6F; SCSS &#x5230; CSS</h2>
+<p>&#x5728;&#x7D42;&#x7AEF;&#x6A5F;&#x4E2D;&#x57F7;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#xFF0C;&#x5C07;&#x4F60;&#x7684; SCSS &#x6587;&#x4EF6;&#x7DE8;&#x8B6F;&#x6210; CSS&#xFF1A;</p>
+<pre><code class="language-bash">sass input.scss output.css
+</code></pre>
+<p>&#x6216;&#x8005;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x8981;&#x5728;&#x6BCF;&#x6B21;&#x4FDD;&#x5B58;&#x6587;&#x4EF6;&#x6642;&#x81EA;&#x52D5;&#x7DE8;&#x8B6F;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre><code class="language-bash">sass --watch input.scss:output.css
+
+</code></pre>
+<ul>
+<li>
+<ol start="5">
+<li>Sass &#x8207; SCSS &#x8A9E;&#x6CD5;&#x5DEE;&#x7570;</li>
+</ol>
+<p>Sass&#xFF08;Syntactically Awesome Stylesheets&#xFF09;&#x548C; SCSS&#xFF08;Sassy CSS&#xFF09;&#x90FD;&#x662F; CSS &#x9810;&#x8655;&#x7406;&#x5668;&#xFF0C;&#x5B83;&#x5011;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E9B;&#x984D;&#x5916;&#x7684;&#x529F;&#x80FD;&#x548C;&#x8A9E;&#x6CD5;&#x4F86;&#x66F4;&#x6709;&#x6548;&#x5730;&#x7DE8;&#x5BEB;&#x548C;&#x7BA1;&#x7406;&#x6A23;&#x5F0F;&#x8868;&#x3002;&#x4EE5;&#x4E0B;&#x662F; Sass &#x548C; SCSS &#x7684;&#x4E3B;&#x8981;&#x5DEE;&#x7570;&#xFF1A;</p>
+<ol>
+<li><strong>&#x8A9E;&#x6CD5;&#x5DEE;&#x7570;&#xFF1A;</strong></li>
+</ol>
+<ul>
+<li>
+<p><strong>Sass&#xFF1A;</strong> &#x4F7F;&#x7528;&#x7E2E;&#x9032;&#x4F86;&#x8868;&#x793A;&#x5340;&#x584A;&#x548C;&#x5C64;&#x6B21;&#x7D50;&#x69CB;&#xFF0C;&#x4E26;&#x4E14;&#x4E0D;&#x4F7F;&#x7528;&#x5206;&#x865F;&#x548C;&#x5927;&#x62EC;&#x865F;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="language-sass">body
+  font: 14px/1.4 &quot;Helvetica Neue&quot;, sans-serif
+  color: #333
+
+.container
+  width: 100%
+  margin: 0 auto
+
+</code></pre>
+</li>
+<li>
+<p><strong>SCSS&#xFF1A;</strong> &#x4F7F;&#x7528;&#x5927;&#x62EC;&#x865F;&#x8868;&#x793A;&#x5340;&#x584A;&#x548C;&#x5206;&#x865F;&#x4F86;&#x7D50;&#x675F;&#x6BCF;&#x500B;&#x8072;&#x660E;&#xFF0C;&#x66F4;&#x63A5;&#x8FD1;&#x50B3;&#x7D71;&#x7684; CSS &#x8A9E;&#x6CD5;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="language-scss">body {
+  font: 14px/1.4 &quot;Helvetica Neue&quot;, sans-serif;
+  color: #333;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+</code></pre>
+</li>
+</ul>
+<ol start="2">
+<li><strong>&#x6587;&#x4EF6;&#x64F4;&#x5C55;&#x540D;&#xFF1A;</strong></li>
+</ol>
+<ul>
+<li><strong>Sass&#xFF1A;</strong> Sass &#x6587;&#x4EF6;&#x4F7F;&#x7528; <code>.sass</code> &#x4F5C;&#x70BA;&#x64F4;&#x5C55;&#x540D;&#x3002;</li>
+<li><strong>SCSS&#xFF1A;</strong> SCSS &#x6587;&#x4EF6;&#x4F7F;&#x7528; <code>.scss</code> &#x4F5C;&#x70BA;&#x64F4;&#x5C55;&#x540D;&#x3002;</li>
+</ul>
+</li>
+</ul>
+]]></content:encoded></item><item><title><![CDATA[PDO Crash Course]]></title><description><![CDATA[PDO Cheat Sheet]]></description><link>https://blog.cmwang.net/pdo-crash-course/</link><guid isPermaLink="false">65bb9e5a4c147810992a1b72</guid><category><![CDATA[Backend]]></category><category><![CDATA[PHP]]></category><category><![CDATA[Cheat Sheet]]></category><category><![CDATA[Notes]]></category><dc:creator><![CDATA[Jamie Wang]]></dc:creator><pubDate>Sat, 16 Dec 2023 16:00:00 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<blockquote>
+<img src="https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="PDO Crash Course"><p>PDO (PHP Data Objects) is a database access layer providing a uniform method of access to multiple databases. It is a secure and efficient way to interact with databases in PHP.</p>
+</blockquote>
+<h3 id="1-connecting-to-a-database">1. Connecting to a Database</h3>
+<pre><code class="language-php">&lt;?php
+$host = &apos;localhost&apos;;
+$dbname = &apos;your_database_name&apos;;
+$username = &apos;your_username&apos;;
+$password = &apos;your_password&apos;;
+
+try {
+    $pdo = new PDO(&quot;mysql:host=$host;dbname=$dbname&quot;, $username, $password);
+    $pdo-&gt;setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo &quot;Connected successfully&quot;;
+} catch (PDOException $e) {
+    echo &quot;Connection failed: &quot; . $e-&gt;getMessage();
+}
+?&gt;
+
+</code></pre>
+<p>The line <code>$pdo-&gt;setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);</code> sets the error handling mode for PDO. Specifically, it sets PDO to throw exceptions when errors occur.</p>
+<ul>
+<li><code>PDO::ATTR_ERRMODE</code>: This is an attribute that controls the error reporting mode.</li>
+<li><code>PDO::ERRMODE_EXCEPTION</code>: This mode causes PDO to throw exceptions when errors occur, making it easier to handle errors in your code.</li>
+</ul>
+<p>So, if there&apos;s an error in a PDO operation, it will throw an exception, and you can catch that exception to handle errors more gracefully.</p>
+<h3 id="2-executing-queries">2. Executing Queries</h3>
+<ul>
+<li>
+<p>SELECT Statement</p>
+<pre><code class="language-php">$stmt = $pdo-&gt;prepare(&apos;SELECT * FROM your_table_name&apos;);
+$stmt-&gt;execute();
+
+$result = $stmt-&gt;fetchAll(PDO::FETCH_ASSOC);
+
+foreach ($result as $row) {
+    // Process each row as needed
+    echo $row[&apos;column1&apos;] . &quot;\t&quot; . $row[&apos;column2&apos;] . &quot;\n&quot;;
+}
+</code></pre>
+<ul>
+<li><strong><code>fetchAll</code></strong>: This method is used to fetch all rows from the result set returned by a prepared statement. It retrieves all the rows into an array.</li>
+<li><strong><code>PDO::FETCH_ASSOC</code></strong>: This is a fetch style constant provided by PDO that specifies the format in which the rows should be fetched. In this case, <code>FETCH_ASSOC</code> indicates that the rows should be fetched as an associative array where the column names are used as keys.</li>
+</ul>
+</li>
+<li>
+<p>INSERT Statement:</p>
+<pre><code class="language-php">$data = [&apos;value1&apos;, &apos;value2&apos;];
+$stmt = $pdo-&gt;prepare(&apos;INSERT INTO your_table_name (column1, column2) VALUES (?, ?)&apos;);
+$stmt-&gt;execute($data);
+echo &quot;Data inserted successfully&quot;;
+</code></pre>
+</li>
+<li>
+<p>UPDATE Statement:</p>
+<pre><code class="language-php">$newValue = &apos;new_value&apos;;
+$id = 1;
+$stmt = $pdo-&gt;prepare(&apos;UPDATE your_table_name SET column1 = ? WHERE id = ?&apos;);
+$stmt-&gt;execute([$newValue, $id]);
+echo &quot;Data updated successfully&quot;;
+
+</code></pre>
+</li>
+<li>
+<p>DELETE Statement:</p>
+<pre><code class="language-php">$id = 1;
+$stmt = $pdo-&gt;prepare(&apos;DELETE FROM your_table_name WHERE id = ?&apos;);
+$stmt-&gt;execute([$id]);
+echo &quot;Data deleted successfully&quot;;
+</code></pre>
+</li>
+</ul>
+<h3 id="3-prepared-statements-and-parameter-binding">3. Prepared Statements and Parameter Binding:</h3>
+<p>Prepared statements help prevent SQL injection by separating SQL code from user input.</p>
+<pre><code class="language-php">$username = &apos;user&apos;;
+$password = &apos;pass&apos;;
+
+$stmt = $pdo-&gt;prepare(&apos;SELECT * FROM users WHERE username = :username AND password = :password&apos;);
+$stmt-&gt;bindParam(&apos;:username&apos;, $username);
+$stmt-&gt;bindParam(&apos;:password&apos;, $password);
+$stmt-&gt;execute();
+
+$result = $stmt-&gt;fetch(PDO::FETCH_ASSOC);
+</code></pre>
+<p>In this example, placeholders (<code>:username</code> and <code>:password</code>) are used in the query, and then values are bound to these placeholders using <code>bindParam</code>. This helps prevent SQL injection and allows for better reuse of the prepared statement.</p>
+<h3 id="4-error-handling">4. Error Handling</h3>
+<p>Always handle errors to ensure a robust application.</p>
+]]></content:encoded></item><item><title><![CDATA[分手一百天 (break up 100 days) - AI (Lee Ji Eun)]]></title><description><![CDATA[Disclaimer: Songs generated by this AI are for entertainment purposes only and strictly prohibited for commercial use. Not liable for legal consequences.]]></description><link>https://blog.cmwang.net/break-up-100-days/</link><guid isPermaLink="false">65bb9c804c147810992a1b60</guid><category><![CDATA[AI Voice]]></category><category><![CDATA[IU]]></category><dc:creator><![CDATA[Jamie Wang]]></dc:creator><pubDate>Wed, 06 Dec 2023 13:34:00 GMT</pubDate><media:content url="https://blog.cmwang.net/content/images/2024/02/iu.jpg" medium="image"/><content:encoded><![CDATA[<figure class="kg-card kg-embed-card"><iframe width="200" height="113" src="https://www.youtube.com/embed/01gHlLMknSQ?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen title="&#x5206;&#x624B;&#x4E00;&#x767E;&#x5929; - AI IU"></iframe></figure><img src="https://blog.cmwang.net/content/images/2024/02/iu.jpg" alt="&#x5206;&#x624B;&#x4E00;&#x767E;&#x5929; (break up 100 days) - AI (Lee Ji Eun)"><p>&#x8A5E;&#xFF1A;JC &#x9673;&#x8A60;&#x6850; &#x66F2;&#xFF1A;JC &#x9673;&#x8A60;&#x6850; &#x7DE8;&#x66F2;&#xFF1A;&#x891A;&#x93AE;&#x6771;</p>
+<p>&#x4ECD;&#x671F;&#x5F85;&#x6211;&#x53EF;&#x7B49;&#x5230;&#x67D0;&#x5929;<br>
+&#x91CD;&#x63D0;&#x820A;&#x611B;&#x4E0D;&#x9700;&#x773C;&#x6DFA;<br>
+&#x60C5;&#x4EBA;&#x82E5;&#x8981;&#x7576;&#x597D;&#x53CB;&#x80FD;&#x6975;&#x53CB;&#x5584;<br>
+&#x6216;&#x609F;&#x5230;&#x5206;&#x624B;&#x54EA;&#x6709;&#x4F0F;&#x7DDA;<br>
+&#x73FE;&#x5728;&#x611B;&#x6200;&#x90FD;&#x8AAA;&#x8B8A;&#x5C31;&#x8B8A;<br>
+&#x800C;&#x591C;&#x6DF1;&#x55AE;&#x66F2;&#x5BC4;&#x610F;&#x80FD;&#x514D;&#x5247;&#x514D;</p>
+<p>&#x7136;&#x800C;&#x820A;&#x8A18;&#x61B6;&#x5F77;&#x4F3C;&#x788E;&#x7247;<br>
+&#x7DE9;&#x7DE9;&#x5730;&#x523A;&#x65BC;&#x5FC3;&#x88E1;&#x908A;<br>
+&#x4ECD;&#x7136;&#x672A;&#x770B;&#x5F97;&#x958B;&#x548C;&#x8AB0;&#x6216;&#x8005;&#x53EA;&#x53EF;&#x64E6;&#x80A9;<br>
+&#x5FA9;&#x5408;&#x6BCF;&#x5929;&#x60F3;&#x5920;&#x6578;&#x5341;&#x904D;<br>
+&#x70BA;&#x8457;&#x66F4;&#x52A0;&#x5339;&#x914D;&#x6211;&#x9858;&#x6539;&#x8B8A;<br>
+&#x7121;&#x5948;&#x90FD;&#x6E05;&#x695A;&#x52C9;&#x5F37;&#x4EA6;&#x6703;&#x751F;&#x53AD;</p>
+<p>&#x624D;&#x8207;&#x4ED6;&#x5206;&#x958B;&#x4E00;&#x767E;&#x5929;<br>
+&#x6703;&#x60B2;&#x50B7;&#x7684;&#x78BA;&#x4ECD;&#x96E3;&#x514D;<br>
+&#x7562;&#x7ADF;&#x771F;&#x5FC3;&#x611B;&#x904E; &#x5167;&#x5FC3;&#x6CE8;&#x5B9A;&#x75DB;&#x9EDE;<br>
+&#x6211;&#x77E5;&#x5F80;&#x4E8B;&#x5982;&#x7159;<br>
+&#x6211;&#x77E5;&#x5DF2;&#x96E3;&#x91CD;&#x6F14;<br>
+&#x6211;&#x600E;&#x6703;&#x7948;&#x6C42;&#x8857;&#x89D2;&#x78B0;&#x9762; &#x5047;&#x4F7F;&#x90A3;&#x5929;<br>
+&#x96E3;&#x9053;&#x6211;&#x7684;&#x624B;&#x4ED6;&#x6703;&#x727D;</p>
+<p>&#x548C;&#x8AB0;&#x932F;&#x611B;&#x4EA6;&#x662F;&#x78E8;&#x7DF4;<br>
+&#x6709;&#x4E9B;&#x50B7;&#x53E3;&#x78BA;&#x5BE6;&#x96E3;&#x514D;<br>
+&#x6211;&#x7562;&#x7ADF;&#x64C1;&#x6709;&#x904E; &#x82E5;&#x5931;&#x53BB;&#x662F;&#x75DB;&#x9EDE;<br>
+&#x4E5F;&#x8A31;&#x6709;&#x5E78;&#x4F86;&#x5230;&#x4E00;&#x5929;<br>
+&#x7D42;&#x65BC;&#x60F3;&#x8D77;&#x5DF2;&#x80FD;&#x5920;&#x7528;&#x7B11;&#x5BB9;&#x7D00;&#x5FF5;<br>
+&#x53EA;&#x6015;&#x6216;&#x67D0;&#x6B21;&#x518D;&#x60F3;&#x5230;&#x9019;&#x5F35;&#x81C9;<br>
+&#x5982;&#x638C;&#x5FC3;&#x90A3;&#x6839;&#x523A;</p>
+<p>&#x96E3;&#x5FD8;&#x548C;&#x820A;&#x611B;&#x592A;&#x958B;&#x5FC3;<br>
+&#x96E3;&#x5FD8;&#x9084;&#x662F;&#x6211;&#x592A;&#x4E0D;&#x7518;<br>
+&#x70BA;&#x4F55;&#x6295;&#x5165;&#x5F97;&#x904E;&#x4EFD;&#x6700;&#x5F8C;&#x53EA;&#x5F97;&#x6211;&#x52C7;&#x6562;<br>
+&#x96A8;&#x5E74;&#x6708;&#x62BA;&#x53BB;&#x6211;&#x5929;&#x771F;<br>
+&#x5F88;&#x6E05;&#x695A;&#x6DF1;&#x611B;&#x6C92;&#x6CD5;&#x518D;&#x9019;&#x9EBC;&#x6DF1;<br>
+&#x5F88;&#x6015;&#x82E5;&#x53C8;&#x611B;&#x932F; &#x6211;&#x4E0D;&#x6703;&#x518D;&#x7FFB;&#x8EAB;</p>
+<p>&#x552F;&#x6709;&#x8B1B;&#x5206;&#x958B;&#x4E00;&#x767E;&#x5929;<br>
+&#x6709;&#x4E9B;&#x50B7;&#x53E3;&#x78BA;&#x5BE6;&#x96E3;&#x514D;<br>
+&#x6211;&#x7562;&#x7ADF;&#x64C1;&#x6709;&#x904E; &#x82E5;&#x5931;&#x53BB;&#x662F;&#x75DB;&#x9EDE;<br>
+&#x4E5F;&#x8A31;&#x6709;&#x5E78;&#x4F86;&#x5230;&#x4E00;&#x5929;<br>
+&#x8B1B;&#x5F97;&#x5C80;&#x53E3;&#x5C0D;&#x8AB0;&#x5DF2;&#x7121;&#x90A3;&#x4EFD;&#x639B;&#x5FF5;<br>
+&#x53EA;&#x6015;&#x6216;&#x67D0;&#x6B21;&#x8F49;&#x8EAB;&#x518D;&#x6B21;&#x76F8;&#x898B;<br>
+&#x4ECD;&#x52FE;&#x8D77;&#x9019;&#x6839;&#x523A;</p>
+]]></content:encoded></item><item><title><![CDATA[DHH: Microservices vs. Monolith]]></title><description><![CDATA[David Heinemeier Hansson: Microservices vs. Monolith]]></description><link>https://blog.cmwang.net/dhh-microservices-vs-monolith/</link><guid isPermaLink="false">65badd56514868c0d44d1b20</guid><category><![CDATA[Youtube]]></category><category><![CDATA[Software Design]]></category><dc:creator><![CDATA[Jamie Wang]]></dc:creator><pubDate>Sat, 18 Nov 2023 23:59:00 GMT</pubDate><media:content url="https://blog.cmwang.net/content/images/2024/02/0_T7e2X1sDkH1SYayD.png" medium="image"/><content:encoded><![CDATA[<figure class="kg-card kg-embed-card"><iframe width="200" height="113" src="https://www.youtube.com/embed/rkXGSLf-rVQ?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen title="David Heinemeier Hansson: Microservices vs. Monolith"></iframe></figure><h2 id="%E7%B5%84%E7%B9%94%E7%B5%90%E6%A7%8B%E8%80%83%E6%85%AE">&#x7D44;&#x7E54;&#x7D50;&#x69CB;&#x8003;&#x616E;</h2>
 <img src="https://blog.cmwang.net/content/images/2024/02/0_T7e2X1sDkH1SYayD.png" alt="DHH: Microservices vs. Monolith"><p>DHH &#x5F37;&#x8ABF;&#x9078;&#x64C7;&#x5FAE;&#x670D;&#x52D9;&#x6216;&#x55AE;&#x9AD4;&#x67B6;&#x69CB;&#x66F4;&#x591A;&#x5730;&#x6D89;&#x53CA;&#x7D44;&#x7E54;&#x7D50;&#x69CB;&#x800C;&#x975E;&#x7A0B;&#x5F0F;&#x78BC;&#x7D44;&#x7E54;&#x3002;&#x5FAE;&#x670D;&#x52D9;&#x9069;&#x5408;&#x5927;&#x5718;&#x968A;&#xFF0C;&#x800C;&#x5C0D;&#x65BC; 10 &#x81F3; 100 &#x540D;&#x958B;&#x767C;&#x4EBA;&#x54E1;&#x7684;&#x5C0F;&#x5718;&#x968A;&#xFF0C;&#x55AE;&#x9AD4;&#x67B6;&#x69CB;&#x66F4;&#x7C21;&#x55AE;&#x3001;&#x66F4;&#x9AD8;&#x6548;&#x3002;</p>
 <h2 id="%E5%96%AE%E9%AB%94%E6%9E%B6%E6%A7%8B%E7%9A%84%E7%B0%A1%E6%98%93%E6%80%A7">&#x55AE;&#x9AD4;&#x67B6;&#x69CB;&#x7684;&#x7C21;&#x6613;&#x6027;</h2>
 <p>DHH &#x4E3B;&#x5F35;&#x55AE;&#x9AD4;&#x67B6;&#x69CB;&#x7684;&#x7C21;&#x6613;&#x6027;&#xFF0C;&#x8868;&#x793A;&#x5C0D;&#x65BC;&#x8F03;&#x5C0F;&#x7684;&#x5718;&#x968A;&#xFF0C;&#x907F;&#x514D;&#x5728;&#x5FAE;&#x670D;&#x52D9;&#x4E2D;&#x66FF;&#x63DB;&#x65B9;&#x6CD5;&#x547C;&#x53EB;&#x70BA;&#x7DB2;&#x8DEF;&#x547C;&#x53EB;&#x7684;&#x8907;&#x96DC;&#x6027;&#x53EF;&#x4EE5;&#x7C21;&#x5316;&#x958B;&#x767C;&#x3002;&#x55AE;&#x9AD4;&#x67B6;&#x69CB;&#x6D88;&#x9664;&#x4E86;&#x7BA1;&#x7406;&#x57FA;&#x672C;&#x529F;&#x80FD;&#x7684;&#x7DB2;&#x8DEF;&#x9023;&#x7DDA;&#x7684;&#x9700;&#x8981;&#xFF0C;&#x6E1B;&#x5C11;&#x4E86;&#x8907;&#x96DC;&#x6027;&#x4E26;&#x7C21;&#x5316;&#x4E86;&#x5075;&#x932F;&#x904E;&#x7A0B;&#x3002;</p>
@@ -241,688 +870,379 @@
   grid-template-columns: repeat(auto-fit, 100px);
 }
 </code></pre>
-]]></content:encoded></item><item><title><![CDATA[Faster Whisper With Progress Bar]]></title><description><![CDATA[How to use faster-whisper and generate a progress bar]]></description><link>https://blog.cmwang.net/faster-whisper-with-progress-bar/</link><guid isPermaLink="false">65bb8d484c147810992a1a79</guid><category><![CDATA[How-To]]></category><category><![CDATA[Notes]]></category><category><![CDATA[Python]]></category><category><![CDATA[AI]]></category><dc:creator><![CDATA[Jamie Wang]]></dc:creator><pubDate>Wed, 18 Oct 2023 16:00:00 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1674027214993-52de23be5a18?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDI1fHxvcGVuYWklMjB3aGlzcGVyfGVufDB8fHx8MTcwNjc5MDI5OXww&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<img src="https://images.unsplash.com/photo-1674027214993-52de23be5a18?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDI1fHxvcGVuYWklMjB3aGlzcGVyfGVufDB8fHx8MTcwNjc5MDI5OXww&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="Faster Whisper With Progress Bar"><p><a href="https://github.com/guillaumekln/faster-whisper">faster-whisper</a> is a reimplementation of OpenAI&apos;s Whisper model using <code>CTranslate2</code>, an engine designed for fast inference of Transformer models. The overall speed is significantly improved.</p>
-<p>Below is a simple example of generating subtitles. First, install <code>faster_whisper</code> and <code>pysubs2</code>:</p>
-<pre><code class="language-python"># pip install faster_whisper pysubs2
-from faster_whisper import WhisperModel
-import pysubs2
-
-model = WhisperModel(model_size=&apos;large-v2&apos;)
-segments, _ = model.transcribe(audio=&apos;audio.mp3&apos;)
-
-# Prepare results for SRT file format
-results = []
-for s in segments:
-    segment_dict = {&apos;start&apos;: s.start, &apos;end&apos;: s.end, &apos;text&apos;: s.text}
-    results.append(segment_dict)
-
-subs = pysubs2.load_from_whisper(results)
-subs.save(&apos;output.srt&apos;)  # save srt file
-</code></pre>
-<p>You can modify it to display a progress bar using <code>tqdm</code>:</p>
-<pre><code class="language-python">from faster_whisper import WhisperModel
-import pysubs2
-from tqdm import tqdm
-
-model = WhisperModel(model_size=&apos;large-v2&apos;)
-segments, info = model.transcribe(audio=&apos;audio.mp3&apos;)
-
-# Prepare results for SRT file format
-results = []
-timestamps = 0.0  # for progress bar
-with tqdm(total=info.duration, unit=&quot; audio seconds&quot;) as pbar:
-    for seg in segments:
-        segment_dict = {&apos;start&apos;: seg.start, &apos;end&apos;: seg.end, &apos;text&apos;: seg.text}
-        results.append(segment_dict)
-        # Update progress bar based on segment duration
-        pbar.update(seg.end - timestamps)
-        timestamps = seg.end
-
-    # Handle silence at the end of the audio
-    if timestamps &lt; info.duration:
-        pbar.update(info.duration - timestamps)
-
-subs = pysubs2.load_from_whisper(results)
-subs.save(&apos;output.srt&apos;)  # save srt file
-</code></pre>
-<p>Additionally, here&apos;s a Dockerfile to set up the environment:</p>
-<pre><code class="language-sh"># Use the official NVIDIA CUDA image as the base image
-FROM nvidia/cuda:11.8.0-cudnn8-runtime-ubuntu20.04
-ARG DEBIAN_FRONTEND=noninteractive
-
-# Install necessary dependencies
-RUN apt-get update &amp;&amp; apt-get install -y \
-    wget \
-    python3 \
-    python3-pip \
-    &amp;&amp; apt-get clean \
-    &amp;&amp; rm -rf /var/lib/apt/lists/*
-
-# Set the working directory inside the container
-WORKDIR /app
-
-# Install required Python packages
-RUN pip install faster_whisper pysubs2 tqdm
-
-# Create directories to store the models
-RUN mkdir -p /models/faster-whisper-medium
-
-# Download the medium model using wget to the specified directory
-RUN wget -O /models/faster-whisper-medium/config.json https://huggingface.co/guillaumekln/faster-whisper-medium/resolve/main/config.json &amp;&amp; \
-    wget -O /models/faster-whisper-medium/model.bin https://huggingface.co/guillaumekln/faster-whisper-medium/resolve/main/model.bin &amp;&amp; \
-    wget -O /models/faster-whisper-medium/tokenizer.json https://huggingface.co/guillaumekln/faster-whisper-medium/resolve/main/tokenizer.json &amp;&amp; \
-    wget -O /models/faster-whisper-medium/vocabulary.txt https://huggingface.co/guillaumekln/faster-whisper-medium/resolve/main/vocabulary.txt
-
-COPY app.py /app/
-
-# Run the script
-CMD [&quot;python3&quot;, &quot;app.py&quot;]
-</code></pre>
-<p><strong>Source Code</strong>: <a href="https://github.com/taka-wang/docker-whisper">https://github.com/taka-wang/docker-whisper</a></p>
-]]></content:encoded></item><item><title><![CDATA[Install Nvidia Docker on Ubuntu]]></title><description><![CDATA[A step by step guide.]]></description><link>https://blog.cmwang.net/install-nvidia-docker-for-ubuntu/</link><guid isPermaLink="false">65bb8be84c147810992a1a54</guid><category><![CDATA[How-To]]></category><category><![CDATA[Notes]]></category><category><![CDATA[Ubuntu]]></category><category><![CDATA[Docker]]></category><dc:creator><![CDATA[Jamie Wang]]></dc:creator><pubDate>Sun, 15 Oct 2023 16:00:00 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1646627927863-19874c27316b?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDZ8fGRvY2tlcnxlbnwwfHx8fDE3MDY3OTAwMDN8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<h2 id="uninstall-docker">Uninstall Docker</h2>
-<pre><code class="language-sh">sudo systemctl stop docker
-sudo apt remove --purge -y docker-ce docker-ce-cli containerd.io
-sudo rm -rf /var/lib/docker
-sudo rm -rf /etc/docker
-sudo rm -rf /etc/apt/sources.list.d/docker.list
-sudo rm -rf /usr/share/keyrings/docker-archive-keyring.gpg
-sudo apt update
-docker --version
-</code></pre>
-<h2 id="install-docker-ubuntu-2204">Install Docker (Ubuntu 22.04)</h2>
-<pre><code class="language-sh">sudo apt update
-
-sudo apt install -y \
-    apt-transport-https \
-    ca-certificates \
-    curl \
-    gnupg-agent \
-    software-properties-common
-
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-
-echo &quot;deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable&quot; | sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
-
-sudo apt update
-sudo apt install -y docker-ce docker-ce-cli containerd.io
-
-# post install
-sudo systemctl status docker
-sudo usermod -aG docker ${USER}
-</code></pre>
-<h2 id="move-docker-data-to-another-location">Move Docker Data to Another Location</h2>
-<pre><code class="language-sh">sudo systemctl stop docker
-sudo systemctl status docker
-
-# ex: /data/ is another disk, don&apos;t create docker-data folder in advanced
-sudo rsync -avxP /var/lib/docker/  /data/docker-data
-
-# edit daemon.json with `data-root` line
-sudo nano /etc/docker/daemon.json
-
-{
-    &quot;data-root&quot;: &quot;/data/docker-data&quot;,
-    &quot;runtimes&quot;: {
-        &quot;nvidia&quot;: {
-            &quot;args&quot;: [],
-            &quot;path&quot;: &quot;nvidia-container-runtime&quot;
-        }
-    }
+]]></content:encoded></item><item><title><![CDATA[CSS 透明度、可見性和顯示的區別]]></title><description><![CDATA[Unveiling the Veil: Understanding CSS Opacity, Visibility, and Display]]></description><link>https://blog.cmwang.net/css-opacity-visibility-display/</link><guid isPermaLink="false">65bb999d4c147810992a1b31</guid><category><![CDATA[Frontend]]></category><category><![CDATA[CSS]]></category><category><![CDATA[Notes]]></category><dc:creator><![CDATA[Jamie Wang]]></dc:creator><pubDate>Sun, 12 Nov 2023 16:00:00 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDJ8fENTU3xlbnwwfHx8fDE3MDY3OTIwNTJ8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<blockquote>
+<img src="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDJ8fENTU3xlbnwwfHx8fDE3MDY3OTIwNTJ8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="CSS &#x900F;&#x660E;&#x5EA6;&#x3001;&#x53EF;&#x898B;&#x6027;&#x548C;&#x986F;&#x793A;&#x7684;&#x5340;&#x5225;"><p>key differences between opacity: 0, visibility: hidden, and display: none:</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Visibility</th>
+<th>Layout</th>
+<th>Interaction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>opacity: 0</code></td>
+<td>Invisible</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>visibility: hidden</code></td>
+<td>Invisible</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>display: none</code></td>
+<td>Hidden</td>
+<td>No</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<figure class="kg-card kg-gallery-card kg-width-wide"><div class="kg-gallery-container"><div class="kg-gallery-row"><div class="kg-gallery-image"><img src="https://blog.cmwang.net/content/images/2024/02/IMG_5601.JPG" width="1024" height="1280" loading="lazy" alt="CSS &#x900F;&#x660E;&#x5EA6;&#x3001;&#x53EF;&#x898B;&#x6027;&#x548C;&#x986F;&#x793A;&#x7684;&#x5340;&#x5225;" srcset="https://blog.cmwang.net/content/images/size/w600/2024/02/IMG_5601.JPG 600w, https://blog.cmwang.net/content/images/size/w1000/2024/02/IMG_5601.JPG 1000w, https://blog.cmwang.net/content/images/2024/02/IMG_5601.JPG 1024w" sizes="(min-width: 720px) 720px"></div><div class="kg-gallery-image"><img src="https://blog.cmwang.net/content/images/2024/02/IMG_5600.JPG" width="1024" height="1280" loading="lazy" alt="CSS &#x900F;&#x660E;&#x5EA6;&#x3001;&#x53EF;&#x898B;&#x6027;&#x548C;&#x986F;&#x793A;&#x7684;&#x5340;&#x5225;" srcset="https://blog.cmwang.net/content/images/size/w600/2024/02/IMG_5600.JPG 600w, https://blog.cmwang.net/content/images/size/w1000/2024/02/IMG_5600.JPG 1000w, https://blog.cmwang.net/content/images/2024/02/IMG_5600.JPG 1024w" sizes="(min-width: 720px) 720px"></div><div class="kg-gallery-image"><img src="https://blog.cmwang.net/content/images/2024/02/IMG_5599.JPG" width="1024" height="1280" loading="lazy" alt="CSS &#x900F;&#x660E;&#x5EA6;&#x3001;&#x53EF;&#x898B;&#x6027;&#x548C;&#x986F;&#x793A;&#x7684;&#x5340;&#x5225;" srcset="https://blog.cmwang.net/content/images/size/w600/2024/02/IMG_5599.JPG 600w, https://blog.cmwang.net/content/images/size/w1000/2024/02/IMG_5599.JPG 1000w, https://blog.cmwang.net/content/images/2024/02/IMG_5599.JPG 1024w" sizes="(min-width: 720px) 720px"></div></div><div class="kg-gallery-row"><div class="kg-gallery-image"><img src="https://blog.cmwang.net/content/images/2024/02/IMG_5598.JPG" width="1024" height="1280" loading="lazy" alt="CSS &#x900F;&#x660E;&#x5EA6;&#x3001;&#x53EF;&#x898B;&#x6027;&#x548C;&#x986F;&#x793A;&#x7684;&#x5340;&#x5225;" srcset="https://blog.cmwang.net/content/images/size/w600/2024/02/IMG_5598.JPG 600w, https://blog.cmwang.net/content/images/size/w1000/2024/02/IMG_5598.JPG 1000w, https://blog.cmwang.net/content/images/2024/02/IMG_5598.JPG 1024w" sizes="(min-width: 720px) 720px"></div><div class="kg-gallery-image"><img src="https://blog.cmwang.net/content/images/2024/02/IMG_5597.JPG" width="1024" height="1280" loading="lazy" alt="CSS &#x900F;&#x660E;&#x5EA6;&#x3001;&#x53EF;&#x898B;&#x6027;&#x548C;&#x986F;&#x793A;&#x7684;&#x5340;&#x5225;" srcset="https://blog.cmwang.net/content/images/size/w600/2024/02/IMG_5597.JPG 600w, https://blog.cmwang.net/content/images/size/w1000/2024/02/IMG_5597.JPG 1000w, https://blog.cmwang.net/content/images/2024/02/IMG_5597.JPG 1024w" sizes="(min-width: 720px) 720px"></div><div class="kg-gallery-image"><img src="https://blog.cmwang.net/content/images/2024/02/IMG_5596.JPG" width="1024" height="1280" loading="lazy" alt="CSS &#x900F;&#x660E;&#x5EA6;&#x3001;&#x53EF;&#x898B;&#x6027;&#x548C;&#x986F;&#x793A;&#x7684;&#x5340;&#x5225;" srcset="https://blog.cmwang.net/content/images/size/w600/2024/02/IMG_5596.JPG 600w, https://blog.cmwang.net/content/images/size/w1000/2024/02/IMG_5596.JPG 1000w, https://blog.cmwang.net/content/images/2024/02/IMG_5596.JPG 1024w" sizes="(min-width: 720px) 720px"></div></div></div></figure>]]></content:encoded></item><item><title><![CDATA[CSS Unit]]></title><description><![CDATA[CSS Units]]></description><link>https://blog.cmwang.net/css-units/</link><guid isPermaLink="false">65bb98814c147810992a1b1f</guid><category><![CDATA[Frontend]]></category><category><![CDATA[CSS]]></category><category><![CDATA[Notes]]></category><dc:creator><![CDATA[Jamie Wang]]></dc:creator><pubDate>Sun, 12 Nov 2023 16:00:00 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDJ8fENTU3xlbnwwfHx8fDE3MDY3OTIwNTJ8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<h2 id="%E7%99%BE%E5%88%86%E6%AF%94"><code>%</code> &#x767E;&#x5206;&#x6BD4;</h2>
+<ul>
+<li>&#x5982;&#x679C;&#x7528;&#x65BC;&#x6307;&#x5B9A;<strong>&#x5B57;&#x9AD4;</strong>&#x5927;&#x5C0F;&#xFF0C;&#x5247;&#x76F8;&#x5C0D;&#x65BC;&#x5176;<code>&#x7236;&#x5143;&#x7D20;</code>&#x7684;&#x5B57;&#x9AD4;&#x5927;&#x5C0F;&#x9032;&#x884C;&#x6E2C;&#x91CF;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x7528;&#x65BC;&#x6307;&#x5B9A;<strong>&#x9577;&#x5EA6;</strong>&#xFF0C;&#x5247;&#x76F8;&#x5C0D;&#x65BC;&#x5176;<code>&#x7236;&#x5143;&#x7D20;</code>&#x7684;&#x5BEC;&#x5EA6;&#x9032;&#x884C;&#x6E2C;&#x91CF;&#x3002;</li>
+</ul>
+<pre><code class="language-css">/* &#x7236;&#x5143;&#x7D20; */
+.parent {
+  font-size: 16px;
+  width: 300px;
 }
 
-sudo systemctl restart docker
-sudo systemctl enable docker
-# verify
-docker info -f &apos;{{ .DockerRootDir}}&apos;
+/* &#x5B50;&#x5143;&#x7D20; */
+.child {
+  font-size: 100%; /* &#x5B57;&#x9AD4;&#x5927;&#x5C0F;&#x76F8;&#x5C0D;&#x65BC;&#x7236;&#x5143;&#x7D20;&#x7684;&#x5B57;&#x9AD4;&#x5927;&#x5C0F;, 16px */
+  width: 50%; /* &#x5BEC;&#x5EA6;&#x76F8;&#x5C0D;&#x65BC;&#x7236;&#x5143;&#x7D20;&#x7684;&#x5BEC;&#x5EA6;, 150px */
+  padding: 1em; /* &#x5167;&#x90E8;&#x586B;&#x5145;&#x76F8;&#x5C0D;&#x65BC;&#x7576;&#x524D;&#x7684;&#x5B57;&#x9AD4;&#x5927;&#x5C0F; 16px */
+}
 </code></pre>
-<h2 id="install-nvidia-driver-cuda">Install Nvidia Driver &amp; Cuda</h2>
-<pre><code class="language-sh">wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-ubuntu2204.pin
-sudo mv cuda-ubuntu2204.pin /etc/apt/preferences.d/cuda-repository-pin-600
-wget https://developer.download.nvidia.com/compute/cuda/12.2.2/local_installers/cuda-repo-ubuntu2204-12-2-local_12.2.2-535.104.05-1_amd64.deb
-sudo dpkg -i cuda-repo-ubuntu2204-12-2-local_12.2.2-535.104.05-1_amd64.deb
-sudo cp /var/cuda-repo-ubuntu2204-12-2-local/cuda-*-keyring.gpg /usr/share/keyrings/
-sudo apt-get update
-sudo apt-get -y install cuda
+<h2 id="em-%E7%9B%B8%E5%B0%8D-em"><code>em</code> (&#x76F8;&#x5C0D; EM)</h2>
+<ul>
+<li>&#x5982;&#x679C;&#x7528;&#x65BC;&#x6307;&#x5B9A;<strong>&#x5B57;&#x9AD4;</strong>&#x5927;&#x5C0F;&#xFF0C;&#x5247;&#x76F8;&#x5C0D;&#x65BC;&#x5176;<code>&#x7236;&#x5143;&#x7D20;</code>&#x7684;&#x5B57;&#x9AD4;&#x5927;&#x5C0F;&#x9032;&#x884C;&#x6E2C;&#x91CF;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x7528;&#x65BC;&#x6307;&#x5B9A;<strong>&#x9577;&#x5EA6;</strong>&#xFF0C;&#x5247;&#x76F8;&#x5C0D;&#x65BC;<code>&#x7576;&#x524D;</code>&#x7684;&#x5B57;&#x9AD4;&#x5927;&#x5C0F;&#x9032;&#x884C;&#x6E2C;&#x91CF;&#x3002; &#x1F525;</li>
+</ul>
+<blockquote>
+<img src="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDJ8fENTU3xlbnwwfHx8fDE3MDY3OTIwNTJ8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="CSS Unit"><p>&#x7528; EM &#x6307;&#x5B9A;&#x9577;&#x5EA6;&#xFF0C;<strong>&#x9700;&#x6CE8;&#x610F;&#x662F;&#x7528;&#x7576;&#x524D;&#x5B57;&#x9AD4;&#x5927;&#x5C0F;&#x7576;&#x57FA;&#x6E96;</strong>&#x3002;&#x82E5;&#x7576;&#x524D;&#x6C92;&#x6307;&#x5B9A;&#xFF0C;&#x7528;&#x7E7C;&#x627F;&#x4F86;&#x7684;&#x5B57;&#x9AD4;&#x5927;&#x5C0F;&#x7576;&#x57FA;&#x6E96;&#x3002;</p>
+</blockquote>
+<pre><code class="language-css">/* &#x7236;&#x5143;&#x7D20; */
+.parent {
+  font-size: 16px;
+  width: 300px;
+}
+
+/* &#x5B50;&#x5143;&#x7D20; */
+.child {
+  font-size: 2em; /* &#x5B57;&#x9AD4;&#x5927;&#x5C0F;&#x76F8;&#x5C0D;&#x65BC;&#x7236;&#x5143;&#x7D20;&#x7684;&#x5B57;&#x9AD4;&#x5927;&#x5C0F; 32px */
+  width: 3em; /* &#x5BEC;&#x5EA6;&#x76F8;&#x5C0D;&#x65BC;&#x76F8;&#x5C0D;&#x65BC;[&#x7576;&#x524D;]&#x7684;&#x5B57;&#x9AD4; 32px x 3 = 96 px &#x1F525; */
+}
 </code></pre>
-<h2 id="install-nvidia-docker-toolkit">Install Nvidia Docker Toolkit</h2>
-<pre><code class="language-sh">curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg \
-  &amp;&amp; curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | \
-    sed &apos;s#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g&apos; | \
-    sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list \
-  &amp;&amp; \
-    sudo apt-get update
+<h2 id="rem-root-em"><code>rem</code> (Root EM)</h2>
+<ul>
+<li>REM (Root EM) &#x662F;&#x76F8;&#x5C0D;&#x65BC;&#x6587;&#x6A94;&#x7684; Root element (<code>html</code> &#x5143;&#x7D20;) &#x7684;&#x5B57;&#x9AD4;&#x5927;&#x5C0F;&#x9032;&#x884C;&#x6E2C;&#x91CF;&#x3002;</li>
+<li>REM &#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x7A2E;&#x7D71;&#x4E00;&#x7684;&#x57FA;&#x6E96;&#xFF0C;&#x4F7F;&#x5F97;&#x5728;&#x6574;&#x500B;&#x6587;&#x6A94;&#x4E2D;&#x53EF;&#x4EE5;&#x8F15;&#x9B06;&#x5730;&#x7DAD;&#x8B77;&#x4E00;&#x81F4;&#x7684;&#x5C3A;&#x5BF8;&#x6BD4;&#x4F8B;&#x3002;</li>
+</ul>
+<pre><code class="language-css">/* &#x8A2D;&#x5B9A;&#x6839;&#x5143;&#x7D20;&#x5B57;&#x9AD4;&#x5927;&#x5C0F; */
+html {
+  font-size: 16px;
+}
 
-sudo apt-get install -y nvidia-container-toolkit
+/* &#x7236;&#x5143;&#x7D20; */
+.parent {
+  font-size: 1rem; /* &#x5B57;&#x9AD4;&#x5927;&#x5C0F;&#x76F8;&#x5C0D;&#x65BC;&#x6839;&#x5143;&#x7D20; 16px */
+  width: 300px;
+}
 
-sudo systemctl restart docker
-
-
-# verify
-docker run --rm --gpus all nvidia/cuda:11.6.2-base-ubuntu20.04 nvidia-smi
+/* &#x5B50;&#x5143;&#x7D20; */
+.child {
+  font-size: 2rem; /* &#x5B57;&#x9AD4;&#x5927;&#x5C0F;&#x76F8;&#x5C0D;&#x65BC;&#x6839;&#x5143;&#x7D20; 32px */
+  width: 3rem; /* &#x5BEC;&#x5EA6;&#x76F8;&#x5C0D;&#x65BC;&#x6839;&#x5143;&#x7D20; 48px */
+}
 </code></pre>
-<h2 id="install-docker-compose">Install Docker Compose</h2>
-<pre><code class="language-sh"># https://docs.docker.com/compose/install/
-sudo curl -L &quot;https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)&quot; -o /usr/local/bin/docker-compose
+<h2 id="vw-%E8%88%87-vh-viewport-width-height"><code>vw</code> &#x8207; <code>vh</code> (Viewport Width &amp; Height)</h2>
+<ul>
+<li><code>vw</code> &#x8868;&#x793A;&#x76F8;&#x5C0D;&#x65BC;&#x8996;&#x7A97;&#x5BEC;&#x5EA6;&#x7684;&#x767E;&#x5206;&#x6BD4;&#x3002;</li>
+<li><code>vh</code> &#x8868;&#x793A;&#x76F8;&#x5C0D;&#x65BC;&#x8996;&#x7A97;&#x9AD8;&#x5EA6;&#x7684;&#x767E;&#x5206;&#x6BD4;&#x3002;</li>
+</ul>
+<pre><code class="language-css">/* &#x7236;&#x5143;&#x7D20; */
+.parent {
+  font-size: 16px;
+  width: 50vw; /* &#x5BEC;&#x5EA6;&#x76F8;&#x5C0D;&#x65BC;&#x8996;&#x7A97;&#x5BEC;&#x5EA6;&#x7684;50% */
+}
 
-sudo chmod +x /usr/local/bin/docker-compose
+/* &#x5B50;&#x5143;&#x7D20; */
+.child {
+  font-size: 2em; /* &#x5B57;&#x9AD4;&#x5927;&#x5C0F;&#x76F8;&#x5C0D;&#x65BC;&#x7236;&#x5143;&#x7D20;&#x7684;&#x5B57;&#x9AD4;&#x5927;&#x5C0F; 32px */
+  width: 50vh; /* &#x5BEC;&#x5EA6;&#x76F8;&#x5C0D;&#x65BC;&#x8996;&#x7A97;&#x9AD8;&#x5EA6;&#x7684;50% */
+}
+</code></pre>
+]]></content:encoded></item><item><title><![CDATA[CSS Tricks]]></title><description><![CDATA[CSS Tricks (reset, center, faded overlay ...)]]></description><link>https://blog.cmwang.net/css-tricks/</link><guid isPermaLink="false">65bb98004c147810992a1b0e</guid><category><![CDATA[Frontend]]></category><category><![CDATA[CSS]]></category><category><![CDATA[Notes]]></category><dc:creator><![CDATA[Jamie Wang]]></dc:creator><pubDate>Sun, 12 Nov 2023 16:00:00 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDJ8fENTU3xlbnwwfHx8fDE3MDY3OTIwNTJ8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<h2 id="css-reset">CSS Reset</h2>
+<blockquote>
+<img src="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDJ8fENTU3xlbnwwfHx8fDE3MDY3OTIwNTJ8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="CSS Tricks"><p>Do not set the font property in the universal selector. Instead, set it in the body selector for inheritance and performance.</p>
+</blockquote>
+<pre><code class="language-css">*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; /* border-box */
+}
+
+html {
+  font-size: 62.5%; /* 10px = 16px * 62.5% */
+}
+
+body {
+  box-sizing: border-box; /* here */
+  font-family: ....;
+  font-weight: ...;
+  line-height: ...;
+  color: ...;
+  padding: ...;
+}
+</code></pre>
+<h2 id="element-center-%E7%B0%A1%E6%98%93%E7%89%88">Element Center (&#x7C21;&#x6613;&#x7248;)</h2>
+<ul>
+<li>The easiest way to center anything with the transform, top and left properties.</li>
+</ul>
+<pre><code class="language-css">.text-box {
+  position: absolute; /* relative to parent container */
+  top: 50%;
+  left: 50%;
+  transfrom: translate(-50%, -50%);
+}
+</code></pre>
+<h2 id="faded-overlay-on-image">Faded overlay on image</h2>
+<pre><code class="language-css">.header {
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(126, 213, 111, 0.8),
+      rgba(38, 181, 133, 0.8)
+    ), url(img/hero.jpg); /* two layers */
+  background-size: cover; /* &#x80CC;&#x666F;&#x5716;&#x7247;&#x6703;&#x88AB;&#x7E2E;&#x653E;&#x4EE5;&#x5B8C;&#x5168;&#x8986;&#x84CB;&#x80CC;&#x666F;&#x5340;&#xFF0C;&#x53EF;&#x80FD;&#x80CC;&#x666F;&#x5716;&#x7247;&#x90E8;&#x5206;&#x770B;&#x4E0D;&#x898B; */
+  background-position: top; /* &#x7E2E;&#x653E;&#x6642;&#xFF0C;&#x4E0A;&#x534A;&#x90E8;&#x4E0D;&#x6703;&#x88AB;&#x88C1;&#x5207; */
+}
+</code></pre>
+<h2 id="fade-in-animation">Fade in Animation</h2>
+<pre><code class="language-css">@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  80% {
+    transform: translateX(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0); /* reset */
+  }
+}
+
+.who-need-this-animation {
+  /* animation */
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+</code></pre>
+<h2 id="rwd-grid">RWD Grid</h2>
+<pre><code class="language-css">.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+</code></pre>
+]]></content:encoded></item><item><title><![CDATA[Critical Rendering Path (CRP)]]></title><description><![CDATA[CSS Critical Rendering Path]]></description><link>https://blog.cmwang.net/css-crp/</link><guid isPermaLink="false">65bb96f94c147810992a1af5</guid><category><![CDATA[Frontend]]></category><category><![CDATA[CSS]]></category><category><![CDATA[Notes]]></category><dc:creator><![CDATA[Jamie Wang]]></dc:creator><pubDate>Sat, 11 Nov 2023 16:00:00 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDJ8fENTU3xlbnwwfHx8fDE3MDY3OTIwNTJ8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<blockquote>
+<img src="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDJ8fENTU3xlbnwwfHx8fDE3MDY3OTIwNTJ8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="Critical Rendering Path (CRP)"><p><strong>Behind the scenes when a web page is loaded and rendered:</strong></p>
+</blockquote>
+<ol>
+<li>
+<p><code>Load HTML</code></p>
+<ul>
+<li>The browser starts by fetching and loading the HTML file.</li>
+</ul>
+</li>
+<li>
+<p><code>Parse HTML</code></p>
+<ul>
+<li>The HTML file is parsed to create the Document Object Model (DOM). The DOM represents the structure of the document as a tree of objects, where each object corresponds to a part of the document (e.g., elements, attributes).</li>
+</ul>
+</li>
+<li>
+<p><code>Load CSS</code></p>
+<ul>
+<li>If there are linked or inline stylesheets in the HTML, the browser fetches and loads them.</li>
+</ul>
+</li>
+<li>
+<p><code>Parse CSS</code></p>
+<ul>
+<li>The loaded CSS files are parsed to create the CSS Object Model (CSSOM). This represents the styles and layout information defined in the CSS.</li>
+<li><strong>Resolve Conflicting CSS Declarations:</strong>
+<ul>
+<li>If there are conflicting CSS declarations (i.e., rules that apply to the same element and property), the browser uses a specific set of rules to determine which styles take precedence.</li>
+</ul>
+</li>
+<li><strong>Process Final CSS Values:</strong>
+<ul>
+<li>The browser processes the final computed values for each CSS property, taking into account inheritance, specificity, and other rules.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><code>Render Tree</code></p>
+<ul>
+<li>The DOM and CSSOM are combined to create the Render Tree. The Render Tree represents the visual hierarchy of the elements on the page that will be rendered. It includes only the elements that will actually be displayed.</li>
+</ul>
+</li>
+<li>
+<p><code>The Visual Formatting Model</code></p>
+<ul>
+<li>The visual formatting model takes the render tree and calculates the layout of each element on the page. This includes determining the size and position of each element based on its CSS properties.</li>
+<li>The visual formatting model also takes into account factors like the box model (margins, borders, padding), positioning, and floating elements.</li>
+</ul>
+</li>
+<li>
+<p><code>Render the Page</code></p>
+<ul>
+<li>Finally, the browser renders the page by painting each pixel according to the specifications of the visual formatting model.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<p><img src="https://wp-rocket.me/wp-content/uploads/2021/10/The-critical-rendering-path.png" alt="Critical Rendering Path (CRP)" loading="lazy"><br>
+<em>Image source: <a href="https://wp-rocket.me/blog/critical-css/">Critical CSS in WordPress: What It Is and How to Optimize CSS Delivery</a></em></p>
+]]></content:encoded></item><item><title><![CDATA[CSS Flexbox]]></title><description><![CDATA[Cheat Sheet.]]></description><link>https://blog.cmwang.net/css-flexbox/</link><guid isPermaLink="false">65bb95da4c147810992a1adf</guid><category><![CDATA[Frontend]]></category><category><![CDATA[CSS]]></category><category><![CDATA[Notes]]></category><category><![CDATA[Cheat Sheet]]></category><dc:creator><![CDATA[Jamie Wang]]></dc:creator><pubDate>Thu, 09 Nov 2023 16:00:00 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDJ8fENTU3xlbnwwfHx8fDE3MDY3OTIwNTJ8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[
+<!--kg-card-begin: html-->
+<iframe width="100%" height="600px" src="https://takawang.github.io/css/flexbox/"></iframe>
+<!--kg-card-end: html-->
+<h3 id="%E5%B0%BA%E5%AF%B8%E5%84%AA%E5%85%88%E9%A0%86%E5%BA%8F"><em>&#x5C3A;&#x5BF8;&#x512A;&#x5148;&#x9806;&#x5E8F;</em></h3>
+<img src="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDJ8fENTU3xlbnwwfHx8fDE3MDY3OTIwNTJ8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="CSS Flexbox"><p>&#x8209;&#x4F8B;&#xFF1A;&#x82E5;&#x6709;&#x8A2D; flex-basis &#x8DDF; width&#xFF0C;&#x512A;&#x5148;&#x8003;&#x616E; flex-basis</p>
+<table>
+<thead>
+<tr>
+<th>&#x512A;&#x5148;&#x6B0A; (&#x7531;&#x5927;&#x5230;&#x5C0F;)</th>
+<th>&#x5C6C;&#x6027;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5</td>
+<td>Max-width</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Min-width</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Flex-basis</strong></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Width</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Content-width</td>
+</tr>
+</tbody>
+</table>
+<h3 id="flex-%E5%B1%AC%E6%80%A7%E7%B8%AE%E5%AF%AB"><code>flex</code> &#x5C6C;&#x6027;&#x7E2E;&#x5BEB;</h3>
+<p>flex: <strong>grow</strong> <strong>shrink</strong> <strong>basis</strong></p>
+<pre><code class="language-css">flex: 1 1 0 /* is the same as flex: 1 */
+flex: 2 2 0 /* is the same as flex: 2 */
+flex: 3     /* is the same as flex: 3 3 0 */
 </code></pre>
 <hr>
-<h2 id="references">References</h2>
+<h2 id="further-reading">Further Reading</h2>
 <ul>
-<li><a href="https://developer.nvidia.com/cuda-downloads?target_os=Linux&amp;target_arch=x86_64&amp;Distribution=Ubuntu&amp;target_version=22.04&amp;target_type=deb_local">CUDA Toolkit 12.2 Update 2 Downloads</a></li>
-<li><a href="https://jackfrisht.medium.com/install-nvidia-driver-via-ppa-in-ubuntu-18-04-fc9a8c4658b9">&#x5B89;&#x88DD; Nvidia driver 535 CUDA 12.2 cudnn 12.x on Ubuntu 22.04</a></li>
+<li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS-TRICKS: A Complete Guide to Flexbox</a></li>
+<li><a href="https://www.freecodecamp.org/news/do-you-even-flex-box-c16449cfca96/">FreeCodeCamp: A visual guide to CSS Flexbox</a></li>
+<li><a href="https://yoksel.github.io/flex-cheatsheet/#section-align-content">https://yoksel.github.io/flex-cheatsheet</a></li>
 </ul>
-]]></content:encoded></item><item><title><![CDATA[透過 Docker 設定 Gitlab Runner]]></title><description><![CDATA[如何在本機透過 Docker 安裝 Gitlab runner]]></description><link>https://blog.cmwang.net/install-gitlab-runner-zh/</link><guid isPermaLink="false">65bb8a974c147810992a1a34</guid><category><![CDATA[How-To]]></category><category><![CDATA[Notes]]></category><category><![CDATA[CI]]></category><dc:creator><![CDATA[Jamie Wang]]></dc:creator><pubDate>Fri, 13 Oct 2023 16:00:00 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1531030874896-fdef6826f2f7?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDR8fGdpdHxlbnwwfHx8fDE3MDY3ODk0ODV8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<img src="https://images.unsplash.com/photo-1531030874896-fdef6826f2f7?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDR8fGdpdHxlbnwwfHx8fDE3MDY3ODk0ODV8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="&#x900F;&#x904E; Docker &#x8A2D;&#x5B9A; Gitlab Runner"><p>1. &#x4F7F;&#x7528; System Volumn &#x639B;&#x8F09; Runner Container&#xFF0C;&#x57F7;&#x884C; Gitlab Runner&#x3002;</p><pre><code class="language-bash">docker run -d --name gitlab-runner --restart always \
-  -v /srv/gitlab-runner/config:/etc/gitlab-runner \
-  -v /var/run/docker.sock:/var/run/docker.sock \
-  gitlab/gitlab-runner:latest</code></pre><p>2. &#x5EFA;&#x7ACB;&#x4E00;&#x500B;&#x65B0;&#x7684; Group runner&#x3002;</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://blog.cmwang.net/content/images/2024/02/1-1.png" class="kg-image" alt="&#x900F;&#x904E; Docker &#x8A2D;&#x5B9A; Gitlab Runner" loading="lazy" width="955" height="605" srcset="https://blog.cmwang.net/content/images/size/w600/2024/02/1-1.png 600w, https://blog.cmwang.net/content/images/2024/02/1-1.png 955w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">group runner</span></figcaption></figure><p>&#x1F449; <em>_&#x65B0;&#x589E; Group runner &#x6A19;&#x7C64;_</em></p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://blog.cmwang.net/content/images/2024/02/2-1.png" class="kg-image" alt="&#x900F;&#x904E; Docker &#x8A2D;&#x5B9A; Gitlab Runner" loading="lazy" width="955" height="747" srcset="https://blog.cmwang.net/content/images/size/w600/2024/02/2-1.png 600w, https://blog.cmwang.net/content/images/2024/02/2-1.png 955w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Add tag</span></figcaption></figure><p>&#x1F449; <em>_&#x7372;&#x53D6; token_</em></p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://blog.cmwang.net/content/images/2024/02/3-1.png" class="kg-image" alt="&#x900F;&#x904E; Docker &#x8A2D;&#x5B9A; Gitlab Runner" loading="lazy" width="960" height="668" srcset="https://blog.cmwang.net/content/images/size/w600/2024/02/3-1.png 600w, https://blog.cmwang.net/content/images/2024/02/3-1.png 960w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Get </span><i><em class="italic" style="white-space: pre-wrap;">authentication</em></i><span style="white-space: pre-wrap;"> token</span></figcaption></figure><p>&#x66F4;&#x8A73;&#x7D30;&#x7684;&#x6B65;&#x9A5F;&#x53EF;&#x4EE5;&#x53C3;&#x8003;&#x9019;&#x7BC7;<a href="https://docs.gitlab.com/ee/ci/runners/runners_scope.html#create-a-group-runner-with-a-runner-authentication-token">&#x6587;&#x7AE0;</a>&#x3002;</p>
-<p>3. &#x8A3B;&#x518A; Runner<br>&#x5225;&#x5FD8;&#x4E86;&#x5C07; Token &#x63DB;&#x6210;&#x4E0A;&#x4E00;&#x6B65;&#x5F97;&#x5230;&#x7684;&#x3002;</p><pre><code class="language-bash">RUNNER_TOKEN=&quot;glrt-vTJPYBaajfypaShJH2xx&quot;
-
-docker run --rm -v /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/gitlab-runner register \
-  --non-interactive \
-  --url &quot;https://gitlab.com/&quot; \
-  --token &quot;$RUNNER_TOKEN&quot; \
-  --executor &quot;docker&quot; \
-  --docker-image docker:stable-dind \
-  --description &quot;docker-runner&quot;</code></pre><p>4. &#x7DE8;&#x8F2F; <strong>/srv/gitlab-runner/config/config.toml</strong></p><p>&#x4FEE;&#x6539;&#x4EE5;&#x4E0B;&#x914D;&#x7F6E;:</p>
-<ul>
-<li><code>concurrent</code>&#xFF1A;&#x53EF;&#x9078;</li>
-<li><code>privileged</code></li>
-<li><code>volumes</code>&#xFF1A;docker &#x5167;&#x90E8;&#x7684; docker</li>
-<li><code>network_mode</code>&#xFF1A;&#x53EF;&#x9078;</li>
-</ul>
-<figure class="kg-card kg-code-card"><pre><code class="language-toml">concurrent = 4 # change
-check_interval = 0
-shutdown_timeout = 0
-
-[session_server]
-  session_timeout = 1800
-
-[[runners]]
-  name = &quot;docker-runner&quot;
-  url = &quot;https://gitlab.com/&quot;
-  id = 28470179
-  token = &quot;glrt-vTJPYBaajfypaShJH2Ge&quot;
-  token_obtained_at = 2023-10-14T12:45:43Z
-  token_expires_at = 0001-01-01T00:00:00Z
-  executor = &quot;docker&quot;
-  [runners.cache]
-    MaxUploadedArchiveSize = 0
-  [runners.docker]
-    tls_verify = false
-    image = &quot;docker:stable-dind&quot;
-    privileged = true # change
-    disable_entrypoint_overwrite = false
-    oom_kill_disable = false
-    disable_cache = false
-    #volumes = [&quot;/cache&quot;] # change
-    volumes = [&quot;/cache&quot;, &quot;/var/run/docker.sock:/run/docker.sock&quot;]
-    shm_size = 0
-    network_mode = &quot;host&quot; # add</code></pre><figcaption><p><span style="white-space: pre-wrap;">/srv/gitlab-runner/config/config.toml</span></p></figcaption></figure><p>6. &#x91CD;&#x65B0;&#x555F;&#x52D5; Runner</p><pre><code class="language-bash">docker restart gitlab-runner</code></pre><hr><h2 id="%E5%8F%83%E8%80%83%E8%B3%87%E6%96%99">&#x53C3;&#x8003;&#x8CC7;&#x6599;</h2>
-<ul>
-<li><a href="https://docs.gitlab.com/runner/install/">Install GitLab Runner</a></li>
-<li><a href="https://docs.gitlab.com/runner/install/docker.html">Run GitLab Runner in a container</a></li>
-<li><a href="https://docs.gitlab.com/runner/register/index.html">Registering runners </a></li>
-<li><a href="https://docs.gitlab.com/ee/ci/runners/runners_scope.html#create-a-group-runner-with-a-runner-authentication-token">Create a group runner with a runner authentication token</a></li>
-</ul>
-]]></content:encoded></item><item><title><![CDATA[How to Setup Gitlab Runner in Container]]></title><description><![CDATA[Setup Gitlab Runner in Container.]]></description><link>https://blog.cmwang.net/how-to-setup-gitlab-runner-in-container/</link><guid isPermaLink="false">65bb881a4c147810992a19fd</guid><category><![CDATA[How-To]]></category><category><![CDATA[Notes]]></category><category><![CDATA[CI]]></category><dc:creator><![CDATA[Jamie Wang]]></dc:creator><pubDate>Fri, 13 Oct 2023 16:00:00 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1531030874896-fdef6826f2f7?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDR8fGdpdHxlbnwwfHx8fDE3MDY3ODk0ODV8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<img src="https://images.unsplash.com/photo-1531030874896-fdef6826f2f7?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDR8fGdpdHxlbnwwfHx8fDE3MDY3ODk0ODV8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="How to Setup Gitlab Runner in Container"><p>1. Use local system volume mounts to start the runner container.</p><pre><code class="language-bash">docker run -d --name gitlab-runner --restart always \
-  -v /srv/gitlab-runner/config:/etc/gitlab-runner \
-  -v /var/run/docker.sock:/var/run/docker.sock \
-  gitlab/gitlab-runner:latest</code></pre><p>2. Create a group runner with a runner <strong>authentication token</strong>.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://blog.cmwang.net/content/images/2024/02/1-1.png" class="kg-image" alt="How to Setup Gitlab Runner in Container" loading="lazy" width="955" height="605" srcset="https://blog.cmwang.net/content/images/size/w600/2024/02/1-1.png 600w, https://blog.cmwang.net/content/images/2024/02/1-1.png 955w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">group runner</span></figcaption></figure><p>&#x1F449; <em>_Add group runner tag_</em></p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://blog.cmwang.net/content/images/2024/02/2-1.png" class="kg-image" alt="How to Setup Gitlab Runner in Container" loading="lazy" width="955" height="747" srcset="https://blog.cmwang.net/content/images/size/w600/2024/02/2-1.png 600w, https://blog.cmwang.net/content/images/2024/02/2-1.png 955w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Add tag</span></figcaption></figure><p>&#x1F449; <em>_Get authentication token_</em></p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://blog.cmwang.net/content/images/2024/02/3-1.png" class="kg-image" alt="How to Setup Gitlab Runner in Container" loading="lazy" width="960" height="668" srcset="https://blog.cmwang.net/content/images/size/w600/2024/02/3-1.png 600w, https://blog.cmwang.net/content/images/2024/02/3-1.png 960w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Get </span><i><em class="italic" style="white-space: pre-wrap;">authentication</em></i><span style="white-space: pre-wrap;"> token</span></figcaption></figure><p>3. Register a runner<br>Don&apos;t forget to change the authentication token.</p><pre><code class="language-bash">RUNNER_TOKEN=&quot;glrt-vTJPYBaajfypaShJH2xx&quot;
-
-docker run --rm -v /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/gitlab-runner register \
-  --non-interactive \
-  --url &quot;https://gitlab.com/&quot; \
-  --token &quot;$RUNNER_TOKEN&quot; \
-  --executor &quot;docker&quot; \
-  --docker-image docker:stable-dind \
-  --description &quot;docker-runner&quot;</code></pre><p>4. Edit <strong>/srv/gitlab-runner/config/config.toml</strong></p><p>Modify the following configurations:</p>
-<ul>
-<li><code>concurrent</code>: optional</li>
-<li><code>privileged</code></li>
-<li><code>volumes</code>: docker in docker</li>
-<li><code>network_mode</code>: optional</li>
-</ul>
-<figure class="kg-card kg-code-card"><pre><code class="language-toml">concurrent = 4 # change
-check_interval = 0
-shutdown_timeout = 0
-
-[session_server]
-  session_timeout = 1800
-
-[[runners]]
-  name = &quot;docker-runner&quot;
-  url = &quot;https://gitlab.com/&quot;
-  id = 28470179
-  token = &quot;glrt-vTJPYBaajfypaShJH2Ge&quot;
-  token_obtained_at = 2023-10-14T12:45:43Z
-  token_expires_at = 0001-01-01T00:00:00Z
-  executor = &quot;docker&quot;
-  [runners.cache]
-    MaxUploadedArchiveSize = 0
-  [runners.docker]
-    tls_verify = false
-    image = &quot;docker:stable-dind&quot;
-    privileged = true # change
-    disable_entrypoint_overwrite = false
-    oom_kill_disable = false
-    disable_cache = false
-    #volumes = [&quot;/cache&quot;] # change
-    volumes = [&quot;/cache&quot;, &quot;/var/run/docker.sock:/run/docker.sock&quot;]
-    shm_size = 0
-    network_mode = &quot;host&quot; # add</code></pre><figcaption><p dir="ltr"><span style="white-space: pre-wrap;">/srv/gitlab-runner/config/config.toml</span></p></figcaption></figure><p>6. Restart Runner</p><pre><code class="language-bash">docker restart gitlab-runner</code></pre><hr><h2 id="references">References</h2>
-<ul>
-<li><a href="https://docs.gitlab.com/runner/install/">Install GitLab Runner</a></li>
-<li><a href="https://docs.gitlab.com/runner/install/docker.html">Run GitLab Runner in a container</a></li>
-<li><a href="https://docs.gitlab.com/runner/register/index.html">Registering runners </a></li>
-<li><a href="https://docs.gitlab.com/ee/ci/runners/runners_scope.html#create-a-group-runner-with-a-runner-authentication-token">Create a group runner with a runner authentication token</a></li>
-</ul>
-]]></content:encoded></item><item><title><![CDATA[在 Ubuntu 設定 Powerlevel10k]]></title><description><![CDATA[記錄如何在 Ubuntu 設定 zsh 與 Powerlevel10k 及 zsh-autosuggestions]]></description><link>https://blog.cmwang.net/install-powerlevel10k-on-ubuntu-zh/</link><guid isPermaLink="false">65bb87164c147810992a19e3</guid><category><![CDATA[How-To]]></category><category><![CDATA[Notes]]></category><category><![CDATA[Ubuntu]]></category><dc:creator><![CDATA[Jamie Wang]]></dc:creator><pubDate>Fri, 13 Oct 2023 11:58:00 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1629654297299-c8506221ca97?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDF8fGJhc2h8ZW58MHx8fHwxNzA2Nzg4NTM5fDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<h2 id="%F0%9F%9A%80-%E5%AE%89%E8%A3%9D-powerlevel10k">&#x1F680; &#x5B89;&#x88DD; Powerlevel10K</h2>
-<pre><code class="language-shell">sudo apt update
-sudo apt install zsh
-
-# &#x5B89;&#x88DD; Oh My Zsh&#xFF1A;
-sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&quot;
-
-# &#x5B89;&#x88DD;&#x4E3B;&#x984C;
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
-
+]]></content:encoded></item><item><title><![CDATA[CSS Float]]></title><description><![CDATA[Some notes..]]></description><link>https://blog.cmwang.net/css-float/</link><guid isPermaLink="false">65bb94d14c147810992a1acb</guid><category><![CDATA[Frontend]]></category><category><![CDATA[CSS]]></category><category><![CDATA[Notes]]></category><dc:creator><![CDATA[Jamie Wang]]></dc:creator><pubDate>Wed, 08 Nov 2023 16:00:00 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDJ8fENTU3xlbnwwfHx8fDE3MDY3OTIwNTJ8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<img src="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDJ8fENTU3xlbnwwfHx8fDE3MDY3OTIwNTJ8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="CSS Float"><p><img src="https://blog.cmwang.net/content/images/2024/02/float.png" alt="CSS Float" loading="lazy"></p>
+<p>&#x7576;&#x4F60;&#x5C07;&#x4E00;&#x500B;&#x5143;&#x7D20;&#x7684; float &#x5C6C;&#x6027;&#x8A2D;&#x5B9A;&#x70BA; left &#x6642;&#xFF0C;&#x5B83;&#x6703;&#x5411;&#x5DE6;&#x6D6E;&#x52D5;&#xFF0C;<strong>&#x812B;&#x96E2;&#x6B63;&#x5E38;&#x7684;&#x6587;&#x4EF6;&#x6D41;</strong>&#xFF0C;&#x88AB;&#x79FB;&#x52D5;&#x5230;&#x5176;&#x7236;&#x5143;&#x7D20;&#x7684;&#x5DE6;&#x908A;&#x3002;&#x5176;&#x4ED6;&#x6587;&#x4EF6;&#x6D41;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x6703;&#x570D;&#x7E5E;&#x8457;&#x6D6E;&#x52D5;&#x5143;&#x7D20;&#x7684;&#x5468;&#x570D;&#x9032;&#x884C;&#x4F48;&#x5C40;&#x3002;&#x6D6E;&#x52D5;&#x5143;&#x7D20;&#x4E4B;&#x5F8C;&#x7684;&#x5167;&#x5BB9;&#x6703;&#x586B;&#x5145;&#x5230;&#x6D6E;&#x52D5;&#x5143;&#x7D20;&#x7684;&#x53F3;&#x5074;&#x3002;</p>
+<p>&#x6D6E;&#x52D5;&#x5143;&#x7D20;&#x7684;&#x7236;&#x5143;&#x7D20;&#xFF08;&#x5982;&#x679C;&#x6C92;&#x6709;&#x88AB;&#x6E05;&#x9664;&#x6D6E;&#x52D5;&#xFF09;&#x53EF;&#x80FD;&#x6703;&#x767C;&#x751F;&#x9AD8;&#x5EA6;&#x584C;&#x9677;&#xFF08;height collapse&#xFF09;&#xFF0C;&#x5373;&#x7236;&#x5143;&#x7D20;&#x7684;&#x9AD8;&#x5EA6;&#x4E0D;&#x6703;&#x81EA;&#x52D5;&#x5730;&#x5305;&#x542B;&#x6D6E;&#x52D5;&#x5143;&#x7D20;&#x3002;&#x9019;&#x5C31;&#x662F;&#x6240;&#x8B02;&#x7684;<code>&#x7236;&#x5143;&#x7D20;&#x584C;&#x9677;&#x554F;&#x984C;</code>&#x3002;&#x70BA;&#x4E86;&#x89E3;&#x6C7A;&#x9019;&#x500B;&#x554F;&#x984C;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; clear &#x5C6C;&#x6027;&#x6E05;&#x9664;&#x6D6E;&#x52D5;&#x3002;</p>
+<pre><code class="language-CSS">/* &#x89E3;&#x6C7A; &#x7236;&#x5143;&#x7D20;&#x7684;&#x9AD8;&#x5EA6;&#x584C;&#x9677; */
+.clearfix::after {
+  content: &quot;&quot;;
+  display: block;
+  clear: both;
+}
 </code></pre>
-<ol>
-<li>
-<img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDF8fGJhc2h8ZW58MHx8fHwxNzA2Nzg4NTM5fDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="&#x5728; Ubuntu &#x8A2D;&#x5B9A; Powerlevel10k"><p><strong>&#x5B89;&#x88DD; Zsh&#xFF1A;</strong></p>
-<p>&#x5982;&#x679C;&#x4F60;&#x6C92;&#x6709;&#x5B89;&#x88DD; Zsh&#xFF0C;&#x8ACB;&#x4F7F;&#x7528;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x5B89;&#x88DD;&#xFF1A;</p>
-<pre><code class="language-bash">sudo apt update
-sudo apt install zsh
-</code></pre>
-</li>
-<li>
-<p><strong>&#x5B89;&#x88DD; Oh My Zsh&#xFF1A;</strong></p>
-<p>&#x57F7;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x5B89;&#x88DD; Oh My Zsh&#xFF1A;</p>
-<pre><code class="language-bash">sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&quot;
-</code></pre>
-</li>
-<li>
-<p><strong>&#x5B89;&#x88DD; Powerlevel10k &#x4E3B;&#x984C;&#xFF1A;</strong></p>
-<p>&#x5C07; Powerlevel10k Repo Clone &#x5230; Oh My Zsh &#x7684;&#x81EA;&#x5B9A;&#x7FA9;&#x4E3B;&#x984C;&#x76EE;&#x9304;&#xFF1A;</p>
-<pre><code class="language-bash">git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
-</code></pre>
-</li>
-<li>
-<p><strong>&#x8A2D;&#x5B9A; Zsh &#x4E3B;&#x984C;&#xFF1A;</strong></p>
-<p>&#x958B;&#x555F;&#x4F60;&#x7684; <code>~/.zshrc</code> &#x6A94;&#x6848;&#xFF1A;</p>
-<pre><code class="language-bash">nano ~/.zshrc
-</code></pre>
-<p>&#x627E;&#x5230;&#x4EE5; <code>ZSH_THEME</code> &#x958B;&#x982D;&#x7684;&#x90A3;&#x4E00;&#x884C;&#xFF0C;&#x4E26;&#x5C07;&#x5176;&#x6539;&#x70BA;&#xFF1A;</p>
-<pre><code class="language-bash">ZSH_THEME=&quot;powerlevel10k/powerlevel10k&quot;
-</code></pre>
-<p>&#x5132;&#x5B58;&#x6A94;&#x6848;&#x4E26;&#x9000;&#x51FA;&#x3002;</p>
-</li>
-<li>
-<p><strong>&#x5B89;&#x88DD;&#x6240;&#x9700;&#x5B57;&#x578B;&#xFF1A;</strong></p>
-<p>Powerlevel10k &#x4F7F;&#x7528;&#x7279;&#x6B8A;&#x5B57;&#x5143;&#xFF0C;&#x56E0;&#x6B64;&#x4F60;&#x9700;&#x8981;&#x5B89;&#x88DD;&#x5305;&#x542B;&#x9019;&#x4E9B;&#x5B57;&#x5143;&#x7684;&#x5B57;&#x578B;&#x3002;Nerd Fonts &#x662F;&#x5E38;&#x7528;&#x7684;&#x9078;&#x64C7;&#x3002;&#x6309;&#x7167; <a href="https://github.com/ryanoasis/nerd-fonts">Nerd Fonts GitHub &#x5009;&#x5EAB;</a> &#x4E0A;&#x7684;&#x8AAA;&#x660E;&#x5B89;&#x88DD;&#x76F8;&#x5BB9;&#x7684;&#x5B57;&#x578B;&#x3002;</p>
-</li>
-<li>
-<p><strong>&#x914D;&#x7F6E; Powerlevel10k&#xFF08;&#x53EF;&#x9078;&#xFF09;&#xFF1A;</strong></p>
-<p>&#x7576;&#x4F60;&#x555F;&#x52D5;&#x65B0;&#x7684; Terminal &#x6642;&#xFF0C;Powerlevel10k &#x5C07;&#x63D0;&#x4F9B;&#x57F7;&#x884C;&#x914D;&#x7F6E;&#x5F15;&#x5C0E;&#x7684;&#x9078;&#x9805;&#x3002;&#x6309;&#x7167;&#x6307;&#x793A;&#x81EA;&#x5B9A;&#x7FA9;&#x4F60;&#x7684;&#x63D0;&#x793A;&#x7B26;&#x3002;</p>
-</li>
-<li>
-<p><strong>&#x91CD;&#x555F; Zsh&#xFF1A;</strong></p>
-<p>&#x91CD;&#x65B0;&#x555F;&#x52D5;&#x4F60;&#x7684; Terminal&#xFF0C;&#x6216;&#x8005;&#x57F7;&#x884C; <code>source ~/.zshrc</code> &#x4EE5;&#x5957;&#x7528;&#x66F4;&#x6539;&#x3002;</p>
-</li>
-</ol>
-<p>&#x73FE;&#x5728;&#xFF0C;Powerlevel10k &#x61C9;&#x8A72;&#x5DF2;&#x7D93;&#x5728;&#x4F60;&#x7684; Ubuntu 22.04 &#x7CFB;&#x7D71;&#x4E0A;&#x5B89;&#x88DD;&#x4E26;&#x914D;&#x7F6E;&#x5B8C;&#x6210;&#x3002;</p>
-<h2 id="%F0%9F%9A%80-%E5%AE%89%E8%A3%9D-zsh-autosuggestions">&#x1F680; &#x5B89;&#x88DD; zsh-autosuggestions</h2>
-<p>Powerlevel10k &#x4E0D;&#x6703;&#x6539;&#x8B8A; Zsh &#x5728;&#x81EA;&#x52D5;&#x88DC;&#x9F4A;&#x7684;&#x9810;&#x8A2D;&#x884C;&#x70BA;&#xFF1B;&#x5B83;&#x4E3B;&#x8981;&#x589E;&#x5F37;&#x548C;&#x81EA;&#x5B9A;&#x7FA9;&#x63D0;&#x793A;&#x7B26;&#x7684;&#x5916;&#x89C0;&#x3002;&#x81EA;&#x52D5;&#x88DC;&#x9F4A;&#x7684;&#x884C;&#x70BA;&#x4E3B;&#x8981;&#x7531; Zsh &#x914D;&#x7F6E;&#x63A7;&#x5236;&#x3002;</p>
-<p>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x5728; Zsh &#x7684;&#x81EA;&#x52D5;&#x88DC;&#x9F4A;&#x555F;&#x7528;&#x5EFA;&#x8B70;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>zsh-autosuggestions</code> &#x5916;&#x639B;&#x3002;&#x8A72;&#x5916;&#x639B;&#x63D0;&#x4F9B;&#x985E;&#x4F3C; fish &#x7684;&#x63D0;&#x793A;&#xFF0C;&#x8207; Powerlevel10k &#x914D;&#x5408;&#x4F7F;&#x7528;&#x6548;&#x679C;&#x5F88;&#x597D;&#x3002;</p>
-<p>&#x4EE5;&#x4E0B;&#x662F;&#x5B89;&#x88DD;&#x548C;&#x914D;&#x7F6E; <code>zsh-autosuggestions</code> &#x7684;&#x6B65;&#x9A5F;&#xFF1A;</p>
-<ol>
-<li>
-<p><strong>&#x5B89;&#x88DD; zsh-autosuggestions&#xFF1A;</strong></p>
-<p>&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4F60;&#x559C;&#x6B61;&#x7684;&#x65B9;&#x6CD5;&#x5B89;&#x88DD;&#x5B83;&#x3002;&#x4E00;&#x500B;&#x5E38;&#x898B;&#x7684;&#x65B9;&#x6CD5;&#x662F;&#x900F;&#x904E;&#x5916;&#x639B;&#x7BA1;&#x7406;&#x5668;&#xFF0C;&#x6BD4;&#x5982; <code>oh-my-zsh</code>&#x3002;</p>
-<p>&#x5982;&#x679C;&#x4F60;&#x4F7F;&#x7528; <code>oh-my-zsh</code>&#xFF0C;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x624B;&#x52D5;&#x514B;&#x9686;&#x5009;&#x5EAB;&#xFF1A;</p>
-<pre><code class="language-bash">git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-</code></pre>
-</li>
-<li>
-<p><strong>&#x555F;&#x7528; zsh-autosuggestions&#xFF1A;</strong></p>
-<p>&#x66F4;&#x65B0;&#x4F60;&#x7684; <code>~/.zshrc</code> &#x6A94;&#x6848;&#x4EE5;&#x555F;&#x7528;&#x8A72;&#x5916;&#x639B;&#x3002;&#x5728; <code>plugins</code> &#x884C;&#x4E2D;&#x65B0;&#x589E;&#x6216;&#x4FEE;&#x6539; <code>zsh-autosuggestions</code>&#x3002;</p>
-<pre><code class="language-bash">plugins=(zsh-autosuggestions)
-</code></pre>
-</li>
-<li>
-<p><strong>&#x91CD;&#x555F; Zsh &#x6216;&#x91CD;&#x65B0;&#x8F09;&#x5165;&#x914D;&#x7F6E;&#xFF1A;</strong></p>
-<p>&#x91CD;&#x65B0;&#x555F;&#x52D5;&#x4F60;&#x7684; Terminal&#xFF0C;&#x6216;&#x8005;&#x57F7;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x4EE5;&#x61C9;&#x7528;&#x66F4;&#x6539;&#xFF1A;</p>
-<pre><code class="language-bash">source ~/.zshrc
-</code></pre>
-</li>
-</ol>
-<p>&#x73FE;&#x5728;&#xFF0C;&#x7576;&#x4F60;&#x9375;&#x5165;&#x6642;&#xFF0C;&#x4F60;&#x61C9;&#x8A72;&#x6703;&#x770B;&#x5230;&#x57FA;&#x65BC;&#x4F60;&#x7684;&#x547D;&#x4EE4;&#x6B77;&#x53F2;&#x7684;&#x81EA;&#x52D5;&#x5EFA;&#x8B70;&#x3002;</p>
-]]></content:encoded></item><item><title><![CDATA[Install Powerlevel10K on Ubuntu]]></title><description><![CDATA[How to configure zsh and Powerlevel10k on Ubuntu]]></description><link>https://blog.cmwang.net/install-powerlevel10k-on-ubuntu/</link><guid isPermaLink="false">65bb86044c147810992a19cd</guid><category><![CDATA[How-To]]></category><category><![CDATA[Notes]]></category><category><![CDATA[Ubuntu]]></category><dc:creator><![CDATA[Jamie Wang]]></dc:creator><pubDate>Fri, 13 Oct 2023 11:56:00 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1629654297299-c8506221ca97?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDF8fGJhc2h8ZW58MHx8fHwxNzA2Nzg4NTM5fDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<h2 id="install-powerlevel10k-%F0%9F%9A%80">Install Powerlevel10K &#x1F680;</h2>
-<pre><code class="language-shell">sudo apt update
-sudo apt install zsh
-
-# Install Oh My Zsh:
-sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&quot;
-
-# Install theme
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
-
-</code></pre>
-<ol>
-<li>
-<img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDF8fGJhc2h8ZW58MHx8fHwxNzA2Nzg4NTM5fDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="Install Powerlevel10K on Ubuntu"><p><strong>Install Zsh:</strong></p>
-<p>If you don&apos;t have Zsh installed, install it using:</p>
-<pre><code class="language-bash">sudo apt update
-sudo apt install zsh
-</code></pre>
-</li>
-<li>
-<p><strong>Install Oh My Zsh:</strong></p>
-<p>Install Oh My Zsh by running the following command:</p>
-<pre><code class="language-bash">sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&quot;
-</code></pre>
-</li>
-<li>
-<p><strong>Install Powerlevel10k Theme:</strong></p>
-<p>Clone the Powerlevel10k repository into the custom themes directory of Oh My Zsh:</p>
-<pre><code class="language-bash">git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
-</code></pre>
-</li>
-<li>
-<p><strong>Set Zsh Theme:</strong></p>
-<p>Open your <code>~/.zshrc</code> file in a text editor:</p>
-<pre><code class="language-bash">nano ~/.zshrc
-</code></pre>
-<p>Find the line that begins with <code>ZSH_THEME</code> and change it to:</p>
-<pre><code class="language-bash">ZSH_THEME=&quot;powerlevel10k/powerlevel10k&quot;
-</code></pre>
-<p>Save the file and exit.</p>
-</li>
-<li>
-<p><strong>Install Required Fonts:</strong></p>
-<p>Powerlevel10k uses special characters, so you need to install a font that includes these characters. Nerd Fonts are commonly used. Follow the instructions on the <a href="https://github.com/ryanoasis/nerd-fonts">Nerd Fonts GitHub repository</a> to install a compatible font.</p>
-</li>
-<li>
-<p><strong>Configure Powerlevel10k (Optional):</strong></p>
-<p>When you start a new terminal session, Powerlevel10k will offer to run a configuration wizard. Follow the instructions to customize your prompt to your liking.</p>
-</li>
-<li>
-<p><strong>Restart Zsh:</strong></p>
-<p>Restart your terminal or run <code>source ~/.zshrc</code> to apply the changes.</p>
-</li>
-</ol>
-<p>Now you should have Powerlevel10k installed and configured on your Ubuntu 22.04 system.</p>
-<h2 id="install-zsh-autosuggestions-%F0%9F%9A%80">Install zsh-autosuggestions &#x1F680;</h2>
-<p>Powerlevel10k does not change the default behavior of Zsh in terms of tab-completion; rather, it enhances and customizes the appearance of the prompt. The behavior of tab-completion is primarily controlled by the Zsh configuration.</p>
-<p>If you want to enable suggestions during tab-completion in Zsh, you can use the <code>zsh-autosuggestions</code> plugin. This plugin provides fish-like autosuggestions as you type, and it works well with Powerlevel10k.</p>
-<p>Here are the steps to install and configure <code>zsh-autosuggestions</code>:</p>
-<ol>
-<li>
-<p><strong>Install zsh-autosuggestions:</strong></p>
-<p>You can install it using your preferred method. One common way is via a plugin manager like <code>oh-my-zsh</code>.</p>
-<p>If you are using <code>oh-my-zsh</code>, you can also manually clone the repository:</p>
-<pre><code class="language-bash">git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-</code></pre>
-</li>
-<li>
-<p><strong>Enable zsh-autosuggestions:</strong></p>
-<p>Update your <code>~/.zshrc</code> file to enable the plugin. Add or modify the <code>plugins</code> line to include <code>zsh-autosuggestions</code>.</p>
-<pre><code class="language-bash">plugins=(zsh-autosuggestions)
-</code></pre>
-</li>
-<li>
-<p><strong>Restart Zsh or Reload Configuration:</strong></p>
-<p>Either restart your terminal or run the following command to apply the changes:</p>
-<pre><code class="language-bash">source ~/.zshrc
-</code></pre>
-</li>
-</ol>
-<p>Now, as you type, you should see autosuggestions appearing based on your command history.</p>
-]]></content:encoded></item><item><title><![CDATA[為 GitHub Pages 網站設定自訂網域]]></title><description><![CDATA[這篇文章記錄如何為 Github Page 設定自訂網域，以 Godaddy 為例。]]></description><link>https://blog.cmwang.net/custom-domain-for-github-pages-zh/</link><guid isPermaLink="false">65bb84d84c147810992a19ae</guid><category><![CDATA[How-To]]></category><category><![CDATA[Notes]]></category><dc:creator><![CDATA[Jamie Wang]]></dc:creator><pubDate>Thu, 12 Oct 2023 16:00:00 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1654277041218-84424c78f0ae?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDE2fHxnaXRodWJ8ZW58MHx8fHwxNzA2Nzg4MDA4fDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<img src="https://images.unsplash.com/photo-1654277041218-84424c78f0ae?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDE2fHxnaXRodWJ8ZW58MHx8fHwxNzA2Nzg4MDA4fDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="&#x70BA; GitHub Pages &#x7DB2;&#x7AD9;&#x8A2D;&#x5B9A;&#x81EA;&#x8A02;&#x7DB2;&#x57DF;"><p>&#x5728; Github pages &#x4E0A;&#x8A2D;&#x5B9A; CNAME &#x4E0D;&#x7528;&#x984D;&#x5916;&#x4ED8;&#x8CBB;&#xFF0C;&#x53EA;&#x662F;&#x4F60;&#x9700;&#x8981;&#x5148;&#x64C1;&#x6709;&#x4E00;&#x500B;&#x79C1;&#x4EBA;&#x57DF;&#x540D;&#x3002;&#x9019;&#x908A;&#x5047;&#x5B9A;&#x6211;&#x5011;&#x5DF2;&#x7D93;&#x5728; <a href="https://www.godaddy.com/">Godaddy</a> &#x8CFC;&#x8CB7;&#x4E86;&#x57DF;&#x540D;&#xFF0C;&#x6240;&#x4EE5;&#x5148;&#x5230; <a href="https://sg.godaddy.com/help/manage-dns-records-680">Godaddy DNS &#x8A2D;&#x5B9A;&#x9801;&#x9762;</a>&#x8A2D;&#x5B9A;&#x3002;</p>
-<p>1. &#x5148;&#x900F;&#x904E; Terminal &#x67E5;&#x8A62; Github &#x7684; IP &#x5730;&#x5740;&#x3002;</p><pre><code class="language-bash">dig xxxx.github.io</code></pre><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://blog.cmwang.net/content/images/2024/02/4.png" class="kg-image" alt="&#x70BA; GitHub Pages &#x7DB2;&#x7AD9;&#x8A2D;&#x5B9A;&#x81EA;&#x8A02;&#x7DB2;&#x57DF;" loading="lazy" width="746" height="515" srcset="https://blog.cmwang.net/content/images/size/w600/2024/02/4.png 600w, https://blog.cmwang.net/content/images/2024/02/4.png 746w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">dig</span></figcaption></figure><p>2. &#x5230; Godaddy DNS &#x9801;&#x9762;&#x8A2D;&#x5B9A; 4 &#x500B; <strong>A Record</strong>&#xFF0C;1 &#x500B; <strong>CNAME Record</strong>&#xFF0C;&#x8ACB;&#x53C3;&#x8003;&#x5716;&#x7247;&#x3002;<br></p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://blog.cmwang.net/content/images/2024/02/3.png" class="kg-image" alt="&#x70BA; GitHub Pages &#x7DB2;&#x7AD9;&#x8A2D;&#x5B9A;&#x81EA;&#x8A02;&#x7DB2;&#x57DF;" loading="lazy" width="1368" height="681" srcset="https://blog.cmwang.net/content/images/size/w600/2024/02/3.png 600w, https://blog.cmwang.net/content/images/size/w1000/2024/02/3.png 1000w, https://blog.cmwang.net/content/images/2024/02/3.png 1368w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Godaddy Setting</span></figcaption></figure><p>3. &#x5728;&#x79C1;&#x4EBA;&#x5B58;&#x5132;&#x5EAB;&#x4E2D;&#x6DFB;&#x52A0; <strong>CNAME</strong> &#x6587;&#x4EF6;&#xFF0C;&#x5167;&#x5BB9;&#x70BA; <strong>xxx.{Domain Name}</strong>&#xFF0C;&#x4F8B;&#x5982; <strong>blog.xxx.com</strong>&#x3002;</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://blog.cmwang.net/content/images/2024/02/5.png" class="kg-image" alt="&#x70BA; GitHub Pages &#x7DB2;&#x7AD9;&#x8A2D;&#x5B9A;&#x81EA;&#x8A02;&#x7DB2;&#x57DF;" loading="lazy" width="847" height="568" srcset="https://blog.cmwang.net/content/images/size/w600/2024/02/5.png 600w, https://blog.cmwang.net/content/images/2024/02/5.png 847w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">CNAME File</span></figcaption></figure><p>4. &#x5728;&#x9801;&#x9762;&#x5167;&#x8A2D;&#x5B9A; CNAME &#x4E26;&#x6253;&#x52FE; <strong>Enforce HTTPS</strong>&#x3002;</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://blog.cmwang.net/content/images/2024/02/1.png" class="kg-image" alt="&#x70BA; GitHub Pages &#x7DB2;&#x7AD9;&#x8A2D;&#x5B9A;&#x81EA;&#x8A02;&#x7DB2;&#x57DF;" loading="lazy" width="939" height="712" srcset="https://blog.cmwang.net/content/images/size/w600/2024/02/1.png 600w, https://blog.cmwang.net/content/images/2024/02/1.png 939w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Github Pages</span></figcaption></figure><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://blog.cmwang.net/content/images/2024/02/2.png" class="kg-image" alt="&#x70BA; GitHub Pages &#x7DB2;&#x7AD9;&#x8A2D;&#x5B9A;&#x81EA;&#x8A02;&#x7DB2;&#x57DF;" loading="lazy" width="941" height="346" srcset="https://blog.cmwang.net/content/images/size/w600/2024/02/2.png 600w, https://blog.cmwang.net/content/images/2024/02/2.png 941w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Custom Domain Setting</span></figcaption></figure><p>&#x9700;&#x8981;&#x4E00;&#x9EDE;&#x6642;&#x9593;&#x624D;&#x6703;&#x751F;&#x6548;&#xFF0C;&#x5982;&#x679C;&#x4E00;&#x5207;&#x90FD;&#x6B63;&#x5E38;&#xFF0C;&#x7B2C;&#x56DB;&#x6B65;&#x9A5F;&#x7684; DNS Check &#x61C9;&#x8A72;&#x6703;&#x901A;&#x904E;&#x3002;</p><hr><h2 id="references">References</h2>
-<ul>
-<li><a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site">Managing a custom domain for your GitHub Pages site</a></li>
-</ul>
-]]></content:encoded></item><item><title><![CDATA[Configuring a custom domain for your GitHub Pages site]]></title><description><![CDATA[This article show you how to set up a custom domain for a GitHub Page, using Godaddy as an example.]]></description><link>https://blog.cmwang.net/configuring-a-custom-domain-for-your-github-pages-site/</link><guid isPermaLink="false">65bb821b4c147810992a196e</guid><category><![CDATA[How-To]]></category><category><![CDATA[Notes]]></category><dc:creator><![CDATA[Jamie Wang]]></dc:creator><pubDate>Thu, 12 Oct 2023 16:00:00 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1654277041218-84424c78f0ae?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDE2fHxnaXRodWJ8ZW58MHx8fHwxNzA2Nzg4MDA4fDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<img src="https://images.unsplash.com/photo-1654277041218-84424c78f0ae?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDE2fHxnaXRodWJ8ZW58MHx8fHwxNzA2Nzg4MDA4fDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="Configuring a custom domain for your GitHub Pages site"><p>Setting up a CNAME for your GitHub Pages does not require additional payment, but you need to have a private domain first. Here, we assume that we have already purchased a domain from <a href="https://www.godaddy.com/">Godaddy</a>, so let&apos;s go to the <a href="https://sg.godaddy.com/help/manage-dns-records-680">Godaddy DNS settings page</a> to configure it.</p>
-<p>1. First, query GitHub&apos;s IP address via Terminal:</p><pre><code class="language-bash">dig xxxx.github.io</code></pre><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://blog.cmwang.net/content/images/2024/02/4.png" class="kg-image" alt="Configuring a custom domain for your GitHub Pages site" loading="lazy" width="746" height="515" srcset="https://blog.cmwang.net/content/images/size/w600/2024/02/4.png 600w, https://blog.cmwang.net/content/images/2024/02/4.png 746w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">dig</span></figcaption></figure><p>2. Go to the Godaddy DNS page and set up 4 <strong>A Records</strong> and 1 <strong>CNAME Record</strong>, please refer to the image.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://blog.cmwang.net/content/images/2024/02/3.png" class="kg-image" alt="Configuring a custom domain for your GitHub Pages site" loading="lazy" width="1368" height="681" srcset="https://blog.cmwang.net/content/images/size/w600/2024/02/3.png 600w, https://blog.cmwang.net/content/images/size/w1000/2024/02/3.png 1000w, https://blog.cmwang.net/content/images/2024/02/3.png 1368w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Godaddy Setting</span></figcaption></figure><p>3. Add a <strong>CNAME</strong> file with <strong>xxx.{Domain Name}</strong> to the private repo, ex. <strong>blog.xxx.com</strong>.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://blog.cmwang.net/content/images/2024/02/5.png" class="kg-image" alt="Configuring a custom domain for your GitHub Pages site" loading="lazy" width="847" height="568" srcset="https://blog.cmwang.net/content/images/size/w600/2024/02/5.png 600w, https://blog.cmwang.net/content/images/2024/02/5.png 847w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">CNAME File</span></figcaption></figure><p>4. Set up CNAME on the page and check the <strong>Enforce HTTPS</strong> option.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://blog.cmwang.net/content/images/2024/02/1.png" class="kg-image" alt="Configuring a custom domain for your GitHub Pages site" loading="lazy" width="939" height="712" srcset="https://blog.cmwang.net/content/images/size/w600/2024/02/1.png 600w, https://blog.cmwang.net/content/images/2024/02/1.png 939w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Github Pages</span></figcaption></figure><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://blog.cmwang.net/content/images/2024/02/2.png" class="kg-image" alt="Configuring a custom domain for your GitHub Pages site" loading="lazy" width="941" height="346" srcset="https://blog.cmwang.net/content/images/size/w600/2024/02/2.png 600w, https://blog.cmwang.net/content/images/2024/02/2.png 941w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Custom Domain Setting</span></figcaption></figure><p>It might take some time to take effect. If everything is set up correctly, the DNS Check in step 4 should pass.</p><hr><h2 id="references">References</h2>
-<ul>
-<li><a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site">Managing a custom domain for your GitHub Pages site</a></li>
-</ul>
-]]></content:encoded></item><item><title><![CDATA[Hugo Deployment Guide]]></title><description><![CDATA[This guide will walk you through the process of creating a private website on GitHub and deploying it to GitHub Pages]]></description><link>https://blog.cmwang.net/hugo-deployment-guide/</link><guid isPermaLink="false">65bb653e839cd46d4ad71e95</guid><category><![CDATA[Blog]]></category><category><![CDATA[How-To]]></category><category><![CDATA[Notes]]></category><dc:creator><![CDATA[Jamie Wang]]></dc:creator><pubDate>Mon, 09 Oct 2023 16:00:00 GMT</pubDate><media:content url="https://blog.cmwang.net/content/images/2024/02/hugo-markdown-1.png" medium="image"/><content:encoded><![CDATA[<img src="https://blog.cmwang.net/content/images/2024/02/hugo-markdown-1.png" alt="Hugo Deployment Guide"><p>Welcome to the world of Hugo, where you can swiftly create your personal website! This guide will walk you through the process of creating a private website on GitHub and deploying it to GitHub Pages.</p>
-<h2 id="whats-included-in-this-guide">What&apos;s included in this guide</h2>
-<ul>
-<li><code>.gitignore</code>: Excludes files from version control.</li>
-<li><code>.github/workflows/hugo.yml</code>: Uses GitHub Actions to deploy your private Hugo repository to a public GitHub Pages repository.</li>
-</ul>
-<h2 id="steps">Steps</h2>
-<ol>
-<li>
-<p>Create a private repository <code>hugo-site</code> on <a href="https://github.com/">GitHub</a> to manage your website source code, ensuring to include the README.md file.</p>
-</li>
-<li>
-<p>Create a public repository <code>{YOUR_USER_NAME}.github.io</code> on <a href="https://github.com/">GitHub</a> to upload your static web pages to <a href="https://pages.github.com/">GitHub Pages</a>.</p>
-</li>
-<li>
-<p>Clone <code>hugo-site</code> to your local machine:</p>
-<pre><code class="language-sh">git clone https://github.com/{YOUR_USER_NAME}/hugo-site.git
-</code></pre>
-<p>Alternatively, if you are using Git Submodules:</p>
-<pre><code class="language-sh">git clone --recursive https://github.com/{YOUR_USER_NAME}/hugo-site.git
-</code></pre>
-</li>
-<li>
-<p>Create a Hugo project in the same directory as <code>hugo-site</code> (not inside <code>hugo-site</code>):</p>
-<pre><code class="language-sh">hugo new site hugo-site --force
-</code></pre>
-</li>
-<li>
-<p>Add an example theme. Here, we&apos;ll use PaperMod as an example:</p>
-</li>
-</ol>
-<pre><code class="language-sh">cd hugo-site
-
-git submodule add --depth=1 https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
-
-echo &quot;theme : &apos;PaperMod&apos;&quot; &gt;&gt; hugo.yaml
-</code></pre>
-<ol start="6">
-<li>
-<p>Copy the <a href="https://raw.githubusercontent.com/taka-wang/example-hugo-site/main/.gitignore">.gitignore</a> file into <code>hugo-site</code>.</p>
-</li>
-<li>
-<p>[Optional] Set up GitHub Action for automatic deployment:</p>
-<pre><code class="language-sh"> mkdir -p .github/workflows/
- touch .github/workflows/hugo.yml
-</code></pre>
-<p>Copy the contents of <a href="https://raw.githubusercontent.com/taka-wang/example-hugo-site/main/.github/workflows/hugo.yml">hugo.yml</a> into the newly created <code>hugo.yml</code> file. Remember to modify these two parts:</p>
-<ul>
-<li><strong>token: ${{ secrets.ACCESS_TOKEN }}</strong>: Use a personal access token for this private repository.</li>
-<li><strong>repository-name: YOUR_USER_NAME}}/YOUR_USER_NAME.github.io</strong>: Replace <code>YOUR_USER_NAME</code> with your GitHub username.</li>
-</ul>
-</li>
-<li>
-<p>Test your Hugo website:</p>
-<pre><code class="language-sh">hugo server -D
-</code></pre>
-</li>
-<li>
-<p>Start writing your own posts:</p>
-<pre><code class="language-sh">hugo new posts/20231006/index.md
-</code></pre>
-<p>Begin writing in <code>index.md</code> inside <code>content/posts/20231006</code>, and place images in the same folder.</p>
-</li>
-<li>
-<p>Congratulations, you&apos;ve configured your private repository! Don&apos;t forget to commit your changes to the private repository. Best of luck creating your beautiful website!</p>
-</li>
-</ol>
-<h2 id="references">References</h2>
-<ul>
-<li><a href="https://github.com/JamesIves/github-pages-deploy-action/issues/624#issuecomment-791982883">How to setup ACCESS Token</a></li>
-<li><a href="https://blog.euc-rt.me/post/github-actions-publish-private-hugo-repo-to-public-pages-site/">Using GitHub Actions to Publish Hugo Site From Private to Public Repo</a></li>
-<li><a href="https://gohugo.io/getting-started/quick-start/">Learn to create a Hugo site in minutes.</a></li>
-</ul>
-]]></content:encoded></item><item><title><![CDATA[如何安裝 Hugo 環境]]></title><description><![CDATA[如何安裝 Hugo 環境]]></description><link>https://blog.cmwang.net/how-to-install-hugo-zh/</link><guid isPermaLink="false">65bb7b72839cd46d4ad71ed1</guid><category><![CDATA[Blog]]></category><category><![CDATA[How-To]]></category><category><![CDATA[Notes]]></category><dc:creator><![CDATA[Jamie Wang]]></dc:creator><pubDate>Mon, 09 Oct 2023 16:00:00 GMT</pubDate><media:content url="https://blog.cmwang.net/content/images/2024/02/hugo-markdown.png" medium="image"/><content:encoded><![CDATA[<h2 id="macos">MacOS</h2>
-<img src="https://blog.cmwang.net/content/images/2024/02/hugo-markdown.png" alt="&#x5982;&#x4F55;&#x5B89;&#x88DD; Hugo &#x74B0;&#x5883;"><p>&#x900F;&#x904E; <code>Homebrew</code> Package Manager &#x5B89;&#x88DD;&#x662F;&#x6700;&#x65B9;&#x4FBF;&#x7684;</p>
-<pre><code class="language-sh"># install homebrew
-/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
-
-# install hugo
-brew install hugo
-
-# verify hugo installation
-hugo version
-&gt; hugo v0.119.0-b84644c008e0dc2c4b67bd69cccf87a41a03937e+extended darwin/amd64 BuildDate=2023-09-24T15:20:17Z VendorInfo=brew
-</code></pre>
-<h2 id="windows">Windows</h2>
-<p>&#x4EE5;&#x5DE5;&#x4F5C;&#x7BA1;&#x7406;&#x54E1;&#x958B;&#x555F; <strong>powershell</strong><br>
-<code>win + x</code> &#x6E38;&#x6A19;&#x4E0A;&#x4E0B;&#x9078;&#x64C7;&#x5230; windows powershell (&#x5DE5;&#x4F5C;&#x7BA1;&#x7406;&#x54E1;)&#xFF0C;&#x8A18;&#x5F97;&#x8981;&#x9078;&#x64C7;<code>&#x8D85;&#x7D1A;&#x7BA1;&#x7406;&#x54E1;</code>&#x7684;&#x6B0A;&#x9650;&#x3002;</p>
-<p>&#x78BA;&#x8A8D;&#x57F7;&#x884C;&#x6B0A;&#x9650;&#xFF1A;</p>
-<pre><code class="language-sh">Get-ExecutionPolicy
-</code></pre>
-<p>&#x5982;&#x679C;&#x986F;&#x793A; <strong>Ristricted</strong>&#xFF0C;&#x5247;&#x518D;&#x57F7;&#x884C;&#x4EE5;&#x4E0B;&#x6307;&#x4EE4;&#xFF1A;</p>
-<pre><code class="language-sh">Set-ExecutionPolicy AllSigned
-</code></pre>
-<p>&#x5B89;&#x88DD; chocolatey&#xFF1A;</p>
-<pre><code class="language-sh">Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString(&apos;https://chocolatey.org/install.ps1&apos;))
-</code></pre>
-<p>&#x78BA;&#x8A8D;&#x662F;&#x5426;&#x5B89;&#x88DD;&#x5B8C;&#x6210;&#xFF0C;&#x5728; <strong>powershell</strong> &#x8F38;&#x5165;&#xFF1A;</p>
-<pre><code class="language-sh">choco
-# &#x5982;&#x679C;&#x6709;&#x6B63;&#x5E38;&#x56DE;&#x8986;&#xFF0C;&#x5373;&#x5B89;&#x88DD;&#x5B8C;&#x6210;
-</code></pre>
-<p>&#x63A5;&#x8457;&#x5C31;&#x53EF;&#x4EE5;&#x900F;&#x904E; choco &#x5B89;&#x88DD; hugo &#x56C9;&#xFF01;&#x1F447;&#x1F447;&#x1F447;</p>
-<pre><code class="language-sh"># install hugo
-choco install hugo-extended
-
-# verify hugo installation
-hugo version
-&gt; hugo v0.119.0-b84644c008e0dc2c4b67bd69cccf87a41a03937e...
+<p>&#x4F7F;&#x7528; float &#x4E4B;&#x5F8C;&#xFF0C;&#x5468;&#x570D;&#x7684;&#x5143;&#x7D20;&#x53EF;&#x80FD;&#x6703;&#x56E0;&#x70BA;&#x6D6E;&#x52D5;&#x5143;&#x7D20;&#x7684;&#x5B58;&#x5728;&#x800C;&#x53D7;&#x5230;&#x5F71;&#x97FF;&#xFF0C;&#x4F8B;&#x5982; Footer&#xFF0C;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x4F7F;&#x7528; <code>clear</code> &#x5C6C;&#x6027;&#x4F86;&#x78BA;&#x4FDD;&#x67D0;&#x500B;&#x5143;&#x7D20;&#x4E0D;&#x6703;&#x5728;&#x6D6E;&#x52D5;&#x5143;&#x7D20;&#x65C1;&#x908A;&#x986F;&#x793A;&#x3002;</p>
+<pre><code class="language-CSS">clear: left|right|both; /* &#x7528; both &#x5C31;&#x4E0D;&#x7528;&#x7BA1; float &#x54EA;&#x908A; */
 </code></pre>
 <hr>
-<h2 id="references">References</h2>
+<h2 id="reference">Reference</h2>
 <ul>
-<li><a href="https://gohugo.io/installation/macos/">Install Hugo on macOS</a></li>
-<li><a href="https://gohugo.io/installation/windows/">Install Hugo on Windows</a></li>
-<li><a href="https://blog.darkthread.net/blog/choco-install-notes-for-new-windows/">&#x6211;&#x7684; Windows &#x65B0;&#x88DD;&#x6A5F; Chocolatey &#x5B89;&#x88DD;&#x6E05;&#x55AE;</a></li>
+<li><a href="https://css-tricks.com/all-about-floats/">All About Floats</a></li>
+<li><a href="https://javascript.plainenglish.io/working-with-the-float-property-in-css-f73cf7525261">Working With the Float Property in CSS</a></li>
 </ul>
-]]></content:encoded></item><item><title><![CDATA[Hugo 部署指南]]></title><description><![CDATA[這個指南將引導你完成在 GitHub 上建立私人網站並部署到 GitHub Pages 的過程]]></description><link>https://blog.cmwang.net/hugo-deployment-guide-zh/</link><guid isPermaLink="false">65bb79ea839cd46d4ad71eb5</guid><category><![CDATA[Blog]]></category><category><![CDATA[How-To]]></category><category><![CDATA[Notes]]></category><dc:creator><![CDATA[Jamie Wang]]></dc:creator><pubDate>Mon, 09 Oct 2023 16:00:00 GMT</pubDate><media:content url="https://blog.cmwang.net/content/images/2024/02/hugo-markdown-1.png" medium="image"/><content:encoded><![CDATA[<img src="https://blog.cmwang.net/content/images/2024/02/hugo-markdown-1.png" alt="Hugo &#x90E8;&#x7F72;&#x6307;&#x5357;"><p>&#x6B61;&#x8FCE;&#x4F7F;&#x7528; Hugo &#x5FEB;&#x901F;&#x5EFA;&#x7ACB;&#x500B;&#x4EBA;&#x7DB2;&#x7AD9;&#xFF01;&#x9019;&#x500B;&#x6307;&#x5357;&#x5C07;&#x5F15;&#x5C0E;&#x4F60;&#x5B8C;&#x6210;&#x5728; GitHub &#x4E0A;&#x5EFA;&#x7ACB;&#x79C1;&#x4EBA;&#x7DB2;&#x7AD9;&#x4E26;&#x90E8;&#x7F72;&#x5230; GitHub Pages &#x7684;&#x904E;&#x7A0B;&#x3002;</p>
-<h2 id="%E9%80%99%E5%80%8B%E6%8C%87%E5%8D%97%E5%8C%85%E6%8B%AC%E4%BB%80%E9%BA%BC%E9%87%8D%E9%BB%9E">&#x9019;&#x500B;&#x6307;&#x5357;&#x5305;&#x62EC;&#x4EC0;&#x9EBC;&#x91CD;&#x9EDE;</h2>
+]]></content:encoded></item><item><title><![CDATA[CSS Positioning]]></title><description><![CDATA[Some notes..]]></description><link>https://blog.cmwang.net/css-positioning-notes/</link><guid isPermaLink="false">65bb937c4c147810992a1ab0</guid><category><![CDATA[Frontend]]></category><category><![CDATA[CSS]]></category><category><![CDATA[Notes]]></category><dc:creator><![CDATA[Jamie Wang]]></dc:creator><pubDate>Wed, 08 Nov 2023 16:00:00 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDJ8fENTU3xlbnwwfHx8fDE3MDY3OTIwNTJ8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<h2 id="position">Position</h2>
+<img src="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDJ8fENTU3xlbnwwfHx8fDE3MDY3OTIwNTJ8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="CSS Positioning"><p><img src="https://blog.cmwang.net/content/images/2024/02/position.png" alt="CSS Positioning" loading="lazy"></p>
+<h3 id="%E2%9A%99%EF%B8%8F-static">&#x2699;&#xFE0F; <code>static</code></h3>
 <ul>
-<li><code>.gitignore</code>: &#x6392;&#x9664;&#x7248;&#x672C;&#x7BA1;&#x7406;&#x7684;&#x6A94;&#x6848;</li>
-<li><code>.github/workflows/hugo.yml</code>: &#x4F7F;&#x7528; GitHub Action &#x5C07;&#x79C1;&#x4EBA; Hugo &#x5B58;&#x653E;&#x5EAB;&#x90E8;&#x7F72;&#x5230;&#x516C;&#x958B;&#x7684; GitHub Pages &#x5B58;&#x653E;&#x5EAB;&#x3002;</li>
+<li>&#x5143;&#x7D20;&#x5728;&#x6587;&#x6A94;&#x6D41;&#x4E2D;&#x6B63;&#x5E38;&#x5B9A;&#x4F4D;&#xFF0C;&#x8207;&#x5176;&#x4ED6;&#x5143;&#x7D20;&#x4E00;&#x6A23; <strong>(&#x9810;&#x8A2D;)</strong>&#x3002;</li>
 </ul>
-<h2 id="%E6%AD%A5%E9%A9%9F">&#x6B65;&#x9A5F;</h2>
-<ol>
-<li>
-<p>&#x5728; <a href="https://github.com/">GitHub</a> &#x5EFA;&#x7ACB;&#x4E00;&#x500B;&#x79C1;&#x4EBA;&#x5132;&#x5B58;&#x5EAB; <code>hugo-site</code> &#x4F86;&#x7BA1;&#x7406;&#x4F60;&#x7684;&#x7DB2;&#x7AD9;&#x539F;&#x59CB;&#x78BC;&#xFF0C;&#x8ACB;&#x8A18;&#x5F97;&#x5305;&#x542B; README.md &#x6A94;&#x6848;&#x3002;</p>
-</li>
-<li>
-<p>&#x5728; <a href="https://github.com/">GitHub</a> &#x5EFA;&#x7ACB;&#x4E00;&#x500B;&#x516C;&#x958B;&#x5132;&#x5B58;&#x5EAB; <code>{YOUR_USER_NAME}.github.io</code> &#x4F86;&#x4E0A;&#x50B3;&#x4F60;&#x7684;&#x975C;&#x614B;&#x7DB2;&#x9801;&#x5230; <a href="https://pages.github.com/">GitHub Pages</a>&#x3002;</p>
-</li>
-<li>
-<p>&#x5C07; <code>hugo-site</code> &#x8907;&#x88FD;&#x5230;&#x672C;&#x5730;&#xFF1A;</p>
-<pre><code class="language-sh">git clone https://github.com/{YOUR_USER_NAME}/hugo-site.git
+<pre><code class="language-css">.box {
+  position: static;
+  left: 50px; /* ignore */
+  top: 50px; /* ignore */
+}
 </code></pre>
-<p>&#x6216;&#x8005;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x5DF2;&#x7D93;&#x4F7F;&#x7528;&#x4E86; Git Submodule&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4EE5;&#x4E0B;&#x65B9;&#x5F0F;&#x8907;&#x88FD;&#xFF1A;</p>
-<pre><code class="language-sh">git clone --recursive https://github.com/{YOUR_USER_NAME}/hugo-site.git
-</code></pre>
-</li>
-<li>
-<p>&#x5728; <code>hugo-site</code> &#x7684;&#x540C;&#x4E00;&#x5C64;&#x76EE;&#x9304;&#x5275;&#x5EFA; Hugo &#x5C08;&#x6848;&#xFF08;&#x4E0D;&#x8981;&#x653E;&#x5728; <code>hugo-site</code> &#x88E1;&#x9762;&#xFF09;&#xFF1A;</p>
-<pre><code class="language-sh">hugo new site hugo-site --force --format yaml
-</code></pre>
-</li>
-<li>
-<p>&#x65B0;&#x589E;&#x7BC4;&#x4F8B;&#x4E3B;&#x984C;&#xFF0C;&#x9019;&#x908A;&#x4EE5; PaperMod &#x70BA;&#x4F8B;&#xFF1A;</p>
-</li>
-</ol>
-<pre><code class="language-sh">cd hugo-site
-
-git submodule add --depth=1 https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
-
-echo &quot;theme : &apos;PaperMod&apos;&quot; &gt;&gt; hugo.yaml
-</code></pre>
-<ol start="6">
-<li>
-<p>&#x5C07; <a href="https://raw.githubusercontent.com/taka-wang/example-hugo-site/main/.gitignore">.gitignore</a> &#x6A94;&#x6848;&#x8907;&#x88FD;&#x5230; <code>hugo-site</code>&#x3002;</p>
-</li>
-<li>
-<p>[&#x53EF;&#x9078;] &#x65B0;&#x589E; GitHub Action &#x81EA;&#x52D5;&#x90E8;&#x7F72;&#xFF1A;</p>
-<pre><code class="language-sh"> mkdir -p .github/workflows/
- touch .github/workflows/hugo.yml
-</code></pre>
-<p>&#x5C07; <a href="https://raw.githubusercontent.com/taka-wang/example-hugo-site/main/.github/workflows/hugo.yml">hugo.yml</a> &#x7684;&#x5167;&#x5BB9;&#x8907;&#x88FD;&#x5230;&#x4E0A;&#x8FF0;&#x65B0;&#x589E;&#x7684;&#x7A7A;&#x767D; <code>hugo.yml</code>&#x3002;&#x8ACB;&#x8A18;&#x5F97;&#x4FEE;&#x6539;&#x4EE5;&#x4E0B;&#x5169;&#x8655;&#xFF1A;</p>
+<h3 id="%E2%9A%99%EF%B8%8F-relative">&#x2699;&#xFE0F; <code>relative</code></h3>
 <ul>
-<li><strong>token: ${{ secrets.ACCESS_TOKEN }}</strong>: &#x5728;&#x9019;&#x88E1;&#x4F7F;&#x7528;&#x79C1;&#x4EBA;&#x5132;&#x5B58;&#x5EAB;&#x7684;&#x5B58;&#x53D6;&#x6B0A;&#x6756;&#xFF08;Access Token&#xFF09;&#x3002;</li>
-<li><strong>repository-name: YOUR_USER_NAME/YOUR_USER_NAME.github.io</strong>: &#x5C07; <code>YOUR_USER_NAME</code> &#x6539;&#x70BA;&#x4F60;&#x7684; GitHub &#x5E33;&#x865F;&#x540D;&#x7A31;&#x3002;</li>
+<li>&#x76F8;&#x5C0D;&#x65BC;<strong>&#x539F;&#x59CB;</strong>&#x4F4D;&#x7F6E;&#x79FB;&#x52D5;&#x3002;</li>
+<li><strong>&#x8A72;&#x5143;&#x7D20;&#x5468;&#x570D;&#x7684;&#x5176;&#x4ED6;&#x5143;&#x7D20;&#x4ECD;&#x7136;&#x6703;&#x4FDD;&#x6301;&#x539F;&#x4F4D;&#x7E5E;&#x904E;&#x5B83;&#xFF0C;&#x5C07;&#x5176;&#x8996;&#x70BA;&#x6587;&#x4EF6;&#x6D41;&#x7684;&#x4E00;&#x90E8;&#x5206;&#xFF0C;&#x4E0D;&#x53D7;&#x5F71;&#x97FF;</strong>&#x3002;</li>
 </ul>
-</li>
-<li>
-<p>&#x6E2C;&#x8A66; Hugo &#x7DB2;&#x7AD9;&#xFF1A;</p>
-<pre><code class="language-sh">hugo server -D
+<pre><code class="language-css">.box {
+  position: relative;
+  left: 50px;
+  right: 50px;
+}
 </code></pre>
-</li>
-<li>
-<p>&#x958B;&#x59CB;&#x5275;&#x5EFA;&#x81EA;&#x5DF1;&#x7684;&#x6587;&#x7AE0;&#xFF1A;</p>
-<pre><code class="language-sh">hugo new posts/20231006/index.md
-</code></pre>
-<p>&#x5728; <code>content/posts/20231006</code> &#x88E1;&#x9762;&#x7684; <code>index.md</code> &#x958B;&#x59CB;&#x64B0;&#x5BEB;&#xFF0C;&#x4E26;&#x5C07;&#x5716;&#x7247;&#x653E;&#x5728;&#x540C;&#x4E00;&#x500B;&#x8CC7;&#x6599;&#x593E;&#x3002;</p>
-</li>
-<li>
-<p>&#x606D;&#x559C;&#x4F60;&#xFF0C;&#x5DF2;&#x7D93;&#x5B8C;&#x6210;&#x79C1;&#x4EBA;&#x5132;&#x5B58;&#x5EAB;&#x7684;&#x8A2D;&#x5B9A;&#xFF0C;&#x8ACB;&#x4E0D;&#x8981;&#x5FD8;&#x8A18;&#x5C07;&#x8B8A;&#x66F4;&#x63D0;&#x4EA4;&#x5230;&#x79C1;&#x4EBA;&#x5132;&#x5B58;&#x5EAB;&#x3002;</p>
-</li>
-</ol>
-<h2 id="%E5%8F%83%E8%80%83%E8%B3%87%E6%96%99">&#x53C3;&#x8003;&#x8CC7;&#x6599;</h2>
+<h3 id="%E2%9A%99%EF%B8%8F-absolute">&#x2699;&#xFE0F; <code>absolute</code></h3>
 <ul>
-<li><a href="https://github.com/JamesIves/github-pages-deploy-action/issues/624#issuecomment-791982883">&#x5982;&#x4F55;&#x8A2D;&#x5B9A; ACCESS Token</a></li>
-<li><a href="https://blog.euc-rt.me/post/github-actions-publish-private-hugo-repo-to-public-pages-site/">&#x4F7F;&#x7528; GitHub Actions &#x5C07; Hugo &#x7DB2;&#x7AD9;&#x5F9E;&#x79C1;&#x4EBA;&#x5132;&#x5B58;&#x5EAB;&#x767C;&#x4F48;&#x5230;&#x516C;&#x958B;&#x9801;&#x9762;</a></li>
-<li><a href="https://2ndbrain.cc/posts/2021/04/get-started-hugo/">Hugo &#x6559;&#x5B78; -- &#x57FA;&#x790E;&#x7BC7;</a></li>
-<li><a href="https://gohugo.io/getting-started/quick-start/">&#x5B78;&#x7FD2;&#x5728;&#x5E7E;&#x5206;&#x9418;&#x5167;&#x5275;&#x5EFA; Hugo &#x7DB2;&#x7AD9;&#x3002;</a></li>
+<li>&#x7D55;&#x5C0D;&#x5B9A;&#x4F4D;&#x662F;&#x4EE5;<strong>&#x6700;&#x8FD1;&#x7684;&#x7236;&#x5143;&#x7D20;</strong>&#x70BA;&#x57FA;&#x6E96;&#x9EDE;&#xFF0C;&#x9032;&#x884C;&#x5B9A;&#x4F4D;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x6C92;&#x6709;&#x7236;&#x5143;&#x7D20;&#xFF0C;&#x6216;&#x8005;&#x5B83;&#x7684;&#x7236;&#x5143;&#x7D20;&#x6C92;&#x6709;&#x8A2D;&#x5B9A; <code>static</code> &#x4EE5;&#x5916;&#x7684;&#x5C6C;&#x6027; (&#x901A;&#x5E38;&#x7528; <code>relative</code>)&#xFF0C;<strong>&#x5B83;&#x5C31;&#x6703;&#x4EE5;<code>document</code>&#x70BA;&#x57FA;&#x6E96;&#x9EDE;&#x9032;&#x884C;&#x5B9A;&#x4F4D;</strong> &#x1F525;</li>
+<li>&#x9801;&#x9762;&#x6372;&#x52D5;&#x6703;&#x8DDF;&#x8457;&#x52D5;&#x3002;</li>
+<li><strong>&#x5143;&#x7D20;&#x6703;&#x88AB;&#x79FB;&#x51FA;&#x6B63;&#x5E38;&#x6587;&#x4EF6;&#x6D41;&#xFF0C;&#x4E26;&#x4E0D;&#x70BA;&#x5143;&#x7D20;&#x9810;&#x7559;&#x7A7A;&#x9593;&#x3002;</strong></li>
 </ul>
-]]></content:encoded></item><item><title><![CDATA[How to Install Hugo]]></title><description><![CDATA[I will introduce how to install hugo on your system in this post.]]></description><link>https://blog.cmwang.net/how-to-install-hugo/</link><guid isPermaLink="false">65bb63f5839cd46d4ad71e83</guid><category><![CDATA[Blog]]></category><category><![CDATA[How-To]]></category><category><![CDATA[Notes]]></category><dc:creator><![CDATA[Jamie Wang]]></dc:creator><pubDate>Mon, 09 Oct 2023 16:00:00 GMT</pubDate><media:content url="https://blog.cmwang.net/content/images/2024/02/hugo-markdown.png" medium="image"/><content:encoded><![CDATA[<h2 id="macos">MacOS</h2>
-<img src="https://blog.cmwang.net/content/images/2024/02/hugo-markdown.png" alt="How to Install Hugo"><p>Installing via <code>Homebrew</code> Package Manager is the most convenient method.</p>
-<p>{{&lt; terminal title=&quot;Install Packages with Homebrew on macOS&quot; &gt;}}</p>
-<pre><code class="language-sh"># install homebrew
-/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
+<pre><code class="language-css">.container {
+  position: relative; /* &#x4E0D;&#x80FD;&#x70BA; static&#xFF0C;&#x4E0D;&#x7136;&#x6703;&#x5B9A;&#x4F4D;&#x5230;&#x6587;&#x6A94;&#x5DE6;&#x4E0A;&#x89D2; */
+}
 
-# install hugo
-brew install hugo
-
-# verify hugo installation
-hugo version
-&gt; hugo v0.119.0-b84644c008e0dc2c4b67bd69cccf87a41a03937e+extended darwin/amd64 BuildDate=2023-09-24T15:20:17Z VendorInfo=brew
+.box {
+  position: absolute;
+  left: 50px;
+  right: 50px;
+}
 </code></pre>
-<p>{{&lt; /terminal &gt;}}</p>
-<h2 id="windows">Windows</h2>
-<p>Open <strong>powershell</strong> with Task Manager: Press <code>win + x</code>, navigate to Windows PowerShell (Admin), make sure to select <strong>Run as administrator</strong>.</p>
-<p>Check the execution policy:</p>
-<pre><code class="language-sh">Get-ExecutionPolicy
-</code></pre>
-<p>If it shows <strong>Restricted</strong>, run the following command:</p>
-<pre><code class="language-sh">Set-ExecutionPolicy AllSigned
-</code></pre>
-<p>Install Chocolatey:</p>
-<pre><code class="language-sh">Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString(&apos;https://chocolatey.org/install.ps1&apos;))
-</code></pre>
-<p>Verify the installation by typing in <strong>powershell</strong>:</p>
-<pre><code class="language-sh">choco
-# If you receive a response, the installation is successful
-</code></pre>
-<p>Now, you can install Hugo using Chocolatey! &#x1F447;&#x1F447;&#x1F447;</p>
-<p>{{&lt; terminal title=&quot;Install Packages with Chocolatey on Windows&quot; &gt;}}</p>
-<pre><code class="language-sh"># install hugo
-choco install hugo-extended
-
-# verify hugo installation
-hugo version
-&gt; hugo v0.119.0-b84644c008e0dc2c4b67bd69cccf87a41a03937e...
-</code></pre>
-<p>{{&lt; /terminal &gt;}}</p>
-<hr>
-<h2 id="references">References</h2>
+<h3 id="%E2%9A%99%EF%B8%8F-fixed">&#x2699;&#xFE0F; <code>fixed</code></h3>
 <ul>
-<li><a href="https://gohugo.io/installation/macos/">Install Hugo on macOS</a></li>
-<li><a href="https://gohugo.io/installation/windows/">Install Hugo on Windows</a></li>
-<li><a href="https://blog.darkthread.net/blog/choco-install-notes-for-new-windows/">&#x6211;&#x7684; Windows &#x65B0;&#x88DD;&#x6A5F; Chocolatey &#x5B89;&#x88DD;&#x6E05;&#x55AE;</a></li>
+<li>&#x76F8;&#x5C0D;&#x65BC;&#x700F;&#x89BD;&#x5668;&#x7A97;&#x53E3; <code>(viewport)</code> &#x9032;&#x884C;&#x5B9A;&#x4F4D;&#x3002;</li>
+<li><strong>&#x5373;&#x4F7F;&#x6372;&#x52D5;&#xFF0C;&#x9084;&#x662F;&#x8CBC;&#x5728;&#x700F;&#x89BD;&#x5668;&#x4E0A;&#x65B9;&#x5B9A;&#x4F4D;&#x3002;</strong></li>
+<li>&#x9019;&#x7A2E;&#x5B9A;&#x4F4D;&#x65B9;&#x5F0F;&#x5E38;&#x7528;&#x65BC;&#x5275;&#x5EFA;&#x56FA;&#x5B9A;&#x5728;&#x9801;&#x9762;&#x4E0A;&#x65B9;&#x6216;&#x5074;&#x908A;&#x7684;&#x5C0E;&#x822A;&#x6B04;&#x3001;&#x5DE5;&#x5177;&#x6B04;&#x7B49;&#x5143;&#x7D20;&#xFF0C;&#x4F7F;&#x5176;&#x5728;&#x7528;&#x6236;&#x6EFE;&#x52D5;&#x9801;&#x9762;&#x6642;&#x4FDD;&#x6301;&#x53EF;&#x898B;&#x3002;</li>
+<li><strong>&#x5143;&#x7D20;&#x6703;&#x88AB;&#x79FB;&#x51FA;&#x6B63;&#x5E38;&#x6587;&#x4EF6;&#x6D41;&#xFF0C;&#x4E26;&#x4E0D;&#x70BA;&#x5143;&#x7D20;&#x9810;&#x7559;&#x7A7A;&#x9593;&#x3002;</strong></li>
 </ul>
+<pre><code class="language-css">.box {
+  position: fixed;
+  left: 50px;
+  right: 50px;
+}
+</code></pre>
+<hr><blockquote>
+<p>&#x7C21;&#x800C;&#x8A00;&#x4E4B;</p>
+</blockquote>
+<p><img src="https://blog.cmwang.net/content/images/2024/02/position2.png" alt="CSS Positioning" loading="lazy"><br>
+<em>Image source: <a href="https://codingbff.medium.com/difference-between-css-position-absolute-versus-relative-35f064384c6">Difference between css position absolute versus relative</a></em></p>
 ]]></content:encoded></item></channel></rss>
