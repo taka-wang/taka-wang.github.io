@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>📔 Hugo Deployment Guide</title>
-    <link rel="stylesheet" href="/assets/built/screen.css?v=4db0bb9414">
+    <link rel="stylesheet" href="/assets/built/screen.css?v=3c795429d5">
 
     <meta name="description" content="This guide will walk you through the process of creating a private website on GitHub and deploying it to GitHub Pages.">
     <link rel="icon" href="https://blog.cmwang.net/content/images/size/w256h256/2024/01/2-removebg-preview.png" type="image/png">
@@ -89,8 +89,8 @@
     <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="415aa5f59e59c087cacf652d7b" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css" data-sodo-search="https://blog.cmwang.net/" crossorigin="anonymous"></script>
     
     <link href="https://blog.cmwang.net/webmentions/receive/" rel="webmention">
-    <script defer src="/public/cards.min.js?v=4db0bb9414"></script>
-    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=4db0bb9414">
+    <script defer src="/public/cards.min.js?v=3c795429d5"></script>
+    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=3c795429d5">
     <!-- hide search box -->
 <style>
 .gh-search {
@@ -116,7 +116,7 @@
 <style>:root {--ghost-accent-color: #D63484;}</style>
 </head>
 
-<body class="post-template tag-blog tag-how-to tag-notes is-head-left-logo">
+<body class="post-template tag-blog tag-how-to tag-notes tag-en is-head-left-logo">
 <div class="gh-site">
 
     <header id="gh-head" class="gh-head gh-outer">
@@ -150,7 +150,7 @@
 <main class="site-main">
 
 
-    <article class="gh-article post tag-blog tag-how-to tag-notes">
+    <article class="gh-article post tag-blog tag-how-to tag-notes tag-en">
 
         <header class="gh-article-header gh-canvas">
             <span class="gh-article-meta">
@@ -190,10 +190,10 @@
 <h2 id="steps">Steps</h2>
 <ol>
 <li>
-<p>Create a private repository <code>hugo-site</code> on <a href="https://github.com/">GitHub</a> to manage your website source code, ensuring to include the README.md file.</p>
+<p>Create a private repository <code>hugo-site</code> on <a href="https://github.com/?ref=localhost">GitHub</a> to manage your website source code, ensuring to include the README.md file.</p>
 </li>
 <li>
-<p>Create a public repository <code>{YOUR_USER_NAME}.github.io</code> on <a href="https://github.com/">GitHub</a> to upload your static web pages to <a href="https://pages.github.com/">GitHub Pages</a>.</p>
+<p>Create a public repository <code>{YOUR_USER_NAME}.github.io</code> on <a href="https://github.com/?ref=localhost">GitHub</a> to upload your static web pages to <a href="https://pages.github.com/?ref=localhost">GitHub Pages</a>.</p>
 </li>
 <li>
 <p>Clone <code>hugo-site</code> to your local machine:</p>
@@ -220,14 +220,14 @@ echo "theme : 'PaperMod'" &gt;&gt; hugo.yaml
 </code></pre>
 <ol start="6">
 <li>
-<p>Copy the <a href="https://raw.githubusercontent.com/taka-wang/example-hugo-site/main/.gitignore">.gitignore</a> file into <code>hugo-site</code>.</p>
+<p>Copy the <a href="https://raw.githubusercontent.com/taka-wang/example-hugo-site/main/.gitignore?ref=localhost">.gitignore</a> file into <code>hugo-site</code>.</p>
 </li>
 <li>
 <p>[Optional] Set up GitHub Action for automatic deployment:</p>
 <pre><code class="language-sh"> mkdir -p .github/workflows/
  touch .github/workflows/hugo.yml
 </code></pre>
-<p>Copy the contents of <a href="https://raw.githubusercontent.com/taka-wang/example-hugo-site/main/.github/workflows/hugo.yml">hugo.yml</a> into the newly created <code>hugo.yml</code> file. Remember to modify these two parts:</p>
+<p>Copy the contents of <a href="https://raw.githubusercontent.com/taka-wang/example-hugo-site/main/.github/workflows/hugo.yml?ref=localhost">hugo.yml</a> into the newly created <code>hugo.yml</code> file. Remember to modify these two parts:</p>
 <ul>
 <li><strong>token: ${{ secrets.ACCESS_TOKEN }}</strong>: Use a personal access token for this private repository.</li>
 <li><strong>repository-name: YOUR_USER_NAME}}/YOUR_USER_NAME.github.io</strong>: Replace <code>YOUR_USER_NAME</code> with your GitHub username.</li>
@@ -250,27 +250,16 @@ echo "theme : 'PaperMod'" &gt;&gt; hugo.yaml
 </ol>
 <h2 id="references">References</h2>
 <ul>
-<li><a href="https://github.com/JamesIves/github-pages-deploy-action/issues/624#issuecomment-791982883">How to setup ACCESS Token</a></li>
-<li><a href="https://blog.euc-rt.me/post/github-actions-publish-private-hugo-repo-to-public-pages-site/">Using GitHub Actions to Publish Hugo Site From Private to Public Repo</a></li>
-<li><a href="https://gohugo.io/getting-started/quick-start/">Learn to create a Hugo site in minutes.</a></li>
+<li><a href="https://github.com/JamesIves/github-pages-deploy-action/issues/624?ref=localhost#issuecomment-791982883">How to setup ACCESS Token</a></li>
+<li><a href="https://blog.euc-rt.me/post/github-actions-publish-private-hugo-repo-to-public-pages-site/?ref=localhost">Using GitHub Actions to Publish Hugo Site From Private to Public Repo</a></li>
+<li><a href="https://gohugo.io/getting-started/quick-start/?ref=localhost">Learn to create a Hugo site in minutes.</a></li>
 </ul>
 
         </div>
 
     </article>
 
-    <div class="gh-canvas">
-    <div class="navigation">
-            <a class="navigation-item navigation-previous" href="/how-to-install-hugo-zh/">
-                <span class="navigation-label">Previous</span>
-                <h4 class="navigation-title">📔 如何安裝 Hugo 環境</h4>
-            </a>
-            <a class="navigation-item navigation-next" href="/configuring-a-custom-domain-for-your-github-pages-site/">
-                <span class="navigation-label">Next</span>
-                <h4 class="navigation-title">📔 Configuring a custom domain for your GitHub Pages site</h4>
-            </a>
-    </div>
-</div>
+
 
 
         <div class="related-wrapper gh-outer">
@@ -279,20 +268,20 @@ echo "theme : 'PaperMod'" &gt;&gt; hugo.yaml
                 <span class="text">You might also like...</span>
             </h3>
             <div class="post-feed">
-                    <article class="post tag-visual-learning tag-frontend tag-css tag-notes u-shadow">
-<a class="post-link" href="/the-only-css-layout-guide-youll-ever-need/">
+                    <article class="post tag-blog tag-how-to tag-notes tag-en u-shadow">
+<a class="post-link" href="/how-to-install-hugo/">
         <figure class="post-media">
             <div class="u-placeholder same-height rectangle">
                 <img
                     class="post-image u-object-fit"
-                    srcset="https://images.unsplash.com/photo-1567443024551-f3e3cc2be870?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fHlvdXR1YmV8ZW58MHx8fHwxNzA2OTg1NDY2fDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;400 400w,
-                            https://images.unsplash.com/photo-1567443024551-f3e3cc2be870?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fHlvdXR1YmV8ZW58MHx8fHwxNzA2OTg1NDY2fDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;720 750w,
-                            https://images.unsplash.com/photo-1567443024551-f3e3cc2be870?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fHlvdXR1YmV8ZW58MHx8fHwxNzA2OTg1NDY2fDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;960 960w,
-                            https://images.unsplash.com/photo-1567443024551-f3e3cc2be870?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fHlvdXR1YmV8ZW58MHx8fHwxNzA2OTg1NDY2fDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1200 1140w,
-                            https://images.unsplash.com/photo-1567443024551-f3e3cc2be870?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fHlvdXR1YmV8ZW58MHx8fHwxNzA2OTg1NDY2fDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000 1920w"
+                    srcset="/content/images/size/w400/2024/02/hugo-markdown.png 400w,
+                            /content/images/size/w720/2024/02/hugo-markdown.png 750w,
+                            /content/images/size/w960/2024/02/hugo-markdown.png 960w,
+                            /content/images/size/w1200/2024/02/hugo-markdown.png 1140w,
+                            /content/images/size/w2000/2024/02/hugo-markdown.png 1920w"
                     sizes="600px"
-                    src="https://images.unsplash.com/photo-1567443024551-f3e3cc2be870?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fHlvdXR1YmV8ZW58MHx8fHwxNzA2OTg1NDY2fDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;960"
-                    alt="🖥️ The Only CSS Layout Guide You&#x27;ll Ever Need"
+                    src="/content/images/size/w960/2024/02/hugo-markdown.png"
+                    alt="📔 How to Install Hugo"
                     loading="lazy"
                 >
             </div>
@@ -300,21 +289,21 @@ echo "theme : 'PaperMod'" &gt;&gt; hugo.yaml
 
     <div class="post-wrapper">
         <header class="post-header">
-                <span class="post-tag">Visual Learning</span>
+                <span class="post-tag">Blog</span>
 
             <h2 class="post-title">
-                🖥️ The Only CSS Layout Guide You&#x27;ll Ever Need
+                📔 How to Install Hugo
             </h2>
         </header>
 
             <div class="post-excerpt">
-                本文是該教學影片的摘要與筆記
+                In this post, I&#39;ll guide you through the process of installing Hugo on your system.
             </div>
     </div>
 
     <footer class="post-footer">
         <span class="post-more">Read More</span>
-        <span class="post-time"><time class="post-card-meta-date" datetime="2024-02-04">Feb 4, 2024</time></span>
+        <span class="post-time"><time class="post-card-meta-date" datetime="2023-10-10">Oct 10, 2023</time></span>
 
         <div class="post-author">
                     <span class="post-author-link">
@@ -323,20 +312,20 @@ echo "theme : 'PaperMod'" &gt;&gt; hugo.yaml
         </div>
     </footer>
 </a>
-</article>                    <article class="post tag-frontend tag-vue tag-notes tag-cheat-sheet u-shadow">
-<a class="post-link" href="/pinia-state-management/">
+</article>                    <article class="post tag-blog tag-how-to tag-notes tag-hide-soft tag-zh-tw u-shadow">
+<a class="post-link" href="/hugo-deployment-guide-zh/">
         <figure class="post-media">
             <div class="u-placeholder same-height rectangle">
                 <img
                     class="post-image u-object-fit"
-                    srcset="/content/images/size/w400/2024/02/pinia.png 400w,
-                            /content/images/size/w720/2024/02/pinia.png 750w,
-                            /content/images/size/w960/2024/02/pinia.png 960w,
-                            /content/images/size/w1200/2024/02/pinia.png 1140w,
-                            /content/images/size/w2000/2024/02/pinia.png 1920w"
+                    srcset="/content/images/size/w400/2024/02/hugo-markdown-1.png 400w,
+                            /content/images/size/w720/2024/02/hugo-markdown-1.png 750w,
+                            /content/images/size/w960/2024/02/hugo-markdown-1.png 960w,
+                            /content/images/size/w1200/2024/02/hugo-markdown-1.png 1140w,
+                            /content/images/size/w2000/2024/02/hugo-markdown-1.png 1920w"
                     sizes="600px"
-                    src="/content/images/size/w960/2024/02/pinia.png"
-                    alt="📚 Pinia State Management"
+                    src="/content/images/size/w960/2024/02/hugo-markdown-1.png"
+                    alt="📔 Hugo 部署指南"
                     loading="lazy"
                 >
             </div>
@@ -344,21 +333,21 @@ echo "theme : 'PaperMod'" &gt;&gt; hugo.yaml
 
     <div class="post-wrapper">
         <header class="post-header">
-                <span class="post-tag">Frontend</span>
+                <span class="post-tag">Blog</span>
 
             <h2 class="post-title">
-                📚 Pinia State Management
+                📔 Hugo 部署指南
             </h2>
         </header>
 
             <div class="post-excerpt">
-                本文是 Pinia 狀態管理套件的速成筆記
+                這個指南將引導你完成在 GitHub 上建立私人網站並部署到 GitHub Pages 的過程
             </div>
     </div>
 
     <footer class="post-footer">
         <span class="post-more">Read More</span>
-        <span class="post-time"><time class="post-card-meta-date" datetime="2024-02-01">Feb 1, 2024</time></span>
+        <span class="post-time"><time class="post-card-meta-date" datetime="2023-10-10">Oct 10, 2023</time></span>
 
         <div class="post-author">
                     <span class="post-author-link">
@@ -367,20 +356,20 @@ echo "theme : 'PaperMod'" &gt;&gt; hugo.yaml
         </div>
     </footer>
 </a>
-</article>                    <article class="post tag-backend tag-php tag-cheat-sheet tag-notes u-shadow">
-<a class="post-link" href="/pdo-crash-course/">
+</article>                    <article class="post tag-blog tag-how-to tag-notes tag-hide-soft tag-zh-tw u-shadow">
+<a class="post-link" href="/how-to-install-hugo-zh/">
         <figure class="post-media">
             <div class="u-placeholder same-height rectangle">
                 <img
                     class="post-image u-object-fit"
-                    srcset="https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;400 400w,
-                            https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;720 750w,
-                            https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;960 960w,
-                            https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1200 1140w,
-                            https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000 1920w"
+                    srcset="/content/images/size/w400/2024/02/hugo-markdown.png 400w,
+                            /content/images/size/w720/2024/02/hugo-markdown.png 750w,
+                            /content/images/size/w960/2024/02/hugo-markdown.png 960w,
+                            /content/images/size/w1200/2024/02/hugo-markdown.png 1140w,
+                            /content/images/size/w2000/2024/02/hugo-markdown.png 1920w"
                     sizes="600px"
-                    src="https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;960"
-                    alt="🐘 PDO Crash Course"
+                    src="/content/images/size/w960/2024/02/hugo-markdown.png"
+                    alt="📔 如何安裝 Hugo 環境"
                     loading="lazy"
                 >
             </div>
@@ -388,65 +377,21 @@ echo "theme : 'PaperMod'" &gt;&gt; hugo.yaml
 
     <div class="post-wrapper">
         <header class="post-header">
-                <span class="post-tag">Backend</span>
+                <span class="post-tag">Blog</span>
 
             <h2 class="post-title">
-                🐘 PDO Crash Course
+                📔 如何安裝 Hugo 環境
             </h2>
         </header>
 
             <div class="post-excerpt">
-                本文是關於 PHP PDO 的速成筆記
+                如何安裝 Hugo 環境
             </div>
     </div>
 
     <footer class="post-footer">
         <span class="post-more">Read More</span>
-        <span class="post-time"><time class="post-card-meta-date" datetime="2023-12-17">Dec 17, 2023</time></span>
-
-        <div class="post-author">
-                    <span class="post-author-link">
-                        <img class="post-author-image" src="/content/images/size/w150/2024/01/jamie2.jpg" alt="Jamie Wang" loading="lazy">
-                    </span>
-        </div>
-    </footer>
-</a>
-</article>                    <article class="post tag-visual-learning tag-frontend tag-css tag-notes u-shadow">
-<a class="post-link" href="/learn-css-grid-the-easy-way/">
-        <figure class="post-media">
-            <div class="u-placeholder same-height rectangle">
-                <img
-                    class="post-image u-object-fit"
-                    srcset="https://images.unsplash.com/photo-1567443024551-f3e3cc2be870?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fHlvdXR1YmV8ZW58MHx8fHwxNzA2NzgzMDQyfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;400 400w,
-                            https://images.unsplash.com/photo-1567443024551-f3e3cc2be870?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fHlvdXR1YmV8ZW58MHx8fHwxNzA2NzgzMDQyfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;720 750w,
-                            https://images.unsplash.com/photo-1567443024551-f3e3cc2be870?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fHlvdXR1YmV8ZW58MHx8fHwxNzA2NzgzMDQyfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;960 960w,
-                            https://images.unsplash.com/photo-1567443024551-f3e3cc2be870?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fHlvdXR1YmV8ZW58MHx8fHwxNzA2NzgzMDQyfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1200 1140w,
-                            https://images.unsplash.com/photo-1567443024551-f3e3cc2be870?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fHlvdXR1YmV8ZW58MHx8fHwxNzA2NzgzMDQyfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000 1920w"
-                    sizes="600px"
-                    src="https://images.unsplash.com/photo-1567443024551-f3e3cc2be870?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fHlvdXR1YmV8ZW58MHx8fHwxNzA2NzgzMDQyfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;960"
-                    alt="🖥️ Learn CSS Grid the easy way"
-                    loading="lazy"
-                >
-            </div>
-        </figure>
-
-    <div class="post-wrapper">
-        <header class="post-header">
-                <span class="post-tag">Visual Learning</span>
-
-            <h2 class="post-title">
-                🖥️ Learn CSS Grid the easy way
-            </h2>
-        </header>
-
-            <div class="post-excerpt">
-                本文是該教學影片的摘要與筆記
-            </div>
-    </div>
-
-    <footer class="post-footer">
-        <span class="post-more">Read More</span>
-        <span class="post-time"><time class="post-card-meta-date" datetime="2023-11-30">Nov 30, 2023</time></span>
+        <span class="post-time"><time class="post-card-meta-date" datetime="2023-10-10">Oct 10, 2023</time></span>
 
         <div class="post-author">
                     <span class="post-author-link">
@@ -515,7 +460,7 @@ echo "theme : 'PaperMod'" &gt;&gt; hugo.yaml
         </div>
     </div>
 </div>
-<script src="/assets/built/main.min.js?v=4db0bb9414"></script>
+<script src="/assets/built/main.min.js?v=3c795429d5"></script>
 
 <!-- hide footer -->
 <style>

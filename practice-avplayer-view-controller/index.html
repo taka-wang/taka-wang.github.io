@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>💻 iPad上的影片播放器</title>
-    <link rel="stylesheet" href="/assets/built/screen.css?v=4db0bb9414">
+    <link rel="stylesheet" href="/assets/built/screen.css?v=3c795429d5">
 
     <meta name="description" content="本文記錄使用 AVPlayerViewController 製作動態字幕影片的練習筆記">
     <link rel="icon" href="https://blog.cmwang.net/content/images/size/w256h256/2024/01/2-removebg-preview.png" type="image/png">
@@ -21,7 +21,6 @@
     <meta property="article:published_time" content="2022-03-16T10:32:00.000Z">
     <meta property="article:modified_time" content="2024-02-03T20:23:57.000Z">
     <meta property="article:tag" content="Swift">
-    <meta property="article:tag" content="Storyboard">
     <meta property="article:tag" content="iOS">
     
     <meta property="article:publisher" content="https://www.facebook.com/ghost">
@@ -33,7 +32,7 @@
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Jamie Wang">
     <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="Swift, Storyboard, iOS">
+    <meta name="twitter:data2" content="Swift, iOS">
     <meta name="twitter:site" content="@ghost">
     <meta property="og:image:width" content="1023">
     <meta property="og:image:height" content="554">
@@ -77,7 +76,7 @@
         "width": 1200,
         "height": 800
     },
-    "keywords": "Swift, Storyboard, iOS",
+    "keywords": "Swift, iOS",
     "description": "本文記錄使用 AVPlayerViewController 製作動態字幕影片的練習筆記",
     "mainEntityOfPage": "https://blog.cmwang.net/practice-avplayer-view-controller/"
 }
@@ -89,8 +88,8 @@
     <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="415aa5f59e59c087cacf652d7b" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css" data-sodo-search="https://blog.cmwang.net/" crossorigin="anonymous"></script>
     
     <link href="https://blog.cmwang.net/webmentions/receive/" rel="webmention">
-    <script defer src="/public/cards.min.js?v=4db0bb9414"></script>
-    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=4db0bb9414">
+    <script defer src="/public/cards.min.js?v=3c795429d5"></script>
+    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=3c795429d5">
     <!-- hide search box -->
 <style>
 .gh-search {
@@ -116,7 +115,7 @@
 <style>:root {--ghost-accent-color: #D63484;}</style>
 </head>
 
-<body class="post-template tag-swift tag-storyboard tag-ios is-head-left-logo">
+<body class="post-template tag-swift tag-ios tag-zh-tw is-head-left-logo">
 <div class="gh-site">
 
     <header id="gh-head" class="gh-head gh-outer">
@@ -150,13 +149,13 @@
 <main class="site-main">
 
 
-    <article class="gh-article post tag-swift tag-storyboard tag-ios">
+    <article class="gh-article post tag-swift tag-ios tag-zh-tw">
 
         <header class="gh-article-header gh-canvas">
             <span class="gh-article-meta">
                 By <a href="/author/jamie/">Jamie Wang</a>
                     in
-                    <a href="/tag/swift/" class="gh-article-tag">Swift</a>, <a href="/tag/storyboard/" class="gh-article-tag">Storyboard</a>, <a href="/tag/ios/" class="gh-article-tag">iOS</a>
+                    <a href="/tag/swift/" class="gh-article-tag">Swift</a>, <a href="/tag/ios/" class="gh-article-tag">iOS</a>
                 —
                 <time datetime="2022-03-16">Mar 16, 2022</time>
                 
@@ -184,29 +183,18 @@
         <div class="gh-content gh-canvas">
             <p><strong>學習目標：</strong></p><ul><li>AVPlayer</li><li>NotificationCenter</li><li>Timer</li><li>Swift Optional</li><li>Function</li><li>Switch Case</li></ul><p><strong>練習成果：</strong></p><figure class="kg-card kg-embed-card"><iframe src="https://www.youtube.com/embed/qnXX_HtG1sw?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe></figure><p><strong>原始碼：</strong></p>
 <!--kg-card-begin: html-->
-<figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://github.com/takawang/letter-song"><div class="kg-bookmark-content"><div class="kg-bookmark-title">GitHub - takawang/letter-song</div><div class="kg-bookmark-description">Practice storyboard</div><div class="kg-bookmark-metadata"></div></div><div class="kg-bookmark-thumbnail"><img src="https://blog.cmwang.net/content/images/fit/c/160/160/0-necfjz4zslgvih8h.png" alt=""></div></a></figure>
+<figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://github.com/takawang/letter-song?ref=localhost"><div class="kg-bookmark-content"><div class="kg-bookmark-title">GitHub - takawang/letter-song</div><div class="kg-bookmark-description">Practice storyboard</div><div class="kg-bookmark-metadata"></div></div><div class="kg-bookmark-thumbnail"><img src="https://blog.cmwang.net/content/images/fit/c/160/160/0-necfjz4zslgvih8h.png" alt></div></a></figure>
 <!--kg-card-end: html-->
-<p><strong>歌詞：</strong>今晚 我想將那天的螢火<br>送到你的窗前<br>含意是"我愛你"<br>我想起我們的初吻<br>不管何時 只要閉上雙眼<br>就能奔向那最遙遠的地方<br>就像我在被浪濤湧來的沙上寫下的字跡般<br>你感覺也會像他們那樣從此消失<br>總是想念<br>雖然無法將我心裡所有的話語，說給你聽<br>但那裡頭，全都是"我愛你"<br>我何德何能<br>能擁有名為你的這份幸運<br>若我們現在能望著對方<br>該有多美好<br>就像我在被浪濤湧來的沙上寫下的字跡般<br>你感覺也會像他們那樣從此消失<br>還是想念<br>雖然無法將我寫在日記上的一字一句<br>都告訴你<br>但字字句句都代表著我愛你<br>今晚 我想將那天的螢火<br>送到你的窗前<br>希望今夜的你有個美好的夢</p><p><strong>影片來源：</strong><a href="https://www.youtube.com/watch?v=BzYnNdJhZQw" rel="noopener">https://www.youtube.com/watch?v=BzYnNdJhZQw</a></p><p><strong>歌詞來源：</strong><a href="https://tinyurl.com/2p9c5d8a" rel="nofollow noopener noopener">https://tinyurl.com/2p9c5d8a</a></p><figure class="kg-card kg-image-card"><img src="https://blog.cmwang.net/content/images/2024/01/1.png" class="kg-image" alt="" loading="lazy" width="800" height="433" srcset="https://blog.cmwang.net/content/images/size/w600/2024/01/1.png 600w, https://blog.cmwang.net/content/images/2024/01/1.png 800w" sizes="(min-width: 720px) 720px"></figure><hr><p><strong>Storyboard:</strong></p><hr><p><strong>過程：</strong></p><p>本次結合幾個項目，練習 SDK 使用與熟悉 Swift 語法，只用 function print 無法滿足自己的期待，所以上網查了一些資料並搭配上課內容製作，將 AVPlayerViewController 加進 UIView 應該是最困難的部分，原本考慮使用 Container View 去做，但還不知道怎麼控制多個 Controller，並且跟 Storyboard 串接起來。</p><p>主要在<strong> iPad Pro 12.9</strong> 與 <strong>iPad Mini 6</strong> 實機測試過，iPhone 版面會看不到歌詞。</p><ol><li>新增 UIView，取得IBOutlet -&gt; Line 12</li><li>將 AVPlayerViewController 加進 UIView -&gt; Line 50</li><li>用 IBAction 控制 影片播放並開始計時 -&gt; Line59</li><li>註冊 View 生命週期與影片播放結束的通知 -&gt;Line 20~28</li></ol>
+<p><strong>歌詞：</strong>今晚 我想將那天的螢火<br>送到你的窗前<br>含意是"我愛你"<br>我想起我們的初吻<br>不管何時 只要閉上雙眼<br>就能奔向那最遙遠的地方<br>就像我在被浪濤湧來的沙上寫下的字跡般<br>你感覺也會像他們那樣從此消失<br>總是想念<br>雖然無法將我心裡所有的話語，說給你聽<br>但那裡頭，全都是"我愛你"<br>我何德何能<br>能擁有名為你的這份幸運<br>若我們現在能望著對方<br>該有多美好<br>就像我在被浪濤湧來的沙上寫下的字跡般<br>你感覺也會像他們那樣從此消失<br>還是想念<br>雖然無法將我寫在日記上的一字一句<br>都告訴你<br>但字字句句都代表著我愛你<br>今晚 我想將那天的螢火<br>送到你的窗前<br>希望今夜的你有個美好的夢</p><p><strong>影片來源：</strong><a href="https://www.youtube.com/watch?v=BzYnNdJhZQw&ref=localhost" rel="noopener">https://www.youtube.com/watch?v=BzYnNdJhZQw</a></p><p><strong>歌詞來源：</strong><a href="https://tinyurl.com/2p9c5d8a?ref=localhost" rel="nofollow noopener noopener">https://tinyurl.com/2p9c5d8a</a></p><figure class="kg-card kg-image-card"><img src="https://blog.cmwang.net/content/images/2024/01/1.png" class="kg-image" alt loading="lazy" width="800" height="433" srcset="https://blog.cmwang.net/content/images/size/w600/2024/01/1.png 600w, https://blog.cmwang.net/content/images/2024/01/1.png 800w" sizes="(min-width: 720px) 720px"></figure><hr><p><strong>Storyboard:</strong></p><hr><p><strong>過程：</strong></p><p>本次結合幾個項目，練習 SDK 使用與熟悉 Swift 語法，只用 function print 無法滿足自己的期待，所以上網查了一些資料並搭配上課內容製作，將 AVPlayerViewController 加進 UIView 應該是最困難的部分，原本考慮使用 Container View 去做，但還不知道怎麼控制多個 Controller，並且跟 Storyboard 串接起來。</p><p>主要在<strong> iPad Pro 12.9</strong> 與 <strong>iPad Mini 6</strong> 實機測試過，iPhone 版面會看不到歌詞。</p><ol><li>新增 UIView，取得IBOutlet -&gt; Line 12</li><li>將 AVPlayerViewController 加進 UIView -&gt; Line 50</li><li>用 IBAction 控制 影片播放並開始計時 -&gt; Line59</li><li>註冊 View 生命週期與影片播放結束的通知 -&gt;Line 20~28</li></ol>
 <!--kg-card-begin: html-->
 <script src="https://gist.github.com/takawang/c73d99d1f7f5bf0b8601f6843bdf5dc6.js"></script>
 <!--kg-card-end: html-->
-<p><strong>免責聲明：</strong></p><p>影片使用只為了學習目的，沒有營利行為，版權屬於原創作方 <a href="https://www.youtube.com/channel/UCweOkPb1wVVH0Q0Tlj4a5Pw" rel="noopener">1theK</a>.</p>
+<p><strong>免責聲明：</strong></p><p>影片使用只為了學習目的，沒有營利行為，版權屬於原創作方 <a href="https://www.youtube.com/channel/UCweOkPb1wVVH0Q0Tlj4a5Pw?ref=localhost" rel="noopener">1theK</a>.</p>
         </div>
 
     </article>
 
-    <div class="gh-canvas">
-    <div class="navigation">
-            <a class="navigation-item navigation-previous" href="/replicate-apple-music-ipad-os-app/">
-                <span class="navigation-label">Previous</span>
-                <h4 class="navigation-title">💻 仿製 iPad 上的 Apple Music</h4>
-            </a>
-            <a class="navigation-item navigation-next" href="/simulated-olympic-rings-drone-light-show/">
-                <span class="navigation-label">Next</span>
-                <h4 class="navigation-title">💻 模擬奧運五環無人機燈光秀</h4>
-            </a>
-    </div>
-</div>
+
 
 
         <div class="related-wrapper gh-outer">
@@ -215,85 +203,7 @@
                 <span class="text">You might also like...</span>
             </h3>
             <div class="post-feed">
-                    <article class="post tag-object-detection tag-ios tag-ai tag-yolo featured u-shadow">
-<a class="post-link" href="/execute-yolov7-model-on-ios-devices/">
-            <img
-                class="post-image u-object-fit"
-                src="https://images.unsplash.com/photo-1630042461973-179ca2cfa7bd?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDM2fHxpcGFkfGVufDB8fHx8MTcwNjc0MTY1MXww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000"
-                alt="Execute YOLOv7 model on iOS devices"
-                loading="lazy"
-            >
-
-    <div class="post-wrapper">
-        <header class="post-header">
-                <span class="post-tag">Object Detection</span>
-
-            <h2 class="post-title">
-                Execute YOLOv7 model on iOS devices
-            </h2>
-        </header>
-
-            <div class="post-excerpt">
-                Real-time object detection with CoreML is trickier than you think.
-            </div>
-    </div>
-
-    <footer class="post-footer">
-        <span class="post-more">Read More</span>
-        <span class="post-time"><time class="post-card-meta-date" datetime="2022-08-06">Aug 6, 2022</time></span>
-
-        <div class="post-author">
-                    <span class="post-author-link">
-                        <img class="post-author-image" src="/content/images/size/w150/2024/01/jamie2.jpg" alt="Jamie Wang" loading="lazy">
-                    </span>
-        </div>
-    </footer>
-</a>
-</article>                    <article class="post tag-swift tag-storyboard tag-ios u-shadow">
-<a class="post-link" href="/replicate-apple-music-ipad-os-app/">
-        <figure class="post-media">
-            <div class="u-placeholder same-height rectangle">
-                <img
-                    class="post-image u-object-fit"
-                    srcset="https://images.unsplash.com/photo-1624915342872-ee14e5766e45?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDV8fGFwcGxlJTIwbXVzaWN8ZW58MHx8fHwxNzA2NzQxODYxfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;400 400w,
-                            https://images.unsplash.com/photo-1624915342872-ee14e5766e45?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDV8fGFwcGxlJTIwbXVzaWN8ZW58MHx8fHwxNzA2NzQxODYxfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;720 750w,
-                            https://images.unsplash.com/photo-1624915342872-ee14e5766e45?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDV8fGFwcGxlJTIwbXVzaWN8ZW58MHx8fHwxNzA2NzQxODYxfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;960 960w,
-                            https://images.unsplash.com/photo-1624915342872-ee14e5766e45?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDV8fGFwcGxlJTIwbXVzaWN8ZW58MHx8fHwxNzA2NzQxODYxfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1200 1140w,
-                            https://images.unsplash.com/photo-1624915342872-ee14e5766e45?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDV8fGFwcGxlJTIwbXVzaWN8ZW58MHx8fHwxNzA2NzQxODYxfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000 1920w"
-                    sizes="600px"
-                    src="https://images.unsplash.com/photo-1624915342872-ee14e5766e45?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDV8fGFwcGxlJTIwbXVzaWN8ZW58MHx8fHwxNzA2NzQxODYxfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;960"
-                    alt="💻 仿製 iPad 上的 Apple Music"
-                    loading="lazy"
-                >
-            </div>
-        </figure>
-
-    <div class="post-wrapper">
-        <header class="post-header">
-                <span class="post-tag">Swift</span>
-
-            <h2 class="post-title">
-                💻 仿製 iPad 上的 Apple Music
-            </h2>
-        </header>
-
-            <div class="post-excerpt">
-                本文記錄 Scroll View &amp; Table View 的練習筆記
-            </div>
-    </div>
-
-    <footer class="post-footer">
-        <span class="post-more">Read More</span>
-        <span class="post-time"><time class="post-card-meta-date" datetime="2022-03-13">Mar 13, 2022</time></span>
-
-        <div class="post-author">
-                    <span class="post-author-link">
-                        <img class="post-author-image" src="/content/images/size/w150/2024/01/jamie2.jpg" alt="Jamie Wang" loading="lazy">
-                    </span>
-        </div>
-    </footer>
-</a>
-</article>                    <article class="post tag-swift tag-ios u-shadow">
+                    <article class="post tag-swift tag-ios tag-zh-tw u-shadow">
 <a class="post-link" href="/simulated-olympic-rings-drone-light-show/">
         <figure class="post-media">
             <div class="u-placeholder same-height rectangle">
@@ -329,6 +239,50 @@
     <footer class="post-footer">
         <span class="post-more">Read More</span>
         <span class="post-time"><time class="post-card-meta-date" datetime="2022-03-19">Mar 19, 2022</time></span>
+
+        <div class="post-author">
+                    <span class="post-author-link">
+                        <img class="post-author-image" src="/content/images/size/w150/2024/01/jamie2.jpg" alt="Jamie Wang" loading="lazy">
+                    </span>
+        </div>
+    </footer>
+</a>
+</article>                    <article class="post tag-swift tag-ios tag-zh-tw u-shadow">
+<a class="post-link" href="/replicate-apple-music-ipad-os-app/">
+        <figure class="post-media">
+            <div class="u-placeholder same-height rectangle">
+                <img
+                    class="post-image u-object-fit"
+                    srcset="https://images.unsplash.com/photo-1624915342872-ee14e5766e45?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDV8fGFwcGxlJTIwbXVzaWN8ZW58MHx8fHwxNzA2NzQxODYxfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;400 400w,
+                            https://images.unsplash.com/photo-1624915342872-ee14e5766e45?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDV8fGFwcGxlJTIwbXVzaWN8ZW58MHx8fHwxNzA2NzQxODYxfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;720 750w,
+                            https://images.unsplash.com/photo-1624915342872-ee14e5766e45?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDV8fGFwcGxlJTIwbXVzaWN8ZW58MHx8fHwxNzA2NzQxODYxfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;960 960w,
+                            https://images.unsplash.com/photo-1624915342872-ee14e5766e45?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDV8fGFwcGxlJTIwbXVzaWN8ZW58MHx8fHwxNzA2NzQxODYxfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1200 1140w,
+                            https://images.unsplash.com/photo-1624915342872-ee14e5766e45?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDV8fGFwcGxlJTIwbXVzaWN8ZW58MHx8fHwxNzA2NzQxODYxfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000 1920w"
+                    sizes="600px"
+                    src="https://images.unsplash.com/photo-1624915342872-ee14e5766e45?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDV8fGFwcGxlJTIwbXVzaWN8ZW58MHx8fHwxNzA2NzQxODYxfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;960"
+                    alt="💻 仿製 iPad 上的 Apple Music"
+                    loading="lazy"
+                >
+            </div>
+        </figure>
+
+    <div class="post-wrapper">
+        <header class="post-header">
+                <span class="post-tag">Swift</span>
+
+            <h2 class="post-title">
+                💻 仿製 iPad 上的 Apple Music
+            </h2>
+        </header>
+
+            <div class="post-excerpt">
+                本文記錄 Scroll View &amp; Table View 的練習筆記
+            </div>
+    </div>
+
+    <footer class="post-footer">
+        <span class="post-more">Read More</span>
+        <span class="post-time"><time class="post-card-meta-date" datetime="2022-03-13">Mar 13, 2022</time></span>
 
         <div class="post-author">
                     <span class="post-author-link">
@@ -397,7 +351,7 @@
         </div>
     </div>
 </div>
-<script src="/assets/built/main.min.js?v=4db0bb9414"></script>
+<script src="/assets/built/main.min.js?v=3c795429d5"></script>
 
 <!-- hide footer -->
 <style>

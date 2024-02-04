@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>📔 Faster Whisper With Progress Bar</title>
-    <link rel="stylesheet" href="/assets/built/screen.css?v=4db0bb9414">
+    <link rel="stylesheet" href="/assets/built/screen.css?v=3c795429d5">
 
     <meta name="description" content="How to use faster-whisper and generate a progress bar">
     <link rel="icon" href="https://blog.cmwang.net/content/images/size/w256h256/2024/01/2-removebg-preview.png" type="image/png">
@@ -20,10 +20,10 @@
     <meta property="og:image" content="https://images.unsplash.com/photo-1674027214993-52de23be5a18?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDI1fHxvcGVuYWklMjB3aGlzcGVyfGVufDB8fHx8MTcwNjc5MDI5OXww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000">
     <meta property="article:published_time" content="2023-10-18T16:00:00.000Z">
     <meta property="article:modified_time" content="2024-02-03T19:27:41.000Z">
-    <meta property="article:tag" content="How-To">
-    <meta property="article:tag" content="Notes">
-    <meta property="article:tag" content="Python">
     <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="How-To">
+    <meta property="article:tag" content="Python">
+    <meta property="article:tag" content="Notes">
     
     <meta property="article:publisher" content="https://www.facebook.com/ghost">
     <meta name="twitter:card" content="summary_large_image">
@@ -34,7 +34,7 @@
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Jamie Wang">
     <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="How-To, Notes, Python, AI">
+    <meta name="twitter:data2" content="AI, How-To, Python, Notes">
     <meta name="twitter:site" content="@ghost">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="675">
@@ -78,7 +78,7 @@
         "width": 1200,
         "height": 675
     },
-    "keywords": "How-To, Notes, Python, AI",
+    "keywords": "AI, How-To, Python, Notes",
     "description": "How to use faster-whisper and generate a progress bar",
     "mainEntityOfPage": "https://blog.cmwang.net/faster-whisper-with-progress-bar/"
 }
@@ -90,8 +90,8 @@
     <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="415aa5f59e59c087cacf652d7b" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css" data-sodo-search="https://blog.cmwang.net/" crossorigin="anonymous"></script>
     
     <link href="https://blog.cmwang.net/webmentions/receive/" rel="webmention">
-    <script defer src="/public/cards.min.js?v=4db0bb9414"></script>
-    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=4db0bb9414">
+    <script defer src="/public/cards.min.js?v=3c795429d5"></script>
+    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=3c795429d5">
     <!-- hide search box -->
 <style>
 .gh-search {
@@ -117,7 +117,7 @@
 <style>:root {--ghost-accent-color: #D63484;}</style>
 </head>
 
-<body class="post-template tag-how-to tag-notes tag-python tag-ai is-head-left-logo">
+<body class="post-template tag-ai tag-how-to tag-python tag-notes tag-en is-head-left-logo">
 <div class="gh-site">
 
     <header id="gh-head" class="gh-head gh-outer">
@@ -151,13 +151,13 @@
 <main class="site-main">
 
 
-    <article class="gh-article post tag-how-to tag-notes tag-python tag-ai">
+    <article class="gh-article post tag-ai tag-how-to tag-python tag-notes tag-en">
 
         <header class="gh-article-header gh-canvas">
             <span class="gh-article-meta">
                 By <a href="/author/jamie/">Jamie Wang</a>
                     in
-                    <a href="/tag/how-to/" class="gh-article-tag">How-To</a>, <a href="/tag/notes/" class="gh-article-tag">Notes</a>, <a href="/tag/python/" class="gh-article-tag">Python</a>, <a href="/tag/ai/" class="gh-article-tag">AI</a>
+                    <a href="/tag/ai/" class="gh-article-tag">AI</a>, <a href="/tag/how-to/" class="gh-article-tag">How-To</a>, <a href="/tag/python/" class="gh-article-tag">Python</a>, <a href="/tag/notes/" class="gh-article-tag">Notes</a>
                 —
                 <time datetime="2023-10-19">Oct 19, 2023</time>
                 
@@ -183,7 +183,7 @@
         </header>
 
         <div class="gh-content gh-canvas">
-            <p><a href="https://github.com/guillaumekln/faster-whisper">faster-whisper</a> is a reimplementation of OpenAI's Whisper model using <code>CTranslate2</code>, an engine designed for fast inference of Transformer models. The overall speed is significantly improved.</p>
+            <p><a href="https://github.com/guillaumekln/faster-whisper?ref=localhost">faster-whisper</a> is a reimplementation of OpenAI's Whisper model using <code>CTranslate2</code>, an engine designed for fast inference of Transformer models. The overall speed is significantly improved.</p>
 <p>Below is a simple example of generating subtitles. First, install <code>faster_whisper</code> and <code>pysubs2</code>:</p>
 <pre><code class="language-python"># pip install faster_whisper pysubs2
 from faster_whisper import WhisperModel
@@ -260,210 +260,16 @@ COPY app.py /app/
 # Run the script
 CMD ["python3", "app.py"]
 </code></pre>
-<p><strong>Source Code</strong>: <a href="https://github.com/taka-wang/docker-whisper">https://github.com/taka-wang/docker-whisper</a></p>
+<p><strong>Source Code</strong>: <a href="https://github.com/taka-wang/docker-whisper?ref=localhost">https://github.com/taka-wang/docker-whisper</a></p>
 
         </div>
 
     </article>
 
-    <div class="gh-canvas">
-    <div class="navigation">
-            <a class="navigation-item navigation-previous" href="/install-nvidia-docker-for-ubuntu/">
-                <span class="navigation-label">Previous</span>
-                <h4 class="navigation-title">📔 Install Nvidia Docker on Ubuntu</h4>
-            </a>
-            <a class="navigation-item navigation-next" href="/frontend-history/">
-                <span class="navigation-label">Next</span>
-                <h4 class="navigation-title">📚 前端開發歷史</h4>
-            </a>
-    </div>
-</div>
+
 
 
         <div class="related-wrapper gh-outer">
-        <section class="related-posts gh-inner">
-            <h3 class="related-title">
-                <span class="text">You might also like...</span>
-            </h3>
-            <div class="post-feed">
-                    <article class="post tag-visual-learning tag-frontend tag-css tag-notes u-shadow">
-<a class="post-link" href="/the-only-css-layout-guide-youll-ever-need/">
-        <figure class="post-media">
-            <div class="u-placeholder same-height rectangle">
-                <img
-                    class="post-image u-object-fit"
-                    srcset="https://images.unsplash.com/photo-1567443024551-f3e3cc2be870?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fHlvdXR1YmV8ZW58MHx8fHwxNzA2OTg1NDY2fDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;400 400w,
-                            https://images.unsplash.com/photo-1567443024551-f3e3cc2be870?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fHlvdXR1YmV8ZW58MHx8fHwxNzA2OTg1NDY2fDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;720 750w,
-                            https://images.unsplash.com/photo-1567443024551-f3e3cc2be870?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fHlvdXR1YmV8ZW58MHx8fHwxNzA2OTg1NDY2fDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;960 960w,
-                            https://images.unsplash.com/photo-1567443024551-f3e3cc2be870?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fHlvdXR1YmV8ZW58MHx8fHwxNzA2OTg1NDY2fDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1200 1140w,
-                            https://images.unsplash.com/photo-1567443024551-f3e3cc2be870?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fHlvdXR1YmV8ZW58MHx8fHwxNzA2OTg1NDY2fDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000 1920w"
-                    sizes="600px"
-                    src="https://images.unsplash.com/photo-1567443024551-f3e3cc2be870?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fHlvdXR1YmV8ZW58MHx8fHwxNzA2OTg1NDY2fDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;960"
-                    alt="🖥️ The Only CSS Layout Guide You&#x27;ll Ever Need"
-                    loading="lazy"
-                >
-            </div>
-        </figure>
-
-    <div class="post-wrapper">
-        <header class="post-header">
-                <span class="post-tag">Visual Learning</span>
-
-            <h2 class="post-title">
-                🖥️ The Only CSS Layout Guide You&#x27;ll Ever Need
-            </h2>
-        </header>
-
-            <div class="post-excerpt">
-                本文是該教學影片的摘要與筆記
-            </div>
-    </div>
-
-    <footer class="post-footer">
-        <span class="post-more">Read More</span>
-        <span class="post-time"><time class="post-card-meta-date" datetime="2024-02-04">Feb 4, 2024</time></span>
-
-        <div class="post-author">
-                    <span class="post-author-link">
-                        <img class="post-author-image" src="/content/images/size/w150/2024/01/jamie2.jpg" alt="Jamie Wang" loading="lazy">
-                    </span>
-        </div>
-    </footer>
-</a>
-</article>                    <article class="post tag-frontend tag-vue tag-notes tag-cheat-sheet u-shadow">
-<a class="post-link" href="/pinia-state-management/">
-        <figure class="post-media">
-            <div class="u-placeholder same-height rectangle">
-                <img
-                    class="post-image u-object-fit"
-                    srcset="/content/images/size/w400/2024/02/pinia.png 400w,
-                            /content/images/size/w720/2024/02/pinia.png 750w,
-                            /content/images/size/w960/2024/02/pinia.png 960w,
-                            /content/images/size/w1200/2024/02/pinia.png 1140w,
-                            /content/images/size/w2000/2024/02/pinia.png 1920w"
-                    sizes="600px"
-                    src="/content/images/size/w960/2024/02/pinia.png"
-                    alt="📚 Pinia State Management"
-                    loading="lazy"
-                >
-            </div>
-        </figure>
-
-    <div class="post-wrapper">
-        <header class="post-header">
-                <span class="post-tag">Frontend</span>
-
-            <h2 class="post-title">
-                📚 Pinia State Management
-            </h2>
-        </header>
-
-            <div class="post-excerpt">
-                本文是 Pinia 狀態管理套件的速成筆記
-            </div>
-    </div>
-
-    <footer class="post-footer">
-        <span class="post-more">Read More</span>
-        <span class="post-time"><time class="post-card-meta-date" datetime="2024-02-01">Feb 1, 2024</time></span>
-
-        <div class="post-author">
-                    <span class="post-author-link">
-                        <img class="post-author-image" src="/content/images/size/w150/2024/01/jamie2.jpg" alt="Jamie Wang" loading="lazy">
-                    </span>
-        </div>
-    </footer>
-</a>
-</article>                    <article class="post tag-backend tag-php tag-cheat-sheet tag-notes u-shadow">
-<a class="post-link" href="/pdo-crash-course/">
-        <figure class="post-media">
-            <div class="u-placeholder same-height rectangle">
-                <img
-                    class="post-image u-object-fit"
-                    srcset="https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;400 400w,
-                            https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;720 750w,
-                            https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;960 960w,
-                            https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1200 1140w,
-                            https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000 1920w"
-                    sizes="600px"
-                    src="https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;960"
-                    alt="🐘 PDO Crash Course"
-                    loading="lazy"
-                >
-            </div>
-        </figure>
-
-    <div class="post-wrapper">
-        <header class="post-header">
-                <span class="post-tag">Backend</span>
-
-            <h2 class="post-title">
-                🐘 PDO Crash Course
-            </h2>
-        </header>
-
-            <div class="post-excerpt">
-                本文是關於 PHP PDO 的速成筆記
-            </div>
-    </div>
-
-    <footer class="post-footer">
-        <span class="post-more">Read More</span>
-        <span class="post-time"><time class="post-card-meta-date" datetime="2023-12-17">Dec 17, 2023</time></span>
-
-        <div class="post-author">
-                    <span class="post-author-link">
-                        <img class="post-author-image" src="/content/images/size/w150/2024/01/jamie2.jpg" alt="Jamie Wang" loading="lazy">
-                    </span>
-        </div>
-    </footer>
-</a>
-</article>                    <article class="post tag-visual-learning tag-frontend tag-css tag-notes u-shadow">
-<a class="post-link" href="/learn-css-grid-the-easy-way/">
-        <figure class="post-media">
-            <div class="u-placeholder same-height rectangle">
-                <img
-                    class="post-image u-object-fit"
-                    srcset="https://images.unsplash.com/photo-1567443024551-f3e3cc2be870?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fHlvdXR1YmV8ZW58MHx8fHwxNzA2NzgzMDQyfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;400 400w,
-                            https://images.unsplash.com/photo-1567443024551-f3e3cc2be870?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fHlvdXR1YmV8ZW58MHx8fHwxNzA2NzgzMDQyfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;720 750w,
-                            https://images.unsplash.com/photo-1567443024551-f3e3cc2be870?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fHlvdXR1YmV8ZW58MHx8fHwxNzA2NzgzMDQyfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;960 960w,
-                            https://images.unsplash.com/photo-1567443024551-f3e3cc2be870?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fHlvdXR1YmV8ZW58MHx8fHwxNzA2NzgzMDQyfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1200 1140w,
-                            https://images.unsplash.com/photo-1567443024551-f3e3cc2be870?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fHlvdXR1YmV8ZW58MHx8fHwxNzA2NzgzMDQyfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000 1920w"
-                    sizes="600px"
-                    src="https://images.unsplash.com/photo-1567443024551-f3e3cc2be870?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fHlvdXR1YmV8ZW58MHx8fHwxNzA2NzgzMDQyfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;960"
-                    alt="🖥️ Learn CSS Grid the easy way"
-                    loading="lazy"
-                >
-            </div>
-        </figure>
-
-    <div class="post-wrapper">
-        <header class="post-header">
-                <span class="post-tag">Visual Learning</span>
-
-            <h2 class="post-title">
-                🖥️ Learn CSS Grid the easy way
-            </h2>
-        </header>
-
-            <div class="post-excerpt">
-                本文是該教學影片的摘要與筆記
-            </div>
-    </div>
-
-    <footer class="post-footer">
-        <span class="post-more">Read More</span>
-        <span class="post-time"><time class="post-card-meta-date" datetime="2023-11-30">Nov 30, 2023</time></span>
-
-        <div class="post-author">
-                    <span class="post-author-link">
-                        <img class="post-author-image" src="/content/images/size/w150/2024/01/jamie2.jpg" alt="Jamie Wang" loading="lazy">
-                    </span>
-        </div>
-    </footer>
-</a>
-</article>            </div>
-        </section>
 </div>
 </main>
     </div>
@@ -522,7 +328,7 @@ CMD ["python3", "app.py"]
         </div>
     </div>
 </div>
-<script src="/assets/built/main.min.js?v=4db0bb9414"></script>
+<script src="/assets/built/main.min.js?v=3c795429d5"></script>
 
 <!-- hide footer -->
 <style>
