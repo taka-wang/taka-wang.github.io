@@ -19,7 +19,7 @@
     <meta property="og:url" content="https://blog.cmwang.net/2023/11/learn-css-grid-the-easy-way/">
     <meta property="og:image" content="https://images.unsplash.com/photo-1567443024551-f3e3cc2be870?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fHlvdXR1YmV8ZW58MHx8fHwxNzA2NzgzMDQyfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000">
     <meta property="article:published_time" content="2023-11-30T13:55:00.000Z">
-    <meta property="article:modified_time" content="2024-02-03T20:19:43.000Z">
+    <meta property="article:modified_time" content="2024-02-04T20:10:30.000Z">
     <meta property="article:tag" content="CSS">
     <meta property="article:tag" content="Visual Learning">
     <meta property="article:tag" content="Web Dev">
@@ -71,7 +71,7 @@
     "headline": "🖥️ Learn CSS Grid the easy way",
     "url": "https://blog.cmwang.net/2023/11/learn-css-grid-the-easy-way/",
     "datePublished": "2023-11-30T13:55:00.000Z",
-    "dateModified": "2024-02-03T20:19:43.000Z",
+    "dateModified": "2024-02-04T20:10:30.000Z",
     "image": {
         "@type": "ImageObject",
         "url": "https://images.unsplash.com/photo-1567443024551-f3e3cc2be870?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDR8fHlvdXR1YmV8ZW58MHx8fHwxNzA2NzgzMDQyfDA&ixlib=rb-4.0.3&q=80&w=2000",
@@ -194,7 +194,14 @@
         </header>
 
         <div class="gh-content gh-canvas">
-            <figure class="kg-card kg-embed-card kg-card-hascaption"><iframe width="200" height="113" src="https://www.youtube.com/embed/rg7Fvvl3taU?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen title="Learn CSS Grid the easy way"></iframe><figcaption><p><span style="white-space: pre-wrap;">source: </span><a href="https://www.youtube.com/watch?v=rg7Fvvl3taU&ref=localhost"><span style="white-space: pre-wrap;">https://www.youtube.com/watch?v=rg7Fvvl3taU</span></a></p></figcaption></figure><h2 id="%E2%9A%99%EF%B8%8F-%E6%96%B9%E6%B3%951">⚙️&nbsp;方法1</h2>
+            <figure class="kg-card kg-embed-card kg-card-hascaption"><iframe width="200" height="113" src="https://www.youtube.com/embed/rg7Fvvl3taU?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen title="Learn CSS Grid the easy way"></iframe><figcaption><p><span style="white-space: pre-wrap;">source: </span><a href="https://www.youtube.com/watch?v=rg7Fvvl3taU&ref=localhost"><span style="white-space: pre-wrap;">https://www.youtube.com/watch?v=rg7Fvvl3taU</span></a></p></figcaption></figure>
+<!--kg-card-begin: html-->
+<select id="lang" style="display: none;">
+  <option value="en">English</option>
+  <option value="zh">中文</option>
+</select>
+<!--kg-card-end: html-->
+<h2 id="%E2%9A%99%EF%B8%8F-%E6%96%B9%E6%B3%951">⚙️&nbsp;方法1</h2>
 <p>從攏統開始，除非需要特別指定，才處理特別之處，簡化設計。</p>
 <ul>
 <li>
@@ -634,16 +641,26 @@ gap: 1.5rem;
 <script src="https://blog2.cmwang.net/subtitles/js/youtube.external.subtitle.min.js" type="text/javascript" crossorigin="anonymous" referrerpolicy="no-referrer" ></script>
 <script src="https://blog2.cmwang.net/subtitles/js/loadsrt.min.js" type="text/javascript" crossorigin="anonymous" referrerpolicy="no-referrer" ></script>
  <script>
-  const sub = 'https://blog2.cmwang.net/subtitles/sub/learn-css-grid-the-easy-way.zh.srt';
+const en = 'https://blog2.cmwang.net/subtitles/sub/learn-css-grid-the-easy-way.srt';
+const zh = 'https://blog2.cmwang.net/subtitles/sub/learn-css-grid-the-easy-way.zh.srt';
 </script>
-  
+
+<!-- don't change me -->
 <script defer>
-//--- don't change me!
-window.onload = function () {
-  console.log('----Loaded----');
-  // embed
-  loadSRT(sub, function (subtitles) {
-    initSub(document.querySelector('.kg-card.kg-embed-card iframe'), subtitles);
+window.onload = () => {
+  loadSRT(en, (subtitlesEn) => {
+    loadSRT(zh, (subtitlesZh) => {
+      const subtitles = { en: subtitlesEn, zh: subtitlesZh };
+
+      const youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.querySelector('.kg-card.kg-embed-card iframe'), subtitles.en);
+
+      const subtitlesContainer = document.getElementById('lang');
+      subtitlesContainer.style.display = 'block';
+      subtitlesContainer.addEventListener('change', (e) => {
+        const lang = e.target.value;
+        youtubeExternalSubtitle.load(subtitles[lang]);
+      });
+    });
   });
 };
 </script>
