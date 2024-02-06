@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Building an Object Detection App quickly with Streamlit</title>
-    <link rel="stylesheet" href="/assets/built/screen.css?v=cde53fd3c5">
+    <link rel="stylesheet" href="/assets/built/screen.css?v=54eb726606">
 
     <meta name="description" content="Sometimes, you may want to quickly create a graphical interface for others to test your model, but you don’t want to deal with front-end technologies. This is where Streamlit comes in, allowing you…">
     <link rel="icon" href="https://blog.cmwang.net/content/images/size/w256h256/2024/01/2-removebg-preview.png" type="image/png">
@@ -90,8 +90,8 @@
     <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="415aa5f59e59c087cacf652d7b" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css" data-sodo-search="https://blog.cmwang.net/" crossorigin="anonymous"></script>
     
     <link href="https://blog.cmwang.net/webmentions/receive/" rel="webmention">
-    <script defer src="/public/cards.min.js?v=cde53fd3c5"></script>
-    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=cde53fd3c5">
+    <script defer src="/public/cards.min.js?v=54eb726606"></script>
+    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=54eb726606">
     <!-- hide search box -->
 <style>
 .gh-search {
@@ -135,7 +135,7 @@
             <nav class="gh-head-menu">
                 <ul class="nav">
     <li class="nav-blog"><a href="https://blog.cmwang.net/">Blog</a></li>
-    <li class="nav-portfolio"><a href="https://blog.cmwang.net/portfolio/">Portfolio</a></li>
+    <li class="nav-contact"><a href="https://blog.cmwang.net/contact/">Contact</a></li>
     <li class="nav-about"><a href="https://blog.cmwang.net/about/">About</a></li>
 </ul>
 
@@ -152,23 +152,19 @@
 <main class="site-main">
 
 
-    <article class="gh-article post tag-object-detection tag-computer-vision tag-ai tag-how-to tag-en">
+        <article class="gh-article post tag-object-detection tag-computer-vision tag-ai tag-how-to tag-en">
 
-        <header class="gh-article-header gh-canvas">
-            <span class="gh-article-meta">
-                By <a href="/author/jamie/">Jamie Wang</a>
-                    in
-                    <a href="/tag/object-detection/" class="gh-article-tag">Object Detection</a>, <a href="/tag/computer-vision/" class="gh-article-tag">Computer Vision</a>, <a href="/tag/ai/" class="gh-article-tag">AI</a>, <a href="/tag/how-to/" class="gh-article-tag">How-To</a>
-                —
-                <time datetime="2022-04-25">Apr 25, 2022</time>
-                
-                
-            </span>
+            <header class="gh-article-header gh-canvas">
+                <span class="gh-article-meta">
+                        <a href="/tag/object-detection/" class="gh-article-tag">Object Detection</a>, <a href="/tag/computer-vision/" class="gh-article-tag">Computer Vision</a>, <a href="/tag/ai/" class="gh-article-tag">AI</a>, <a href="/tag/how-to/" class="gh-article-tag">How-To</a>
+                    —
+                    <time datetime="2022-04-25">Apr 25, 2022</time>
+                </span>
 
-            <h1 class="gh-article-title">Building an Object Detection App quickly with Streamlit</h1>
+                <h1 class="gh-article-title">Building an Object Detection App quickly with Streamlit</h1>
 
 
-                <figure class="gh-article-image kg-width-wide">
+                    <figure class="gh-article-image kg-width-wide">
         <img
             srcset="/content/images/size/w400/max/800/1-_uc9oywq_buu-1kpjnmvlw.png 400w,
                     /content/images/size/w720/max/800/1-_uc9oywq_buu-1kpjnmvlw.png 720w,
@@ -181,10 +177,10 @@
         >
             <figcaption><span style="white-space: pre-wrap;">Streamlit is a package that allows for the rapid creation of web applications.</span></figcaption>
     </figure>
-        </header>
+            </header>
 
-        <div class="gh-content gh-canvas">
-            <h3 id="building-an-object-detection-web-app-quickly-with-streamlit">Building an Object Detection Web App quickly with Streamlit</h3><p>Sometimes, you may want to quickly create a graphical interface for others to test your model, but you don’t want to deal with front-end technologies. This is where <a href="https://streamlit.io/?ref=localhost" rel="noopener">Streamlit</a> comes in, allowing you to quickly create a web application using Python syntax.</p><p>In this article, I will show you how to use <a href="https://streamlit.io/?ref=localhost" rel="noopener">Streamlit</a> and Nilvana Vision Inference Runtime to quickly deploy a web application that can detect masks. If you are not familiar with Nilvana Vision Inference Runtime, it is a software package we developed for node-code deployment of AI models, which you can refer to in our previous articles.</p>
+            <div class="gh-content gh-canvas">
+                <h3 id="building-an-object-detection-web-app-quickly-with-streamlit">Building an Object Detection Web App quickly with Streamlit</h3><p>Sometimes, you may want to quickly create a graphical interface for others to test your model, but you don’t want to deal with front-end technologies. This is where <a href="https://streamlit.io/?ref=localhost" rel="noopener">Streamlit</a> comes in, allowing you to quickly create a web application using Python syntax.</p><p>In this article, I will show you how to use <a href="https://streamlit.io/?ref=localhost" rel="noopener">Streamlit</a> and Nilvana Vision Inference Runtime to quickly deploy a web application that can detect masks. If you are not familiar with Nilvana Vision Inference Runtime, it is a software package we developed for node-code deployment of AI models, which you can refer to in our previous articles.</p>
 <!--kg-card-begin: html-->
 <figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://medium.com/hello-nilvana/%E9%80%8F%E9%81%8E-nilvana-vision-inference-runtime-%E9%83%A8%E7%BD%B2%E6%A8%A1%E5%9E%8B-a52b05a63b74?ref=localhost"><div class="kg-bookmark-content"><div class="kg-bookmark-title">Deploying models through Nilvana Vision Inference Runtime</div><div class="kg-bookmark-description">Using Nilvana Vision Inference Runtime (inference engine), you can easily deploy your models to x86 or Jetson…</div><div class="kg-bookmark-metadata"></div></div><div class="kg-bookmark-thumbnail"><img src="https://blog.cmwang.net/content/images/fit/c/160/160/1-u6xc7wr939zohyws2_7okg.png" alt></div></a></figure>
 <!--kg-card-end: html-->
@@ -212,20 +208,20 @@ with placeholder.container():
 <figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://github.com/nilvana-ai/nvir-streamlit-demo?ref=localhost"><div class="kg-bookmark-content"><div class="kg-bookmark-title">GitHub - nilvana-ai/nvir-streamlit-demo: This is a demo repo to demonstrate nilvana vision…</div><div class="kg-bookmark-description">This is a demo repo to demonstrate nilvana vision inference runtime with streamlit. </div><div class="kg-bookmark-metadata"></div></div><div class="kg-bookmark-thumbnail"><img src="https://blog.cmwang.net/content/images/fit/c/160/160/0-8tnv3cnpvuvsfnkf.png" alt></div></a></figure>
 <!--kg-card-end: html-->
 
-        </div>
+            </div>
 
-    </article>
-
-
+        </article>
 
 
-        <div class="related-wrapper gh-outer">
-        <section class="related-posts gh-inner">
-            <h3 class="related-title">
-                <span class="text">You might also like...</span>
-            </h3>
-            <div class="post-feed">
-                    <article class="post tag-object-detection tag-computer-vision tag-ai tag-en u-shadow">
+
+
+                <div class="related-wrapper gh-outer">
+            <section class="related-posts gh-inner">
+                <h3 class="related-title">
+                    <span class="text">You might also like...</span>
+                </h3>
+                <div class="post-feed">
+                        <article class="post tag-object-detection tag-computer-vision tag-ai tag-en u-shadow">
 <a class="post-link" href="/2022/09/make-your-own-pig-counter/">
         <figure class="post-media">
             <div class="u-placeholder same-height rectangle">
@@ -262,9 +258,10 @@ with placeholder.container():
         <span class="post-more">Read More</span>
         <span class="post-time"><time class="post-card-meta-date" datetime="2022-09-15">Sep 15, 2022</time></span>
 
+        
     </footer>
 </a>
-</article>                    <article class="post tag-object-detection tag-computer-vision tag-ai tag-en u-shadow">
+</article>                        <article class="post tag-object-detection tag-computer-vision tag-ai tag-en u-shadow">
 <a class="post-link" href="/2022/09/object-detection-from-the-video-taken-by-drone/">
         <figure class="post-media">
             <div class="u-placeholder same-height rectangle">
@@ -301,9 +298,10 @@ with placeholder.container():
         <span class="post-more">Read More</span>
         <span class="post-time"><time class="post-card-meta-date" datetime="2022-09-13">Sep 13, 2022</time></span>
 
+        
     </footer>
 </a>
-</article>                    <article class="post tag-object-detection tag-computer-vision tag-ai tag-en u-shadow">
+</article>                        <article class="post tag-object-detection tag-computer-vision tag-ai tag-en u-shadow">
 <a class="post-link" href="/2022/09/object-detection-on-a-360-degree-camera/">
         <figure class="post-media">
             <div class="u-placeholder same-height rectangle">
@@ -340,9 +338,10 @@ with placeholder.container():
         <span class="post-more">Read More</span>
         <span class="post-time"><time class="post-card-meta-date" datetime="2022-09-07">Sep 7, 2022</time></span>
 
+        
     </footer>
 </a>
-</article>                    <article class="post tag-object-detection tag-ai tag-ios tag-en featured u-shadow">
+</article>                        <article class="post tag-object-detection tag-ai tag-ios tag-en featured u-shadow">
 <a class="post-link" href="/2022/08/execute-yolov7-model-on-ios-devices/">
             <img
                 class="post-image u-object-fit"
@@ -369,21 +368,22 @@ with placeholder.container():
         <span class="post-more">Read More</span>
         <span class="post-time"><time class="post-card-meta-date" datetime="2022-08-06">Aug 6, 2022</time></span>
 
+        
     </footer>
 </a>
-</article>            </div>
-        </section>
-</div>
+</article>                </div>
+            </section>
+        </div>
+
 </main>
+
+
     </div>
 
     <footer class="gh-foot no-menu gh-outer">
         <div class="gh-foot-inner gh-inner">
             <div class="gh-copyright">
                 <a href="https://blog.cmwang.net" rel="noopener">Liberation Notes</a> © 2024
-            </div>
-            <div class="gh-powered-by">
-                <a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a>
             </div>
         </div>
     </footer>
@@ -431,7 +431,7 @@ with placeholder.container():
         </div>
     </div>
 </div>
-<script src="/assets/built/main.min.js?v=cde53fd3c5"></script>
+<script src="/assets/built/main.min.js?v=54eb726606"></script>
 
 <!-- hide footer -->
 <style>
@@ -439,9 +439,6 @@ with placeholder.container():
   display: none;
 }
 
-.gh-powered-by {
-  display: none;
-}
 .gh-footer-copyright {
   display: none;
 }

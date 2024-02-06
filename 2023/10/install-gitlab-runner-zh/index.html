@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>📔 透過 Docker 設定 Gitlab Runner</title>
-    <link rel="stylesheet" href="/assets/built/screen.css?v=cde53fd3c5">
+    <link rel="stylesheet" href="/assets/built/screen.css?v=54eb726606">
 
     <meta name="description" content="如何在本機透過 Docker 安裝 Gitlab runner">
     <link rel="icon" href="https://blog.cmwang.net/content/images/size/w256h256/2024/01/2-removebg-preview.png" type="image/png">
@@ -90,8 +90,8 @@
     <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="415aa5f59e59c087cacf652d7b" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css" data-sodo-search="https://blog.cmwang.net/" crossorigin="anonymous"></script>
     
     <link href="https://blog.cmwang.net/webmentions/receive/" rel="webmention">
-    <script defer src="/public/cards.min.js?v=cde53fd3c5"></script>
-    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=cde53fd3c5">
+    <script defer src="/public/cards.min.js?v=54eb726606"></script>
+    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=54eb726606">
     <!-- hide search box -->
 <style>
 .gh-search {
@@ -135,7 +135,7 @@
             <nav class="gh-head-menu">
                 <ul class="nav">
     <li class="nav-blog"><a href="https://blog.cmwang.net/">Blog</a></li>
-    <li class="nav-portfolio"><a href="https://blog.cmwang.net/portfolio/">Portfolio</a></li>
+    <li class="nav-contact"><a href="https://blog.cmwang.net/contact/">Contact</a></li>
     <li class="nav-about"><a href="https://blog.cmwang.net/about/">About</a></li>
 </ul>
 
@@ -152,23 +152,19 @@
 <main class="site-main">
 
 
-    <article class="gh-article post tag-how-to tag-ci tag-docker tag-notes tag-hide-soft tag-zh-tw">
+        <article class="gh-article post tag-how-to tag-ci tag-docker tag-notes tag-hide-soft tag-zh-tw">
 
-        <header class="gh-article-header gh-canvas">
-            <span class="gh-article-meta">
-                By <a href="/author/jamie/">Jamie Wang</a>
-                    in
-                    <a href="/tag/how-to/" class="gh-article-tag">How-To</a>, <a href="/tag/ci/" class="gh-article-tag">CI</a>, <a href="/tag/docker/" class="gh-article-tag">Docker</a>, <a href="/tag/notes/" class="gh-article-tag">Notes</a>
-                —
-                <time datetime="2023-10-14">Oct 14, 2023</time>
-                
-                
-            </span>
+            <header class="gh-article-header gh-canvas">
+                <span class="gh-article-meta">
+                        <a href="/tag/how-to/" class="gh-article-tag">How-To</a>, <a href="/tag/ci/" class="gh-article-tag">CI</a>, <a href="/tag/docker/" class="gh-article-tag">Docker</a>, <a href="/tag/notes/" class="gh-article-tag">Notes</a>
+                    —
+                    <time datetime="2023-10-14">Oct 14, 2023</time>
+                </span>
 
-            <h1 class="gh-article-title">📔 透過 Docker 設定 Gitlab Runner</h1>
+                <h1 class="gh-article-title">📔 透過 Docker 設定 Gitlab Runner</h1>
 
 
-                <figure class="gh-article-image kg-width-wide">
+                    <figure class="gh-article-image kg-width-wide">
         <img
             srcset="https://images.unsplash.com/photo-1531030874896-fdef6826f2f7?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fGdpdHxlbnwwfHx8fDE3MDY3ODk0ODV8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;400 400w,
                     https://images.unsplash.com/photo-1531030874896-fdef6826f2f7?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fGdpdHxlbnwwfHx8fDE3MDY3ODk0ODV8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;720 720w,
@@ -181,10 +177,10 @@
         >
             <figcaption><span style="white-space: pre-wrap;">Photo by </span><a href="https://unsplash.com/@pankajpatel?utm_source=ghost&amp;utm_medium=referral&amp;utm_campaign=api-credit"><span style="white-space: pre-wrap;">Pankaj Patel</span></a><span style="white-space: pre-wrap;"> / </span><a href="https://unsplash.com/?utm_source=ghost&amp;utm_medium=referral&amp;utm_campaign=api-credit"><span style="white-space: pre-wrap;">Unsplash</span></a></figcaption>
     </figure>
-        </header>
+            </header>
 
-        <div class="gh-content gh-canvas">
-            <p>1. 使用 System Volumn 掛載 Runner Container，執行 Gitlab Runner。</p><pre><code class="language-bash">docker run -d --name gitlab-runner --restart always \
+            <div class="gh-content gh-canvas">
+                <p>1. 使用 System Volumn 掛載 Runner Container，執行 Gitlab Runner。</p><pre><code class="language-bash">docker run -d --name gitlab-runner --restart always \
   -v /srv/gitlab-runner/config:/etc/gitlab-runner \
   -v /var/run/docker.sock:/var/run/docker.sock \
   gitlab/gitlab-runner:latest</code></pre><p>2. 建立一個新的 Group runner。</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://blog.cmwang.net/content/images/2024/02/1-1.png" class="kg-image" alt loading="lazy" width="955" height="605" srcset="https://blog.cmwang.net/content/images/size/w600/2024/02/1-1.png 600w, https://blog.cmwang.net/content/images/2024/02/1-1.png 955w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">group runner</span></figcaption></figure><p>👉 <em>_新增 Group runner 標籤_</em></p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://blog.cmwang.net/content/images/2024/02/2-1.png" class="kg-image" alt loading="lazy" width="955" height="747" srcset="https://blog.cmwang.net/content/images/size/w600/2024/02/2-1.png 600w, https://blog.cmwang.net/content/images/2024/02/2-1.png 955w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Add tag</span></figcaption></figure><p>👉 <em>_獲取 token_</em></p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://blog.cmwang.net/content/images/2024/02/3-1.png" class="kg-image" alt loading="lazy" width="960" height="668" srcset="https://blog.cmwang.net/content/images/size/w600/2024/02/3-1.png 600w, https://blog.cmwang.net/content/images/2024/02/3-1.png 960w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Get </span><i><em class="italic" style="white-space: pre-wrap;">authentication</em></i><span style="white-space: pre-wrap;"> token</span></figcaption></figure><p>更詳細的步驟可以參考這篇<a href="https://docs.gitlab.com/ee/ci/runners/runners_scope.html?ref=localhost#create-a-group-runner-with-a-runner-authentication-token">文章</a>。</p>
@@ -238,20 +234,20 @@ shutdown_timeout = 0
 <li><a href="https://docs.gitlab.com/ee/ci/runners/runners_scope.html?ref=localhost#create-a-group-runner-with-a-runner-authentication-token">Create a group runner with a runner authentication token</a></li>
 </ul>
 
-        </div>
+            </div>
 
-    </article>
-
-
+        </article>
 
 
-        <div class="related-wrapper gh-outer">
-        <section class="related-posts gh-inner">
-            <h3 class="related-title">
-                <span class="text">You might also like...</span>
-            </h3>
-            <div class="post-feed">
-                    <article class="post tag-how-to tag-docker tag-ubuntu tag-notes tag-en u-shadow">
+
+
+                <div class="related-wrapper gh-outer">
+            <section class="related-posts gh-inner">
+                <h3 class="related-title">
+                    <span class="text">You might also like...</span>
+                </h3>
+                <div class="post-feed">
+                        <article class="post tag-how-to tag-docker tag-ubuntu tag-notes tag-en u-shadow">
 <a class="post-link" href="/2023/10/install-nvidia-docker-for-ubuntu/">
         <figure class="post-media">
             <div class="u-placeholder same-height rectangle">
@@ -288,9 +284,10 @@ shutdown_timeout = 0
         <span class="post-more">Read More</span>
         <span class="post-time"><time class="post-card-meta-date" datetime="2023-10-16">Oct 16, 2023</time></span>
 
+        
     </footer>
 </a>
-</article>                    <article class="post tag-how-to tag-ci tag-docker tag-notes tag-en u-shadow">
+</article>                        <article class="post tag-how-to tag-ci tag-docker tag-notes tag-en u-shadow">
 <a class="post-link" href="/2023/10/how-to-setup-gitlab-runner-in-container/">
         <figure class="post-media">
             <div class="u-placeholder same-height rectangle">
@@ -327,9 +324,10 @@ shutdown_timeout = 0
         <span class="post-more">Read More</span>
         <span class="post-time"><time class="post-card-meta-date" datetime="2023-10-14">Oct 14, 2023</time></span>
 
+        
     </footer>
 </a>
-</article>                    <article class="post tag-how-to tag-ubuntu tag-notes tag-hide-soft tag-zh-tw u-shadow">
+</article>                        <article class="post tag-how-to tag-ubuntu tag-notes tag-hide-soft tag-zh-tw u-shadow">
 <a class="post-link" href="/2023/10/install-powerlevel10k-on-ubuntu-zh/">
         <figure class="post-media">
             <div class="u-placeholder same-height rectangle">
@@ -366,9 +364,10 @@ shutdown_timeout = 0
         <span class="post-more">Read More</span>
         <span class="post-time"><time class="post-card-meta-date" datetime="2023-10-13">Oct 13, 2023</time></span>
 
+        
     </footer>
 </a>
-</article>                    <article class="post tag-how-to tag-ubuntu tag-notes tag-en u-shadow">
+</article>                        <article class="post tag-how-to tag-ubuntu tag-notes tag-en u-shadow">
 <a class="post-link" href="/2023/10/install-powerlevel10k-on-ubuntu/">
         <figure class="post-media">
             <div class="u-placeholder same-height rectangle">
@@ -405,21 +404,22 @@ shutdown_timeout = 0
         <span class="post-more">Read More</span>
         <span class="post-time"><time class="post-card-meta-date" datetime="2023-10-13">Oct 13, 2023</time></span>
 
+        
     </footer>
 </a>
-</article>            </div>
-        </section>
-</div>
+</article>                </div>
+            </section>
+        </div>
+
 </main>
+
+
     </div>
 
     <footer class="gh-foot no-menu gh-outer">
         <div class="gh-foot-inner gh-inner">
             <div class="gh-copyright">
                 <a href="https://blog.cmwang.net" rel="noopener">Liberation Notes</a> © 2024
-            </div>
-            <div class="gh-powered-by">
-                <a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a>
             </div>
         </div>
     </footer>
@@ -467,7 +467,7 @@ shutdown_timeout = 0
         </div>
     </div>
 </div>
-<script src="/assets/built/main.min.js?v=cde53fd3c5"></script>
+<script src="/assets/built/main.min.js?v=54eb726606"></script>
 
 <!-- hide footer -->
 <style>
@@ -475,9 +475,6 @@ shutdown_timeout = 0
   display: none;
 }
 
-.gh-powered-by {
-  display: none;
-}
 .gh-footer-copyright {
   display: none;
 }

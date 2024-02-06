@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>💻 iPad上的影片播放器</title>
-    <link rel="stylesheet" href="/assets/built/screen.css?v=cde53fd3c5">
+    <link rel="stylesheet" href="/assets/built/screen.css?v=54eb726606">
 
     <meta name="description" content="本文記錄使用 AVPlayerViewController 製作動態字幕影片的練習筆記">
     <link rel="icon" href="https://blog.cmwang.net/content/images/size/w256h256/2024/01/2-removebg-preview.png" type="image/png">
@@ -88,8 +88,8 @@
     <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="415aa5f59e59c087cacf652d7b" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css" data-sodo-search="https://blog.cmwang.net/" crossorigin="anonymous"></script>
     
     <link href="https://blog.cmwang.net/webmentions/receive/" rel="webmention">
-    <script defer src="/public/cards.min.js?v=cde53fd3c5"></script>
-    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=cde53fd3c5">
+    <script defer src="/public/cards.min.js?v=54eb726606"></script>
+    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=54eb726606">
     <!-- hide search box -->
 <style>
 .gh-search {
@@ -133,7 +133,7 @@
             <nav class="gh-head-menu">
                 <ul class="nav">
     <li class="nav-blog"><a href="https://blog.cmwang.net/">Blog</a></li>
-    <li class="nav-portfolio"><a href="https://blog.cmwang.net/portfolio/">Portfolio</a></li>
+    <li class="nav-contact"><a href="https://blog.cmwang.net/contact/">Contact</a></li>
     <li class="nav-about"><a href="https://blog.cmwang.net/about/">About</a></li>
 </ul>
 
@@ -150,23 +150,19 @@
 <main class="site-main">
 
 
-    <article class="gh-article post tag-swift tag-ios tag-zh-tw">
+        <article class="gh-article post tag-swift tag-ios tag-zh-tw">
 
-        <header class="gh-article-header gh-canvas">
-            <span class="gh-article-meta">
-                By <a href="/author/jamie/">Jamie Wang</a>
-                    in
-                    <a href="/tag/swift/" class="gh-article-tag">Swift</a>, <a href="/tag/ios/" class="gh-article-tag">iOS</a>
-                —
-                <time datetime="2022-03-16">Mar 16, 2022</time>
-                
-                
-            </span>
+            <header class="gh-article-header gh-canvas">
+                <span class="gh-article-meta">
+                        <a href="/tag/swift/" class="gh-article-tag">Swift</a>, <a href="/tag/ios/" class="gh-article-tag">iOS</a>
+                    —
+                    <time datetime="2022-03-16">Mar 16, 2022</time>
+                </span>
 
-            <h1 class="gh-article-title">💻 iPad上的影片播放器</h1>
+                <h1 class="gh-article-title">💻 iPad上的影片播放器</h1>
 
 
-                <figure class="gh-article-image kg-width-wide">
+                    <figure class="gh-article-image kg-width-wide">
         <img
             srcset="https://images.unsplash.com/photo-1625813948790-936f256faea8?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDEwfHxpcGFkJTIwdmlkZW98ZW58MHx8fHwxNzA2NzQ5NTE2fDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;400 400w,
                     https://images.unsplash.com/photo-1625813948790-936f256faea8?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDEwfHxpcGFkJTIwdmlkZW98ZW58MHx8fHwxNzA2NzQ5NTE2fDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;720 720w,
@@ -179,10 +175,10 @@
         >
             <figcaption><span style="white-space: pre-wrap;">Photo by </span><a href="https://unsplash.com/@sci_fi_superfly?utm_source=ghost&amp;utm_medium=referral&amp;utm_campaign=api-credit"><span style="white-space: pre-wrap;">Omar Al-Ghosson</span></a><span style="white-space: pre-wrap;"> / </span><a href="https://unsplash.com/?utm_source=ghost&amp;utm_medium=referral&amp;utm_campaign=api-credit"><span style="white-space: pre-wrap;">Unsplash</span></a></figcaption>
     </figure>
-        </header>
+            </header>
 
-        <div class="gh-content gh-canvas">
-            <p><strong>學習目標：</strong></p><ul><li>AVPlayer</li><li>NotificationCenter</li><li>Timer</li><li>Swift Optional</li><li>Function</li><li>Switch Case</li></ul><p><strong>練習成果：</strong></p><figure class="kg-card kg-embed-card"><iframe src="https://www.youtube.com/embed/qnXX_HtG1sw?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe></figure><p><strong>原始碼：</strong></p>
+            <div class="gh-content gh-canvas">
+                <p><strong>學習目標：</strong></p><ul><li>AVPlayer</li><li>NotificationCenter</li><li>Timer</li><li>Swift Optional</li><li>Function</li><li>Switch Case</li></ul><p><strong>練習成果：</strong></p><figure class="kg-card kg-embed-card"><iframe src="https://www.youtube.com/embed/qnXX_HtG1sw?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe></figure><p><strong>原始碼：</strong></p>
 <!--kg-card-begin: html-->
 <figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://github.com/takawang/letter-song?ref=localhost"><div class="kg-bookmark-content"><div class="kg-bookmark-title">GitHub - takawang/letter-song</div><div class="kg-bookmark-description">Practice storyboard</div><div class="kg-bookmark-metadata"></div></div><div class="kg-bookmark-thumbnail"><img src="https://blog.cmwang.net/content/images/fit/c/160/160/0-necfjz4zslgvih8h.png" alt></div></a></figure>
 <!--kg-card-end: html-->
@@ -191,20 +187,20 @@
 <script src="https://gist.github.com/takawang/c73d99d1f7f5bf0b8601f6843bdf5dc6.js"></script>
 <!--kg-card-end: html-->
 <p><strong>免責聲明：</strong></p><p>影片使用只為了學習目的，沒有營利行為，版權屬於原創作方 <a href="https://www.youtube.com/channel/UCweOkPb1wVVH0Q0Tlj4a5Pw?ref=localhost" rel="noopener">1theK</a>.</p>
-        </div>
+            </div>
 
-    </article>
-
-
+        </article>
 
 
-        <div class="related-wrapper gh-outer">
-        <section class="related-posts gh-inner">
-            <h3 class="related-title">
-                <span class="text">You might also like...</span>
-            </h3>
-            <div class="post-feed">
-                    <article class="post tag-swift tag-ios tag-zh-tw u-shadow">
+
+
+                <div class="related-wrapper gh-outer">
+            <section class="related-posts gh-inner">
+                <h3 class="related-title">
+                    <span class="text">You might also like...</span>
+                </h3>
+                <div class="post-feed">
+                        <article class="post tag-swift tag-ios tag-zh-tw u-shadow">
 <a class="post-link" href="/2022/03/simulated-olympic-rings-drone-light-show/">
         <figure class="post-media">
             <div class="u-placeholder same-height rectangle">
@@ -241,9 +237,10 @@
         <span class="post-more">Read More</span>
         <span class="post-time"><time class="post-card-meta-date" datetime="2022-03-19">Mar 19, 2022</time></span>
 
+        
     </footer>
 </a>
-</article>                    <article class="post tag-swift tag-ios tag-zh-tw u-shadow">
+</article>                        <article class="post tag-swift tag-ios tag-zh-tw u-shadow">
 <a class="post-link" href="/2022/03/replicate-apple-music-ipad-os-app/">
         <figure class="post-media">
             <div class="u-placeholder same-height rectangle">
@@ -280,21 +277,22 @@
         <span class="post-more">Read More</span>
         <span class="post-time"><time class="post-card-meta-date" datetime="2022-03-13">Mar 13, 2022</time></span>
 
+        
     </footer>
 </a>
-</article>            </div>
-        </section>
-</div>
+</article>                </div>
+            </section>
+        </div>
+
 </main>
+
+
     </div>
 
     <footer class="gh-foot no-menu gh-outer">
         <div class="gh-foot-inner gh-inner">
             <div class="gh-copyright">
                 <a href="https://blog.cmwang.net" rel="noopener">Liberation Notes</a> © 2024
-            </div>
-            <div class="gh-powered-by">
-                <a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a>
             </div>
         </div>
     </footer>
@@ -342,7 +340,7 @@
         </div>
     </div>
 </div>
-<script src="/assets/built/main.min.js?v=cde53fd3c5"></script>
+<script src="/assets/built/main.min.js?v=54eb726606"></script>
 
 <!-- hide footer -->
 <style>
@@ -350,9 +348,6 @@
   display: none;
 }
 
-.gh-powered-by {
-  display: none;
-}
 .gh-footer-copyright {
   display: none;
 }

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>📔 為 GitHub Pages 網站設定自訂網域</title>
-    <link rel="stylesheet" href="/assets/built/screen.css?v=cde53fd3c5">
+    <link rel="stylesheet" href="/assets/built/screen.css?v=54eb726606">
 
     <meta name="description" content="這篇文章記錄如何為 Github Page 設定自訂網域，以 Godaddy 為例。">
     <link rel="icon" href="https://blog.cmwang.net/content/images/size/w256h256/2024/01/2-removebg-preview.png" type="image/png">
@@ -89,8 +89,8 @@
     <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="415aa5f59e59c087cacf652d7b" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css" data-sodo-search="https://blog.cmwang.net/" crossorigin="anonymous"></script>
     
     <link href="https://blog.cmwang.net/webmentions/receive/" rel="webmention">
-    <script defer src="/public/cards.min.js?v=cde53fd3c5"></script>
-    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=cde53fd3c5">
+    <script defer src="/public/cards.min.js?v=54eb726606"></script>
+    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=54eb726606">
     <!-- hide search box -->
 <style>
 .gh-search {
@@ -134,7 +134,7 @@
             <nav class="gh-head-menu">
                 <ul class="nav">
     <li class="nav-blog"><a href="https://blog.cmwang.net/">Blog</a></li>
-    <li class="nav-portfolio"><a href="https://blog.cmwang.net/portfolio/">Portfolio</a></li>
+    <li class="nav-contact"><a href="https://blog.cmwang.net/contact/">Contact</a></li>
     <li class="nav-about"><a href="https://blog.cmwang.net/about/">About</a></li>
 </ul>
 
@@ -151,23 +151,19 @@
 <main class="site-main">
 
 
-    <article class="gh-article post tag-how-to tag-web-dev tag-notes tag-hide-soft tag-zh-tw">
+        <article class="gh-article post tag-how-to tag-web-dev tag-notes tag-hide-soft tag-zh-tw">
 
-        <header class="gh-article-header gh-canvas">
-            <span class="gh-article-meta">
-                By <a href="/author/jamie/">Jamie Wang</a>
-                    in
-                    <a href="/tag/how-to/" class="gh-article-tag">How-To</a>, <a href="/tag/web-dev/" class="gh-article-tag">Web Dev</a>, <a href="/tag/notes/" class="gh-article-tag">Notes</a>
-                —
-                <time datetime="2023-10-13">Oct 13, 2023</time>
-                
-                
-            </span>
+            <header class="gh-article-header gh-canvas">
+                <span class="gh-article-meta">
+                        <a href="/tag/how-to/" class="gh-article-tag">How-To</a>, <a href="/tag/web-dev/" class="gh-article-tag">Web Dev</a>, <a href="/tag/notes/" class="gh-article-tag">Notes</a>
+                    —
+                    <time datetime="2023-10-13">Oct 13, 2023</time>
+                </span>
 
-            <h1 class="gh-article-title">📔 為 GitHub Pages 網站設定自訂網域</h1>
+                <h1 class="gh-article-title">📔 為 GitHub Pages 網站設定自訂網域</h1>
 
 
-                <figure class="gh-article-image kg-width-wide">
+                    <figure class="gh-article-image kg-width-wide">
         <img
             srcset="https://images.unsplash.com/photo-1654277041218-84424c78f0ae?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDE2fHxnaXRodWJ8ZW58MHx8fHwxNzA2Nzg4MDA4fDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;400 400w,
                     https://images.unsplash.com/photo-1654277041218-84424c78f0ae?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDE2fHxnaXRodWJ8ZW58MHx8fHwxNzA2Nzg4MDA4fDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;720 720w,
@@ -180,29 +176,29 @@
         >
             <figcaption><span style="white-space: pre-wrap;">Photo by </span><a href="https://unsplash.com/@rubaitulazad?utm_source=ghost&amp;utm_medium=referral&amp;utm_campaign=api-credit"><span style="white-space: pre-wrap;">Rubaitul Azad</span></a><span style="white-space: pre-wrap;"> / </span><a href="https://unsplash.com/?utm_source=ghost&amp;utm_medium=referral&amp;utm_campaign=api-credit"><span style="white-space: pre-wrap;">Unsplash</span></a></figcaption>
     </figure>
-        </header>
+            </header>
 
-        <div class="gh-content gh-canvas">
-            <p>在 Github pages 上設定 CNAME 不用額外付費，只是你需要先擁有一個私人域名。這邊假定我們已經在 <a href="https://www.godaddy.com/?ref=localhost">Godaddy</a> 購買了域名，所以先到 <a href="https://sg.godaddy.com/help/manage-dns-records-680?ref=localhost">Godaddy DNS 設定頁面</a>設定。</p>
+            <div class="gh-content gh-canvas">
+                <p>在 Github pages 上設定 CNAME 不用額外付費，只是你需要先擁有一個私人域名。這邊假定我們已經在 <a href="https://www.godaddy.com/?ref=localhost">Godaddy</a> 購買了域名，所以先到 <a href="https://sg.godaddy.com/help/manage-dns-records-680?ref=localhost">Godaddy DNS 設定頁面</a>設定。</p>
 <p>1. 先透過 Terminal 查詢 Github 的 IP 地址。</p><pre><code class="language-bash">dig xxxx.github.io</code></pre><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://blog.cmwang.net/content/images/2024/02/4.png" class="kg-image" alt loading="lazy" width="746" height="515" srcset="https://blog.cmwang.net/content/images/size/w600/2024/02/4.png 600w, https://blog.cmwang.net/content/images/2024/02/4.png 746w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">dig</span></figcaption></figure><p>2. 到 Godaddy DNS 頁面設定 4 個 <strong>A Record</strong>，1 個 <strong>CNAME Record</strong>，請參考圖片。<br></p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://blog.cmwang.net/content/images/2024/02/3.png" class="kg-image" alt loading="lazy" width="1368" height="681" srcset="https://blog.cmwang.net/content/images/size/w600/2024/02/3.png 600w, https://blog.cmwang.net/content/images/size/w1000/2024/02/3.png 1000w, https://blog.cmwang.net/content/images/2024/02/3.png 1368w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Godaddy Setting</span></figcaption></figure><p>3. 在私人存儲庫中添加 <strong>CNAME</strong> 文件，內容為 <strong>xxx.{Domain Name}</strong>，例如 <strong>blog.xxx.com</strong>。</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://blog.cmwang.net/content/images/2024/02/5.png" class="kg-image" alt loading="lazy" width="847" height="568" srcset="https://blog.cmwang.net/content/images/size/w600/2024/02/5.png 600w, https://blog.cmwang.net/content/images/2024/02/5.png 847w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">CNAME File</span></figcaption></figure><p>4. 在頁面內設定 CNAME 並打勾 <strong>Enforce HTTPS</strong>。</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://blog.cmwang.net/content/images/2024/02/1.png" class="kg-image" alt loading="lazy" width="939" height="712" srcset="https://blog.cmwang.net/content/images/size/w600/2024/02/1.png 600w, https://blog.cmwang.net/content/images/2024/02/1.png 939w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Github Pages</span></figcaption></figure><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://blog.cmwang.net/content/images/2024/02/2.png" class="kg-image" alt loading="lazy" width="941" height="346" srcset="https://blog.cmwang.net/content/images/size/w600/2024/02/2.png 600w, https://blog.cmwang.net/content/images/2024/02/2.png 941w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Custom Domain Setting</span></figcaption></figure><p>需要一點時間才會生效，如果一切都正常，第四步驟的 DNS Check 應該會通過。</p><hr><h2 id="references">References</h2>
 <ul>
 <li><a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site?ref=localhost">Managing a custom domain for your GitHub Pages site</a></li>
 </ul>
 
-        </div>
+            </div>
 
-    </article>
-
-
+        </article>
 
 
-        <div class="related-wrapper gh-outer">
-        <section class="related-posts gh-inner">
-            <h3 class="related-title">
-                <span class="text">You might also like...</span>
-            </h3>
-            <div class="post-feed">
-                    <article class="post tag-how-to tag-docker tag-ubuntu tag-notes tag-en u-shadow">
+
+
+                <div class="related-wrapper gh-outer">
+            <section class="related-posts gh-inner">
+                <h3 class="related-title">
+                    <span class="text">You might also like...</span>
+                </h3>
+                <div class="post-feed">
+                        <article class="post tag-how-to tag-docker tag-ubuntu tag-notes tag-en u-shadow">
 <a class="post-link" href="/2023/10/install-nvidia-docker-for-ubuntu/">
         <figure class="post-media">
             <div class="u-placeholder same-height rectangle">
@@ -239,9 +235,10 @@
         <span class="post-more">Read More</span>
         <span class="post-time"><time class="post-card-meta-date" datetime="2023-10-16">Oct 16, 2023</time></span>
 
+        
     </footer>
 </a>
-</article>                    <article class="post tag-how-to tag-ci tag-docker tag-notes tag-hide-soft tag-zh-tw u-shadow">
+</article>                        <article class="post tag-how-to tag-ci tag-docker tag-notes tag-hide-soft tag-zh-tw u-shadow">
 <a class="post-link" href="/2023/10/install-gitlab-runner-zh/">
         <figure class="post-media">
             <div class="u-placeholder same-height rectangle">
@@ -278,9 +275,10 @@
         <span class="post-more">Read More</span>
         <span class="post-time"><time class="post-card-meta-date" datetime="2023-10-14">Oct 14, 2023</time></span>
 
+        
     </footer>
 </a>
-</article>                    <article class="post tag-how-to tag-ci tag-docker tag-notes tag-en u-shadow">
+</article>                        <article class="post tag-how-to tag-ci tag-docker tag-notes tag-en u-shadow">
 <a class="post-link" href="/2023/10/how-to-setup-gitlab-runner-in-container/">
         <figure class="post-media">
             <div class="u-placeholder same-height rectangle">
@@ -317,9 +315,10 @@
         <span class="post-more">Read More</span>
         <span class="post-time"><time class="post-card-meta-date" datetime="2023-10-14">Oct 14, 2023</time></span>
 
+        
     </footer>
 </a>
-</article>                    <article class="post tag-how-to tag-ubuntu tag-notes tag-hide-soft tag-zh-tw u-shadow">
+</article>                        <article class="post tag-how-to tag-ubuntu tag-notes tag-hide-soft tag-zh-tw u-shadow">
 <a class="post-link" href="/2023/10/install-powerlevel10k-on-ubuntu-zh/">
         <figure class="post-media">
             <div class="u-placeholder same-height rectangle">
@@ -356,21 +355,22 @@
         <span class="post-more">Read More</span>
         <span class="post-time"><time class="post-card-meta-date" datetime="2023-10-13">Oct 13, 2023</time></span>
 
+        
     </footer>
 </a>
-</article>            </div>
-        </section>
-</div>
+</article>                </div>
+            </section>
+        </div>
+
 </main>
+
+
     </div>
 
     <footer class="gh-foot no-menu gh-outer">
         <div class="gh-foot-inner gh-inner">
             <div class="gh-copyright">
                 <a href="https://blog.cmwang.net" rel="noopener">Liberation Notes</a> © 2024
-            </div>
-            <div class="gh-powered-by">
-                <a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a>
             </div>
         </div>
     </footer>
@@ -418,7 +418,7 @@
         </div>
     </div>
 </div>
-<script src="/assets/built/main.min.js?v=cde53fd3c5"></script>
+<script src="/assets/built/main.min.js?v=54eb726606"></script>
 
 <!-- hide footer -->
 <style>
@@ -426,9 +426,6 @@
   display: none;
 }
 
-.gh-powered-by {
-  display: none;
-}
 .gh-footer-copyright {
   display: none;
 }

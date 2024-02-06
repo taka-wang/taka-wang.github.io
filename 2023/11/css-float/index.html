@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>📚 CSS Float</title>
-    <link rel="stylesheet" href="/assets/built/screen.css?v=cde53fd3c5">
+    <link rel="stylesheet" href="/assets/built/screen.css?v=54eb726606">
 
     <meta name="description" content="本文是關於 CSS Float 的精簡筆記">
     <link rel="icon" href="https://blog.cmwang.net/content/images/size/w256h256/2024/01/2-removebg-preview.png" type="image/png">
@@ -89,8 +89,8 @@
     <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="415aa5f59e59c087cacf652d7b" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css" data-sodo-search="https://blog.cmwang.net/" crossorigin="anonymous"></script>
     
     <link href="https://blog.cmwang.net/webmentions/receive/" rel="webmention">
-    <script defer src="/public/cards.min.js?v=cde53fd3c5"></script>
-    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=cde53fd3c5">
+    <script defer src="/public/cards.min.js?v=54eb726606"></script>
+    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=54eb726606">
     <!-- hide search box -->
 <style>
 .gh-search {
@@ -134,7 +134,7 @@
             <nav class="gh-head-menu">
                 <ul class="nav">
     <li class="nav-blog"><a href="https://blog.cmwang.net/">Blog</a></li>
-    <li class="nav-portfolio"><a href="https://blog.cmwang.net/portfolio/">Portfolio</a></li>
+    <li class="nav-contact"><a href="https://blog.cmwang.net/contact/">Contact</a></li>
     <li class="nav-about"><a href="https://blog.cmwang.net/about/">About</a></li>
 </ul>
 
@@ -151,23 +151,19 @@
 <main class="site-main">
 
 
-    <article class="gh-article post tag-css tag-notes tag-web-dev tag-zh-tw">
+        <article class="gh-article post tag-css tag-notes tag-web-dev tag-zh-tw">
 
-        <header class="gh-article-header gh-canvas">
-            <span class="gh-article-meta">
-                By <a href="/author/jamie/">Jamie Wang</a>
-                    in
-                    <a href="/tag/css/" class="gh-article-tag">CSS</a>, <a href="/tag/notes/" class="gh-article-tag">Notes</a>, <a href="/tag/web-dev/" class="gh-article-tag">Web Dev</a>
-                —
-                <time datetime="2023-11-09">Nov 9, 2023</time>
-                
-                
-            </span>
+            <header class="gh-article-header gh-canvas">
+                <span class="gh-article-meta">
+                        <a href="/tag/css/" class="gh-article-tag">CSS</a>, <a href="/tag/notes/" class="gh-article-tag">Notes</a>, <a href="/tag/web-dev/" class="gh-article-tag">Web Dev</a>
+                    —
+                    <time datetime="2023-11-09">Nov 9, 2023</time>
+                </span>
 
-            <h1 class="gh-article-title">📚 CSS Float</h1>
+                <h1 class="gh-article-title">📚 CSS Float</h1>
 
 
-                <figure class="gh-article-image kg-width-wide">
+                    <figure class="gh-article-image kg-width-wide">
         <img
             srcset="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fENTU3xlbnwwfHx8fDE3MDY3OTIwNTJ8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;400 400w,
                     https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fENTU3xlbnwwfHx8fDE3MDY3OTIwNTJ8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;720 720w,
@@ -180,10 +176,10 @@
         >
             <figcaption><span style="white-space: pre-wrap;">Photo by </span><a href="https://unsplash.com/@kobuagency?utm_source=ghost&amp;utm_medium=referral&amp;utm_campaign=api-credit"><span style="white-space: pre-wrap;">KOBU Agency</span></a><span style="white-space: pre-wrap;"> / </span><a href="https://unsplash.com/?utm_source=ghost&amp;utm_medium=referral&amp;utm_campaign=api-credit"><span style="white-space: pre-wrap;">Unsplash</span></a></figcaption>
     </figure>
-        </header>
+            </header>
 
-        <div class="gh-content gh-canvas">
-            <p><img src="https://blog.cmwang.net/content/images/2024/02/float.png" alt="float.png" loading="lazy"></p>
+            <div class="gh-content gh-canvas">
+                <p><img src="https://blog.cmwang.net/content/images/2024/02/float.png" alt="float.png" loading="lazy"></p>
 <p>當你將一個元素的 float 屬性設定為 left 時，它會向左浮動，<strong>脫離正常的文件流</strong>，被移動到其父元素的左邊。其他文件流中的元素會圍繞著浮動元素的周圍進行佈局。浮動元素之後的內容會填充到浮動元素的右側。</p>
 <p>浮動元素的父元素（如果沒有被清除浮動）可能會發生高度塌陷（height collapse），即父元素的高度不會自動地包含浮動元素。這就是所謂的<code>父元素塌陷問題</code>。為了解決這個問題，可以使用 clear 屬性清除浮動。</p>
 <pre><code class="language-CSS">/* 解決 父元素的高度塌陷 */
@@ -203,20 +199,20 @@
 <li><a href="https://javascript.plainenglish.io/working-with-the-float-property-in-css-f73cf7525261?ref=localhost">Working With the Float Property in CSS</a></li>
 </ul>
 
-        </div>
+            </div>
 
-    </article>
-
-
+        </article>
 
 
-        <div class="related-wrapper gh-outer">
-        <section class="related-posts gh-inner">
-            <h3 class="related-title">
-                <span class="text">You might also like...</span>
-            </h3>
-            <div class="post-feed">
-                    <article class="post tag-css tag-visual-learning tag-web-dev tag-notes tag-zh-tw u-shadow">
+
+
+                <div class="related-wrapper gh-outer">
+            <section class="related-posts gh-inner">
+                <h3 class="related-title">
+                    <span class="text">You might also like...</span>
+                </h3>
+                <div class="post-feed">
+                        <article class="post tag-css tag-visual-learning tag-web-dev tag-notes tag-zh-tw u-shadow">
 <a class="post-link" href="/2024/02/the-only-css-layout-guide-youll-ever-need/">
         <figure class="post-media">
             <div class="u-placeholder same-height rectangle">
@@ -253,9 +249,10 @@
         <span class="post-more">Read More</span>
         <span class="post-time"><time class="post-card-meta-date" datetime="2024-02-04">Feb 4, 2024</time></span>
 
+        
     </footer>
 </a>
-</article>                    <article class="post tag-css tag-web-dev tag-notes tag-zh-tw u-shadow">
+</article>                        <article class="post tag-css tag-web-dev tag-notes tag-zh-tw u-shadow">
 <a class="post-link" href="/2023/12/scss-crash-course/">
         <figure class="post-media">
             <div class="u-placeholder same-height rectangle">
@@ -292,9 +289,10 @@
         <span class="post-more">Read More</span>
         <span class="post-time"><time class="post-card-meta-date" datetime="2023-12-25">Dec 25, 2023</time></span>
 
+        
     </footer>
 </a>
-</article>                    <article class="post tag-css tag-visual-learning tag-web-dev tag-notes tag-zh-tw u-shadow">
+</article>                        <article class="post tag-css tag-visual-learning tag-web-dev tag-notes tag-zh-tw u-shadow">
 <a class="post-link" href="/2023/11/learn-css-grid-the-easy-way/">
         <figure class="post-media">
             <div class="u-placeholder same-height rectangle">
@@ -331,9 +329,10 @@
         <span class="post-more">Read More</span>
         <span class="post-time"><time class="post-card-meta-date" datetime="2023-11-30">Nov 30, 2023</time></span>
 
+        
     </footer>
 </a>
-</article>                    <article class="post tag-css tag-web-dev tag-notes tag-zh-tw u-shadow">
+</article>                        <article class="post tag-css tag-web-dev tag-notes tag-zh-tw u-shadow">
 <a class="post-link" href="/2023/11/css-grid/">
         <figure class="post-media">
             <div class="u-placeholder same-height rectangle">
@@ -370,21 +369,22 @@
         <span class="post-more">Read More</span>
         <span class="post-time"><time class="post-card-meta-date" datetime="2023-11-14">Nov 14, 2023</time></span>
 
+        
     </footer>
 </a>
-</article>            </div>
-        </section>
-</div>
+</article>                </div>
+            </section>
+        </div>
+
 </main>
+
+
     </div>
 
     <footer class="gh-foot no-menu gh-outer">
         <div class="gh-foot-inner gh-inner">
             <div class="gh-copyright">
                 <a href="https://blog.cmwang.net" rel="noopener">Liberation Notes</a> © 2024
-            </div>
-            <div class="gh-powered-by">
-                <a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a>
             </div>
         </div>
     </footer>
@@ -432,7 +432,7 @@
         </div>
     </div>
 </div>
-<script src="/assets/built/main.min.js?v=cde53fd3c5"></script>
+<script src="/assets/built/main.min.js?v=54eb726606"></script>
 
 <!-- hide footer -->
 <style>
@@ -440,9 +440,6 @@
   display: none;
 }
 
-.gh-powered-by {
-  display: none;
-}
 .gh-footer-copyright {
   display: none;
 }

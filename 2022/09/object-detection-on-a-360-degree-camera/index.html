@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Object detection on a 360 degree camera</title>
-    <link rel="stylesheet" href="/assets/built/screen.css?v=cde53fd3c5">
+    <link rel="stylesheet" href="/assets/built/screen.css?v=54eb726606">
 
     <meta name="description" content="We get this question a lot from customers: “What kind of cameras should I acquire?” Is it possible to detect objects while using a GoPro or other 360-degree camera with Nilvana™ vision studio? The…">
     <link rel="icon" href="https://blog.cmwang.net/content/images/size/w256h256/2024/01/2-removebg-preview.png" type="image/png">
@@ -89,8 +89,8 @@
     <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="415aa5f59e59c087cacf652d7b" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css" data-sodo-search="https://blog.cmwang.net/" crossorigin="anonymous"></script>
     
     <link href="https://blog.cmwang.net/webmentions/receive/" rel="webmention">
-    <script defer src="/public/cards.min.js?v=cde53fd3c5"></script>
-    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=cde53fd3c5">
+    <script defer src="/public/cards.min.js?v=54eb726606"></script>
+    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=54eb726606">
     <!-- hide search box -->
 <style>
 .gh-search {
@@ -134,7 +134,7 @@
             <nav class="gh-head-menu">
                 <ul class="nav">
     <li class="nav-blog"><a href="https://blog.cmwang.net/">Blog</a></li>
-    <li class="nav-portfolio"><a href="https://blog.cmwang.net/portfolio/">Portfolio</a></li>
+    <li class="nav-contact"><a href="https://blog.cmwang.net/contact/">Contact</a></li>
     <li class="nav-about"><a href="https://blog.cmwang.net/about/">About</a></li>
 </ul>
 
@@ -151,23 +151,19 @@
 <main class="site-main">
 
 
-    <article class="gh-article post tag-object-detection tag-computer-vision tag-ai tag-en">
+        <article class="gh-article post tag-object-detection tag-computer-vision tag-ai tag-en">
 
-        <header class="gh-article-header gh-canvas">
-            <span class="gh-article-meta">
-                By <a href="/author/jamie/">Jamie Wang</a>
-                    in
-                    <a href="/tag/object-detection/" class="gh-article-tag">Object Detection</a>, <a href="/tag/computer-vision/" class="gh-article-tag">Computer Vision</a>, <a href="/tag/ai/" class="gh-article-tag">AI</a>
-                —
-                <time datetime="2022-09-07">Sep 7, 2022</time>
-                
-                
-            </span>
+            <header class="gh-article-header gh-canvas">
+                <span class="gh-article-meta">
+                        <a href="/tag/object-detection/" class="gh-article-tag">Object Detection</a>, <a href="/tag/computer-vision/" class="gh-article-tag">Computer Vision</a>, <a href="/tag/ai/" class="gh-article-tag">AI</a>
+                    —
+                    <time datetime="2022-09-07">Sep 7, 2022</time>
+                </span>
 
-            <h1 class="gh-article-title">Object detection on a 360 degree camera</h1>
+                <h1 class="gh-article-title">Object detection on a 360 degree camera</h1>
 
 
-                <figure class="gh-article-image kg-width-wide">
+                    <figure class="gh-article-image kg-width-wide">
         <img
             srcset="/content/images/size/w400/max/800/1-akdt9gxneokjpcdchodnoq.jpg 400w,
                     /content/images/size/w720/max/800/1-akdt9gxneokjpcdchodnoq.jpg 720w,
@@ -180,24 +176,24 @@
         >
             <figcaption><span style="white-space: pre-wrap;">Image from diyphotography.</span></figcaption>
     </figure>
-        </header>
+            </header>
 
-        <div class="gh-content gh-canvas">
-            <h3 id="object-detection-on-a-360-degree-camera">Object Detection on a 360 degree camera</h3><p>We get this question a lot from customers: “What kind of cameras should I acquire?” Is it possible to detect objects while using a GoPro or other 360-degree camera with <strong>Nilvana™ vision studio</strong>? The simple answer is that as long as you use the same camera to collect photos and the same device to perform model inference, you don’t need to care about the type of cameras you use.</p><p>Due to the necessity of traveling throughout Taiwan, our colleague Sam Li just bought the <a href="https://www.insta360.com/fr/product/insta360-oners/1inch-360?ref=localhost" rel="noopener">Insta360 One RS 1-inch</a>, the company’s first 360 camera with two 1-inch CMOS sensors. I think that will result in extremely good image quality performance, we wish him a safe journey.</p><figure class="kg-card kg-image-card"><img src="https://blog.cmwang.net/content/images/max/800/1-fuokuvzhf7ec5jt0ajqjna.gif" class="kg-image" alt loading="lazy" width="638" height="385" srcset="https://blog.cmwang.net/content/images/size/w600/max/800/1-fuokuvzhf7ec5jt0ajqjna.gif 600w, https://blog.cmwang.net/content/images/max/800/1-fuokuvzhf7ec5jt0ajqjna.gif 638w"></figure><p>Sam really used this camera to gather a lot of real road vehicle condition videos for the vehicle counting toolkit that will be released next month, so keep an eye out for that.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://blog.cmwang.net/content/images/max/800/1-ker9jficq_gl5ylppcfx0q.png" class="kg-image" alt loading="lazy" width="800" height="450" srcset="https://blog.cmwang.net/content/images/size/w600/max/800/1-ker9jficq_gl5ylppcfx0q.png 600w, https://blog.cmwang.net/content/images/max/800/1-ker9jficq_gl5ylppcfx0q.png 800w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Vehicle Counting Toolkit is coming&nbsp;soon!!</span></figcaption></figure><p>Finally, a video of the actual inference of the insta360 video is presented for your reference. It would be great to see more compelling application cases on a 360-degree camera.</p><figure class="kg-card kg-embed-card kg-card-hascaption"><iframe src="https://www.youtube.com/embed/wi_HJ9aobJQ?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe><figcaption><p><span style="white-space: pre-wrap;">Object detection in action 🚀</span></p></figcaption></figure>
-        </div>
+            <div class="gh-content gh-canvas">
+                <h3 id="object-detection-on-a-360-degree-camera">Object Detection on a 360 degree camera</h3><p>We get this question a lot from customers: “What kind of cameras should I acquire?” Is it possible to detect objects while using a GoPro or other 360-degree camera with <strong>Nilvana™ vision studio</strong>? The simple answer is that as long as you use the same camera to collect photos and the same device to perform model inference, you don’t need to care about the type of cameras you use.</p><p>Due to the necessity of traveling throughout Taiwan, our colleague Sam Li just bought the <a href="https://www.insta360.com/fr/product/insta360-oners/1inch-360?ref=localhost" rel="noopener">Insta360 One RS 1-inch</a>, the company’s first 360 camera with two 1-inch CMOS sensors. I think that will result in extremely good image quality performance, we wish him a safe journey.</p><figure class="kg-card kg-image-card"><img src="https://blog.cmwang.net/content/images/max/800/1-fuokuvzhf7ec5jt0ajqjna.gif" class="kg-image" alt loading="lazy" width="638" height="385" srcset="https://blog.cmwang.net/content/images/size/w600/max/800/1-fuokuvzhf7ec5jt0ajqjna.gif 600w, https://blog.cmwang.net/content/images/max/800/1-fuokuvzhf7ec5jt0ajqjna.gif 638w"></figure><p>Sam really used this camera to gather a lot of real road vehicle condition videos for the vehicle counting toolkit that will be released next month, so keep an eye out for that.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://blog.cmwang.net/content/images/max/800/1-ker9jficq_gl5ylppcfx0q.png" class="kg-image" alt loading="lazy" width="800" height="450" srcset="https://blog.cmwang.net/content/images/size/w600/max/800/1-ker9jficq_gl5ylppcfx0q.png 600w, https://blog.cmwang.net/content/images/max/800/1-ker9jficq_gl5ylppcfx0q.png 800w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Vehicle Counting Toolkit is coming&nbsp;soon!!</span></figcaption></figure><p>Finally, a video of the actual inference of the insta360 video is presented for your reference. It would be great to see more compelling application cases on a 360-degree camera.</p><figure class="kg-card kg-embed-card kg-card-hascaption"><iframe src="https://www.youtube.com/embed/wi_HJ9aobJQ?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe><figcaption><p><span style="white-space: pre-wrap;">Object detection in action 🚀</span></p></figcaption></figure>
+            </div>
 
-    </article>
-
-
+        </article>
 
 
-        <div class="related-wrapper gh-outer">
-        <section class="related-posts gh-inner">
-            <h3 class="related-title">
-                <span class="text">You might also like...</span>
-            </h3>
-            <div class="post-feed">
-                    <article class="post tag-object-detection tag-computer-vision tag-ai tag-en u-shadow">
+
+
+                <div class="related-wrapper gh-outer">
+            <section class="related-posts gh-inner">
+                <h3 class="related-title">
+                    <span class="text">You might also like...</span>
+                </h3>
+                <div class="post-feed">
+                        <article class="post tag-object-detection tag-computer-vision tag-ai tag-en u-shadow">
 <a class="post-link" href="/2022/09/make-your-own-pig-counter/">
         <figure class="post-media">
             <div class="u-placeholder same-height rectangle">
@@ -234,9 +230,10 @@
         <span class="post-more">Read More</span>
         <span class="post-time"><time class="post-card-meta-date" datetime="2022-09-15">Sep 15, 2022</time></span>
 
+        
     </footer>
 </a>
-</article>                    <article class="post tag-object-detection tag-computer-vision tag-ai tag-en u-shadow">
+</article>                        <article class="post tag-object-detection tag-computer-vision tag-ai tag-en u-shadow">
 <a class="post-link" href="/2022/09/object-detection-from-the-video-taken-by-drone/">
         <figure class="post-media">
             <div class="u-placeholder same-height rectangle">
@@ -273,9 +270,10 @@
         <span class="post-more">Read More</span>
         <span class="post-time"><time class="post-card-meta-date" datetime="2022-09-13">Sep 13, 2022</time></span>
 
+        
     </footer>
 </a>
-</article>                    <article class="post tag-object-detection tag-ai tag-ios tag-en featured u-shadow">
+</article>                        <article class="post tag-object-detection tag-ai tag-ios tag-en featured u-shadow">
 <a class="post-link" href="/2022/08/execute-yolov7-model-on-ios-devices/">
             <img
                 class="post-image u-object-fit"
@@ -302,9 +300,10 @@
         <span class="post-more">Read More</span>
         <span class="post-time"><time class="post-card-meta-date" datetime="2022-08-06">Aug 6, 2022</time></span>
 
+        
     </footer>
 </a>
-</article>                    <article class="post tag-object-detection tag-computer-vision tag-ai tag-en u-shadow">
+</article>                        <article class="post tag-object-detection tag-computer-vision tag-ai tag-en u-shadow">
 <a class="post-link" href="/2022/07/performance-benchmarking-of-yolov7-tensorrt-from-cloud-gpus-to-edge-gpus/">
         <figure class="post-media">
             <div class="u-placeholder same-height rectangle">
@@ -341,21 +340,22 @@
         <span class="post-more">Read More</span>
         <span class="post-time"><time class="post-card-meta-date" datetime="2022-07-25">Jul 25, 2022</time></span>
 
+        
     </footer>
 </a>
-</article>            </div>
-        </section>
-</div>
+</article>                </div>
+            </section>
+        </div>
+
 </main>
+
+
     </div>
 
     <footer class="gh-foot no-menu gh-outer">
         <div class="gh-foot-inner gh-inner">
             <div class="gh-copyright">
                 <a href="https://blog.cmwang.net" rel="noopener">Liberation Notes</a> © 2024
-            </div>
-            <div class="gh-powered-by">
-                <a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a>
             </div>
         </div>
     </footer>
@@ -403,7 +403,7 @@
         </div>
     </div>
 </div>
-<script src="/assets/built/main.min.js?v=cde53fd3c5"></script>
+<script src="/assets/built/main.min.js?v=54eb726606"></script>
 
 <!-- hide footer -->
 <style>
@@ -411,9 +411,6 @@
   display: none;
 }
 
-.gh-powered-by {
-  display: none;
-}
 .gh-footer-copyright {
   display: none;
 }

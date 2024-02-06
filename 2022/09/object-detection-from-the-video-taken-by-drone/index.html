@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Object Detection from the Video Taken by Drone</title>
-    <link rel="stylesheet" href="/assets/built/screen.css?v=cde53fd3c5">
+    <link rel="stylesheet" href="/assets/built/screen.css?v=54eb726606">
 
     <meta name="description" content="In the last article from hello nilvana, we learned how to import the VisDrone dataset into Nilvana™ Vision Studio. It’s not that difficult, just follow the instructions or ask us for help. If you…">
     <link rel="icon" href="https://blog.cmwang.net/content/images/size/w256h256/2024/01/2-removebg-preview.png" type="image/png">
@@ -89,8 +89,8 @@
     <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="415aa5f59e59c087cacf652d7b" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css" data-sodo-search="https://blog.cmwang.net/" crossorigin="anonymous"></script>
     
     <link href="https://blog.cmwang.net/webmentions/receive/" rel="webmention">
-    <script defer src="/public/cards.min.js?v=cde53fd3c5"></script>
-    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=cde53fd3c5">
+    <script defer src="/public/cards.min.js?v=54eb726606"></script>
+    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=54eb726606">
     <!-- hide search box -->
 <style>
 .gh-search {
@@ -134,7 +134,7 @@
             <nav class="gh-head-menu">
                 <ul class="nav">
     <li class="nav-blog"><a href="https://blog.cmwang.net/">Blog</a></li>
-    <li class="nav-portfolio"><a href="https://blog.cmwang.net/portfolio/">Portfolio</a></li>
+    <li class="nav-contact"><a href="https://blog.cmwang.net/contact/">Contact</a></li>
     <li class="nav-about"><a href="https://blog.cmwang.net/about/">About</a></li>
 </ul>
 
@@ -151,23 +151,19 @@
 <main class="site-main">
 
 
-    <article class="gh-article post tag-object-detection tag-computer-vision tag-ai tag-en">
+        <article class="gh-article post tag-object-detection tag-computer-vision tag-ai tag-en">
 
-        <header class="gh-article-header gh-canvas">
-            <span class="gh-article-meta">
-                By <a href="/author/jamie/">Jamie Wang</a>
-                    in
-                    <a href="/tag/object-detection/" class="gh-article-tag">Object Detection</a>, <a href="/tag/computer-vision/" class="gh-article-tag">Computer Vision</a>, <a href="/tag/ai/" class="gh-article-tag">AI</a>
-                —
-                <time datetime="2022-09-13">Sep 13, 2022</time>
-                
-                
-            </span>
+            <header class="gh-article-header gh-canvas">
+                <span class="gh-article-meta">
+                        <a href="/tag/object-detection/" class="gh-article-tag">Object Detection</a>, <a href="/tag/computer-vision/" class="gh-article-tag">Computer Vision</a>, <a href="/tag/ai/" class="gh-article-tag">AI</a>
+                    —
+                    <time datetime="2022-09-13">Sep 13, 2022</time>
+                </span>
 
-            <h1 class="gh-article-title">Object Detection from the Video Taken by Drone</h1>
+                <h1 class="gh-article-title">Object Detection from the Video Taken by Drone</h1>
 
 
-                <figure class="gh-article-image kg-width-wide">
+                    <figure class="gh-article-image kg-width-wide">
         <img
             srcset="/content/images/size/w400/max/800/1-4hcxr7y6b8vdvqo31il38g.jpg 400w,
                     /content/images/size/w720/max/800/1-4hcxr7y6b8vdvqo31il38g.jpg 720w,
@@ -180,28 +176,28 @@
         >
             <figcaption><span style="white-space: pre-wrap;">Photo by </span><a href="https://unsplash.com/@aaronburden?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener"><span style="white-space: pre-wrap;">Aaron Burden</span></a><span style="white-space: pre-wrap;"> on&nbsp;</span><a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener"><span style="white-space: pre-wrap;">Unsplash</span></a></figcaption>
     </figure>
-        </header>
+            </header>
 
-        <div class="gh-content gh-canvas">
-            <p>In the last article, we learned how to import the <a href="http://aiskyeye.com/?ref=localhost" rel="noopener">VisDrone dataset</a> into Nilvana<strong>™</strong> Vision Studio. It’s not that difficult, just follow the instructions or ask us for help. If you have not read it yet, you definitely have to!</p>
+            <div class="gh-content gh-canvas">
+                <p>In the last article, we learned how to import the <a href="http://aiskyeye.com/?ref=localhost" rel="noopener">VisDrone dataset</a> into Nilvana<strong>™</strong> Vision Studio. It’s not that difficult, just follow the instructions or ask us for help. If you have not read it yet, you definitely have to!</p>
 <!--kg-card-begin: html-->
 <figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://link.medium.com/0pZ5J3tCftb?ref=localhost"><div class="kg-bookmark-content"><div class="kg-bookmark-title">VisDrone Datasets - Nilavna Vision Studio</div><div class="kg-bookmark-description">今日要分享的是，如何將目前 VisDrone 的照片資料集透過 Nilvana™ Vision Studio 進行匯入，方便日後進行模型的訓練。</div><div class="kg-bookmark-metadata"></div></div><div class="kg-bookmark-thumbnail"><img src="https://blog.cmwang.net/content/images/fit/c/160/160/0-worej9bweqrri1bg.png" alt></div></a></figure>
 <!--kg-card-end: html-->
 <p>As you can see in the Vision Studio screenshots below, you can clearly see the 10 categories annotated in the images. Some time ago I found a beautiful video — <a href="https://youtu.be/yXEb0fWLJIY?ref=localhost" rel="noopener"><strong>World’s longest drone fpv one shot</strong></a> made by <a href="https://newstepmedia.net/?ref=localhost" rel="noopener">New Step Media</a> on Youtube. I found that there are a lot of indoor scenes that are very suitable for adding the COCO dataset based on the visdrone dataset, so I used this combined dataset to train a object detector. In case you didn’t already know, Nilvana<strong>™</strong> Vision Studio has an intuitive web interface that makes it easy to <strong>merge annotation data</strong> or <strong>categories</strong> from different datasets with a few mouse clicks.</p><figure class="kg-card kg-gallery-card kg-width-wide kg-card-hascaption"><div class="kg-gallery-container"><div class="kg-gallery-row"><div class="kg-gallery-image"><img src="https://blog.cmwang.net/content/images/max/1000/1-hsvqcqt8rvoqfztapf_yra.png" width="1756" height="938" loading="lazy" alt srcset="https://blog.cmwang.net/content/images/size/w600/max/1000/1-hsvqcqt8rvoqfztapf_yra.png 600w, https://blog.cmwang.net/content/images/size/w1000/max/1000/1-hsvqcqt8rvoqfztapf_yra.png 1000w, https://blog.cmwang.net/content/images/size/w1600/max/1000/1-hsvqcqt8rvoqfztapf_yra.png 1600w, https://blog.cmwang.net/content/images/max/1000/1-hsvqcqt8rvoqfztapf_yra.png 1756w" sizes="(min-width: 720px) 720px"></div><div class="kg-gallery-image"><img src="https://blog.cmwang.net/content/images/max/400/1-qhif2slonafquakcfivdwg.png" width="619" height="907" loading="lazy" alt srcset="https://blog.cmwang.net/content/images/size/w600/max/400/1-qhif2slonafquakcfivdwg.png 600w, https://blog.cmwang.net/content/images/max/400/1-qhif2slonafquakcfivdwg.png 619w"></div></div></div><figcaption><p><span style="white-space: pre-wrap;">Visdrone dataset on Nilvana</span><b><strong style="white-space: pre-wrap;">™</strong></b><span style="white-space: pre-wrap;"> Vision&nbsp;Studio</span></p></figcaption></figure><p>You can watch the finished video below. Kudos to <a href="https://newstepmedia.net/?ref=localhost" rel="noopener">New Step Media</a> for creating such a stunning aerial video. Ownership of the original video belongs to <a href="https://newstepmedia.net/?ref=localhost" rel="noopener">New Step Media</a>.</p><figure class="kg-card kg-embed-card kg-card-hascaption"><iframe src="https://www.youtube.com/embed/-sPxNKfXasU?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe><figcaption><p><span style="white-space: pre-wrap;">Drone video object detection</span></p></figcaption></figure>
-        </div>
+            </div>
 
-    </article>
-
-
+        </article>
 
 
-        <div class="related-wrapper gh-outer">
-        <section class="related-posts gh-inner">
-            <h3 class="related-title">
-                <span class="text">You might also like...</span>
-            </h3>
-            <div class="post-feed">
-                    <article class="post tag-object-detection tag-computer-vision tag-ai tag-en u-shadow">
+
+
+                <div class="related-wrapper gh-outer">
+            <section class="related-posts gh-inner">
+                <h3 class="related-title">
+                    <span class="text">You might also like...</span>
+                </h3>
+                <div class="post-feed">
+                        <article class="post tag-object-detection tag-computer-vision tag-ai tag-en u-shadow">
 <a class="post-link" href="/2022/09/make-your-own-pig-counter/">
         <figure class="post-media">
             <div class="u-placeholder same-height rectangle">
@@ -238,9 +234,10 @@
         <span class="post-more">Read More</span>
         <span class="post-time"><time class="post-card-meta-date" datetime="2022-09-15">Sep 15, 2022</time></span>
 
+        
     </footer>
 </a>
-</article>                    <article class="post tag-object-detection tag-computer-vision tag-ai tag-en u-shadow">
+</article>                        <article class="post tag-object-detection tag-computer-vision tag-ai tag-en u-shadow">
 <a class="post-link" href="/2022/09/object-detection-on-a-360-degree-camera/">
         <figure class="post-media">
             <div class="u-placeholder same-height rectangle">
@@ -277,9 +274,10 @@
         <span class="post-more">Read More</span>
         <span class="post-time"><time class="post-card-meta-date" datetime="2022-09-07">Sep 7, 2022</time></span>
 
+        
     </footer>
 </a>
-</article>                    <article class="post tag-object-detection tag-ai tag-ios tag-en featured u-shadow">
+</article>                        <article class="post tag-object-detection tag-ai tag-ios tag-en featured u-shadow">
 <a class="post-link" href="/2022/08/execute-yolov7-model-on-ios-devices/">
             <img
                 class="post-image u-object-fit"
@@ -306,9 +304,10 @@
         <span class="post-more">Read More</span>
         <span class="post-time"><time class="post-card-meta-date" datetime="2022-08-06">Aug 6, 2022</time></span>
 
+        
     </footer>
 </a>
-</article>                    <article class="post tag-object-detection tag-computer-vision tag-ai tag-en u-shadow">
+</article>                        <article class="post tag-object-detection tag-computer-vision tag-ai tag-en u-shadow">
 <a class="post-link" href="/2022/07/performance-benchmarking-of-yolov7-tensorrt-from-cloud-gpus-to-edge-gpus/">
         <figure class="post-media">
             <div class="u-placeholder same-height rectangle">
@@ -345,21 +344,22 @@
         <span class="post-more">Read More</span>
         <span class="post-time"><time class="post-card-meta-date" datetime="2022-07-25">Jul 25, 2022</time></span>
 
+        
     </footer>
 </a>
-</article>            </div>
-        </section>
-</div>
+</article>                </div>
+            </section>
+        </div>
+
 </main>
+
+
     </div>
 
     <footer class="gh-foot no-menu gh-outer">
         <div class="gh-foot-inner gh-inner">
             <div class="gh-copyright">
                 <a href="https://blog.cmwang.net" rel="noopener">Liberation Notes</a> © 2024
-            </div>
-            <div class="gh-powered-by">
-                <a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a>
             </div>
         </div>
     </footer>
@@ -407,7 +407,7 @@
         </div>
     </div>
 </div>
-<script src="/assets/built/main.min.js?v=cde53fd3c5"></script>
+<script src="/assets/built/main.min.js?v=54eb726606"></script>
 
 <!-- hide footer -->
 <style>
@@ -415,9 +415,6 @@
   display: none;
 }
 
-.gh-powered-by {
-  display: none;
-}
 .gh-footer-copyright {
   display: none;
 }
