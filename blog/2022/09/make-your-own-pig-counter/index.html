@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Make your own pig counter</title>
+    <link rel="stylesheet" href="/assets/built/screen.css?v=fd67f965e9">
+
+    <meta name="description" content="“Pork meat is a good source of proteins since their quality is high biological value and has all required amino-acids to promote simple absorption by the organism,” says nutritionist Magnolia…">
+    <link rel="icon" href="https://cmwang.net/content/images/size/w256h256/2024/01/2-removebg-preview.png" type="image/png">
+    <link rel="canonical" href="https://cmwang.net/blog/2022/09/make-your-own-pig-counter/">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta property="og:site_name" content="Liberation Notes">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Make your own pig counter">
+    <meta property="og:description" content="In this article, I’ll show you how to create a basic pig counter using vision studio and inference runtime.">
+    <meta property="og:url" content="https://cmwang.net/blog/2022/09/make-your-own-pig-counter/">
+    <meta property="og:image" content="https://cmwang.net/content/images/v2/resize:fit:1200/1-g2dy2xyioybolnrapwaxvg.jpg">
+    <meta property="article:published_time" content="2022-09-15T08:01:11.000Z">
+    <meta property="article:modified_time" content="2024-01-31T23:06:10.000Z">
+    <meta property="article:tag" content="Object Detection">
+    <meta property="article:tag" content="Computer Vision">
+    <meta property="article:tag" content="AI">
+    
+    <meta property="article:publisher" content="https://www.facebook.com/ghost">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Make your own pig counter">
+    <meta name="twitter:description" content="In this article, I’ll show you how to create a basic pig counter using vision studio and inference runtime.">
+    <meta name="twitter:url" content="https://cmwang.net/blog/2022/09/make-your-own-pig-counter/">
+    <meta name="twitter:image" content="https://cmwang.net/content/images/v2/resize:fit:1200/1-g2dy2xyioybolnrapwaxvg.jpg">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Jamie Wang">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="Object Detection, Computer Vision, AI">
+    <meta name="twitter:site" content="@ghost">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="798">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Liberation Notes",
+        "url": "https://cmwang.net/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://cmwang.net/content/images/size/w256h256/2024/01/2-removebg-preview.png",
+            "width": 60,
+            "height": 60
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Jamie Wang",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://cmwang.net/content/images/2024/01/jamie2.jpg",
+            "width": 1200,
+            "height": 1200
+        },
+        "url": "https://cmwang.net/author/jamie/",
+        "sameAs": [
+            "https://blog.cmwang.net"
+        ]
+    },
+    "headline": "Make your own pig counter",
+    "url": "https://cmwang.net/blog/2022/09/make-your-own-pig-counter/",
+    "datePublished": "2022-09-15T08:01:11.000Z",
+    "dateModified": "2024-01-31T23:06:10.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://cmwang.net/content/images/max/800/1-g2dy2xyioybolnrapwaxvg.jpg",
+        "width": 800,
+        "height": 532
+    },
+    "keywords": "Object Detection, Computer Vision, AI",
+    "description": "In this article, I’ll show you how to create a basic pig counter using vision studio and inference runtime.",
+    "mainEntityOfPage": "https://cmwang.net/blog/2022/09/make-your-own-pig-counter/"
+}
+    </script>
+
+    <meta name="generator" content="Ghost 5.78">
+    <link rel="alternate" type="application/rss+xml" title="Liberation Notes" href="https://cmwang.net/rss/">
+    
+    <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="415aa5f59e59c087cacf652d7b" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css" data-sodo-search="https://cmwang.net/" crossorigin="anonymous"></script>
+    
+    <link href="https://cmwang.net/webmentions/receive/" rel="webmention">
+    <script defer src="/public/cards.min.js?v=fd67f965e9"></script>
+    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=fd67f965e9">
+    <!-- hide search box -->
+<style>
+.gh-search {
+  display: none !important;
+}
+</style>
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G9WYYRMSWH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G9WYYRMSWH');
+</script>
+
+<!-- prism.js -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" integrity="sha512-vswe+cgvic/XBoF1OcM/TeJ2FW0OofqAVdCZiEYkd6dwGXthvkSFWOoGGJgS2CW70VK5dQM5Oh+7ne47s74VTg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css" integrity="sha512-Dqf5696xtofgH089BgZJo2lSWTvev4GFo+gA2o4GullFY65rzQVQLQVlzLvYwTo0Bb2Gpb6IqwxYWtoMonfdhQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>:root {--ghost-accent-color: #D63484;}</style>
+</head>
+
+<body class="post-template tag-object-detection tag-computer-vision tag-ai tag-en is-head-left-logo">
+<div class="gh-site">
+
+    <header id="gh-head" class="gh-head gh-outer">
+        <div class="gh-head-inner gh-inner">
+            <div class="gh-head-brand">
+                <div class="gh-head-brand-wrapper">
+                    <a class="gh-head-logo" href="https://cmwang.net">
+                            Liberation Notes
+                    </a>
+                </div>
+                <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+                <button class="gh-burger"></button>
+            </div>
+
+            <nav class="gh-head-menu">
+                <ul class="nav">
+    <li class="nav-blog"><a href="https://cmwang.net/">Blog</a></li>
+    <li class="nav-contact"><a href="https://cmwang.net/contact/">Contact</a></li>
+    <li class="nav-about"><a href="https://cmwang.net/about/">About</a></li>
+</ul>
+
+            </nav>
+
+            <div class="gh-head-actions">
+                        <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="site-content">
+        
+<main class="site-main">
+
+
+        <article class="gh-article post tag-object-detection tag-computer-vision tag-ai tag-en">
+
+            <header class="gh-article-header gh-canvas">
+                <span class="gh-article-meta">
+                        <a href="/tag/object-detection/" class="gh-article-tag">Object Detection</a>, <a href="/tag/computer-vision/" class="gh-article-tag">Computer Vision</a>, <a href="/tag/ai/" class="gh-article-tag">AI</a>
+                    —
+                    <time datetime="2022-09-15">Sep 15, 2022</time>
+                </span>
+
+                <h1 class="gh-article-title">Make your own pig counter</h1>
+
+
+                    <figure class="gh-article-image kg-width-wide">
+        <img
+            srcset="/content/images/size/w400/max/800/1-g2dy2xyioybolnrapwaxvg.jpg 400w,
+                    /content/images/size/w720/max/800/1-g2dy2xyioybolnrapwaxvg.jpg 720w,
+                    /content/images/size/w960/max/800/1-g2dy2xyioybolnrapwaxvg.jpg 960w,
+                    /content/images/size/w1200/max/800/1-g2dy2xyioybolnrapwaxvg.jpg 1200w,
+                    /content/images/size/w2000/max/800/1-g2dy2xyioybolnrapwaxvg.jpg 2000w"
+            sizes="(max-width: 1200px) 100vw, 1200px"
+            src="/content/images/size/w1200/max/800/1-g2dy2xyioybolnrapwaxvg.jpg"
+            alt="Make your own pig counter"
+        >
+            <figcaption><span style="white-space: pre-wrap;">Photo by </span><a href="https://unsplash.com/@bhris1017?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener"><span style="white-space: pre-wrap;">Christopher Carson</span></a><span style="white-space: pre-wrap;"> on&nbsp;</span><a href="https://unsplash.com/s/photos/pig?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener"><span style="white-space: pre-wrap;">Unsplash</span></a></figcaption>
+    </figure>
+            </header>
+
+            <div class="gh-content gh-canvas">
+                <h3 id="make-your-own-pig-counter-%F0%9F%90%B7">Make your own pig counter 🐷</h3><p>“Pork meat is a good source of proteins since their quality is high biological value and has all required amino-acids to promote simple absorption by the organism,” says nutritionist Magnolia Escobar. Its meat has a high degree of or rate of digestibility, which can reach 92%, and is more similar to white meat than red meat. But how does artificial intelligence relate to the pig <strong>breeding industry</strong>? Can artificial intelligence and computer vision boost the breeding industry’s output? We’ll put on a quick demonstration in this post. No offense to vegans, but this is only an illustration. We all love Peppa Pig 🐽.</p><p>In this article, I’ll show you how to create a basic pig counter using vision studio and inference runtime. You must first realize that <strong>object detection</strong> and <strong>object tracking</strong> are two distinct ideas. Finding the class and coordinates of objects in a given frame is the goal of object detection, whereas associating objects in a series of frames is the goal of object tracking. Our toolkits can assist you in solving the object detection issue, and the OpenCV library has at least seven pre-made object tracking methods that you can employ as necessary.</p>
+<!--kg-card-begin: html-->
+<figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://docs.opencv.org/4.6.0/d2/d0a/tutorial_introduction_to_tracker.html?ref=localhost"><div class="kg-bookmark-content"><div class="kg-bookmark-title">OpenCV: Introduction to OpenCV Tracker</div><div class="kg-bookmark-description">In this tutorial you will learn how to Create a tracker object. Use the roi Selector function to select a ROI from a…</div><div class="kg-bookmark-metadata"></div></div><div class="kg-bookmark-thumbnail"><img src="https://cmwang.net/content/images/fit/c/160/160/0-rcm5nzhymkic4psy.png" alt></div></a></figure>
+<!--kg-card-end: html-->
+<p>To build a pig detection model, we must first collect photos of pigs for labeling. We can find the labeled photos of pigs from this paper — <a href="https://arxiv.org/abs/2111.10971?ref=localhost" rel="noopener">Tracking Grow-Finish Pigs Across Large Pens Using Multiple Cameras</a>. Sincere thanks to The <a href="https://ansc.illinois.edu/about/facilities/imported-swine-research-laboratory?ref=localhost" rel="noopener">Imported Swine Research Laboratory</a> (ISRL). Then we can import the dataset into vision studio for model creation.</p>
+<!--kg-card-begin: html-->
+<figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://drive.google.com/drive/folders/1E2wW2aRENgy_TqlzfICn58ahbTHVIaK6?usp=sharing&ref=localhost"><div class="kg-bookmark-content"><div class="kg-bookmark-title">ISRL Multi-Camera Tracking Dataset - Google Drive</div><div class="kg-bookmark-description">Edit description</div><div class="kg-bookmark-metadata"></div></div><div class="kg-bookmark-thumbnail"><img src="https://cmwang.net/content/images/fit/c/160/160/0-akzefkxu7-8d39iz.png" alt></div></a></figure>
+<!--kg-card-end: html-->
+<hr><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://cmwang.net/content/images/max/800/1-dpurpw5awev7ab7gzs4-ta.png" class="kg-image" alt loading="lazy" width="800" height="453" srcset="https://cmwang.net/content/images/size/w600/max/800/1-dpurpw5awev7ab7gzs4-ta.png 600w, https://cmwang.net/content/images/max/800/1-dpurpw5awev7ab7gzs4-ta.png 800w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">ISRL datasets in vision&nbsp;studio.</span></figcaption></figure><p>You may use the <a href="https://github.com/nilvana-ai/nvir-mask-demo/blob/main/video.py?ref=localhost" rel="noopener"><strong>nvir-mask-demo</strong> repository</a> we previously provided to infer the video once you have finished training the model and establishing the inference endpoint. To incorporate object tracking into your pipeline, you simply need to make a minor modification. In this case, I opt for Kernelized Correlation Filters (KCF), which can consider both speed and accuracy. You can use different algorithms depending on your particular circumstances. The list of pseudo-code is shown below.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://cmwang.net/content/images/max/800/1-_35nc1s54zmdws9znulioq.png" class="kg-image" alt loading="lazy" width="800" height="469" srcset="https://cmwang.net/content/images/size/w600/max/800/1-_35nc1s54zmdws9znulioq.png 600w, https://cmwang.net/content/images/max/800/1-_35nc1s54zmdws9znulioq.png 800w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Pseudo code of object&nbsp;tracking</span></figcaption></figure><p>With this pipeline, you only need to count the pigs that cross a <strong>ROI line</strong> in order to calculate the number. Here is a short demonstration video we created. The original author is the rightful owner of the video. I hope you enjoy this demo.</p><figure class="kg-card kg-embed-card"><iframe src="https://www.youtube.com/embed/v0O3NPUery4?feature=oembed" width="700" height="393" frameborder="0" scrolling="no"></iframe></figure><blockquote>Pigs are highly intelligent, social animals!<br><br>The study “<a href="https://arxiv.org/abs/2111.10971?ref=localhost" rel="noopener">Tracking Grow-Finish Pigs Across Large Pens Using Multiple Cameras</a>” indicated how socially active pigs are. Quick social contacts lead to <strong>identity shifts</strong>. These are the tracking challenges. Difficulties in detection: Pigs gather to stay warm, which might lead to <strong>occlusion</strong>.</blockquote><p>Therefore, today’s demonstration is only for educational purposes; further thought and experimental planning are required to create a reliable pig counter.</p>
+            </div>
+
+        </article>
+
+
+
+
+                <div class="related-wrapper gh-outer">
+            <section class="related-posts gh-inner">
+                <h3 class="related-title">
+                    <span class="text">You might also like...</span>
+                </h3>
+                <div class="post-feed">
+                        <article class="post tag-object-detection tag-computer-vision tag-ai tag-en u-shadow">
+<a class="post-link" href="/blog/2022/09/object-detection-from-the-video-taken-by-drone/">
+        <figure class="post-media">
+            <div class="u-placeholder same-height rectangle">
+                <img
+                    class="post-image u-object-fit"
+                    srcset="/content/images/size/w400/max/800/1-4hcxr7y6b8vdvqo31il38g.jpg 400w,
+                            /content/images/size/w720/max/800/1-4hcxr7y6b8vdvqo31il38g.jpg 750w,
+                            /content/images/size/w960/max/800/1-4hcxr7y6b8vdvqo31il38g.jpg 960w,
+                            /content/images/size/w1200/max/800/1-4hcxr7y6b8vdvqo31il38g.jpg 1140w,
+                            /content/images/size/w2000/max/800/1-4hcxr7y6b8vdvqo31il38g.jpg 1920w"
+                    sizes="600px"
+                    src="/content/images/size/w960/max/800/1-4hcxr7y6b8vdvqo31il38g.jpg"
+                    alt="Object Detection from the Video Taken by Drone"
+                    loading="lazy"
+                >
+            </div>
+        </figure>
+
+    <div class="post-wrapper">
+        <header class="post-header">
+                <span class="post-tag">Object Detection</span>
+
+            <h2 class="post-title">
+                Object Detection from the Video Taken by Drone
+            </h2>
+        </header>
+
+            <div class="post-excerpt">
+                This article presents the use of object detection in drone FPV video.
+            </div>
+    </div>
+
+    <footer class="post-footer">
+        <span class="post-more">Read More</span>
+        <span class="post-time"><time class="post-card-meta-date" datetime="2022-09-13">Sep 13, 2022</time></span>
+
+        
+    </footer>
+</a>
+</article>                        <article class="post tag-object-detection tag-computer-vision tag-ai tag-en u-shadow">
+<a class="post-link" href="/blog/2022/09/object-detection-on-a-360-degree-camera/">
+        <figure class="post-media">
+            <div class="u-placeholder same-height rectangle">
+                <img
+                    class="post-image u-object-fit"
+                    srcset="/content/images/size/w400/max/800/1-akdt9gxneokjpcdchodnoq.jpg 400w,
+                            /content/images/size/w720/max/800/1-akdt9gxneokjpcdchodnoq.jpg 750w,
+                            /content/images/size/w960/max/800/1-akdt9gxneokjpcdchodnoq.jpg 960w,
+                            /content/images/size/w1200/max/800/1-akdt9gxneokjpcdchodnoq.jpg 1140w,
+                            /content/images/size/w2000/max/800/1-akdt9gxneokjpcdchodnoq.jpg 1920w"
+                    sizes="600px"
+                    src="/content/images/size/w960/max/800/1-akdt9gxneokjpcdchodnoq.jpg"
+                    alt="Object detection on a 360 degree camera"
+                    loading="lazy"
+                >
+            </div>
+        </figure>
+
+    <div class="post-wrapper">
+        <header class="post-header">
+                <span class="post-tag">Object Detection</span>
+
+            <h2 class="post-title">
+                Object detection on a 360 degree camera
+            </h2>
+        </header>
+
+            <div class="post-excerpt">
+                In this article, I will demonstrate object detection using a 360-degree camera.
+            </div>
+    </div>
+
+    <footer class="post-footer">
+        <span class="post-more">Read More</span>
+        <span class="post-time"><time class="post-card-meta-date" datetime="2022-09-07">Sep 7, 2022</time></span>
+
+        
+    </footer>
+</a>
+</article>                        <article class="post tag-object-detection tag-ai tag-ios tag-en featured u-shadow">
+<a class="post-link" href="/blog/2022/08/execute-yolov7-model-on-ios-devices/">
+            <img
+                class="post-image u-object-fit"
+                src="https://images.unsplash.com/photo-1630042461973-179ca2cfa7bd?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDM2fHxpcGFkfGVufDB8fHx8MTcwNjc0MTY1MXww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000"
+                alt="Execute YOLOv7 model on iOS devices"
+                loading="lazy"
+            >
+
+    <div class="post-wrapper">
+        <header class="post-header">
+                <span class="post-tag">Object Detection</span>
+
+            <h2 class="post-title">
+                Execute YOLOv7 model on iOS devices
+            </h2>
+        </header>
+
+            <div class="post-excerpt">
+                Real-time object detection with CoreML is trickier than you think.
+            </div>
+    </div>
+
+    <footer class="post-footer">
+        <span class="post-more">Read More</span>
+        <span class="post-time"><time class="post-card-meta-date" datetime="2022-08-06">Aug 6, 2022</time></span>
+
+        
+    </footer>
+</a>
+</article>                        <article class="post tag-object-detection tag-computer-vision tag-ai tag-en u-shadow">
+<a class="post-link" href="/blog/2022/07/performance-benchmarking-of-yolov7-tensorrt-from-cloud-gpus-to-edge-gpus/">
+        <figure class="post-media">
+            <div class="u-placeholder same-height rectangle">
+                <img
+                    class="post-image u-object-fit"
+                    srcset="/content/images/size/w400/max/800/1-uilai7xjc-5scp4rozd8-w.gif 400w,
+                            /content/images/size/w720/max/800/1-uilai7xjc-5scp4rozd8-w.gif 750w,
+                            /content/images/size/w960/max/800/1-uilai7xjc-5scp4rozd8-w.gif 960w,
+                            /content/images/size/w1200/max/800/1-uilai7xjc-5scp4rozd8-w.gif 1140w,
+                            /content/images/size/w2000/max/800/1-uilai7xjc-5scp4rozd8-w.gif 1920w"
+                    sizes="600px"
+                    src="/content/images/size/w960/max/800/1-uilai7xjc-5scp4rozd8-w.gif"
+                    alt="Performance Benchmarking of YOLOv7 TensorRT"
+                    loading="lazy"
+                >
+            </div>
+        </figure>
+
+    <div class="post-wrapper">
+        <header class="post-header">
+                <span class="post-tag">Object Detection</span>
+
+            <h2 class="post-title">
+                Performance Benchmarking of YOLOv7 TensorRT
+            </h2>
+        </header>
+
+            <div class="post-excerpt">
+                In this article, I&#39;ll test YOLOv7 variant models across different platforms, from cloud GPUs to the latest AGX Orin.
+            </div>
+    </div>
+
+    <footer class="post-footer">
+        <span class="post-more">Read More</span>
+        <span class="post-time"><time class="post-card-meta-date" datetime="2022-07-25">Jul 25, 2022</time></span>
+
+        
+    </footer>
+</a>
+</article>                </div>
+            </section>
+        </div>
+
+</main>
+    </div>
+
+    <footer class="gh-foot no-menu gh-outer">
+        <div class="gh-foot-inner gh-inner">
+            <div class="gh-copyright">
+                <a href="https://cmwang.net" rel="noopener">Liberation Notes</a> © 2024
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+
+    <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/assets/built/main.min.js?v=fd67f965e9"></script>
+
+<!-- hide footer -->
+<style>
+.gh-foot-menu {
+  display: none;
+}
+
+.gh-footer-copyright {
+  display: none;
+}
+</style>
+
+
+<!-- prism.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js" integrity="sha512-9khQRAUBYEJDCDVP2yw3LRUQvjJ0Pjx0EShmaQjcHa6AXiOv6qHQu9lCAIR8O+/D8FtaCoJ2c0Tf9Xo7hYH01Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha512-SkmBfuA2hqjzEVpmnMt/LINrjop3GKWqsuLSSB3e7iBmYK7JuWw4ldmmxwD9mdm2IRTTi0OxSAfEGvgEi0i2Kw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.js" integrity="sha512-st608h+ZqzliahyzEpETxzU0f7z7a9acN6AFvYmHvpFhmcFuKT8a22TT5TpKpjDa3pt3Wv7Z3SdQBCBdDPhyWA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" integrity="sha512-/kVH1uXuObC0iYgxxCKY41JdWOkKOxorFVmip+YVifKsJ4Au/87EisD1wty7vxN2kAhnWh6Yc8o/dSAXj6Oz7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- YouTube iframe API -->
+<script src="https://www.youtube.com/iframe_api" ></script>
+<script src="https://cdn.jsdelivr.net/npm/subtitles-parser@0.0.2/index.min.js" type="text/javascript" crossorigin="anonymous" referrerpolicy="no-referrer" ></script>
+<script src="https://blog2.cmwang.net/subtitles/js/youtube.external.subtitle.min.js" type="text/javascript" crossorigin="anonymous" referrerpolicy="no-referrer" ></script>
+<script src="https://blog2.cmwang.net/subtitles/js/loadsrt.min.js" type="text/javascript" crossorigin="anonymous" referrerpolicy="no-referrer" ></script>
+
+</body>
+</html>
