@@ -1,5 +1,5 @@
 User-agent: *
-Sitemap: https://blog.cmwang.net/sitemap.xml
+Sitemap: https://cmwang.net/sitemap.xml
 Disallow: /ghost/
 Disallow: /p/
 Disallow: /email/
