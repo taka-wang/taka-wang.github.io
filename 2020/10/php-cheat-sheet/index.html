@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>🐘 PHP Cheat Sheet</title>
+    <link rel="stylesheet" href="/assets/built/screen.css?v=3345baef50">
+
+    <meta name="description" content="本文整理了 PHP8 的 Cheat Sheet">
+    <link rel="icon" href="https://cmwang.net/content/images/size/w256h256/2024/01/2-removebg-preview.png" type="image/png">
+    <link rel="canonical" href="https://cmwang.net/2020/10/php-cheat-sheet/">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta property="og:site_name" content="Liberation Notes">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="🐘 PHP Cheat Sheet">
+    <meta property="og:description" content="本文整理了 PHP8 的 Cheat Sheet">
+    <meta property="og:url" content="https://cmwang.net/2020/10/php-cheat-sheet/">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000">
+    <meta property="article:published_time" content="2020-10-16T16:00:00.000Z">
+    <meta property="article:modified_time" content="2024-02-02T13:27:52.000Z">
+    <meta property="article:tag" content="PHP">
+    <meta property="article:tag" content="Web Dev">
+    <meta property="article:tag" content="Cheat Sheet">
+    <meta property="article:tag" content="Notes">
+    
+    <meta property="article:publisher" content="https://www.facebook.com/ghost">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="🐘 PHP Cheat Sheet">
+    <meta name="twitter:description" content="本文整理了 PHP8 的 Cheat Sheet">
+    <meta name="twitter:url" content="https://cmwang.net/2020/10/php-cheat-sheet/">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Jamie Wang">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="PHP, Web Dev, Cheat Sheet, Notes">
+    <meta name="twitter:site" content="@ghost">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="800">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Liberation Notes",
+        "url": "https://cmwang.net/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://cmwang.net/content/images/size/w256h256/2024/01/2-removebg-preview.png",
+            "width": 60,
+            "height": 60
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Jamie Wang",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://cmwang.net/content/images/2024/01/jamie2.jpg",
+            "width": 1200,
+            "height": 1200
+        },
+        "url": "https://cmwang.net/author/jamie/",
+        "sameAs": [
+            "https://blog.cmwang.net"
+        ]
+    },
+    "headline": "🐘 PHP Cheat Sheet",
+    "url": "https://cmwang.net/2020/10/php-cheat-sheet/",
+    "datePublished": "2020-10-16T16:00:00.000Z",
+    "dateModified": "2024-02-02T13:27:52.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&ixlib=rb-4.0.3&q=80&w=2000",
+        "width": 1200,
+        "height": 800
+    },
+    "keywords": "PHP, Web Dev, Cheat Sheet, Notes",
+    "description": "本文整理了 PHP8 的 Cheat Sheet",
+    "mainEntityOfPage": "https://cmwang.net/2020/10/php-cheat-sheet/"
+}
+    </script>
+
+    <meta name="generator" content="Ghost 5.78">
+    <link rel="alternate" type="application/rss+xml" title="Liberation Notes" href="https://cmwang.net/rss/">
+    
+    <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="415aa5f59e59c087cacf652d7b" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css" data-sodo-search="https://cmwang.net/" crossorigin="anonymous"></script>
+    
+    <link href="https://cmwang.net/webmentions/receive/" rel="webmention">
+    <script defer src="/public/cards.min.js?v=3345baef50"></script>
+    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=3345baef50">
+    <!-- hide search box -->
+<style>
+.gh-search {
+  display: none !important;
+}
+</style>
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G9WYYRMSWH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G9WYYRMSWH');
+</script>
+
+<!-- prism.js -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" integrity="sha512-vswe+cgvic/XBoF1OcM/TeJ2FW0OofqAVdCZiEYkd6dwGXthvkSFWOoGGJgS2CW70VK5dQM5Oh+7ne47s74VTg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css" integrity="sha512-Dqf5696xtofgH089BgZJo2lSWTvev4GFo+gA2o4GullFY65rzQVQLQVlzLvYwTo0Bb2Gpb6IqwxYWtoMonfdhQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>:root {--ghost-accent-color: #D63484;}</style>
+</head>
+
+<body class="post-template tag-php tag-web-dev tag-cheat-sheet tag-notes tag-en is-head-left-logo">
+<div class="gh-site">
+
+    <header id="gh-head" class="gh-head gh-outer">
+        <div class="gh-head-inner gh-inner">
+            <div class="gh-head-brand">
+                <div class="gh-head-brand-wrapper">
+                    <a class="gh-head-logo" href="https://cmwang.net">
+                            Liberation Notes
+                    </a>
+                </div>
+                <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+                <button class="gh-burger"></button>
+            </div>
+
+            <nav class="gh-head-menu">
+                <ul class="nav">
+    <li class="nav-blog"><a href="https://cmwang.net/">Blog</a></li>
+    <li class="nav-portfolio"><a href="https://cmwang.net/portfolio/">Portfolio</a></li>
+    <li class="nav-contact"><a href="https://cmwang.net/contact/">Contact</a></li>
+    <li class="nav-about"><a href="https://cmwang.net/about/">About</a></li>
+</ul>
+
+            </nav>
+
+            <div class="gh-head-actions">
+                        <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="site-content">
+        
+<main class="site-main">
+
+
+        <article class="gh-article post tag-php tag-web-dev tag-cheat-sheet tag-notes tag-en">
+
+            <header class="gh-article-header gh-canvas">
+                <span class="gh-article-meta">
+                        <a href="/tag/php/" class="gh-article-tag">PHP</a>, <a href="/tag/web-dev/" class="gh-article-tag">Web Dev</a>, <a href="/tag/cheat-sheet/" class="gh-article-tag">Cheat Sheet</a>, <a href="/tag/notes/" class="gh-article-tag">Notes</a>
+                    —
+                    <time datetime="2020-10-17">Oct 17, 2020</time>
+                </span>
+
+                <h1 class="gh-article-title">🐘 PHP Cheat Sheet</h1>
+
+
+                    <figure class="gh-article-image kg-width-wide">
+        <img
+            srcset="https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;400 400w,
+                    https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;720 720w,
+                    https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;960 960w,
+                    https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1200 1200w,
+                    https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000 2000w"
+            sizes="(max-width: 1200px) 100vw, 1200px"
+            src="https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1200"
+            alt="🐘 PHP Cheat Sheet"
+        >
+            <figcaption><span style="white-space: pre-wrap;">Photo by </span><a href="https://unsplash.com/@benofthenorth?utm_source=ghost&amp;utm_medium=referral&amp;utm_campaign=api-credit"><span style="white-space: pre-wrap;">Ben Griffiths</span></a><span style="white-space: pre-wrap;"> / </span><a href="https://unsplash.com/?utm_source=ghost&amp;utm_medium=referral&amp;utm_campaign=api-credit"><span style="white-space: pre-wrap;">Unsplash</span></a></figcaption>
+    </figure>
+            </header>
+
+            <div class="gh-content gh-canvas">
+                <h2 id="comments">Comments</h2>
+<pre><code class="language-php">// one line comment 👈
+
+# another one line comment 👈
+
+/*
+This is a multiple-lines comment block
+that spans over multiple
+lines
+*/
+</code></pre>
+<h2 id="input-output">Input &amp; Output</h2>
+<pre><code class="language-php">echo 'Hello World';
+
+// Debug output
+var_dump($names);
+print_r($products);
+
+// Input from console
+$name = readline('What is your name : ');
+</code></pre>
+<h2 id="naming-conventions">Naming Conventions</h2>
+<pre><code class="language-php">// PHP opening/closing tag
+&lt;?php
+  echo "Hello World";
+?&gt;
+// 🔥 if no closing tag the rest of the file will be considered PHP
+
+// Short syntax for PHP echo 💡
+&lt;?= "Hello World" ?&gt;
+
+//Enable strict typing (first line of your PHP file)
+&lt;? declare(strict_types=1);
+
+// Include a PHP file
+require 'app/Product.php'
+
+// Create a namespace
+namespace App;
+
+// Use a namespace
+use App\Product;
+
+$firstName = 'Mike'  // camelCase
+function updateProduct() // camelCase
+class ProductItem // StudlyCaps
+const ACCESS_KEY = '123abc'; // all upper case with underscore separators
+</code></pre>
+<h2 id="variables-declaration">Variables Declaration</h2>
+<pre><code class="language-php">$name = 'Mike'; //string
+$isActive = true; //boolean
+$number = 25; //integer
+$bankBalance = 1_000_000; // readable integer 💡
+$amount = 99.95; //float
+$fruits = ['orange', 'apple', 'banana'] //array
+const MAX_USERS = 50; //constant
+define('MAX_USERS', 50); //constant
+
+// Assign 'by reference' with the &amp; keyword
+$name_2 = &amp;$name_1
+
+// Type conversion 🔥
+$age = (int)readline('Your age: ');
+echo 'Your age is' . (string)$age;
+
+echo gettype($age); // int
+
+echo is_int($age) // true
+echo is_float(12.5) // true
+echo is_string($name) // true
+</code></pre>
+<h2 id="data-types">Data Types</h2>
+<ul>
+<li><strong>null</strong>: case insensitive</li>
+<li><strong>bool</strong>: case insensitive</li>
+<li><a href="#numbers">int</a></li>
+<li><a href="#numbers">float</a></li>
+<li><a href="#strings">string</a></li>
+<li><a href="#arrays">array</a></li>
+<li>object</li>
+<li>callable</li>
+<li>resource</li>
+</ul>
+<h3 id="strings">Strings</h3>
+<pre><code class="language-php">// String can use single quote
+$name = 'Mike'
+// or double quote
+$name = "Mike"
+
+// Double quote string can escape characters \n = new line  \t = tab  \\ = backslash
+echo "Hello Mike\nHello David";
+
+// Double quote string can do interpolation 💡
+echo "Hello $name";
+echo "Hello {$name}™";
+
+// string concat
+echo 'Hello ' . $name;
+
+// string length
+echo strlen($name);
+
+// Remove space(s) before and after
+echo trim($text)
+
+// Convert to lowercase / uppercase
+echo strtolower($email);
+echo strtoupper($name);
+
+// Converts the first character to uppercase
+echo ucfirst($name);  // 'Mike'
+
+// Replace text a by text b in $text
+echo str_replace('a', 'b', $text);
+
+// String Contains (PHP 8)
+echo str_contains($name, 'ke')  # true
+
+// Find numeric position of first occurrence
+$pos = strpos($name, 'k'); # 2
+
+// Returns portion of string (offset / length)
+echo substr($name, 0, $pos); # Mi
+</code></pre>
+<h3 id="numbers">Numbers</h3>
+<pre><code class="language-php">// Shortcut addition assignment
+$value = 10
+$value++ // 11
+// or
+$value += 1 // 11
+
+// Shortcut subtraction assignment
+$value = 10
+$value-- // 9
+// or
+$value -= 1 // 9
+
+// Check if numeric
+echo is_numeric('59.99'); # true
+
+// Round a number
+echo round(0.80);  // returns 1
+
+// Round a number with precision
+echo round(1.49356, 2));  // returns 1.49
+
+// Random number
+echo(rand(10, 100)); # 89
+</code></pre>
+<h3 id="arrays">Arrays</h3>
+<pre><code class="language-php">//Array declaration can contain any types
+$example = ['Mike', 50.2, true, ['10', '20']];
+
+//Array declaration
+$names = ['Mike', 'Peter', 'Shawn', 'John'];
+
+// Insert
+$names[] = "Jane"; // 💡 change array length
+
+// Direct access to a specific element
+$name[1] //output Peter
+
+// How to access an array in an array
+$example[3][1] // 20
+
+//add a element to an array
+$names[] = 'Micheal';
+
+// Array merge
+$array3 = array_merge($array1, $array2);
+
+// Merge with spreading operator (also work with associative array)
+$array3 = [...$array1, ...$array2];
+
+// Array Concat with Spread Operator
+$names = ['Mike', 'Peter', 'Paul'];
+$people = ['John', ...$names]; // ['John', 'Mike', 'Peter', 'Paul']
+
+//Remove array entry:
+unset($names['Peter']);
+
+//Array to string
+echo implode(', ', $names) //output Mike, Shawn, John, Micheal
+
+// String to Array
+echo explode(',', $text); // ['Mike', 'Shawn', 'John']
+
+
+//loop for each array entry
+foreach($names as $name) {
+   echo 'Hello ' . $name;
+}
+
+// Number of items in a Array
+echo count($names);
+
+//Associative array declaration (key =&gt; value):
+$person = ['age' =&gt; 45, 'genre' =&gt; 'men'];
+
+//Add to ass. array:
+$person['name'] = 'Mike';
+
+//loop ass. array key =&gt; value:
+foreach($names as $key =&gt; $value) {
+   echo $key . ' : ' . $value
+}
+
+// Check if a specific key exist
+echo array_key_exists('age', $person);
+
+// Return keys
+echo array_keys($person); // ['age', 'genre']
+
+// Return values
+echo array_values($person) // [45, 'men']
+
+//Array filter (return a filtered array)
+$filteredPeople = array_filter($people, function ($person) {
+    return $names-&gt;active;
+})
+
+// Array map (return transform array):
+$onlyNames = array_map(function($person) {
+    return ['name' =&gt; $person-&gt;name];
+}, $people)
+
+# Search associative array
+$items = [
+        ['id' =&gt; '100', 'name' =&gt; 'product 1'],
+        ['id' =&gt; '200', 'name' =&gt; 'product 2'],
+        ['id' =&gt; '300', 'name' =&gt; 'product 3'],
+        ['id' =&gt; '400', 'name' =&gt; 'product 4'],
+    ];
+
+# search all value in the 'name' column
+$found_key = array_search('product 3', array_column($items, 'name'));
+# return 2
+</code></pre>
+<h2 id="type-casting">Type Casting</h2>
+<pre><code class="language-php">// Booleans
+var_dump((bool) "");             // -&gt; false
+var_dump((bool) "Some Text");    // -&gt; true
+var_dump((boolean) "0");         // -&gt; false
+var_dump((bool) "false");        // -&gt; true 💡
+var_dump((bool) 0);              // -&gt; false
+var_dump((bool) 1);              // -&gt; true
+var_dump((bool) -1);             // -&gt; true 💡
+var_dump((bool) null);           // -&gt; false
+var_dump((bool) []);             // -&gt; false
+var_dump((bool) ["hello"]);      // -&gt; true
+
+// Integers
+var_dump((int) false);        // -&gt; 0
+var_dump((integer) true);     // -&gt; 1
+var_dump((int) "-1");         // -&gt; -1
+var_dump((int) "Hello");      // -&gt; 0 💡
+var_dump((int) "12 months");  // -&gt; 12
+var_dump((int) 12.7);         // -&gt; 12 💡
+var_dump((int) null);         // -&gt; 0 💡
+
+// Float
+var_dump((float) false);      // -&gt; 0
+var_dump((float) true);       // -&gt; 1
+var_dump((float) "-1");       // -&gt; -1
+var_dump((float) "Hello");    // -&gt; 0
+var_dump((float) "2.5 Hour"); // -&gt; 2.5
+var_dump((float) null);       // -&gt; 0
+
+// Strings
+var_dump((string) false);     // -&gt; "" 💡
+var_dump((string) true);      // -&gt; "1"
+var_dump((string) 0);         // -&gt; "0"
+var_dump((string) 1.353);     // -&gt; "1.353"
+var_dump((string) []);        // -&gt; "Array" 💡
+var_dump((string) ["John"]);  // -&gt; "Array" 💡
+var_dump((string) null);      // -&gt; "" 💡
+
+// Arrays
+var_dump((array) false);      // -&gt; [false]
+var_dump((array) true);       // -&gt; [true]
+var_dump((array) 0);          // -&gt; [0]
+var_dump((array) 1.353);      // -&gt; [1.353]
+var_dump((array) "John");     // -&gt; ["John"]
+var_dump((array) null);       // -&gt; []
+</code></pre>
+<h2 id="conditionals">Conditionals</h2>
+<pre><code class="language-php">// If / elseif / else
+if ($condition == 10) {
+    echo 'condition 10'
+} elseif  ($condition == 5) {
+    echo 'condition 5'
+} else {
+    echo 'all other conditions'
+}
+
+// And condition = &amp;&amp;
+if ($condition === 10 &amp;&amp; $condition2 === 5) {
+    echo '10 and 5'
+}
+
+// Or condition = ||
+if ($condition === 10 || $condition2 === 5) {
+    echo '10 or 5'
+}
+
+// One line
+if ($isActive) return true;
+
+// Null check
+if (is_null($name)) {
+    do something...
+}
+
+//Comparaison operation
+== // equal no type check
+=== // equal with type check
+!= //not equal
+|| //or
+&amp;&amp; //and
+&gt; //greater than
+&lt; //less than
+
+// Ternary operator (true : false)
+echo $isValid ? 'user valid' : 'user not valid';
+
+//Null Coalesce Operator
+echo $name ?? 'Mike';  //output 'Mike' if $name is null
+
+//Null Coalesce Assignment
+$name ??= 'Mike';
+
+// Null Safe Operator (PHP 8) will return null if one ? is null
+echo $user?-&gt;profile?-&gt;activate();
+
+// Null Safe + Null Coalesce (if null will return 'No user profile')
+echo $user?-&gt;profile?-&gt;activate() ?? 'Not applicable';
+
+//Spaceship operator return -1 0 1
+$names = ['Mike', 'Paul', 'John']
+usort($names, function($a, $b) {
+    return $a &lt;=&gt; $b;
+}
+// ['John', 'Mike', 'Paul']
+
+// Return false when convert as boolean
+false, 0, 0.0, null, unset, '0', '', []
+
+// Compare same variable with multiple values
+switch ($color) {
+    case 'red':
+        echo 'The color is red';
+         break;
+    case 'yellow':
+        echo 'The color is yellow';
+        break;
+    case 'blue':
+        echo 'The color is blue';
+        break;
+    default:
+        echo 'The color is unknown';
+}
+
+// Match Expression (PHP 8)
+$type = match($color) {
+    'red' =&gt; 'danger',
+    'yellow', 'orange' =&gt; 'warning',
+    'green' =&gt; 'success',
+    default =&gt; 'Unknown'
+};
+
+// Check if variable declare
+isset($color['red']);  # true
+</code></pre>
+<h2 id="loops-iterations">Loops &amp; Iterations</h2>
+<pre><code class="language-php">//for loop
+for ($i = 0; $i &lt; 20; $i++) {
+    echo "i value = " . i;
+}
+
+//while loop
+$number = 1;
+while ($number &lt; 10) {
+    echo 'value : ' . $number ;
+    $number += 1;
+}
+
+//do while
+$number = 1;
+do {
+    echo 'value : ' . $number ;
+    $number += 1;
+} while ($number &lt; 10);
+
+// foreach with break / continue exemple
+$values = ['one', 'two', 'three'];
+foreach ($values as $value) {
+    if ($value === 'two') {
+        break; // exit loop
+    } elseif ($value === 'three') {
+        continue; // next loop iteration
+    }
+}
+</code></pre>
+<h2 id="functions">Functions</h2>
+<pre><code class="language-php">//function declararion
+function name($firstName, $lastName = 'defaultvalue') {
+    return "$firstName $lastName"
+}
+
+//function call
+name('Mike', 'Taylor');
+
+//function call with named parameters (PHP 8)
+name(firstName: 'Mike', lastName: 'Taylor'); // order can change
+
+//function variables params
+function name(...$params) {
+    return $params[0] . “ “ . params[1];
+}
+
+// Closure function
+Route::get('/', function () {
+     return view('welcome');
+});
+
+// Arrow functions
+Route::get('/', fn () =&gt; view('welcome');
+
+
+// Typed parameter and typed return
+function display(string $first, string $last) : string {
+    return "$first $last";
+}
+
+// Typed or null
+function display(?string $name) {
+    ...
+}
+
+// Union type (or)
+function display(string|int $data) {
+    ...
+}
+
+// Intersection type (and)
+function count_and_interate(Iterator&amp;Countable $value) {
+    ...
+}
+
+// Return any type (mixed)
+function logInfo(string $info) : mixed {
+    ...
+}
+
+// No return (void)
+function logInfo(string $info) : void {
+    ...
+}
+</code></pre>
+<h2 id="enumerations">Enumerations</h2>
+<pre><code class="language-php">// Declaration
+enum InvoiceStatus
+{
+    case Sent;
+    case Paid;
+    case Cancelled;
+}
+
+// The enum can then be use as a type
+function printInvoiceStatus(InvoiceStatus $status)
+{
+    print($status-&gt;name);
+}
+
+printInvoiceStatus(InvoiceStatus::Sent);
+// Sent
+
+// enum with return value and public function exemple
+enum InvoiceStatus : int
+{
+    case Sent = 0;
+    case Paid = 1;
+    case Cancelled = 2;
+
+    public function text() : string
+    {
+        return match ($this) {
+            self::Sent =&gt; 'Sent',
+            self::Paid =&gt; 'Paid',
+            self::Cancelled =&gt; 'Cancelled'
+        };
+    }
+}
+
+function getInvoiceStatus(InvoiceStatus $status)
+{
+    print($status-&gt;text());
+    print($status-&gt;value);
+}
+
+getInvoiceStatus(InvoiceStatus::Paid);
+// Paid1
+</code></pre>
+<h2 id="files">Files</h2>
+<pre><code class="language-php">// Get the current dir
+$current_dir = __DIR__;
+
+// Check if file exist
+if (file_exists('/posts/first.txt')) {
+  do some stuff
+}
+
+// Read file content into one variable
+$post = file_get_contents($file);
+
+//File read
+$file = fopen("test.txt", "r");
+
+//Output lines until EOF is reached
+while(! feof($file)) {
+  $line = fgets($file);
+  echo $line. "&lt;br&gt;";
+}
+fclose($file);
+
+// File write (csv)
+$file = fopen('export.csv', 'a');
+$array = ['name' =&gt; 'Mike', 'age' =&gt; 45];
+
+//Write key name as csv header
+fputcsv($file, array_keys($array[0]));
+
+//Write lines (format as csv)
+foreach ($array as $row) {
+    fputcsv($file, $row);
+}
+fclose($file);
+</code></pre>
+<h2 id="errors">Errors</h2>
+<pre><code class="language-php">//Throw Error
+if (someCondition) {
+    throw new Exception('Data format error');
+}
+
+//Catch the Error
+try {
+  $db-&gt;checkData($data);
+} catch (Exception $e) {
+    echo $e-&gt;getMessage();
+}
+</code></pre>
+<h2 id="oop">OOP</h2>
+<pre><code class="language-php">//class declaration
+class Person
+{
+}
+
+// object instantiation
+$person = new Person
+
+//class properties and constructor
+class Person
+{
+   protected $firstName;
+   protected $lastName;
+   public function __construct($firstName, $lastName) {
+        $this-&gt;firstName = $firstName;
+        $this-&gt;lastName = $lastName
+   }
+
+// Constructor Property Promotion (PHP 8)
+class Person
+{
+    public function __construct(protected $firstName, protected $lastName)
+    {
+
+    }
+
+// Getter and Setter
+class Person
+{
+    private $name;
+
+    public function setName($name){
+        if(!is_string($name)){
+            throw new Exception('$name must be a string!');
+        }
+        $this-&gt;name = $name;
+    }
+
+    public function getName(){
+        return $this-&gt;name;
+    }
+}
+
+// Readonly properties (PHP 8.1)
+class Person
+{
+    public function __construct(
+        public readonly string $firstName,
+        public readonly string $lastName
+    ) {
+
+    }
+}
+
+//static constructor
+public static function create(...$params) {
+    return new self($params)
+}
+$person = Person::create(‘Mike’, ‘Taylor’);
+
+// Static Method
+class greeting {
+  public static function welcome() {
+    echo "Hello World!";
+  }
+}
+
+// Call static method
+greeting::welcome();
+
+// Static method call
+class greeting {
+  public static function welcome() {
+    echo "Hello World!";
+  }
+
+  public function __construct() {
+    static::welcome();
+  }
+}
+new greeting();
+
+// Static constant
+class Connection
+{
+  const MAX_USER = 100;
+}
+echo Connection::MAX_USER # 100
+
+// class inheritance
+class Customer extends Person
+{
+    public function name()
+    {
+        parent::name();
+        echo 'Override method';
+    }
+}
+
+// self keyword reference current class (not modify by inheritance late binding like static will be)
+self::welcome();
+
+// Interface
+interface Animal {
+  public function makeSound();
+}
+
+class Cat implements Animal {
+  public function makeSound() {
+    echo "Meow";
+  }
+}
+$animal = new Cat();
+$animal-&gt;makeSound();
+
+//Trait (mix-in)
+trait HelloWorld {
+    public function sayHello() {
+        echo 'Hello World!';
+    }
+}
+
+class Greetings {
+    use HelloWorld;
+}
+$object = new Greetings();
+$object-&gt;sayHello();
+</code></pre>
+<h2 id="superglobals">Superglobals</h2>
+<p><code>TODO</code></p>
+<pre><code class="language-php">$GLOBALS
+$_SERVER
+$_REQUEST
+$_GET
+$_POST
+$_SESSION
+$_COOKIE
+$_FILES
+$_ENV
+</code></pre>
+<hr>
+<h2 id="references-%F0%9F%93%94">References 📔</h2>
+<ul>
+<li><a href="https://www.php.net/manual/en/language.operators.php?ref=localhost">PHP: Operators</a></li>
+<li><a href="https://www.php.net/manual/en/reserved.keywords.php?ref=localhost">PHP Keywords</a></li>
+<li><a href="https://www.php.net/manual/en/indexes.functions.php?ref=localhost">PHP Functions &amp; Methods</a></li>
+<li><a href="https://dev.to/ericchapman/series/16288?ref=localhost">ModernPHP Series' Articles</a></li>
+<li><a href="https://www.geeksforgeeks.org/php-superglobals/?ref=localhost">PHP | Superglobals</a></li>
+<li><a href="https://code.tutsplus.com/php-superglobals-explained-with-cheatsheet--cms-36598t?ref=localhost">PHP Superglobals Explained—With Cheatsheet</a></li>
+<li><a href="https://dev.to/ericchapman/php-cheat-sheet-updated-to-php-81-3o4p?ref=localhost">PHP cheat sheet (updated to PHP 8.1)</a></li>
+</ul>
+
+            </div>
+
+        </article>
+
+
+
+
+                <div class="related-wrapper gh-outer">
+            <section class="related-posts gh-inner">
+                <h3 class="related-title">
+                    <span class="text">You might also like...</span>
+                </h3>
+                <div class="post-feed">
+                        <article class="post tag-php tag-web-dev tag-cheat-sheet tag-notes tag-en u-shadow">
+<a class="post-link" href="/2023/12/pdo-crash-course/">
+        <figure class="post-media">
+            <div class="u-placeholder same-height rectangle">
+                <img
+                    class="post-image u-object-fit"
+                    srcset="https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;400 400w,
+                            https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;720 750w,
+                            https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;960 960w,
+                            https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1200 1140w,
+                            https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000 1920w"
+                    sizes="600px"
+                    src="https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;960"
+                    alt="🐘 PDO Crash Course"
+                    loading="lazy"
+                >
+            </div>
+        </figure>
+
+    <div class="post-wrapper">
+        <header class="post-header">
+                <span class="post-tag">PHP</span>
+
+            <h2 class="post-title">
+                🐘 PDO Crash Course
+            </h2>
+        </header>
+
+            <div class="post-excerpt">
+                本文是關於 PHP PDO 的速成筆記
+            </div>
+    </div>
+
+    <footer class="post-footer">
+        <span class="post-more">Read More</span>
+        <span class="post-time"><time class="post-card-meta-date" datetime="2023-12-17">Dec 17, 2023</time></span>
+
+        
+    </footer>
+</a>
+</article>                        <article class="post tag-php tag-software-design tag-web-dev tag-notes tag-zh-tw u-shadow">
+<a class="post-link" href="/2020/10/php-oop/">
+        <figure class="post-media">
+            <div class="u-placeholder same-height rectangle">
+                <img
+                    class="post-image u-object-fit"
+                    srcset="https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;400 400w,
+                            https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;720 750w,
+                            https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;960 960w,
+                            https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1200 1140w,
+                            https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000 1920w"
+                    sizes="600px"
+                    src="https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;960"
+                    alt="🐘 PHP 物件導向"
+                    loading="lazy"
+                >
+            </div>
+        </figure>
+
+    <div class="post-wrapper">
+        <header class="post-header">
+                <span class="post-tag">PHP</span>
+
+            <h2 class="post-title">
+                🐘 PHP 物件導向
+            </h2>
+        </header>
+
+            <div class="post-excerpt">
+                本文是關於 PHP 物件導向的整理
+            </div>
+    </div>
+
+    <footer class="post-footer">
+        <span class="post-more">Read More</span>
+        <span class="post-time"><time class="post-card-meta-date" datetime="2020-10-16">Oct 16, 2020</time></span>
+
+        
+    </footer>
+</a>
+</article>                        <article class="post tag-php tag-web-dev tag-notes tag-zh-tw u-shadow">
+<a class="post-link" href="/2020/10/php-fundamental/">
+        <figure class="post-media">
+            <div class="u-placeholder same-height rectangle">
+                <img
+                    class="post-image u-object-fit"
+                    srcset="https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;400 400w,
+                            https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;720 750w,
+                            https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;960 960w,
+                            https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1200 1140w,
+                            https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000 1920w"
+                    sizes="600px"
+                    src="https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBocHxlbnwwfHx8fDE3MDY3NDAyMTF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;960"
+                    alt="🐘 PHP 語法基礎"
+                    loading="lazy"
+                >
+            </div>
+        </figure>
+
+    <div class="post-wrapper">
+        <header class="post-header">
+                <span class="post-tag">PHP</span>
+
+            <h2 class="post-title">
+                🐘 PHP 語法基礎
+            </h2>
+        </header>
+
+            <div class="post-excerpt">
+                本文是關於 Modern PHP 語法的筆記
+            </div>
+    </div>
+
+    <footer class="post-footer">
+        <span class="post-more">Read More</span>
+        <span class="post-time"><time class="post-card-meta-date" datetime="2020-10-15">Oct 15, 2020</time></span>
+
+        
+    </footer>
+</a>
+</article>                </div>
+            </section>
+        </div>
+
+</main>
+    </div>
+
+    <footer class="gh-foot no-menu gh-outer">
+        <div class="gh-foot-inner gh-inner">
+            <div class="gh-copyright">
+                <a href="https://cmwang.net" rel="noopener">Liberation Notes</a> © 2024
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+
+    <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/assets/built/main.min.js?v=3345baef50"></script>
+
+<!-- hide footer -->
+<style>
+.gh-foot-menu {
+  display: none;
+}
+
+.gh-footer-copyright {
+  display: none;
+}
+</style>
+
+
+<!-- prism.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js" integrity="sha512-9khQRAUBYEJDCDVP2yw3LRUQvjJ0Pjx0EShmaQjcHa6AXiOv6qHQu9lCAIR8O+/D8FtaCoJ2c0Tf9Xo7hYH01Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha512-SkmBfuA2hqjzEVpmnMt/LINrjop3GKWqsuLSSB3e7iBmYK7JuWw4ldmmxwD9mdm2IRTTi0OxSAfEGvgEi0i2Kw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.js" integrity="sha512-st608h+ZqzliahyzEpETxzU0f7z7a9acN6AFvYmHvpFhmcFuKT8a22TT5TpKpjDa3pt3Wv7Z3SdQBCBdDPhyWA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" integrity="sha512-/kVH1uXuObC0iYgxxCKY41JdWOkKOxorFVmip+YVifKsJ4Au/87EisD1wty7vxN2kAhnWh6Yc8o/dSAXj6Oz7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- YouTube iframe API -->
+<script src="https://www.youtube.com/iframe_api" ></script>
+<script src="https://cdn.jsdelivr.net/npm/subtitles-parser@0.0.2/index.min.js" type="text/javascript" crossorigin="anonymous" referrerpolicy="no-referrer" ></script>
+<script src="https://blog2.cmwang.net/subtitles/js/youtube.external.subtitle.min.js" type="text/javascript" crossorigin="anonymous" referrerpolicy="no-referrer" ></script>
+<script src="https://blog2.cmwang.net/subtitles/js/loadsrt.min.js" type="text/javascript" crossorigin="anonymous" referrerpolicy="no-referrer" ></script>
+
+</body>
+</html>
