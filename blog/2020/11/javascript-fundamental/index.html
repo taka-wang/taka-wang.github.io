@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>📚 JavaScript 語法基礎</title>
+    <link rel="stylesheet" href="/assets/built/screen.css?v=e36baffe69">
+
+    <meta name="description" content="本文是關於 Javascript 語法的筆記">
+    <link rel="icon" href="https://cmwang.net/content/images/size/w256h256/2024/01/2-removebg-preview.png" type="image/png">
+    <link rel="canonical" href="https://cmwang.net/blog/2020/11/javascript-fundamental/">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta property="og:site_name" content="Liberation Notes">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="📚 JavaScript 語法基礎">
+    <meta property="og:description" content="本文是關於 Javascript 語法的筆記">
+    <meta property="og:url" content="https://cmwang.net/blog/2020/11/javascript-fundamental/">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fGphdmFzY3JpcHQlMjB8ZW58MHx8fHwxNzA2Nzc5MzA3fDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000">
+    <meta property="article:published_time" content="2020-11-01T16:00:00.000Z">
+    <meta property="article:modified_time" content="2024-02-02T15:14:46.000Z">
+    <meta property="article:tag" content="JavaScript">
+    <meta property="article:tag" content="Notes">
+    
+    <meta property="article:publisher" content="https://www.facebook.com/ghost">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="📚 JavaScript 語法基礎">
+    <meta name="twitter:description" content="本文是關於 Javascript 語法的筆記">
+    <meta name="twitter:url" content="https://cmwang.net/blog/2020/11/javascript-fundamental/">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fGphdmFzY3JpcHQlMjB8ZW58MHx8fHwxNzA2Nzc5MzA3fDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Jamie Wang">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="JavaScript, Notes">
+    <meta name="twitter:site" content="@ghost">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="800">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Liberation Notes",
+        "url": "https://cmwang.net/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://cmwang.net/content/images/size/w256h256/2024/01/2-removebg-preview.png",
+            "width": 60,
+            "height": 60
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Jamie Wang",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://cmwang.net/content/images/2024/01/jamie2.jpg",
+            "width": 1200,
+            "height": 1200
+        },
+        "url": "https://cmwang.net/author/jamie/",
+        "sameAs": [
+            "https://blog.cmwang.net"
+        ]
+    },
+    "headline": "📚 JavaScript 語法基礎",
+    "url": "https://cmwang.net/blog/2020/11/javascript-fundamental/",
+    "datePublished": "2020-11-01T16:00:00.000Z",
+    "dateModified": "2024-02-02T15:14:46.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDJ8fGphdmFzY3JpcHQlMjB8ZW58MHx8fHwxNzA2Nzc5MzA3fDA&ixlib=rb-4.0.3&q=80&w=2000",
+        "width": 1200,
+        "height": 800
+    },
+    "keywords": "JavaScript, Notes",
+    "description": "本文是關於 Javascript 語法的筆記",
+    "mainEntityOfPage": "https://cmwang.net/blog/2020/11/javascript-fundamental/"
+}
+    </script>
+
+    <meta name="generator" content="Ghost 5.78">
+    <link rel="alternate" type="application/rss+xml" title="Liberation Notes" href="https://cmwang.net/rss/">
+    
+    <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="415aa5f59e59c087cacf652d7b" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css" data-sodo-search="https://cmwang.net/" crossorigin="anonymous"></script>
+    
+    <link href="https://cmwang.net/webmentions/receive/" rel="webmention">
+    <script defer src="/public/cards.min.js?v=e36baffe69"></script>
+    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=e36baffe69">
+    <!-- hide search box -->
+<style>
+.gh-search {
+  display: none !important;
+}
+</style>
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G9WYYRMSWH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G9WYYRMSWH');
+</script>
+
+<!-- prism.js -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" integrity="sha512-vswe+cgvic/XBoF1OcM/TeJ2FW0OofqAVdCZiEYkd6dwGXthvkSFWOoGGJgS2CW70VK5dQM5Oh+7ne47s74VTg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css" integrity="sha512-Dqf5696xtofgH089BgZJo2lSWTvev4GFo+gA2o4GullFY65rzQVQLQVlzLvYwTo0Bb2Gpb6IqwxYWtoMonfdhQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>:root {--ghost-accent-color: #D63484;}</style>
+</head>
+
+<body class="post-template tag-javascript tag-notes tag-zh-tw is-head-left-logo">
+<div class="gh-site">
+
+    <header id="gh-head" class="gh-head gh-outer">
+        <div class="gh-head-inner gh-inner">
+            <div class="gh-head-brand">
+                <div class="gh-head-brand-wrapper">
+                    <a class="gh-head-logo" href="https://cmwang.net">
+                            Liberation Notes
+                    </a>
+                </div>
+                <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+                <button class="gh-burger"></button>
+            </div>
+
+            <nav class="gh-head-menu">
+                <ul class="nav">
+    <li class="nav-blog"><a href="https://cmwang.net/">Blog</a></li>
+    <li class="nav-contact"><a href="https://cmwang.net/contact/">Contact</a></li>
+    <li class="nav-about"><a href="https://cmwang.net/about/">About</a></li>
+</ul>
+
+            </nav>
+
+            <div class="gh-head-actions">
+                        <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="site-content">
+        
+<main class="site-main">
+
+
+        <article class="gh-article post tag-javascript tag-notes tag-zh-tw">
+
+            <header class="gh-article-header gh-canvas">
+                <span class="gh-article-meta">
+                        <a href="/tag/javascript/" class="gh-article-tag">JavaScript</a>, <a href="/tag/notes/" class="gh-article-tag">Notes</a>
+                    —
+                    <time datetime="2020-11-02">Nov 2, 2020</time>
+                </span>
+
+                <h1 class="gh-article-title">📚 JavaScript 語法基礎</h1>
+
+
+                    <figure class="gh-article-image kg-width-wide">
+        <img
+            srcset="https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fGphdmFzY3JpcHQlMjB8ZW58MHx8fHwxNzA2Nzc5MzA3fDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;400 400w,
+                    https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fGphdmFzY3JpcHQlMjB8ZW58MHx8fHwxNzA2Nzc5MzA3fDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;720 720w,
+                    https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fGphdmFzY3JpcHQlMjB8ZW58MHx8fHwxNzA2Nzc5MzA3fDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;960 960w,
+                    https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fGphdmFzY3JpcHQlMjB8ZW58MHx8fHwxNzA2Nzc5MzA3fDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1200 1200w,
+                    https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fGphdmFzY3JpcHQlMjB8ZW58MHx8fHwxNzA2Nzc5MzA3fDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000 2000w"
+            sizes="(max-width: 1200px) 100vw, 1200px"
+            src="https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fGphdmFzY3JpcHQlMjB8ZW58MHx8fHwxNzA2Nzc5MzA3fDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1200"
+            alt="📚 JavaScript 語法基礎"
+        >
+            <figcaption><span style="white-space: pre-wrap;">Photo by </span><a href="https://unsplash.com/@purzlbaum?utm_source=ghost&amp;utm_medium=referral&amp;utm_campaign=api-credit"><span style="white-space: pre-wrap;">Claudio Schwarz</span></a><span style="white-space: pre-wrap;"> / </span><a href="https://unsplash.com/?utm_source=ghost&amp;utm_medium=referral&amp;utm_campaign=api-credit"><span style="white-space: pre-wrap;">Unsplash</span></a></figcaption>
+    </figure>
+            </header>
+
+            <div class="gh-content gh-canvas">
+                <h2 id="variables">Variables</h2>
+<ul>
+<li><code>let</code> name; // undefined</li>
+<li><code>let</code> name = 'Jamie';</li>
+<li>盡量一行一個變數宣告，這是 best practice</li>
+</ul>
+<h2 id="constant">Constant</h2>
+<ul>
+<li><code>const</code> interestRate = 0.2;</li>
+<li>如果不會改變，盡量用 const 而不是 let</li>
+</ul>
+<h2 id="primitivesvalue-types">Primitives/Value types</h2>
+<ul>
+<li>number</li>
+<li>string</li>
+<li>boolean</li>
+<li>symbol</li>
+<li>undefined</li>
+<li>null</li>
+</ul>
+<pre><code class="language-javascript">let name = "jamie"; // string
+let age = 30; // number
+let isApproved = false; // boolean
+let firstName = undefined; // undefined
+let lastName = null; // clear a variable
+
+typeof age; // "number"
+typeof firstName; // "undefined". undefined 既是 type 也是 value
+typeof lastName; // "object"
+</code></pre>
+<h2 id="reference-types">Reference types</h2>
+<ul>
+<li>object</li>
+<li>array</li>
+<li>function</li>
+</ul>
+<pre><code class="language-javascript">// --- object
+let person = {
+  // object
+  name: "jamei", // property
+  age: 30,
+};
+
+person.name = "john"; // dot notation
+person["age"] = 20; // bracket notation
+
+let selection = "name";
+person[selection] = "Jenny";
+
+//--- array is also a 'object' type 💡
+let selectedColors = ["red", "blue"]; // array
+selectedColors[2] = "green"; // length is dynamic
+console.log(selectedColors[0]);
+console.log(selectedColors.length);
+</code></pre>
+<h2 id="functions">Functions</h2>
+<pre><code class="language-javascript">// 1. performing a task
+function greet(name, lastName) {
+  // name is the parameter
+  console.log("hello world " + name + " " + lastName);
+}
+
+greet("jamie"); // jamie is the argument, actual value is applied
+
+// 2. calculating a value
+function square(number) {
+  return number * number;
+}
+let number = square(2);
+</code></pre>
+<h2 id="operators">Operators</h2>
+<ul>
+<li>arithmetic</li>
+<li>assignment</li>
+<li>comparison</li>
+<li>equality (<code>strict</code> &amp; <code>lose</code> equality)</li>
+<li>ternary operator (<code>? a : b</code>)</li>
+<li>logical operator (<code>&amp;&amp;</code>, <code>||</code>, <code>!</code>)
+<ul>
+<li>以下在 logical operator，會自動轉為 Falsy (false)
+<ul>
+<li>undefined</li>
+<li>null</li>
+<li>0</li>
+<li>false</li>
+<li>''</li>
+<li>NaN</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>bit operator(<code>|</code>, <code>&amp;</code>)</li>
+</ul>
+<pre><code class="language-javascript">// arithmetic operator
+console.log(x % 2); // remainder
+console.log(x ** y); // exp
+console.log(++x); // increment (++)
+console.log(y--); // decrement (--)
+
+// assignment operator
+let x = 10;
+x++; // x = x + 1
+x += 5; // x = x + 5
+x *= 3; // x = x * 3
+
+// comparison operator
+let x = 1;
+console.log(x &gt; 0); // true
+
+// equality
+console.log(x === 1);
+console.log(x !== 1);
+
+// strict equality (same type + value)
+console.log(1 === 1); // true
+console.log("1" === 1); // false
+// lose equality (don't care type, automatically convert type)
+console.log(1 == "1"); // true
+console.log(true == 1); // true
+
+// ternary operator
+let poins = 110;
+let type = points &gt; 100 ? "gold" : "silver";
+
+// logical
+console.log(true &amp;&amp; true); // logical AND (&amp;&amp;)
+let highIncome = true;
+let goodCreditScore = true;
+let eligibleForLoan = highIncome &amp;&amp; goodCreditScore; // true
+let eligibleForLoan = highIncome || goodCreditScore; // logical OR (||)
+let applicationRefused = !eligibleForLoan; // Not (!)
+
+// automatically convert operand -&gt;
+false || "jamie"; // 'jamie'
+false || 1; // 1
+
+// 以下在 logical operator，會自動轉為 Falsy (false)
+// undefined
+// null
+// 0
+// false
+// ''
+// NaN
+
+// short-circult
+let userColor = "red";
+let defaultColor = "blue";
+let currentColor = userColor || defaultColor; // can provide default value if user not select
+
+// bit operator application
+// Read, Write, Execute
+// 00000100
+// 00000010
+// 00000001
+const readPermission = 4;
+const writePermission = 2;
+const executePremission = 1;
+
+let myPermission = 0;
+myPermission =
+  myPermission | readPermission | writePermission | executePermission;
+let message = myPermission &amp; readPermission ? "yes" : "no"; // 可以用來判斷有無權限
+</code></pre>
+<h2 id="conditional-statements">Conditional statements</h2>
+<ul>
+<li>if else</li>
+</ul>
+<pre><code class="language-javascript">if (condition) {
+  // statement
+} else if (anotherCondition) {
+  // statement
+} else {
+  // statement
+}
+</code></pre>
+<ul>
+<li>switch case</li>
+</ul>
+<pre><code class="language-javascript">// switch case (can be string, number or boolean)
+let role;
+switch (role) {
+  case "guest":
+    console.log("Guest User");
+    break; // need
+  case "moderator":
+    console.log("Moderator User");
+    break;
+  default:
+    console.log("Unknow Role");
+}
+</code></pre>
+<h2 id="flow-control">Flow control</h2>
+<ul>
+<li>
+<p><code>For</code> loop</p>
+<pre><code class="language-javascript">for (let i = 0; i &lt; 5; i++) {
+  console.log("hello world");
+}
+</code></pre>
+</li>
+<li>
+<p><code>While</code> Loop</p>
+<pre><code class="language-javascript">let i = 0;
+while (i &lt; 5) {
+  if (i % 2 !== 0) console.log(i);
+  i++;
+}
+</code></pre>
+</li>
+<li>
+<p><code>Do-while Loop</code>: <strong>execute at least once</strong></p>
+<pre><code class="language-javascript">let i = 0;
+do {
+  if (i % 2 !== 0) console.log(i);
+  i++;
+} while (i &lt;= 5);
+</code></pre>
+</li>
+<li>
+<p><code>For-in</code> Loop: 用在 property</p>
+<pre><code class="language-javascript"> const person = {
+   name = 'jamie',
+   age: 30
+ };
+
+for (let key in person) {
+  console.log(key, person[key]);
+}
+
+const colors = ['red', 'blue', 'green'];
+for (let inex in colors)
+  console.log(index, colors[index]);
+</code></pre>
+</li>
+<li>
+<p><code>For-of</code> Loop: 用在 array</p>
+<pre><code class="language-javascript">const colors = ["red", "blue", "green"];
+for (let color of colors) console.log(color);
+</code></pre>
+</li>
+<li>
+<p><code>break</code> and <code>continue</code></p>
+<pre><code class="language-javascript">let i = 0;
+while (i &lt;= 10) {
+  if (i == 5) break;
+
+  if (i % 2 === 0) {
+    i++;
+    continue; // 盡量不要用
+  }
+
+  conosle.log(i);
+  i++;
+}
+</code></pre>
+</li>
+<li>
+<p>exercise</p>
+<pre><code class="language-javascript">function max(a, b)
+  return (a &gt; b) ? a : b;
+
+function isLandscape(width, height) {
+  return (width &gt; height);
+}
+
+// Math.floor(1.3)
+// 12 points suspend
+function checkSpeed(speed) {
+  const speedLimit = 70;
+  const kmPerPoint = 5;
+  if (speed &lt; speedLimit + kmPerPoint) {
+    console.log("ok");
+  } else {
+  	const points = Math.floor((speed - speedLimit) / knPerPoint);
+  	if (points &gt;= 12 )
+      console.log("suspend");
+  	else
+    	console.log('points: ', points);
+  }
+}
+
+const array = [0, null, undefined, '', 2, 3];
+function countTruthy(array) {
+  let count = 0;
+  for (let element of array) {
+    if (element)
+      count++;
+  }
+  return count;
+}
+
+const movie = {
+  title: 'a',
+  release: 2018,
+  director: 'b'
+};
+function showProperties(obj) {
+  for (let attr in obj)
+    if (Typeof obj[attr] === 'string')
+    console.log(attr, obj[attr]);
+}
+showProperties(movie);
+
+function showStars(row) {
+  for (let i = 1; i &lt;= row; i++) {
+    let output = '';
+    for (let j = 0; j &lt; i; j++)
+      output += '*';
+    console.log(output);
+  }
+}
+
+showStars(5);
+
+
+function showPrimes(limit) {
+  for (let i = 2; i &lt;= limit; i++) {
+    let isPrime = true;
+		for (let f = 2; f &lt; limit; f++) {
+      if ((i % f) === 0) {
+        isPrime = false;
+        break;
+      }
+    }
+    if (isPrime) console.log(i);
+  }
+}
+
+showPrimes(20);
+</code></pre>
+</li>
+</ul>
+<h2 id="object">Object</h2>
+<ul>
+<li>object literal</li>
+</ul>
+<pre><code class="language-javascript">// object literal
+const circle = {
+  radius: 1,
+  location: {
+    x: 1,
+    y: 1,
+  },
+  isVisible: true,
+  draw: function () {
+    console.log("draw");
+  },
+};
+
+circle.draw();
+</code></pre>
+<ul>
+<li><code>factory function</code></li>
+</ul>
+<pre><code class="language-javascript">function createCircle(radius) {
+  return {
+    radius: radius,
+    draw: function () {
+      console.log("draw");
+    },
+  };
+}
+
+// modern
+function createCircle(radius) {
+  return {
+    radius,
+    draw() {
+      console.log("draw");
+    },
+  };
+}
+
+const circle1 = createCircle(1);
+console.log(circle1);
+</code></pre>
+<ul>
+<li><code>constructor function</code></li>
+</ul>
+<pre><code class="language-javascript">// PASCAL notion
+function Circle(radius) {
+  this.radius = radius;
+  this.draw = function () {
+    console.log("draw");
+  };
+}
+
+const circle = new Circle(1);
+
+delete circle.color;
+delete circle.draw;
+</code></pre>
+<blockquote>
+<p>primitives are copied by their value, objects are copied by their reference.</p>
+</blockquote>
+<ul>
+<li>enumerate properties</li>
+</ul>
+<pre><code class="language-javascript">const circle = {
+  radius: 1,
+  draw() {
+    console.log("draw");
+  },
+};
+
+for (let key in circle) {
+  console.log(key);
+}
+
+// 🔥 circle is not iterable!!! ERROR
+for (let prop of circle) {
+  // WRONG!!
+  console.log(prop);
+}
+
+for (let key of Object.keys(circle)) console.log(key);
+
+for (let entry of Object.entries(circle)) console.log(entry);
+
+if ("radius" in circle) console.log("yes");
+</code></pre>
+<ul>
+<li>Clone Object (<code>Shallow Copy</code>)</li>
+</ul>
+<pre><code class="language-javascript">const circle = {
+  radius: 1,
+  draw() {
+    console.log("draw");
+  },
+};
+
+// old clone syntax
+const another = {};
+for (let key in circle) another[key] = circle[key];
+
+// new clone syntax
+const another = Object.assign({}, circle);
+
+// spread operator to shallow copy 🔥
+const another = { ...circle };
+</code></pre>
+<ul>
+<li><code>Math</code> (MDN)</li>
+</ul>
+<pre><code class="language-javascript">Math.random(); // 0~1
+Math.round(1.9); // 2
+Math.max(1, 2, 3, 4, 5); // 5
+</code></pre>
+<ul>
+<li><code>String</code> object</li>
+</ul>
+<pre><code class="language-javascript">// string primitive
+const message = "this is my first string"; // typeof string
+message.split(" ");
+
+// string object
+const another = new String("hi"); // typeof object
+</code></pre>
+<ul>
+<li>template literal</li>
+</ul>
+<pre><code class="language-javascript">const another = `Hi ${name}, ${2 + 3},
+Thank you`;
+</code></pre>
+<ul>
+<li>date</li>
+</ul>
+<pre><code class="language-javascript">const now = new Date();
+const date1 = new Date("May 11 2018 09:00");
+now.toISOString();
+</code></pre>
+<h2 id="array">Array</h2>
+<ul>
+<li>add element</li>
+</ul>
+<pre><code class="language-javascript">const numbers = [3, 4];
+// End
+numbers.push(5, 6);
+console.log(numbers); // 3,4,5,6
+// beginning
+numbers.unshift(1, 2); // 1,2,3,4
+// middle
+numbers.splice(2, 0, "a", "b");
+</code></pre>
+<ul>
+<li>find element (primitive)</li>
+</ul>
+<pre><code class="language-javascript">const numbers = [1, 2, 3, 1, 4];
+numbers.indexOf("a"); // -1 not found!
+numbers.indexOf(1); // 0
+numbers.lastIndexOf(1); // 3
+
+console.log(numbers.indexOf(1) !== -1);
+console.log(numbers.includes(1)); // new syntax 🔥
+</code></pre>
+<ul>
+<li>find element (object)</li>
+</ul>
+<pre><code class="language-javascript">const courses = [
+  { id: 1, name: "a" },
+  { id: 2, name: "b" },
+];
+
+const course = courses.find(function (course) {
+  return course.name === "a"; // criteria
+});
+
+console.log(course);
+
+const course2 = courses.findIndex(function (course) {
+  return course.name === "a"; // 0
+});
+
+console.log(course2);
+</code></pre>
+<ul>
+<li>arrow function
+<ul>
+<li>當你要傳一個 function 進去當作 callback 時</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-javascript">const courses = [
+  { id: 1, name: "a" },
+  { id: 2, name: "b" },
+];
+
+const course = courses.find(function (course) {
+  return course.name === "a";
+});
+
+// 只有一行 return 時
+const course2 = courses.find((course) =&gt; course.name == "a");
+console.log(course2);
+</code></pre>
+<ul>
+<li>remove elements</li>
+</ul>
+<pre><code class="language-javascript">const numbers = [1, 2, 3, 4];
+
+// end
+// numbers.push();
+const last = numbers.pop();
+console.log(last); // 4
+
+// beginning
+//numbers.unshift();
+const first = numbers.shift();
+console.log(first); // 1
+
+// middle
+numbers.splice(2, 1);
+console.log(numbers); // 1, 2, 4
+</code></pre>
+<ul>
+<li>empty array</li>
+</ul>
+<pre><code class="language-javascript">const numbers = [1, 2, 3, 4];
+let another = numbers;
+
+// solution 1 💡
+numbers = [];
+console.log(numbers);
+
+// solution 2 💡
+numbers.length = 0;
+
+// solution 3
+numbers.splice(0, numbers.length);
+
+// solution 4
+while (numbers.length &gt; 0) numbers.pop();
+</code></pre>
+<ul>
+<li>combine &amp; slice</li>
+</ul>
+<pre><code class="language-javascript">const first = [1, 2, 3];
+const second = [4, 5, 6];
+
+const combined = first.concat(second); // [1,2,3,4,5,6]
+
+const slice = combined.slice(2, 4); // [3,4]
+const slice = combined.slice(2); // [3,4,5,6]
+const slice = combined.slice(); // [1,2,3,4,5,6]
+</code></pre>
+<ul>
+<li>spread operator (ES6)🔥</li>
+</ul>
+<pre><code class="language-javascript">const combined = [...first, ...second];
+const combined = [...first, "a", ...second, "b"]; // [1,2,3,'a',4,5,6,'b']
+const copy = [...combined]; // copy
+</code></pre>
+<ul>
+<li>iterate array</li>
+</ul>
+<pre><code class="language-javascript">const numbers = [1, 2, 3];
+for (let number of numbers) console.log(number);
+
+numbers.forEach(function (number) {
+  console.log(number);
+});
+
+numbers.forEach((number) =&gt; console.log(number)); // arrow version
+
+numbers.forEach((number, index) =&gt; console.log(index, number)); // also index 🔥
+</code></pre>
+<ul>
+<li>join array, split string</li>
+</ul>
+<pre><code class="language-javascript">const numbers = [1, 2, 3];
+const joined = numbers.join(","); // '1,2,3'
+
+const message = "This is my first message";
+const parts = message.split(" "); // ['This', 'is', ..];
+</code></pre>
+<ul>
+<li>sort array</li>
+</ul>
+<pre><code class="language-javascript">const numbers = [2, 3, 1];
+numbers.sort(); // [1,2,3]
+numbers.reverse(); // [3,2,1]
+
+const Courses = [
+  { id: 1, name: "Node.js" },
+  { id: 2, name: "JavaScript" },
+];
+
+Courses.sort(function (a, b) {
+  // a &lt; b =&gt; -1
+  // a &gt; b =&gt; 1
+  // a == b =&gt; 0
+  const nameA = a.name.toUpperCase();
+  const nameB = b.name.toUpperCase();
+
+  if (nameA &lt; nameB) return -1;
+  if (nameA &gt; nameB) return 1;
+  return 0;
+});
+</code></pre>
+<ul>
+<li>testing elements
+<ul>
+<li>every()</li>
+<li>some()</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-javascript">const numbers = [1, 2, 3];
+
+// 只要一個失敗，就回傳 false
+const allPositive = numbers.every(function (value) {
+  return value &gt;= 0;
+});
+
+// 只要有一個成立就回傳 true
+const atLeastOnePositive = number.some(function (value) {
+  return value &gt;= 0;
+});
+</code></pre>
+<ul>
+<li>Filter array</li>
+</ul>
+<pre><code class="language-javascript">const number = [1, -1, 2, 3];
+const filtered = numbers.filter(function (value) {
+  // [1,2,3]
+  return value &gt;= 0;
+});
+const filtered = numbers.filter((n) =&gt; n &gt;= 0); // arrow
+</code></pre>
+<ul>
+<li>mappin array
+<ul>
+<li>map 跟 filter return array, 可以 chain</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-javascript">const number = [1, -1, 2, 3];
+const filtered = numbers.filter((n) =&gt; n &gt;= 0);
+const items = filtered.map((n) =&gt; "&lt;li&gt;" + n + "&lt;/li&gt;");
+console.log(items);
+const html = "&lt;ul&gt;" + items.join("") + "&lt;/ul&gt;";
+
+const items = filtered.map((n) =&gt; {
+  const obj = { value: n };
+  return obj;
+});
+
+const items = filtered.map((n) =&gt; ({ value: n })); // 這邊用 () 將 obj 包起來，不然會出錯
+</code></pre>
+<ul>
+<li>reduce array</li>
+</ul>
+<pre><code class="language-javascript">const numbers = [1, -1, 2, 3];
+let sum = 0;
+for (let n of numbers) sum += n;
+console.log(sum);
+
+// alternative
+const sum = numbers.reduce((accumulator, currentValue) =&gt; {
+  return accumulator + currentValue;
+}, 0);
+
+// arrow
+const sum = numbers.reduct(
+  (accumulator, currentValue) =&gt; accumulator + currentValue
+);
+</code></pre>
+
+            </div>
+
+        </article>
+
+
+
+
+        
+</main>
+    </div>
+
+    <footer class="gh-foot no-menu gh-outer">
+        <div class="gh-foot-inner gh-inner">
+            <div class="gh-copyright">
+                <a href="https://cmwang.net" rel="noopener">Liberation Notes</a> © 2024
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+
+    <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/assets/built/main.min.js?v=e36baffe69"></script>
+
+<!-- hide footer -->
+<style>
+.gh-foot-menu {
+  display: none;
+}
+
+.gh-footer-copyright {
+  display: none;
+}
+</style>
+
+
+<!-- prism.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js" integrity="sha512-9khQRAUBYEJDCDVP2yw3LRUQvjJ0Pjx0EShmaQjcHa6AXiOv6qHQu9lCAIR8O+/D8FtaCoJ2c0Tf9Xo7hYH01Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha512-SkmBfuA2hqjzEVpmnMt/LINrjop3GKWqsuLSSB3e7iBmYK7JuWw4ldmmxwD9mdm2IRTTi0OxSAfEGvgEi0i2Kw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.js" integrity="sha512-st608h+ZqzliahyzEpETxzU0f7z7a9acN6AFvYmHvpFhmcFuKT8a22TT5TpKpjDa3pt3Wv7Z3SdQBCBdDPhyWA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" integrity="sha512-/kVH1uXuObC0iYgxxCKY41JdWOkKOxorFVmip+YVifKsJ4Au/87EisD1wty7vxN2kAhnWh6Yc8o/dSAXj6Oz7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- YouTube iframe API -->
+<script src="https://www.youtube.com/iframe_api" ></script>
+<script src="https://cdn.jsdelivr.net/npm/subtitles-parser@0.0.2/index.min.js" type="text/javascript" crossorigin="anonymous" referrerpolicy="no-referrer" ></script>
+<script src="https://blog2.cmwang.net/subtitles/js/youtube.external.subtitle.min.js" type="text/javascript" crossorigin="anonymous" referrerpolicy="no-referrer" ></script>
+<script src="https://blog2.cmwang.net/subtitles/js/loadsrt.min.js" type="text/javascript" crossorigin="anonymous" referrerpolicy="no-referrer" ></script>
+
+</body>
+</html>
