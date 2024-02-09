@@ -19,7 +19,7 @@
     <meta property="og:url" content="https://cmwang.net/portfolio/neptune-smart-home-product-proposal/">
     <meta property="og:image" content="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDMwfHxwcmVzZW50YXRpb258ZW58MHx8fHwxNzA3Mjk5Mjk5fDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000">
     <meta property="article:published_time" content="2019-07-03T16:00:00.000Z">
-    <meta property="article:modified_time" content="2024-02-09T05:59:10.000Z">
+    <meta property="article:modified_time" content="2024-02-09T14:33:55.000Z">
     <meta property="article:tag" content="Product Proposal">
     <meta property="article:tag" content="IoT">
     <meta property="article:tag" content="Portfolio">
@@ -68,7 +68,7 @@
     "headline": "⚠️ Neptune Smart Home Product Proposal - 20190704",
     "url": "https://cmwang.net/portfolio/neptune-smart-home-product-proposal/",
     "datePublished": "2019-07-03T16:00:00.000Z",
-    "dateModified": "2024-02-09T05:59:10.000Z",
+    "dateModified": "2024-02-09T14:33:55.000Z",
     "image": {
         "@type": "ImageObject",
         "url": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDMwfHxwcmVzZW50YXRpb258ZW58MHx8fHwxNzA3Mjk5Mjk5fDA&ixlib=rb-4.0.3&q=80&w=2000",
@@ -119,9 +119,6 @@
 #new-player.embed #player-toolbar {
 	background-color: #f4f4f4;
 }
-#fullscreen {
-    display: none important!;
-    }
 </style><style>:root {--ghost-accent-color: #D63484;}</style>
 </head>
 
@@ -186,7 +183,7 @@
                 <p>This is the final version of the product proposal that originated on July, 2019, during my tenure as a Team Leader. Inspired during the post-CES 2019 period upon returning home, the concept for smart home innovation underwent validation through prototype circuit boards. After approximately three months of internal proposal iterations, this document represents the conclusive version. Notably, the conceptualization led to a successful application for a Taiwanese invention patent and subsequent implementation in model homes.</p><blockquote><em>這是發生在2019年7月，我擔任團隊領導時所提出的產品計劃。在結束2019年CES回國期間，我開始思考智能家居的概念，經過原型電路板的驗證階段，經過約三個月的內部提案討論，呈現出這份最終版本。這個構想最終獲得了台灣發明型專利的申請，並成功導入樣品屋。</em></blockquote><div class="kg-card kg-callout-card kg-callout-card-white"><div class="kg-callout-text"><b><strong style="white-space: pre-wrap;">Role</strong></b>: Senior Product Manager &amp; Development Team Leader</div></div>
 <!--kg-card-begin: html-->
 <div class="iframe-slideshare-16x9">    
-    <iframe src="https://www.slideshare.net/slideshow/embed_code/key/mQdQ7JzCIld2iM?startSlide=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen> 
+    <iframe src="https://www.slideshare.net/slideshow/embed_code/key/mQdQ7JzCIld2iM?startSlide=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"> 
     </iframe>
 </div>
 <!--kg-card-end: html-->
@@ -383,34 +380,6 @@ Android
 <script src="https://cdn.jsdelivr.net/npm/subtitles-parser@0.0.2/index.min.js" type="text/javascript" crossorigin="anonymous" referrerpolicy="no-referrer" ></script>
 <script src="https://blog2.cmwang.net/subtitles/js/youtube.external.subtitle.min.js" type="text/javascript" crossorigin="anonymous" referrerpolicy="no-referrer" ></script>
 <script src="https://blog2.cmwang.net/subtitles/js/loadsrt.min.js" type="text/javascript" crossorigin="anonymous" referrerpolicy="no-referrer" ></script>
- <script>
-  // Function to hide the button within the iframe
-  function hideButtonInIframe(iframe) {
-    try {
-      var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-
-      // Check if the button exists in the iframe
-      var iframeButton = iframeDocument.getElementById('fullscreen');
-      if (iframeButton) {
-        // Hide the button by setting its style.display to 'none'
-        iframeButton.style.display = 'none';
-      }
-    } catch (error) {
-      console.error('Error accessing iframe content:', error.message);
-    }
-  }
-
-  // Event listener to execute the function after everything has loaded
-  window.onload = function() {
-    // Select all iframes within elements with class "iframe-slideshare-16x9"
-    var iframes = document.querySelectorAll('.iframe-slideshare-16x9 iframe');
-
-    // Loop through the selected iframes and apply hideButtonInIframe function
-    iframes.forEach(function (iframe) {
-      hideButtonInIframe(iframe);
-    });
-  };
-</script>
 
 </body>
 </html>
