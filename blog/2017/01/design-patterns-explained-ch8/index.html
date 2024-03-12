@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>📚 Design Patterns Explained - CH8</title>
-    <link rel="stylesheet" href="/assets/built/screen.css?v=5d42556e92">
+    <link rel="stylesheet" href="/assets/built/screen.css?v=efe5d52887">
 
     <meta name="description" content="This note summarizes the 8th chapter of &quot;Design Patterns Explained.&quot;">
     <link rel="icon" href="https://cmwang.net/content/images/size/w256h256/2024/01/2-removebg-preview.png" type="image/png">
@@ -19,7 +19,7 @@
     <meta property="og:url" content="https://cmwang.net/blog/2017/01/design-patterns-explained-ch8/">
     <meta property="og:image" content="https://cmwang.net/content/images/2024/01/81xYhfUxw8L._AC_UF1000-1000_QL80_-1.jpg">
     <meta property="article:published_time" content="2017-01-20T16:00:00.000Z">
-    <meta property="article:modified_time" content="2024-02-08T13:09:11.000Z">
+    <meta property="article:modified_time" content="2024-03-12T19:51:08.000Z">
     <meta property="article:tag" content="Software Design">
     <meta property="article:tag" content="Notes">
     
@@ -69,7 +69,7 @@
     "headline": "📚 Design Patterns Explained - CH8",
     "url": "https://cmwang.net/blog/2017/01/design-patterns-explained-ch8/",
     "datePublished": "2017-01-20T16:00:00.000Z",
-    "dateModified": "2024-02-08T13:09:11.000Z",
+    "dateModified": "2024-03-12T19:51:08.000Z",
     "image": {
         "@type": "ImageObject",
         "url": "https://cmwang.net/content/images/2024/01/81xYhfUxw8L._AC_UF1000-1000_QL80_-1.jpg",
@@ -88,8 +88,8 @@
     <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="415aa5f59e59c087cacf652d7b" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css" data-sodo-search="https://cmwang.net/" crossorigin="anonymous"></script>
     
     <link href="https://cmwang.net/webmentions/receive/" rel="webmention">
-    <script defer src="/public/cards.min.js?v=5d42556e92"></script>
-    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=5d42556e92">
+    <script defer src="/public/cards.min.js?v=efe5d52887"></script>
+    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=efe5d52887">
     <!-- hide search box -->
 <style>
 .gh-search {
@@ -185,7 +185,16 @@
             <div class="gh-content gh-canvas">
                 
 <!--kg-card-begin: html-->
-<iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/729ccec5e4224a7cbf2ea6b988a57f9e" title="Design Pattern Explained - CH8" allowfullscreen="true" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;" data-ratio="1.7777777777777777"></iframe>
+<div class="iframe-slideshare-16x9">    
+    <iframe src="https://www.slideshare.net/slideshow/embed_code/key/5HZXWlW5u2s0md?startSlide=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen style="
+          border: 0px; 
+          background: padding-box padding-box rgba(0, 0, 0, 0.1); 
+          margin: 0px; 
+          padding: 0px; 
+          border-radius: 6px; 
+          box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px;"> 
+    </iframe>
+</div>
 <!--kg-card-end: html-->
 <h1 id="expanding-our-horizons">Expanding Our Horizons</h1><h2 id="overview">Overview</h2><ul><li>Object</li><li>Encapsulation</li><li>Inheritance</li><li>Handling variation</li><li>Commonality and variability analysis</li><li>Abstract class and its derived classes</li></ul><h2 id="objects-traditional-view-and-new-view">Objects: Traditional view and new view</h2><h3 id="traditional-view">Traditional View</h3><ul><li>Data with methods -&nbsp;<strong>smart data</strong></li><li>too narrow from&nbsp;<strong>implementation</strong>&nbsp;perspective</li></ul><h3 id="broad-view">Broad View</h3><ul><li>From&nbsp;<strong>conceptual</strong>&nbsp;perspective</li><li>an object is an&nbsp;<em>entity that has responsibilities</em>&nbsp;(責任), these responsibilities define the behavior of the object. Or an&nbsp;<em>entity that has specific behavior</em>&nbsp;(特定行為).</li></ul><h2 id="focus-on-intentionmotivation-not-implementation">Focus on intention/motivation not implementation</h2><p>This view enables us to build software in two steps:</p><ol><li>Make a preliminary design without worrying about all the details involved.</li><li>Implement the design.</li></ol><p>The reason this works is that we only have to focus on the object’s&nbsp;<strong>public interface</strong>&nbsp;— the communication window through which I ask the object to do something.</p><p>Hiding implementations behind interfaces essentially&nbsp;<strong>decouples</strong>&nbsp;them from the using objects.</p><hr><h2 id="encapsulation-traditional-view-and-new-view">Encapsulation: Traditional view and new view</h2><h3 id="traditional-view-1">Traditional View</h3><ul><li>data hiding</li></ul><h3 id="broad-view-1">Broad View</h3><ul><li><strong>any kind of hiding</strong><ul><li>Implementations (data, methods..)</li><li><strong>Drived</strong>&nbsp;classes (<strong>Encapsulation of type</strong>&nbsp;is achieved when there is an&nbsp;<em>abstract class</em>&nbsp;with derivations (or an interface with implementations) that are used&nbsp;<em>polymorphically</em>)</li><li>Design details</li><li>Instantiation rules (ex. creational patterns)</li></ul></li></ul><h2 id="advantage">Advantage</h2><p>It gives us a better way to split up (decompose) our programs. The&nbsp;<strong>encapsulating layers</strong>&nbsp;become the&nbsp;<strong>interfaces</strong>&nbsp;we design to. (封裝層成為設計需要遵循的介面)</p><p>By encapsulating different kinds of subclasses (<strong>encapsulation of type</strong>), we can add new ones without changing any of the client programs using them. (<em>GoF typically means when they mention encapsulation</em>)</p><hr><h2 id="inheritance">Inheritance</h2><h3 id="traditional-view-2">Traditional View</h3><ul><li><strong>reuse</strong>&nbsp;of classes</li><li>achived by creating classes and then deriving new (<em>spcialized</em>) classes bases on these base (<em>generalized</em>) classes</li></ul><h3 id="broad-view-2">Broad View</h3><ul><li>using inheritance for specialization, however<ul><li>can cause weak cohesion</li><li>reduces possibility of reuse</li><li>does not scale well with variation</li></ul></li><li><em>to classify classes as things that behave the same way</em>. (<strong>placeholder</strong>)</li></ul><hr><h2 id="find-what-is-varying-and-encapsulate-it">Find What Is Varying and Encapsulate It</h2><blockquote>Consider&nbsp;<strong>what</strong>&nbsp;should be variable in your design. This approach is the opposite of focusing on the&nbsp;<strong>cause</strong>&nbsp;of redesign. Instead of considering what might force a change to a design, consider what you want to be&nbsp;<strong><em>able</em></strong>&nbsp;to change without redesign. The focus here is on&nbsp;<strong><em>encapsulating the concept that varies</em></strong>, a theme of many design patterns. – GoF, Design Patterns</blockquote><hr><h2 id="more-about-gof%E2%80%99s-encapsulation">More about GoF’s Encapsulation</h2><ul><li>Design Patterns use inheritance to classify variations in behaviors.</li><li>Hiding classes with an abstract class or interface —&nbsp;<strong>type encapsulation</strong>.</li><li>Containing a reference of this&nbsp;<em>abstract class</em>&nbsp;or&nbsp;<em>interface</em>&nbsp;type (aggregation)&nbsp;<strong>hides</strong>&nbsp;these&nbsp;<em>derived classes</em>&nbsp;that represent&nbsp;<strong>variations</strong>&nbsp;in behavior.</li><li>In effect, many design patterns&nbsp;<em>use encapsulation to create layers</em>&nbsp;between objects.</li></ul><hr><h2 id="containing-variation-in-data-vs-containing-variation-in-behavior">Containing variation in data vs containing variation in behavior</h2><h3 id="handling-variation-in-data">Handling variation in data</h3><ul><li>Have a data member that tells me what type of movement my object has.</li><li>Have two different types of&nbsp;<strong>Animals</strong>&nbsp;(both derived from the base&nbsp;<strong>Animal</strong>&nbsp;class) — one for walking and one for flying.</li></ul><h3 id="handling-variation-in-behavior-with-objects">Handling variation in behavior with objects</h3><p>Using objects to contain variation in attributes and using objects to contain variation in behavior are very similar. Don’t afraid.</p><hr><h2 id="commonality-and-variability">Commonality and Variability</h2><p>Identify&nbsp;<strong>where</strong>&nbsp;things vary (commonality analysis) and then identify&nbsp;<strong>how</strong>&nbsp;they vary (variability analysis).</p><p><strong>Commonality analysis</strong>&nbsp;is the search for common elements that helps us understand how family members are the same.</p><p><strong>Variability analysis</strong>&nbsp;reveals how family members vary. Variability only makes sense within a given commonality.</p><p>Ex. Whiteboard marker, pencil, ballpoint pen</p><ul><li>Commonality: writing instrument</li><li>Variability: material to write, shape..</li></ul><h2 id="commonality-and-variability-and-abstract-class">Commonality and Variability and Abstract class</h2><p><strong>Commonality analysis</strong>&nbsp;seeks structure that is unlikely to change over time, while&nbsp;<strong>variability analysis</strong>&nbsp;captures structure that is likely to change.&nbsp;<strong><em>Variability analysis makes sense only in terms of the context defined by the associated commonality analysis</em></strong>. In other words, if variations are the specific concrete cases in the domain, commonality defines the concepts in the domain that tie them together. The&nbsp;<strong><em>common concepts</em></strong>&nbsp;will be represented by&nbsp;<strong>abstract classes</strong>. The&nbsp;<strong><em>variations</em></strong>&nbsp;found by variability analysis will be implemented by the&nbsp;<strong>concrete classes</strong>.</p><h2 id="relationship-between-commonality-and-variability-perspectives-and-abstract-classes">Relationship between Commonality and Variability, perspectives, and abstract classes</h2><figure class="kg-card kg-image-card"><img src="https://cmwang.net/content/images/2024/01/relationship.png" class="kg-image" alt loading="lazy" width="1163" height="511" srcset="https://cmwang.net/content/images/size/w600/2024/01/relationship.png 600w, https://cmwang.net/content/images/size/w1000/2024/01/relationship.png 1000w, https://cmwang.net/content/images/2024/01/relationship.png 1163w" sizes="(min-width: 720px) 720px"></figure><hr><h2 id="benefits-of-using-abstract-classes-for-specialization">Benefits of using abstract classes for specialization</h2><figure class="kg-card kg-image-card"><img src="https://cmwang.net/content/images/2024/01/benefits.png" class="kg-image" alt loading="lazy" width="1165" height="490" srcset="https://cmwang.net/content/images/size/w600/2024/01/benefits.png 600w, https://cmwang.net/content/images/size/w1000/2024/01/benefits.png 1000w, https://cmwang.net/content/images/2024/01/benefits.png 1165w" sizes="(min-width: 720px) 720px"></figure><hr><h2 id="two-step-procedure-for-design">Two-Step Procedure for Design</h2><p>Ask yourself:</p><ul><li>When defining an&nbsp;<strong>abstract class</strong>&nbsp;(commonality):<ul><li>What&nbsp;<strong>interface</strong>&nbsp;is needed to handle all the responsibilities (core concepts from the conceptual perspective) of this class?</li></ul></li><li>When defining&nbsp;<strong>derived classes</strong>:<ul><li>Given this particular implementation (this&nbsp;<strong>variation</strong>), how can I implement it (variation) with the given specification?</li></ul></li></ul><hr><h2 id="take-away">Take away</h2><p>Think object-oriented in a broad way.</p><ul><li>Object: an&nbsp;<em>entity that has responsibilities (specific behavior)</em></li><li>Encapsulation:&nbsp;<strong>any</strong>&nbsp;kind of&nbsp;<strong>hiding</strong>&nbsp;(instantiation rule, type..)</li><li>Inheritance: use for&nbsp;<strong>specialization</strong>&nbsp;and&nbsp;<em>classify classes as things that behave the same way</em>.</li></ul><p><strong>Find what is varying and encapsulate it</strong>&nbsp;(in behavior).</p><p>Commonality, variability and abstract class: use inheritance to classify variations in behaviors.</p>
             </div>
@@ -339,7 +348,7 @@
         </div>
     </div>
 </div>
-<script src="/assets/built/main.min.js?v=5d42556e92"></script>
+<script src="/assets/built/main.min.js?v=efe5d52887"></script>
 
 <!-- hide footer -->
 <style>
