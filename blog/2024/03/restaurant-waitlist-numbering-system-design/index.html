@@ -4,38 +4,39 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>📚 Factory Patterns Review</title>
+    <title>Restaurant Waitlist Numbering System Design</title>
     <link rel="stylesheet" href="/assets/built/screen.css?v=e7ef428de2">
 
-    <meta name="description" content="Overview simple factory, factory method and abstract factory pattern in Chinese.">
+    <meta name="description" content="I designed a restaurant waitlist numbering system, focusing on improving service efficiency and customer experience through technological innovation and scalability.">
     <link rel="icon" href="https://cmwang.net/content/images/size/w256h256/2024/01/2-removebg-preview.png" type="image/png">
-    <link rel="canonical" href="https://cmwang.net/blog/2016/12/factory-patterns-review/">
+    <link rel="canonical" href="https://cmwang.net/blog/2024/03/restaurant-waitlist-numbering-system-design/">
     <meta name="referrer" content="no-referrer-when-downgrade">
     
     <meta property="og:site_name" content="Liberation Notes">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="📚 Factory Patterns Review">
-    <meta property="og:description" content="Overview simple factory, factory method and abstract factory pattern in Chinese.">
-    <meta property="og:url" content="https://cmwang.net/blog/2016/12/factory-patterns-review/">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1666858452715-1399b952befb?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDF8fHNvbGlkJTIwcHJpbmNpcGxlfGVufDB8fHx8MTcxMDI3NDE5OHww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000">
-    <meta property="article:published_time" content="2016-12-29T16:00:00.000Z">
-    <meta property="article:modified_time" content="2024-03-12T20:13:14.000Z">
+    <meta property="og:title" content="Restaurant Waitlist Numbering System Design">
+    <meta property="og:description" content="I designed a restaurant waitlist numbering system, focusing on improving service efficiency and customer experience through technological innovation and scalability.">
+    <meta property="og:url" content="https://cmwang.net/blog/2024/03/restaurant-waitlist-numbering-system-design/">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1528406745358-6c3112259eb9?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDF8fHF1ZXVlJTIwfGVufDB8fHx8MTcxMTU4NTAxNHww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000">
+    <meta property="article:published_time" content="2024-03-28T00:28:09.000Z">
+    <meta property="article:modified_time" content="2024-03-28T00:34:08.000Z">
     <meta property="article:tag" content="Software Design">
     <meta property="article:tag" content="Notes">
+    <meta property="article:tag" content="Prototype | 產品原型">
     
     <meta property="article:publisher" content="https://www.facebook.com/ghost">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="📚 Factory Patterns Review">
-    <meta name="twitter:description" content="Overview simple factory, factory method and abstract factory pattern in Chinese.">
-    <meta name="twitter:url" content="https://cmwang.net/blog/2016/12/factory-patterns-review/">
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1666858452715-1399b952befb?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDF8fHNvbGlkJTIwcHJpbmNpcGxlfGVufDB8fHx8MTcxMDI3NDE5OHww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000">
+    <meta name="twitter:title" content="Restaurant Waitlist Numbering System Design">
+    <meta name="twitter:description" content="I designed a restaurant waitlist numbering system, focusing on improving service efficiency and customer experience through technological innovation and scalability.">
+    <meta name="twitter:url" content="https://cmwang.net/blog/2024/03/restaurant-waitlist-numbering-system-design/">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1528406745358-6c3112259eb9?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDF8fHF1ZXVlJTIwfGVufDB8fHx8MTcxMTU4NTAxNHww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Jamie Wang">
     <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="Software Design, Notes">
+    <meta name="twitter:data2" content="Software Design, Notes, Prototype | 產品原型">
     <meta name="twitter:site" content="@ghost">
     <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="675">
+    <meta property="og:image:height" content="901">
     
     <script type="application/ld+json">
 {
@@ -66,19 +67,19 @@
             "https://blog.cmwang.net"
         ]
     },
-    "headline": "📚 Factory Patterns Review",
-    "url": "https://cmwang.net/blog/2016/12/factory-patterns-review/",
-    "datePublished": "2016-12-29T16:00:00.000Z",
-    "dateModified": "2024-03-12T20:13:14.000Z",
+    "headline": "Restaurant Waitlist Numbering System Design",
+    "url": "https://cmwang.net/blog/2024/03/restaurant-waitlist-numbering-system-design/",
+    "datePublished": "2024-03-28T00:28:09.000Z",
+    "dateModified": "2024-03-28T00:34:08.000Z",
     "image": {
         "@type": "ImageObject",
-        "url": "https://images.unsplash.com/photo-1666858452715-1399b952befb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDF8fHNvbGlkJTIwcHJpbmNpcGxlfGVufDB8fHx8MTcxMDI3NDE5OHww&ixlib=rb-4.0.3&q=80&w=2000",
+        "url": "https://images.unsplash.com/photo-1528406745358-6c3112259eb9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDF8fHF1ZXVlJTIwfGVufDB8fHx8MTcxMTU4NTAxNHww&ixlib=rb-4.0.3&q=80&w=2000",
         "width": 1200,
-        "height": 675
+        "height": 901
     },
-    "keywords": "Software Design, Notes",
-    "description": "Overview simple factory, factory method and abstract factory pattern in Chinese.",
-    "mainEntityOfPage": "https://cmwang.net/blog/2016/12/factory-patterns-review/"
+    "keywords": "Software Design, Notes, Prototype | 產品原型",
+    "description": "I designed a restaurant waitlist numbering system, focusing on improving service efficiency and customer experience through technological innovation and scalability.",
+    "mainEntityOfPage": "https://cmwang.net/blog/2024/03/restaurant-waitlist-numbering-system-design/"
 }
     </script>
 
@@ -112,16 +113,10 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" integrity="sha512-vswe+cgvic/XBoF1OcM/TeJ2FW0OofqAVdCZiEYkd6dwGXthvkSFWOoGGJgS2CW70VK5dQM5Oh+7ne47s74VTg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css" integrity="sha512-Dqf5696xtofgH089BgZJo2lSWTvev4GFo+gA2o4GullFY65rzQVQLQVlzLvYwTo0Bb2Gpb6IqwxYWtoMonfdhQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-
-    <style>
-.gh-article-image {
-  display: none;
-}
-</style>
 <style>:root {--ghost-accent-color: #D63484;}</style>
 </head>
 
-<body class="post-template tag-software-design tag-notes tag-en tag-hash-slideshare is-head-left-logo">
+<body class="post-template tag-software-design tag-en tag-notes tag-prototype is-head-left-logo">
 <div class="gh-site">
 
     <header id="gh-head" class="gh-head gh-outer">
@@ -157,38 +152,38 @@
 <main class="site-main">
 
 
-        <article class="gh-article post tag-software-design tag-notes tag-en tag-hash-slideshare">
+        <article class="gh-article post tag-software-design tag-en tag-notes tag-prototype">
 
             <header class="gh-article-header gh-canvas">
                 <span class="gh-article-meta">
-                        <a href="/tag/software-design/" class="gh-article-tag">Software Design</a>, <a href="/tag/notes/" class="gh-article-tag">Notes</a>
+                        <a href="/tag/software-design/" class="gh-article-tag">Software Design</a>, <a href="/tag/notes/" class="gh-article-tag">Notes</a>, <a href="/tag/prototype/" class="gh-article-tag">Prototype | 產品原型</a>
                     —
-                    <time datetime="2016-12-30">Dec 30, 2016</time>
+                    <time datetime="2024-03-28">Mar 28, 2024</time>
                 </span>
 
-                <h1 class="gh-article-title">📚 Factory Patterns Review</h1>
+                <h1 class="gh-article-title">Restaurant Waitlist Numbering System Design</h1>
 
 
                     <figure class="gh-article-image kg-width-wide">
         <img
-            srcset="https://images.unsplash.com/photo-1666858452715-1399b952befb?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDF8fHNvbGlkJTIwcHJpbmNpcGxlfGVufDB8fHx8MTcxMDI3NDE5OHww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;400 400w,
-                    https://images.unsplash.com/photo-1666858452715-1399b952befb?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDF8fHNvbGlkJTIwcHJpbmNpcGxlfGVufDB8fHx8MTcxMDI3NDE5OHww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;720 720w,
-                    https://images.unsplash.com/photo-1666858452715-1399b952befb?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDF8fHNvbGlkJTIwcHJpbmNpcGxlfGVufDB8fHx8MTcxMDI3NDE5OHww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;960 960w,
-                    https://images.unsplash.com/photo-1666858452715-1399b952befb?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDF8fHNvbGlkJTIwcHJpbmNpcGxlfGVufDB8fHx8MTcxMDI3NDE5OHww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1200 1200w,
-                    https://images.unsplash.com/photo-1666858452715-1399b952befb?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDF8fHNvbGlkJTIwcHJpbmNpcGxlfGVufDB8fHx8MTcxMDI3NDE5OHww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000 2000w"
+            srcset="https://images.unsplash.com/photo-1528406745358-6c3112259eb9?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDF8fHF1ZXVlJTIwfGVufDB8fHx8MTcxMTU4NTAxNHww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;400 400w,
+                    https://images.unsplash.com/photo-1528406745358-6c3112259eb9?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDF8fHF1ZXVlJTIwfGVufDB8fHx8MTcxMTU4NTAxNHww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;720 720w,
+                    https://images.unsplash.com/photo-1528406745358-6c3112259eb9?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDF8fHF1ZXVlJTIwfGVufDB8fHx8MTcxMTU4NTAxNHww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;960 960w,
+                    https://images.unsplash.com/photo-1528406745358-6c3112259eb9?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDF8fHF1ZXVlJTIwfGVufDB8fHx8MTcxMTU4NTAxNHww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1200 1200w,
+                    https://images.unsplash.com/photo-1528406745358-6c3112259eb9?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDF8fHF1ZXVlJTIwfGVufDB8fHx8MTcxMTU4NTAxNHww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000 2000w"
             sizes="(max-width: 1200px) 100vw, 1200px"
-            src="https://images.unsplash.com/photo-1666858452715-1399b952befb?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDF8fHNvbGlkJTIwcHJpbmNpcGxlfGVufDB8fHx8MTcxMDI3NDE5OHww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1200"
-            alt="📚 Factory Patterns Review"
+            src="https://images.unsplash.com/photo-1528406745358-6c3112259eb9?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDF8fHF1ZXVlJTIwfGVufDB8fHx8MTcxMTU4NTAxNHww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1200"
+            alt="Restaurant Waitlist Numbering System Design"
         >
-            <figcaption><span style="white-space: pre-wrap;">Photo by </span><a href="https://unsplash.com/@fachrizalm?utm_source=ghost&amp;utm_medium=referral&amp;utm_campaign=api-credit"><span style="white-space: pre-wrap;">Fachrizal Maulana</span></a><span style="white-space: pre-wrap;"> / </span><a href="https://unsplash.com/?utm_source=ghost&amp;utm_medium=referral&amp;utm_campaign=api-credit"><span style="white-space: pre-wrap;">Unsplash</span></a></figcaption>
+            <figcaption><span style="white-space: pre-wrap;">Photo by </span><a href="https://unsplash.com/@melanie_sophie?utm_source=ghost&amp;utm_medium=referral&amp;utm_campaign=api-credit"><span style="white-space: pre-wrap;">Melanie Pongratz</span></a><span style="white-space: pre-wrap;"> / </span><a href="https://unsplash.com/?utm_source=ghost&amp;utm_medium=referral&amp;utm_campaign=api-credit"><span style="white-space: pre-wrap;">Unsplash</span></a></figcaption>
     </figure>
             </header>
 
             <div class="gh-content gh-canvas">
-                
+                <p>Recently, I encountered a fascinating job opportunity that tasked me with designing a waitlist numbering system for restaurants. I spent several days delving into this challenge, hypothesizing the problem and its potential solutions, and embarked on a detailed breakdown of the task. This involved considering various aspects such as the customer's experience of joining the waitlist, the technological infrastructure needed to support such a system, and how it could improve overall service efficiency and reduce waiting times. Moreover, I explored how the system could be scaled to fit restaurants of varying sizes and handle diverse customer flows. This endeavor turned out to be a highly enriching experience, granting me invaluable insights into the intersection of technology and customer service within the restaurant industry. It was a journey filled with learning and exploration that I felt was important to document.</p><figure class="kg-card kg-bookmark-card kg-card-hascaption"><a class="kg-bookmark-container" href="https://cmwang.notion.site/9f4164cc8a274f388b7c214ee2df0f31?ref=localhost"><div class="kg-bookmark-content"><div class="kg-bookmark-title">Notion – The all-in-one workspace for your notes, tasks, wikis, and databases.</div><div class="kg-bookmark-description">A new tool that blends your everyday work apps into one. It’s the all-in-one workspace for you and your team</div><div class="kg-bookmark-metadata"><img class="kg-bookmark-icon" src="https://cmwang.notion.site/images/logo-ios.png" alt><span class="kg-bookmark-author">Notion</span></div></div><div class="kg-bookmark-thumbnail"><img src="https://www.notion.so/images/meta/default.png" alt></div></a><figcaption><p dir="ltr"><span style="white-space: pre-wrap;">👆👆👆 Detailed Design</span></p></figcaption></figure>
 <!--kg-card-begin: html-->
 <div class="iframe-slideshare-16x9">    
-    <iframe src="https://www.slideshare.net/slideshow/embed_code/key/MengtwYTgG1vV?startSlide=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen style="
+    <iframe src="https://cmwang.net/queue-management-system/" frameborder="0" marginwidth="0" marginheight="0" scrolling="yes" allowfullscreen style="
           border: 0px; 
           background: padding-box padding-box rgba(0, 0, 0, 0.1); 
           margin: 0px; 
@@ -199,6 +194,19 @@
 </div>
 <!--kg-card-end: html-->
 
+<!--kg-card-begin: html-->
+<div class="iframe-slideshare-16x9">    
+    <iframe src="https://dbdiagram.io/e/65e9b7e2b1f3d4062c5e218b/65eb5ccab1f3d4062c7a3ebd" frameborder="0" marginwidth="0" marginheight="0" scrolling="yes" allowfullscreen style="
+          border: 0px; 
+          background: padding-box padding-box rgba(0, 0, 0, 0.1); 
+          margin: 0px; 
+          padding: 0px; 
+          border-radius: 6px; 
+          box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px;"> 
+    </iframe>
+</div>
+<!--kg-card-end: html-->
+<figure class="kg-card kg-embed-card"><iframe height="450" src="https://whimsical.com/embed/TKLDKXnbCf69VKxisHNBZu?key=0" style="border:none" width="800"></iframe></figure><figure class="kg-card kg-embed-card"><iframe height="450" src="https://whimsical.com/embed/G8ATyxE8WbECKewTiEDYWP?key=0" style="border:none" width="800"></iframe></figure><figure class="kg-card kg-embed-card"><iframe height="450" src="https://whimsical.com/embed/VKgWX6Q6oWr6jtmhbit417?key=0" style="border:none" width="800"></iframe></figure><figure class="kg-card kg-embed-card"><iframe height="450" src="https://whimsical.com/embed/JgswfDF9K9PjqKHZJRRFzn?key=0" style="border:none" width="800"></iframe></figure>
             </div>
 
         </article>
@@ -212,47 +220,7 @@
                     <span class="text">You might also like...</span>
                 </h3>
                 <div class="post-feed">
-                        <article class="post tag-software-design tag-en tag-notes tag-prototype u-shadow">
-<a class="post-link" href="/blog/2024/03/restaurant-waitlist-numbering-system-design/">
-        <figure class="post-media">
-            <div class="u-placeholder same-height rectangle">
-                <img
-                    class="post-image u-object-fit"
-                    srcset="https://images.unsplash.com/photo-1528406745358-6c3112259eb9?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDF8fHF1ZXVlJTIwfGVufDB8fHx8MTcxMTU4NTAxNHww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;400 400w,
-                            https://images.unsplash.com/photo-1528406745358-6c3112259eb9?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDF8fHF1ZXVlJTIwfGVufDB8fHx8MTcxMTU4NTAxNHww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;720 750w,
-                            https://images.unsplash.com/photo-1528406745358-6c3112259eb9?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDF8fHF1ZXVlJTIwfGVufDB8fHx8MTcxMTU4NTAxNHww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;960 960w,
-                            https://images.unsplash.com/photo-1528406745358-6c3112259eb9?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDF8fHF1ZXVlJTIwfGVufDB8fHx8MTcxMTU4NTAxNHww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1200 1140w,
-                            https://images.unsplash.com/photo-1528406745358-6c3112259eb9?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDF8fHF1ZXVlJTIwfGVufDB8fHx8MTcxMTU4NTAxNHww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000 1920w"
-                    sizes="600px"
-                    src="https://images.unsplash.com/photo-1528406745358-6c3112259eb9?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDF8fHF1ZXVlJTIwfGVufDB8fHx8MTcxMTU4NTAxNHww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;960"
-                    alt="Restaurant Waitlist Numbering System Design"
-                    loading="lazy"
-                >
-            </div>
-        </figure>
-
-    <div class="post-wrapper">
-        <header class="post-header">
-                <span class="post-tag">Software Design</span>
-
-            <h2 class="post-title">
-                Restaurant Waitlist Numbering System Design
-            </h2>
-        </header>
-
-            <div class="post-excerpt">
-                I designed a restaurant waitlist numbering system, focusing on improving service efficiency and customer experience through technological innovation and scalability.
-            </div>
-    </div>
-
-    <footer class="post-footer">
-        <span class="post-more">Read More</span>
-        <span class="post-time"><time class="post-card-meta-date" datetime="2024-03-28">Mar 28, 2024</time></span>
-
-        
-    </footer>
-</a>
-</article>                        <article class="post tag-software-design tag-visual-learning tag-notes tag-zh-tw u-shadow">
+                        <article class="post tag-software-design tag-visual-learning tag-notes tag-zh-tw u-shadow">
 <a class="post-link" href="/blog/2023/11/dhh-microservices-vs-monolith/">
         <figure class="post-media">
             <div class="u-placeholder same-height rectangle">
@@ -368,6 +336,46 @@
     <footer class="post-footer">
         <span class="post-more">Read More</span>
         <span class="post-time"><time class="post-card-meta-date" datetime="2017-01-25">Jan 25, 2017</time></span>
+
+        
+    </footer>
+</a>
+</article>                        <article class="post tag-software-design tag-notes tag-en tag-hash-slideshare u-shadow">
+<a class="post-link" href="/blog/2017/01/design-patterns-explained-ch8/">
+        <figure class="post-media">
+            <div class="u-placeholder same-height rectangle">
+                <img
+                    class="post-image u-object-fit"
+                    srcset="/content/images/size/w400/2024/01/81xYhfUxw8L._AC_UF1000-1000_QL80_-1.jpg 400w,
+                            /content/images/size/w720/2024/01/81xYhfUxw8L._AC_UF1000-1000_QL80_-1.jpg 750w,
+                            /content/images/size/w960/2024/01/81xYhfUxw8L._AC_UF1000-1000_QL80_-1.jpg 960w,
+                            /content/images/size/w1200/2024/01/81xYhfUxw8L._AC_UF1000-1000_QL80_-1.jpg 1140w,
+                            /content/images/size/w2000/2024/01/81xYhfUxw8L._AC_UF1000-1000_QL80_-1.jpg 1920w"
+                    sizes="600px"
+                    src="/content/images/size/w960/2024/01/81xYhfUxw8L._AC_UF1000-1000_QL80_-1.jpg"
+                    alt="📚 Design Patterns Explained - CH8"
+                    loading="lazy"
+                >
+            </div>
+        </figure>
+
+    <div class="post-wrapper">
+        <header class="post-header">
+                <span class="post-tag">Software Design</span>
+
+            <h2 class="post-title">
+                📚 Design Patterns Explained - CH8
+            </h2>
+        </header>
+
+            <div class="post-excerpt">
+                This note summarizes the 8th chapter of &quot;Design Patterns Explained.&quot;
+            </div>
+    </div>
+
+    <footer class="post-footer">
+        <span class="post-more">Read More</span>
+        <span class="post-time"><time class="post-card-meta-date" datetime="2017-01-21">Jan 21, 2017</time></span>
 
         
     </footer>
