@@ -19,7 +19,7 @@
     <meta property="og:url" content="https://cmwang.net/blog/2023/10/install-nvidia-docker-for-ubuntu/">
     <meta property="og:image" content="https://images.unsplash.com/photo-1646627927863-19874c27316b?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDZ8fGRvY2tlcnxlbnwwfHx8fDE3MDY3OTAwMDN8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000">
     <meta property="article:published_time" content="2023-10-15T16:00:00.000Z">
-    <meta property="article:modified_time" content="2025-03-20T08:31:32.000Z">
+    <meta property="article:modified_time" content="2025-03-20T08:52:41.000Z">
     <meta property="article:tag" content="How-To">
     <meta property="article:tag" content="Docker">
     <meta property="article:tag" content="Ubuntu">
@@ -71,7 +71,7 @@
     "headline": "📔 Install Nvidia Docker on Ubuntu",
     "url": "https://cmwang.net/blog/2023/10/install-nvidia-docker-for-ubuntu/",
     "datePublished": "2023-10-15T16:00:00.000Z",
-    "dateModified": "2025-03-20T08:31:32.000Z",
+    "dateModified": "2025-03-20T08:52:41.000Z",
     "image": {
         "@type": "ImageObject",
         "url": "https://images.unsplash.com/photo-1646627927863-19874c27316b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDZ8fGRvY2tlcnxlbnwwfHx8fDE3MDY3OTAwMDN8MA&ixlib=rb-4.0.3&q=80&w=2000",
@@ -252,7 +252,7 @@ sudo cp /var/cuda-repo-ubuntu2404-12-8-local/cuda-*-keyring.gpg /usr/share/keyri
 sudo apt-get update
 sudo apt-get -y install cuda-toolkit-12-8
 </code></pre>
-<h2 id="install-nvidia-docker-toolkit">Install Nvidia Docker Toolkit</h2>
+<h2 id="install-nvidia-container-toolkit">Install Nvidia Container Toolkit</h2>
 <pre><code class="language-sh">curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg \
   &amp;&amp; curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | \
     sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \
